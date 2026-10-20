@@ -64,9 +64,16 @@ const RegionalDialogue=(()=>{
   const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:repeatSpeaker?[0,1,0]:[0,1,2],speakers=slots.map(i=>order[i]);
   const result=script.map((utterance,i)=>{
    const id=speakers[i];let lines=voice(id,utterance,vars);
+   if(!ended&&utterance.pressuredVoices){
+    const p=survivalPersonality[id],personal=s.personal[id]??50,trait=utterance.pressureTrait;
+    const pressed=trait==='patience'?(personal<35||s.tension>=75||p.patience<50):
+     trait==='stamina'?(personal<35||s.energy<35):
+     trait==='thrift'?(p.thrift>=70&&(s.budget<70000||s.debt>0)):
+     trait==='assertiveness'?(p.assertiveness>=75&&(personal<40||s.tension>=75)):false;
+    if(pressed)lines=voice(id,{voices:utterance.pressuredVoices},vars);
+   }
    // Only the final reaction in an unresolved scene changes its proposal; facts stay in turns 1/2.
-   const topic=!ended&&s.phase==='choose'&&scriptKey.startsWith('stages:')?key:
-    !ended&&s.phase==='dilemma'?({queueDispute:'wait',walkDispute:'move',budgetDispute:'dinner'}[key]):null;
+   const topic=!ended&&s.phase==='choose'&&scriptKey.startsWith('stages:')?key:null;
    if(topic){
     const mode=key==='budgetDispute'?'thrift':replyMode(s,id,topic),own=voice(id,{voices:survivalCharacterReplies.stages[topic][mode]},vars);
     if(i===2)lines=own;

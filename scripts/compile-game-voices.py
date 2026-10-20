@@ -1,5 +1,7 @@
-import json,pathlib,hashlib,re
+import json,pathlib,hashlib,re,runpy
 root=pathlib.Path(__file__).resolve().parents[1]
+episode_author=runpy.run_path(str(root/'scripts/episode-persona-authoring.py'))
+authored_episode_voice=episode_author['authored_episode_voice']
 book=json.loads((root/'data/game-conversations-source.json').read_text())
 districts=json.loads((root/'data/game-districts.json').read_text())['profiles']
 def parse_exchange(text):return [turn.split('/') for turn in text.split('|')]
@@ -89,6 +91,8 @@ def authored_act(text,p):
   if match:return [line.format(**match.groupdict()) for line in rule['voices'][p]]
  return None
 def voice(beats,p,context,slot):
+ episode_lines=authored_episode_voice(p,context,slot)
+ if episode_lines is not None:return episode_lines
  parts=context.split(':')
  if parts[0]=='stages' and slot<2:
   edition=int(parts[3])+1 if len(parts)>3 and parts[2]=='variant' else 0
@@ -141,13 +145,20 @@ def voice(beats,p,context,slot):
   joined=' '.join(detail)
   out=list(stance)+([joined] if joined and re.sub(r'\s+','',joined) not in {re.sub(r'\s+','',x) for x in stance} else [])
  return out
+def compiled_turn(beats,context,slot):
+ utterance={'voices':[voice(beats,p,context,slot) for p in range(12)]}
+ pressure=[episode_author['authored_pressure'](p,context,slot) for p in range(12)]
+ if pressure[0] is not None:
+  assert all(item is not None and item[0]==pressure[0][0] for item in pressure)
+  utterance['pressureTrait']=pressure[0][0];utterance['pressuredVoices']=[item[1] for item in pressure]
+ return utterance
 count=0
 for category,scenes in book.items():
  for key,scene in scenes.items():
   exchanges=scene if category=='reactions' else [scene]
   for ci,exchange in enumerate(exchanges):
    for i,beats in enumerate(exchange):
-    exchange[i]={'voices':[voice(beats,p,category+':'+key+':'+str(ci),i) for p in range(12)]}
+    exchange[i]=compiled_turn(beats,category+':'+key+':'+str(ci),i)
     count+=1
 out="'use strict';\n// LLM-authored whole exchanges and per-person utterances, prewritten from corpus-informed voice notes.\n// Every array contains intentional message boundaries. No runtime grammar rewriting or character slicing.\nconst survivalConversations="+json.dumps(book,ensure_ascii=False,separators=(',',':'))+';\n'
 out+='const survivalCharacterReplies='+json.dumps({'stages':character_replies['stages'],'moods':character_replies['moods']},ensure_ascii=False,separators=(',',':'))+';\n'
@@ -169,8 +180,10 @@ if variant_source.exists():
  for context,exchanges in variants.items():
   for vi,exchange in enumerate(exchanges):
    for slot,beats in enumerate(exchange):
-    exchange[slot]={'voices':[voice(beats,p,context+':variant:'+str(vi),slot) for p in range(12)]};extra+=1
+    exchange[slot]=compiled_turn(beats,context+':variant:'+str(vi),slot);extra+=1
  (root/'dist/game-conversation-variants.js').write_text("'use strict';\n// Alternate whole exchanges; factual context and decision remain fixed.\nconst survivalConversationVariants="+json.dumps(variants,ensure_ascii=False,separators=(',',':'))+';\n')
  print('Compiled',len(variants),'variant contexts;',extra,'alternate utterances x 12 voices')
 
 print('Whole speech-act rewrites:',voice_audit)
+
+print('Episode-specific coverage:',len(episode_author['AUDIT']['contexts']),'complete contexts;',episode_author['AUDIT']['utterances'],'per-person turns')
