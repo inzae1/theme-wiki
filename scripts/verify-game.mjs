@@ -184,6 +184,14 @@ for(const [kind,saved] of ends){
 }
 console.log('PASS: per-ending seen history prevents repeats across interleaved endings, different trip seeds and reloads.');
 
-// The immediate reaction and the final result must share the recorded ending dialogue.
-ctx.rotationState=plain(ends.get('split'));vm.runInContext("state=rotationState;state.phase='dilemmaReaction';render()",ctx);
-const previewEdition=vm.runInContext('state.endingEdition',ctx);vm.runInContext("state.phase='end';render()",ctx);assert.equal(vm.runInContext('state.endingEdition',ctx),previewEdition);
+// A terminating choice still shows its own response before the final epilogue.
+for(const [kind,saved] of ends){
+ const s=plain(saved);s.phase=s.actions.at(-1).type==='choice'?'reaction':'dilemmaReaction';
+ const turns=E.dialogue(s);const before=JSON.stringify(turns);
+ assert.deepEqual(plain(turns),plain(E.dialogue(s,false)));
+ s.phase='end';assert.notEqual(JSON.stringify(E.dialogue(s)),before,kind);
+}
+ctx.rotationState=plain(ends.get('split'));vm.runInContext("state=rotationState;state.phase='dilemmaReaction';delete state.endingEdition;render()",ctx);
+assert.equal(vm.runInContext('state.endingEdition',ctx),undefined);
+vm.runInContext("state.phase='end';render()",ctx);assert.ok(Number.isInteger(vm.runInContext('state.endingEdition',ctx)));
+console.log('PASS: final choice responses and ending epilogues are separate, so the ending chat is shown only once.');

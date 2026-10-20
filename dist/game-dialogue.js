@@ -28,7 +28,7 @@ const RegionalDialogue=(()=>{
  }
  function turns(s,end=false){
   const book=survivalConversations,r=Travel.region(s.destination),e=SurvivalEngine.ending(s);
-  const ended=end||!!e;let key,script,guest,contextKey,scriptKey;
+  const ended=end||s.phase==='end';let key,script,guest,contextKey,scriptKey;
   if(ended){key=e[0];scriptKey='endings:'+key;script=book.endings[key];}
   else if(s.phase==='dilemma'){key=s.pending;scriptKey=(book.opening[key]?'opening:':'generic:')+key;script=book.opening[key]||book.generic[key];guest=book.guests[key];}
   else if(s.phase==='dilemmaReaction'){
