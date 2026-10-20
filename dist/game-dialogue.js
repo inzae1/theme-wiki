@@ -46,20 +46,22 @@ const RegionalDialogue=(()=>{
  }
  function turns(s,end=false){
   const book=survivalConversations,r=Travel.region(s.destination),e=SurvivalEngine.ending(s);
-  const ended=end||!!e;let key,script,guest;
+  const ended=end||!!e;let key,script,guest,contextKey;
   if(ended){key=e[0];script=book.endings[key];}
   else if(s.phase==='dilemma'){key=s.pending;script=book.opening[key]||book.generic[key];guest=outsiderTopics[key];}
   else if(s.phase==='dilemmaReaction'){
-   const last=s.incidents.at(-1),d=survivalDilemmas[last.id],index=d.choices.findIndex(c=>c.id===last.choice);key=last.id+':'+last.choice;script=book.reactions[last.id]?.[index]||book.genericReactions[last.choice];
+   const last=s.incidents.at(-1),d=survivalDilemmas[last.id],index=d.choices.findIndex(c=>c.id===last.choice);key=last.id+':'+last.choice;contextKey=last.id;script=book.reactions[last.id]?.[index]||book.genericReactions[last.choice];
   }else if(s.phase==='reaction'){key=s.history.at(-1).choice;script=book.choices[key];}
   else {key=SurvivalEngine.scene(s).id;script=book.stages[key];guest=stageGuests[key];}
-  const order=cast(s,key,ended),far=[...s.commute].sort((a,b)=>b.km-a.km)[0];
+  const order=cast(s,!ended&&s.phase==='reaction'&&s.step===1?'arrive':contextKey||key,ended),far=[...s.commute].sort((a,b)=>b.km-a.km)[0];
   if(key==='arrive')script=[`${far.home}에서 ${r.name}까지 직선으로도 ${far.km}키로인데 몇 시에 만나자는 거임?`,'먼 사람 도착 시간이랑 귀가편부터 맞춰야겠네. 아직 표 끊지는 마.','ㅇㅇ 그럼 다들 가능한 시간부터 올려. 장소 정했다고 바로 출발하진 말고.'];
   if(!script||script.length!==3)throw Error('Missing complete conversation: '+key);
   const vars={city:r.name,cafe:r.cafe,walk:r.walk,hub:r.hub,food:r.food[0],sight:r.sight,night:r.night};
-  const result=script.map((line,i)=>({id:order[i],lines:voice(order[i],line.replace(/\{(\w+)\}/g,(_,k)=>vars[k]??''),i===2&&s.tension<45&&['food','wait','move','activity','pc','bowling','boardgame','feast','perfect','survived','champion'].includes(key))}));
+  // Keep the wallet owner in the same role when reporting the discovery.
+  const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:[0,1,2],speakers=slots.map(i=>order[i]);
+  const result=script.map((line,i)=>({id:speakers[i],lines:voice(speakers[i],line.replace(/\{(\w+)\}/g,(_,k)=>vars[k]??''),i===2&&s.tension<45&&['food','wait','move','activity','pc','bowling','boardgame','feast','perfect','survived','champion'].includes(key))}));
   // A directed address is used only when answering the immediately preceding speaker.
-  if(SurvivalEngine.hash(s.seed,key+':address')%3===0)result[1].lines[0]=address(order[1],order[0])+', '+result[1].lines[0];
+  if(SurvivalEngine.hash(s.seed,key+':address')%3===0)result[1].lines[0]=address(speakers[1],speakers[0])+', '+result[1].lines[0];
   // Off-site members react to this exact unresolved topic; an attendee answers before choices resume.
   if(!ended&&guest&&s.step>0&&SurvivalEngine.hash(s.seed,key+':guest')%3!==0){
    const absent=survivalCast.filter(p=>!s.party.includes(p.id)),id=absent[SurvivalEngine.hash(s.seed,key+':who')%absent.length].id;

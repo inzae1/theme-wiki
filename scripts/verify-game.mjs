@@ -56,3 +56,5 @@ let guests=0;for(let seed=0;seed<40;seed++){
 }
 assert.ok(guests>0&&guests<40);assert.equal(addresses['3:6'].form,'고형');assert.equal(addresses['1:6'].form,'고형');assert.equal(addresses['4:7'].form,'해병님');
 console.log('PASS: complete dialogue for 35 schedule choices, 20 regional episodes / 60 responses, 18 generic responses, 18 endings; deterministic off-site cameo and directed addresses.');
+
+{const s=E.create([0,1,5],8,'daejeon');s.step=2;s.phase='dilemma';s.pending='wallet';const owner=E.dialogue(s)[1].id;s.phase='dilemmaReaction';s.pending=null;s.incidents=[{id:'wallet',choice:'together'}];const reply=E.dialogue(s);assert.equal(reply[0].id,owner);assert.equal(reply[2].id,owner);}
