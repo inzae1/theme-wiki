@@ -1,0 +1,18 @@
+{
+  "checked": "2026-10-20",
+  "outline": {
+    "source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson",
+    "license": "public domain",
+    "scale": "1:50m",
+    "processing": "South Korea geometry projected to an SVG path; geographic scale and city pins share the same projection"
+  },
+  "cityCoordinates": {
+    "source": "https://download.geonames.org/export/dump/KR.zip",
+    "license": "CC BY 4.0",
+    "recordIdsFile": "dist/game-personality.js"
+  },
+  "residenceSource": "User provided city names; Park Jongchan corrected to Jecheon and Park Cheonbin added as Uljin. No street addresses used.",
+  "distanceMethod": "Haversine great-circle distance between representative city coordinates. Not road distance or journey duration.",
+  "travelEstimates": "Game-only estimates. No live timetable, route or fare service.",
+  "scenarios": "Tourism sources are linked per region in dist/game-regions.js; venue mishaps and all dialogue are authored fiction."
+}
