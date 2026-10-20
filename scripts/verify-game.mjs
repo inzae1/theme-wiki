@@ -1,5 +1,5 @@
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
-const ctx=vm.createContext({});const files=['game-data','game-story','game-personality','game-regions','game-map-data','game-travel','game-dialogue','game-engine'];for(const f of files)vm.runInContext(fs.readFileSync('dist/'+f+'.js','utf8'),ctx);
+const ctx=vm.createContext({});const files=['game-data','game-story','game-personality','game-regions','game-map-data','game-travel','game-addresses','game-conversations','game-dialogue','game-engine'];for(const f of files)vm.runInContext(fs.readFileSync('dist/'+f+'.js','utf8'),ctx);
 const {E,T,cast,traits,regions,book,homes,cities,dilemmas}=vm.runInContext('({E:SurvivalEngine,T:Travel,cast:survivalCast,traits:survivalPersonality,regions:survivalRegions,book:survivalEndingBook,homes:survivalHomes,cities:survivalCities,dilemmas:survivalDilemmas})',ctx),plain=x=>JSON.parse(JSON.stringify(x));
 assert.equal(traits.length,12);for(const p of traits)for(const value of Object.values(p))assert.ok(value>=0&&value<=100);assert.deepEqual(plain(homes),['jecheon','incheon','gumi','seoul','gwangmyeong','daejeon','asan','uljin','namyangju','incheon','jincheon','changwon']);assert.equal(homes[0],'jecheon');assert.equal(homes[7],'uljin');assert.equal(homes[1],'incheon');assert.equal(homes[9],'incheon');
 for(let seed=0;seed<100;seed++){const cs=T.candidates(seed);assert.equal(cs.length,5);assert.equal(new Set(cs.map(c=>c.id)).size,5);assert.deepEqual(plain(cs),plain(T.candidates(seed)));}
@@ -10,7 +10,7 @@ for(const region of regions){assert.equal(region.episodes.length,2);for(let seed
  const crisis=s.phase==='dilemma',choices=(crisis?dilemmas[s.pending]:E.scene(s)).choices;assert.ok(choices.length>=3);if(!crisis)assert.equal(choices.length,5);if(crisis)episodeSeen.add(s.pending);
  let c=choices[E.hash(seed,policy+':'+s.step+(crisis?'d':'s'))%choices.length];if(policy==='care')c=choices.find(c=>c.effect==='care')||choices[0];if(policy==='push')c=choices.find(c=>c.effect==='push')||choices.at(-1);if(policy==='adventure')c=choices.find(c=>c.effect==='adventure')||choices.at(-1);if(policy==='cheap')c=[...choices].sort((a,b)=>(a.cost||0)-(b.cost||0))[0];if(policy==='compete')c=choices.find(c=>c.effect==='compete'||c.id==='rematch')||c;
  s=crisis?E.resolve(s,c.id):E.choose(s,c.id);assert.ok(s.budget>=0&&s.debt>=0&&s.delay>=0);for(const k of ['energy','fullness','mood','tension'])assert.ok(s[k]>=0&&s[k]<=100);
- const speech=E.dialogue(s);assert.ok(speech.length>=3);for(const t of speech){assert.ok(s.party.includes(t.id));assert.ok(Array.isArray(t.lines)&&t.lines.every(l=>typeof l==='string'&&l.length>0));assert.ok(!JSON.stringify(t.lines).includes('{city}'));}
+ const speech=E.dialogue(s);assert.ok(speech.length>=3);for(const t of speech){assert.ok(s.party.includes(t.id)||t.remote===true);assert.ok(Array.isArray(t.lines)&&t.lines.every(l=>typeof l==='string'&&l.length>0));assert.ok(!JSON.stringify(t.lines).includes('{city}'));}
  if(rounds++%53===0)assert.deepEqual(plain(E.restore(s)),plain(s));s=E.next(s);
  }assert.equal(s.phase,'end');if(E.ending(s)[0]==='distance'&&s.step>1)distanceDay=true;ends.set(E.ending(s)[0],s);runs++;}}
 // Target strategies verify rare narrative endings, not just random play.
@@ -39,3 +39,20 @@ for(const r of regions)for(const episode of r.episodes){ctx.regionId=r.id;ctx.ep
 for(const s of ends.values()){ctx.screenState=plain(s);vm.runInContext('state=screenState;render()',ctx);assert.ok(el('game').innerHTML.includes(E.ending(s)[1]));}
 console.log(`PASS: ${runs} complete trips / ${rounds} decisions / ${ends.size} endings; all 20 regional episodes; 5 map candidates; 12 hidden personalities; distance refusal in round one; personality effects; save replay; private metrics; no choice previews.`);
 if(process.env.GAME_TRACE)fs.writeFileSync(process.env.GAME_TRACE,JSON.stringify(Object.fromEntries([...ends].map(([id,s])=>[id,{destination:s.destination,party:s.party,seed:s.seed,actions:s.actions}]))));
+// Dialogue coverage: every choice resolves to its own complete exchange; remote voices remain off-site.
+const conversations=vm.runInContext('survivalConversations',ctx),addresses=vm.runInContext('survivalAddresses',ctx);
+assert.equal(Object.keys(conversations.opening).length,20);assert.equal(Object.keys(conversations.endings).length,18);assert.equal(Object.keys(conversations.choices).length,35);
+for(const [id,d] of Object.entries(dilemmas)){
+ assert.equal((conversations.opening[id]||conversations.generic[id]).length,3);
+ for(let i=0;i<d.choices.length;i++){
+  const c=d.choices[i],script=conversations.reactions[id]?.[i]||conversations.genericReactions[c.id];assert.equal(script.length,3,id+':'+c.id);
+  const s=E.create([0,1,5],8,'daejeon');s.step=2;s.phase='dilemmaReaction';s.incidents=[{id,choice:c.id,step:2,label:c.label}];const speech=E.dialogue(s);assert.equal(speech.length,3);assert.ok(speech.every(t=>s.party.includes(t.id)));
+ }
+}
+let guests=0;for(let seed=0;seed<40;seed++){
+ const s=E.create([0,1,5],seed,'daejeon');s.step=1;s.phase='choose';const speech=E.dialogue(s),remote=speech.filter(t=>t.remote);assert.ok(remote.length<=1);
+ if(remote.length){guests++;assert.ok(!s.party.includes(remote[0].id));assert.ok(s.party.includes(speech.at(-1).id));assert.equal(speech.length,5);}
+ assert.deepEqual(plain(speech),plain(E.dialogue(s)));
+}
+assert.ok(guests>0&&guests<40);assert.equal(addresses['3:6'].form,'고형');assert.equal(addresses['1:6'].form,'고형');assert.equal(addresses['4:7'].form,'해병님');
+console.log('PASS: complete dialogue for 35 schedule choices, 20 regional episodes / 60 responses, 18 generic responses, 18 endings; deterministic off-site cameo and directed addresses.');
