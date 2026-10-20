@@ -58,3 +58,21 @@ assert.ok(guests>0&&guests<40);assert.equal(addresses['3:6'].form,'고형');asse
 console.log('PASS: complete dialogue for 35 schedule choices, 20 regional episodes / 60 responses, 18 generic responses, 18 endings; deterministic off-site cameo and directed addresses.');
 
 {const s=E.create([0,1,5],8,'daejeon');s.step=2;s.phase='dilemma';s.pending='wallet';const owner=E.dialogue(s)[1].id;s.phase='dilemmaReaction';s.pending=null;s.incidents=[{id:'wallet',choice:'together'}];const reply=E.dialogue(s);assert.equal(reply[0].id,owner);assert.equal(reply[2].id,owner);}
+
+// Every shipped utterance includes twelve authored voices and intentional non-empty bursts.
+let utterances=0;const voiceLengths=Array.from({length:12},()=>[]);
+function checkVoices(node){
+ if(Array.isArray(node)){for(const value of node)checkVoices(value);return;}
+ if(!node||typeof node!=='object')return;
+ if(node.voices){utterances++;assert.equal(node.voices.length,12);node.voices.forEach((lines,id)=>{assert.ok(Array.isArray(lines)&&lines.length>0);for(const line of lines){assert.ok(typeof line==='string'&&line.trim().length>0);assert.ok(!/undefined|\[object Object\]/.test(line));for(const slot of line.matchAll(/\{(\w+)\}/g))assert.ok(['city','cafe','walk','hub','food','sight','night','home','km'].includes(slot[1]));voiceLengths[id].push(line.length);}});return;}
+ for(const value of Object.values(node))checkVoices(value);
+}
+checkVoices(conversations);assert.equal(utterances,544);assert.equal(utterances*12,6528);
+assert.equal(new Set(conversations.stages.wait[0].voices.map(lines=>lines.join('/'))).size,12);
+assert.deepEqual(plain(conversations.stages.wait[0].voices[1]),['웨이팅','몇팀인데']);
+assert.ok(conversations.stages.wait[0].voices[2].some(line=>line.length>12),'a complete longer speaker sentence stays intact');
+assert.ok(voiceLengths[2].reduce((a,b)=>a+b)/voiceLengths[2].length>voiceLengths[1].reduce((a,b)=>a+b)/voiceLengths[1].length);
+for(let offset=0;offset<12;offset++){
+ const s=E.create([offset,(offset+1)%12,(offset+5)%12],8,'daejeon');s.step=1;for(const t of E.dialogue(s))for(const line of t.lines)assert.ok(!/\{\w+\}/.test(line));
+}
+console.log('PASS: 544 utterances / 6528 per-person forms, all twelve voices, authored message boundaries, longer sentences preserved, factual slots resolved.');
