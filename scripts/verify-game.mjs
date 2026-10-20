@@ -1,5 +1,5 @@
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
-const ctx=vm.createContext({});const files=['game-data','game-story','game-personality','game-regions','game-map-data','game-districts','game-travel','game-addresses','game-conversations','game-conversation-variants','game-dialogue','game-options','game-friction','game-engine'];for(const f of files)vm.runInContext(fs.readFileSync('dist/'+f+'.js','utf8'),ctx);
+const ctx=vm.createContext({});const files=['game-data','game-story','game-personality','game-regions','game-map-data','game-districts','game-food-chains','game-travel','game-addresses','game-conversations','game-conversation-variants','game-sidechat','game-dialogue','game-options','game-friction','game-episode-arcs','game-engine'];for(const f of files)vm.runInContext(fs.readFileSync('dist/'+f+'.js','utf8'),ctx);
 const {E,T,cast,traits,regions,book,homes,cities,dilemmas}=vm.runInContext('({E:SurvivalEngine,T:Travel,cast:survivalCast,traits:survivalPersonality,regions:Travel.destinations(),book:survivalEndingBook,homes:survivalHomes,cities:survivalCities,dilemmas:survivalDilemmas})',ctx),plain=x=>JSON.parse(JSON.stringify(x));
 assert.equal(traits.length,12);for(const p of traits)for(const value of Object.values(p))assert.ok(value>=0&&value<=100);assert.deepEqual(plain(homes),['jecheon','incheon','gumi','seoul','gwangmyeong','daejeon','asan','uljin','namyangju','incheon','jincheon','changwon']);assert.equal(homes[0],'jecheon');assert.equal(homes[7],'uljin');assert.equal(homes[1],'incheon');assert.equal(homes[9],'incheon');
 for(let seed=0;seed<100;seed++){const cs=T.candidates(seed);assert.equal(cs.length,5);assert.equal(new Set(cs.map(c=>c.id)).size,5);assert.deepEqual(plain(cs),plain(T.candidates(seed)));}
@@ -36,13 +36,13 @@ const els=new Map();const el=id=>{if(!els.has(id))els.set(id,{innerHTML:'',textC
 Object.assign(ctx,{document:{getElementById:el,querySelector:()=>({scrollIntoView(){}})},localStorage:{getItem:()=>null,setItem(){}},window:{scrollTo(){}},navigator:{},crypto:{getRandomValues:a=>(a[0]=42,a)}});vm.runInContext(fs.readFileSync('dist/game.js','utf8'),ctx);
 assert.equal((el('game').innerHTML.match(/data-person=/g)||[]).length,12);assert.ok(!el('game').innerHTML.includes('korea-map'));assert.ok(el('game').innerHTML.includes('confirm-party'));vm.runInContext("selected=[0,1,5];setupStage='map';lobby()",ctx);assert.ok(!el('game').innerHTML.includes('data-person='));assert.equal((el('game').innerHTML.match(/data-pin=/g)||[]).length,5);assert.ok(el('game').innerHTML.includes('korea-map'));assert.ok(!/patience|leadership|assertiveness|有趣度|인내심|리더십|유쾌함/.test(el('game').innerHTML));
 for(const r of regions){ctx.testRegion=r.id;vm.runInContext("state=SurvivalEngine.create([0,1,5],42,testRegion);render()",ctx);let choiceHtml=el('game').innerHTML.split('<div class="choices">')[1].split('</section>')[0];assert.equal((choiceHtml.match(/data-choice/g)||[]).length,3);assert.ok(!/<small>|<span>|분위기|갈등 [+-]|체력|tension|patience/.test(choiceHtml));}
-for(const r of regions)for(const episode of r.episodes){ctx.regionId=r.id;ctx.episodeId=episode.id;vm.runInContext("state=SurvivalEngine.create([0,1,5],42,regionId);state=SurvivalEngine.next(SurvivalEngine.choose(state,'plan'));state=SurvivalEngine.next(SurvivalEngine.choose(state,'local'));state.pending=episodeId;state.phase='dilemma';render()",ctx);assert.ok(el('game').innerHTML.includes(episode.title));const choices=el('game').innerHTML.split('<div class="choices">')[1].split('</section>')[0];assert.equal((choices.match(/data-choice/g)||[]).length,3);assert.ok(!/<small>|<span>|patience|leadership/.test(choices));}
+for(const r of regions)for(const episode of r.episodes){ctx.regionId=r.id;ctx.episodeId=episode.id;vm.runInContext("state=SurvivalEngine.create([0,1,5],42,regionId);state=SurvivalEngine.next(SurvivalEngine.choose(state,'plan'));if(state.phase==='dilemma')state=SurvivalEngine.next(SurvivalEngine.resolve(state,SurvivalEngine.incident(state).choices[0].id));state=SurvivalEngine.next(SurvivalEngine.choose(state,'local'));state.pending=episodeId;state.phase='dilemma';render()",ctx);assert.ok(el('game').innerHTML.includes(episode.title));const choices=el('game').innerHTML.split('<div class="choices">')[1].split('</section>')[0];assert.equal((choices.match(/data-choice/g)||[]).length,3);assert.ok(!/<small>|<span>|patience|leadership/.test(choices));}
 for(const s of ends.values()){ctx.screenState=plain(s);vm.runInContext('state=screenState;render()',ctx);assert.ok(el('game').innerHTML.includes(E.ending(s)[1]));}
 console.log(`PASS: ${runs} complete trips / ${rounds} decisions / ${ends.size} endings; all 54 regional episodes; 5 map candidates; 12 hidden personalities; distance refusal in round one; personality effects; save replay; private metrics; no choice previews.`);
 if(process.env.GAME_TRACE)fs.writeFileSync(process.env.GAME_TRACE,JSON.stringify(Object.fromEntries([...ends].map(([id,s])=>[id,{destination:s.destination,party:s.party,seed:s.seed,actions:s.actions}]))));
 // Dialogue coverage: every choice resolves to its own complete exchange; remote voices remain off-site.
 const conversations=vm.runInContext('survivalConversations',ctx),addresses=vm.runInContext('survivalAddresses',ctx);
-assert.equal(Object.keys(conversations.opening).length,58);assert.equal(Object.keys(conversations.endings).length,20);assert.equal(Object.keys(conversations.choices).length,35);
+assert.equal(Object.keys(conversations.opening).length,58);assert.equal(Object.keys(conversations.endings).length,20);assert.equal(Object.keys(conversations.choices).length,40);
 for(const [id,d] of Object.entries(dilemmas)){
  assert.equal((conversations.opening[id]||conversations.generic[id]).length,3);
  for(let i=0;i<d.choices.length;i++){
@@ -51,12 +51,12 @@ for(const [id,d] of Object.entries(dilemmas)){
  }
 }
 let guests=0;for(let seed=0;seed<40;seed++){
- const s=E.create([0,1,5],seed,'daejeon');s.step=1;s.phase='choose';const speech=E.dialogue(s),remote=speech.filter(t=>t.remote);assert.ok(remote.length<=1);
- if(remote.length){guests++;assert.ok(!s.party.includes(remote[0].id));assert.ok(s.party.includes(speech.at(-1).id));assert.equal(speech.length,5);}
+ const s=E.create([0,1,5],seed,'daejeon');s.step=1;s.phase='choose';const speech=E.dialogue(s),remote=speech.filter(t=>t.remote);assert.ok(remote.length<=2);
+ if(remote.length){guests++;assert.ok(!s.party.includes(remote[0].id));assert.ok(s.party.includes(speech.at(-1).id));assert.equal(speech.length,remote.length===2?6:5);}
  assert.deepEqual(plain(speech),plain(E.dialogue(s)));
 }
 assert.ok(guests>0&&guests<40);assert.equal(addresses['3:6'].form,'고형');assert.equal(addresses['1:6'].form,'고형');assert.equal(addresses['4:7'].form,'해병님');
-console.log('PASS: complete dialogue for 35 schedule choices, 54 regional episodes / 162 responses, 18 generic responses, 20 endings; deterministic off-site cameo without forced name prefixes.');
+console.log('PASS: complete dialogue for 40 schedule choices, 54 regional episodes / 162 responses, 18 generic responses, 20 endings; deterministic off-site cameo without forced name prefixes.');
 
 {const s=E.create([0,1,5],8,'daejeon');s.step=2;s.phase='dilemma';s.pending='wallet';const owner=E.dialogue(s)[1].id;s.phase='dilemmaReaction';s.pending=null;s.incidents=[{id:'wallet',choice:'together'}];const reply=E.dialogue(s);assert.equal(reply[0].id,owner);assert.equal(reply[2].id,owner);}
 
@@ -65,18 +65,19 @@ let utterances=0;const voiceLengths=Array.from({length:12},()=>[]);
 function checkVoices(node){
  if(Array.isArray(node)){for(const value of node)checkVoices(value);return;}
  if(!node||typeof node!=='object')return;
- if(node.voices){utterances++;assert.equal(node.voices.length,12);node.voices.forEach((lines,id)=>{assert.ok(Array.isArray(lines)&&lines.length>0);for(const line of lines){assert.ok(typeof line==='string'&&line.trim().length>0);assert.ok(!/undefined|\[object Object\]/.test(line));for(const slot of line.matchAll(/\{(\w+)\}/g))assert.ok(['city','cafe','walk','hub','food','sight','night','home','km'].includes(slot[1]));voiceLengths[id].push(line.length);}});return;}
+ if(node.voices){utterances++;assert.equal(node.voices.length,12);node.voices.forEach((lines,id)=>{assert.ok(Array.isArray(lines)&&lines.length>0);for(const line of lines){assert.ok(typeof line==='string'&&line.trim().length>0);assert.ok(!/undefined|\[object Object\]/.test(line));for(const slot of line.matchAll(/\{(\w+)\}/g))assert.ok(['city','cafe','walk','hub','food','sight','night','home','km','chain','dish'].includes(slot[1]));voiceLengths[id].push(line.length);}});return;}
  for(const value of Object.values(node))checkVoices(value);
 }
-checkVoices(conversations);assert.equal(utterances,1006);assert.equal(utterances*12,12072);
+checkVoices(conversations);assert.equal(utterances,1075);assert.equal(utterances*12,12900);
 assert.equal(new Set(conversations.stages.wait[0].voices.map(lines=>lines.join('/'))).size,12);
-assert.deepEqual(plain(conversations.stages.wait[0].voices[1]),['웨이팅','몇팀인데']);
+assert.ok(conversations.stages.wait[0].voices[1].includes('몇팀임?'));
+assert.ok(conversations.stages.wait[0].voices[0].some(x=>x.includes('노?')));
 assert.ok(conversations.stages.wait[0].voices[2].some(line=>line.length>12),'a complete longer speaker sentence stays intact');
 assert.ok(voiceLengths[2].reduce((a,b)=>a+b)/voiceLengths[2].length>voiceLengths[1].reduce((a,b)=>a+b)/voiceLengths[1].length);
 for(let offset=0;offset<12;offset++){
  const s=E.create([offset,(offset+1)%12,(offset+5)%12],8,'daejeon');s.step=1;for(const t of E.dialogue(s))for(const line of t.lines)assert.ok(!/\{\w+\}/.test(line));
 }
-console.log('PASS: 1006 utterances / 12072 per-person forms, all twelve voices, authored message boundaries, longer sentences preserved, factual slots resolved.');
+console.log('PASS: 1075 utterances / 12900 per-person forms, all twelve voices, authored message boundaries, longer sentences preserved, factual slots resolved.');
 
 // The actual UI exposes exactly three concise actions while preserving the complete action pool.
 const quick=vm.runInContext('GameOptions',ctx),offered=new Set();
@@ -85,12 +86,12 @@ for(let seed=0;seed<150;seed++)for(let step=0;step<7;step++){
  for(const c of options){assert.ok(scene.choices.some(x=>x.id===c.id));assert.ok(c.label.length<=12);assert.ok(quick.spoken(c).length>0);offered.add(c.id);}
  assert.deepEqual(plain(options),plain(quick.choices(s,scene)));
 }
-assert.equal(offered.size,35);for(const d of Object.values(dilemmas))for(const c of quick.choices(E.create([0,1,5],1),d)){assert.ok(c.label.length<=12);assert.ok(quick.spoken(c).length>0);}
+assert.equal(offered.size,40);for(const d of Object.values(dilemmas))for(const c of quick.choices(E.create([0,1,5],1),d)){assert.ok(c.label.length<=12);assert.ok(quick.spoken(c).length>0);}
 vm.runInContext("state=SurvivalEngine.choose(SurvivalEngine.create([0,1,5],8,'daejeon'),'plan');render()",ctx);assert.ok(el('game').innerHTML.includes('self-message'));assert.ok(el('game').innerHTML.includes('earlier-messages'));assert.ok(el('game').innerHTML.includes('role="log"'));assert.ok(!el('game').innerHTML.includes('undefined'));
-console.log('PASS: three short choices per screen, all 35 actions available across trips, selected message and previous conversation retained.');
+console.log('PASS: three short choices per screen, all 40 actions available across trips, selected message and previous conversation retained.');
 
 const sceneVariants=vm.runInContext('survivalConversationVariants',ctx),dialogue=vm.runInContext('RegionalDialogue',ctx);
-assert.equal(Object.keys(sceneVariants).length,192);
+assert.equal(Object.keys(sceneVariants).length,367);
 for(const [key,pool] of Object.entries(sceneVariants)){
  assert.ok(pool.length>=1&&pool.length<=2);
  for(const scene of pool){assert.equal(scene.length,key.startsWith('guests:')?2:3);for(const utterance of scene){assert.equal(utterance.voices.length,12);for(const lines of utterance.voices)assert.ok(lines.length>0&&lines.every(x=>typeof x==='string'&&x.length>0));}}
@@ -101,7 +102,7 @@ for(const [key,pool] of Object.entries(sceneVariants)){
  let base=key.startsWith('reactions:')?conversations.reactions[key.split(':')[1]][Number(key.split(':')[2])]:conversations[key.split(':')[0]][key.split(':')[1]];
  for(let seed=0;seed<6;seed++){fixed.seed=seed;const a=dialogue.exchange(fixed,key,base);fixed.seed=(seed+1)%6;const b=dialogue.exchange(fixed,key,base);assert.notDeepEqual(plain(a),plain(b),key);}
 }
-console.log('PASS: 192 contexts / 199 additional complete exchanges, 12 voices each; consecutive trip editions differ and save replay stays deterministic.');
+console.log('PASS: 367 contexts / 377 additional complete exchanges, 12 voices each; consecutive trip editions differ and save replay stays deterministic.');
 
 const speechStorage=new Map();ctx.localStorage={getItem:key=>speechStorage.get(key)??null,setItem:(key,value)=>speechStorage.set(key,value)};
 const editions=plain(vm.runInContext('Array.from({length:7},()=>newTripSeed())',ctx));assert.deepEqual(editions.map(seed=>seed%6),[0,1,2,3,4,5,0]);
@@ -119,3 +120,31 @@ const dialogueSource=fs.readFileSync('dist/game-dialogue.js','utf8');assert.ok(!
 console.log('PASS: 27 venues / 54 local cases, four causal disputes, actor-specific walkout; no injected name prefixes.');
 
 for(const kind of ['brawl','bagThrow']){const s=ends.get(kind);assert.ok(s.rupture);const turns=E.dialogue(s,true);assert.equal(turns[0].id,s.rupture.pair[0]);assert.equal(turns[1].id,s.rupture.pair[1]);assert.ok(!E.ending(s)[2].includes('{name}'));}
+
+// Reviewed style is audible in visible scenes; side chatter uses two absent members and returns to the outing.
+let sideCount=0;
+for(let seed=0;seed<100;seed++){
+ const s=E.create([0,1,5],seed,'daejeon');s.step=2;const turns=E.dialogue(s);const remote=turns.filter(t=>t.remote);
+ if(remote.length===2){sideCount++;assert.ok(remote.every(t=>!s.party.includes(t.id)));assert.ok(s.party.includes(turns.at(-1).id));assert.ok(turns.at(-1).lines.some(x=>/우리|우린|여긴|정하|일정/.test(x)));}
+}
+assert.ok(sideCount>10&&sideCount<60);
+for(const stage of Object.values(conversations.stages))assert.ok(stage.some(t=>t.voices[1].some(l=>l.includes('ㅋ'))),'normal exchanges include authored shared laughter');
+assert.ok(conversations.stages.wait[0].voices[1].some(x=>x.endsWith('임?')));
+const sourceProfile=JSON.parse(fs.readFileSync('data/game-voice-profiles.json','utf8'));assert.equal(sourceProfile.profiles.length,12);assert.ok(sourceProfile.profiles[1].standaloneLaughShare>.5);assert.ok(sourceProfile.profiles[9].standaloneLaughShare>.7);
+console.log('PASS: profile-guided laughter and question endings, paired off-topic chatter and return to the current choice.');
+// Every authored context has full alternate exchanges, including new cases, callbacks and side chats.
+const contexts=[];for(const [category,entries] of Object.entries(conversations))for(const [key,value] of Object.entries(entries)){if(category==='reactions')value.forEach((_,i)=>contexts.push(category+':'+key+':'+i));else contexts.push(category+':'+key);}
+assert.equal(contexts.length,367);assert.deepEqual([...contexts].sort(),Object.keys(sceneVariants).sort());
+for(const city of vm.runInContext('survivalRegions',ctx)){const draws=new Set();for(let seed=0;seed<200;seed++){const v=T.randomVenue(city.id,seed);assert.equal(v.cityId,city.id);assert.equal(v.id,T.randomVenue(city.id,seed).id);draws.add(v.id);}assert.equal(draws.size,T.venues(city.id).length);}
+vm.runInContext("selected=[0,1,5];setupStage='map';mapSeed=42;destination=null;previewDestination=null;lobby()",ctx);assert.ok(!el('game').innerHTML.includes('data-venue='));
+const cityForStart=T.candidates(42)[0].id;ctx.cityForStart=cityForStart;vm.runInContext("destination=cityForStart;document.getElementById('start').onclick()",ctx);const launched=vm.runInContext('state',ctx);assert.equal(T.region(launched.destination).cityId,cityForStart);
+// Arrival cases resolve before lunch, avoiding a second arrival after everyone has eaten.
+let arrival=E.next(E.choose(E.create([0,1,5],42,'jecheon'),'plan'));assert.equal(arrival.step,1);assert.equal(arrival.pending,'jecheon-1');arrival=E.next(E.resolve(arrival,dilemmas[arrival.pending].choices[0].id));assert.equal(E.scene(arrival).id,'food');
+// Chosen franchises return in later scenes; unrelated lunch choices cannot acquire this callback.
+for(const chain of vm.runInContext('survivalFoodChains',ctx)){
+ let s=E.next(E.choose(E.create([0,1,5],42,'daejeon'),'plan'));s=E.next(E.choose(s,chain.id));if(s.phase==='dilemma')s=E.next(E.resolve(s,dilemmas[s.pending].choices[0].id));
+ assert.equal(s.phase,'choose');const text=E.dialogue(s).slice(0,3).flatMap(t=>t.lines).join(' ');assert.ok(text.includes(chain.name),chain.name+' callback');assert.deepEqual(plain(E.restore(s)),plain(s));
+}
+console.log('PASS: every context has alternate exchanges; city-only start draws districts; arrival-before-lunch arcs; five franchise choices persist in callbacks and saves.');
+
+{let s=E.next(E.choose(E.create([0,1,5],42,'jecheon'),'plan'));s=E.resolve(s,dilemmas[s.pending].choices[0].id);s.tension=90;assert.equal(E.ending(s)[0],'split','already-arrived members do not get a departure cancellation');}

@@ -10,13 +10,14 @@ for profile in districts:
 for episode in json.loads((root/'data/game-friction.json').read_text()):
  book['opening'][episode['id']]=episode['opening']
  book['reactions'][episode['id']]=episode['replies']
+book['sidechats']={x['id']:x['script'] for x in json.loads((root/'data/game-sidechat.json').read_text())}
 # Whole-message alternatives authored for frequent speech acts. Columns are the 12 cast IDs.
 phrases={}
 def forms(key,text):
  arr=text.split('|');assert len(arr)==12,(key,len(arr));phrases[key]=[x.split('/') for x in arr]
 forms('밥/뭐먹음','밥/머먹노|근데/뭐먹음|밥 뭐먹을거임? 나 배고픈데|밥부터/뭐먹을래|ㅋㅋ밥은/뭐먹노|원래/뭐먹기로함?|밥/머먹나|밥은/뭐먹음|밥 뭐먹음|밥/머여/뭐먹음|뭐먹을건데/밥부터먹자|밥 뭐먹음요')
-forms('웨이팅/몇팀임','앞에/몇팀이고|웨이팅/몇팀인데|이거 앞에 몇팀이나 남은거임?|앞에/몇팀남음|ㅋㅋ앞에/몇팀이노|근데/몇팀임|ㅋㅋㅋ/몇팀이나있노|앞에/몇팀임|대기 몇팀임|머여/줄이왜이럼|얼마나 기다려야되는데|여기 대기 얼마나됨')
-forms('여기서/걸어간다고?','여기서/걸어감? ㅋ|걸어서?/몇분인데|여기서 걸어가면 얼마나 걸리는거임?|여기서/걸어가나|ㅋㅋ이걸/걸어간다고|근데/걸어서/얼마나걸림|ㅋㅋㅋ/걸어감?|여기서/걸어간다고|걸어서 얼마나걸림|머여/걸어감?|이걸 걸어가자고?|걸어가면 얼마나걸림요')
+forms('웨이팅/몇팀임','앞에/몇팀이노?|근데/몇팀임?|이거 앞에 몇팀이나 남은거임?|앞에/몇팀남음|ㅋㅋ앞에/몇팀이노|근데/몇팀임|ㅋㅋㅋ/몇팀이나있노|앞에/몇팀임|대기 몇팀임|머여/줄이왜이럼|얼마나 기다려야되는데|여기 대기 얼마나됨')
+forms('여기서/걸어간다고?','여기서/걸어가노? ㅋ|걸어감?/몇분임?|여기서 걸어가면 얼마나 걸리는거임?|여기서/걸어가나|ㅋㅋ이걸/걸어간다고|근데/걸어서/얼마나걸림|ㅋㅋㅋ/걸어감?|여기서/걸어간다고|걸어서 얼마나걸림|머여/걸어감?|이걸 걸어가자고?|걸어가면 얼마나걸림요')
 forms('이제 뭐함','이제/뭐하노|근데/이제뭐함|이제 뭐할거임? 피방이라도 갈까|이제/뭐할래|ㅋㅋ이제/뭐함|그럼/이제 뭐함|ㅋㅋㅋ/이제머함|이제/뭐함|이제 뭐함|머여/이제뭐함|이제 뭐할건데|그럼 이제 뭐함요')
 forms('저녁 먹나/아직 배부른데','저녁/벌써먹나 ㅋ|근데/아직배부른데|아직 배부른데 저녁 벌써 먹는거임?|저녁/벌써먹나|ㅋㅋ배부른데/또먹나|아직/배부른데/또먹음?|ㅋㅋㅋ/또먹나|저녁/벌써먹음|아직 배부른데|머여/또먹음?|아직 배부른데 또먹는다고?|아직 배부른데 저녁먹나')
 forms('근데/집 몇시에감','몇시노/집은언제감|근데/집/어케감|근데 니들 집 몇시에 갈거임?|집/몇시에감|ㅋㅋ집은/어케가노|근데/집은/몇시에감|ㅋㅋㅋ/몇시노/집안가나|근데/몇시에감|집 몇시에감|머여/벌써이시간임?|근데 집은 언제갈건데|다들 몇시에감요')
@@ -54,7 +55,7 @@ forms('안에/빈자리 없어?','안에/빈자리없노? ㅋ|안에/빈자리�
 # Reviewed per-speaker phrase preferences, used only when no authored whole-message alternative exists.
 # This compilation happens offline; the shipped game never edits or slices sentences at runtime.
 replacements={
- 0:[('없어?','없노?'),('있어?','있노?'),('왜물어봄','왜물어보노'),('뭐하고있음','뭐하고있노'),('거야','거노'),('뭐임','머임'),('왜다름','왜다르노'),('왜또멀어짐','왜또멀어지노'),('왜 다름','왜다르노'),('나 배고픔','배고프노'),('늦어지는데','늦어지노'),('맞았네','맞앗노'),('잘나왔네','잘나왓노'),('왜이럼','왜이러노')],
+ 0:[('없어?','없노?'),('있어?','있노?'),('왜물어봄','왜물어보노'),('뭐하고있음','뭐하고있노'),('뭐임','머임'),('왜다름','왜다르노'),('왜또멀어짐','왜또멀어지노'),('왜 다름','왜다르노'),('나 배고픔','배고프노'),('늦어지는데','늦어지노'),('맞았네','맞앗노'),('잘나왔네','잘나왓노'),('왜이럼','왜이러노')],
  1:[('없어?','없노?'),('있어?','있노?'),('왜물어봄','왜물어보노'),('뭐하고있음','뭐하고있노'),('왜다름','왜다르노'),('그렇잖아','그렇잔슴'),('되는거아님','되잔슴'),('안되는거아님','안되잔슴'),('그건아니지','그건아니잔슴'),('있었음','잇엇음'),('같이시키지','같이시키면되잔슴')],
  2:[('뭐할건데','뭐할거임'),('몇시임','몇시인거임'),('모르겠음','잘 모르겠는데'),('올려놔','올려놔봐'),('같이먹어','같이 먹으면되지')],
  3:[('올려봐','올려보셈'),('보내놔','보내놓으셈'),('확인해봐','확인해보셈'),('정해봐','정해보셈'),('기다려','기다리셈')],
@@ -67,32 +68,52 @@ replacements={
  10:[('뭐먹음','뭐먹을건데'),('할거임','할건데'),('못먹겠음','못먹겠다')],
  11:[('몇시에봄','몇시에 모임요'),('몇시까지감','몇시까지가면됨요'),('핀 보냈음','핀 보냈음여')]
 }
-# No fake random typos or blanket profanity; observed markers are scene-appropriate and sparse.
-comic={'stages','guests','opening','choices','reactions'}
-serious={'brawl','bagThrow','Dispute','distance','roundOne','split','hungry','exhausted','wallet','conflict','ignore','double','argue','blame','ultimatum','gumi-1'}
-laugh_rates=[20,20,29,30,27,9,27,12,1,11,10,7]
+# LLM-reviewed profiles guide offline authoring. Statistics describe messages, not utterance bundles.
+voice_profiles=json.loads((root/'data/game-voice-profiles.json').read_text())['profiles']
+reviewed_phrases=json.loads((root/'data/game-voice-phrases.json').read_text())
+phrases.update(reviewed_phrases)
+hard_serious={'brawl','bagThrow','distance','roundOne','split','conflict','ultimatum','ignore','double','argue','blame'}
 def voice(beats,p,context,slot):
  key='/'.join(beats)
- if key in phrases:return phrases[key][p]
- out=[]
- for beat in beats:
-  for a,b in replacements[p]:beat=beat.replace(a,b)
-  # Corpus evidence: short speakers often omit spaces; longer speakers retain semantic clauses.
-  if p in [0,1,4,6,7,9]:beat=beat.replace(' ','')
-  out.append(beat)
+ if key in phrases:
+  out=list(phrases[key][p])
+ else:
+  out=[]
+  for beat in beats:
+   if beat in phrases:
+    out.extend(phrases[beat][p]);continue
+   for a,b in replacements[p]:beat=beat.replace(a,b)
+   if p in [0,1,4,6,7,9]:beat=beat.replace(' ','')
+   out.append(beat)
+ # Neither sparse evidence nor an occasional polite ending justifies making every line polite.
+ if p==11:out=[re.sub(r'(음|함|됨|임)(요|여)',r'\1',x) for x in out]
  if p==2 and len(out)>1:
-  # Join authored clauses, not arbitrary character chunks. Keep long messages as separate beats.
   merged=[]
   for line in out:
-   if merged and len(merged[-1])+len(line)<26:merged[-1]+=' '+line
+   # Standalone laughter is an intentional beat, never merge it into an explanation.
+   if merged and not re.fullmatch('ㅋ+',line) and not re.fullmatch('ㅋ+',merged[-1]) and len(merged[-1])+len(line)<26:merged[-1]+=' '+line
    else:merged.append(line)
   out=merged
- digest=int(hashlib.sha256((context+':'+str(slot)+':'+str(p)).encode()).hexdigest()[:8],16)
- is_serious=any(word in context for word in serious)
- if not is_serious and digest%100<laugh_rates[p] and not any('ㅋ' in x for x in out):
-  if p==4:out[0]='ㅋㅋ'+out[0]
-  elif p==6:out.insert(0,'ㅋㅋㅋ')
-  else:out[-1]+=(' ㅋ' if p in [0,7] else ' ㅋㅋㅋ' if p==2 and digest%2 else ' ㅋㅋ')
+ digest=int(hashlib.sha256((context+':'+str(slot)+':'+str(p)).encode()).hexdigest()[:12],16)
+ profile=voice_profiles[p]
+ def laugh_marker(salt):
+  runs=profile['laughRuns'];total=sum(v for _,v in runs);pick=(digest//salt)%total
+  for length,weight in runs:
+   if pick<weight:return 'ㅋ'*max(2,min(7,length))
+   pick-=weight
+  return 'ㅋㅋ'
+ # Authored laugh-only responses keep their position; length follows each member's observed range.
+ out=[laugh_marker(13+i) if re.fullmatch('ㅋ+',line) else line for i,line in enumerate(out)]
+ parts=context.split(':');scene=parts[1] if len(parts)>1 else ''
+ is_serious=scene in hard_serious or ('Dispute' in scene and parts[-1]=='2')
+ # One utterance may contain several messages: applying a per-message rate only once undercounted laughs.
+ probability=1-(1-profile['laughMessagePercent']/100)**len(out)
+ if not is_serious and digest%10000<probability*10000 and not any('ㅋ' in x for x in out):
+  marker=laugh_marker(7)
+  if (digest//101)%1000<profile['standaloneLaughShare']*1000:
+   out.insert(0,marker)
+  elif p in [4,6] and (digest//37)%2==0:out[0]=marker+' '+out[0]
+  else:out[-1]+=' '+marker
  return out
 count=0
 for category,scenes in book.items():
@@ -109,7 +130,7 @@ print('Compiled',count,'utterances x 12 voices;',len(out),'characters')
 # Alternate complete scenes share the same factual contract and speaker slots as their base scene.
 variant_source=root/'data/game-conversations-variants.json'
 if variant_source.exists():
- variants=json.loads(variant_source.read_text());extra=0
+ variants=json.loads(variant_source.read_text());variants.update(json.loads((root/'data/game-episode-alternates.json').read_text()));extra=0
  for context,exchanges in variants.items():
   for vi,exchange in enumerate(exchanges):
    for slot,beats in enumerate(exchange):

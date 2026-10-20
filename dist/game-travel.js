@@ -5,6 +5,7 @@ const Travel=(()=>{
  function distance(a,b){const dLat=radians(b.lat-a.lat),dLon=radians(b.lon-a.lon),q=Math.sin(dLat/2)**2+Math.cos(radians(a.lat))*Math.cos(radians(b.lat))*Math.sin(dLon/2)**2;return Math.round(6371*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q)));}
  const destinations=()=>[...survivalRegions,...survivalDistricts];
  const region=id=>destinations().find(r=>r.id===id);
+ const randomVenue=(id,seed)=>{const pool=venues(id);return pool[hash(seed,(region(id)?.cityId||id)+':venue')%pool.length];};
  const city=id=>survivalCities[region(id)?.cityId||id];
  const venues=id=>destinations().filter(r=>r.cityId===(region(id)?.cityId||id));
  const project=c=>[70+(c.lon-125.7)*106,25+(38.7-c.lat)*132];
@@ -27,14 +28,14 @@ const Travel=(()=>{
  [base.time,base.location,base.title,base.intro]=notes[base.id];
  const choice=(id,label,cost,energy,fullness,mood,tags,reply,effect,tension=0)=>({id,label,cost,energy,fullness,mood,tags,reply,effect,tension});
  if(index===0){const far=[...s.commute].sort((a,b)=>b.km-a.km)[0];base.intro+=` ${survivalCast[far.id].name}은 ${far.home}에서 직선 약 ${far.km}km를 와야 한다. 아직 표는 끊지 않았다.`;base.choices=[choice('plan','각자 출발·귀가 시간부터 맞춰 보자',0,-3,-2,4,['social'],'plan','lead',-4),choice('subsidy','멀리 오는 친구 교통비를 같이 부담하자',20000,-2,-2,6,['social'],'social','care',-10),choice('lateStart','다 모이는 시간에 맞춰 오후부터 보자',0,3,-4,1,['rest'],'rest','care',-3),choice('ultimatum',`그냥 ${r.name}으로 확정. 못 오면 이번엔 빠지자`,0,-2,-3,6,['social'],'late','push',15),choice('improvise','일단 출발하고 중간에 어떻게든 맞추자',0,-8,-5,10,['social'],'late','adventure',12)];}
- if(index===1){base.choices[0].label=r.food[0];base.choices[1].label=r.food[1];base.choices[2].label=r.food[2];base.choices.push(choice('splitFood','먹고 싶은 메뉴끼리 나눠 먹고 만나자',32000,2,32,1,['food'],'cheap','lead',8),choice('takeout','포장해서 바깥에 자리 잡고 같이 먹자',28000,-3,35,4,['food','walk'],'cheap','adventure',3));}
+ if(index===1){for(const chain of survivalFoodChains)base.choices.push(choice(chain.id,chain.label,chain.cost,3,chain.fullness,0,['food'],'cheap','normal',5));base.choices[0].label=r.food[0];base.choices[1].label=r.food[1];base.choices[2].label=r.food[2];base.choices.push(choice('splitFood','먹고 싶은 메뉴끼리 나눠 먹고 만나자',32000,2,32,1,['food'],'cheap','lead',8),choice('takeout','포장해서 바깥에 자리 잡고 같이 먹자',28000,-3,35,4,['food','walk'],'cheap','adventure',3));}
  if(index===2){base.choices[0].label=`${r.cafe}, 기다렸다가 같이 들어가자`;base.choices[1].label='빈자리 있는 곳을 직접 찾아보자';base.choices[2].label=r.local;base.choices.push(choice('splitSeats','자리 나는 대로 둘씩 앉자',16000,6,-5,0,['rest'],'pivot','lead',10),choice('skipCafe','쉬는 건 뒤로 미루고 다음 코스부터 가자',0,-10,-8,5,['walk'],'walk','push',8));}
  if(index===3){base.choices[0].label=`${r.walk} 쪽으로 걸어가자`;base.choices.push(choice('bus','버스를 기다렸다가 같이 타자',8000,-5,-5,2,['wait'],'wait','care',3),choice('splitRide','걷고 싶은 사람과 차 탈 사람을 나누자',10000,-3,-5,4,['social'],'pivot','lead',9));}
  if(index===4){base.choices[0].label='근처 PC방에서 내전 한 판 하자';base.choices[1].label='볼링장으로 가서 팀 나눠 붙자';base.choices[2].label=r.local;base.choices.push(choice('localTour',`${r.sight}, 여기 온 김에 더 보자`,16000,-14,-8,12,['walk','social'],'walk','adventure',5),choice('boardgame','보드게임 카페에서 같이 앉아 놀자',24000,-2,-8,9,['game','rest'],'game','care',2));}
  if(index===5){base.choices[0].label=`${r.night}에서 바로 먹자`;base.choices.push(choice('splitBill','저녁은 각자 고르고 결제도 따로 하자',16000,2,26,-1,['food'],'cheap','lead',10),choice('delivery','한곳에 앉아서 배달을 같이 시키자',32000,6,38,5,['food','rest'],'cheap','care',2));}
  if(index===6){base.choices[0].label=`${r.hub} 쪽으로 같이 출발하자`;base.choices.push(choice('sleep','오늘은 방 잡고 내일 같이 움직이자',80000,18,5,13,['rest','social'],'rest','adventure',7),choice('escort','먼 사람 출발할 때까지 같이 기다려 주자',8000,-8,-5,4,['wait','social'],'leave','care',-8));}
  base.choices.forEach(c=>{c.effect??=c.tags.includes('game')?'compete':c.tags.includes('wait')?'wait':c.tags.includes('walk')?'adventure':c.tags.includes('rest')?'care':'normal';});return base;}
- return {city,venues,destinations,distance,project,candidates,commute,region,scene,localEpisodes};
+ return {randomVenue,city,venues,destinations,distance,project,candidates,commute,region,scene,localEpisodes};
 })();
 Travel.localEpisodes();
 survivalEndingBook.distance=['출발 전 터진 단톡방','가까운 사람의 «금방»과 먼 사람의 왕복 거리가 부딪혔다. 한 명이 예매창을 닫았고, 다른 한 명은 조용히 일정을 지웠다. 오늘 모임은 역에 가기도 전에 끝났다.','🗺️'];

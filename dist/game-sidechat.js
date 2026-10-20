@@ -1,0 +1,3 @@
+'use strict';
+// Fictional side conversations among absent members; pair topics follow reviewed interests.
+const survivalSideTopics=[{"id":"maple-login","pair":[0,9],"topic":"메이플"},{"id":"baseball-video","pair":[1,9],"topic":"야구"},{"id":"running","pair":[3,4],"topic":"러닝"},{"id":"ai-work","pair":[4,5],"topic":"AI"},{"id":"lol-pick","pair":[7,8],"topic":"LoL"},{"id":"food","pair":[2,10],"topic":"음식"},{"id":"baseball-fan","pair":[0,3],"topic":"야구"},{"id":"baseball-replay","pair":[6,9],"topic":"야구"},{"id":"football","pair":[2,7],"topic":"축구"},{"id":"game-retry","pair":[1,7],"topic":"게임"},{"id":"game-chat","pair":[3,6],"topic":"게임"},{"id":"snack","pair":[5,10],"topic":"간식"},{"id":"sports","pair":[8,11],"topic":"스포츠"},{"id":"maple-patch","pair":[4,9],"topic":"메이플"}];
