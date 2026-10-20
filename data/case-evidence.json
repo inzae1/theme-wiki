@@ -8,7 +8,7 @@
     ],
     "recordNumbering": "헤더 포함 CSV 레코드 번호. 물리적 줄 번호가 아님."
   },
-  "method": "다른 날짜의 재언급 또는 여러 동행인의 구체적 상호 확인을 우선하고, 참가자·장소·원본 이견을 문맥 대조했습니다. 단순 키워드 횟수를 사건 수로 해석하지 않습니다.",
+  "method": "대표 사건은 반복 회상과 장기 밈을 우선합니다. 에피소드는 한 날짜라도 구체적 경험과 여러 참가자의 설명이 있으면 별도로 수록합니다. 단발 제안·일반 취향을 사건으로 만들지 않고, 같은 모임의 작은 장면은 묶습니다.",
   "cases": [
     {
       "caseId": "inwang",
@@ -391,6 +391,311 @@
         "2025-03-24",
         "2025-05-24",
         "2025-07-21"
+      ]
+    },
+    {
+      "caseId": "bowling-one-point",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 504402,
+          "endRecord": 504434,
+          "start": "2024-07-22 16:43:12",
+          "end": "2024-07-22 16:46:44"
+        }
+      ],
+      "reviewedDates": [
+        "2024-07-22"
+      ]
+    },
+    {
+      "caseId": "busan-food-course",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 215268,
+          "endRecord": 215283,
+          "start": "2024-02-07 11:21:44",
+          "end": "2024-02-07 11:22:23"
+        },
+        {
+          "startRecord": 215474,
+          "endRecord": 215505,
+          "start": "2024-02-07 11:29:10",
+          "end": "2024-02-07 11:29:54"
+        },
+        {
+          "startRecord": 241115,
+          "endRecord": 241123,
+          "start": "2024-02-27 10:11:26",
+          "end": "2024-02-27 10:11:36"
+        },
+        {
+          "startRecord": 481176,
+          "endRecord": 481193,
+          "start": "2024-07-09 11:36:58",
+          "end": "2024-07-09 11:37:49"
+        }
+      ],
+      "reviewedDates": [
+        "2024-02-07",
+        "2024-02-27",
+        "2024-07-09"
+      ]
+    },
+    {
+      "caseId": "harubang-taste",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 139143,
+          "endRecord": 139182,
+          "start": "2023-12-20 15:36:26",
+          "end": "2023-12-20 15:37:25"
+        },
+        {
+          "startRecord": 1368069,
+          "endRecord": 1368094,
+          "start": "2025-12-09 01:37:56",
+          "end": "2025-12-09 01:38:37"
+        }
+      ],
+      "reviewedDates": [
+        "2023-12-20",
+        "2025-12-09"
+      ]
+    },
+    {
+      "caseId": "paul-mary-wait",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 281800,
+          "endRecord": 281817,
+          "start": "2024-03-25 16:03:03",
+          "end": "2024-03-25 16:03:51"
+        },
+        {
+          "startRecord": 871838,
+          "endRecord": 871855,
+          "start": "2025-02-05 17:41:55",
+          "end": "2025-02-05 17:47:58"
+        }
+      ],
+      "reviewedDates": [
+        "2024-03-25",
+        "2025-02-05"
+      ]
+    },
+    {
+      "caseId": "daejeon-autochess",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 1367568,
+          "endRecord": 1367617,
+          "start": "2025-12-09 01:19:24",
+          "end": "2025-12-09 01:21:26"
+        },
+        {
+          "startRecord": 1367626,
+          "endRecord": 1367660,
+          "start": "2025-12-09 01:23:11",
+          "end": "2025-12-09 01:26:08"
+        }
+      ],
+      "reviewedDates": [
+        "2025-12-09"
+      ]
+    },
+    {
+      "caseId": "daejeon-house-eras",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 253695,
+          "endRecord": 253705,
+          "start": "2024-03-07 16:08:18",
+          "end": "2024-03-07 16:08:35"
+        },
+        {
+          "startRecord": 319230,
+          "endRecord": 319290,
+          "start": "2024-04-15 14:53:56",
+          "end": "2024-04-15 14:58:41"
+        },
+        {
+          "startRecord": 1367722,
+          "endRecord": 1367740,
+          "start": "2025-12-09 01:29:26",
+          "end": "2025-12-09 01:29:51"
+        }
+      ],
+      "reviewedDates": [
+        "2024-03-07",
+        "2024-04-15",
+        "2025-12-09"
+      ]
+    },
+    {
+      "caseId": "lol-four-v-four",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 253650,
+          "endRecord": 253701,
+          "start": "2024-03-07 16:07:06",
+          "end": "2024-03-07 16:08:30"
+        },
+        {
+          "startRecord": 373887,
+          "endRecord": 373905,
+          "start": "2024-05-13 17:35:39",
+          "end": "2024-05-13 17:36:01"
+        }
+      ],
+      "reviewedDates": [
+        "2024-03-07",
+        "2024-05-13"
+      ]
+    },
+    {
+      "caseId": "champions-final-watch",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 215500,
+          "endRecord": 215514,
+          "start": "2024-02-07 11:29:45",
+          "end": "2024-02-07 11:30:11"
+        },
+        {
+          "startRecord": 253660,
+          "endRecord": 253674,
+          "start": "2024-03-07 16:07:20",
+          "end": "2024-03-07 16:07:41"
+        }
+      ],
+      "reviewedDates": [
+        "2024-02-07",
+        "2024-03-07"
+      ]
+    },
+    {
+      "caseId": "survival-outing",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 138999,
+          "endRecord": 139013,
+          "start": "2023-12-20 15:30:58",
+          "end": "2023-12-20 15:31:18"
+        },
+        {
+          "startRecord": 1367411,
+          "endRecord": 1367455,
+          "start": "2025-12-09 01:04:24",
+          "end": "2025-12-09 01:06:57"
+        }
+      ],
+      "reviewedDates": [
+        "2023-12-20",
+        "2025-12-09"
+      ]
+    },
+    {
+      "caseId": "lostark-login-queue",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 181558,
+          "endRecord": 181570,
+          "start": "2024-01-22 16:26:33",
+          "end": "2024-01-22 16:27:12"
+        }
+      ],
+      "reviewedDates": [
+        "2024-01-22"
+      ]
+    },
+    {
+      "caseId": "maple-jinhilla-memory",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 1667825,
+          "endRecord": 1667833,
+          "start": "2026-07-07 23:30:42",
+          "end": "2026-07-07 23:35:39"
+        },
+        {
+          "startRecord": 1668140,
+          "endRecord": 1668156,
+          "start": "2026-07-08 13:02:25",
+          "end": "2026-07-08 13:06:08"
+        }
+      ],
+      "reviewedDates": [
+        "2026-07-07",
+        "2026-07-08"
+      ]
+    },
+    {
+      "caseId": "stadium-win-rate",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 1195922,
+          "endRecord": 1195959,
+          "start": "2025-07-21 17:31:05",
+          "end": "2025-07-21 17:32:07"
+        },
+        {
+          "startRecord": 1195963,
+          "endRecord": 1196035,
+          "start": "2025-07-21 17:32:15",
+          "end": "2025-07-21 17:35:12"
+        }
+      ],
+      "reviewedDates": [
+        "2025-07-21"
+      ]
+    },
+    {
+      "caseId": "bukhansan-hike",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 257547,
+          "endRecord": 257555,
+          "start": "2024-03-11 11:33:17",
+          "end": "2024-03-11 11:33:39"
+        },
+        {
+          "startRecord": 927462,
+          "endRecord": 927492,
+          "start": "2025-03-20 00:19:53",
+          "end": "2025-03-20 00:20:42"
+        }
+      ],
+      "reviewedDates": [
+        "2024-03-11",
+        "2025-03-20"
+      ]
+    },
+    {
+      "caseId": "daegu-baseball-dinner",
+      "archiveType": "에피소드",
+      "reviewedWindows": [
+        {
+          "startRecord": 595900,
+          "endRecord": 595915,
+          "start": "2024-09-13 01:30:16",
+          "end": "2024-09-13 01:30:45"
+        }
+      ],
+      "reviewedDates": [
+        "2024-09-13"
       ]
     }
   ],
