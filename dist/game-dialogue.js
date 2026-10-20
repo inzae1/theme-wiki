@@ -10,6 +10,12 @@ const RegionalDialogue=(()=>{
    return String(vars[key]);
   }));
  }
+ function exchange(s,key,fallback){
+  const pool=[fallback,...(survivalConversationVariants[key]||[])];
+  // New trips advance the seed modulo six, so 2/3-scene pools never repeat consecutively.
+  const index=(SurvivalEngine.hash(0,key+':'+[...s.party].sort((a,b)=>a-b).join(','))+s.seed)%pool.length;
+  return pool[index];
+ }
  function cast(s,key,ending){
   const h=id=>SurvivalEngine.hash(s.seed,key+':'+id),p=survivalPersonality;
   let first=ending&&s.walkoutMember!==null?s.walkoutMember:[...s.party].sort((a,b)=>p[a].patience-p[b].patience||h(a)-h(b))[0];
@@ -19,20 +25,23 @@ const RegionalDialogue=(()=>{
  }
  function turns(s,end=false){
   const book=survivalConversations,r=Travel.region(s.destination),e=SurvivalEngine.ending(s);
-  const ended=end||!!e;let key,script,guest,contextKey;
-  if(ended){key=e[0];script=book.endings[key];}
-  else if(s.phase==='dilemma'){key=s.pending;script=book.opening[key]||book.generic[key];guest=book.guests[key];}
+  const ended=end||!!e;let key,script,guest,contextKey,scriptKey;
+  if(ended){key=e[0];scriptKey='endings:'+key;script=book.endings[key];}
+  else if(s.phase==='dilemma'){key=s.pending;scriptKey=(book.opening[key]?'opening:':'generic:')+key;script=book.opening[key]||book.generic[key];guest=book.guests[key];}
   else if(s.phase==='dilemmaReaction'){
-   const last=s.incidents.at(-1),d=survivalDilemmas[last.id],index=d.choices.findIndex(c=>c.id===last.choice);key=last.id+':'+last.choice;contextKey=last.id;script=book.reactions[last.id]?.[index]||book.genericReactions[last.choice];
-  }else if(s.phase==='reaction'){key=s.history.at(-1).choice;script=book.choices[key];}
-  else {key=SurvivalEngine.scene(s).id;script=book.stages[key];guest=book.guests[key];}
+   const last=s.incidents.at(-1),d=survivalDilemmas[last.id],index=d.choices.findIndex(c=>c.id===last.choice);key=last.id+':'+last.choice;contextKey=last.id;scriptKey=book.reactions[last.id]?'reactions:'+last.id+':'+index:'genericReactions:'+last.choice;script=book.reactions[last.id]?.[index]||book.genericReactions[last.choice];
+  }else if(s.phase==='reaction'){key=s.history.at(-1).choice;scriptKey='choices:'+key;script=book.choices[key];}
+  else {key=SurvivalEngine.scene(s).id;scriptKey='stages:'+key;script=book.stages[key];guest=book.guests[key];}
   const order=cast(s,!ended&&s.phase==='reaction'&&s.step===1?'arrive':contextKey||key,ended),far=[...s.commute].sort((a,b)=>b.km-a.km)[0];
   if(ended&&key==='rescued'){const owner=cast(s,'wallet',false)[1];order.splice(0,order.length,owner,...order.filter(id=>id!==owner));}
-  if(key==='arrive')script=book.arrival.travel;
+  if(key==='arrive'){script=book.arrival.travel;scriptKey='arrival:travel';}
+  script=exchange(s,scriptKey,script);
+  if(guest)guest=exchange(s,'guests:'+key,guest);
   if(!script||script.length!==3)throw Error('Missing complete conversation: '+key);
   const vars={city:r.name,cafe:r.cafe,walk:r.walk,hub:r.hub,food:r.food[0],sight:r.sight,night:r.night,home:far.home,km:far.km};
   // Keep the wallet owner in the same role when reporting the discovery.
-  const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:[0,1,2],speakers=slots.map(i=>order[i]);
+  const repeatSpeaker=!ended&&s.phase==='choose'&&s.step>0&&SurvivalEngine.hash(s.seed,key+':return')%3===0;
+  const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:repeatSpeaker?[0,1,0]:[0,1,2],speakers=slots.map(i=>order[i]);
   const result=script.map((utterance,i)=>({id:speakers[i],lines:voice(speakers[i],utterance,vars)}));
   // A directed address is used only when answering the immediately preceding speaker.
   if(speakers[0]!==speakers[1]&&SurvivalEngine.hash(s.seed,key+':address')%5===0)result[1].lines.unshift(address(speakers[1],speakers[0]));
@@ -43,5 +52,5 @@ const RegionalDialogue=(()=>{
   }
   return result;
  }
- return {turns,address};
+ return {turns,address,exchange};
 })();

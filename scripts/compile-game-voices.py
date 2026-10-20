@@ -95,3 +95,14 @@ for category,scenes in book.items():
 out="'use strict';\n// LLM-authored whole exchanges and per-person utterances, prewritten from corpus-informed voice notes.\n// Every array contains intentional message boundaries. No runtime grammar rewriting or character slicing.\nconst survivalConversations="+json.dumps(book,ensure_ascii=False,separators=(',',':'))+';\n'
 (root/'dist/game-conversations.js').write_text(out)
 print('Compiled',count,'utterances x 12 voices;',len(out),'characters')
+
+# Alternate complete scenes share the same factual contract and speaker slots as their base scene.
+variant_source=root/'data/game-conversations-variants.json'
+if variant_source.exists():
+ variants=json.loads(variant_source.read_text());extra=0
+ for context,exchanges in variants.items():
+  for vi,exchange in enumerate(exchanges):
+   for slot,beats in enumerate(exchange):
+    exchange[slot]={'voices':[voice(beats,p,context+':variant:'+str(vi),slot) for p in range(12)]};extra+=1
+ (root/'dist/game-conversation-variants.js').write_text("'use strict';\n// Alternate whole exchanges; factual context and decision remain fixed.\nconst survivalConversationVariants="+json.dumps(variants,ensure_ascii=False,separators=(',',':'))+';\n')
+ print('Compiled',len(variants),'variant contexts;',extra,'alternate utterances x 12 voices')
