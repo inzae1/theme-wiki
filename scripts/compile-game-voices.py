@@ -77,14 +77,36 @@ replacements={
 voice_profiles=json.loads((root/'data/game-voice-profiles.json').read_text())['profiles']
 reviewed_phrases=json.loads((root/'data/game-voice-phrases.json').read_text())
 phrases.update(reviewed_phrases)
-hard_serious={'brawl','bagThrow','distance','roundOne','split','conflict','ultimatum','ignore','double','argue','blame'}
+speech_acts=json.loads((root/'data/game-persona-speech-acts.json').read_text())['rules']
+speech_rules=[(rule,re.compile(rule['pattern'])) for rule in speech_acts]
+stage_personas=json.loads((root/'data/game-stage-personas.json').read_text())
+character_replies=json.loads((root/'data/game-character-replies.json').read_text())
+voice_audit={'utterances':0,'wholeAct':0,'messageActs':0}
+def authored_act(text,p):
+ compact=re.sub(r'\s+','',text)
+ for rule,pattern in speech_rules:
+  match=pattern.fullmatch(compact)
+  if match:return [line.format(**match.groupdict()) for line in rule['voices'][p]]
+ return None
 def voice(beats,p,context,slot):
+ parts=context.split(':')
+ if parts[0]=='stages' and slot<2:
+  edition=int(parts[3])+1 if len(parts)>3 and parts[2]=='variant' else 0
+  return list(stage_personas[parts[1]][edition][slot][p])
  key='/'.join(beats)
- if key in phrases:
+ voice_audit['utterances']+=1
+ authored=authored_act(key,p)
+ if authored is not None:
+  voice_audit['wholeAct']+=1
+  out=authored
+ elif key in phrases:
   out=list(phrases[key][p])
  else:
   out=[]
   for beat in beats:
+   authored=authored_act(beat,p)
+   if authored is not None:
+    voice_audit['messageActs']+=1;out.extend(authored);continue
    if beat in phrases:
     out.extend(phrases[beat][p]);continue
    for a,b in replacements[p]:beat=beat.replace(a,b)
@@ -109,16 +131,15 @@ def voice(beats,p,context,slot):
   return 'ㅋㅋ'
  # Authored laugh-only responses keep their position; length follows each member's observed range.
  out=[laugh_marker(13+i) if re.fullmatch('ㅋ+',line) else line for i,line in enumerate(out)]
- parts=context.split(':');scene=parts[1] if len(parts)>1 else ''
- is_serious=scene in hard_serious or ('Dispute' in scene and parts[-1]=='2')
- # One utterance may contain several messages: applying a per-message rate only once undercounted laughs.
- probability=1-(1-profile['laughMessagePercent']/100)**len(out)
- if not is_serious and digest%10000<probability*10000 and not any('ㅋ' in x for x in out):
-  marker=laugh_marker(7)
-  if (digest//101)%1000<profile['standaloneLaughShare']*1000:
-   out.insert(0,marker)
-  elif p in [4,6] and (digest//37)%2==0:out[0]=marker+' '+out[0]
-  else:out[-1]+=' '+marker
+ # Laughter is authored, never inserted just to imitate a profile percentage.
+ if context.startswith('endings:'):
+  kind=context.split(':')[1]
+  stance=character_replies['endings'][kind][slot][p]
+  # Authored character thought plus this edition's complete factual line. No random prefixes.
+  neutral={'ㅇㅇ','알겠음','씨발','씨바','시바','됐고'}
+  detail=[line for line in beats if re.sub(r'\s+','',line) not in neutral]
+  joined=' '.join(detail)
+  out=list(stance)+([joined] if joined and re.sub(r'\s+','',joined) not in {re.sub(r'\s+','',x) for x in stance} else [])
  return out
 count=0
 for category,scenes in book.items():
@@ -129,6 +150,7 @@ for category,scenes in book.items():
     exchange[i]={'voices':[voice(beats,p,category+':'+key+':'+str(ci),i) for p in range(12)]}
     count+=1
 out="'use strict';\n// LLM-authored whole exchanges and per-person utterances, prewritten from corpus-informed voice notes.\n// Every array contains intentional message boundaries. No runtime grammar rewriting or character slicing.\nconst survivalConversations="+json.dumps(book,ensure_ascii=False,separators=(',',':'))+';\n'
+out+='const survivalCharacterReplies='+json.dumps({'stages':character_replies['stages'],'moods':character_replies['moods']},ensure_ascii=False,separators=(',',':'))+';\n'
 (root/'dist/game-conversations.js').write_text(out)
 print('Compiled',count,'utterances x 12 voices;',len(out),'characters')
 
@@ -150,3 +172,5 @@ if variant_source.exists():
     exchange[slot]={'voices':[voice(beats,p,context+':variant:'+str(vi),slot) for p in range(12)]};extra+=1
  (root/'dist/game-conversation-variants.js').write_text("'use strict';\n// Alternate whole exchanges; factual context and decision remain fixed.\nconst survivalConversationVariants="+json.dumps(variants,ensure_ascii=False,separators=(',',':'))+';\n')
  print('Compiled',len(variants),'variant contexts;',extra,'alternate utterances x 12 voices')
+
+print('Whole speech-act rewrites:',voice_audit)

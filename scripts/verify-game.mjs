@@ -71,7 +71,7 @@ function checkVoices(node){
 checkVoices(conversations);assert.equal(utterances,1075);assert.equal(utterances*12,12900);
 assert.equal(new Set(conversations.stages.wait[0].voices.map(lines=>lines.join('/'))).size,12);
 assert.ok(conversations.stages.wait[0].voices[1].includes('몇팀임?'));
-assert.ok(conversations.stages.wait[0].voices[0].some(x=>x.includes('노?')));
+assert.ok(conversations.stages.wait[0].voices[0].some(x=>x.includes('노')));
 assert.ok(conversations.stages.wait[0].voices[2].some(line=>line.length>12),'a complete longer speaker sentence stays intact');
 assert.ok(voiceLengths[2].reduce((a,b)=>a+b)/voiceLengths[2].length>voiceLengths[1].reduce((a,b)=>a+b)/voiceLengths[1].length);
 for(let offset=0;offset<12;offset++){
@@ -195,3 +195,17 @@ ctx.rotationState=plain(ends.get('split'));vm.runInContext("state=rotationState;
 assert.equal(vm.runInContext('state.endingEdition',ctx),undefined);
 vm.runInContext("state.phase='end';render()",ctx);assert.ok(Number.isInteger(vm.runInContext('state.endingEdition',ctx)));
 console.log('PASS: final choice responses and ending epilogues are separate, so the ending chat is shown only once.');
+
+// Personality changes what a speaker proposes, with the party, scene and facts held fixed.
+let personalityProbe;
+for(let seed=0;seed<40;seed++){const s=E.create([0,1,5],seed,'daejeon');s.step=2;s.personal[0]=80;if(E.dialogue(s)[2].id===0){personalityProbe=s;break;}}
+assert.ok(personalityProbe);const patienceBefore=traits[0].patience;
+traits[0].patience=80;const patientReply=plain(E.dialogue(personalityProbe)[2]);
+traits[0].patience=45;const impatientReply=plain(E.dialogue(personalityProbe)[2]);
+assert.equal(patientReply.id,impatientReply.id);assert.notDeepEqual(patientReply.lines,impatientReply.lines);traits[0].patience=patienceBefore;
+traits[0].patience=80;personalityProbe.personal[0]=10;const strainedReply=plain(E.dialogue(personalityProbe)[2]);assert.notDeepEqual(strainedReply.lines,patientReply.lines);assert.ok(!strainedReply.lines.some(l=>/[ㅋㅎ]/.test(l)));traits[0].patience=patienceBefore;
+const actorState=plain(ends.get('split')),actor=E.dialogue(actorState,true)[0].id,assertiveBefore=traits[actor].assertiveness;actorState.personal[actor]=20;
+traits[actor].assertiveness=90;const confront=plain(E.dialogue(actorState,true)[0]);traits[actor].assertiveness=40;const withdraw=plain(E.dialogue(actorState,true)[0]);assert.equal(confront.id,withdraw.id);assert.notDeepEqual(confront.lines,withdraw.lines);traits[actor].assertiveness=assertiveBefore;
+const replyBook=vm.runInContext('survivalCharacterReplies',ctx);for(const modes of Object.values(replyBook.stages))for(const voices of Object.values(modes)){assert.equal(voices.length,12);assert.ok(new Set(voices.map(v=>v.join('').replace(/[\sㅋㅎ!?]/g,''))).size>=9);}
+for(const pool of [conversations,...Object.values(sceneVariants)]){const scan=node=>{if(Array.isArray(node)){node.forEach(scan);return;}if(node?.voices){for(const lines of node.voices)assert.ok(lines.every(l=>!l.includes('/')));return;}if(node&&typeof node==='object')Object.values(node).forEach(scan);};scan(pool);}
+console.log('PASS: same-speaker proposals change with patience and current strain; ending boundaries change with assertiveness; twelve authored voices and clean message boundaries.');

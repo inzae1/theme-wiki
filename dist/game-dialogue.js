@@ -26,6 +26,19 @@ const RegionalDialogue=(()=>{
   if(ending&&s.rupture)return [...s.rupture.pair,...s.party.filter(id=>!s.rupture.pair.includes(id))];
   const rest=s.party.filter(id=>id!==first).sort((a,b)=>(p[b].leadership+p[b].care)-(p[a].leadership+p[a].care)||h(a)-h(b));return [first,...rest];
  }
+ function replyMode(s,id,topic){
+  const p=survivalPersonality[id],personal=s.personal[id]??50,km=s.commute.find(c=>c.id===id)?.km||0;
+  if(topic==='food')return p.thrift>=70||s.budget<40000?'thrift':p.curiosity>=75&&personal>40?'curious':'hungry';
+  if(topic==='wait')return personal<40||p.patience<50||s.tension>=70?'impatient':p.care>=70?'care':'patient';
+  if(topic==='move')return s.energy<35||p.stamina<50||personal<35?'tired':p.leadership>=75?'lead':'cautious';
+  if(topic==='activity')return personal<35||s.energy<25?'quiet':p.competitive>=80?'competitive':p.spontaneity>=70||p.curiosity>=75?'curious':'quiet';
+  if(topic==='dinner')return s.fullness<25?'hungry':p.thrift>=70||s.budget<20000?'thrift':'full';
+  if(topic==='home')return km>220||personal<35?'leave':p.care>=70?'care':'oneMore';
+ }
+ function emotionally(s,id,lines,ended){
+  if(!ended&&((s.personal[id]??50)<35||s.tension>=75))return lines.map(l=>l.replace(/[ㅋㅎ]+/g,'').trim()).filter(Boolean);
+  return lines;
+ }
  function turns(s,end=false){
   const book=survivalConversations,r=Travel.region(s.destination),e=SurvivalEngine.ending(s);
   const ended=end||s.phase==='end';let key,script,guest,contextKey,scriptKey;
@@ -49,7 +62,25 @@ const RegionalDialogue=(()=>{
   // Keep the wallet owner in the same role when reporting the discovery.
   const repeatSpeaker=!ended&&s.phase==='choose'&&s.step>0&&SurvivalEngine.hash(s.seed,key+':return')%3===0;
   const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:repeatSpeaker?[0,1,0]:[0,1,2],speakers=slots.map(i=>order[i]);
-  const result=script.map((utterance,i)=>({id:speakers[i],lines:voice(speakers[i],utterance,vars)}));
+  const result=script.map((utterance,i)=>{
+   const id=speakers[i];let lines=voice(id,utterance,vars);
+   // Only the final reaction in an unresolved scene changes its proposal; facts stay in turns 1/2.
+   const topic=!ended&&s.phase==='choose'&&scriptKey.startsWith('stages:')?key:
+    !ended&&s.phase==='dilemma'?({queueDispute:'wait',walkDispute:'move',budgetDispute:'dinner'}[key]):null;
+   if(topic){
+    const mode=key==='budgetDispute'?'thrift':replyMode(s,id,topic),own=voice(id,{voices:survivalCharacterReplies.stages[topic][mode]},vars);
+    if(i===2)lines=own;
+    else if(i===0&&s.phase==='choose'&&speakers[2]!==id)lines=[...lines,own.join(' ')];
+   }
+   if(ended){
+    const p=survivalPersonality[id],personal=s.personal[id]??50;
+    const mode=i===0&&key==='split'&&(p.assertiveness<75||personal>=40)?'boundary':
+     i===0&&key==='champion'&&p.competitive<80?'modest':
+     i===1&&key==='rescued'&&p.humor>=80&&p.care<70&&personal>40?'tease':null;
+    if(mode){const authored=survivalCharacterReplies.moods[mode][id];lines=[...authored,...lines.slice(-1)];}
+   }
+   return {id,lines:emotionally(s,id,lines,ended)};
+  });
   // Replies follow the ongoing topic without mechanically calling the previous speaker.
   // Two absent friends can briefly talk past the outing; an attendee brings back the pending decision.
   const sideCandidates=survivalSideTopics.filter(t=>t.pair.every(id=>!s.party.includes(id)));
@@ -68,5 +99,5 @@ const RegionalDialogue=(()=>{
   }
   return result;
  }
- return {turns,address,exchange};
+ return {turns,address,exchange,replyMode};
 })();
