@@ -8,6 +8,24 @@ function newTripSeed(){
  saveGame('tw-game-dialogue-run',(run+1)%30);
  const random=newSeed()&0x7fffffff;return random-random%30+run%30;
 }
+// Record viewed editions per ending, independently of trip seeds and other endings.
+function prepareEndingDialogue(s){
+ const kind=SurvivalEngine.ending(s)?.[0];if(!kind)return;
+ const size=1+(survivalConversationVariants['endings:'+kind]?.length||0);
+ const run=JSON.stringify([s.seed,s.destination,s.party,s.actions]);
+ let ledger=readGame('tw-game-ending-dialogues-v1',{});
+ if(!ledger||typeof ledger!=='object'||Array.isArray(ledger))ledger={};
+ const saved=ledger[kind],valid=n=>Number.isInteger(n)&&n>=0&&n<size;
+ const visits=Array.isArray(saved?.visits)?saved.visits.filter(v=>v&&typeof v.run==='string'&&valid(v.index)).slice(-32):[];
+ const seen=visits.find(v=>v.run===run);
+ if(seen){s.endingEdition=seen.index;return;}
+ // Existing trips may have displayed the legacy seed edition before this update.
+ const legacy=(SurvivalEngine.hash(0,'endings:'+kind+':'+[...s.party].sort((a,b)=>a-b).join(','))+s.seed)%size;
+ const index=valid(saved?.next)?saved.next:(legacy+1)%size;
+ s.endingEdition=index;
+ ledger[kind]={next:(index+1)%size,visits:[...visits,{run,index}].slice(-32)};
+ saveGame('tw-game-ending-dialogues-v1',ledger);
+}
 let selected=[],setupStage='party',state=null,soft=readGame('tw-game-soft',false)===true,collection=readGame('tw-game-endings',[]),mapSeed=newSeed(),destination=null,previewDestination=null;
 if(!Array.isArray(collection))collection=[];collection=[...new Set(collection.filter(id=>Object.hasOwn(survivalEndingBook,id)))];
 let resumable=SurvivalEngine.restore(readGame('tw-game-save',null));document.getElementById('soft').checked=soft;
@@ -67,7 +85,7 @@ function transcript(end=false){
 }
 
 function recap(){return `<details><summary>오늘의 선택과 사건 기록 (${state.actions.length})</summary><ol>${state.history.map((h,index)=>{const sc=SurvivalEngine.scene(state,index),incident=state.incidents.find(i=>i.step===index+1);return `<li><small>${sc.time} · ${sc.location}</small><br>${escapeHTML(h.label)}${incident?`<aside>⚡ ${survivalDilemmas[incident.id].title}<br><small>↳ ${escapeHTML(incident.label)}</small></aside>`:''}</li>`}).join('')}</ol></details>`;}
-function render(){if(!state)return lobby();const ended=SurvivalEngine.ending(state),region=Travel.region(state.destination);
+function render(){if(!state)return lobby();const ended=SurvivalEngine.ending(state),region=Travel.region(state.destination);if(ended)prepareEndingDialogue(state);
  if(state.phase==='end'){if(!collection.includes(ended[0])){collection.push(ended[0]);saveGame('tw-game-endings',collection);}const farthest=[...state.commute].sort((a,b)=>b.km-a.km)[0];root.innerHTML=`<section class="ending ending-${ended[0]}"><p class="eyebrow">${region.name} ${region.venueName} 모임 종료 · ENDING ${collection.length} / ${Object.keys(survivalEndingBook).length}</p><div class="end-icon">${ended[3]}</div><h1>${ended[1]}</h1><p class="epilogue">${ended[2]}</p><div class="ending-causes"><span>${region.emoji} ${region.name} · ${state.step}라운드</span><span>${survivalCast[farthest.id].name}의 원정 · ${farthest.home}에서 직선 ${farthest.km}km</span>${state.incidents.map(i=>`<span>${survivalDilemmas[i.id].icon} ${escapeHTML(i.label)}</span>`).join('')}</div>${stats()}${members()}<section class="chat final-chat"><div class="chat-head"><b>${['brawl','bagThrow'].includes(ended[0])?'모임이 깨진 순간의 단톡방':'해산 뒤 단톡방'}</b><span>창작 후일담</span></div>${transcript(true)}</section>${recap()}<div class="launch"><button class="primary" id="again">같은 지역, 다른 모임</button><button id="party">지도에서 다시 정하기</button><button id="share">결과 복사</button></div><p id="copy-status" role="status"></p></section>`;document.getElementById('again').onclick=()=>{const tripSeed=newTripSeed();state=SurvivalEngine.create(state.party,tripSeed,Travel.randomVenue(state.destination,tripSeed).id);persist();render();window.scrollTo(0,0)};document.getElementById('party').onclick=lobby;document.getElementById('share').onclick=async()=>{const text=`개테천 모임 대작전 · ${region.name}: ${ended[1]}\n${state.party.map(id=>survivalCast[id].name).join(' · ')}\n${state.step}라운드 / 남은 예산 ${money(state.budget)}\nhttps://inzae1.github.io/theme-wiki/game.html`;try{await navigator.clipboard.writeText(text);document.getElementById('copy-status').textContent='결과를 복사했습니다.'}catch{document.getElementById('copy-status').textContent=text}};return;}
  const dilemma=state.phase==='dilemma',crisisReaction=state.phase==='dilemmaReaction',reaction=state.phase==='reaction'||crisisReaction,sc=SurvivalEngine.scene(state,Math.min(6,state.phase==='reaction'?state.step-1:state.step)),incident=dilemma||crisisReaction?SurvivalEngine.incident(state):null,last=crisisReaction?state.incidents.at(-1):state.history.at(-1),choice=crisisReaction?incident.choices.find(c=>c.id===last.choice):state.phase==='reaction'?SurvivalEngine.scene(state,state.step-1).choices.find(c=>c.id===last.choice):null;
  root.innerHTML=`<div class="play-top"><span>${region.emoji} ${region.name} · ${incident?'돌발 사건':`ROUND ${state.phase==='reaction'?state.step:state.step+1} / 7`}</span><small>일정 지연 ${state.delay}분</small><button id="back">지도·멤버</button></div><div class="steps" aria-hidden="true">${survivalScenes.map((s,i)=>`<span class="${i<state.step?'done':i===state.step?'current':''}"></span>`).join('')}</div>${stats()}${members()}<div class="play-grid"><section class="scene ${incident?'crisis':''}"><p class="eyebrow">${incident?incident.location:gameClock(sc.time)+' · '+sc.location}</p><h1>${incident?.title||sc.title}</h1><p>${incident?.intro||sc.intro}</p><div class="scene-art" aria-hidden="true">${incident?.icon||region.emoji}<span>${incident?'계획에 없던 갈림길':region.district}</span></div>${reaction?`<div class="chosen"><small>총무의 선택</small><strong>${GameOptions.short(choice).label}</strong><p>실제 지출 ${money(choice.cost||0)}${state.debt?' · 공동 예산 초과액은 개인 결제로 기록':''}</p>${crisisReaction?`<p class="outcome">${choice.text}</p>${choice.flag==='rematch'?`<p class="match-result">${state.flags.includes('won')?'역전승! 결과 화면이 저장됐다.':'또 졌다. 설욕은 다음 모임으로.'}</p>`:''}`:''}</div><button class="primary next" id="next">${ended?'오늘의 결말 보기':state.pending?'그런데, 잠깐…':'이후 상황 보기 →'}</button>`:`<div class="choices">${GameOptions.choices(state,incident||sc).map(ch=>`<button data-choice="${ch.id}"><strong>${ch.label}</strong></button>`).join('')}</div>`}</section><section class="chat"><div class="chat-head"><div><b>개별의 테마천국</b><small>${region.name} ${region.venueName} 모임 중 · 오늘 ${state.party.length+1}명 참석</small></div><span>13</span></div><p class="chat-date">${state.step===0?'모임 당일 · 출발 전':'모임 당일'}</p>${transcript()}<div class="chat-note">인물의 말투를 참고한 창작 대화</div></section></div>${recap()}`;

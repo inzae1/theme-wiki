@@ -166,3 +166,24 @@ for(const [kind,saved] of ends){
  assert.equal(seen.size,10,kind);
 }
 console.log('PASS: 20 endings x 10 unique complete exchanges; rupture actors, wallet owner and player-funded settlement preserved.');
+
+// Interleaved endings and seed gaps of thirty used to repeat the same ending edition.
+for(const [kind,saved] of ends){
+ speechStorage.clear();const seen=new Set();
+ for(let i=0;i<10;i++){
+  const s=plain(saved);s.seed+=30*i;ctx.rotationState=s;
+  vm.runInContext('prepareEndingDialogue(rotationState)',ctx);seen.add(s.endingEdition);
+  const first=s.endingEdition;delete s.endingEdition;
+  vm.runInContext('prepareEndingDialogue(rotationState)',ctx);assert.equal(s.endingEdition,first,'reload must not consume another edition');
+  const other=plain(ends.get(kind==='split'?'taxi':'split'));other.seed+=30*i;ctx.interleaved=other;
+  vm.runInContext('prepareEndingDialogue(interleaved)',ctx);
+ }
+ assert.equal(seen.size,10,kind);
+ const original=E.restore(saved);ctx.rotationState=original;vm.runInContext('prepareEndingDialogue(rotationState)',ctx);
+ const index=original.endingEdition;delete original.endingEdition;vm.runInContext('prepareEndingDialogue(rotationState)',ctx);assert.equal(original.endingEdition,index);
+}
+console.log('PASS: per-ending seen history prevents repeats across interleaved endings, different trip seeds and reloads.');
+
+// The immediate reaction and the final result must share the recorded ending dialogue.
+ctx.rotationState=plain(ends.get('split'));vm.runInContext("state=rotationState;state.phase='dilemmaReaction';render()",ctx);
+const previewEdition=vm.runInContext('state.endingEdition',ctx);vm.runInContext("state.phase='end';render()",ctx);assert.equal(vm.runInContext('state.endingEdition',ctx),previewEdition);

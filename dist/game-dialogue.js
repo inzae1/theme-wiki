@@ -13,6 +13,7 @@ const RegionalDialogue=(()=>{
  function exchange(s,key,fallback){
   const pool=[fallback,...(survivalConversationVariants[key]||[])];
   // New trips advance the seed modulo thirty, so 2/3/10-scene pools never repeat consecutively.
+  if(key.startsWith('endings:')&&Number.isInteger(s.endingEdition)&&s.endingEdition>=0&&s.endingEdition<pool.length)return pool[s.endingEdition];
   const index=(SurvivalEngine.hash(0,key+':'+[...s.party].sort((a,b)=>a-b).join(','))+s.seed)%pool.length;
   return pool[index];
  }
