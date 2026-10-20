@@ -11,6 +11,11 @@ for episode in json.loads((root/'data/game-friction.json').read_text()):
  book['opening'][episode['id']]=episode['opening']
  book['reactions'][episode['id']]=episode['replies']
 book['sidechats']={x['id']:x['script'] for x in json.loads((root/'data/game-sidechat.json').read_text())}
+ending_scenes=json.loads((root/'data/game-ending-scenes.json').read_text())
+assert set(ending_scenes)==set(book['endings'])
+for key,scenes in ending_scenes.items():
+ assert len(scenes)==10 and all(len(scene)==3 for scene in scenes),key
+ book['endings'][key]=scenes[0]
 # Whole-message alternatives authored for frequent speech acts. Columns are the 12 cast IDs.
 phrases={}
 def forms(key,text):
@@ -130,7 +135,15 @@ print('Compiled',count,'utterances x 12 voices;',len(out),'characters')
 # Alternate complete scenes share the same factual contract and speaker slots as their base scene.
 variant_source=root/'data/game-conversations-variants.json'
 if variant_source.exists():
- variants=json.loads(variant_source.read_text());variants.update(json.loads((root/'data/game-episode-alternates.json').read_text()));extra=0
+ variants=json.loads(variant_source.read_text());variants.update(json.loads((root/'data/game-episode-alternates.json').read_text()))
+ for context,scenes in json.loads((root/'data/game-episode-more.json').read_text()).items():
+  # Each episode opening, each choice response, and each schedule action has three whole scenes.
+  pool=variants[context]
+  for scene in scenes:
+   if len(pool)<2 and scene not in pool:pool.append(scene)
+  assert len(pool)==2,context
+ for key,scenes in ending_scenes.items():variants['endings:'+key]=scenes[1:]
+ extra=0
  for context,exchanges in variants.items():
   for vi,exchange in enumerate(exchanges):
    for slot,beats in enumerate(exchange):

@@ -12,7 +12,7 @@ const RegionalDialogue=(()=>{
  }
  function exchange(s,key,fallback){
   const pool=[fallback,...(survivalConversationVariants[key]||[])];
-  // New trips advance the seed modulo six, so 2/3-scene pools never repeat consecutively.
+  // New trips advance the seed modulo thirty, so 2/3/10-scene pools never repeat consecutively.
   const index=(SurvivalEngine.hash(0,key+':'+[...s.party].sort((a,b)=>a-b).join(','))+s.seed)%pool.length;
   return pool[index];
  }

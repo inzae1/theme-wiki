@@ -5,8 +5,8 @@ const readGame=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{r
 const newSeed=()=>{try{return crypto.getRandomValues(new Uint32Array(1))[0]}catch{return Date.now()>>>0}};
 function newTripSeed(){
  const previous=readGame('tw-game-dialogue-run',0),run=Number.isSafeInteger(previous)&&previous>=0?previous:0;
- saveGame('tw-game-dialogue-run',(run+1)%6);
- const random=newSeed()&0x7fffffff;return random-random%6+run%6;
+ saveGame('tw-game-dialogue-run',(run+1)%30);
+ const random=newSeed()&0x7fffffff;return random-random%30+run%30;
 }
 let selected=[],setupStage='party',state=null,soft=readGame('tw-game-soft',false)===true,collection=readGame('tw-game-endings',[]),mapSeed=newSeed(),destination=null,previewDestination=null;
 if(!Array.isArray(collection))collection=[];collection=[...new Set(collection.filter(id=>Object.hasOwn(survivalEndingBook,id)))];

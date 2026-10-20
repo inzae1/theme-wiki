@@ -93,19 +93,19 @@ console.log('PASS: three short choices per screen, all 40 actions available acro
 const sceneVariants=vm.runInContext('survivalConversationVariants',ctx),dialogue=vm.runInContext('RegionalDialogue',ctx);
 assert.equal(Object.keys(sceneVariants).length,367);
 for(const [key,pool] of Object.entries(sceneVariants)){
- assert.ok(pool.length>=1&&pool.length<=2);
+ assert.equal(pool.length,key.startsWith('endings:')?9:/^(opening|reactions|generic|genericReactions|choices):/.test(key)?2:pool.length);assert.ok(pool.length>=1&&pool.length<10);
  for(const scene of pool){assert.equal(scene.length,key.startsWith('guests:')?2:3);for(const utterance of scene){assert.equal(utterance.voices.length,12);for(const lines of utterance.voices)assert.ok(lines.length>0&&lines.every(x=>typeof x==='string'&&x.length>0));}}
 }
 const fixed=E.create([0,1,5],0,'daejeon');
-for(let seed=0;seed<6;seed++){fixed.seed=seed;const current=dialogue.exchange(fixed,'stages:wait',conversations.stages.wait);fixed.seed=(seed+1)%6;const next=dialogue.exchange(fixed,'stages:wait',conversations.stages.wait);assert.notDeepEqual(plain(current),plain(next));}
+for(let seed=0;seed<30;seed++){fixed.seed=seed;const current=dialogue.exchange(fixed,'stages:wait',conversations.stages.wait);fixed.seed=(seed+1)%30;const next=dialogue.exchange(fixed,'stages:wait',conversations.stages.wait);assert.notDeepEqual(plain(current),plain(next));}
 for(const [key,pool] of Object.entries(sceneVariants)){
  let base=key.startsWith('reactions:')?conversations.reactions[key.split(':')[1]][Number(key.split(':')[2])]:conversations[key.split(':')[0]][key.split(':')[1]];
- for(let seed=0;seed<6;seed++){fixed.seed=seed;const a=dialogue.exchange(fixed,key,base);fixed.seed=(seed+1)%6;const b=dialogue.exchange(fixed,key,base);assert.notDeepEqual(plain(a),plain(b),key);}
+ for(let seed=0;seed<30;seed++){fixed.seed=seed;const a=dialogue.exchange(fixed,key,base);fixed.seed=(seed+1)%30;const b=dialogue.exchange(fixed,key,base);assert.notDeepEqual(plain(a),plain(b),key);}
 }
-console.log('PASS: 367 contexts / 377 additional complete exchanges, 12 voices each; consecutive trip editions differ and save replay stays deterministic.');
+console.log(`PASS: ${Object.keys(sceneVariants).length} contexts / ${Object.values(sceneVariants).reduce((n,pool)=>n+pool.length,0)} additional complete exchanges, 12 voices each; consecutive trip editions differ and save replay stays deterministic.`);
 
 const speechStorage=new Map();ctx.localStorage={getItem:key=>speechStorage.get(key)??null,setItem:(key,value)=>speechStorage.set(key,value)};
-const editions=plain(vm.runInContext('Array.from({length:7},()=>newTripSeed())',ctx));assert.deepEqual(editions.map(seed=>seed%6),[0,1,2,3,4,5,0]);
+const editions=plain(vm.runInContext('Array.from({length:31},()=>newTripSeed())',ctx));assert.deepEqual(editions.map(seed=>seed%30),[...Array.from({length:30},(_,i)=>i),0]);
 for(let i=1;i<editions.length;i++){const a=E.create([0,1,5],editions[i-1],'daejeon'),b=E.create([0,1,5],editions[i],'daejeon');assert.notDeepEqual(plain(E.dialogue(a)),plain(E.dialogue(b)));}
 
 // Neighborhoods retain their own cases while using the city representative for distance.
@@ -148,3 +148,21 @@ for(const chain of vm.runInContext('survivalFoodChains',ctx)){
 console.log('PASS: every context has alternate exchanges; city-only start draws districts; arrival-before-lunch arcs; five franchise choices persist in callbacks and saves.');
 
 {let s=E.next(E.choose(E.create([0,1,5],42,'jecheon'),'plan'));s=E.resolve(s,dilemmas[s.pending].choices[0].id);s.tension=90;assert.equal(E.ending(s)[0],'split','already-arrived members do not get a departure cancellation');}
+
+// All ten complete ending exchanges render with the same story roles and stable saved edition.
+for(const [kind,saved] of ends){
+ const base=conversations.endings[kind],key='endings:'+kind,pool=[base,...sceneVariants[key]];
+ assert.equal(pool.length,10);
+ for(let id=0;id<12;id++)assert.equal(new Set(pool.map(scene=>JSON.stringify(scene.map(turn=>turn.voices[id])))).size,10,kind+':'+id);
+ const seen=new Set();
+ for(let seed=0;seed<10;seed++){
+  const s=plain(saved);s.seed=seed;const selected=dialogue.exchange(s,key,base);seen.add(JSON.stringify(selected));
+  assert.deepEqual(plain(selected),plain(dialogue.exchange(JSON.parse(JSON.stringify(s)),key,base)));
+  const turns=E.dialogue(s,true);assert.ok(turns.length>=3);
+  if(s.rupture){assert.equal(turns[0].id,s.rupture.pair[0]);assert.equal(turns[1].id,s.rupture.pair[1]);}
+  if(kind==='rescued'){const w=E.create(s.party,s.seed,s.destination);w.phase='dilemma';w.pending='wallet';assert.equal(turns[0].id,E.dialogue(w)[1].id);}
+  if(kind==='debt')assert.ok(!turns.slice(0,3).some(t=>t.lines.some(l=>/내가.*(먼저|냈)/.test(l))),'the player paid the overspend');
+ }
+ assert.equal(seen.size,10,kind);
+}
+console.log('PASS: 20 endings x 10 unique complete exchanges; rupture actors, wallet owner and player-funded settlement preserved.');
