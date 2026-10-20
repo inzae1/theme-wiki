@@ -31,7 +31,7 @@ const GameOptions=(()=>{
  'uljin-1':['늦는애 기다리고 코스줄이자','먼저온애들부터 놀자','온김에 원래대로 다돌자'],'uljin-2':['한군데만 오래보자','차 나눠타고 두군데가자','오늘 다찍고가자']
  };
  const eventWords={cover:'추가금액 공금에서 낼게',refund:'추가주문 취소하자',argue:'누가시킨건데?',detour:'다른코스 찾아보자',bench:'좀쉬면서 같이찾자',blame:'링크 누가올렸는데?',together:'같이돌아가서 찾아보자',call:'가게전화하고 둘이 가봐',ignore:'찾고와 우린 먼저갈게',rematch:'다시하자 이번이 진짜막판',draw:'인정 오늘은 여기까지',taunt:'또졌네 ㅋㅋ',shelter:'안에서 비피하자',adventure:'그냥 비맞고 야시장가자',evacuate:'오늘은 접고 집가자',apologize:'아까얘기 지금풀자',treat:'일단 먹으면서 얘기하자',double:'한시간 따로있다 역에서보자'};
- function spoken(choice){const match=choice.id.match(/^(.*)-c([123])$/);return say[choice.id]||eventWords[choice.id]||(match&&eventSay[match[1]]?.[Number(match[2])-1])||choice.label;}
+ function spoken(choice){const match=choice.id.match(/^(.*)-c([123])$/);return choice.say||say[choice.id]||eventWords[choice.id]||(match&&eventSay[match[1]]?.[Number(match[2])-1])||choice.label;}
 
  // Event identity and consequence stay unchanged; only labels are shortened.
  for(const [id,d] of Object.entries(survivalDilemmas))d.choices.forEach((c,i)=>{c.detail=c.label;c.label=local[id]?.[i]||labels[c.id]||c.label;});

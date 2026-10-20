@@ -19,8 +19,10 @@ const RegionalDialogue=(()=>{
  function cast(s,key,ending){
   const h=id=>SurvivalEngine.hash(s.seed,key+':'+id),p=survivalPersonality;
   let first=ending&&s.walkoutMember!==null?s.walkoutMember:[...s.party].sort((a,b)=>p[a].patience-p[b].patience||h(a)-h(b))[0];
+  if(s.objection?.id===key)first=s.objection.actor;
   if(key==='arrive')first=[...s.commute].sort((a,b)=>b.km-a.km)[0].id;
   if(key.includes('rivalry')||['pc','bowling','champion','revenge'].includes(key))first=[...s.party].sort((a,b)=>p[b].competitive-p[a].competitive)[0];
+  if(ending&&s.rupture)return [...s.rupture.pair,...s.party.filter(id=>!s.rupture.pair.includes(id))];
   const rest=s.party.filter(id=>id!==first).sort((a,b)=>(p[b].leadership+p[b].care)-(p[a].leadership+p[a].care)||h(a)-h(b));return [first,...rest];
  }
  function turns(s,end=false){
@@ -43,12 +45,11 @@ const RegionalDialogue=(()=>{
   const repeatSpeaker=!ended&&s.phase==='choose'&&s.step>0&&SurvivalEngine.hash(s.seed,key+':return')%3===0;
   const slots=key==='wallet:together'?[1,0,1]:key==='wallet:call'?[1,2,0]:key==='wallet:ignore'?[0,2,0]:repeatSpeaker?[0,1,0]:[0,1,2],speakers=slots.map(i=>order[i]);
   const result=script.map((utterance,i)=>({id:speakers[i],lines:voice(speakers[i],utterance,vars)}));
-  // A directed address is used only when answering the immediately preceding speaker.
-  if(speakers[0]!==speakers[1]&&SurvivalEngine.hash(s.seed,key+':address')%5===0)result[1].lines.unshift(address(speakers[1],speakers[0]));
+  // Replies follow the ongoing topic without mechanically calling the previous speaker.
   // Off-site members react to this exact unresolved topic; an attendee answers before choices resume.
   if(!ended&&guest&&s.step>0&&SurvivalEngine.hash(s.seed,key+':guest')%3!==0){
    const absent=survivalCast.filter(p=>!s.party.includes(p.id)),id=absent[SurvivalEngine.hash(s.seed,key+':who')%absent.length].id;
-   result.push({id,remote:true,lines:voice(id,guest[0],vars)},{id:order[1],lines:[address(order[1],id),...voice(order[1],guest[1],vars)]});
+   result.push({id,remote:true,lines:voice(id,guest[0],vars)},{id:order[1],lines:voice(order[1],guest[1],vars)});
   }
   return result;
  }

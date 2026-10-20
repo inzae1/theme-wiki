@@ -1,6 +1,15 @@
 import json,pathlib,hashlib,re
 root=pathlib.Path(__file__).resolve().parents[1]
 book=json.loads((root/'data/game-conversations-source.json').read_text())
+districts=json.loads((root/'data/game-districts.json').read_text())['profiles']
+def parse_exchange(text):return [turn.split('/') for turn in text.split('|')]
+for profile in districts:
+ for episode in profile['episodes']:
+  book['opening'][episode['id']]=parse_exchange(episode['opening'])
+  book['reactions'][episode['id']]=[parse_exchange(c['reply']) for c in episode['choices']]
+for episode in json.loads((root/'data/game-friction.json').read_text()):
+ book['opening'][episode['id']]=episode['opening']
+ book['reactions'][episode['id']]=episode['replies']
 # Whole-message alternatives authored for frequent speech acts. Columns are the 12 cast IDs.
 phrases={}
 def forms(key,text):
@@ -41,25 +50,26 @@ forms('피방갈래/아님 다른거?','피방/한판 ㄱ? ㅋ|피방/가면되�
 forms('계속 뭐할지만/정하고있네','뭐할지만/한시간정하노 ㅋ|뭐할지만/계속 정하네/씨바|뭐할지 정하는게 제일 오래걸리는거같은데 ㅋㅋ|뭐할지만/계속정하노 ㅋㅋ|ㅋㅋ정하다/집가겟노|원래/지금쯤/놀고있어야하는거아님?|ㅋㅋㅋ/정하다/끝나겟노|계속/정하기만하네|정하는데 시간이 더걸리네|스바/정하다/날새겟노|정하는게 제일 오래걸리네|뭐할지만 계속정하고있네')
 forms('그럼 도착시간 올려봐/차시간도 보고','그럼 몇시도착임/차시간봐봐|그럼/몇시도착인데/차시간 보고오셈|그럼 도착시간부터 봐봐 돌아갈 차도 같이보고|도착시간/올려보셈/갈차도 보고|ㅋㅋ몇시도착임/갈차도 봐봐|그럼/도착시간부터/차시간도 보고|몇시도착임 ㅋㅋ/갈차도 봐봐|도착시간/올려봐/차시간도|도착시간이랑 귀가시간 봐봐|몇시도착임/차시간도 봐봐|도착시간부터 올려봐/갈차도 같이 보고|몇시도착임요/갈차도 맞춰보지')
 forms('ㅇㅇ/표끊기전에 맞추자','ㅇㅇ/표끊기전에/말해봐 ㅋ|ㅇㅇ/표끊기전에/맞추지|ㅇㅇ 표끊기전에 시간부터 맞춰보자|ㅇㅇ/표끊기전에/맞추셈|ㅇㅇ/표부터 끊진말고 ㅋㅋ|ㅇㅇ/표끊기전에/맞추자|ㅇㅇ ㅋㅋ/표끊기전에 보자|ㅇㅇ/끊기전에 보자|ㅇㅇ 표끊기전에 맞추자|ㅇㅇ/표끊기전에/정하지|그래 표끊기전에/시간맞추자|ㅇㅇ 표끊기전에 맞춰보지')
+forms('안에/빈자리 없어?','안에/빈자리없노? ㅋ|안에/빈자리없노?|안에 빈자리없나? 같이앉을데는?|안에/자리없나|ㅋㅋ안에/자리없노?|근데/안에/빈자리없음?|ㅋㅋㅋ/안에/자리없노?|안에/자리없나|안에 빈자리없음?|머여/안에/자리없노?|안에 자리없어?/같이못앉나|안에 빈자리없나/붙어앉을데는?')
 # Reviewed per-speaker phrase preferences, used only when no authored whole-message alternative exists.
 # This compilation happens offline; the shipped game never edits or slices sentences at runtime.
 replacements={
- 0:[('거야','거노'),('뭐임','머임'),('왜다름','왜다르노'),('왜또멀어짐','왜또멀어지노'),('왜 다름','왜다르노'),('나 배고픔','배고프노'),('늦어지는데','늦어지노'),('맞았네','맞앗노'),('잘나왔네','잘나왓노'),('왜이럼','왜이러노')],
- 1:[('그렇잖아','그렇잔슴'),('되는거아님','되잔슴'),('안되는거아님','안되잔슴'),('그건아니지','그건아니잔슴'),('있었음','잇엇음'),('같이시키지','같이시키면되잔슴')],
+ 0:[('없어?','없노?'),('있어?','있노?'),('왜물어봄','왜물어보노'),('뭐하고있음','뭐하고있노'),('거야','거노'),('뭐임','머임'),('왜다름','왜다르노'),('왜또멀어짐','왜또멀어지노'),('왜 다름','왜다르노'),('나 배고픔','배고프노'),('늦어지는데','늦어지노'),('맞았네','맞앗노'),('잘나왔네','잘나왓노'),('왜이럼','왜이러노')],
+ 1:[('없어?','없노?'),('있어?','있노?'),('왜물어봄','왜물어보노'),('뭐하고있음','뭐하고있노'),('왜다름','왜다르노'),('그렇잖아','그렇잔슴'),('되는거아님','되잔슴'),('안되는거아님','안되잔슴'),('그건아니지','그건아니잔슴'),('있었음','잇엇음'),('같이시키지','같이시키면되잔슴')],
  2:[('뭐할건데','뭐할거임'),('몇시임','몇시인거임'),('모르겠음','잘 모르겠는데'),('올려놔','올려놔봐'),('같이먹어','같이 먹으면되지')],
  3:[('올려봐','올려보셈'),('보내놔','보내놓으셈'),('확인해봐','확인해보셈'),('정해봐','정해보셈'),('기다려','기다리셈')],
- 4:[('기다리겠네','기다리겟노'),('끝났네','끝낫노'),('많네','많노'),('맞았네','맞앗노'),('뭐여','머여')],
+ 4:[('없어?','없노?'),('있어?','있노?'),('뭐하고있음','뭐하고있노'),('기다리겠네','기다리겟노'),('끝났네','끝낫노'),('많네','많노'),('맞았네','맞앗노'),('뭐여','머여')],
  5:[('뭐임','머여'),('뭐야','머여')],
- 6:[('뭐임','머여'),('왜이럼','머여'),('끝났네','끝낫노'),('많네','많노')],
+ 6:[('없어?','없노?'),('있어?','있노?'),('뭐하고있음','뭐하고있노'),('뭐임','머여'),('왜이럼','머여'),('끝났네','끝낫노'),('많네','많노')],
  7:[('괜찮음','괜찮지'),('가능함','가능하지')],
  8:[],
- 9:[('뭐임','머여'),('뭐야','머여'),('왜이럼','머여'),('끝났네','끝낫노'),('많네','많노'),('알겠음','ㅇㅇ')],
+ 9:[('없어?','없노?'),('있어?','있노?'),('뭐하고있음','뭐하고있노'),('뭐임','머여'),('뭐야','머여'),('왜이럼','머여'),('끝났네','끝낫노'),('많네','많노'),('알겠음','ㅇㅇ')],
  10:[('뭐먹음','뭐먹을건데'),('할거임','할건데'),('못먹겠음','못먹겠다')],
  11:[('몇시에봄','몇시에 모임요'),('몇시까지감','몇시까지가면됨요'),('핀 보냈음','핀 보냈음여')]
 }
 # No fake random typos or blanket profanity; observed markers are scene-appropriate and sparse.
 comic={'stages','guests','opening','choices','reactions'}
-serious={'distance','roundOne','split','hungry','exhausted','wallet','conflict','ignore','double','argue','blame','ultimatum','gumi-1'}
+serious={'brawl','bagThrow','Dispute','distance','roundOne','split','hungry','exhausted','wallet','conflict','ignore','double','argue','blame','ultimatum','gumi-1'}
 laugh_rates=[20,20,29,30,27,9,27,12,1,11,10,7]
 def voice(beats,p,context,slot):
  key='/'.join(beats)

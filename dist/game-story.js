@@ -69,3 +69,7 @@ const survivalMemoryLines={
 
 survivalEndingBook.debt=['총무의 카드 명세서','공동 예산은 중간에 바닥났다. 그 뒤부터는 총무 카드가 조용히 일했다. 귀가 뒤 카드 명세서를 펼치자, 즐거웠다는 메시지 바로 아래에 추가 정산 공지가 올라갔다.','💳'];
 survivalFinalLines.debt=[['스바','추가정산이왓노'],['근데','이거','다합친금액임?'],['공동 예산이 끝났을때 말을 해줬어야지 ㅋㅋ 정산은 보내겠음']];
+
+// Dramatic fictional game endings; these do not describe real events.
+survivalEndingBook.brawl=['모임 대신 맞짱','{name}이 밖으로 나오라고 하자 {other}도 물러서지 않았다. 둘이 멱살을 잡고 맞붙자 남은 친구가 사이로 뛰어들었다. 저녁 예약은 취소됐다. 단톡방에는 정산표 대신 “오늘은 여기서 끝”만 남았다.','🥊'];
+survivalEndingBook.bagThrow=['가방부터 날아갔다','{name}이 가방을 바닥에 집어던졌다. “씨발, 나 안 해.” {other}가 붙잡으려 했지만 가방을 다시 낚아채고 그대로 나갔다. 남은 사람들은 켜 둔 지도를 닫았다. 오늘 모임은 여기서 깨졌다.','🎒'];

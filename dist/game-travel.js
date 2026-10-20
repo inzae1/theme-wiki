@@ -3,11 +3,14 @@ const Travel=(()=>{
  const hash=(seed,text)=>{let h=seed>>>0;for(const c of text)h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;return h;};
  const radians=n=>n*Math.PI/180;
  function distance(a,b){const dLat=radians(b.lat-a.lat),dLon=radians(b.lon-a.lon),q=Math.sin(dLat/2)**2+Math.cos(radians(a.lat))*Math.cos(radians(b.lat))*Math.sin(dLon/2)**2;return Math.round(6371*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q)));}
- const region=id=>survivalRegions.find(r=>r.id===id);
+ const destinations=()=>[...survivalRegions,...survivalDistricts];
+ const region=id=>destinations().find(r=>r.id===id);
+ const city=id=>survivalCities[region(id)?.cityId||id];
+ const venues=id=>destinations().filter(r=>r.cityId===(region(id)?.cityId||id));
  const project=c=>[70+(c.lon-125.7)*106,25+(38.7-c.lat)*132];
  function candidates(seed){return [...survivalRegions].sort((a,b)=>hash(seed,a.id)-hash(seed,b.id)).slice(0,5);}
- function commute(party,destination){const city=survivalCities[destination];if(!city)throw Error('모임 지역을 선택해주세요.');return party.map(id=>{const home=survivalCities[survivalHomes[id]],km=distance(home,city),minutes=Math.max(20,Math.round((km*1.3/80*60+25)/10)*10);return {id,home:home.name,km,minutes,fare:Math.round((3000+km*90)/1000)*1000};});}
- function localEpisodes(){for(const r of survivalRegions)for(const [index,e] of r.episodes.entries()){
+ function commute(party,destination){const target=city(destination);if(!target)throw Error('모임 지역을 선택해주세요.');return party.map(id=>{const home=survivalCities[survivalHomes[id]],km=distance(home,target),minutes=Math.max(20,Math.round((km*1.3/80*60+25)/10)*10);return {id,home:home.name,km,minutes,fare:Math.round((3000+km*90)/1000)*1000};});}
+ function localEpisodes(){for(const r of destinations())for(const [index,e] of r.episodes.entries()){
  const presets=index===0?[
  {cost:8000,energy:-10,fullness:-5,mood:3,tension:-8,flag:'reconciled',tone:'relief',effect:'care',delay:25,text:'같이 움직이는 쪽을 택했다. 먼저 온 사람은 기다렸고, 늦은 사람은 끝까지 합류했다. 일정표에는 지운 줄이 늘어났다.'},
  {cost:4000,energy:-3,mood:1,tension:9,flag:'splitTask',tone:'awkward',effect:'lead',delay:10,text:'역할을 나눴다. 일정은 조금 살아났지만, 서로 겪은 이야기가 달라졌다. 다시 모인 뒤 누가 기다렸는지부터 말이 나왔다.'},
@@ -31,7 +34,7 @@ const Travel=(()=>{
  if(index===5){base.choices[0].label=`${r.night}에서 바로 먹자`;base.choices.push(choice('splitBill','저녁은 각자 고르고 결제도 따로 하자',16000,2,26,-1,['food'],'cheap','lead',10),choice('delivery','한곳에 앉아서 배달을 같이 시키자',32000,6,38,5,['food','rest'],'cheap','care',2));}
  if(index===6){base.choices[0].label=`${r.hub} 쪽으로 같이 출발하자`;base.choices.push(choice('sleep','오늘은 방 잡고 내일 같이 움직이자',80000,18,5,13,['rest','social'],'rest','adventure',7),choice('escort','먼 사람 출발할 때까지 같이 기다려 주자',8000,-8,-5,4,['wait','social'],'leave','care',-8));}
  base.choices.forEach(c=>{c.effect??=c.tags.includes('game')?'compete':c.tags.includes('wait')?'wait':c.tags.includes('walk')?'adventure':c.tags.includes('rest')?'care':'normal';});return base;}
- return {distance,project,candidates,commute,region,scene,localEpisodes};
+ return {city,venues,destinations,distance,project,candidates,commute,region,scene,localEpisodes};
 })();
 Travel.localEpisodes();
 survivalEndingBook.distance=['출발 전 터진 단톡방','가까운 사람의 «금방»과 먼 사람의 왕복 거리가 부딪혔다. 한 명이 예매창을 닫았고, 다른 한 명은 조용히 일정을 지웠다. 오늘 모임은 역에 가기도 전에 끝났다.','🗺️'];
@@ -63,3 +66,5 @@ const regionalResolutions={
 };
 const regionalChoiceTuning={care:{cost:8000,energy:-8,fullness:-5,mood:4,tension:-9,flag:'reconciled',tone:'relief',effect:'care',delay:25},lead:{cost:6000,energy:-3,fullness:-3,mood:3,tension:4,flag:'splitTask',tone:'awkward',effect:'lead',delay:15},adventure:{cost:14000,energy:-13,fullness:-6,mood:12,tension:8,flag:'detour',tone:'wild',effect:'adventure',delay:30},push:{cost:6000,energy:-7,fullness:-4,mood:5,tension:18,flag:'blame',tone:'fight',effect:'push',delay:20}};
 for(const [id,choices] of Object.entries(regionalResolutions))choices.forEach(([type,text],i)=>Object.assign(survivalDilemmas[id].choices[i],regionalChoiceTuning[type],{text}));
+
+for(const r of Travel.destinations())for(const e of r.episodes)if(e.choices)e.choices.forEach((c,i)=>Object.assign(survivalDilemmas[e.id].choices[i],regionalChoiceTuning[c.effect],c));
