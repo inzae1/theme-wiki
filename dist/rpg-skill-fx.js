@@ -65,6 +65,7 @@ function artilleryLine(p,s,a,ox,oy,tx,ty,age){const delay=a.delay||0,dx=tx-ox,dy
 function fistStrike(p,monk,ox,oy,tx,ty,at,scale=1,index=0){if(at<0||at>.4)return;const angle=Math.atan2(ty-oy,tx-ox),reach=Math.min(125,Math.hypot(tx-ox,ty-oy)),phase=at<.13?at/.13:at<.2?1:Math.max(0,1-(at-.2)/.2),distance=15+Math.max(12,reach-15)*phase,y=oy+Math.sin(angle)*distance+(index%2?5:-5),x=ox+Math.cos(angle)*distance,width=(monk?27:30)*Math.min(1.6,scale);authored(p,monk?'monk-fist-authored':'fighter-fist-authored',x,y,width,width*.48,angle,Math.min(1,(.4-at)*8));sheet(p,'jab',at-.12,.25,tx,ty,26*scale,26*scale,angle);}
 function energyCannon(p,s,a,ox,oy,tx,ty,age){const delay=a.delay||.4,at=age-delay,angle=Math.atan2(ty-oy,tx-ox);if(at<0){const q=Math.min(1,age/delay);sheet(p,'spark',age% .5,.5,ox+22,oy,20+q*35,20+q*35);return;}if(at>.85)return;const fade=Math.min(1,(.85-at)*5),grow=Math.min(1,at/.13),length=Math.max(30,(a.range||480)*grow),width=(a.width||30)*(1.3+Math.sin(at*45)*.06);authored(p,'energy-beam-authored',ox+Math.cos(angle)*(length*.5+18),oy+Math.sin(angle)*(length*.5+18),length,width,angle,fade);}
 function drawProtection(p,hero,cell,x,y,t,strength=1){
+ if(hero===1)return;
  const pulse=1+Math.sin(t*5)*.045,fade=Math.min(1,t*5,Math.max(0,(1.65-t)*3))*strength;if(fade<=0)return;
  // Armor fragments assemble in front of the body; no enclosing polygon.
  if(hero===3&&[2,5,6].includes(cell)){for(let i=0;i<5;i++){const q=Math.min(1,t*4),a=-1.05+i*.52,r=42-12*q;picture(p,'dragonhide-shield',x+Math.cos(a)*r,y+Math.sin(a)*r,25*pulse,30*pulse,a*.35,fade);}sheet(p,'spark',t-.18,.55,x+25,y,48,62,0,fade*.6);}
@@ -83,6 +84,7 @@ function priestUltimate(p,f,t){const o=f.from||f;
  else{if(t<1.8){const q=Math.min(1,t/.6),burst=t>.6?Math.max(.65,1-(t-.6)*.25):1.2-q*.2;authored(p,'exorcist-rite-authored',f.x,f.y-35,235*burst,180*burst,Math.sin(t*10)*.025,Math.min(1,t*8,(1.8-t)*4));}}
 }
 function draw(p,f,t,D){
+ if(root.RPG_WARRIOR_FX?.draw(p,f,t))return true;
  if(root.RPG_BARD_FX?.draw(p,f,t))return true;
  if(t<0||t>4.2)return true;
  if(f.effectType==='sanctuary-pulse'){const fade=Math.max(0,1-t/.65);if(t<.65){authored(p,'sanctuary-authored',f.x,f.y,(f.radius||190)*2,(f.radius||190)*.96,0,fade*.55);for(const target of f.targets||[])recovery(p,target.x,target.y-20,t,.65,45);}return true;}if(f.effectType==='trap-explosion'){sheet(p,'heavy',t,.9,f.x,f.y,(f.radius||110)*2,(f.radius||110)*1.6);return true;}
@@ -159,6 +161,6 @@ function draw(p,f,t,D){
  }
  p.restore();return true;
 }
-function preload(){root.RPG_BARD_FX?.preload();for(const name of ["priest-wave-authored", "highpriest-miracle-authored", "exorcist-rite-authored"])load(name);for(const d of Object.values(sheets))load(d.file);for(const name of ['dragonhide-shield','holy-shield','holy-wings','arcane-wings','music-blue','music-gold','music-purple'])load(name);load('dragon-form');for(const name of ["impact-crack-authored", "arrow-authored", "shell-authored", "thorn-plant-authored", "healing-authored", "energy-beam-authored", "roots-authored", "fighter-fist-authored", "monk-fist-authored", "sanctuary-authored"])load(name);for(let i=1;i<=19;i++)load('smoke-'+String(i).padStart(2,'0'));load('sword-slash');for(const theme of Object.values(themes))for(const type of ['blade','spear'])load(theme+'-'+type);}
+function preload(){root.RPG_WARRIOR_FX?.preload();root.RPG_BARD_FX?.preload();for(const name of ["priest-wave-authored", "highpriest-miracle-authored", "exorcist-rite-authored"])load(name);for(const d of Object.values(sheets))load(d.file);for(const name of ['dragonhide-shield','holy-shield','holy-wings','arcane-wings','music-blue','music-gold','music-purple'])load(name);load('dragon-form');for(const name of ["impact-crack-authored", "arrow-authored", "shell-authored", "thorn-plant-authored", "healing-authored", "energy-beam-authored", "roots-authored", "fighter-fist-authored", "monk-fist-authored", "sanctuary-authored"])load(name);for(let i=1;i<=19;i++)load('smoke-'+String(i).padStart(2,'0'));load('sword-slash');for(const theme of Object.values(themes))for(const type of ['blade','spear'])load(theme+'-'+type);}
 const api={draw,preload,drawZone,smoke,earth,sheet,drawMine,projectile,drawProtection,music,authored,recovery};root.RPG_SKILL_FX=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

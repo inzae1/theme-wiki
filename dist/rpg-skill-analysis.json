@@ -501,7 +501,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -555,7 +555,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -617,7 +617,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -671,7 +671,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1222,7 +1222,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1276,7 +1276,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1326,7 +1326,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1392,7 +1392,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1457,7 +1457,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1525,7 +1525,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1583,7 +1583,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1649,7 +1649,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -1725,8 +1725,8 @@
       "parent": "시작",
       "style": "basic",
       "resource": "분노",
-      "review": "내려치기 — hit / 가로 휘두르기 — cone / 분노의 포효 — buff / 분노 강타 — blast",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "내려치기 — overhead / 가로 휘두르기 — wide-swing / 분노의 포효 — rage-roar / 분노 강타 — rage-slam",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-0-skill-0",
@@ -1746,15 +1746,17 @@
           },
           "cost": 0,
           "cooldown": 5.2,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-28",
-          "description": "근접 단일 230% 타격",
+          "description": "무기를 들어 0.25초 뒤 근접 대상에게 230% 내려찍기",
           "actions": [
             {
-              "op": "hit",
-              "power": 2.3
+              "op": "warrior-kit",
+              "kind": "overhead",
+              "target": "single",
+              "description": "무기를 들어 0.25초 뒤 근접 대상에게 230% 내려찍기"
             }
           ],
           "fx": {
@@ -1765,16 +1767,18 @@
             "recipe": 28,
             "choreography": [
               {
-                "op": "hit",
-                "power": 2.3
+                "op": "warrior-kit",
+                "kind": "overhead",
+                "target": "single",
+                "description": "무기를 들어 0.25초 뒤 근접 대상에게 230% 내려찍기"
               }
             ],
             "rays": 9,
             "rotation": 136,
-            "shape": "hit"
+            "shape": "warrior-kit"
           },
-          "actualText": "근접 단일 230% 타격",
-          "visual": "전용 연출 hyunseok-0:0 · hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "무기를 들어 0.25초 뒤 근접 대상에게 230% 내려찍기",
+          "visual": "전용 연출 hyunseok-0:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-0-skill-1",
@@ -1794,17 +1798,17 @@
           },
           "cost": 0,
           "cooldown": 7.5,
-          "range": 110,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-29",
-          "description": "거리 110 전방 부채꼴 250%",
+          "description": "전방 120 거리의 적에게 250% 가로 베기",
           "actions": [
             {
-              "op": "cone",
-              "power": 2.5,
-              "radius": 110,
-              "angle": 1.25
+              "op": "warrior-kit",
+              "kind": "wide-swing",
+              "target": "area",
+              "description": "전방 120 거리의 적에게 250% 가로 베기"
             }
           ],
           "fx": {
@@ -1815,18 +1819,18 @@
             "recipe": 29,
             "choreography": [
               {
-                "op": "cone",
-                "power": 2.5,
-                "radius": 110,
-                "angle": 1.25
+                "op": "warrior-kit",
+                "kind": "wide-swing",
+                "target": "area",
+                "description": "전방 120 거리의 적에게 250% 가로 베기"
               }
             ],
             "rays": 10,
             "rotation": 173,
-            "shape": "cone"
+            "shape": "warrior-kit"
           },
-          "actualText": "거리 110 전방 부채꼴 250%",
-          "visual": "전용 연출 hyunseok-0:1 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방 120 거리의 적에게 250% 가로 베기",
+          "visual": "전용 연출 hyunseok-0:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-0-skill-2",
@@ -1850,13 +1854,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-30",
-          "description": "7초 분노 획득량 60% 증가",
+          "description": "7초 동안 기본 공격 적중 시 분노 6 추가 획득",
           "actions": [
             {
-              "op": "buff",
-              "type": "rageGain",
-              "value": 0.6,
-              "duration": 7
+              "op": "warrior-kit",
+              "kind": "rage-roar",
+              "target": "self",
+              "description": "7초 동안 기본 공격 적중 시 분노 6 추가 획득"
             }
           ],
           "fx": {
@@ -1867,18 +1871,18 @@
             "recipe": 30,
             "choreography": [
               {
-                "op": "buff",
-                "type": "rageGain",
-                "value": 0.6,
-                "duration": 7
+                "op": "warrior-kit",
+                "kind": "rage-roar",
+                "target": "self",
+                "description": "7초 동안 기본 공격 적중 시 분노 6 추가 획득"
               }
             ],
             "rays": 11,
             "rotation": 30,
-            "shape": "buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "7초 분노 획득량 60% 증가",
-          "visual": "전용 연출 hyunseok-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "7초 동안 기본 공격 적중 시 분노 6 추가 획득",
+          "visual": "전용 연출 hyunseok-0:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-0-skill-3",
@@ -1898,17 +1902,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-31",
-          "description": "0.4초 뒤 반경 130에 700% 착탄 피해",
+          "description": "짧게 도약해 0.45초 뒤 착지 지점 반경 130에 700% 피해",
           "actions": [
             {
-              "op": "blast",
-              "power": 7,
-              "radius": 130,
-              "delay": 0.4
+              "op": "warrior-kit",
+              "kind": "rage-slam",
+              "target": "area",
+              "description": "짧게 도약해 0.45초 뒤 착지 지점 반경 130에 700% 피해"
             }
           ],
           "fx": {
@@ -1919,18 +1923,18 @@
             "recipe": 31,
             "choreography": [
               {
-                "op": "blast",
-                "power": 7,
-                "radius": 130,
-                "delay": 0.4
+                "op": "warrior-kit",
+                "kind": "rage-slam",
+                "target": "area",
+                "description": "짧게 도약해 0.45초 뒤 착지 지점 반경 130에 700% 피해"
               }
             ],
             "rays": 12,
             "rotation": 67,
-            "shape": "blast"
+            "shape": "warrior-kit"
           },
-          "actualText": "0.4초 뒤 반경 130에 700% 착탄 피해",
-          "visual": "전용 연출 hyunseok-0:3 · blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "짧게 도약해 0.45초 뒤 착지 지점 반경 130에 700% 피해",
+          "visual": "전용 연출 hyunseok-0:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -1942,8 +1946,8 @@
       "parent": "hyunseok-0",
       "style": "rapid",
       "resource": "분노",
-      "review": "광폭 삼연격 — volley / 피의 베기 — hp-cost → cone → heal / 광전사의 분노 — buff / 광란의 추격 — dash → volley",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "광폭 삼연격 — berserk-triple / 피의 베기 — sacrificial-cut / 광전사의 분노 — berserk-fury / 광란의 추격 — berserk-chase",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-1-skill-0",
@@ -1963,18 +1967,17 @@
           },
           "cost": 0,
           "cooldown": 5.6000000000000005,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-32",
-          "description": "0.16초 간격 3회 · 타격당 95%",
+          "description": "대상에게 3회 근접 검격, 타격당 95%",
           "actions": [
             {
-              "op": "volley",
-              "count": 3,
-              "power": 0.95,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "warrior-kit",
+              "kind": "berserk-triple",
+              "target": "single",
+              "description": "대상에게 3회 근접 검격, 타격당 95%"
             }
           ],
           "fx": {
@@ -1985,19 +1988,18 @@
             "recipe": 32,
             "choreography": [
               {
-                "op": "volley",
-                "count": 3,
-                "power": 0.95,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "warrior-kit",
+                "kind": "berserk-triple",
+                "target": "single",
+                "description": "대상에게 3회 근접 검격, 타격당 95%"
               }
             ],
             "rays": 5,
             "rotation": 104,
-            "shape": "volley"
+            "shape": "warrior-kit"
           },
-          "actualText": "0.16초 간격 3회 · 타격당 95%",
-          "visual": "전용 연출 hyunseok-1:0 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상에게 3회 근접 검격, 타격당 95%",
+          "visual": "전용 연출 hyunseok-1:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-1-skill-1",
@@ -2017,25 +2019,17 @@
           },
           "cost": 0,
           "cooldown": 7.9,
-          "range": 120,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-33",
-          "description": "최대 체력 4% 소비 · 체력 1 미만 소비 불가 / 거리 120 전방 부채꼴 300% / 최대 체력 4% 실제 회복",
+          "description": "체력 4% 지불 후 전방 적에게 300% 피해. 실제 가한 피해의 12%만 회복",
           "actions": [
             {
-              "op": "hp-cost",
-              "value": 0.04
-            },
-            {
-              "op": "cone",
-              "power": 3,
-              "radius": 120,
-              "angle": 1.25
-            },
-            {
-              "op": "heal",
-              "value": 0.04
+              "op": "warrior-kit",
+              "kind": "sacrificial-cut",
+              "target": "area",
+              "description": "체력 4% 지불 후 전방 적에게 300% 피해. 실제 가한 피해의 12%만 회복"
             }
           ],
           "fx": {
@@ -2046,26 +2040,18 @@
             "recipe": 33,
             "choreography": [
               {
-                "op": "hp-cost",
-                "value": 0.04
-              },
-              {
-                "op": "cone",
-                "power": 3,
-                "radius": 120,
-                "angle": 1.25
-              },
-              {
-                "op": "heal",
-                "value": 0.04
+                "op": "warrior-kit",
+                "kind": "sacrificial-cut",
+                "target": "area",
+                "description": "체력 4% 지불 후 전방 적에게 300% 피해. 실제 가한 피해의 12%만 회복"
               }
             ],
             "rays": 6,
             "rotation": 141,
-            "shape": "hp-cost+cone+heal"
+            "shape": "warrior-kit"
           },
-          "actualText": "최대 체력 4% 소비 · 체력 1 미만 소비 불가 / 거리 120 전방 부채꼴 300% / 최대 체력 4% 실제 회복",
-          "visual": "전용 연출 hyunseok-1:1 · hp-cost → cone → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "체력 4% 지불 후 전방 적에게 300% 피해. 실제 가한 피해의 12%만 회복",
+          "visual": "전용 연출 hyunseok-1:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-1-skill-2",
@@ -2089,13 +2075,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-34",
-          "description": "7초 공격속도 35% 증가",
+          "description": "7초 동안 공격 속도 35%·이동 속도 15% 증가, 받는 피해 15% 증가",
           "actions": [
             {
-              "op": "buff",
-              "type": "haste",
-              "value": 0.35,
-              "duration": 7
+              "op": "warrior-kit",
+              "kind": "berserk-fury",
+              "target": "self",
+              "description": "7초 동안 공격 속도 35%·이동 속도 15% 증가, 받는 피해 15% 증가"
             }
           ],
           "fx": {
@@ -2106,18 +2092,18 @@
             "recipe": 34,
             "choreography": [
               {
-                "op": "buff",
-                "type": "haste",
-                "value": 0.35,
-                "duration": 7
+                "op": "warrior-kit",
+                "kind": "berserk-fury",
+                "target": "self",
+                "description": "7초 동안 공격 속도 35%·이동 속도 15% 증가, 받는 피해 15% 증가"
               }
             ],
             "rays": 7,
             "rotation": 178,
-            "shape": "buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "7초 공격속도 35% 증가",
-          "visual": "전용 연출 hyunseok-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "7초 동안 공격 속도 35%·이동 속도 15% 증가, 받는 피해 15% 증가",
+          "visual": "전용 연출 hyunseok-1:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-1-skill-3",
@@ -2137,22 +2123,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 320,
+          "range": 460,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-35",
-          "description": "앞으로 최대 180 이동 · 경로 충돌 검사 / 0.16초 간격 6회 · 타격당 90%",
+          "description": "대상을 쫓아 6회 근접 연격. 대상이 죽으면 다음 적에게 접근해 남은 타격 지속",
           "actions": [
             {
-              "op": "dash",
-              "distance": 180
-            },
-            {
-              "op": "volley",
-              "count": 6,
-              "power": 0.9,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "warrior-kit",
+              "kind": "berserk-chase",
+              "target": "single",
+              "description": "대상을 쫓아 6회 근접 연격. 대상이 죽으면 다음 적에게 접근해 남은 타격 지속"
             }
           ],
           "fx": {
@@ -2163,23 +2144,18 @@
             "recipe": 35,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 180
-              },
-              {
-                "op": "volley",
-                "count": 6,
-                "power": 0.9,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "warrior-kit",
+                "kind": "berserk-chase",
+                "target": "single",
+                "description": "대상을 쫓아 6회 근접 연격. 대상이 죽으면 다음 적에게 접근해 남은 타격 지속"
               }
             ],
             "rays": 8,
             "rotation": 35,
-            "shape": "dash+volley"
+            "shape": "warrior-kit"
           },
-          "actualText": "앞으로 최대 180 이동 · 경로 충돌 검사 / 0.16초 간격 6회 · 타격당 90%",
-          "visual": "전용 연출 hyunseok-1:3 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상을 쫓아 6회 근접 연격. 대상이 죽으면 다음 적에게 접근해 남은 타격 지속",
+          "visual": "전용 연출 hyunseok-1:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -2191,8 +2167,8 @@
       "parent": "hyunseok-0",
       "style": "heavy",
       "resource": "분노",
-      "review": "대형 망치 — blast / 철갑 돌파 — dash → cone / 강철 육체 — guard / 파쇄 충격파 — beam",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "망치 올려치기 — hammer-upper / 철갑 돌파 — armor-break / 강철 육체 — iron-body / 파쇄 충격파 — rolling-shock",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-2-skill-0",
@@ -2200,7 +2176,7 @@
           "heroId": 1,
           "cell": 2,
           "slot": 0,
-          "name": "대형 망치",
+          "name": "망치 올려치기",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -2212,17 +2188,17 @@
           },
           "cost": 0,
           "cooldown": 5.6000000000000005,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-36",
-          "description": "0.55초 뒤 반경 100에 300% 착탄 피해",
+          "description": "0.45초 뒤 전방 가까운 적에게 320% 올려치기·일반 적 짧은 경직",
           "actions": [
             {
-              "op": "blast",
-              "power": 3,
-              "radius": 100,
-              "delay": 0.55
+              "op": "warrior-kit",
+              "kind": "hammer-upper",
+              "target": "area",
+              "description": "0.45초 뒤 전방 가까운 적에게 320% 올려치기·일반 적 짧은 경직"
             }
           ],
           "fx": {
@@ -2233,18 +2209,18 @@
             "recipe": 36,
             "choreography": [
               {
-                "op": "blast",
-                "power": 3,
-                "radius": 100,
-                "delay": 0.55
+                "op": "warrior-kit",
+                "kind": "hammer-upper",
+                "target": "area",
+                "description": "0.45초 뒤 전방 가까운 적에게 320% 올려치기·일반 적 짧은 경직"
               }
             ],
             "rays": 9,
             "rotation": 72,
-            "shape": "blast"
+            "shape": "warrior-kit"
           },
-          "actualText": "0.55초 뒤 반경 100에 300% 착탄 피해",
-          "visual": "전용 연출 hyunseok-2:0 · blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.45초 뒤 전방 가까운 적에게 320% 올려치기·일반 적 짧은 경직",
+          "visual": "전용 연출 hyunseok-2:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-2-skill-1",
@@ -2264,21 +2240,17 @@
           },
           "cost": 0,
           "cooldown": 7.9,
-          "range": 320,
+          "range": 460,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-37",
-          "description": "앞으로 최대 160 이동 · 경로 충돌 검사 / 거리 120 전방 부채꼴 280%",
+          "description": "전방으로 170 돌진, 이동 경로에 닿은 적에게 280% 피해·방어 약화 표식",
           "actions": [
             {
-              "op": "dash",
-              "distance": 160
-            },
-            {
-              "op": "cone",
-              "power": 2.8,
-              "radius": 120,
-              "angle": 1.25
+              "op": "warrior-kit",
+              "kind": "armor-break",
+              "target": "area",
+              "description": "전방으로 170 돌진, 이동 경로에 닿은 적에게 280% 피해·방어 약화 표식"
             }
           ],
           "fx": {
@@ -2289,22 +2261,18 @@
             "recipe": 37,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 160
-              },
-              {
-                "op": "cone",
-                "power": 2.8,
-                "radius": 120,
-                "angle": 1.25
+                "op": "warrior-kit",
+                "kind": "armor-break",
+                "target": "area",
+                "description": "전방으로 170 돌진, 이동 경로에 닿은 적에게 280% 피해·방어 약화 표식"
               }
             ],
             "rays": 10,
             "rotation": 109,
-            "shape": "dash+cone"
+            "shape": "warrior-kit"
           },
-          "actualText": "앞으로 최대 160 이동 · 경로 충돌 검사 / 거리 120 전방 부채꼴 280%",
-          "visual": "전용 연출 hyunseok-2:1 · dash → cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방으로 170 돌진, 이동 경로에 닿은 적에게 280% 피해·방어 약화 표식",
+          "visual": "전용 연출 hyunseok-2:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-2-skill-2",
@@ -2328,12 +2296,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-38",
-          "description": "5초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적",
+          "description": "5초 동안 피해 45% 감소·최대 체력 12% 보호막. 막은 피해를 충격량으로 저장",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.55,
-              "duration": 5
+              "op": "warrior-kit",
+              "kind": "iron-body",
+              "target": "self",
+              "description": "5초 동안 피해 45% 감소·최대 체력 12% 보호막. 막은 피해를 충격량으로 저장"
             }
           ],
           "fx": {
@@ -2344,17 +2313,18 @@
             "recipe": 38,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.55,
-                "duration": 5
+                "op": "warrior-kit",
+                "kind": "iron-body",
+                "target": "self",
+                "description": "5초 동안 피해 45% 감소·최대 체력 12% 보호막. 막은 피해를 충격량으로 저장"
               }
             ],
             "rays": 11,
             "rotation": 146,
-            "shape": "guard"
+            "shape": "warrior-kit"
           },
-          "actualText": "5초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 hyunseok-2:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "5초 동안 피해 45% 감소·최대 체력 12% 보호막. 막은 피해를 충격량으로 저장",
+          "visual": "전용 연출 hyunseok-2:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-2-skill-3",
@@ -2378,14 +2348,13 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-39",
-          "description": "0.8초 준비 후 길이 480, 폭 130 직선 600% 관통",
+          "description": "지면을 따라 전진하는 5개 충격 구간. 구간당 180%, 같은 적은 최대 2회 피격. 저장 충격량 소모",
           "actions": [
             {
-              "op": "beam",
-              "power": 6,
-              "width": 65,
-              "range": 480,
-              "delay": 0.8
+              "op": "warrior-kit",
+              "kind": "rolling-shock",
+              "target": "area",
+              "description": "지면을 따라 전진하는 5개 충격 구간. 구간당 180%, 같은 적은 최대 2회 피격. 저장 충격량 소모"
             }
           ],
           "fx": {
@@ -2396,19 +2365,18 @@
             "recipe": 39,
             "choreography": [
               {
-                "op": "beam",
-                "power": 6,
-                "width": 65,
-                "range": 480,
-                "delay": 0.8
+                "op": "warrior-kit",
+                "kind": "rolling-shock",
+                "target": "area",
+                "description": "지면을 따라 전진하는 5개 충격 구간. 구간당 180%, 같은 적은 최대 2회 피격. 저장 충격량 소모"
               }
             ],
             "rays": 12,
             "rotation": 3,
-            "shape": "beam"
+            "shape": "warrior-kit"
           },
-          "actualText": "0.8초 준비 후 길이 480, 폭 130 직선 600% 관통",
-          "visual": "전용 연출 hyunseok-2:3 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "지면을 따라 전진하는 5개 충격 구간. 구간당 180%, 같은 적은 최대 2회 피격. 저장 충격량 소모",
+          "visual": "전용 연출 hyunseok-2:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -2420,8 +2388,8 @@
       "parent": "hyunseok-1",
       "style": "drain",
       "resource": "분노",
-      "review": "혈풍 회전 — hp-cost → whirl → buff / 상처 찢기 — status → cone / 피의 계약 — hp-cost → buff → buff / 선혈 폭풍 — whirl → buff",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "혈풍 회전 — blood-wheel / 상처 찢기 — rupture / 피의 계약 — blood-pact / 선혈 수확 — blood-harvest",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-3-skill-0",
@@ -2441,28 +2409,17 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-40",
-          "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 흡혈 20% 증가",
+          "description": "체력 6% 지불 후 주변을 4회 베어 타격당 70%·출혈 1중첩 부여",
           "actions": [
             {
-              "op": "hp-cost",
-              "value": 0.06
-            },
-            {
-              "op": "whirl",
-              "power": 0.65,
-              "count": 6,
-              "radius": 100,
-              "gap": 0.2
-            },
-            {
-              "op": "buff",
-              "type": "lifesteal",
-              "value": 0.2,
-              "duration": 4
+              "op": "warrior-kit",
+              "kind": "blood-wheel",
+              "target": "area",
+              "description": "체력 6% 지불 후 주변을 4회 베어 타격당 70%·출혈 1중첩 부여"
             }
           ],
           "fx": {
@@ -2473,29 +2430,18 @@
             "recipe": 40,
             "choreography": [
               {
-                "op": "hp-cost",
-                "value": 0.06
-              },
-              {
-                "op": "whirl",
-                "power": 0.65,
-                "count": 6,
-                "radius": 100,
-                "gap": 0.2
-              },
-              {
-                "op": "buff",
-                "type": "lifesteal",
-                "value": 0.2,
-                "duration": 4
+                "op": "warrior-kit",
+                "kind": "blood-wheel",
+                "target": "area",
+                "description": "체력 6% 지불 후 주변을 4회 베어 타격당 70%·출혈 1중첩 부여"
               }
             ],
             "rays": 5,
             "rotation": 40,
-            "shape": "hp-cost+whirl+buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 흡혈 20% 증가",
-          "visual": "전용 연출 hyunseok-3:0 · hp-cost → whirl → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "체력 6% 지불 후 주변을 4회 베어 타격당 70%·출혈 1중첩 부여",
+          "visual": "전용 연출 hyunseok-3:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-3-skill-1",
@@ -2515,24 +2461,17 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 460,
+          "range": 140,
           "radius": 140,
-          "target": "area",
+          "target": "single",
           "effectType": "recipe-41",
-          "description": "bleed 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 거리 110 전방 부채꼴 240%",
+          "description": "대상의 출혈을 모두 소모해 180%+중첩당 90% 피해·소모 중첩당 체력 1% 회복",
           "actions": [
             {
-              "op": "status",
-              "type": "bleed",
-              "power": 0.35,
-              "stacks": 2,
-              "duration": 8
-            },
-            {
-              "op": "cone",
-              "power": 2.4,
-              "radius": 110,
-              "angle": 1.25
+              "op": "warrior-kit",
+              "kind": "rupture",
+              "target": "single",
+              "description": "대상의 출혈을 모두 소모해 180%+중첩당 90% 피해·소모 중첩당 체력 1% 회복"
             }
           ],
           "fx": {
@@ -2543,25 +2482,18 @@
             "recipe": 41,
             "choreography": [
               {
-                "op": "status",
-                "type": "bleed",
-                "power": 0.35,
-                "stacks": 2,
-                "duration": 8
-              },
-              {
-                "op": "cone",
-                "power": 2.4,
-                "radius": 110,
-                "angle": 1.25
+                "op": "warrior-kit",
+                "kind": "rupture",
+                "target": "single",
+                "description": "대상의 출혈을 모두 소모해 180%+중첩당 90% 피해·소모 중첩당 체력 1% 회복"
               }
             ],
             "rays": 6,
             "rotation": 77,
-            "shape": "status+cone"
+            "shape": "warrior-kit"
           },
-          "actualText": "bleed 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 거리 110 전방 부채꼴 240%",
-          "visual": "전용 연출 hyunseok-3:1 · status → cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상의 출혈을 모두 소모해 180%+중첩당 90% 피해·소모 중첩당 체력 1% 회복",
+          "visual": "전용 연출 hyunseok-3:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-3-skill-2",
@@ -2585,23 +2517,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-42",
-          "description": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 흡혈 35% 증가 / 10초 공격력 30% 증가",
+          "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복",
           "actions": [
             {
-              "op": "hp-cost",
-              "value": 0.08
-            },
-            {
-              "op": "buff",
-              "type": "lifesteal",
-              "value": 0.35,
-              "duration": 10
-            },
-            {
-              "op": "buff",
-              "type": "power",
-              "value": 0.3,
-              "duration": 10
+              "op": "warrior-kit",
+              "kind": "blood-pact",
+              "target": "self",
+              "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복"
             }
           ],
           "fx": {
@@ -2612,28 +2534,18 @@
             "recipe": 42,
             "choreography": [
               {
-                "op": "hp-cost",
-                "value": 0.08
-              },
-              {
-                "op": "buff",
-                "type": "lifesteal",
-                "value": 0.35,
-                "duration": 10
-              },
-              {
-                "op": "buff",
-                "type": "power",
-                "value": 0.3,
-                "duration": 10
+                "op": "warrior-kit",
+                "kind": "blood-pact",
+                "target": "self",
+                "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복"
               }
             ],
             "rays": 7,
             "rotation": 114,
-            "shape": "hp-cost+buff+buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 흡혈 35% 증가 / 10초 공격력 30% 증가",
-          "visual": "전용 연출 hyunseok-3:2 · hp-cost → buff → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복",
+          "visual": "전용 연출 hyunseok-3:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-3-skill-3",
@@ -2641,7 +2553,7 @@
           "heroId": 1,
           "cell": 3,
           "slot": 3,
-          "name": "선혈 폭풍",
+          "name": "선혈 수확",
           "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
@@ -2653,24 +2565,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
-          "radius": 150,
+          "range": 140,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-43",
-          "description": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 흡혈 30% 증가",
+          "description": "주변 출혈을 먼저 폭발시켜 중첩당 150% 피해, 피를 흡수한 뒤 450% 마무리 파동",
           "actions": [
             {
-              "op": "whirl",
-              "power": 1.1,
-              "count": 10,
-              "radius": 150,
-              "gap": 0.2
-            },
-            {
-              "op": "buff",
-              "type": "lifesteal",
-              "value": 0.3,
-              "duration": 5
+              "op": "warrior-kit",
+              "kind": "blood-harvest",
+              "target": "area",
+              "description": "주변 출혈을 먼저 폭발시켜 중첩당 150% 피해, 피를 흡수한 뒤 450% 마무리 파동"
             }
           ],
           "fx": {
@@ -2681,25 +2586,18 @@
             "recipe": 43,
             "choreography": [
               {
-                "op": "whirl",
-                "power": 1.1,
-                "count": 10,
-                "radius": 150,
-                "gap": 0.2
-              },
-              {
-                "op": "buff",
-                "type": "lifesteal",
-                "value": 0.3,
-                "duration": 5
+                "op": "warrior-kit",
+                "kind": "blood-harvest",
+                "target": "area",
+                "description": "주변 출혈을 먼저 폭발시켜 중첩당 150% 피해, 피를 흡수한 뒤 450% 마무리 파동"
               }
             ],
             "rays": 8,
             "rotation": 151,
-            "shape": "whirl+buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 흡혈 30% 증가",
-          "visual": "전용 연출 hyunseok-3:3 · whirl → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "주변 출혈을 먼저 폭발시켜 중첩당 150% 피해, 피를 흡수한 뒤 450% 마무리 파동",
+          "visual": "전용 연출 hyunseok-3:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -2711,8 +2609,8 @@
       "parent": "hyunseok-1",
       "style": "rapid",
       "resource": "분노",
-      "review": "약점 가르기 — hit → status / 사냥감 처형 — execute / 살육의 추격 — dash → buff / 연쇄 참수 — execution-chain",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "약점 가르기 — weak-cleave / 사냥감 처형 — prey-execute / 살육의 추격 — prey-hunt / 연쇄 참수 — execution-route",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-4-skill-0",
@@ -2732,22 +2630,17 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 460,
+          "range": 140,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-44",
-          "description": "근접 단일 200% 타격 / weak 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 15%",
+          "description": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가",
           "actions": [
             {
-              "op": "hit",
-              "power": 2
-            },
-            {
-              "op": "status",
-              "type": "weak",
-              "power": 0.15,
-              "stacks": 1,
-              "duration": 8
+              "op": "warrior-kit",
+              "kind": "weak-cleave",
+              "target": "single",
+              "description": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가"
             }
           ],
           "fx": {
@@ -2758,23 +2651,18 @@
             "recipe": 44,
             "choreography": [
               {
-                "op": "hit",
-                "power": 2
-              },
-              {
-                "op": "status",
-                "type": "weak",
-                "power": 0.15,
-                "stacks": 1,
-                "duration": 8
+                "op": "warrior-kit",
+                "kind": "weak-cleave",
+                "target": "single",
+                "description": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가"
               }
             ],
             "rays": 9,
             "rotation": 8,
-            "shape": "hit+status"
+            "shape": "warrior-kit"
           },
-          "actualText": "근접 단일 200% 타격 / weak 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 15%",
-          "visual": "전용 연출 hyunseok-4:0 · hit → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가",
+          "visual": "전용 연출 hyunseok-4:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-4-skill-1",
@@ -2794,17 +2682,17 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-45",
-          "description": "체력 35% 미만 추가 피해 · 보스 즉사 없음 · 처치 시 기본 기술 대기 초기화",
+          "description": "체력 35% 미만이면 750%, 그 외 180% 피해. 처치 시 이 기술의 쿨타임 초기화. 보스는 처형 피해 완화",
           "actions": [
             {
-              "op": "execute",
-              "power": 3,
-              "threshold": 0.35,
-              "reset": true
+              "op": "warrior-kit",
+              "kind": "prey-execute",
+              "target": "single",
+              "description": "체력 35% 미만이면 750%, 그 외 180% 피해. 처치 시 이 기술의 쿨타임 초기화. 보스는 처형 피해 완화"
             }
           ],
           "fx": {
@@ -2815,18 +2703,18 @@
             "recipe": 45,
             "choreography": [
               {
-                "op": "execute",
-                "power": 3,
-                "threshold": 0.35,
-                "reset": true
+                "op": "warrior-kit",
+                "kind": "prey-execute",
+                "target": "single",
+                "description": "체력 35% 미만이면 750%, 그 외 180% 피해. 처치 시 이 기술의 쿨타임 초기화. 보스는 처형 피해 완화"
               }
             ],
             "rays": 10,
             "rotation": 45,
-            "shape": "execute"
+            "shape": "warrior-kit"
           },
-          "actualText": "체력 35% 미만 추가 피해 · 보스 즉사 없음 · 처치 시 기본 기술 대기 초기화",
-          "visual": "전용 연출 hyunseok-4:1 · execute · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "체력 35% 미만이면 750%, 그 외 180% 피해. 처치 시 이 기술의 쿨타임 초기화. 보스는 처형 피해 완화",
+          "visual": "전용 연출 hyunseok-4:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-4-skill-2",
@@ -2846,21 +2734,17 @@
           },
           "cost": 0,
           "cooldown": 13.8,
-          "range": 320,
+          "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-46",
-          "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 치명타 25% 증가",
+          "description": "가장 약해진 적에게 실제 접근. 6초간 치명타 25% 증가",
           "actions": [
             {
-              "op": "dash",
-              "distance": 240
-            },
-            {
-              "op": "buff",
-              "type": "crit",
-              "value": 0.25,
-              "duration": 6
+              "op": "warrior-kit",
+              "kind": "prey-hunt",
+              "target": "self",
+              "description": "가장 약해진 적에게 실제 접근. 6초간 치명타 25% 증가"
             }
           ],
           "fx": {
@@ -2871,22 +2755,18 @@
             "recipe": 46,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 240
-              },
-              {
-                "op": "buff",
-                "type": "crit",
-                "value": 0.25,
-                "duration": 6
+                "op": "warrior-kit",
+                "kind": "prey-hunt",
+                "target": "self",
+                "description": "가장 약해진 적에게 실제 접근. 6초간 치명타 25% 증가"
               }
             ],
             "rays": 11,
             "rotation": 82,
-            "shape": "dash+buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 치명타 25% 증가",
-          "visual": "전용 연출 hyunseok-4:2 · dash → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "가장 약해진 적에게 실제 접근. 6초간 치명타 25% 증가",
+          "visual": "전용 연출 hyunseok-4:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-4-skill-3",
@@ -2906,17 +2786,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
+          "range": 460,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-47",
-          "description": "체력이 낮은 적부터 연쇄 처형",
+          "description": "체력이 낮은 적을 찾아 최대 4회 실제 이동·참수. 타격당 450%, 체력 40% 미만이면 추가 피해",
           "actions": [
             {
-              "op": "execution-chain",
-              "power": 7,
-              "count": 4,
-              "threshold": 0.4
+              "op": "warrior-kit",
+              "kind": "execution-route",
+              "target": "area",
+              "description": "체력이 낮은 적을 찾아 최대 4회 실제 이동·참수. 타격당 450%, 체력 40% 미만이면 추가 피해"
             }
           ],
           "fx": {
@@ -2927,18 +2807,18 @@
             "recipe": 47,
             "choreography": [
               {
-                "op": "execution-chain",
-                "power": 7,
-                "count": 4,
-                "threshold": 0.4
+                "op": "warrior-kit",
+                "kind": "execution-route",
+                "target": "area",
+                "description": "체력이 낮은 적을 찾아 최대 4회 실제 이동·참수. 타격당 450%, 체력 40% 미만이면 추가 피해"
               }
             ],
             "rays": 12,
             "rotation": 119,
-            "shape": "execution-chain"
+            "shape": "warrior-kit"
           },
-          "actualText": "체력이 낮은 적부터 연쇄 처형",
-          "visual": "전용 연출 hyunseok-4:3 · execution-chain · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "체력이 낮은 적을 찾아 최대 4회 실제 이동·참수. 타격당 450%, 체력 40% 미만이면 추가 피해",
+          "visual": "전용 연출 hyunseok-4:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -2950,8 +2830,8 @@
       "parent": "hyunseok-2",
       "style": "quake",
       "resource": "분노",
-      "review": "충격 강타 — blast → knock / 지면 균열 — beam / 거인의 축력 — buff / 대지 붕괴 — blast → knock",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "충격 강타 — titan-smash / 지면 균열 — fault-line / 거인의 축력 — titan-charge / 대지 붕괴 — earth-collapse",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-5-skill-0",
@@ -2971,21 +2851,17 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-48",
-          "description": "0.8초 뒤 반경 130에 400% 착탄 피해 / 적 밀어내기 75 · 보스는 거리 감소",
+          "description": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄",
           "actions": [
             {
-              "op": "blast",
-              "power": 4,
-              "radius": 130,
-              "delay": 0.8
-            },
-            {
-              "op": "knock",
-              "distance": 75
+              "op": "warrior-kit",
+              "kind": "titan-smash",
+              "target": "area",
+              "description": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄"
             }
           ],
           "fx": {
@@ -2996,22 +2872,18 @@
             "recipe": 48,
             "choreography": [
               {
-                "op": "blast",
-                "power": 4,
-                "radius": 130,
-                "delay": 0.8
-              },
-              {
-                "op": "knock",
-                "distance": 75
+                "op": "warrior-kit",
+                "kind": "titan-smash",
+                "target": "area",
+                "description": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄"
               }
             ],
             "rays": 5,
             "rotation": 156,
-            "shape": "blast+knock"
+            "shape": "warrior-kit"
           },
-          "actualText": "0.8초 뒤 반경 130에 400% 착탄 피해 / 적 밀어내기 75 · 보스는 거리 감소",
-          "visual": "전용 연출 hyunseok-5:0 · blast → knock · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄",
+          "visual": "전용 연출 hyunseok-5:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-5-skill-1",
@@ -3035,14 +2907,13 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-49",
-          "description": "1초 준비 후 길이 480, 폭 130 직선 450% 관통",
+          "description": "0.7초 뒤 전방 지면이 6구간 순차 파열. 구간당 170%, 같은 적 최대 2회 피격",
           "actions": [
             {
-              "op": "beam",
-              "power": 4.5,
-              "width": 65,
-              "range": 480,
-              "delay": 1
+              "op": "warrior-kit",
+              "kind": "fault-line",
+              "target": "area",
+              "description": "0.7초 뒤 전방 지면이 6구간 순차 파열. 구간당 170%, 같은 적 최대 2회 피격"
             }
           ],
           "fx": {
@@ -3053,19 +2924,18 @@
             "recipe": 49,
             "choreography": [
               {
-                "op": "beam",
-                "power": 4.5,
-                "width": 65,
-                "range": 480,
-                "delay": 1
+                "op": "warrior-kit",
+                "kind": "fault-line",
+                "target": "area",
+                "description": "0.7초 뒤 전방 지면이 6구간 순차 파열. 구간당 170%, 같은 적 최대 2회 피격"
               }
             ],
             "rays": 6,
             "rotation": 13,
-            "shape": "beam"
+            "shape": "warrior-kit"
           },
-          "actualText": "1초 준비 후 길이 480, 폭 130 직선 450% 관통",
-          "visual": "전용 연출 hyunseok-5:1 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.7초 뒤 전방 지면이 6구간 순차 파열. 구간당 170%, 같은 적 최대 2회 피격",
+          "visual": "전용 연출 hyunseok-5:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-5-skill-2",
@@ -3089,13 +2959,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-50",
-          "description": "8초 충전 65% 증가",
+          "description": "최대 8초 유지. 다음 강타·균열·궁극기의 첫 피해 묶음 65% 강화, 시전 준비 중 피해 25% 감소",
           "actions": [
             {
-              "op": "buff",
-              "type": "charge",
-              "value": 0.65,
-              "duration": 8
+              "op": "warrior-kit",
+              "kind": "titan-charge",
+              "target": "self",
+              "description": "최대 8초 유지. 다음 강타·균열·궁극기의 첫 피해 묶음 65% 강화, 시전 준비 중 피해 25% 감소"
             }
           ],
           "fx": {
@@ -3106,18 +2976,18 @@
             "recipe": 50,
             "choreography": [
               {
-                "op": "buff",
-                "type": "charge",
-                "value": 0.65,
-                "duration": 8
+                "op": "warrior-kit",
+                "kind": "titan-charge",
+                "target": "self",
+                "description": "최대 8초 유지. 다음 강타·균열·궁극기의 첫 피해 묶음 65% 강화, 시전 준비 중 피해 25% 감소"
               }
             ],
             "rays": 7,
             "rotation": 50,
-            "shape": "buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "8초 충전 65% 증가",
-          "visual": "전용 연출 hyunseok-5:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 8초 유지. 다음 강타·균열·궁극기의 첫 피해 묶음 65% 강화, 시전 준비 중 피해 25% 감소",
+          "visual": "전용 연출 hyunseok-5:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-5-skill-3",
@@ -3137,21 +3007,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
-          "radius": 240,
+          "range": 140,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-51",
-          "description": "1.4초 뒤 반경 240에 1100% 착탄 피해 / 적 밀어내기 120 · 보스는 거리 감소",
+          "description": "1.3초 준비 후 중심 750% 강타, 뒤이어 바깥으로 퍼지는 2개 균열파. 각 파동 180%, 적중 후 밀쳐냄",
           "actions": [
             {
-              "op": "blast",
-              "power": 11,
-              "radius": 240,
-              "delay": 1.4
-            },
-            {
-              "op": "knock",
-              "distance": 120
+              "op": "warrior-kit",
+              "kind": "earth-collapse",
+              "target": "area",
+              "description": "1.3초 준비 후 중심 750% 강타, 뒤이어 바깥으로 퍼지는 2개 균열파. 각 파동 180%, 적중 후 밀쳐냄"
             }
           ],
           "fx": {
@@ -3162,22 +3028,18 @@
             "recipe": 51,
             "choreography": [
               {
-                "op": "blast",
-                "power": 11,
-                "radius": 240,
-                "delay": 1.4
-              },
-              {
-                "op": "knock",
-                "distance": 120
+                "op": "warrior-kit",
+                "kind": "earth-collapse",
+                "target": "area",
+                "description": "1.3초 준비 후 중심 750% 강타, 뒤이어 바깥으로 퍼지는 2개 균열파. 각 파동 180%, 적중 후 밀쳐냄"
               }
             ],
             "rays": 8,
             "rotation": 87,
-            "shape": "blast+knock"
+            "shape": "warrior-kit"
           },
-          "actualText": "1.4초 뒤 반경 240에 1100% 착탄 피해 / 적 밀어내기 120 · 보스는 거리 감소",
-          "visual": "전용 연출 hyunseok-5:3 · blast → knock · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "1.3초 준비 후 중심 750% 강타, 뒤이어 바깥으로 퍼지는 2개 균열파. 각 파동 180%, 적중 후 밀쳐냄",
+          "visual": "전용 연출 hyunseok-5:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -3189,8 +3051,8 @@
       "parent": "hyunseok-2",
       "style": "guard",
       "resource": "분노",
-      "review": "철갑 돌진 — dash → armor-hit / 전선 밀치기 — cone → knock / 불굴 전진 — guard → buff / 전선 분쇄 — dash → armor-hit → guard",
-      "intendedIdentity": "광폭·처형·충전·돌파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "철갑 돌진 — iron-rush / 전선 밀치기 — front-shove / 불굴 전진 — unstoppable-march / 전선 분쇄 — line-breaker",
+      "intendedIdentity": "광폭 추격·출혈 지불과 수확·약점 처형·축력과 지면 파괴·경로 충돌과 피해 저장 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "hyunseok-6-skill-0",
@@ -3210,20 +3072,17 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 320,
+          "range": 460,
           "radius": 140,
-          "target": "self",
+          "target": "area",
           "effectType": "recipe-52",
-          "description": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 230%에 방어력을 더한 범위 타격",
+          "description": "전방 230을 실제 돌진하며 경로 적에게 230%+방어력 피해. 충돌한 적을 옆으로 밀어냄",
           "actions": [
             {
-              "op": "dash",
-              "distance": 230
-            },
-            {
-              "op": "armor-hit",
-              "power": 2.3,
-              "radius": 90
+              "op": "warrior-kit",
+              "kind": "iron-rush",
+              "target": "area",
+              "description": "전방 230을 실제 돌진하며 경로 적에게 230%+방어력 피해. 충돌한 적을 옆으로 밀어냄"
             }
           ],
           "fx": {
@@ -3234,21 +3093,18 @@
             "recipe": 52,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 230
-              },
-              {
-                "op": "armor-hit",
-                "power": 2.3,
-                "radius": 90
+                "op": "warrior-kit",
+                "kind": "iron-rush",
+                "target": "area",
+                "description": "전방 230을 실제 돌진하며 경로 적에게 230%+방어력 피해. 충돌한 적을 옆으로 밀어냄"
               }
             ],
             "rays": 9,
             "rotation": 124,
-            "shape": "dash+armor-hit"
+            "shape": "warrior-kit"
           },
-          "actualText": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 230%에 방어력을 더한 범위 타격",
-          "visual": "전용 연출 hyunseok-6:0 · dash → armor-hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방 230을 실제 돌진하며 경로 적에게 230%+방어력 피해. 충돌한 적을 옆으로 밀어냄",
+          "visual": "전용 연출 hyunseok-6:0 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-6-skill-1",
@@ -3268,21 +3124,17 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 150,
-          "radius": 150,
+          "range": 140,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-53",
-          "description": "거리 150 전방 부채꼴 300% / 적 밀어내기 130 · 보스는 거리 감소",
+          "description": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직",
           "actions": [
             {
-              "op": "cone",
-              "power": 3,
-              "radius": 150,
-              "angle": 1.25
-            },
-            {
-              "op": "knock",
-              "distance": 130
+              "op": "warrior-kit",
+              "kind": "front-shove",
+              "target": "area",
+              "description": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직"
             }
           ],
           "fx": {
@@ -3293,22 +3145,18 @@
             "recipe": 53,
             "choreography": [
               {
-                "op": "cone",
-                "power": 3,
-                "radius": 150,
-                "angle": 1.25
-              },
-              {
-                "op": "knock",
-                "distance": 130
+                "op": "warrior-kit",
+                "kind": "front-shove",
+                "target": "area",
+                "description": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직"
               }
             ],
             "rays": 10,
             "rotation": 161,
-            "shape": "cone+knock"
+            "shape": "warrior-kit"
           },
-          "actualText": "거리 150 전방 부채꼴 300% / 적 밀어내기 130 · 보스는 거리 감소",
-          "visual": "전용 연출 hyunseok-6:1 · cone → knock · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직",
+          "visual": "전용 연출 hyunseok-6:1 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-6-skill-2",
@@ -3332,18 +3180,13 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-54",
-          "description": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 저지 저항 100% 증가",
+          "description": "7초 동안 피해 55% 감소·밀림 방지. 막은 피해를 충격량으로 저장",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.7,
-              "duration": 7
-            },
-            {
-              "op": "buff",
-              "type": "unstoppable",
-              "value": 1,
-              "duration": 7
+              "op": "warrior-kit",
+              "kind": "unstoppable-march",
+              "target": "self",
+              "description": "7초 동안 피해 55% 감소·밀림 방지. 막은 피해를 충격량으로 저장"
             }
           ],
           "fx": {
@@ -3354,23 +3197,18 @@
             "recipe": 54,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.7,
-                "duration": 7
-              },
-              {
-                "op": "buff",
-                "type": "unstoppable",
-                "value": 1,
-                "duration": 7
+                "op": "warrior-kit",
+                "kind": "unstoppable-march",
+                "target": "self",
+                "description": "7초 동안 피해 55% 감소·밀림 방지. 막은 피해를 충격량으로 저장"
               }
             ],
             "rays": 11,
             "rotation": 18,
-            "shape": "guard+buff"
+            "shape": "warrior-kit"
           },
-          "actualText": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 저지 저항 100% 증가",
-          "visual": "전용 연출 hyunseok-6:2 · guard → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "7초 동안 피해 55% 감소·밀림 방지. 막은 피해를 충격량으로 저장",
+          "visual": "전용 연출 hyunseok-6:2 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "hyunseok-6-skill-3",
@@ -3390,25 +3228,17 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 320,
-          "radius": 160,
-          "target": "self",
+          "range": 460,
+          "radius": 140,
+          "target": "area",
           "effectType": "recipe-55",
-          "description": "앞으로 최대 350 이동 · 경로 충돌 검사 / 공격력 600%에 방어력을 더한 범위 타격 / 4초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
+          "description": "3초 동안 전진하며 접촉한 적에게 0.8초 간격 방어력 비례 피해. 종료 시 저장 충격량을 전방으로 방출",
           "actions": [
             {
-              "op": "dash",
-              "distance": 350
-            },
-            {
-              "op": "armor-hit",
-              "power": 6,
-              "radius": 160
-            },
-            {
-              "op": "guard",
-              "value": 0.8,
-              "duration": 4
+              "op": "warrior-kit",
+              "kind": "line-breaker",
+              "target": "area",
+              "description": "3초 동안 전진하며 접촉한 적에게 0.8초 간격 방어력 비례 피해. 종료 시 저장 충격량을 전방으로 방출"
             }
           ],
           "fx": {
@@ -3419,26 +3249,18 @@
             "recipe": 55,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 350
-              },
-              {
-                "op": "armor-hit",
-                "power": 6,
-                "radius": 160
-              },
-              {
-                "op": "guard",
-                "value": 0.8,
-                "duration": 4
+                "op": "warrior-kit",
+                "kind": "line-breaker",
+                "target": "area",
+                "description": "3초 동안 전진하며 접촉한 적에게 0.8초 간격 방어력 비례 피해. 종료 시 저장 충격량을 전방으로 방출"
               }
             ],
             "rays": 12,
             "rotation": 55,
-            "shape": "dash+armor-hit+guard"
+            "shape": "warrior-kit"
           },
-          "actualText": "앞으로 최대 350 이동 · 경로 충돌 검사 / 공격력 600%에 방어력을 더한 범위 타격 / 4초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 hyunseok-6:3 · dash → armor-hit → guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "3초 동안 전진하며 접촉한 적에게 0.8초 간격 방어력 비례 피해. 종료 시 저장 충격량을 전방으로 방출",
+          "visual": "전용 연출 hyunseok-6:3 · warrior-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -3465,7 +3287,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3515,7 +3337,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3581,7 +3403,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3633,7 +3455,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3698,7 +3520,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3760,7 +3582,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3826,7 +3648,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3876,7 +3698,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -3951,7 +3773,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4013,7 +3835,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4071,7 +3893,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4131,7 +3953,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4206,7 +4028,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4256,7 +4078,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4320,7 +4142,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4384,7 +4206,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4457,7 +4279,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4525,7 +4347,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4579,7 +4401,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4629,7 +4451,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4718,7 +4540,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4772,7 +4594,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4822,7 +4644,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4880,7 +4702,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -4967,7 +4789,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5033,7 +4855,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5097,7 +4919,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5145,7 +4967,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5230,7 +5052,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5278,7 +5100,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5330,7 +5152,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5380,7 +5202,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5453,7 +5275,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5513,7 +5335,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5567,7 +5389,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5617,7 +5439,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5917,7 +5739,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -5977,7 +5799,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6031,7 +5853,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6087,7 +5909,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6166,7 +5988,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6216,7 +6038,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6266,7 +6088,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -6326,7 +6148,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10243,7 +10065,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10295,7 +10117,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10347,7 +10169,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10399,7 +10221,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10464,7 +10286,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10516,7 +10338,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10568,7 +10390,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10620,7 +10442,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10685,7 +10507,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10737,7 +10559,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10789,7 +10611,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10841,7 +10663,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10906,7 +10728,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -10958,7 +10780,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11010,7 +10832,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11062,7 +10884,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11127,7 +10949,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11179,7 +11001,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11231,7 +11053,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11283,7 +11105,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11348,7 +11170,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11400,7 +11222,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11452,7 +11274,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11504,7 +11326,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11569,7 +11391,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11621,7 +11443,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11673,7 +11495,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -11725,7 +11547,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -12236,7 +12058,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -12298,7 +12120,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -12352,7 +12174,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -12400,7 +12222,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -12935,7 +12757,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13001,7 +12823,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13067,7 +12889,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13125,7 +12947,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13214,7 +13036,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13268,7 +13090,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13322,7 +13144,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -13376,7 +13198,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -16761,7 +16583,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -16809,7 +16631,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -16857,7 +16679,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -16905,7 +16727,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17201,7 +17023,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17249,7 +17071,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17297,7 +17119,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17355,7 +17177,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17914,7 +17736,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -17970,7 +17792,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18018,7 +17840,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18078,7 +17900,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18159,7 +17981,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18221,7 +18043,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18275,7 +18097,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18333,7 +18155,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18430,7 +18252,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18484,7 +18306,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18532,7 +18354,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18582,7 +18404,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18649,7 +18471,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18703,7 +18525,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18751,7 +18573,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18809,7 +18631,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18878,7 +18700,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -18946,7 +18768,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19000,7 +18822,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19050,7 +18872,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19117,7 +18939,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19175,7 +18997,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19229,7 +19051,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19287,7 +19109,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19370,7 +19192,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19424,7 +19246,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19478,7 +19300,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19532,7 +19354,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19613,7 +19435,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19695,7 +19517,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19753,7 +19575,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19803,7 +19625,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19916,7 +19738,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -19972,7 +19794,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -20034,7 +19856,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
@@ -20094,7 +19916,7 @@
           "resource": {
             "kind": "mana",
             "name": "마력",
-            "regen": 0,
+            "regen": 1,
             "start": 100,
             "color": "#73b4ed"
           },
