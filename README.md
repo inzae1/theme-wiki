@@ -115,3 +115,7 @@ node scripts/verify-game.mjs
 추가 10챕터는 기존 6종 배경과 몬스터 도트에 색조·날씨·이름·패턴 변형을 적용합니다. 1,440개 장비가 각각 새로운 그림을 갖는 것은 아니며 기본 아이콘을 공유합니다. 캐릭터 정지 PNG를 이동·방향 전환·타격/스킬 효과로 움직이며 별도 걷기 프레임은 없습니다. 지도 충돌은 주요 물가·기둥을 중심으로 한 단순 범위/가시성 경로 방식입니다. 실시간 LLM과 외부 API는 사용하지 않습니다. 숨겨진 성격 프로필은 RPG 데이터에 포함하지 않습니다.
 
 검증: `node scripts/verify-rpg.mjs`, `node scripts/verify.mjs`. 데이터 재생성: `node scripts/build-rpg-skills.mjs`, Pillow가 있는 Python으로 `scripts/build-rpg-data.py`, `node scripts/build-rpg-gear.mjs`.
+
+스킬 검토 화면: `dist/rpg-skill-lab.html`. 84개 직업/336개 기술을 검색하고 실제 게임과 같은 이펙트, 스킬별 근접/원거리 배치, 광역 다수 대상, 순환하는 지역별 몬스터, 효과·문제점·미구현 차별화 제안을 함께 표시합니다. 원거리 몬스터에는 활과 화살을 표시합니다. 곰·늑대 상태는 모든 스킬을 차단하고 기본 공격을 강화합니다. 메카닉 포탑과 키메라는 전투/미리보기 양쪽에 실제 개체로 표시합니다.
+
+픽셀 프레임 이펙트는 CodeManu의 Free Pixel Effects Pack과 ansimuz의 Animated Explosions(CC0) 원본 26종을 사용합니다. 출처는 `dist/rpg-fx/CREDITS.md`. 같은 리소스가 여러 기술에 조합되므로 모든 직업의 전투 설계가 고유해졌다는 뜻은 아닙니다. `node scripts/verify-rpg-skill-lab.mjs`는 분석 데이터, 미리보기 배치·모델 교체, 벡터/비트맵 그리기 실행을 검사하며 시각적 고유성을 증명하지 않습니다.

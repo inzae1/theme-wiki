@@ -5972,7 +5972,8 @@
           "op": "turret",
           "power": 0.75,
           "duration": 11,
-          "count": 1
+          "count": 1,
+          "guard": false
         }
       ],
       "fx": {
@@ -6299,7 +6300,8 @@
           "op": "turret",
           "power": 0.8999999999999999,
           "duration": 13,
-          "count": 2
+          "count": 2,
+          "guard": false
         }
       ],
       "fx": {
@@ -6460,7 +6462,8 @@
           "op": "turret",
           "power": 0.8999999999999999,
           "duration": 13,
-          "count": 1
+          "count": 1,
+          "guard": true
         }
       ],
       "fx": {
@@ -6791,7 +6794,7 @@
       "cooldown": 7.5,
       "target": "single",
       "effectType": "poison-pool",
-      "description": "8초 지속 지대 / 7초 맹수 1개",
+      "description": "8초 지속 지대 / 12초 호문쿨루스 1개",
       "actions": [
         {
           "op": "field",
@@ -6801,9 +6804,9 @@
         },
         {
           "op": "summon",
-          "appearance": "beast",
+          "appearance": "homunculus",
           "power": 0.45,
-          "duration": 7,
+          "duration": 12,
           "count": 1
         }
       ],
@@ -6835,18 +6838,19 @@
       "cost": 25,
       "cooldown": 16,
       "target": "self",
-      "effectType": "stance",
-      "description": "체력 16% 보호막 / 9초 치명타 강화",
+      "effectType": "chimera-spawn",
+      "description": "18초 키메라 1개 / 체력 16% 보호막",
       "actions": [
         {
-          "op": "shield",
-          "value": 0.16,
-          "duration": 9
+          "op": "summon",
+          "appearance": "chimera",
+          "power": 1.1,
+          "duration": 18,
+          "count": 1
         },
         {
-          "op": "crit",
-          "value": 0.16,
-          "duration": 9
+          "op": "shield",
+          "value": 0.16
         }
       ],
       "fx": {
@@ -6876,19 +6880,22 @@
       },
       "cost": 45,
       "cooldown": 40,
-      "target": "single",
-      "effectType": "attack",
-      "description": "단일 1106% 타격 · 보스 추가 피해 / 체력 14% 회복",
+      "target": "area",
+      "effectType": "chimera-legion",
+      "description": "22초 키메라 1개 / 반경 180 범위 400% 피해",
       "actions": [
         {
-          "op": "hit",
-          "power": 11.059999999999999,
-          "radius": 440,
-          "bossBonus": 0.5
+          "op": "summon",
+          "appearance": "chimera",
+          "power": 1.8,
+          "duration": 22,
+          "count": 1,
+          "large": true
         },
         {
-          "op": "heal",
-          "value": 0.14
+          "op": "area",
+          "power": 4,
+          "radius": 180
         }
       ],
       "fx": {
