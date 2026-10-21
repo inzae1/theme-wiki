@@ -70,7 +70,7 @@ module.exports=[
 [K('장풍',L(2.5,30)),K('금강 받아치기',G(.65,3)),K('호흡 집중',U('rageGain',.8,9)),K('기공 폭발',L(6,55,.7))],
 [K('덩굴 손',S('root',0),H(1.6)),K('작은 가시밭',F('roots',.35,120,8)),K('자연의 숨',Q(.15)),K('야생의 부름',P('beast',2,.7,12))],
 [K('기공 충전',U('charge',.55,7),U('rageGain',.7,7)),K('관통 기공포',L(5,30,.85)),K('응축 기공탄',A('missile',{power:4,speed:240})),K('천공포',L(12,70,1.2))],
-[K('금강 자세',G(.75,4)),K('금강 반격권',A('revenge',{power:4,radius:90})),K('충격 흡수',G(.6,7),A('counter',{power:1.8,duration:7})),K('금강불괴',G(.92,7),A('revenge',{power:7,radius:150}))],
+[K('돌격 정권',D(180),H(3.2)),K('대검 제압',H(2.8),A('interrupt',{duration:1.2})),K('불굴의 해병',G(.55,6),A('marine-resolve')),K('상륙 돌파',D(240),C(7.5,145),A('knock',{distance:100}))],
 [K('늑대의 쇄도',A('shape-form',{form:'wolf',duration:8}),D(220),H(3.5)),K('야수의 포효',C(4.6,160),S('root',0)),K('곰의 변신',A('shape-form',{form:'bear',duration:10}),A('shield',{value:.2})),K('태고의 분노',A('shape-form',{form:'bear',duration:14}),B(11,230),S('root',0))],
 [K('덩굴 구속',F('roots',.2,140,8)),K('가시 식물',P('plant',3,.6,18)),K('재생 지대',F('sanctuary',.35,160,12)),K('고대 수림',P('plant',5,.9,20),F('roots',.65,220,12))]
 ],

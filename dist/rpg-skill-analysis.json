@@ -12503,13 +12503,13 @@
     },
     {
       "hero": "박천빈",
-      "job": "금강승",
+      "job": "해병",
       "id": "cheonbin-4",
       "tier": 2,
       "parent": "cheonbin-1",
       "style": "counter",
       "resource": "분노",
-      "review": "금강 자세 — guard / 금강 반격권 — revenge / 충격 흡수 — guard → counter / 금강불괴 — guard → revenge",
+      "review": "돌격 정권 — dash → hit / 대검 제압 — hit → interrupt / 불굴의 해병 — guard → marine-resolve / 상륙 돌파 — dash → cone → knock",
       "intendedIdentity": "기공·금강 반격·야수 변신·식물 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
@@ -12518,7 +12518,7 @@
           "heroId": 7,
           "cell": 4,
           "slot": 0,
-          "name": "금강 자세",
+          "name": "돌격 정권",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -12530,37 +12530,43 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 125,
+          "range": 320,
           "radius": 140,
-          "target": "self",
+          "target": "single",
           "effectType": "recipe-212",
-          "description": "4초 방어 · 받는 피해 75% 감소, 막은 피해 반격 축적",
+          "description": "앞으로 최대 180 이동 · 경로 충돌 검사 / 근접 단일 320% 타격",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.75,
-              "duration": 4
+              "op": "dash",
+              "distance": 180
+            },
+            {
+              "op": "hit",
+              "power": 3.2
             }
           ],
           "fx": {
             "signature": "cheonbin-4:0",
             "theme": "counter",
-            "weapon": "금강 권갑·염주",
+            "weapon": "전투 장갑·대검",
             "palette": "#a8d68d",
             "recipe": 212,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.75,
-                "duration": 4
+                "op": "dash",
+                "distance": 180
+              },
+              {
+                "op": "hit",
+                "power": 3.2
               }
             ],
             "rays": 9,
             "rotation": 104,
-            "shape": "guard"
+            "shape": "dash+hit"
           },
-          "actualText": "4초 방어 · 받는 피해 75% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 cheonbin-4:0 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "앞으로 최대 180 이동 · 경로 충돌 검사 / 근접 단일 320% 타격",
+          "visual": "전용 연출 cheonbin-4:0 · dash → hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "cheonbin-4-skill-1",
@@ -12568,7 +12574,7 @@
           "heroId": 7,
           "cell": 4,
           "slot": 1,
-          "name": "금강 반격권",
+          "name": "대검 제압",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -12584,33 +12590,39 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-213",
-          "description": "축적한 방어 피해를 소비 · 기본 400% + 축적량 · 반경 90",
+          "description": "근접 단일 280% 타격 / 일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가",
           "actions": [
             {
-              "op": "revenge",
-              "power": 4,
-              "radius": 90
+              "op": "hit",
+              "power": 2.8
+            },
+            {
+              "op": "interrupt",
+              "duration": 1.2
             }
           ],
           "fx": {
             "signature": "cheonbin-4:1",
             "theme": "counter",
-            "weapon": "금강 권갑·염주",
+            "weapon": "전투 장갑·대검",
             "palette": "#a8d68d",
             "recipe": 213,
             "choreography": [
               {
-                "op": "revenge",
-                "power": 4,
-                "radius": 90
+                "op": "hit",
+                "power": 2.8
+              },
+              {
+                "op": "interrupt",
+                "duration": 1.2
               }
             ],
             "rays": 10,
             "rotation": 141,
-            "shape": "revenge"
+            "shape": "hit+interrupt"
           },
-          "actualText": "축적한 방어 피해를 소비 · 기본 400% + 축적량 · 반경 90",
-          "visual": "전용 연출 cheonbin-4:1 · revenge · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 단일 280% 타격 / 일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가",
+          "visual": "전용 연출 cheonbin-4:1 · hit → interrupt · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "cheonbin-4-skill-2",
@@ -12618,7 +12630,7 @@
           "heroId": 7,
           "cell": 4,
           "slot": 2,
-          "name": "충격 흡수",
+          "name": "불굴의 해병",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -12634,43 +12646,39 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-214",
-          "description": "7초 방어 · 받는 피해 60% 감소, 막은 피해 반격 축적 / 7초 방어 성공 시 180% 반격",
+          "description": "6초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적 / 막은 피해를 다음 공격 스킬에 추가 · 최대 공격력 500%",
           "actions": [
             {
               "op": "guard",
-              "value": 0.6,
-              "duration": 7
+              "value": 0.55,
+              "duration": 6
             },
             {
-              "op": "counter",
-              "power": 1.8,
-              "duration": 7
+              "op": "marine-resolve"
             }
           ],
           "fx": {
             "signature": "cheonbin-4:2",
             "theme": "counter",
-            "weapon": "금강 권갑·염주",
+            "weapon": "전투 장갑·대검",
             "palette": "#a8d68d",
             "recipe": 214,
             "choreography": [
               {
                 "op": "guard",
-                "value": 0.6,
-                "duration": 7
+                "value": 0.55,
+                "duration": 6
               },
               {
-                "op": "counter",
-                "power": 1.8,
-                "duration": 7
+                "op": "marine-resolve"
               }
             ],
             "rays": 11,
             "rotation": 178,
-            "shape": "guard+counter"
+            "shape": "guard+marine-resolve"
           },
-          "actualText": "7초 방어 · 받는 피해 60% 감소, 막은 피해 반격 축적 / 7초 방어 성공 시 180% 반격",
-          "visual": "전용 연출 cheonbin-4:2 · guard → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "6초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적 / 막은 피해를 다음 공격 스킬에 추가 · 최대 공격력 500%",
+          "visual": "전용 연출 cheonbin-4:2 · guard → marine-resolve · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "cheonbin-4-skill-3",
@@ -12678,7 +12686,7 @@
           "heroId": 7,
           "cell": 4,
           "slot": 3,
-          "name": "금강불괴",
+          "name": "상륙 돌파",
           "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
@@ -12690,47 +12698,55 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
-          "radius": 150,
-          "target": "single",
+          "range": 320,
+          "radius": 145,
+          "target": "area",
           "effectType": "recipe-215",
-          "description": "7초 방어 · 받는 피해 92% 감소, 막은 피해 반격 축적 / 축적한 방어 피해를 소비 · 기본 700% + 축적량 · 반경 150",
+          "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 거리 145 전방 부채꼴 750% / 적 밀어내기 100 · 보스는 거리 감소",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.92,
-              "duration": 7
+              "op": "dash",
+              "distance": 240
             },
             {
-              "op": "revenge",
-              "power": 7,
-              "radius": 150
+              "op": "cone",
+              "power": 7.5,
+              "radius": 145,
+              "angle": 1.25
+            },
+            {
+              "op": "knock",
+              "distance": 100
             }
           ],
           "fx": {
             "signature": "cheonbin-4:3",
             "theme": "counter",
-            "weapon": "금강 권갑·염주",
+            "weapon": "전투 장갑·대검",
             "palette": "#a8d68d",
             "recipe": 215,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.92,
-                "duration": 7
+                "op": "dash",
+                "distance": 240
               },
               {
-                "op": "revenge",
-                "power": 7,
-                "radius": 150
+                "op": "cone",
+                "power": 7.5,
+                "radius": 145,
+                "angle": 1.25
+              },
+              {
+                "op": "knock",
+                "distance": 100
               }
             ],
             "rays": 12,
             "rotation": 35,
-            "shape": "guard+revenge"
+            "shape": "dash+cone+knock"
           },
-          "actualText": "7초 방어 · 받는 피해 92% 감소, 막은 피해 반격 축적 / 축적한 방어 피해를 소비 · 기본 700% + 축적량 · 반경 150",
-          "visual": "전용 연출 cheonbin-4:3 · guard → revenge · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "앞으로 최대 240 이동 · 경로 충돌 검사 / 거리 145 전방 부채꼴 750% / 적 밀어내기 100 · 보스는 거리 감소",
+          "visual": "전용 연출 cheonbin-4:3 · dash → cone → knock · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },

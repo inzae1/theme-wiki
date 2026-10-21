@@ -563,11 +563,11 @@
         },
         {
           "id": "cheonbin-4",
-          "name": "금강승",
+          "name": "해병",
           "tier": 2,
           "parent": "cheonbin-1",
-          "weapon": "금강 권갑·염주",
-          "visual": "ochre monk robes, large bronze gauntlets and wooden prayer beads",
+          "weapon": "전투 장갑·대검",
+          "visual": "olive camouflage fatigues, red beret, combat gloves and military boots",
           "cell": 4
         },
         {

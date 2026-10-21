@@ -83,7 +83,24 @@ function priestUltimate(p,f,t){const o=f.from||f;
  else if(f.cell===5){const a=t-.3;if(a>=0&&a<2.1){const grow=Math.min(1,a*4),fade=Math.min(1,a*7,(2.1-a)*3);authored(p,'highpriest-miracle-authored',f.x,f.y-85*grow,265,190*grow,0,fade);}recovery(p,o.x,o.y-25,t,1.6,75);}
  else{if(t<1.8){const q=Math.min(1,t/.6),burst=t>.6?Math.max(.65,1-(t-.6)*.25):1.2-q*.2;authored(p,'exorcist-rite-authored',f.x,f.y-35,235*burst,180*burst,Math.sin(t*10)*.025,Math.min(1,t*8,(1.8-t)*4));}}
 }
+function marineFX(p,f,t){
+ if(f.heroId!==7||f.cell!==4)return false;
+ const a=f.from||f,x=a.x,y=a.y-22,fade=Math.max(0,1-t/1.1),angle=Math.atan2(f.y-a.y,f.x-a.x);
+ p.save();p.globalAlpha*=fade;p.translate(x,y);p.rotate(angle);
+ if(f.slot===0){/* fist rush: glove silhouette, short speed trails */
+  for(let i=0;i<5;i++){p.fillStyle=i%2?'#b6c790':'#65704c';p.fillRect(-36-i*12,-10+i*5,24,3);}
+  p.fillStyle='#171c16';p.fillRect(18+t*22,-13,27,25);p.fillStyle='#707c54';p.fillRect(19+t*22,-11,20,19);p.fillStyle='#c5b68b';p.fillRect(34+t*22,-7,9,12);
+ }else if(f.slot===1){/* steel combat knife, one straight thrust */
+  const d=Math.min(1,t*6)*30;p.fillStyle='#3f3528';p.fillRect(12+d,-4,14,8);p.fillStyle='#252c25';p.fillRect(25+d,-10,4,20);p.fillStyle='#d1d9d1';p.beginPath();p.moveTo(29+d,-5);p.lineTo(65+d,0);p.lineTo(29+d,5);p.fill();p.fillStyle='#687c77';p.fillRect(29+d,1,23,3);
+ }else if(f.slot===2){/* vertical resolve marks: no shield/root/circle */
+  p.rotate(-angle);for(let i=0;i<6;i++){const dx=(i%2?1:-1)*(19+Math.floor(i/2)*9),dy=15-(t*38+i*13)%60;p.fillStyle=i%2?'#e0b66d':'#b84b3e';p.fillRect(dx,dy,4,12);}p.fillStyle='#dfb875';p.fillRect(-15,-35,5,13);p.fillRect(10,-35,5,13);
+ }else{ /* landing breakthrough: forward debris and a ground rupture */
+  for(let i=0;i<8;i++){const d=i*18+20;p.fillStyle=i%2?'#9d8c69':'#d6bd84';p.fillRect(d,16+Math.sin(i*2.4)*14-t*12,8,5);}p.strokeStyle='#e5c991';p.lineWidth=3;p.beginPath();p.moveTo(5,15);for(let i=0;i<9;i++)p.lineTo(i*18,15+(i%2?9:-7)*Math.min(1,t*5));p.stroke();
+ }
+ p.restore();return true;
+}
 function draw(p,f,t,D){
+ if(marineFX(p,f,t))return true;
  if(root.RPG_WARRIOR_FX?.draw(p,f,t))return true;
  if(root.RPG_BARD_FX?.draw(p,f,t))return true;
  if(t<0||t>4.2)return true;

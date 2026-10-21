@@ -15,6 +15,7 @@ case'spread':return `대상의 ${a.type} 상태를 반경 ${a.radius}의 적에�
 case'zone':return `${({sanctuary:'성역',banner:'수호',roots:'덩굴',frost:'빙결',acid:'산성',dirge:'진혼',stars:'별빛',rune:'룬',seal:'봉인',target:'포격 조준'})[a.type]||a.type} ${a.follow?'추종 오라':'지대'} ${a.duration}초 · 반경 ${a.radius} · ${a.interval||.8}초마다 공격력 ${Math.ceil(a.power*100)}% 피해${['sanctuary','banner'].includes(a.type)?' 및 지대 내 자가 회복':''}`;
 case'pet':return `${({'skeleton-archer':'해골 궁수',zombie:'좀비','bone-dragon':'해골용','grave-golem':'묘지 골렘',skeleton:'해골 병사','skeleton-mage':'해골 마법사',reaper:'사신',spirit:'정령',beast:'늑대',king:'정령왕',fusion:'융합 정령',plant:'가시 식물',star:'공전 별',shadow:'전투 잔영',ghost:'망령',chimera:'키메라',homunculus:'호문쿨루스'})[a.appearance]||a.appearance} ${a.count}마리 실제 소환 · ${a.duration}초 · 공격력 ${Math.ceil(a.power*100)}%${a.exclusive?' · 동일 소환체 교체':''}`;
 case'buff':return `${a.duration}초 ${{haste:'공격속도',power:'공격력',crit:'치명타',evasion:'회피율',rageGain:'분노 획득량',combo:'연격',lifesteal:'흡혈',aim:'조준',charge:'충전',unstoppable:'저지 저항',efficiency:'효율'}[a.type]||a.type} ${Math.ceil(a.value*100)}% 증가`;
+case'marine-resolve':return '막은 피해를 다음 공격 스킬에 추가 · 최대 공격력 500%';
 case'guard':return `${a.duration}초 방어 · 받는 피해 ${Math.ceil(a.value*100)}% 감소, 막은 피해 반격 축적`;
 case'counter':return `${a.duration}초 방어 성공 시 ${Math.ceil(a.power*100)}% 반격`;
 case'revenge':return `축적한 방어 피해를 소비 · 기본 ${Math.ceil(a.power*100)}% + 축적량 · 반경 ${a.radius}`;
