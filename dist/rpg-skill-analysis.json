@@ -18182,7 +18182,7 @@
       "style": "basic",
       "resource": "마력",
       "review": "작은 정령 — pet / 영혼탄 — missile / 정령 유대 — pet-buff / 정령 행진 — pet",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 기초 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-0-skill-0",
@@ -18401,7 +18401,7 @@
       "style": "summon",
       "resource": "마력",
       "review": "정령 교대 — pet / 정령 명령 — command / 정령 보호 — pet-buff → shield / 대정령 소환 — pet",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-1-skill-0",
@@ -18630,7 +18630,7 @@
       "style": "drain",
       "resource": "마력",
       "review": "해골 부대 — pet → pet / 좀비 소환 — pet / 망자의 유대 — pet-buff / 네크로맨서 · 망령 소환 — pet",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-2-skill-0",
@@ -18869,7 +18869,7 @@
       "style": "element",
       "resource": "마력",
       "review": "정령왕 소환 — pet / 속성 명령 — king-element → command / 왕의 수호 — pet-buff → shield / 왕의 강림 — pet → blast",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-3-skill-0",
@@ -19121,8 +19121,8 @@
       "parent": "keunho-1",
       "style": "morph",
       "resource": "마력",
-      "review": "작은 정령 소환 — pet / 융합 지시 — fusion / 분리 회수 — split → heal / 완전 융합 — fusion → blast",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "사원소 소환 — four-call / 정령 융합 — merge / 정령융합사 · 원소 공명 — resonance / 원소 대해방 — overdrive",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-4-skill-0",
@@ -19130,7 +19130,7 @@
           "heroId": 11,
           "cell": 4,
           "slot": 0,
-          "name": "작은 정령 소환",
+          "name": "사원소 소환",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -19146,14 +19146,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-324",
-          "description": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
+          "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타",
           "actions": [
             {
-              "op": "pet",
-              "appearance": "spirit",
-              "count": 3,
-              "power": 0.4,
-              "duration": 20
+              "op": "fusion-kit",
+              "kind": "four-call",
+              "target": "self",
+              "range": 460,
+              "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
             }
           ],
           "fx": {
@@ -19164,19 +19164,19 @@
             "recipe": 324,
             "choreography": [
               {
-                "op": "pet",
-                "appearance": "spirit",
-                "count": 3,
-                "power": 0.4,
-                "duration": 20
+                "op": "fusion-kit",
+                "kind": "four-call",
+                "target": "self",
+                "range": 460,
+                "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
               }
             ],
             "rays": 9,
             "rotation": 108,
-            "shape": "pet"
+            "shape": "fusion-kit"
           },
-          "actualText": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
-          "visual": "전용 연출 keunho-4:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타",
+          "visual": "전용 연출 keunho-4:0 · fusion-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-4-skill-1",
@@ -19184,7 +19184,7 @@
           "heroId": 11,
           "cell": 4,
           "slot": 1,
-          "name": "융합 지시",
+          "name": "정령 융합",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -19200,14 +19200,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-325",
-          "description": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화",
+          "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격",
           "actions": [
             {
-              "op": "fusion",
-              "appearance": "fusion",
-              "count": 1,
-              "power": 1.7,
-              "duration": 20
+              "op": "fusion-kit",
+              "kind": "merge",
+              "target": "self",
+              "range": 460,
+              "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
             }
           ],
           "fx": {
@@ -19218,19 +19218,19 @@
             "recipe": 325,
             "choreography": [
               {
-                "op": "fusion",
-                "appearance": "fusion",
-                "count": 1,
-                "power": 1.7,
-                "duration": 20
+                "op": "fusion-kit",
+                "kind": "merge",
+                "target": "self",
+                "range": 460,
+                "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
               }
             ],
             "rays": 10,
             "rotation": 145,
-            "shape": "fusion"
+            "shape": "fusion-kit"
           },
-          "actualText": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화",
-          "visual": "전용 연출 keunho-4:1 · fusion · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격",
+          "visual": "전용 연출 keunho-4:1 · fusion-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-4-skill-2",
@@ -19238,7 +19238,7 @@
           "heroId": 11,
           "cell": 4,
           "slot": 2,
-          "name": "분리 회수",
+          "name": "정령융합사 · 원소 공명",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -19252,16 +19252,16 @@
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
-          "target": "self",
+          "target": "area",
           "effectType": "recipe-326",
-          "description": "융합체를 작은 정령 3마리로 분리 / 최대 체력 10% 실제 회복",
+          "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%",
           "actions": [
             {
-              "op": "split"
-            },
-            {
-              "op": "heal",
-              "value": 0.1
+              "op": "fusion-kit",
+              "kind": "resonance",
+              "target": "area",
+              "range": 460,
+              "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
             }
           ],
           "fx": {
@@ -19272,19 +19272,19 @@
             "recipe": 326,
             "choreography": [
               {
-                "op": "split"
-              },
-              {
-                "op": "heal",
-                "value": 0.1
+                "op": "fusion-kit",
+                "kind": "resonance",
+                "target": "area",
+                "range": 460,
+                "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
               }
             ],
             "rays": 11,
             "rotation": 2,
-            "shape": "split+heal"
+            "shape": "fusion-kit"
           },
-          "actualText": "융합체를 작은 정령 3마리로 분리 / 최대 체력 10% 실제 회복",
-          "visual": "전용 연출 keunho-4:2 · split → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%",
+          "visual": "전용 연출 keunho-4:2 · fusion-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-4-skill-3",
@@ -19292,7 +19292,7 @@
           "heroId": 11,
           "cell": 4,
           "slot": 3,
-          "name": "완전 융합",
+          "name": "원소 대해방",
           "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
@@ -19305,24 +19305,17 @@
           "cost": 16,
           "cooldown": 34.8,
           "range": 460,
-          "radius": 170,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-327",
-          "description": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화 / 0.7초 뒤 반경 170에 500% 착탄 피해",
+          "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타",
           "actions": [
             {
-              "op": "fusion",
-              "appearance": "fusion",
-              "count": 1,
-              "power": 2.8,
-              "duration": 24,
-              "large": true
-            },
-            {
-              "op": "blast",
-              "power": 5,
-              "radius": 170,
-              "delay": 0.7
+              "op": "fusion-kit",
+              "kind": "overdrive",
+              "target": "area",
+              "range": 460,
+              "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
             }
           ],
           "fx": {
@@ -19333,26 +19326,19 @@
             "recipe": 327,
             "choreography": [
               {
-                "op": "fusion",
-                "appearance": "fusion",
-                "count": 1,
-                "power": 2.8,
-                "duration": 24,
-                "large": true
-              },
-              {
-                "op": "blast",
-                "power": 5,
-                "radius": 170,
-                "delay": 0.7
+                "op": "fusion-kit",
+                "kind": "overdrive",
+                "target": "area",
+                "range": 460,
+                "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
               }
             ],
             "rays": 12,
             "rotation": 39,
-            "shape": "fusion+blast"
+            "shape": "fusion-kit"
           },
-          "actualText": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화 / 0.7초 뒤 반경 170에 500% 착탄 피해",
-          "visual": "전용 연출 keunho-4:3 · fusion → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타",
+          "visual": "전용 연출 keunho-4:3 · fusion-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -19365,7 +19351,7 @@
       "style": "drain",
       "resource": "마력",
       "review": "해골 군단 — pet → pet → pet / 묘지 골렘 — pet / 군단 강화 — pet-buff / 해골용 강림 — pet → pet → pet → pet",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-5-skill-0",
@@ -19668,7 +19654,7 @@
       "style": "execute",
       "resource": "마력",
       "review": "사신 소환 — pet / 죽음 표식 — status → command / 영혼 수확 — consume → meter / 사형 선고 — spend → execute → pet",
-      "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "정령왕 지휘·사원소 융합과 공명·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "keunho-6-skill-0",

@@ -53,3 +53,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 ## Metal profession redesign — 2026-10-21
 - ../rpg-pixels-v2/characters/seunguk-metal.png: original transparent avatar generated with imagegen, preserved unchanged and cropped at runtime.
 - Metal sound pressure, amplifier cabinets and feedback animation are authored canvas drawings; contact dust and punch/shock sheets retain the credits above.
+
+## Fused elemental summon — 2026-10-21
+- summon-fusion.png: original transparent image generated using imagegen; fire, water, earth and wind combined in one creature. Original PNG preserved; runtime alpha-occupancy crop only.
+- Four lesser elemental silhouettes and elemental attack geometry are original canvas pixel drawings in rpg-fusion-fx.js. Each has a different silhouette and attack choreography.

@@ -101,6 +101,7 @@ function marineFX(p,f,t){
 }
 function draw(p,f,t,D){
  if(root.RPG_CHEONBIN_FX?.draw(p,f,t,D))return true;
+ if(root.RPG_FUSION_FX?.draw(p,f,t))return true;
  if(root.RPG_METAL_FX?.draw(p,f,t))return true;
  if(root.RPG_WARRIOR_FX?.draw(p,f,t))return true;
  if(root.RPG_BARD_FX?.draw(p,f,t))return true;

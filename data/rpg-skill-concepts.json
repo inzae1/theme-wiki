@@ -17414,7 +17414,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 0,
-      "name": "작은 정령 소환",
+      "name": "사원소 소환",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17430,14 +17430,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-324",
-      "description": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
+      "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "spirit",
-          "count": 3,
-          "power": 0.4,
-          "duration": 20
+          "op": "fusion-kit",
+          "kind": "four-call",
+          "target": "self",
+          "range": 460,
+          "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
         }
       ],
       "fx": {
@@ -17448,16 +17448,16 @@
         "recipe": 324,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "spirit",
-            "count": 3,
-            "power": 0.4,
-            "duration": 20
+            "op": "fusion-kit",
+            "kind": "four-call",
+            "target": "self",
+            "range": 460,
+            "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
           }
         ],
         "rays": 9,
         "rotation": 108,
-        "shape": "pet"
+        "shape": "fusion-kit"
       }
     },
     {
@@ -17466,7 +17466,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 1,
-      "name": "융합 지시",
+      "name": "정령 융합",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17482,14 +17482,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-325",
-      "description": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화",
+      "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격",
       "actions": [
         {
-          "op": "fusion",
-          "appearance": "fusion",
-          "count": 1,
-          "power": 1.7,
-          "duration": 20
+          "op": "fusion-kit",
+          "kind": "merge",
+          "target": "self",
+          "range": 460,
+          "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
         }
       ],
       "fx": {
@@ -17500,16 +17500,16 @@
         "recipe": 325,
         "choreography": [
           {
-            "op": "fusion",
-            "appearance": "fusion",
-            "count": 1,
-            "power": 1.7,
-            "duration": 20
+            "op": "fusion-kit",
+            "kind": "merge",
+            "target": "self",
+            "range": 460,
+            "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
           }
         ],
         "rays": 10,
         "rotation": 145,
-        "shape": "fusion"
+        "shape": "fusion-kit"
       }
     },
     {
@@ -17518,7 +17518,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 2,
-      "name": "분리 회수",
+      "name": "정령융합사 · 원소 공명",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17532,16 +17532,16 @@
       "cooldown": 13.8,
       "range": 460,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-326",
-      "description": "융합체를 작은 정령 3마리로 분리 / 최대 체력 10% 실제 회복",
+      "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%",
       "actions": [
         {
-          "op": "split"
-        },
-        {
-          "op": "heal",
-          "value": 0.1
+          "op": "fusion-kit",
+          "kind": "resonance",
+          "target": "area",
+          "range": 460,
+          "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
         }
       ],
       "fx": {
@@ -17552,16 +17552,16 @@
         "recipe": 326,
         "choreography": [
           {
-            "op": "split"
-          },
-          {
-            "op": "heal",
-            "value": 0.1
+            "op": "fusion-kit",
+            "kind": "resonance",
+            "target": "area",
+            "range": 460,
+            "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
           }
         ],
         "rays": 11,
         "rotation": 2,
-        "shape": "split+heal"
+        "shape": "fusion-kit"
       }
     },
     {
@@ -17570,7 +17570,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 3,
-      "name": "완전 융합",
+      "name": "원소 대해방",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -17583,24 +17583,17 @@
       "cost": 16,
       "cooldown": 34.8,
       "range": 460,
-      "radius": 170,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-327",
-      "description": "작은 정령 2마리 이상 소비 → fusion 실제 합성 · 재료 수에 비례 강화 / 0.7초 뒤 반경 170에 500% 착탄 피해",
+      "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타",
       "actions": [
         {
-          "op": "fusion",
-          "appearance": "fusion",
-          "count": 1,
-          "power": 2.8,
-          "duration": 24,
-          "large": true
-        },
-        {
-          "op": "blast",
-          "power": 5,
-          "radius": 170,
-          "delay": 0.7
+          "op": "fusion-kit",
+          "kind": "overdrive",
+          "target": "area",
+          "range": 460,
+          "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
         }
       ],
       "fx": {
@@ -17611,23 +17604,16 @@
         "recipe": 327,
         "choreography": [
           {
-            "op": "fusion",
-            "appearance": "fusion",
-            "count": 1,
-            "power": 2.8,
-            "duration": 24,
-            "large": true
-          },
-          {
-            "op": "blast",
-            "power": 5,
-            "radius": 170,
-            "delay": 0.7
+            "op": "fusion-kit",
+            "kind": "overdrive",
+            "target": "area",
+            "range": 460,
+            "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
           }
         ],
         "rays": 12,
         "rotation": 39,
-        "shape": "fusion+blast"
+        "shape": "fusion-kit"
       }
     },
     {
