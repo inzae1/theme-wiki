@@ -63,4 +63,9 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 - 28 knight skill choreographies, shield/hammer/lance drawings, sanctuary floor sigils, half-dragon animation and locomotion trails are authored in rpg-knight-fx.js. Existing credited shock, dust, stab, jab and spark sheets provide contact animations.
 - Art and actor motion remain separate; rpg-motion.js transforms the character sprite body and limbs.
 - knight-dragon-wings.png: additional original transparent image generated with imagegen. Original preserved; two runtime source crops animate the wings around the visible character body.
-- knight-sanctuary.png: original transparent sanctuary mosaic generated with imagegen. Rendered beneath actors as a following 240-radius aura; original PNG preserved.
+- knight-sanctuary.png: original transparent sanctuary mosaic generated with imagegen. Rendered beneath actors as a following sanctuary aura whose radius is defined by the gameplay kit; original PNG preserved.
+
+## Gunner redesign and knight tier distinction — 2026-10-21
+- gunner-siege-cannon.png and templar-greatshield.png: original transparent sprites generated with imagegen, originals preserved with runtime alpha-occupancy source crops.
+- rpg-gunner-fx.js draws engine-owned bullets, rune ammunition, arcing shells, blast events and emplacement state. Existing credited impact animation sheets provide contact frames.
+- First-tier paladin aura is radius 180 with 35% damage and 1% HP per second; second-tier crusader gets mobile holy assault waves and templar gets an ornate sustained greatshield wall.

@@ -4814,14 +4814,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-88",
-      "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복",
+      "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 4% 회복",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "holy-hammer",
           "target": "area",
           "range": 135,
-          "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복"
+          "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 4% 회복"
         }
       ],
       "fx": {
@@ -4836,7 +4836,7 @@
             "kind": "holy-hammer",
             "target": "area",
             "range": 135,
-            "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복"
+            "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 4% 회복"
           }
         ],
         "rays": 5,
@@ -4866,14 +4866,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-89",
-      "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
+      "description": "12초 동안 따라다니는 성역 오라 · 반경 180 · 1초마다 35% 피해 · 체력 1% 회복",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "sanctuary-anchor",
           "target": "self",
           "range": 125,
-          "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복"
+          "description": "12초 동안 따라다니는 성역 오라 · 반경 180 · 1초마다 35% 피해 · 체력 1% 회복"
         }
       ],
       "fx": {
@@ -4888,7 +4888,7 @@
             "kind": "sanctuary-anchor",
             "target": "self",
             "range": 125,
-            "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복"
+            "description": "12초 동안 따라다니는 성역 오라 · 반경 180 · 1초마다 35% 피해 · 체력 1% 회복"
           }
         ],
         "rays": 6,
@@ -4918,14 +4918,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-90",
-      "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소",
+      "description": "8초 결속 · 성역 안에서만 공격력 15% 증가, 받는 피해 10% 감소",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "sanctuary-bond",
           "target": "self",
           "range": 125,
-          "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소"
+          "description": "8초 결속 · 성역 안에서만 공격력 15% 증가, 받는 피해 10% 감소"
         }
       ],
       "fx": {
@@ -4940,7 +4940,7 @@
             "kind": "sanctuary-bond",
             "target": "self",
             "range": 125,
-            "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소"
+            "description": "8초 결속 · 성역 안에서만 공격력 15% 증가, 받는 피해 10% 감소"
           }
         ],
         "rays": 7,
@@ -4970,14 +4970,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-91",
-      "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
+      "description": "성역 오라 안의 적에게 500% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "sanctuary-judgment",
           "target": "area",
           "range": 460,
-          "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
+          "description": "성역 오라 안의 적에게 500% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
         }
       ],
       "fx": {
@@ -4992,7 +4992,7 @@
             "kind": "sanctuary-judgment",
             "target": "area",
             "range": 460,
-            "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
+            "description": "성역 오라 안의 적에게 500% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
           }
         ],
         "rays": 8,
@@ -5386,14 +5386,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-99",
-      "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%",
+      "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "holy-march",
           "target": "self",
           "range": 125,
-          "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%"
+          "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
         }
       ],
       "fx": {
@@ -5408,7 +5408,7 @@
             "kind": "holy-march",
             "target": "self",
             "range": 125,
-            "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%"
+            "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
           }
         ],
         "rays": 8,
@@ -13512,16 +13512,18 @@
       },
       "cost": 12,
       "cooldown": 5.2,
-      "range": 460,
+      "range": 420,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-252",
-      "description": "직선 투사체 180% · 실제 충돌 시 피해",
+      "description": "탄창 1발 · 실제 탄환 명중 시 190%",
       "actions": [
         {
-          "op": "missile",
-          "power": 1.8,
-          "speed": 650
+          "op": "gunner-kit",
+          "kind": "revolver-shot",
+          "target": "single",
+          "range": 420,
+          "description": "탄창 1발 · 실제 탄환 명중 시 190%"
         }
       ],
       "fx": {
@@ -13532,14 +13534,16 @@
         "recipe": 252,
         "choreography": [
           {
-            "op": "missile",
-            "power": 1.8,
-            "speed": 650
+            "op": "gunner-kit",
+            "kind": "revolver-shot",
+            "target": "single",
+            "range": 420,
+            "description": "탄창 1발 · 실제 탄환 명중 시 190%"
           }
         ],
         "rays": 9,
         "rotation": 144,
-        "shape": "missile"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13560,17 +13564,18 @@
       },
       "cost": 17,
       "cooldown": 7.5,
-      "range": 460,
-      "radius": 170,
+      "range": 190,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-253",
-      "description": "거리 170 전방 부채꼴 240%",
+      "description": "탄창 2발 · 전방 산탄 5발, 각 65% · 실제 충돌 판정",
       "actions": [
         {
-          "op": "cone",
-          "power": 2.4,
-          "radius": 170,
-          "angle": 1.25
+          "op": "gunner-kit",
+          "kind": "buckshot",
+          "target": "area",
+          "range": 190,
+          "description": "탄창 2발 · 전방 산탄 5발, 각 65% · 실제 충돌 판정"
         }
       ],
       "fx": {
@@ -13581,15 +13586,16 @@
         "recipe": 253,
         "choreography": [
           {
-            "op": "cone",
-            "power": 2.4,
-            "radius": 170,
-            "angle": 1.25
+            "op": "gunner-kit",
+            "kind": "buckshot",
+            "target": "area",
+            "range": 190,
+            "description": "탄창 2발 · 전방 산탄 5발, 각 65% · 실제 충돌 판정"
           }
         ],
         "rays": 10,
         "rotation": 1,
-        "shape": "cone"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13608,17 +13614,20 @@
         "start": 100,
         "color": "#e5ca66"
       },
-      "cost": 19,
-      "cooldown": 13,
-      "range": 460,
+      "cost": 4,
+      "cooldown": 1,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-254",
-      "description": "0.8초 동안 이동·공격 중지 후 6발 장전",
+      "description": "0.5초 후 리볼버 6발 장전 · 다음 권총 6발 위력 20% 증가 · 탄창이 비면 기본 재장전 자동 실행",
       "actions": [
         {
-          "op": "reload",
-          "ammo": 6
+          "op": "gunner-kit",
+          "kind": "cylinder-reload",
+          "target": "self",
+          "range": 125,
+          "description": "0.5초 후 리볼버 6발 장전 · 다음 권총 6발 위력 20% 증가 · 탄창이 비면 기본 재장전 자동 실행"
         }
       ],
       "fx": {
@@ -13629,13 +13638,16 @@
         "recipe": 254,
         "choreography": [
           {
-            "op": "reload",
-            "ammo": 6
+            "op": "gunner-kit",
+            "kind": "cylinder-reload",
+            "target": "self",
+            "range": 125,
+            "description": "0.5초 후 리볼버 6발 장전 · 다음 권총 6발 위력 20% 증가 · 탄창이 비면 기본 재장전 자동 실행"
           }
         ],
         "rays": 11,
         "rotation": 38,
-        "shape": "reload"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13656,17 +13668,18 @@
       },
       "cost": 38,
       "cooldown": 34,
-      "range": 460,
-      "radius": 145,
+      "range": 420,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-255",
-      "description": "0.8초 뒤 반경 145에 600% 착탄 피해",
+      "description": "손에서 포물선으로 날아가는 유탄 · 0.8초 후 반경 115에 500%",
       "actions": [
         {
-          "op": "blast",
-          "power": 6,
-          "radius": 145,
-          "delay": 0.8
+          "op": "gunner-kit",
+          "kind": "hand-grenade",
+          "target": "area",
+          "range": 420,
+          "description": "손에서 포물선으로 날아가는 유탄 · 0.8초 후 반경 115에 500%"
         }
       ],
       "fx": {
@@ -13677,15 +13690,16 @@
         "recipe": 255,
         "choreography": [
           {
-            "op": "blast",
-            "power": 6,
-            "radius": 145,
-            "delay": 0.8
+            "op": "gunner-kit",
+            "kind": "hand-grenade",
+            "target": "area",
+            "range": 420,
+            "description": "손에서 포물선으로 날아가는 유탄 · 0.8초 후 반경 115에 500%"
           }
         ],
         "rays": 12,
         "rotation": 75,
-        "shape": "blast"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13694,7 +13708,7 @@
       "heroId": 9,
       "cell": 1,
       "slot": 0,
-      "name": "쌍권총 사격",
+      "name": "교차 사격",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -13706,16 +13720,18 @@
       },
       "cost": 12,
       "cooldown": 5.6,
-      "range": 460,
+      "range": 480,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-256",
-      "description": "탄창에서 최대 2발 소비 · 한 발 120% · 실제 시간차 타격",
+      "description": "탄창 2발 · 0.12초 간격 110% 2연사 · 동일 대상 연속 명중으로 집중 강화",
       "actions": [
         {
-          "op": "ammo-shot",
-          "power": 1.2,
-          "count": 2
+          "op": "gunner-kit",
+          "kind": "crossfire",
+          "target": "single",
+          "range": 480,
+          "description": "탄창 2발 · 0.12초 간격 110% 2연사 · 동일 대상 연속 명중으로 집중 강화"
         }
       ],
       "fx": {
@@ -13726,14 +13742,16 @@
         "recipe": 256,
         "choreography": [
           {
-            "op": "ammo-shot",
-            "power": 1.2,
-            "count": 2
+            "op": "gunner-kit",
+            "kind": "crossfire",
+            "target": "single",
+            "range": 480,
+            "description": "탄창 2발 · 0.12초 간격 110% 2연사 · 동일 대상 연속 명중으로 집중 강화"
           }
         ],
         "rays": 5,
         "rotation": 112,
-        "shape": "ammo-shot"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13742,7 +13760,7 @@
       "heroId": 9,
       "cell": 1,
       "slot": 1,
-      "name": "회전 난사",
+      "name": "정밀 연사",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -13754,16 +13772,18 @@
       },
       "cost": 17,
       "cooldown": 7.9,
-      "range": 460,
+      "range": 480,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-257",
-      "description": "탄창에서 최대 5발 소비 · 한 발 65% · 실제 시간차 타격",
+      "description": "탄창 4발 · 0.14초 간격 85% 4연사 · 집중 최대 4중첩, 중첩당 8% 증가",
       "actions": [
         {
-          "op": "ammo-shot",
-          "power": 0.65,
-          "count": 5
+          "op": "gunner-kit",
+          "kind": "precision-salvo",
+          "target": "single",
+          "range": 480,
+          "description": "탄창 4발 · 0.14초 간격 85% 4연사 · 집중 최대 4중첩, 중첩당 8% 증가"
         }
       ],
       "fx": {
@@ -13774,14 +13794,16 @@
         "recipe": 257,
         "choreography": [
           {
-            "op": "ammo-shot",
-            "power": 0.65,
-            "count": 5
+            "op": "gunner-kit",
+            "kind": "precision-salvo",
+            "target": "single",
+            "range": 480,
+            "description": "탄창 4발 · 0.14초 간격 85% 4연사 · 집중 최대 4중첩, 중첩당 8% 증가"
           }
         ],
         "rays": 6,
         "rotation": 149,
-        "shape": "ammo-shot"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13790,7 +13812,7 @@
       "heroId": 9,
       "cell": 1,
       "slot": 2,
-      "name": "빠른 재장전",
+      "name": "스피드로더",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -13800,18 +13822,20 @@
         "start": 100,
         "color": "#e5ca66"
       },
-      "cost": 19,
-      "cooldown": 13.4,
-      "range": 460,
+      "cost": 4,
+      "cooldown": 1,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-258",
-      "description": "0.7초 동안 이동·공격 중지 후 8발 장전",
+      "description": "0.55초 후 쌍권총 8발 재장전",
       "actions": [
         {
-          "op": "reload",
-          "ammo": 8,
-          "duration": 0.7
+          "op": "gunner-kit",
+          "kind": "speed-loader",
+          "target": "self",
+          "range": 125,
+          "description": "0.55초 후 쌍권총 8발 재장전"
         }
       ],
       "fx": {
@@ -13822,14 +13846,16 @@
         "recipe": 258,
         "choreography": [
           {
-            "op": "reload",
-            "ammo": 8,
-            "duration": 0.7
+            "op": "gunner-kit",
+            "kind": "speed-loader",
+            "target": "self",
+            "range": 125,
+            "description": "0.55초 후 쌍권총 8발 재장전"
           }
         ],
         "rays": 7,
         "rotation": 6,
-        "shape": "reload"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13838,7 +13864,7 @@
       "heroId": 9,
       "cell": 1,
       "slot": 3,
-      "name": "속사의 끝",
+      "name": "데드아이",
       "unlock": 40,
       "mechanicsVersion": 3,
       "resource": {
@@ -13850,18 +13876,18 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 460,
+      "range": 500,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-259",
-      "description": "0.09초 간격 8회 · 타격당 80%",
+      "description": "빈 탄창도 0.4초 재장전 후 8발 집중 사격 · 각 100% + 집중 강화",
       "actions": [
         {
-          "op": "volley",
-          "count": 8,
-          "power": 0.8,
-          "gap": 0.09,
-          "shape": "single"
+          "op": "gunner-kit",
+          "kind": "deadeye",
+          "target": "single",
+          "range": 500,
+          "description": "빈 탄창도 0.4초 재장전 후 8발 집중 사격 · 각 100% + 집중 강화"
         }
       ],
       "fx": {
@@ -13872,16 +13898,16 @@
         "recipe": 259,
         "choreography": [
           {
-            "op": "volley",
-            "count": 8,
-            "power": 0.8,
-            "gap": 0.09,
-            "shape": "single"
+            "op": "gunner-kit",
+            "kind": "deadeye",
+            "target": "single",
+            "range": 500,
+            "description": "빈 탄창도 0.4초 재장전 후 8발 집중 사격 · 각 100% + 집중 강화"
           }
         ],
         "rays": 8,
         "rotation": 43,
-        "shape": "volley"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13890,7 +13916,7 @@
       "heroId": 9,
       "cell": 2,
       "slot": 0,
-      "name": "유탄 포격",
+      "name": "고폭 로켓",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -13902,17 +13928,18 @@
       },
       "cost": 12,
       "cooldown": 5.6,
-      "range": 460,
+      "range": 500,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-260",
-      "description": "0.8초 뒤 반경 130에 320% 착탄 피해",
+      "description": "직사 로켓 실제 충돌 시 반경 95에 310% 폭발",
       "actions": [
         {
-          "op": "blast",
-          "power": 3.2,
-          "radius": 130,
-          "delay": 0.8
+          "op": "gunner-kit",
+          "kind": "explosive-rocket",
+          "target": "area",
+          "range": 500,
+          "description": "직사 로켓 실제 충돌 시 반경 95에 310% 폭발"
         }
       ],
       "fx": {
@@ -13923,15 +13950,16 @@
         "recipe": 260,
         "choreography": [
           {
-            "op": "blast",
-            "power": 3.2,
-            "radius": 130,
-            "delay": 0.8
+            "op": "gunner-kit",
+            "kind": "explosive-rocket",
+            "target": "area",
+            "range": 500,
+            "description": "직사 로켓 실제 충돌 시 반경 95에 310% 폭발"
           }
         ],
         "rays": 9,
         "rotation": 80,
-        "shape": "blast"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13940,7 +13968,7 @@
       "heroId": 9,
       "cell": 2,
       "slot": 1,
-      "name": "포격선",
+      "name": "충격탄 발사",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -13952,18 +13980,18 @@
       },
       "cost": 17,
       "cooldown": 7.9,
-      "range": 460,
+      "range": 480,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-261",
-      "description": "0.6초 준비 후 길이 480, 폭 130 직선 350% 관통",
+      "description": "충돌 지점 반경 80에 250% · 일반 적 크게 밀쳐내기",
       "actions": [
         {
-          "op": "beam",
-          "power": 3.5,
-          "width": 65,
+          "op": "gunner-kit",
+          "kind": "concussion-rocket",
+          "target": "area",
           "range": 480,
-          "delay": 0.6
+          "description": "충돌 지점 반경 80에 250% · 일반 적 크게 밀쳐내기"
         }
       ],
       "fx": {
@@ -13974,16 +14002,16 @@
         "recipe": 261,
         "choreography": [
           {
-            "op": "beam",
-            "power": 3.5,
-            "width": 65,
+            "op": "gunner-kit",
+            "kind": "concussion-rocket",
+            "target": "area",
             "range": 480,
-            "delay": 0.6
+            "description": "충돌 지점 반경 80에 250% · 일반 적 크게 밀쳐내기"
           }
         ],
         "rays": 10,
         "rotation": 117,
-        "shape": "beam"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -13992,7 +14020,7 @@
       "heroId": 9,
       "cell": 2,
       "slot": 2,
-      "name": "중화기 안정",
+      "name": "견착 조준",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -14004,17 +14032,18 @@
       },
       "cost": 19,
       "cooldown": 13.4,
-      "range": 460,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-262",
-      "description": "9초 조준 40% 증가",
+      "description": "8초 내 다음 적중 로켓 1회 위력 50% 증가 · 0.4초 견착 준비",
       "actions": [
         {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.4,
-          "duration": 9
+          "op": "gunner-kit",
+          "kind": "shoulder-aim",
+          "target": "self",
+          "range": 125,
+          "description": "8초 내 다음 적중 로켓 1회 위력 50% 증가 · 0.4초 견착 준비"
         }
       ],
       "fx": {
@@ -14025,15 +14054,16 @@
         "recipe": 262,
         "choreography": [
           {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.4,
-            "duration": 9
+            "op": "gunner-kit",
+            "kind": "shoulder-aim",
+            "target": "self",
+            "range": 125,
+            "description": "8초 내 다음 적중 로켓 1회 위력 50% 증가 · 0.4초 견착 준비"
           }
         ],
         "rays": 11,
         "rotation": 154,
-        "shape": "buff"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14042,7 +14072,7 @@
       "heroId": 9,
       "cell": 2,
       "slot": 3,
-      "name": "연속 포격",
+      "name": "파쇄 로켓",
       "unlock": 40,
       "mechanicsVersion": 3,
       "resource": {
@@ -14054,19 +14084,18 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 460,
+      "range": 520,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-263",
-      "description": "0.6초 후 0.3초 간격 4개 착탄 · 각 반경 90, 200%",
+      "description": "대형 로켓 실제 충돌 시 반경 140에 700% · 강한 넉백",
       "actions": [
         {
-          "op": "barrage",
-          "count": 4,
-          "power": 2,
-          "radius": 90,
-          "gap": 0.3,
-          "delay": 0.6
+          "op": "gunner-kit",
+          "kind": "demolition-rocket",
+          "target": "area",
+          "range": 520,
+          "description": "대형 로켓 실제 충돌 시 반경 140에 700% · 강한 넉백"
         }
       ],
       "fx": {
@@ -14077,17 +14106,16 @@
         "recipe": 263,
         "choreography": [
           {
-            "op": "barrage",
-            "count": 4,
-            "power": 2,
-            "radius": 90,
-            "gap": 0.3,
-            "delay": 0.6
+            "op": "gunner-kit",
+            "kind": "demolition-rocket",
+            "target": "area",
+            "range": 520,
+            "description": "대형 로켓 실제 충돌 시 반경 140에 700% · 강한 넉백"
           }
         ],
         "rays": 12,
         "rotation": 11,
-        "shape": "barrage"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14096,7 +14124,7 @@
       "heroId": 9,
       "cell": 3,
       "slot": 0,
-      "name": "쌍권총 연사",
+      "name": "거친 삼연사",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14108,16 +14136,18 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
+      "range": 320,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-264",
-      "description": "탄창에서 최대 3발 소비 · 한 발 90% · 실제 시간차 타격",
+      "description": "탄창 3발 · 근중거리 105% 3연사",
       "actions": [
         {
-          "op": "ammo-shot",
-          "power": 0.9,
-          "count": 3
+          "op": "gunner-kit",
+          "kind": "rough-triple",
+          "target": "single",
+          "range": 320,
+          "description": "탄창 3발 · 근중거리 105% 3연사"
         }
       ],
       "fx": {
@@ -14128,14 +14158,16 @@
         "recipe": 264,
         "choreography": [
           {
-            "op": "ammo-shot",
-            "power": 0.9,
-            "count": 3
+            "op": "gunner-kit",
+            "kind": "rough-triple",
+            "target": "single",
+            "range": 320,
+            "description": "탄창 3발 · 근중거리 105% 3연사"
           }
         ],
         "rays": 5,
         "rotation": 48,
-        "shape": "ammo-shot"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14144,7 +14176,7 @@
       "heroId": 9,
       "cell": 3,
       "slot": 1,
-      "name": "근접 난사",
+      "name": "데스 서클",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14156,17 +14188,18 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 250,
       "radius": 140,
-      "target": "single",
+      "target": "area",
       "effectType": "recipe-265",
-      "description": "탄창에서 최대 6발 소비 · 한 발 65% · 실제 시간차 타격",
+      "description": "탄창 8발 · 실제 8방향 탄환, 각 130% · 사방의 적 타격",
       "actions": [
         {
-          "op": "ammo-shot",
-          "power": 0.65,
-          "count": 6,
-          "cone": true
+          "op": "gunner-kit",
+          "kind": "death-circle",
+          "target": "area",
+          "range": 250,
+          "description": "탄창 8발 · 실제 8방향 탄환, 각 130% · 사방의 적 타격"
         }
       ],
       "fx": {
@@ -14177,15 +14210,16 @@
         "recipe": 265,
         "choreography": [
           {
-            "op": "ammo-shot",
-            "power": 0.65,
-            "count": 6,
-            "cone": true
+            "op": "gunner-kit",
+            "kind": "death-circle",
+            "target": "area",
+            "range": 250,
+            "description": "탄창 8발 · 실제 8방향 탄환, 각 130% · 사방의 적 타격"
           }
         ],
         "rays": 6,
         "rotation": 85,
-        "shape": "ammo-shot"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14204,24 +14238,20 @@
         "start": 100,
         "color": "#e5ca66"
       },
-      "cost": 19,
-      "cooldown": 13.8,
-      "range": 460,
+      "cost": 4,
+      "cooldown": 1,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-266",
-      "description": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 회피율 25% 증가",
+      "description": "뒤로 물러나며 0.65초 후 12발 장전 · 2.5초 회피율 25% 증가",
       "actions": [
         {
-          "op": "reload",
-          "ammo": 12,
-          "duration": 0.8
-        },
-        {
-          "op": "buff",
-          "type": "evasion",
-          "value": 0.25,
-          "duration": 2
+          "op": "gunner-kit",
+          "kind": "combat-loader",
+          "target": "self",
+          "range": 125,
+          "description": "뒤로 물러나며 0.65초 후 12발 장전 · 2.5초 회피율 25% 증가"
         }
       ],
       "fx": {
@@ -14232,20 +14262,16 @@
         "recipe": 266,
         "choreography": [
           {
-            "op": "reload",
-            "ammo": 12,
-            "duration": 0.8
-          },
-          {
-            "op": "buff",
-            "type": "evasion",
-            "value": 0.25,
-            "duration": 2
+            "op": "gunner-kit",
+            "kind": "combat-loader",
+            "target": "self",
+            "range": 125,
+            "description": "뒤로 물러나며 0.65초 후 12발 장전 · 2.5초 회피율 25% 증가"
           }
         ],
         "rays": 7,
         "rotation": 122,
-        "shape": "reload+buff"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14266,21 +14292,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
+      "range": 280,
       "radius": 140,
-      "target": "single",
+      "target": "area",
       "effectType": "recipe-267",
-      "description": "0.2초 동안 이동·공격 중지 후 12발 장전 / 탄창에서 최대 12발 소비 · 한 발 100% · 실제 시간차 타격",
+      "description": "탄창 0에서도 0.25초 장전 후 실제 12발 · 이동하며 주변 표적에 각 140%",
       "actions": [
         {
-          "op": "reload",
-          "ammo": 12,
-          "duration": 0.2
-        },
-        {
-          "op": "ammo-shot",
-          "power": 1,
-          "count": 12
+          "op": "gunner-kit",
+          "kind": "bullet-dance",
+          "target": "area",
+          "range": 280,
+          "description": "탄창 0에서도 0.25초 장전 후 실제 12발 · 이동하며 주변 표적에 각 140%"
         }
       ],
       "fx": {
@@ -14291,19 +14314,16 @@
         "recipe": 267,
         "choreography": [
           {
-            "op": "reload",
-            "ammo": 12,
-            "duration": 0.2
-          },
-          {
-            "op": "ammo-shot",
-            "power": 1,
-            "count": 12
+            "op": "gunner-kit",
+            "kind": "bullet-dance",
+            "target": "area",
+            "range": 280,
+            "description": "탄창 0에서도 0.25초 장전 후 실제 12발 · 이동하며 주변 표적에 각 140%"
           }
         ],
         "rays": 8,
         "rotation": 159,
-        "shape": "reload+ammo-shot"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14312,7 +14332,7 @@
       "heroId": 9,
       "cell": 4,
       "slot": 0,
-      "name": "주문 탄환",
+      "name": "각인 탄환",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14328,19 +14348,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-268",
-      "description": "직선 투사체 230% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+      "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음",
       "actions": [
         {
-          "op": "missile",
-          "power": 2.3,
-          "speed": 420
-        },
-        {
-          "op": "status",
-          "type": "bulletmark",
-          "power": 0.1,
-          "stacks": 1,
-          "duration": 8
+          "op": "gunner-kit",
+          "kind": "inscribed-round",
+          "target": "single",
+          "range": 460,
+          "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음"
         }
       ],
       "fx": {
@@ -14351,21 +14366,16 @@
         "recipe": 268,
         "choreography": [
           {
-            "op": "missile",
-            "power": 2.3,
-            "speed": 420
-          },
-          {
-            "op": "status",
-            "type": "bulletmark",
-            "power": 0.1,
-            "stacks": 1,
-            "duration": 8
+            "op": "gunner-kit",
+            "kind": "inscribed-round",
+            "target": "single",
+            "range": 460,
+            "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음"
           }
         ],
         "rays": 9,
         "rotation": 16,
-        "shape": "missile+status"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14374,7 +14384,7 @@
       "heroId": 9,
       "cell": 4,
       "slot": 1,
-      "name": "약점 노출",
+      "name": "원소 탄창",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14386,18 +14396,18 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 125,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-269",
-      "description": "bulletmark 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 15%",
+      "description": "다음 3발에 불꽃·빙결·연쇄 번개 순서로 장전 · 명중 시에만 속성 효과",
       "actions": [
         {
-          "op": "status",
-          "type": "bulletmark",
-          "power": 0.15,
-          "stacks": 3,
-          "duration": 8
+          "op": "gunner-kit",
+          "kind": "element-magazine",
+          "target": "self",
+          "range": 125,
+          "description": "다음 3발에 불꽃·빙결·연쇄 번개 순서로 장전 · 명중 시에만 속성 효과"
         }
       ],
       "fx": {
@@ -14408,16 +14418,16 @@
         "recipe": 269,
         "choreography": [
           {
-            "op": "status",
-            "type": "bulletmark",
-            "power": 0.15,
-            "stacks": 3,
-            "duration": 8
+            "op": "gunner-kit",
+            "kind": "element-magazine",
+            "target": "self",
+            "range": 125,
+            "description": "다음 3발에 불꽃·빙결·연쇄 번개 순서로 장전 · 명중 시에만 속성 효과"
           }
         ],
         "rays": 10,
         "rotation": 53,
-        "shape": "status"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14426,7 +14436,7 @@
       "heroId": 9,
       "cell": 4,
       "slot": 2,
-      "name": "마탄 장전",
+      "name": "룬 공명탄",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14440,20 +14450,16 @@
       "cooldown": 13.8,
       "range": 460,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-270",
-      "description": "spellbullet 자원 3 축적 / 8초 조준 30% 증가",
+      "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비",
       "actions": [
         {
-          "op": "meter",
-          "key": "spellbullet",
-          "value": 3
-        },
-        {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.3,
-          "duration": 8
+          "op": "gunner-kit",
+          "kind": "rune-resonance",
+          "target": "area",
+          "range": 460,
+          "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비"
         }
       ],
       "fx": {
@@ -14464,20 +14470,16 @@
         "recipe": 270,
         "choreography": [
           {
-            "op": "meter",
-            "key": "spellbullet",
-            "value": 3
-          },
-          {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.3,
-            "duration": 8
+            "op": "gunner-kit",
+            "kind": "rune-resonance",
+            "target": "area",
+            "range": 460,
+            "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비"
           }
         ],
         "rays": 11,
         "rotation": 90,
-        "shape": "meter+buff"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14486,7 +14488,7 @@
       "heroId": 9,
       "cell": 4,
       "slot": 3,
-      "name": "최후의 한 발",
+      "name": "룬 파괴탄",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -14498,28 +14500,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
+      "range": 550,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-271",
-      "description": "spellbullet를 전부 소비해 단일 피해 / bulletmark를 소비해 중첩당 200% 타격 / 0.8초 준비 후 길이 480, 폭 44 직선 600% 관통",
+      "description": "0.65초 충전 후 관통 마탄 600% + 남은 속성탄당 60% · 적중 시 표식 소비 추가 피해",
       "actions": [
         {
-          "op": "spend",
-          "key": "spellbullet",
-          "power": 2.5
-        },
-        {
-          "op": "consume",
-          "type": "bulletmark",
-          "power": 2
-        },
-        {
-          "op": "beam",
-          "power": 6,
-          "width": 22,
-          "range": 480,
-          "delay": 0.8
+          "op": "gunner-kit",
+          "kind": "rune-breaker",
+          "target": "area",
+          "range": 550,
+          "description": "0.65초 충전 후 관통 마탄 600% + 남은 속성탄당 60% · 적중 시 표식 소비 추가 피해"
         }
       ],
       "fx": {
@@ -14530,26 +14522,16 @@
         "recipe": 271,
         "choreography": [
           {
-            "op": "spend",
-            "key": "spellbullet",
-            "power": 2.5
-          },
-          {
-            "op": "consume",
-            "type": "bulletmark",
-            "power": 2
-          },
-          {
-            "op": "beam",
-            "power": 6,
-            "width": 22,
-            "range": 480,
-            "delay": 0.8
+            "op": "gunner-kit",
+            "kind": "rune-breaker",
+            "target": "area",
+            "range": 550,
+            "description": "0.65초 충전 후 관통 마탄 600% + 남은 속성탄당 60% · 적중 시 표식 소비 추가 피해"
           }
         ],
         "rays": 12,
         "rotation": 127,
-        "shape": "spend+consume+beam"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14570,17 +14552,18 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
-      "radius": 150,
+      "range": 500,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-272",
-      "description": "1.1초 뒤 반경 150에 400% 착탄 피해",
+      "description": "고정 좌표로 실제 곡사탄 · 1.05초 후 반경 115에 400%",
       "actions": [
         {
-          "op": "blast",
-          "power": 4,
-          "radius": 150,
-          "delay": 1.1
+          "op": "gunner-kit",
+          "kind": "howitzer",
+          "target": "area",
+          "range": 500,
+          "description": "고정 좌표로 실제 곡사탄 · 1.05초 후 반경 115에 400%"
         }
       ],
       "fx": {
@@ -14591,15 +14574,16 @@
         "recipe": 272,
         "choreography": [
           {
-            "op": "blast",
-            "power": 4,
-            "radius": 150,
-            "delay": 1.1
+            "op": "gunner-kit",
+            "kind": "howitzer",
+            "target": "area",
+            "range": 500,
+            "description": "고정 좌표로 실제 곡사탄 · 1.05초 후 반경 115에 400%"
           }
         ],
         "rays": 5,
         "rotation": 164,
-        "shape": "blast"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14608,7 +14592,7 @@
       "heroId": 9,
       "cell": 5,
       "slot": 1,
-      "name": "자탄 폭발",
+      "name": "집속 포탄",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14620,19 +14604,18 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 500,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-273",
-      "description": "0.8초 후 0.2초 간격 5개 착탄 · 각 반경 75, 130%",
+      "description": "주포탄 180% 착탄 후 자탄 4개 분리 · 자탄마다 반경 65에 130%",
       "actions": [
         {
-          "op": "barrage",
-          "count": 5,
-          "power": 1.3,
-          "radius": 75,
-          "gap": 0.2,
-          "delay": 0.8
+          "op": "gunner-kit",
+          "kind": "cluster-shell",
+          "target": "area",
+          "range": 500,
+          "description": "주포탄 180% 착탄 후 자탄 4개 분리 · 자탄마다 반경 65에 130%"
         }
       ],
       "fx": {
@@ -14643,17 +14626,16 @@
         "recipe": 273,
         "choreography": [
           {
-            "op": "barrage",
-            "count": 5,
-            "power": 1.3,
-            "radius": 75,
-            "gap": 0.2,
-            "delay": 0.8
+            "op": "gunner-kit",
+            "kind": "cluster-shell",
+            "target": "area",
+            "range": 500,
+            "description": "주포탄 180% 착탄 후 자탄 4개 분리 · 자탄마다 반경 65에 130%"
           }
         ],
         "rays": 6,
         "rotation": 21,
-        "shape": "barrage"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14662,7 +14644,7 @@
       "heroId": 9,
       "cell": 5,
       "slot": 2,
-      "name": "포격 예고",
+      "name": "포격 좌표",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14674,24 +14656,18 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 180,
+      "range": 500,
+      "radius": 140,
       "target": "self",
       "effectType": "recipe-274",
-      "description": "포격 조준 지대 8초 · 반경 180 · 0.8초마다 공격력 15% 피해 / 8초 조준 30% 증가",
+      "description": "9초 반경 160 좌표 지정 · 좌표 안의 적에게 곡사탄 피해 30% 증가",
       "actions": [
         {
-          "op": "zone",
-          "type": "target",
-          "power": 0.15,
-          "radius": 180,
-          "duration": 8
-        },
-        {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.3,
-          "duration": 8
+          "op": "gunner-kit",
+          "kind": "fire-coordinates",
+          "target": "self",
+          "range": 500,
+          "description": "9초 반경 160 좌표 지정 · 좌표 안의 적에게 곡사탄 피해 30% 증가"
         }
       ],
       "fx": {
@@ -14702,22 +14678,16 @@
         "recipe": 274,
         "choreography": [
           {
-            "op": "zone",
-            "type": "target",
-            "power": 0.15,
-            "radius": 180,
-            "duration": 8
-          },
-          {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.3,
-            "duration": 8
+            "op": "gunner-kit",
+            "kind": "fire-coordinates",
+            "target": "self",
+            "range": 500,
+            "description": "9초 반경 160 좌표 지정 · 좌표 안의 적에게 곡사탄 피해 30% 증가"
           }
         ],
         "rays": 7,
         "rotation": 58,
-        "shape": "zone+buff"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14738,19 +14708,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
+      "range": 550,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-275",
-      "description": "1초 후 0.25초 간격 10개 착탄 · 각 반경 100, 160%",
+      "description": "3×3 좌표에 시간차 곡사탄 9발 · 각 반경 80에 240% · 실제 착탄 위치 판정",
       "actions": [
         {
-          "op": "barrage",
-          "count": 10,
-          "power": 1.6,
-          "radius": 100,
-          "gap": 0.25,
-          "delay": 1
+          "op": "gunner-kit",
+          "kind": "carpet-bombing",
+          "target": "area",
+          "range": 550,
+          "description": "3×3 좌표에 시간차 곡사탄 9발 · 각 반경 80에 240% · 실제 착탄 위치 판정"
         }
       ],
       "fx": {
@@ -14761,17 +14730,16 @@
         "recipe": 275,
         "choreography": [
           {
-            "op": "barrage",
-            "count": 10,
-            "power": 1.6,
-            "radius": 100,
-            "gap": 0.25,
-            "delay": 1
+            "op": "gunner-kit",
+            "kind": "carpet-bombing",
+            "target": "area",
+            "range": 550,
+            "description": "3×3 좌표에 시간차 곡사탄 9발 · 각 반경 80에 240% · 실제 착탄 위치 판정"
           }
         ],
         "rays": 8,
         "rotation": 95,
-        "shape": "barrage"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14792,15 +14760,18 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-276",
-      "description": "12초 공성 자세 · 이동 불가·사거리와 공격력 증가",
+      "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제",
       "actions": [
         {
-          "op": "siege",
-          "duration": 12
+          "op": "gunner-kit",
+          "kind": "deploy-cannon",
+          "target": "self",
+          "range": 125,
+          "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제"
         }
       ],
       "fx": {
@@ -14811,13 +14782,16 @@
         "recipe": 276,
         "choreography": [
           {
-            "op": "siege",
-            "duration": 12
+            "op": "gunner-kit",
+            "kind": "deploy-cannon",
+            "target": "self",
+            "range": 125,
+            "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제"
           }
         ],
         "rays": 9,
         "rotation": 132,
-        "shape": "siege"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14838,22 +14812,18 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 560,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-277",
-      "description": "0.7초 준비 후 길이 480, 폭 90 직선 550% 관통 / 열기 25 축적",
+      "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가",
       "actions": [
         {
-          "op": "beam",
-          "power": 5.5,
-          "width": 45,
-          "range": 480,
-          "delay": 0.7
-        },
-        {
-          "op": "heat",
-          "value": 25
+          "op": "gunner-kit",
+          "kind": "piercing-cannon",
+          "target": "area",
+          "range": 560,
+          "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가"
         }
       ],
       "fx": {
@@ -14864,20 +14834,16 @@
         "recipe": 277,
         "choreography": [
           {
-            "op": "beam",
-            "power": 5.5,
-            "width": 45,
-            "range": 480,
-            "delay": 0.7
-          },
-          {
-            "op": "heat",
-            "value": 25
+            "op": "gunner-kit",
+            "kind": "piercing-cannon",
+            "target": "area",
+            "range": 560,
+            "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가"
           }
         ],
         "rays": 10,
         "rotation": 169,
-        "shape": "beam+heat"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14886,7 +14852,7 @@
       "heroId": 9,
       "cell": 6,
       "slot": 2,
-      "name": "강제 냉각",
+      "name": "긴급 냉각",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -14898,16 +14864,18 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
+      "range": 125,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-278",
-      "description": "열기를 소비해 냉각 폭발",
+      "description": "열기 65 감소 및 과열 해제 · 열기가 없으면 사용하지 않음",
       "actions": [
         {
-          "op": "cool",
-          "power": 1.5,
-          "radius": 110
+          "op": "gunner-kit",
+          "kind": "emergency-vent",
+          "target": "self",
+          "range": 125,
+          "description": "열기 65 감소 및 과열 해제 · 열기가 없으면 사용하지 않음"
         }
       ],
       "fx": {
@@ -14918,14 +14886,16 @@
         "recipe": 278,
         "choreography": [
           {
-            "op": "cool",
-            "power": 1.5,
-            "radius": 110
+            "op": "gunner-kit",
+            "kind": "emergency-vent",
+            "target": "self",
+            "range": 125,
+            "description": "열기 65 감소 및 과열 해제 · 열기가 없으면 사용하지 않음"
           }
         ],
         "rays": 11,
         "rotation": 26,
-        "shape": "cool"
+        "shape": "gunner-kit"
       }
     },
     {
@@ -14946,26 +14916,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
+      "range": 650,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-279",
-      "description": "8초 공성 자세 · 이동 불가·사거리와 공격력 증가 / 열기에 비례한 방출 후 5초 과열 / 1.4초 준비 후 길이 480, 폭 160 직선 1200% 관통",
+      "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단",
       "actions": [
         {
-          "op": "siege",
-          "duration": 8
-        },
-        {
-          "op": "overheat",
-          "power": 3
-        },
-        {
-          "op": "beam",
-          "power": 12,
-          "width": 80,
-          "range": 480,
-          "delay": 1.4
+          "op": "gunner-kit",
+          "kind": "superheavy-shot",
+          "target": "area",
+          "range": 650,
+          "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단"
         }
       ],
       "fx": {
@@ -14976,24 +14938,16 @@
         "recipe": 279,
         "choreography": [
           {
-            "op": "siege",
-            "duration": 8
-          },
-          {
-            "op": "overheat",
-            "power": 3
-          },
-          {
-            "op": "beam",
-            "power": 12,
-            "width": 80,
-            "range": 480,
-            "delay": 1.4
+            "op": "gunner-kit",
+            "kind": "superheavy-shot",
+            "target": "area",
+            "range": 650,
+            "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단"
           }
         ],
         "rays": 12,
         "rotation": 63,
-        "shape": "siege+overheat+beam"
+        "shape": "gunner-kit"
       }
     },
     {
