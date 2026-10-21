@@ -60,5 +60,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 
 ## Knight profession redesign — 2026-10-21
 - knight-war-standard.png: original transparent pixel battle standard generated with imagegen; original asset preserved, alpha occupancy crop and cloth sway applied at runtime.
-- 28 knight skill choreographies, shield/hammer/lance drawings, sanctuary floor sigils, half-dragon wings and locomotion trails are authored in rpg-knight-fx.js. Existing credited shock, dust, stab, jab and spark sheets provide contact animations.
+- 28 knight skill choreographies, shield/hammer/lance drawings, sanctuary floor sigils, half-dragon animation and locomotion trails are authored in rpg-knight-fx.js. Existing credited shock, dust, stab, jab and spark sheets provide contact animations.
 - Art and actor motion remain separate; rpg-motion.js transforms the character sprite body and limbs.
+- knight-dragon-wings.png: additional original transparent image generated with imagegen. Original preserved; two runtime source crops animate the wings around the visible character body.
+- knight-sanctuary.png: original transparent sanctuary mosaic generated with imagegen. Rendered beneath actors as a following 240-radius aura; original PNG preserved.

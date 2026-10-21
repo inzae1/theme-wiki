@@ -5038,7 +5038,7 @@
       "style": "basic",
       "resource": "마력",
       "review": "방패 강타 — shield-bash / 응수 베기 — riposte-cut / 방패 들기 — raised-shield / 돌파의 맹세 — oath-rush",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 기초 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-0-skill-0",
@@ -5266,8 +5266,8 @@
       "parent": "youngjun-0",
       "style": "guard",
       "resource": "마력",
-      "review": "성광 망치 — holy-hammer / 성역 설치 — sanctuary-anchor / 성역 결속 — sanctuary-bond / 성역 심판 — sanctuary-judgment",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "성광 망치 — holy-hammer / 성역 오라 — sanctuary-anchor / 성역 결속 — sanctuary-bond / 성역 심판 — sanctuary-judgment",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-1-skill-0",
@@ -5329,7 +5329,7 @@
           "heroId": 3,
           "cell": 1,
           "slot": 1,
-          "name": "성역 설치",
+          "name": "성역 오라",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -5345,14 +5345,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-89",
-          "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
+          "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
           "actions": [
             {
               "op": "knight-kit",
               "kind": "sanctuary-anchor",
               "target": "self",
               "range": 125,
-              "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 1.2% 회복"
+              "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복"
             }
           ],
           "fx": {
@@ -5367,14 +5367,14 @@
                 "kind": "sanctuary-anchor",
                 "target": "self",
                 "range": 125,
-                "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 1.2% 회복"
+                "description": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복"
               }
             ],
             "rays": 6,
             "rotation": 53,
             "shape": "knight-kit"
           },
-          "actualText": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
+          "actualText": "12초 동안 따라다니는 성역 오라 · 반경 240 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
           "visual": "전용 연출 youngjun-1:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -5453,14 +5453,14 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-91",
-          "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
+          "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
           "actions": [
             {
               "op": "knight-kit",
               "kind": "sanctuary-judgment",
               "target": "area",
               "range": 460,
-              "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
+              "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
             }
           ],
           "fx": {
@@ -5475,14 +5475,14 @@
                 "kind": "sanctuary-judgment",
                 "target": "area",
                 "range": 460,
-                "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
+                "description": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
               }
             ],
             "rays": 8,
             "rotation": 127,
             "shape": "knight-kit"
           },
-          "actualText": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
+          "actualText": "성역 오라 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
           "visual": "전용 연출 youngjun-1:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -5496,7 +5496,7 @@
       "style": "leap",
       "resource": "분노",
       "review": "도약 찌르기 — dragon-leap / 용창 관통 — dragon-pierce / 용혈 고양 — dragon-breathing / 용의 숨결 — dragon-breath",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-2-skill-0",
@@ -5725,7 +5725,7 @@
       "style": "holy",
       "resource": "마력",
       "review": "진군 망치 — marching-cut / 성전 깃발 — war-standard / 성전 돌격 — crusade-charge / 성전 개시 — holy-march",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-3-skill-0",
@@ -5954,7 +5954,7 @@
       "style": "guard",
       "resource": "마력",
       "review": "강철 방패 — iron-bulwark / 축적 반격 — stored-reprisal / 응징 태세 — punishment-stance / 절대 방벽 — absolute-bastion",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-4-skill-0",
@@ -6183,7 +6183,7 @@
       "style": "leap",
       "resource": "분노",
       "review": "용창 비상 — lancer-ascent / 창끝 관통 — weakpoint-lance / 공중 조준 — sky-aim / 천공 낙하 — heaven-fall",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-5-skill-0",
@@ -6412,7 +6412,7 @@
       "style": "morph",
       "resource": "분노",
       "review": "용혈 참격 — blood-claw / 용린 수호 — scale-ward / 혈통 각성 — blood-awakening / 용혈 해방 — half-dragon",
-      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "검방 응수·추종 성역 오라·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-6-skill-0",
@@ -6497,7 +6497,7 @@
               "kind": "scale-ward",
               "target": "self",
               "range": 125,
-              "description": "용린 최대 6 소모 · 체력 8% + 중첩당 2.5% 보호막 · 4초 피해 40% 감소"
+              "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소"
             }
           ],
           "fx": {
@@ -6512,7 +6512,7 @@
                 "kind": "scale-ward",
                 "target": "self",
                 "range": 125,
-                "description": "용린 최대 6 소모 · 체력 8% + 중첩당 2.5% 보호막 · 4초 피해 40% 감소"
+                "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소"
               }
             ],
             "rays": 10,
@@ -6551,7 +6551,7 @@
               "kind": "blood-awakening",
               "target": "self",
               "range": 125,
-              "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.6% 회복"
+              "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복"
             }
           ],
           "fx": {
@@ -6566,7 +6566,7 @@
                 "kind": "blood-awakening",
                 "target": "self",
                 "range": 125,
-                "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.6% 회복"
+                "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복"
               }
             ],
             "rays": 11,
