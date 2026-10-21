@@ -44,3 +44,8 @@ Runtime copies were renamed only, without recoloring: melee-punch.png, melee-jab
 The ten *-authored.png effect/plant assets and four summon-*.png undead sprites were generated specifically for this project using the built-in image generation tool. Original transparent PNGs are preserved; cropping, motion and scaling occur at runtime. Metadata is recorded in authored-manifest.json and undead-manifest.json.
 
 The elemental spirit and elemental king (summon-spirit.png / summon-king.png) are additional original transparent sprites generated with the built-in image generation tool. Ghosts retain a separate existing model.
+
+## Cheonbin profession redesign — 2026-10-21
+- cheonbin-ancient-tree.png and cheonbin-thorn-sentry.png: project-specific images generated with imagegen. Original transparent PNGs preserved; crop geometry and display size are applied only at runtime.
+- Cheonbin physical hit, ground dust and energy contact animations use the existing credited punch/shock, floor/dust and spark sheets. Timing and placement are authored per skill.
+- GIF previews in the workspace outputs are derived previews of the credited source animation sheets, resized with pixel sampling and composited on a game-colored background. They are not newly authored explosion artwork.
