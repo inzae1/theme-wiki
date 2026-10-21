@@ -435,7 +435,7 @@
     {
       "id": "seunguk-item-0",
       "name": "흥겨운 하프",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "무기",
       "branch": "바드",
@@ -447,7 +447,7 @@
     {
       "id": "seunguk-item-1",
       "name": "즉흥의 전투 부채",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "무기",
       "branch": "댄서",
@@ -459,7 +459,7 @@
     {
       "id": "seunguk-item-2",
       "name": "축제의 의상",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "방어구",
       "branch": "공통",
@@ -471,7 +471,7 @@
     {
       "id": "seunguk-item-3",
       "name": "박자 방울",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "장신구",
       "branch": "공통",
@@ -483,7 +483,7 @@
     {
       "id": "seunguk-item-4",
       "name": "목풀기 꿀차",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "소모품",
       "branch": "공통",
@@ -495,7 +495,7 @@
     {
       "id": "seunguk-item-5",
       "name": "즉흥 악보",
-      "owner": "정승욱",
+      "owner": "남지훈",
       "ownerSlug": "seunguk",
       "type": "유물",
       "branch": "공통",
@@ -795,7 +795,7 @@
     {
       "id": "keunho-item-0",
       "name": "삼색 정령봉",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "무기",
       "branch": "정령사",
@@ -807,7 +807,7 @@
     {
       "id": "keunho-item-1",
       "name": "영혼의 소환서",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "무기",
       "branch": "네크로맨서",
@@ -819,7 +819,7 @@
     {
       "id": "keunho-item-2",
       "name": "탐험가의 로브",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "방어구",
       "branch": "공통",
@@ -831,7 +831,7 @@
     {
       "id": "keunho-item-3",
       "name": "기묘한 나침반",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "장신구",
       "branch": "공통",
@@ -843,7 +843,7 @@
     {
       "id": "keunho-item-4",
       "name": "변덕의 영약",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "소모품",
       "branch": "공통",
@@ -855,7 +855,7 @@
     {
       "id": "keunho-item-5",
       "name": "융합 수정",
-      "owner": "남지훈",
+      "owner": "정승욱",
       "ownerSlug": "keunho",
       "type": "유물",
       "branch": "공통",

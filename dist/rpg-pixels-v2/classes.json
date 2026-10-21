@@ -448,7 +448,7 @@
     },
     {
       "id": 6,
-      "name": "정승욱",
+      "name": "남지훈",
       "slug": "seunguk",
       "identity": "SECOND ROW THIRD: soft brown bowl haircut, very round smiling face and small eyes",
       "sheet": "characters/seunguk.png",
@@ -500,11 +500,11 @@
         },
         {
           "id": "seunguk-5",
-          "name": "검무가",
+          "name": "메탈리스트",
           "tier": 2,
           "parent": "seunguk-2",
-          "weapon": "쌍곡검",
-          "visual": "red teal light dancer armor, twin curved swords",
+          "weapon": "V자 일렉기타",
+          "visual": "brown tousled bowl haircut, black leather studded vest, ripped charcoal jeans, chain belt and red black Flying-V electric guitar",
           "cell": 5
         },
         {
@@ -808,7 +808,7 @@
     },
     {
       "id": 11,
-      "name": "남지훈",
+      "name": "정승욱",
       "slug": "keunho",
       "identity": "BOTTOM ROW FOURTH: tousled curly light brown hair, freckles, wide toothy grin, youthful face",
       "sheet": "characters/keunho.png",

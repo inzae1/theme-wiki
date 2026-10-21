@@ -49,3 +49,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 - cheonbin-ancient-tree.png and cheonbin-thorn-sentry.png: project-specific images generated with imagegen. Original transparent PNGs preserved; crop geometry and display size are applied only at runtime.
 - Cheonbin physical hit, ground dust and energy contact animations use the existing credited punch/shock, floor/dust and spark sheets. Timing and placement are authored per skill.
 - GIF previews in the workspace outputs are derived previews of the credited source animation sheets, resized with pixel sampling and composited on a game-colored background. They are not newly authored explosion artwork.
+
+## Metal profession redesign — 2026-10-21
+- ../rpg-pixels-v2/characters/seunguk-metal.png: original transparent avatar generated with imagegen, preserved unchanged and cropped at runtime.
+- Metal sound pressure, amplifier cabinets and feedback animation are authored canvas drawings; contact dust and punch/shock sheets retain the credits above.

@@ -114,6 +114,7 @@ P.promote=function(cell){const result=old.promote.call(this,cell);if(result&&thi
 if(typeof module!=='undefined')require('./rpg-bard-runtime.js')(E);else root.RPG_BARD_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-warrior-runtime.js')(E);else root.RPG_WARRIOR_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-cheonbin-runtime.js')(E);else root.RPG_CHEONBIN_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-metal-runtime.js')(E);else root.RPG_METAL_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);

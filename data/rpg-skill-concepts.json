@@ -10162,7 +10162,7 @@
       "heroId": 6,
       "cell": 5,
       "slot": 0,
-      "name": "검무 삼연격",
+      "name": "파워 코드",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10174,36 +10174,38 @@
       },
       "cost": 5,
       "cooldown": 6,
-      "range": 125,
+      "range": 150,
       "radius": 140,
-      "target": "single",
+      "target": "area",
       "effectType": "recipe-188",
-      "description": "대상에게 접근해 3회 검격, 타격당 100%",
+      "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "sword-triple",
-          "description": "대상에게 접근해 3회 검격, 타격당 100%",
-          "target": "single"
+          "op": "metal-kit",
+          "kind": "power-chord",
+          "target": "area",
+          "range": 150,
+          "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모"
         }
       ],
       "fx": {
         "signature": "seunguk-5:0",
         "theme": "dance",
-        "weapon": "쌍곡검",
+        "weapon": "V자 일렉기타",
         "palette": "#82d9c5",
         "recipe": 188,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "sword-triple",
-            "description": "대상에게 접근해 3회 검격, 타격당 100%",
-            "target": "single"
+            "op": "metal-kit",
+            "kind": "power-chord",
+            "target": "area",
+            "range": 150,
+            "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모"
           }
         ],
         "rays": 9,
         "rotation": 116,
-        "shape": "bard-kit"
+        "shape": "metal-kit"
       }
     },
     {
@@ -10212,7 +10214,7 @@
       "heroId": 6,
       "cell": 5,
       "slot": 1,
-      "name": "검끝 집중",
+      "name": "헤드뱅잉",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10228,32 +10230,34 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-189",
-      "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
+      "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "sword-focus",
-          "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
-          "target": "self"
+          "op": "metal-kit",
+          "kind": "headbang",
+          "target": "self",
+          "range": 125,
+          "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적"
         }
       ],
       "fx": {
         "signature": "seunguk-5:1",
         "theme": "dance",
-        "weapon": "쌍곡검",
+        "weapon": "V자 일렉기타",
         "palette": "#82d9c5",
         "recipe": 189,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "sword-focus",
-            "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
-            "target": "self"
+            "op": "metal-kit",
+            "kind": "headbang",
+            "target": "self",
+            "range": 125,
+            "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적"
           }
         ],
         "rays": 10,
         "rotation": 153,
-        "shape": "bard-kit"
+        "shape": "metal-kit"
       }
     },
     {
@@ -10262,7 +10266,7 @@
       "heroId": 6,
       "cell": 5,
       "slot": 2,
-      "name": "회피 스텝",
+      "name": "피드백",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10278,32 +10282,34 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-190",
-      "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
+      "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "sword-counter",
-          "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
-          "target": "self"
+          "op": "metal-kit",
+          "kind": "feedback",
+          "target": "self",
+          "range": 125,
+          "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가"
         }
       ],
       "fx": {
         "signature": "seunguk-5:2",
         "theme": "dance",
-        "weapon": "쌍곡검",
+        "weapon": "V자 일렉기타",
         "palette": "#82d9c5",
         "recipe": 190,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "sword-counter",
-            "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
-            "target": "self"
+            "op": "metal-kit",
+            "kind": "feedback",
+            "target": "self",
+            "range": 125,
+            "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가"
           }
         ],
         "rays": 11,
         "rotation": 10,
-        "shape": "bard-kit"
+        "shape": "metal-kit"
       }
     },
     {
@@ -10312,7 +10318,7 @@
       "heroId": 6,
       "cell": 5,
       "slot": 3,
-      "name": "만화검무",
+      "name": "지옥의 리프",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -10324,36 +10330,38 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 125,
+      "range": 150,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-191",
-      "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
+      "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "sword-finale",
-          "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
-          "target": "single"
+          "op": "metal-kit",
+          "kind": "hell-riff",
+          "target": "single",
+          "range": 150,
+          "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화"
         }
       ],
       "fx": {
         "signature": "seunguk-5:3",
         "theme": "dance",
-        "weapon": "쌍곡검",
+        "weapon": "V자 일렉기타",
         "palette": "#82d9c5",
         "recipe": 191,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "sword-finale",
-            "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
-            "target": "single"
+            "op": "metal-kit",
+            "kind": "hell-riff",
+            "target": "single",
+            "range": 150,
+            "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화"
           }
         ],
         "rays": 12,
         "rotation": 47,
-        "shape": "bard-kit"
+        "shape": "metal-kit"
       }
     },
     {

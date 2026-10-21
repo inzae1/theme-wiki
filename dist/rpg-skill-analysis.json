@@ -10043,7 +10043,7 @@
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "음유시인",
       "id": "seunguk-0",
       "tier": 0,
@@ -10051,7 +10051,7 @@
       "style": "basic",
       "resource": "마력",
       "review": "튕기는 음표 — bounce / 힘찬 연주 — simple-power / 잔잔한 연주 — simple-heal / 작은 피날레 — small-finale",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 기초 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-0-skill-0",
@@ -10264,7 +10264,7 @@
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "바드",
       "id": "seunguk-1",
       "tier": 1,
@@ -10272,7 +10272,7 @@
       "style": "holy",
       "resource": "마력",
       "review": "교차 화음 — cross-chord / 용기의 노래 — bravery / 안식의 노래 — rest / 화음 피날레 — chord-finale",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-1-skill-0",
@@ -10485,7 +10485,7 @@
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "댄서",
       "id": "seunguk-2",
       "tier": 1,
@@ -10493,7 +10493,7 @@
       "style": "dance",
       "resource": "마력",
       "review": "교차 스텝 — cross-step / 원무 — moving-dance / 가벼운 발놀림 — light-feet / 무대의 중심 — stage-center",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-2-skill-0",
@@ -10706,7 +10706,7 @@
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "민스트럴",
       "id": "seunguk-3",
       "tier": 2,
@@ -10714,7 +10714,7 @@
       "style": "quake",
       "resource": "마력",
       "review": "연속 악절 — phrase / 고조 — crescendo / 잔향 연주 — echo-phrase / 앙코르 — concerto",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-3-skill-0",
@@ -10927,7 +10927,7 @@
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "진혼악사",
       "id": "seunguk-4",
       "tier": 2,
@@ -10935,7 +10935,7 @@
       "style": "drain",
       "resource": "마력",
       "review": "진혼곡 — dirge-note / 혼 흡수 — soul-drain / 장송 행진 — funeral / 망자의 합창 — ghost-choir",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-4-skill-0",
@@ -11148,15 +11148,15 @@
       ]
     },
     {
-      "hero": "정승욱",
-      "job": "검무가",
+      "hero": "남지훈",
+      "job": "메탈리스트",
       "id": "seunguk-5",
       "tier": 2,
       "parent": "seunguk-2",
       "style": "dance",
       "resource": "마력",
-      "review": "검무 삼연격 — sword-triple / 검끝 집중 — sword-focus / 회피 스텝 — sword-counter / 만화검무 — sword-finale",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "파워 코드 — power-chord / 헤드뱅잉 — headbang / 피드백 — feedback / 지옥의 리프 — hell-riff",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-5-skill-0",
@@ -11164,7 +11164,7 @@
           "heroId": 6,
           "cell": 5,
           "slot": 0,
-          "name": "검무 삼연격",
+          "name": "파워 코드",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11176,39 +11176,41 @@
           },
           "cost": 5,
           "cooldown": 6,
-          "range": 125,
+          "range": 150,
           "radius": 140,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-188",
-          "description": "대상에게 접근해 3회 검격, 타격당 100%",
+          "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "sword-triple",
-              "description": "대상에게 접근해 3회 검격, 타격당 100%",
-              "target": "single"
+              "op": "metal-kit",
+              "kind": "power-chord",
+              "target": "area",
+              "range": 150,
+              "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모"
             }
           ],
           "fx": {
             "signature": "seunguk-5:0",
             "theme": "dance",
-            "weapon": "쌍곡검",
+            "weapon": "V자 일렉기타",
             "palette": "#82d9c5",
             "recipe": 188,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "sword-triple",
-                "description": "대상에게 접근해 3회 검격, 타격당 100%",
-                "target": "single"
+                "op": "metal-kit",
+                "kind": "power-chord",
+                "target": "area",
+                "range": 150,
+                "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모"
               }
             ],
             "rays": 9,
             "rotation": 116,
-            "shape": "bard-kit"
+            "shape": "metal-kit"
           },
-          "actualText": "대상에게 접근해 3회 검격, 타격당 100%",
-          "visual": "전용 연출 seunguk-5:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모",
+          "visual": "전용 연출 seunguk-5:0 · metal-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-1",
@@ -11216,7 +11218,7 @@
           "heroId": 6,
           "cell": 5,
           "slot": 1,
-          "name": "검끝 집중",
+          "name": "헤드뱅잉",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11232,35 +11234,37 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-189",
-          "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
+          "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "sword-focus",
-              "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
-              "target": "self"
+              "op": "metal-kit",
+              "kind": "headbang",
+              "target": "self",
+              "range": 125,
+              "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적"
             }
           ],
           "fx": {
             "signature": "seunguk-5:1",
             "theme": "dance",
-            "weapon": "쌍곡검",
+            "weapon": "V자 일렉기타",
             "palette": "#82d9c5",
             "recipe": 189,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "sword-focus",
-                "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
-                "target": "self"
+                "op": "metal-kit",
+                "kind": "headbang",
+                "target": "self",
+                "range": 125,
+                "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적"
               }
             ],
             "rays": 10,
             "rotation": 153,
-            "shape": "bard-kit"
+            "shape": "metal-kit"
           },
-          "actualText": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
-          "visual": "전용 연출 seunguk-5:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적",
+          "visual": "전용 연출 seunguk-5:1 · metal-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-2",
@@ -11268,7 +11272,7 @@
           "heroId": 6,
           "cell": 5,
           "slot": 2,
-          "name": "회피 스텝",
+          "name": "피드백",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11284,35 +11288,37 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-190",
-          "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
+          "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "sword-counter",
-              "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
-              "target": "self"
+              "op": "metal-kit",
+              "kind": "feedback",
+              "target": "self",
+              "range": 125,
+              "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가"
             }
           ],
           "fx": {
             "signature": "seunguk-5:2",
             "theme": "dance",
-            "weapon": "쌍곡검",
+            "weapon": "V자 일렉기타",
             "palette": "#82d9c5",
             "recipe": 190,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "sword-counter",
-                "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
-                "target": "self"
+                "op": "metal-kit",
+                "kind": "feedback",
+                "target": "self",
+                "range": 125,
+                "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가"
               }
             ],
             "rays": 11,
             "rotation": 10,
-            "shape": "bard-kit"
+            "shape": "metal-kit"
           },
-          "actualText": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
-          "visual": "전용 연출 seunguk-5:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가",
+          "visual": "전용 연출 seunguk-5:2 · metal-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-3",
@@ -11320,7 +11326,7 @@
           "heroId": 6,
           "cell": 5,
           "slot": 3,
-          "name": "만화검무",
+          "name": "지옥의 리프",
           "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
@@ -11332,44 +11338,46 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 125,
+          "range": 150,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-191",
-          "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
+          "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "sword-finale",
-              "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
-              "target": "single"
+              "op": "metal-kit",
+              "kind": "hell-riff",
+              "target": "single",
+              "range": 150,
+              "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화"
             }
           ],
           "fx": {
             "signature": "seunguk-5:3",
             "theme": "dance",
-            "weapon": "쌍곡검",
+            "weapon": "V자 일렉기타",
             "palette": "#82d9c5",
             "recipe": 191,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "sword-finale",
-                "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
-                "target": "single"
+                "op": "metal-kit",
+                "kind": "hell-riff",
+                "target": "single",
+                "range": 150,
+                "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화"
               }
             ],
             "rays": 12,
             "rotation": 47,
-            "shape": "bard-kit"
+            "shape": "metal-kit"
           },
-          "actualText": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
-          "visual": "전용 연출 seunguk-5:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화",
+          "visual": "전용 연출 seunguk-5:3 · metal-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
     {
-      "hero": "정승욱",
+      "hero": "남지훈",
       "job": "별무희",
       "id": "seunguk-6",
       "tier": 2,
@@ -11377,7 +11385,7 @@
       "style": "echo",
       "resource": "마력",
       "review": "별빛 사출 — star-shot / 공전하는 별 — orbit-stars / 별자리 연결 — constellation / 유성 군무 — meteor-dance",
-      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-6-skill-0",
@@ -18166,7 +18174,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "소환사",
       "id": "keunho-0",
       "tier": 0,
@@ -18385,7 +18393,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "정령사",
       "id": "keunho-1",
       "tier": 1,
@@ -18614,7 +18622,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "네크로맨서",
       "id": "keunho-2",
       "tier": 1,
@@ -18853,7 +18861,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "엘리멘탈로드",
       "id": "keunho-3",
       "tier": 2,
@@ -19106,7 +19114,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "정령융합사",
       "id": "keunho-4",
       "tier": 2,
@@ -19349,7 +19357,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "리치",
       "id": "keunho-5",
       "tier": 2,
@@ -19652,7 +19660,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "정승욱",
       "job": "데스마스터",
       "id": "keunho-6",
       "tier": 2,
