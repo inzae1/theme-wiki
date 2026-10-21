@@ -253,7 +253,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 320,
           "radius": 140,
           "target": "single",
@@ -506,7 +506,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "area",
@@ -1966,7 +1966,7 @@
             "color": "#ef7666"
           },
           "cost": 0,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 140,
           "radius": 140,
           "target": "single",
@@ -2187,7 +2187,7 @@
             "color": "#ef7666"
           },
           "cost": 0,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 140,
           "radius": 140,
           "target": "area",
@@ -3525,7 +3525,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -3778,7 +3778,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -5037,8 +5037,8 @@
       "parent": "시작",
       "style": "basic",
       "resource": "마력",
-      "review": "방패 강타 — hit / 빛의 검 — cone / 작은 수호 — guard / 기사의 맹세 — blast → heal",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "방패 강타 — shield-bash / 응수 베기 — riposte-cut / 방패 들기 — raised-shield / 돌파의 맹세 — oath-rush",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-0-skill-0",
@@ -5058,15 +5058,18 @@
           },
           "cost": 5,
           "cooldown": 5.2,
-          "range": 125,
+          "range": 115,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-84",
-          "description": "근접 단일 180% 타격",
+          "description": "근접 190% 방패 타격 · 짧은 속박과 밀쳐내기",
           "actions": [
             {
-              "op": "hit",
-              "power": 1.8
+              "op": "knight-kit",
+              "kind": "shield-bash",
+              "target": "single",
+              "range": 115,
+              "description": "근접 190% 방패 타격 · 짧은 속박과 밀쳐내기"
             }
           ],
           "fx": {
@@ -5077,16 +5080,19 @@
             "recipe": 84,
             "choreography": [
               {
-                "op": "hit",
-                "power": 1.8
+                "op": "knight-kit",
+                "kind": "shield-bash",
+                "target": "single",
+                "range": 115,
+                "description": "근접 190% 방패 타격 · 짧은 속박과 밀쳐내기"
               }
             ],
             "rays": 9,
             "rotation": 48,
-            "shape": "hit"
+            "shape": "knight-kit"
           },
-          "actualText": "근접 단일 180% 타격",
-          "visual": "전용 연출 youngjun-0:0 · hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 190% 방패 타격 · 짧은 속박과 밀쳐내기",
+          "visual": "전용 연출 youngjun-0:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-0-skill-1",
@@ -5094,7 +5100,7 @@
           "heroId": 3,
           "cell": 0,
           "slot": 1,
-          "name": "빛의 검",
+          "name": "응수 베기",
           "unlock": 10,
           "mechanicsVersion": 3,
           "resource": {
@@ -5106,17 +5112,18 @@
           },
           "cost": 7,
           "cooldown": 7.5,
-          "range": 100,
+          "range": 135,
           "radius": 140,
-          "target": "area",
+          "target": "single",
           "effectType": "recipe-85",
-          "description": "거리 100 전방 부채꼴 230%",
+          "description": "근접 220% + 막은 피해 최대 공격력 200% 소비",
           "actions": [
             {
-              "op": "cone",
-              "power": 2.3,
-              "radius": 100,
-              "angle": 1.25
+              "op": "knight-kit",
+              "kind": "riposte-cut",
+              "target": "single",
+              "range": 135,
+              "description": "근접 220% + 막은 피해 최대 공격력 200% 소비"
             }
           ],
           "fx": {
@@ -5127,18 +5134,19 @@
             "recipe": 85,
             "choreography": [
               {
-                "op": "cone",
-                "power": 2.3,
-                "radius": 100,
-                "angle": 1.25
+                "op": "knight-kit",
+                "kind": "riposte-cut",
+                "target": "single",
+                "range": 135,
+                "description": "근접 220% + 막은 피해 최대 공격력 200% 소비"
               }
             ],
             "rays": 10,
             "rotation": 85,
-            "shape": "cone"
+            "shape": "knight-kit"
           },
-          "actualText": "거리 100 전방 부채꼴 230%",
-          "visual": "전용 연출 youngjun-0:1 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 220% + 막은 피해 최대 공격력 200% 소비",
+          "visual": "전용 연출 youngjun-0:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-0-skill-2",
@@ -5146,7 +5154,7 @@
           "heroId": 3,
           "cell": 0,
           "slot": 2,
-          "name": "작은 수호",
+          "name": "방패 들기",
           "unlock": 20,
           "mechanicsVersion": 3,
           "resource": {
@@ -5162,12 +5170,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-86",
-          "description": "3초 방어 · 받는 피해 50% 감소, 막은 피해 반격 축적",
+          "description": "4초 받는 피해 55% 감소 · 막은 피해 축적",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.5,
-              "duration": 3
+              "op": "knight-kit",
+              "kind": "raised-shield",
+              "target": "self",
+              "range": 125,
+              "description": "4초 받는 피해 55% 감소 · 막은 피해 축적"
             }
           ],
           "fx": {
@@ -5178,17 +5188,19 @@
             "recipe": 86,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.5,
-                "duration": 3
+                "op": "knight-kit",
+                "kind": "raised-shield",
+                "target": "self",
+                "range": 125,
+                "description": "4초 받는 피해 55% 감소 · 막은 피해 축적"
               }
             ],
             "rays": 11,
             "rotation": 122,
-            "shape": "guard"
+            "shape": "knight-kit"
           },
-          "actualText": "3초 방어 · 받는 피해 50% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 youngjun-0:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "4초 받는 피해 55% 감소 · 막은 피해 축적",
+          "visual": "전용 연출 youngjun-0:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-0-skill-3",
@@ -5196,7 +5208,7 @@
           "heroId": 3,
           "cell": 0,
           "slot": 3,
-          "name": "기사의 맹세",
+          "name": "돌파의 맹세",
           "unlock": 25,
           "mechanicsVersion": 3,
           "resource": {
@@ -5208,21 +5220,18 @@
           },
           "cost": 16,
           "cooldown": 34,
-          "range": 125,
+          "range": 240,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-87",
-          "description": "0.4초 뒤 반경 130에 500% 착탄 피해 / 최대 체력 12% 실제 회복",
+          "description": "최대 180 돌진 · 실제 경로의 적에게 500% · 4초 피해 65% 감소",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 130,
-              "delay": 0.4
-            },
-            {
-              "op": "heal",
-              "value": 0.12
+              "op": "knight-kit",
+              "kind": "oath-rush",
+              "target": "area",
+              "range": 240,
+              "description": "최대 180 돌진 · 실제 경로의 적에게 500% · 4초 피해 65% 감소"
             }
           ],
           "fx": {
@@ -5233,22 +5242,19 @@
             "recipe": 87,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 130,
-                "delay": 0.4
-              },
-              {
-                "op": "heal",
-                "value": 0.12
+                "op": "knight-kit",
+                "kind": "oath-rush",
+                "target": "area",
+                "range": 240,
+                "description": "최대 180 돌진 · 실제 경로의 적에게 500% · 4초 피해 65% 감소"
               }
             ],
             "rays": 12,
             "rotation": 159,
-            "shape": "blast+heal"
+            "shape": "knight-kit"
           },
-          "actualText": "0.4초 뒤 반경 130에 500% 착탄 피해 / 최대 체력 12% 실제 회복",
-          "visual": "전용 연출 youngjun-0:3 · blast → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 180 돌진 · 실제 경로의 적에게 500% · 4초 피해 65% 감소",
+          "visual": "전용 연출 youngjun-0:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -5260,8 +5266,8 @@
       "parent": "youngjun-0",
       "style": "guard",
       "resource": "마력",
-      "review": "성광 망치 — cone → heal / 성역 설치 — zone / 수호 방패 — guard / 성전 선포 — blast → heal",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "성광 망치 — holy-hammer / 성역 설치 — sanctuary-anchor / 성역 결속 — sanctuary-bond / 성역 심판 — sanctuary-judgment",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-1-skill-0",
@@ -5280,22 +5286,19 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
-          "range": 110,
+          "cooldown": 5.6,
+          "range": 135,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-88",
-          "description": "거리 110 전방 부채꼴 250% / 최대 체력 4% 실제 회복",
+          "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복",
           "actions": [
             {
-              "op": "cone",
-              "power": 2.5,
-              "radius": 110,
-              "angle": 1.25
-            },
-            {
-              "op": "heal",
-              "value": 0.04
+              "op": "knight-kit",
+              "kind": "holy-hammer",
+              "target": "area",
+              "range": 135,
+              "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복"
             }
           ],
           "fx": {
@@ -5306,22 +5309,19 @@
             "recipe": 88,
             "choreography": [
               {
-                "op": "cone",
-                "power": 2.5,
-                "radius": 110,
-                "angle": 1.25
-              },
-              {
-                "op": "heal",
-                "value": 0.04
+                "op": "knight-kit",
+                "kind": "holy-hammer",
+                "target": "area",
+                "range": 135,
+                "description": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복"
               }
             ],
             "rays": 5,
             "rotation": 16,
-            "shape": "cone+heal"
+            "shape": "knight-kit"
           },
-          "actualText": "거리 110 전방 부채꼴 250% / 최대 체력 4% 실제 회복",
-          "visual": "전용 연출 youngjun-1:0 · cone → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.35초 후 근접 전방 300% 망치 타격 · 성역 안이면 체력 6% 회복",
+          "visual": "전용 연출 youngjun-1:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-1-skill-1",
@@ -5341,18 +5341,18 @@
           },
           "cost": 7,
           "cooldown": 7.9,
-          "range": 460,
+          "range": 125,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-89",
-          "description": "성역 지대 8초 · 반경 120 · 0.8초마다 공격력 25% 피해 및 지대 내 자가 회복",
+          "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
           "actions": [
             {
-              "op": "zone",
-              "type": "sanctuary",
-              "power": 0.25,
-              "radius": 120,
-              "duration": 8
+              "op": "knight-kit",
+              "kind": "sanctuary-anchor",
+              "target": "self",
+              "range": 125,
+              "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 1.2% 회복"
             }
           ],
           "fx": {
@@ -5363,19 +5363,19 @@
             "recipe": 89,
             "choreography": [
               {
-                "op": "zone",
-                "type": "sanctuary",
-                "power": 0.25,
-                "radius": 120,
-                "duration": 8
+                "op": "knight-kit",
+                "kind": "sanctuary-anchor",
+                "target": "self",
+                "range": 125,
+                "description": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 1.2% 회복"
               }
             ],
             "rays": 6,
             "rotation": 53,
-            "shape": "zone"
+            "shape": "knight-kit"
           },
-          "actualText": "성역 지대 8초 · 반경 120 · 0.8초마다 공격력 25% 피해 및 지대 내 자가 회복",
-          "visual": "전용 연출 youngjun-1:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "자리에 12초 성역 · 반경 150 · 0.8초마다 60% 피해 · 안에서 체력 2% 회복",
+          "visual": "전용 연출 youngjun-1:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-1-skill-2",
@@ -5383,7 +5383,7 @@
           "heroId": 3,
           "cell": 1,
           "slot": 2,
-          "name": "수호 방패",
+          "name": "성역 결속",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -5399,12 +5399,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-90",
-          "description": "4초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적",
+          "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.65,
-              "duration": 4
+              "op": "knight-kit",
+              "kind": "sanctuary-bond",
+              "target": "self",
+              "range": 125,
+              "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소"
             }
           ],
           "fx": {
@@ -5415,17 +5417,19 @@
             "recipe": 90,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.65,
-                "duration": 4
+                "op": "knight-kit",
+                "kind": "sanctuary-bond",
+                "target": "self",
+                "range": 125,
+                "description": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소"
               }
             ],
             "rays": 7,
             "rotation": 90,
-            "shape": "guard"
+            "shape": "knight-kit"
           },
-          "actualText": "4초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 youngjun-1:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초 결속 · 성역 안에서만 공격력 25% 증가, 받는 피해 20% 감소",
+          "visual": "전용 연출 youngjun-1:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-1-skill-3",
@@ -5433,7 +5437,7 @@
           "heroId": 3,
           "cell": 1,
           "slot": 3,
-          "name": "성전 선포",
+          "name": "성역 심판",
           "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
@@ -5445,21 +5449,18 @@
           },
           "cost": 16,
           "cooldown": 34.4,
-          "range": 125,
-          "radius": 160,
+          "range": 460,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-91",
-          "description": "0초 뒤 반경 160에 600% 착탄 피해 / 최대 체력 15% 실제 회복",
+          "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
           "actions": [
             {
-              "op": "blast",
-              "power": 6,
-              "radius": 160,
-              "delay": 0
-            },
-            {
-              "op": "heal",
-              "value": 0.15
+              "op": "knight-kit",
+              "kind": "sanctuary-judgment",
+              "target": "area",
+              "range": 460,
+              "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
             }
           ],
           "fx": {
@@ -5470,22 +5471,19 @@
             "recipe": 91,
             "choreography": [
               {
-                "op": "blast",
-                "power": 6,
-                "radius": 160,
-                "delay": 0
-              },
-              {
-                "op": "heal",
-                "value": 0.15
+                "op": "knight-kit",
+                "kind": "sanctuary-judgment",
+                "target": "area",
+                "range": 460,
+                "description": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요"
               }
             ],
             "rays": 8,
             "rotation": 127,
-            "shape": "blast+heal"
+            "shape": "knight-kit"
           },
-          "actualText": "0초 뒤 반경 160에 600% 착탄 피해 / 최대 체력 15% 실제 회복",
-          "visual": "전용 연출 youngjun-1:3 · blast → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "설치한 성역 안의 적에게 700% 심판 · 성역 잔여 시간 최소 6초 · 성역 필요",
+          "visual": "전용 연출 youngjun-1:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -5497,8 +5495,8 @@
       "parent": "youngjun-0",
       "style": "leap",
       "resource": "분노",
-      "review": "도약 찌르기 — dash → hit / 용창 관통 — beam / 용혈 고양 — buff / 용의 숨결 — cone",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "도약 찌르기 — dragon-leap / 용창 관통 — dragon-pierce / 용혈 고양 — dragon-breathing / 용의 숨결 — dragon-breath",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-2-skill-0",
@@ -5517,20 +5515,19 @@
             "color": "#ef7666"
           },
           "cost": 0,
-          "cooldown": 5.6000000000000005,
-          "range": 320,
+          "cooldown": 5.6,
+          "range": 300,
           "radius": 140,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-92",
-          "description": "앞으로 최대 220 이동 · 경로 충돌 검사 / 근접 단일 300% 타격",
+          "description": "0.45초 도약 · 최대 230 이동 후 실제 착지점 반경 75에 320% · 명중 시 용력 +1",
           "actions": [
             {
-              "op": "dash",
-              "distance": 220
-            },
-            {
-              "op": "hit",
-              "power": 3
+              "op": "knight-kit",
+              "kind": "dragon-leap",
+              "target": "area",
+              "range": 300,
+              "description": "0.45초 도약 · 최대 230 이동 후 실제 착지점 반경 75에 320% · 명중 시 용력 +1"
             }
           ],
           "fx": {
@@ -5541,20 +5538,19 @@
             "recipe": 92,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 220
-              },
-              {
-                "op": "hit",
-                "power": 3
+                "op": "knight-kit",
+                "kind": "dragon-leap",
+                "target": "area",
+                "range": 300,
+                "description": "0.45초 도약 · 최대 230 이동 후 실제 착지점 반경 75에 320% · 명중 시 용력 +1"
               }
             ],
             "rays": 9,
             "rotation": 164,
-            "shape": "dash+hit"
+            "shape": "knight-kit"
           },
-          "actualText": "앞으로 최대 220 이동 · 경로 충돌 검사 / 근접 단일 300% 타격",
-          "visual": "전용 연출 youngjun-2:0 · dash → hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.45초 도약 · 최대 230 이동 후 실제 착지점 반경 75에 320% · 명중 시 용력 +1",
+          "visual": "전용 연출 youngjun-2:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-2-skill-1",
@@ -5574,18 +5570,18 @@
           },
           "cost": 0,
           "cooldown": 7.9,
-          "range": 460,
+          "range": 360,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-93",
-          "description": "0.25초 준비 후 길이 480, 폭 70 직선 350% 관통",
+          "description": "0.2초 준비 · 길이 360, 폭 52 직선 350% 관통 · 명중 시 용력 +1",
           "actions": [
             {
-              "op": "beam",
-              "power": 3.5,
-              "width": 35,
-              "range": 480,
-              "delay": 0.25
+              "op": "knight-kit",
+              "kind": "dragon-pierce",
+              "target": "area",
+              "range": 360,
+              "description": "0.2초 준비 · 길이 360, 폭 52 직선 350% 관통 · 명중 시 용력 +1"
             }
           ],
           "fx": {
@@ -5596,19 +5592,19 @@
             "recipe": 93,
             "choreography": [
               {
-                "op": "beam",
-                "power": 3.5,
-                "width": 35,
-                "range": 480,
-                "delay": 0.25
+                "op": "knight-kit",
+                "kind": "dragon-pierce",
+                "target": "area",
+                "range": 360,
+                "description": "0.2초 준비 · 길이 360, 폭 52 직선 350% 관통 · 명중 시 용력 +1"
               }
             ],
             "rays": 10,
             "rotation": 21,
-            "shape": "beam"
+            "shape": "knight-kit"
           },
-          "actualText": "0.25초 준비 후 길이 480, 폭 70 직선 350% 관통",
-          "visual": "전용 연출 youngjun-2:1 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.2초 준비 · 길이 360, 폭 52 직선 350% 관통 · 명중 시 용력 +1",
+          "visual": "전용 연출 youngjun-2:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-2-skill-2",
@@ -5632,13 +5628,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-94",
-          "description": "9초 분노 획득량 70% 증가",
+          "description": "다음 기본공격 3회가 분노 8 추가 획득",
           "actions": [
             {
-              "op": "buff",
-              "type": "rageGain",
-              "value": 0.7,
-              "duration": 9
+              "op": "knight-kit",
+              "kind": "dragon-breathing",
+              "target": "self",
+              "range": 125,
+              "description": "다음 기본공격 3회가 분노 8 추가 획득"
             }
           ],
           "fx": {
@@ -5649,18 +5646,19 @@
             "recipe": 94,
             "choreography": [
               {
-                "op": "buff",
-                "type": "rageGain",
-                "value": 0.7,
-                "duration": 9
+                "op": "knight-kit",
+                "kind": "dragon-breathing",
+                "target": "self",
+                "range": 125,
+                "description": "다음 기본공격 3회가 분노 8 추가 획득"
               }
             ],
             "rays": 11,
             "rotation": 58,
-            "shape": "buff"
+            "shape": "knight-kit"
           },
-          "actualText": "9초 분노 획득량 70% 증가",
-          "visual": "전용 연출 youngjun-2:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "다음 기본공격 3회가 분노 8 추가 획득",
+          "visual": "전용 연출 youngjun-2:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-2-skill-3",
@@ -5680,17 +5678,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 240,
-          "radius": 240,
+          "range": 250,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-95",
-          "description": "거리 240 전방 부채꼴 700%",
+          "description": "전방 700% 브레스 · 용력 최대 3 소모, 중첩당 위력 20% 증가",
           "actions": [
             {
-              "op": "cone",
-              "power": 7,
-              "radius": 240,
-              "angle": 1.25
+              "op": "knight-kit",
+              "kind": "dragon-breath",
+              "target": "area",
+              "range": 250,
+              "description": "전방 700% 브레스 · 용력 최대 3 소모, 중첩당 위력 20% 증가"
             }
           ],
           "fx": {
@@ -5701,18 +5700,19 @@
             "recipe": 95,
             "choreography": [
               {
-                "op": "cone",
-                "power": 7,
-                "radius": 240,
-                "angle": 1.25
+                "op": "knight-kit",
+                "kind": "dragon-breath",
+                "target": "area",
+                "range": 250,
+                "description": "전방 700% 브레스 · 용력 최대 3 소모, 중첩당 위력 20% 증가"
               }
             ],
             "rays": 12,
             "rotation": 95,
-            "shape": "cone"
+            "shape": "knight-kit"
           },
-          "actualText": "거리 240 전방 부채꼴 700%",
-          "visual": "전용 연출 youngjun-2:3 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방 700% 브레스 · 용력 최대 3 소모, 중첩당 위력 20% 증가",
+          "visual": "전용 연출 youngjun-2:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -5724,8 +5724,8 @@
       "parent": "youngjun-1",
       "style": "holy",
       "resource": "마력",
-      "review": "성전 망치 — cone → heal / 성역 깃발 — zone / 치유 강타 — hit → heal / 성전 개시 — zone → buff",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "진군 망치 — marching-cut / 성전 깃발 — war-standard / 성전 돌격 — crusade-charge / 성전 개시 — holy-march",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-3-skill-0",
@@ -5733,7 +5733,7 @@
           "heroId": 3,
           "cell": 3,
           "slot": 0,
-          "name": "성전 망치",
+          "name": "진군 망치",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -5745,21 +5745,18 @@
           },
           "cost": 5,
           "cooldown": 6,
-          "range": 130,
+          "range": 240,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-96",
-          "description": "거리 130 전방 부채꼴 330% / 최대 체력 5% 실제 회복",
+          "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1",
           "actions": [
             {
-              "op": "cone",
-              "power": 3.3,
-              "radius": 130,
-              "angle": 1.25
-            },
-            {
-              "op": "heal",
-              "value": 0.05
+              "op": "knight-kit",
+              "kind": "marching-cut",
+              "target": "area",
+              "range": 240,
+              "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1"
             }
           ],
           "fx": {
@@ -5770,22 +5767,19 @@
             "recipe": 96,
             "choreography": [
               {
-                "op": "cone",
-                "power": 3.3,
-                "radius": 130,
-                "angle": 1.25
-              },
-              {
-                "op": "heal",
-                "value": 0.05
+                "op": "knight-kit",
+                "kind": "marching-cut",
+                "target": "area",
+                "range": 240,
+                "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1"
               }
             ],
             "rays": 5,
             "rotation": 132,
-            "shape": "cone+heal"
+            "shape": "knight-kit"
           },
-          "actualText": "거리 130 전방 부채꼴 330% / 최대 체력 5% 실제 회복",
-          "visual": "전용 연출 youngjun-3:0 · cone → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1",
+          "visual": "전용 연출 youngjun-3:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-3-skill-1",
@@ -5793,7 +5787,7 @@
           "heroId": 3,
           "cell": 3,
           "slot": 1,
-          "name": "성역 깃발",
+          "name": "성전 깃발",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -5805,18 +5799,18 @@
           },
           "cost": 7,
           "cooldown": 8.3,
-          "range": 460,
-          "radius": 150,
+          "range": 125,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-97",
-          "description": "수호 지대 12초 · 반경 150 · 0.8초마다 공격력 40% 피해 및 지대 내 자가 회복",
+          "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가",
           "actions": [
             {
-              "op": "zone",
-              "type": "banner",
-              "power": 0.4,
-              "radius": 150,
-              "duration": 12
+              "op": "knight-kit",
+              "kind": "war-standard",
+              "target": "self",
+              "range": 125,
+              "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가"
             }
           ],
           "fx": {
@@ -5827,19 +5821,19 @@
             "recipe": 97,
             "choreography": [
               {
-                "op": "zone",
-                "type": "banner",
-                "power": 0.4,
-                "radius": 150,
-                "duration": 12
+                "op": "knight-kit",
+                "kind": "war-standard",
+                "target": "self",
+                "range": 125,
+                "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가"
               }
             ],
             "rays": 6,
             "rotation": 169,
-            "shape": "zone"
+            "shape": "knight-kit"
           },
-          "actualText": "수호 지대 12초 · 반경 150 · 0.8초마다 공격력 40% 피해 및 지대 내 자가 회복",
-          "visual": "전용 연출 youngjun-3:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가",
+          "visual": "전용 연출 youngjun-3:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-3-skill-2",
@@ -5847,7 +5841,7 @@
           "heroId": 3,
           "cell": 3,
           "slot": 2,
-          "name": "치유 강타",
+          "name": "성전 돌격",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -5859,19 +5853,18 @@
           },
           "cost": 8,
           "cooldown": 13.8,
-          "range": 125,
+          "range": 320,
           "radius": 140,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-98",
-          "description": "근접 단일 280% 타격 / 최대 체력 15% 실제 회복",
+          "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가",
           "actions": [
             {
-              "op": "hit",
-              "power": 2.8
-            },
-            {
-              "op": "heal",
-              "value": 0.15
+              "op": "knight-kit",
+              "kind": "crusade-charge",
+              "target": "area",
+              "range": 320,
+              "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가"
             }
           ],
           "fx": {
@@ -5882,20 +5875,19 @@
             "recipe": 98,
             "choreography": [
               {
-                "op": "hit",
-                "power": 2.8
-              },
-              {
-                "op": "heal",
-                "value": 0.15
+                "op": "knight-kit",
+                "kind": "crusade-charge",
+                "target": "area",
+                "range": 320,
+                "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가"
               }
             ],
             "rays": 7,
             "rotation": 26,
-            "shape": "hit+heal"
+            "shape": "knight-kit"
           },
-          "actualText": "근접 단일 280% 타격 / 최대 체력 15% 실제 회복",
-          "visual": "전용 연출 youngjun-3:2 · hit → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가",
+          "visual": "전용 연출 youngjun-3:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-3-skill-3",
@@ -5915,24 +5907,18 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 460,
-          "radius": 190,
+          "range": 125,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-99",
-          "description": "성역 지대 14초 · 반경 190 · 0.8초마다 공격력 80% 피해 및 지대 내 자가 회복 / 10초 공격력 40% 증가",
+          "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%",
           "actions": [
             {
-              "op": "zone",
-              "type": "sanctuary",
-              "power": 0.8,
-              "radius": 190,
-              "duration": 14
-            },
-            {
-              "op": "buff",
-              "type": "power",
-              "value": 0.4,
-              "duration": 10
+              "op": "knight-kit",
+              "kind": "holy-march",
+              "target": "self",
+              "range": 125,
+              "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%"
             }
           ],
           "fx": {
@@ -5943,25 +5929,19 @@
             "recipe": 99,
             "choreography": [
               {
-                "op": "zone",
-                "type": "sanctuary",
-                "power": 0.8,
-                "radius": 190,
-                "duration": 14
-              },
-              {
-                "op": "buff",
-                "type": "power",
-                "value": 0.4,
-                "duration": 10
+                "op": "knight-kit",
+                "kind": "holy-march",
+                "target": "self",
+                "range": 125,
+                "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%"
               }
             ],
             "rays": 8,
             "rotation": 63,
-            "shape": "zone+buff"
+            "shape": "knight-kit"
           },
-          "actualText": "성역 지대 14초 · 반경 190 · 0.8초마다 공격력 80% 피해 및 지대 내 자가 회복 / 10초 공격력 40% 증가",
-          "visual": "전용 연출 youngjun-3:3 · zone → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90%",
+          "visual": "전용 연출 youngjun-3:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -5973,8 +5953,8 @@
       "parent": "youngjun-1",
       "style": "guard",
       "resource": "마력",
-      "review": "방패 방어 — guard / 성역 반격 — revenge / 수호 자세 — guard → counter / 절대 방벽 — guard → revenge",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "강철 방패 — iron-bulwark / 축적 반격 — stored-reprisal / 응징 태세 — punishment-stance / 절대 방벽 — absolute-bastion",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-4-skill-0",
@@ -5982,7 +5962,7 @@
           "heroId": 3,
           "cell": 4,
           "slot": 0,
-          "name": "방패 방어",
+          "name": "강철 방패",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -5998,12 +5978,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-100",
-          "description": "3초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
+          "description": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.8,
-              "duration": 3
+              "op": "knight-kit",
+              "kind": "iron-bulwark",
+              "target": "self",
+              "range": 125,
+              "description": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음"
             }
           ],
           "fx": {
@@ -6014,17 +5996,19 @@
             "recipe": 100,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.8,
-                "duration": 3
+                "op": "knight-kit",
+                "kind": "iron-bulwark",
+                "target": "self",
+                "range": 125,
+                "description": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음"
               }
             ],
             "rays": 9,
             "rotation": 100,
-            "shape": "guard"
+            "shape": "knight-kit"
           },
-          "actualText": "3초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 youngjun-4:0 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음",
+          "visual": "전용 연출 youngjun-4:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-4-skill-1",
@@ -6032,7 +6016,7 @@
           "heroId": 3,
           "cell": 4,
           "slot": 1,
-          "name": "성역 반격",
+          "name": "축적 반격",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -6044,16 +6028,18 @@
           },
           "cost": 7,
           "cooldown": 8.3,
-          "range": 125,
+          "range": 145,
           "radius": 140,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-101",
-          "description": "축적한 방어 피해를 소비 · 기본 350% + 축적량 · 반경 130",
+          "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기",
           "actions": [
             {
-              "op": "revenge",
-              "power": 3.5,
-              "radius": 130
+              "op": "knight-kit",
+              "kind": "stored-reprisal",
+              "target": "area",
+              "range": 145,
+              "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기"
             }
           ],
           "fx": {
@@ -6064,17 +6050,19 @@
             "recipe": 101,
             "choreography": [
               {
-                "op": "revenge",
-                "power": 3.5,
-                "radius": 130
+                "op": "knight-kit",
+                "kind": "stored-reprisal",
+                "target": "area",
+                "range": 145,
+                "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기"
               }
             ],
             "rays": 10,
             "rotation": 137,
-            "shape": "revenge"
+            "shape": "knight-kit"
           },
-          "actualText": "축적한 방어 피해를 소비 · 기본 350% + 축적량 · 반경 130",
-          "visual": "전용 연출 youngjun-4:1 · revenge · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기",
+          "visual": "전용 연출 youngjun-4:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-4-skill-2",
@@ -6082,7 +6070,7 @@
           "heroId": 3,
           "cell": 4,
           "slot": 2,
-          "name": "수호 자세",
+          "name": "응징 태세",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -6098,17 +6086,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-102",
-          "description": "8초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적 / 8초 방어 성공 시 120% 반격",
+          "description": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.65,
-              "duration": 8
-            },
-            {
-              "op": "counter",
-              "power": 1.2,
-              "duration": 8
+              "op": "knight-kit",
+              "kind": "punishment-stance",
+              "target": "self",
+              "range": 125,
+              "description": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초"
             }
           ],
           "fx": {
@@ -6119,22 +6104,19 @@
             "recipe": 102,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.65,
-                "duration": 8
-              },
-              {
-                "op": "counter",
-                "power": 1.2,
-                "duration": 8
+                "op": "knight-kit",
+                "kind": "punishment-stance",
+                "target": "self",
+                "range": 125,
+                "description": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초"
               }
             ],
             "rays": 11,
             "rotation": 174,
-            "shape": "guard+counter"
+            "shape": "knight-kit"
           },
-          "actualText": "8초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적 / 8초 방어 성공 시 120% 반격",
-          "visual": "전용 연출 youngjun-4:2 · guard → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초",
+          "visual": "전용 연출 youngjun-4:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-4-skill-3",
@@ -6155,20 +6137,17 @@
           "cost": 16,
           "cooldown": 34.8,
           "range": 125,
-          "radius": 200,
-          "target": "single",
+          "radius": 140,
+          "target": "self",
           "effectType": "recipe-103",
-          "description": "6초 방어 · 받는 피해 95% 감소, 막은 피해 반격 축적 / 축적한 방어 피해를 소비 · 기본 600% + 축적량 · 반경 200",
+          "description": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.95,
-              "duration": 6
-            },
-            {
-              "op": "revenge",
-              "power": 6,
-              "radius": 200
+              "op": "knight-kit",
+              "kind": "absolute-bastion",
+              "target": "self",
+              "range": 125,
+              "description": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출"
             }
           ],
           "fx": {
@@ -6179,22 +6158,19 @@
             "recipe": 103,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.95,
-                "duration": 6
-              },
-              {
-                "op": "revenge",
-                "power": 6,
-                "radius": 200
+                "op": "knight-kit",
+                "kind": "absolute-bastion",
+                "target": "self",
+                "range": 125,
+                "description": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출"
               }
             ],
             "rays": 12,
             "rotation": 31,
-            "shape": "guard+revenge"
+            "shape": "knight-kit"
           },
-          "actualText": "6초 방어 · 받는 피해 95% 감소, 막은 피해 반격 축적 / 축적한 방어 피해를 소비 · 기본 600% + 축적량 · 반경 200",
-          "visual": "전용 연출 youngjun-4:3 · guard → revenge · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출",
+          "visual": "전용 연출 youngjun-4:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -6206,8 +6182,8 @@
       "parent": "youngjun-2",
       "style": "leap",
       "resource": "분노",
-      "review": "용창 비상 — dash → blast / 용의 사선 — beam / 창끝 조준 — buff / 천공 낙하 — dash → beam",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "용창 비상 — lancer-ascent / 창끝 관통 — weakpoint-lance / 공중 조준 — sky-aim / 천공 낙하 — heaven-fall",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-5-skill-0",
@@ -6227,21 +6203,18 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 320,
+          "range": 340,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-104",
-          "description": "앞으로 최대 270 이동 · 경로 충돌 검사 / 0.4초 뒤 반경 80에 300% 착탄 피해",
+          "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식",
           "actions": [
             {
-              "op": "dash",
-              "distance": 270
-            },
-            {
-              "op": "blast",
-              "power": 3,
-              "radius": 80,
-              "delay": 0.4
+              "op": "knight-kit",
+              "kind": "lancer-ascent",
+              "target": "area",
+              "range": 340,
+              "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식"
             }
           ],
           "fx": {
@@ -6252,22 +6225,19 @@
             "recipe": 104,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 270
-              },
-              {
-                "op": "blast",
-                "power": 3,
-                "radius": 80,
-                "delay": 0.4
+                "op": "knight-kit",
+                "kind": "lancer-ascent",
+                "target": "area",
+                "range": 340,
+                "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식"
               }
             ],
             "rays": 5,
             "rotation": 68,
-            "shape": "dash+blast"
+            "shape": "knight-kit"
           },
-          "actualText": "앞으로 최대 270 이동 · 경로 충돌 검사 / 0.4초 뒤 반경 80에 300% 착탄 피해",
-          "visual": "전용 연출 youngjun-5:0 · dash → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식",
+          "visual": "전용 연출 youngjun-5:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-5-skill-1",
@@ -6275,7 +6245,7 @@
           "heroId": 3,
           "cell": 5,
           "slot": 1,
-          "name": "용의 사선",
+          "name": "창끝 관통",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -6287,18 +6257,18 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 460,
+          "range": 420,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-105",
-          "description": "0.35초 준비 후 길이 480, 폭 48 직선 450% 관통",
+          "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가",
           "actions": [
             {
-              "op": "beam",
-              "power": 4.5,
-              "width": 24,
-              "range": 480,
-              "delay": 0.35
+              "op": "knight-kit",
+              "kind": "weakpoint-lance",
+              "target": "area",
+              "range": 420,
+              "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가"
             }
           ],
           "fx": {
@@ -6309,19 +6279,19 @@
             "recipe": 105,
             "choreography": [
               {
-                "op": "beam",
-                "power": 4.5,
-                "width": 24,
-                "range": 480,
-                "delay": 0.35
+                "op": "knight-kit",
+                "kind": "weakpoint-lance",
+                "target": "area",
+                "range": 420,
+                "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가"
               }
             ],
             "rays": 6,
             "rotation": 105,
-            "shape": "beam"
+            "shape": "knight-kit"
           },
-          "actualText": "0.35초 준비 후 길이 480, 폭 48 직선 450% 관통",
-          "visual": "전용 연출 youngjun-5:1 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가",
+          "visual": "전용 연출 youngjun-5:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-5-skill-2",
@@ -6329,7 +6299,7 @@
           "heroId": 3,
           "cell": 5,
           "slot": 2,
-          "name": "창끝 조준",
+          "name": "공중 조준",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -6345,13 +6315,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-106",
-          "description": "8초 조준 60% 증가",
+          "description": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비",
           "actions": [
             {
-              "op": "buff",
-              "type": "aim",
-              "value": 0.6,
-              "duration": 8
+              "op": "knight-kit",
+              "kind": "sky-aim",
+              "target": "self",
+              "range": 125,
+              "description": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비"
             }
           ],
           "fx": {
@@ -6362,18 +6333,19 @@
             "recipe": 106,
             "choreography": [
               {
-                "op": "buff",
-                "type": "aim",
-                "value": 0.6,
-                "duration": 8
+                "op": "knight-kit",
+                "kind": "sky-aim",
+                "target": "self",
+                "range": 125,
+                "description": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비"
               }
             ],
             "rays": 7,
             "rotation": 142,
-            "shape": "buff"
+            "shape": "knight-kit"
           },
-          "actualText": "8초 조준 60% 증가",
-          "visual": "전용 연출 youngjun-5:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비",
+          "visual": "전용 연출 youngjun-5:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-5-skill-3",
@@ -6393,22 +6365,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 320,
+          "range": 420,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-107",
-          "description": "앞으로 최대 320 이동 · 경로 충돌 검사 / 0.8초 준비 후 길이 480, 폭 90 직선 900% 관통",
+          "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가",
           "actions": [
             {
-              "op": "dash",
-              "distance": 320
-            },
-            {
-              "op": "beam",
-              "power": 9,
-              "width": 45,
-              "range": 480,
-              "delay": 0.8
+              "op": "knight-kit",
+              "kind": "heaven-fall",
+              "target": "area",
+              "range": 420,
+              "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가"
             }
           ],
           "fx": {
@@ -6419,23 +6387,19 @@
             "recipe": 107,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 320
-              },
-              {
-                "op": "beam",
-                "power": 9,
-                "width": 45,
-                "range": 480,
-                "delay": 0.8
+                "op": "knight-kit",
+                "kind": "heaven-fall",
+                "target": "area",
+                "range": 420,
+                "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가"
               }
             ],
             "rays": 8,
             "rotation": 179,
-            "shape": "dash+beam"
+            "shape": "knight-kit"
           },
-          "actualText": "앞으로 최대 320 이동 · 경로 충돌 검사 / 0.8초 준비 후 길이 480, 폭 90 직선 900% 관통",
-          "visual": "전용 연출 youngjun-5:3 · dash → beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가",
+          "visual": "전용 연출 youngjun-5:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -6447,8 +6411,8 @@
       "parent": "youngjun-2",
       "style": "morph",
       "resource": "분노",
-      "review": "용혈 참격 — cone / 용린 수호 — guard / 폭주 혈통 — buff / 용혈 해방 — dragon → cone",
-      "intendedIdentity": "성역·방패·용창·용화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "용혈 참격 — blood-claw / 용린 수호 — scale-ward / 혈통 각성 — blood-awakening / 용혈 해방 — half-dragon",
+      "intendedIdentity": "검방 응수·고정 성역·전진 성전·축적 방패·도약창 약점·용린 반룡화 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "youngjun-6-skill-0",
@@ -6468,17 +6432,18 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 140,
+          "range": 145,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-108",
-          "description": "거리 140 전방 부채꼴 300%",
+          "description": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1",
           "actions": [
             {
-              "op": "cone",
-              "power": 3,
-              "radius": 140,
-              "angle": 1.25
+              "op": "knight-kit",
+              "kind": "blood-claw",
+              "target": "area",
+              "range": 145,
+              "description": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1"
             }
           ],
           "fx": {
@@ -6489,18 +6454,19 @@
             "recipe": 108,
             "choreography": [
               {
-                "op": "cone",
-                "power": 3,
-                "radius": 140,
-                "angle": 1.25
+                "op": "knight-kit",
+                "kind": "blood-claw",
+                "target": "area",
+                "range": 145,
+                "description": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1"
               }
             ],
             "rays": 9,
             "rotation": 36,
-            "shape": "cone"
+            "shape": "knight-kit"
           },
-          "actualText": "거리 140 전방 부채꼴 300%",
-          "visual": "전용 연출 youngjun-6:0 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1",
+          "visual": "전용 연출 youngjun-6:0 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-6-skill-1",
@@ -6524,12 +6490,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-109",
-          "description": "6초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적",
+          "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.65,
-              "duration": 6
+              "op": "knight-kit",
+              "kind": "scale-ward",
+              "target": "self",
+              "range": 125,
+              "description": "용린 최대 6 소모 · 체력 8% + 중첩당 2.5% 보호막 · 4초 피해 40% 감소"
             }
           ],
           "fx": {
@@ -6540,17 +6508,19 @@
             "recipe": 109,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.65,
-                "duration": 6
+                "op": "knight-kit",
+                "kind": "scale-ward",
+                "target": "self",
+                "range": 125,
+                "description": "용린 최대 6 소모 · 체력 8% + 중첩당 2.5% 보호막 · 4초 피해 40% 감소"
               }
             ],
             "rays": 10,
             "rotation": 73,
-            "shape": "guard"
+            "shape": "knight-kit"
           },
-          "actualText": "6초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 youngjun-6:1 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소",
+          "visual": "전용 연출 youngjun-6:1 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-6-skill-2",
@@ -6558,7 +6528,7 @@
           "heroId": 3,
           "cell": 6,
           "slot": 2,
-          "name": "폭주 혈통",
+          "name": "혈통 각성",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -6574,13 +6544,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-110",
-          "description": "10초 분노 획득량 100% 증가",
+          "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복",
           "actions": [
             {
-              "op": "buff",
-              "type": "rageGain",
-              "value": 1,
-              "duration": 10
+              "op": "knight-kit",
+              "kind": "blood-awakening",
+              "target": "self",
+              "range": 125,
+              "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.6% 회복"
             }
           ],
           "fx": {
@@ -6591,18 +6562,19 @@
             "recipe": 110,
             "choreography": [
               {
-                "op": "buff",
-                "type": "rageGain",
-                "value": 1,
-                "duration": 10
+                "op": "knight-kit",
+                "kind": "blood-awakening",
+                "target": "self",
+                "range": 125,
+                "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.6% 회복"
               }
             ],
             "rays": 11,
             "rotation": 110,
-            "shape": "buff"
+            "shape": "knight-kit"
           },
-          "actualText": "10초 분노 획득량 100% 증가",
-          "visual": "전용 연출 youngjun-6:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복",
+          "visual": "전용 연출 youngjun-6:2 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "youngjun-6-skill-3",
@@ -6622,21 +6594,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 280,
-          "radius": 280,
+          "range": 180,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-111",
-          "description": "16초 용화 · 용 외형·강화 기본공격·주변 브레스 피해 / 거리 280 전방 부채꼴 900%",
+          "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복",
           "actions": [
             {
-              "op": "dragon",
-              "duration": 16
-            },
-            {
-              "op": "cone",
-              "power": 9,
-              "radius": 280,
-              "angle": 1.25
+              "op": "knight-kit",
+              "kind": "half-dragon",
+              "target": "area",
+              "range": 180,
+              "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복"
             }
           ],
           "fx": {
@@ -6647,22 +6616,19 @@
             "recipe": 111,
             "choreography": [
               {
-                "op": "dragon",
-                "duration": 16
-              },
-              {
-                "op": "cone",
-                "power": 9,
-                "radius": 280,
-                "angle": 1.25
+                "op": "knight-kit",
+                "kind": "half-dragon",
+                "target": "area",
+                "range": 180,
+                "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복"
               }
             ],
             "rays": 12,
             "rotation": 147,
-            "shape": "dragon+cone"
+            "shape": "knight-kit"
           },
-          "actualText": "16초 용화 · 용 외형·강화 기본공격·주변 브레스 피해 / 거리 280 전방 부채꼴 900%",
-          "visual": "전용 연출 youngjun-6:3 · dragon → cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복",
+          "visual": "전용 연출 youngjun-6:3 · knight-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -6919,7 +6885,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 320,
           "radius": 140,
           "target": "single",
@@ -7162,7 +7128,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -8606,7 +8572,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 110,
           "radius": 140,
           "target": "area",
@@ -8829,7 +8795,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "area",
@@ -10291,7 +10257,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -10512,7 +10478,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 125,
           "radius": 140,
           "target": "single",
@@ -11854,7 +11820,7 @@
             "color": "#ef7666"
           },
           "cost": 0,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 400,
           "radius": 140,
           "target": "single",
@@ -12083,7 +12049,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 400,
           "radius": 140,
           "target": "single",
@@ -13449,7 +13415,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -13672,7 +13638,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 320,
           "radius": 140,
           "target": "single",
@@ -15098,7 +15064,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -15315,7 +15281,7 @@
             "color": "#e5ca66"
           },
           "cost": 12,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "area",
@@ -16749,7 +16715,7 @@
             "color": "#ef7666"
           },
           "cost": 0,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 125,
           "radius": 140,
           "target": "single",
@@ -16972,7 +16938,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "single",
@@ -18420,7 +18386,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "self",
@@ -18649,7 +18615,7 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 5.6000000000000005,
+          "cooldown": 5.6,
           "range": 460,
           "radius": 140,
           "target": "self",

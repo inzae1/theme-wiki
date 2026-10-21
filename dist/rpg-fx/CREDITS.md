@@ -57,3 +57,8 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 ## Fused elemental summon — 2026-10-21
 - summon-fusion.png: original transparent image generated using imagegen; fire, water, earth and wind combined in one creature. Original PNG preserved; runtime alpha-occupancy crop only.
 - Four lesser elemental silhouettes and elemental attack geometry are original canvas pixel drawings in rpg-fusion-fx.js. Each has a different silhouette and attack choreography.
+
+## Knight profession redesign — 2026-10-21
+- knight-war-standard.png: original transparent pixel battle standard generated with imagegen; original asset preserved, alpha occupancy crop and cloth sway applied at runtime.
+- 28 knight skill choreographies, shield/hammer/lance drawings, sanctuary floor sigils, half-dragon wings and locomotion trails are authored in rpg-knight-fx.js. Existing credited shock, dust, stab, jab and spark sheets provide contact animations.
+- Art and actor motion remain separate; rpg-motion.js transforms the character sprite body and limbs.
