@@ -42,3 +42,5 @@ Runtime copies were renamed only, without recoloring: melee-punch.png, melee-jab
 
 ## Original project artwork
 The ten *-authored.png effect/plant assets and four summon-*.png undead sprites were generated specifically for this project using the built-in image generation tool. Original transparent PNGs are preserved; cropping, motion and scaling occur at runtime. Metadata is recorded in authored-manifest.json and undead-manifest.json.
+
+The elemental spirit and elemental king (summon-spirit.png / summon-king.png) are additional original transparent sprites generated with the built-in image generation tool. Ghosts retain a separate existing model.

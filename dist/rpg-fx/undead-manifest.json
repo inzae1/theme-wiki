@@ -50,5 +50,29 @@
     "height": 1199,
     "transparent": 0.49875722146504203,
     "source": "Original artwork generated for this project with the built-in image generation tool."
+  },
+  "spirit": {
+    "file": "summon-spirit.png",
+    "crop": [
+      196,
+      285,
+      771,
+      824
+    ],
+    "width": 1122,
+    "height": 1402,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
+  },
+  "king": {
+    "file": "summon-king.png",
+    "crop": [
+      54,
+      36,
+      1089,
+      1279
+    ],
+    "width": 1161,
+    "height": 1355,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
   }
 }
