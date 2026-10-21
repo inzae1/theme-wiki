@@ -305,7 +305,7 @@
           "cell": 1,
           "slot": 1,
           "name": "받아치기",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -365,7 +365,7 @@
           "cell": 1,
           "slot": 2,
           "name": "검술 집중",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -417,7 +417,7 @@
           "cell": 1,
           "slot": 3,
           "name": "십자 발도",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -505,7 +505,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -550,7 +550,7 @@
           "cell": 2,
           "slot": 1,
           "name": "룬 절개",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -559,7 +559,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -612,7 +612,7 @@
           "cell": 2,
           "slot": 2,
           "name": "영혼 결속",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -621,7 +621,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -666,7 +666,7 @@
           "cell": 2,
           "slot": 3,
           "name": "마검 해방",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -675,7 +675,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
@@ -803,7 +803,7 @@
           "cell": 3,
           "slot": 1,
           "name": "잔영 육연참",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -857,7 +857,7 @@
           "cell": 3,
           "slot": 2,
           "name": "검귀의 호흡",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -909,7 +909,7 @@
           "cell": 3,
           "slot": 3,
           "name": "백귀난무",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -1044,7 +1044,7 @@
           "cell": 4,
           "slot": 1,
           "name": "축적 방출",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -1094,7 +1094,7 @@
           "cell": 4,
           "slot": 2,
           "name": "불동 자세",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -1144,7 +1144,7 @@
           "cell": 4,
           "slot": 3,
           "name": "만격반환",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -1226,7 +1226,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -1271,7 +1271,7 @@
           "cell": 5,
           "slot": 1,
           "name": "룬 연결",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1280,7 +1280,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -1321,7 +1321,7 @@
           "cell": 5,
           "slot": 2,
           "name": "마력 응축",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1330,7 +1330,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -1387,7 +1387,7 @@
           "cell": 5,
           "slot": 3,
           "name": "룬 대붕괴",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1396,7 +1396,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 125,
           "radius": 140,
@@ -1461,7 +1461,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -1520,7 +1520,7 @@
           "cell": 6,
           "slot": 1,
           "name": "영혼 흡수",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1529,7 +1529,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -1578,7 +1578,7 @@
           "cell": 6,
           "slot": 2,
           "name": "망령 소환",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1587,7 +1587,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -1644,7 +1644,7 @@
           "cell": 6,
           "slot": 3,
           "name": "황천 개방",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -1653,7 +1653,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -2006,7 +2006,7 @@
           "cell": 1,
           "slot": 1,
           "name": "피의 베기",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2074,7 +2074,7 @@
           "cell": 1,
           "slot": 2,
           "name": "광전사의 분노",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2126,7 +2126,7 @@
           "cell": 1,
           "slot": 3,
           "name": "광란의 추격",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2253,7 +2253,7 @@
           "cell": 2,
           "slot": 1,
           "name": "철갑 돌파",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2313,7 +2313,7 @@
           "cell": 2,
           "slot": 2,
           "name": "강철 육체",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2363,7 +2363,7 @@
           "cell": 2,
           "slot": 3,
           "name": "파쇄 충격파",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2504,7 +2504,7 @@
           "cell": 3,
           "slot": 1,
           "name": "상처 찢기",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2570,7 +2570,7 @@
           "cell": 3,
           "slot": 2,
           "name": "피의 계약",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2642,7 +2642,7 @@
           "cell": 3,
           "slot": 3,
           "name": "선혈 폭풍",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2783,7 +2783,7 @@
           "cell": 4,
           "slot": 1,
           "name": "사냥감 처형",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2835,7 +2835,7 @@
           "cell": 4,
           "slot": 2,
           "name": "살육의 추격",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -2895,7 +2895,7 @@
           "cell": 4,
           "slot": 3,
           "name": "연쇄 참수",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3020,7 +3020,7 @@
           "cell": 5,
           "slot": 1,
           "name": "지면 균열",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3074,7 +3074,7 @@
           "cell": 5,
           "slot": 2,
           "name": "거인의 축력",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3126,7 +3126,7 @@
           "cell": 5,
           "slot": 3,
           "name": "대지 붕괴",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3257,7 +3257,7 @@
           "cell": 6,
           "slot": 1,
           "name": "전선 밀치기",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3317,7 +3317,7 @@
           "cell": 6,
           "slot": 2,
           "name": "불굴 전진",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3379,7 +3379,7 @@
           "cell": 6,
           "slot": 3,
           "name": "전선 분쇄",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -3469,7 +3469,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -3519,7 +3519,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
@@ -3585,7 +3585,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
@@ -3637,7 +3637,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34,
           "range": 460,
           "radius": 150,
@@ -3702,7 +3702,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -3755,7 +3755,7 @@
           "cell": 1,
           "slot": 1,
           "name": "서리 고리",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -3764,7 +3764,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -3821,7 +3821,7 @@
           "cell": 1,
           "slot": 2,
           "name": "원소 공명",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -3830,7 +3830,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -3871,7 +3871,7 @@
           "cell": 1,
           "slot": 3,
           "name": "원소 폭풍",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -3880,7 +3880,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 460,
           "radius": 180,
@@ -3955,7 +3955,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -4008,7 +4008,7 @@
           "cell": 2,
           "slot": 1,
           "name": "생명 흡수",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4017,7 +4017,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -4066,7 +4066,7 @@
           "cell": 2,
           "slot": 2,
           "name": "금단의 계약",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4075,7 +4075,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -4126,7 +4126,7 @@
           "cell": 2,
           "slot": 3,
           "name": "저주 범람",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4135,7 +4135,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 460,
           "radius": 160,
@@ -4210,7 +4210,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4251,7 +4251,7 @@
           "cell": 3,
           "slot": 1,
           "name": "서리 전환",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4260,7 +4260,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -4315,7 +4315,7 @@
           "cell": 3,
           "slot": 2,
           "name": "번개 공명",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4324,7 +4324,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4379,7 +4379,7 @@
           "cell": 3,
           "slot": 3,
           "name": "삼원소 운석",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4388,7 +4388,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -4461,7 +4461,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4520,7 +4520,7 @@
           "cell": 4,
           "slot": 1,
           "name": "영구동토",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4529,7 +4529,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 160,
@@ -4574,7 +4574,7 @@
           "cell": 4,
           "slot": 2,
           "name": "동결 파쇄",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4583,7 +4583,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4624,7 +4624,7 @@
           "cell": 4,
           "slot": 3,
           "name": "절대영도",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4633,7 +4633,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 220,
@@ -4722,7 +4722,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4767,7 +4767,7 @@
           "cell": 5,
           "slot": 1,
           "name": "역병 전이",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4776,7 +4776,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 190,
@@ -4817,7 +4817,7 @@
           "cell": 5,
           "slot": 2,
           "name": "저주 수확",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4826,7 +4826,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4875,7 +4875,7 @@
           "cell": 5,
           "slot": 3,
           "name": "재앙 강림",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -4884,7 +4884,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 260,
@@ -4971,7 +4971,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -5028,7 +5028,7 @@
           "cell": 6,
           "slot": 1,
           "name": "관통 혈창",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5037,7 +5037,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -5092,7 +5092,7 @@
           "cell": 6,
           "slot": 2,
           "name": "생명 회수",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5101,7 +5101,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -5140,7 +5140,7 @@
           "cell": 6,
           "slot": 3,
           "name": "붉은 심장",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5149,7 +5149,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -5234,7 +5234,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.2,
           "range": 125,
           "radius": 140,
@@ -5282,7 +5282,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.5,
           "range": 100,
           "radius": 140,
@@ -5334,7 +5334,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13,
           "range": 125,
           "radius": 140,
@@ -5384,7 +5384,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34,
           "range": 125,
           "radius": 140,
@@ -5457,7 +5457,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 110,
           "radius": 140,
@@ -5508,7 +5508,7 @@
           "cell": 1,
           "slot": 1,
           "name": "성역 설치",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5517,7 +5517,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -5562,7 +5562,7 @@
           "cell": 1,
           "slot": 2,
           "name": "수호 방패",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5571,7 +5571,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -5612,7 +5612,7 @@
           "cell": 1,
           "slot": 3,
           "name": "성전 선포",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5621,7 +5621,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 125,
           "radius": 160,
@@ -5741,7 +5741,7 @@
           "cell": 2,
           "slot": 1,
           "name": "용창 관통",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -5795,7 +5795,7 @@
           "cell": 2,
           "slot": 2,
           "name": "용혈 고양",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -5847,7 +5847,7 @@
           "cell": 2,
           "slot": 3,
           "name": "용의 숨결",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -5921,7 +5921,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 130,
           "radius": 140,
@@ -5972,7 +5972,7 @@
           "cell": 3,
           "slot": 1,
           "name": "성역 깃발",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -5981,7 +5981,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 150,
@@ -6026,7 +6026,7 @@
           "cell": 3,
           "slot": 2,
           "name": "치유 강타",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -6035,7 +6035,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -6082,7 +6082,7 @@
           "cell": 3,
           "slot": 3,
           "name": "성전 개시",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -6091,7 +6091,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -6170,7 +6170,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 125,
           "radius": 140,
@@ -6211,7 +6211,7 @@
           "cell": 4,
           "slot": 1,
           "name": "성역 반격",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -6220,7 +6220,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -6261,7 +6261,7 @@
           "cell": 4,
           "slot": 2,
           "name": "수호 자세",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -6270,7 +6270,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -6321,7 +6321,7 @@
           "cell": 4,
           "slot": 3,
           "name": "절대 방벽",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -6330,7 +6330,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 125,
           "radius": 200,
@@ -6454,7 +6454,7 @@
           "cell": 5,
           "slot": 1,
           "name": "용의 사선",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -6508,7 +6508,7 @@
           "cell": 5,
           "slot": 2,
           "name": "창끝 조준",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -6560,7 +6560,7 @@
           "cell": 5,
           "slot": 3,
           "name": "천공 낙하",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -6687,7 +6687,7 @@
           "cell": 6,
           "slot": 1,
           "name": "용린 수호",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -6737,7 +6737,7 @@
           "cell": 6,
           "slot": 2,
           "name": "폭주 혈통",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -6789,7 +6789,7 @@
           "cell": 6,
           "slot": 3,
           "name": "용혈 해방",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -7149,7 +7149,7 @@
           "cell": 1,
           "slot": 1,
           "name": "독 묻히기",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7203,7 +7203,7 @@
           "cell": 1,
           "slot": 2,
           "name": "잠행",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7263,7 +7263,7 @@
           "cell": 1,
           "slot": 3,
           "name": "암살 연격",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7378,7 +7378,7 @@
           "cell": 2,
           "slot": 1,
           "name": "미끼 인형",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7428,7 +7428,7 @@
           "cell": 2,
           "slot": 2,
           "name": "장난 지뢰",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7482,7 +7482,7 @@
           "cell": 2,
           "slot": 3,
           "name": "깜짝 폭탄",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7609,7 +7609,7 @@
           "cell": 3,
           "slot": 1,
           "name": "잔영 육연무",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7677,7 +7677,7 @@
           "cell": 3,
           "slot": 2,
           "name": "그림자 추격",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7737,7 +7737,7 @@
           "cell": 3,
           "slot": 3,
           "name": "환영 난무",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7880,7 +7880,7 @@
           "cell": 4,
           "slot": 1,
           "name": "맹독 전이",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7930,7 +7930,7 @@
           "cell": 4,
           "slot": 2,
           "name": "독 회수",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -7980,7 +7980,7 @@
           "cell": 4,
           "slot": 3,
           "name": "독살",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8123,7 +8123,7 @@
           "cell": 5,
           "slot": 1,
           "name": "대역 인형",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8173,7 +8173,7 @@
           "cell": 5,
           "slot": 2,
           "name": "환영 교대",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8231,7 +8231,7 @@
           "cell": 5,
           "slot": 3,
           "name": "유령극",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8376,7 +8376,7 @@
           "cell": 6,
           "slot": 1,
           "name": "시한폭탄",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8428,7 +8428,7 @@
           "cell": 6,
           "slot": 2,
           "name": "원격 기폭",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8480,7 +8480,7 @@
           "cell": 6,
           "slot": 3,
           "name": "연쇄 폭파",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8826,7 +8826,7 @@
           "cell": 1,
           "slot": 1,
           "name": "시험 포탑",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8878,7 +8878,7 @@
           "cell": 1,
           "slot": 2,
           "name": "무기 정비",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -8930,7 +8930,7 @@
           "cell": 1,
           "slot": 3,
           "name": "기계 충격",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9063,7 +9063,7 @@
           "cell": 2,
           "slot": 1,
           "name": "독성 웅덩이",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9117,7 +9117,7 @@
           "cell": 2,
           "slot": 2,
           "name": "생체 시제품",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9171,7 +9171,7 @@
           "cell": 2,
           "slot": 3,
           "name": "화학 반응",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9306,7 +9306,7 @@
           "cell": 3,
           "slot": 1,
           "name": "무기 전환",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9366,7 +9366,7 @@
           "cell": 3,
           "slot": 2,
           "name": "냉각 분출",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9416,7 +9416,7 @@
           "cell": 3,
           "slot": 3,
           "name": "과열 해방",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9543,7 +9543,7 @@
           "cell": 4,
           "slot": 1,
           "name": "수호포탑",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9597,7 +9597,7 @@
           "cell": 4,
           "slot": 2,
           "name": "현장 수리",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9653,7 +9653,7 @@
           "cell": 4,
           "slot": 3,
           "name": "요새 전개",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9794,7 +9794,7 @@
           "cell": 5,
           "slot": 1,
           "name": "독성 장판",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9848,7 +9848,7 @@
           "cell": 5,
           "slot": 2,
           "name": "시약 혼합",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -9910,7 +9910,7 @@
           "cell": 5,
           "slot": 3,
           "name": "연쇄 반응",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -10047,7 +10047,7 @@
           "cell": 6,
           "slot": 1,
           "name": "성장 명령",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -10095,7 +10095,7 @@
           "cell": 6,
           "slot": 2,
           "name": "키메라 합성",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -10157,7 +10157,7 @@
           "cell": 6,
           "slot": 3,
           "name": "완전체 해방",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -10247,7 +10247,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.2,
           "range": 460,
           "radius": 170,
@@ -10299,7 +10299,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
@@ -10347,7 +10347,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
@@ -10403,7 +10403,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34,
           "range": 460,
           "radius": 160,
@@ -10468,7 +10468,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 190,
@@ -10511,7 +10511,7 @@
           "cell": 1,
           "slot": 1,
           "name": "용기의 노래",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10520,7 +10520,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -10559,7 +10559,7 @@
           "cell": 1,
           "slot": 2,
           "name": "안식의 노래",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10568,7 +10568,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -10615,7 +10615,7 @@
           "cell": 1,
           "slot": 3,
           "name": "화음 피날레",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10624,7 +10624,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
@@ -10685,7 +10685,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 320,
           "radius": 140,
@@ -10736,7 +10736,7 @@
           "cell": 2,
           "slot": 1,
           "name": "검무 선회",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10745,7 +10745,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 125,
           "radius": 140,
@@ -10790,7 +10790,7 @@
           "cell": 2,
           "slot": 2,
           "name": "가벼운 발놀림",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10799,7 +10799,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -10842,7 +10842,7 @@
           "cell": 2,
           "slot": 3,
           "name": "무대의 중심",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10851,7 +10851,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
@@ -10928,7 +10928,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -10967,7 +10967,7 @@
           "cell": 3,
           "slot": 1,
           "name": "진격의 선율",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -10976,7 +10976,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -11015,7 +11015,7 @@
           "cell": 3,
           "slot": 2,
           "name": "수호의 선율",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11024,7 +11024,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -11071,7 +11071,7 @@
           "cell": 3,
           "slot": 3,
           "name": "앙코르",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11080,7 +11080,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -11143,7 +11143,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -11188,7 +11188,7 @@
           "cell": 4,
           "slot": 1,
           "name": "혼 흡수",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11197,7 +11197,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -11246,7 +11246,7 @@
           "cell": 4,
           "slot": 2,
           "name": "애도의 울림",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11255,7 +11255,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 180,
@@ -11300,7 +11300,7 @@
           "cell": 4,
           "slot": 3,
           "name": "망자의 합창",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11309,7 +11309,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 220,
@@ -11396,7 +11396,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 320,
           "radius": 140,
@@ -11449,7 +11449,7 @@
           "cell": 5,
           "slot": 1,
           "name": "반월 선회",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11458,7 +11458,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -11503,7 +11503,7 @@
           "cell": 5,
           "slot": 2,
           "name": "회피 스텝",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11512,7 +11512,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 320,
           "radius": 140,
@@ -11573,7 +11573,7 @@
           "cell": 5,
           "slot": 3,
           "name": "만화검무",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11582,7 +11582,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 320,
           "radius": 140,
@@ -11669,7 +11669,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -11712,7 +11712,7 @@
           "cell": 6,
           "slot": 1,
           "name": "공전하는 별",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11721,7 +11721,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -11766,7 +11766,7 @@
           "cell": 6,
           "slot": 2,
           "name": "별자리 예고",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11775,7 +11775,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 160,
@@ -11820,7 +11820,7 @@
           "cell": 6,
           "slot": 3,
           "name": "유성 군무",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -11829,7 +11829,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -12166,7 +12166,7 @@
           "cell": 1,
           "slot": 1,
           "name": "금강 받아치기",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12216,7 +12216,7 @@
           "cell": 1,
           "slot": 2,
           "name": "호흡 집중",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12268,7 +12268,7 @@
           "cell": 1,
           "slot": 3,
           "name": "기공 폭발",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12344,7 +12344,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -12397,7 +12397,7 @@
           "cell": 2,
           "slot": 1,
           "name": "작은 가시밭",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -12406,7 +12406,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -12451,7 +12451,7 @@
           "cell": 2,
           "slot": 2,
           "name": "자연의 숨",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -12460,7 +12460,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -12499,7 +12499,7 @@
           "cell": 2,
           "slot": 3,
           "name": "야생의 부름",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -12508,7 +12508,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
@@ -12630,7 +12630,7 @@
           "cell": 3,
           "slot": 1,
           "name": "관통 기공포",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12684,7 +12684,7 @@
           "cell": 3,
           "slot": 2,
           "name": "응축 기공탄",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12734,7 +12734,7 @@
           "cell": 3,
           "slot": 3,
           "name": "천공포",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12851,7 +12851,7 @@
           "cell": 4,
           "slot": 1,
           "name": "금강 반격권",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12901,7 +12901,7 @@
           "cell": 4,
           "slot": 2,
           "name": "충격 흡수",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -12961,7 +12961,7 @@
           "cell": 4,
           "slot": 3,
           "name": "금강불괴",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -13043,7 +13043,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 320,
           "radius": 140,
@@ -13100,7 +13100,7 @@
           "cell": 5,
           "slot": 1,
           "name": "야수의 포효",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13109,7 +13109,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 160,
@@ -13166,7 +13166,7 @@
           "cell": 5,
           "slot": 2,
           "name": "곰의 변신",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13175,7 +13175,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -13224,7 +13224,7 @@
           "cell": 5,
           "slot": 3,
           "name": "태고의 분노",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13233,7 +13233,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 230,
@@ -13322,7 +13322,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -13367,7 +13367,7 @@
           "cell": 6,
           "slot": 1,
           "name": "가시 식물",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13376,7 +13376,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -13421,7 +13421,7 @@
           "cell": 6,
           "slot": 2,
           "name": "재생 지대",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13430,7 +13430,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 160,
@@ -13475,7 +13475,7 @@
           "cell": 6,
           "slot": 3,
           "name": "고대 수림",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -13484,7 +13484,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 220,
@@ -13827,7 +13827,7 @@
           "cell": 1,
           "slot": 1,
           "name": "사선 관통",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -13881,7 +13881,7 @@
           "cell": 1,
           "slot": 2,
           "name": "호흡 고정",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -13933,7 +13933,7 @@
           "cell": 1,
           "slot": 3,
           "name": "치명 조준",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14056,7 +14056,7 @@
           "cell": 2,
           "slot": 1,
           "name": "야수 친구",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14110,7 +14110,7 @@
           "cell": 2,
           "slot": 2,
           "name": "바람 걸음",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14174,7 +14174,7 @@
           "cell": 2,
           "slot": 3,
           "name": "숲의 협공",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14307,7 +14307,7 @@
           "cell": 3,
           "slot": 1,
           "name": "갑옷 관통",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14361,7 +14361,7 @@
           "cell": 3,
           "slot": 2,
           "name": "부동 조준",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14413,7 +14413,7 @@
           "cell": 3,
           "slot": 3,
           "name": "천리일섬",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14534,7 +14534,7 @@
           "cell": 4,
           "slot": 1,
           "name": "유도 마탄",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14586,7 +14586,7 @@
           "cell": 4,
           "slot": 2,
           "name": "분열 화살",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14636,7 +14636,7 @@
           "cell": 4,
           "slot": 3,
           "name": "마탄 폭우",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14759,7 +14759,7 @@
           "cell": 5,
           "slot": 1,
           "name": "돌풍 도약",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14819,7 +14819,7 @@
           "cell": 5,
           "slot": 2,
           "name": "바람 회피",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -14883,7 +14883,7 @@
           "cell": 5,
           "slot": 3,
           "name": "폭풍 질주",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15018,7 +15018,7 @@
           "cell": 6,
           "slot": 1,
           "name": "맹수 돌격",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15080,7 +15080,7 @@
           "cell": 6,
           "slot": 2,
           "name": "야수 돌보기",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15136,7 +15136,7 @@
           "cell": 6,
           "slot": 3,
           "name": "야성의 무리",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15476,7 +15476,7 @@
           "cell": 1,
           "slot": 1,
           "name": "회전 난사",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15526,7 +15526,7 @@
           "cell": 1,
           "slot": 2,
           "name": "빠른 재장전",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15576,7 +15576,7 @@
           "cell": 1,
           "slot": 3,
           "name": "속사의 끝",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15695,7 +15695,7 @@
           "cell": 2,
           "slot": 1,
           "name": "포격선",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15749,7 +15749,7 @@
           "cell": 2,
           "slot": 2,
           "name": "중화기 안정",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15801,7 +15801,7 @@
           "cell": 2,
           "slot": 3,
           "name": "연속 포격",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15920,7 +15920,7 @@
           "cell": 3,
           "slot": 1,
           "name": "근접 난사",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -15972,7 +15972,7 @@
           "cell": 3,
           "slot": 2,
           "name": "전투 재장전",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16034,7 +16034,7 @@
           "cell": 3,
           "slot": 3,
           "name": "탄환 춤",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16171,7 +16171,7 @@
           "cell": 4,
           "slot": 1,
           "name": "약점 노출",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16225,7 +16225,7 @@
           "cell": 4,
           "slot": 2,
           "name": "마탄 장전",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16287,7 +16287,7 @@
           "cell": 4,
           "slot": 3,
           "name": "최후의 한 발",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16426,7 +16426,7 @@
           "cell": 5,
           "slot": 1,
           "name": "자탄 폭발",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16482,7 +16482,7 @@
           "cell": 5,
           "slot": 2,
           "name": "포격 예고",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16548,7 +16548,7 @@
           "cell": 5,
           "slot": 3,
           "name": "융단 폭격",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16665,7 +16665,7 @@
           "cell": 6,
           "slot": 1,
           "name": "관통 주포",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16727,7 +16727,7 @@
           "cell": 6,
           "slot": 2,
           "name": "강제 냉각",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16777,7 +16777,7 @@
           "cell": 6,
           "slot": 3,
           "name": "초중량 포격",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "energy",
@@ -16869,7 +16869,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -16917,7 +16917,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.5,
           "range": 125,
           "radius": 140,
@@ -16965,7 +16965,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13,
           "range": 125,
           "radius": 140,
@@ -17013,7 +17013,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34,
           "range": 125,
           "radius": 150,
@@ -17131,7 +17131,7 @@
           "cell": 1,
           "slot": 1,
           "name": "회복 타격",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17187,7 +17187,7 @@
           "cell": 1,
           "slot": 2,
           "name": "수행의 호흡",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17239,7 +17239,7 @@
           "cell": 1,
           "slot": 3,
           "name": "권사의 일격",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17309,7 +17309,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -17348,7 +17348,7 @@
           "cell": 2,
           "slot": 1,
           "name": "치유 기도",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -17357,7 +17357,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 125,
           "radius": 140,
@@ -17396,7 +17396,7 @@
           "cell": 2,
           "slot": 2,
           "name": "작은 성역",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -17405,7 +17405,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 190,
@@ -17454,7 +17454,7 @@
           "cell": 2,
           "slot": 3,
           "name": "신성한 파동",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -17463,7 +17463,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 125,
           "radius": 160,
@@ -17581,7 +17581,7 @@
           "cell": 3,
           "slot": 1,
           "name": "타격 치유",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17647,7 +17647,7 @@
           "cell": 3,
           "slot": 2,
           "name": "연계 집중",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17699,7 +17699,7 @@
           "cell": 3,
           "slot": 3,
           "name": "최종 정권",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17822,7 +17822,7 @@
           "cell": 4,
           "slot": 1,
           "name": "성화 점화",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17888,7 +17888,7 @@
           "cell": 4,
           "slot": 2,
           "name": "낙인 전이",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -17938,7 +17938,7 @@
           "cell": 4,
           "slot": 3,
           "name": "최후의 심판",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "rage",
@@ -18022,7 +18022,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 125,
           "radius": 140,
@@ -18069,7 +18069,7 @@
           "cell": 5,
           "slot": 1,
           "name": "대보호막",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18078,7 +18078,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -18117,7 +18117,7 @@
           "cell": 5,
           "slot": 2,
           "name": "성역",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18126,7 +18126,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 230,
@@ -18177,7 +18177,7 @@
           "cell": 5,
           "slot": 3,
           "name": "기적의 빛",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18186,7 +18186,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 125,
           "radius": 170,
@@ -18267,7 +18267,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -18320,7 +18320,7 @@
           "cell": 6,
           "slot": 1,
           "name": "봉인 결계",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18329,7 +18329,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 150,
@@ -18374,7 +18374,7 @@
           "cell": 6,
           "slot": 2,
           "name": "주문 차단",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18383,7 +18383,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -18432,7 +18432,7 @@
           "cell": 6,
           "slot": 3,
           "name": "퇴마 의식",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18441,7 +18441,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 180,
@@ -18538,7 +18538,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -18592,7 +18592,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
@@ -18640,7 +18640,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
@@ -18690,7 +18690,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34,
           "range": 460,
           "radius": 140,
@@ -18757,7 +18757,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -18802,7 +18802,7 @@
           "cell": 1,
           "slot": 1,
           "name": "정령 명령",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18811,7 +18811,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -18850,7 +18850,7 @@
           "cell": 1,
           "slot": 2,
           "name": "정령 보호",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18859,7 +18859,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -18908,7 +18908,7 @@
           "cell": 1,
           "slot": 3,
           "name": "대정령 소환",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -18917,7 +18917,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
@@ -18986,7 +18986,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -19045,7 +19045,7 @@
           "cell": 2,
           "slot": 1,
           "name": "좀비 소환",
-          "unlock": 35,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19054,7 +19054,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -19099,7 +19099,7 @@
           "cell": 2,
           "slot": 2,
           "name": "망자의 유대",
-          "unlock": 45,
+          "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19108,7 +19108,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -19149,7 +19149,7 @@
           "cell": 2,
           "slot": 3,
           "name": "네크로맨서 · 망령 소환",
-          "unlock": 55,
+          "unlock": 40,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19158,7 +19158,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
@@ -19225,7 +19225,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19274,7 +19274,7 @@
           "cell": 3,
           "slot": 1,
           "name": "속성 명령",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19283,7 +19283,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19328,7 +19328,7 @@
           "cell": 3,
           "slot": 2,
           "name": "왕의 수호",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19337,7 +19337,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19386,7 +19386,7 @@
           "cell": 3,
           "slot": 3,
           "name": "왕의 강림",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19395,7 +19395,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -19478,7 +19478,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19523,7 +19523,7 @@
           "cell": 4,
           "slot": 1,
           "name": "융합 지시",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19532,7 +19532,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19577,7 +19577,7 @@
           "cell": 4,
           "slot": 2,
           "name": "분리 회수",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19586,7 +19586,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19631,7 +19631,7 @@
           "cell": 4,
           "slot": 3,
           "name": "완전 융합",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19640,7 +19640,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 170,
@@ -19721,7 +19721,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19794,7 +19794,7 @@
           "cell": 5,
           "slot": 1,
           "name": "묘지 골렘",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19803,7 +19803,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19852,7 +19852,7 @@
           "cell": 5,
           "slot": 2,
           "name": "군단 강화",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19861,7 +19861,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19902,7 +19902,7 @@
           "cell": 5,
           "slot": 3,
           "name": "해골용 강림",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -19911,7 +19911,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -20024,7 +20024,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 9,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -20071,7 +20071,7 @@
           "cell": 6,
           "slot": 1,
           "name": "죽음 표식",
-          "unlock": 65,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -20080,7 +20080,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 17,
+          "cost": 12,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -20133,7 +20133,7 @@
           "cell": 6,
           "slot": 2,
           "name": "영혼 수확",
-          "unlock": 75,
+          "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -20142,7 +20142,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 19,
+          "cost": 14,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -20193,7 +20193,7 @@
           "cell": 6,
           "slot": 3,
           "name": "사형 선고",
-          "unlock": 90,
+          "unlock": 70,
           "mechanicsVersion": 3,
           "resource": {
             "kind": "mana",
@@ -20202,7 +20202,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 38,
+          "cost": 27,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
