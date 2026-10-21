@@ -1,1 +1,1 @@
-window.RPG_ACCOUNT_CONFIG={"url":"https://cyysulqlyujiehiyoxyj.supabase.co","publishableKey":"sb_publishable_bXp5UXjAOB2R_7TdD55ckg_jdAcS31S"};
+window.RPG_ACCOUNT_CONFIG={"url":"https://fxkdlcqheyireuuykzzw.supabase.co","publishableKey":"sb_publishable_d1PhaD8PlYkfaUA6riwy5Q_l6UxPHII"};
