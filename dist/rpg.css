@@ -35,3 +35,30 @@ body.playing .hero-panel>.meter.xp{display:block!important;grid-column:1/-1;heig
 /* Keep the compact HUD action in normal flow below every meter. */
 body.playing:not(.hero-expanded) .hero-panel>.hud-toggle{position:static;grid-column:1/-1;width:100%;margin:8px 0 0;padding:5px;min-height:25px;z-index:auto}
 body.playing.hero-expanded .hero-panel>.hud-toggle{position:fixed;top:max(18px,env(safe-area-inset-top));left:18px;width:auto;margin:0}
+
+/* Match the visible viewport and keep controls above mobile browser/system bars. */
+body.playing #game{height:var(--game-height,100dvh);bottom:auto}
+@media(max-width:760px){
+ body.playing:not(.hero-expanded) .hero-panel{left:max(10px,env(safe-area-inset-left));top:max(10px,env(safe-area-inset-top));width:clamp(156px,46vw,190px);padding:8px;grid-template-columns:36px minmax(0,1fr);gap:0 6px}
+ body.playing:not(.hero-expanded) .hero-art canvas{width:36px;height:43px}
+ body.playing:not(.hero-expanded) .hero-title{gap:4px}
+ body.playing:not(.hero-expanded) .hero-title h2{font-size:12px}
+ body.playing:not(.hero-expanded) .hero-panel>.meter-label.small.xp-label{flex-wrap:wrap;margin-top:6px;line-height:1.4}
+ body.playing:not(.hero-expanded) .xp-label b{font-size:7px;margin-left:auto}
+ body.playing .journey-header{right:max(10px,env(safe-area-inset-right));max-width:calc(54% - 24px)}
+ body.playing .battle-controls{--action-size:clamp(48px,16vw,64px);right:max(10px,env(safe-area-inset-right));bottom:calc(54px + env(safe-area-inset-bottom));grid-template-columns:repeat(3,var(--action-size));width:max-content;gap:6px;max-width:none}
+ body.playing .battle-controls .action-orb{width:var(--action-size);height:var(--action-size);padding:5px}
+ body.playing .field-menu{bottom:calc(8px + env(safe-area-inset-bottom));min-height:36px;width:calc(100% - 20px)}
+ body.playing .field-menu button{font-size:8px;padding:7px 1px;min-width:0}
+ body.playing .joystick{width:92px;height:92px;left:max(10px,env(safe-area-inset-left));bottom:calc(65px + env(safe-area-inset-bottom))}
+ body.playing .field-top{bottom:calc(206px + env(safe-area-inset-bottom))}
+ body.playing .stage-progress{bottom:calc(210px + env(safe-area-inset-bottom));left:10px;min-width:95px}
+}
+@media(orientation:landscape) and (max-height:500px){
+ body.playing .battle-controls{--action-size:44px;grid-template-columns:repeat(6,44px);gap:5px;right:10px;left:auto;transform:none;width:max-content;bottom:calc(52px + env(safe-area-inset-bottom))}
+ body.playing .battle-controls .action-orb{width:44px;height:44px;padding:3px}
+ body.playing .battle-controls #basic-attack,body.playing .battle-controls #skill,body.playing .battle-controls #skill-two,body.playing .battle-controls #skill-three,body.playing .battle-controls #skill-ultimate,body.playing .battle-controls #potion{grid-column:auto;grid-row:1}
+ body.playing .field-top{bottom:calc(106px + env(safe-area-inset-bottom))}
+ body.playing .stage-progress{bottom:calc(110px + env(safe-area-inset-bottom))}
+ body.playing .joystick{width:76px;height:76px;bottom:calc(54px + env(safe-area-inset-bottom))}
+}

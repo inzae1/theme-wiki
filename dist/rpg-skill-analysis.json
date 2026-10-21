@@ -1535,7 +1535,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-25",
-          "description": "soul를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+          "description": "soul를 소비해 중첩당 221% 타격 / 최대 체력 8% 실제 회복",
           "actions": [
             {
               "op": "consume",
@@ -1568,7 +1568,7 @@
             "rotation": 25,
             "shape": "consume+heal"
           },
-          "actualText": "soul를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+          "actualText": "soul를 소비해 중첩당 221% 타격 / 최대 체력 8% 실제 회복",
           "visual": "전용 연출 jongchan-6:1 · consume → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1750,7 +1750,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-28",
-          "description": "근접 단일 229.99999999999997% 타격",
+          "description": "근접 단일 230% 타격",
           "actions": [
             {
               "op": "hit",
@@ -1773,7 +1773,7 @@
             "rotation": 136,
             "shape": "hit"
           },
-          "actualText": "근접 단일 229.99999999999997% 타격",
+          "actualText": "근접 단일 230% 타격",
           "visual": "전용 연출 hyunseok-0:0 · hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3214,7 +3214,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-52",
-          "description": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 229.99999999999997%에 방어력을 더한 범위 타격",
+          "description": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 230%에 방어력을 더한 범위 타격",
           "actions": [
             {
               "op": "dash",
@@ -3247,7 +3247,7 @@
             "rotation": 124,
             "shape": "dash+armor-hit"
           },
-          "actualText": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 229.99999999999997%에 방어력을 더한 범위 타격",
+          "actualText": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 230%에 방어력을 더한 범위 타격",
           "visual": "전용 연출 hyunseok-6:0 · dash → armor-hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3443,7 +3443,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "마법사",
       "id": "jihoon-0",
       "tier": 0,
@@ -3676,7 +3676,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "원소술사",
       "id": "jihoon-1",
       "tier": 1,
@@ -3708,7 +3708,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-60",
-          "description": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
+          "description": "직선 투사체 230% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
           "actions": [
             {
               "op": "missile",
@@ -3745,7 +3745,7 @@
             "rotation": 60,
             "shape": "missile+status"
           },
-          "actualText": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
+          "actualText": "직선 투사체 230% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
           "visual": "전용 연출 jihoon-1:0 · missile → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3929,7 +3929,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "흑마법사",
       "id": "jihoon-2",
       "tier": 1,
@@ -4184,7 +4184,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "아크메이지",
       "id": "jihoon-3",
       "tier": 2,
@@ -4435,7 +4435,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "빙결술사",
       "id": "jihoon-4",
       "tier": 2,
@@ -4696,7 +4696,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "워록",
       "id": "jihoon-5",
       "tier": 2,
@@ -4832,7 +4832,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-78",
-          "description": "curse를 소비해 중첩당 229.99999999999997% 타격 / 최대 체력 10% 실제 회복",
+          "description": "curse를 소비해 중첩당 230% 타격 / 최대 체력 10% 실제 회복",
           "actions": [
             {
               "op": "consume",
@@ -4865,7 +4865,7 @@
             "rotation": 6,
             "shape": "consume+heal"
           },
-          "actualText": "curse를 소비해 중첩당 229.99999999999997% 타격 / 최대 체력 10% 실제 회복",
+          "actualText": "curse를 소비해 중첩당 230% 타격 / 최대 체력 10% 실제 회복",
           "visual": "전용 연출 jihoon-5:2 · consume → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -4945,7 +4945,7 @@
       ]
     },
     {
-      "hero": "남지훈",
+      "hero": "이근호",
       "job": "혈마법사",
       "id": "jihoon-6",
       "tier": 2,
@@ -4977,7 +4977,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-80",
-          "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+          "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 221% · 실제 충돌 시 피해",
           "actions": [
             {
               "op": "hp-cost",
@@ -5018,7 +5018,7 @@
             "rotation": 80,
             "shape": "hp-cost+meter+missile"
           },
-          "actualText": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+          "actualText": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 221% · 실제 충돌 시 피해",
           "visual": "전용 연출 jihoon-6:0 · hp-cost → meter → missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -5288,7 +5288,7 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-85",
-          "description": "거리 100 전방 부채꼴 229.99999999999997%",
+          "description": "거리 100 전방 부채꼴 230%",
           "actions": [
             {
               "op": "cone",
@@ -5315,7 +5315,7 @@
             "rotation": 85,
             "shape": "cone"
           },
-          "actualText": "거리 100 전방 부채꼴 229.99999999999997%",
+          "actualText": "거리 100 전방 부채꼴 230%",
           "visual": "전용 연출 youngjun-0:1 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -7345,7 +7345,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-120",
-          "description": "직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+          "description": "직선 투사체 221% · 실제 충돌 시 피해",
           "actions": [
             {
               "op": "missile",
@@ -7368,7 +7368,7 @@
             "rotation": 120,
             "shape": "missile"
           },
-          "actualText": "직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+          "actualText": "직선 투사체 221% · 실제 충돌 시 피해",
           "visual": "전용 연출 injae-2:0 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -9321,7 +9321,7 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-153",
-          "description": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 220.00000000000003% 관통",
+          "description": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 221% 관통",
           "actions": [
             {
               "op": "weapon-mode"
@@ -9356,7 +9356,7 @@
             "rotation": 81,
             "shape": "weapon-mode+beam"
           },
-          "actualText": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 220.00000000000003% 관통",
+          "actualText": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 221% 관통",
           "visual": "전용 연출 changki-3:1 · weapon-mode → beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -10474,7 +10474,7 @@
           "radius": 190,
           "target": "area",
           "effectType": "recipe-172",
-          "description": "거리 190 전방 부채꼴 229.99999999999997%",
+          "description": "거리 190 전방 부채꼴 230%",
           "actions": [
             {
               "op": "cone",
@@ -10501,7 +10501,7 @@
             "rotation": 64,
             "shape": "cone"
           },
-          "actualText": "거리 190 전방 부채꼴 229.99999999999997%",
+          "actualText": "거리 190 전방 부채꼴 230%",
           "visual": "전용 연출 seunguk-1:0 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -11203,7 +11203,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-185",
-          "description": "dirge를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 12% 실제 회복",
+          "description": "dirge를 소비해 중첩당 221% 타격 / 최대 체력 12% 실제 회복",
           "actions": [
             {
               "op": "consume",
@@ -11236,7 +11236,7 @@
             "rotation": 5,
             "shape": "consume+heal"
           },
-          "actualText": "dirge를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 12% 실제 회복",
+          "actualText": "dirge를 소비해 중첩당 221% 타격 / 최대 체력 12% 실제 회복",
           "visual": "전용 연출 seunguk-4:1 · consume → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13115,7 +13115,7 @@
           "radius": 160,
           "target": "area",
           "effectType": "recipe-217",
-          "description": "거리 160 전방 부채꼴 459.99999999999994% / root 1중첩 부여 · 최대 5중첩, 8초",
+          "description": "거리 160 전방 부채꼴 460% / root 1중첩 부여 · 최대 5중첩, 8초",
           "actions": [
             {
               "op": "cone",
@@ -13156,7 +13156,7 @@
             "rotation": 109,
             "shape": "cone+status"
           },
-          "actualText": "거리 160 전방 부채꼴 459.99999999999994% / root 1중첩 부여 · 최대 5중첩, 8초",
+          "actualText": "거리 160 전방 부채꼴 460% / root 1중첩 부여 · 최대 5중첩, 8초",
           "visual": "전용 연출 cheonbin-5:1 · cone → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -16122,7 +16122,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-268",
-          "description": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+          "description": "직선 투사체 230% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
           "actions": [
             {
               "op": "missile",
@@ -16161,7 +16161,7 @@
             "rotation": 16,
             "shape": "missile+status"
           },
-          "actualText": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+          "actualText": "직선 투사체 230% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
           "visual": "전용 연출 gyutae-4:0 · missile → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -17146,7 +17146,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-285",
-          "description": "근접 단일 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+          "description": "근접 단일 221% 타격 / 최대 체력 8% 실제 회복",
           "actions": [
             {
               "op": "hit",
@@ -17177,7 +17177,7 @@
             "rotation": 105,
             "shape": "hit+heal"
           },
-          "actualText": "근접 단일 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+          "actualText": "근접 단일 221% 타격 / 최대 체력 8% 실제 회복",
           "visual": "전용 연출 sangmin-1:1 · hit → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18502,7 +18502,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "소환사",
       "id": "keunho-0",
       "tier": 0,
@@ -18721,7 +18721,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "정령사",
       "id": "keunho-1",
       "tier": 1,
@@ -18950,7 +18950,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "네크로맨서",
       "id": "keunho-2",
       "tier": 1,
@@ -19179,7 +19179,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "엘리멘탈로드",
       "id": "keunho-3",
       "tier": 2,
@@ -19432,7 +19432,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "정령융합사",
       "id": "keunho-4",
       "tier": 2,
@@ -19675,7 +19675,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "리치",
       "id": "keunho-5",
       "tier": 2,
@@ -19910,7 +19910,7 @@
       ]
     },
     {
-      "hero": "이근호",
+      "hero": "남지훈",
       "job": "데스마스터",
       "id": "keunho-6",
       "tier": 2,
@@ -20060,7 +20060,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-334",
-          "description": "death를 소비해 중첩당 220.00000000000003% 타격 / soul 자원 2 축적",
+          "description": "death를 소비해 중첩당 221% 타격 / soul 자원 2 축적",
           "actions": [
             {
               "op": "consume",
@@ -20095,7 +20095,7 @@
             "rotation": 118,
             "shape": "consume+meter"
           },
-          "actualText": "death를 소비해 중첩당 220.00000000000003% 타격 / soul 자원 2 축적",
+          "actualText": "death를 소비해 중첩당 221% 타격 / soul 자원 2 축적",
           "visual": "전용 연출 keunho-6:2 · consume → meter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
