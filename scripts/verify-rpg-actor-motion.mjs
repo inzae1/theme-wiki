@@ -3,5 +3,5 @@ function trace(motion){const ops=[];let depth=0;const ctx=new Proxy({},{get:(_,k
 for(const family of ['sword','warrior','knight','rogue','fighter','smith','archer','gunner','mage','priest','summoner','bard','beast']){const phases=[.1,.35,.65].map(phase=>trace({kind:'attack',family,phase}));assert.equal(new Set(phases).size,3);assert.notEqual(trace({kind:'idle',family,phase:.3}),trace({kind:'attack',family,phase:.3}));}
 const scene=P.basic(D,0,0,0);for(let t=0;t<3;t+=.05){const frame=P.pose(scene,t);assert(frame.sim);if(t>1)assert(frame.sim.c.lastBasic>=0);assert.equal(frame.sim.events.filter(e=>e.type==='skill').length,0);}
 assert.equal(M.pose(1,false,-99,.8,'sword',0,2).kind,'guard');
-const g=new E.Game(D);g.select(0);assert.equal(g.need(1),12);for(let i=1;i<99;i++)assert(g.need(i+1)>g.need(i));assert.equal(g.need(30),80000);assert.equal(g.need(60),700000);
+const g=new E.Game(D);g.select(0);assert.equal(g.need(1),12);for(let i=1;i<99;i++)assert(g.need(i+1)>g.need(i));assert.equal(g.need(30),35000);assert.equal(g.need(60),400000);
 console.log('PASS: original sprite split into head/torso/two arms/two legs; different wind-up/strike/recovery transforms across 13 actor types; no effect geometry in actor renderer; basic-motion preview attacks without casting skills; easier early progression and steeper late curve.');

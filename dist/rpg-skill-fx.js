@@ -64,7 +64,7 @@ function artilleryLine(p,s,a,ox,oy,tx,ty,age){const delay=a.delay||0,dx=tx-ox,dy
 }
 function fistStrike(p,monk,ox,oy,tx,ty,at,scale=1,index=0){if(at<0||at>.4)return;const angle=Math.atan2(ty-oy,tx-ox),reach=Math.min(125,Math.hypot(tx-ox,ty-oy)),phase=at<.13?at/.13:at<.2?1:Math.max(0,1-(at-.2)/.2),distance=15+Math.max(12,reach-15)*phase,y=oy+Math.sin(angle)*distance+(index%2?5:-5),x=ox+Math.cos(angle)*distance,width=(monk?27:30)*Math.min(1.6,scale);authored(p,monk?'monk-fist-authored':'fighter-fist-authored',x,y,width,width*.48,angle,Math.min(1,(.4-at)*8));sheet(p,'jab',at-.12,.25,tx,ty,26*scale,26*scale,angle);}
 function energyCannon(p,s,a,ox,oy,tx,ty,age){const delay=a.delay||.4,at=age-delay,angle=Math.atan2(ty-oy,tx-ox);if(at<0){const q=Math.min(1,age/delay);sheet(p,'spark',age% .5,.5,ox+22,oy,20+q*35,20+q*35);return;}if(at>.85)return;const fade=Math.min(1,(.85-at)*5),grow=Math.min(1,at/.13),length=Math.max(30,(a.range||480)*grow),width=(a.width||30)*(1.3+Math.sin(at*45)*.06);authored(p,'energy-beam-authored',ox+Math.cos(angle)*(length*.5+18),oy+Math.sin(angle)*(length*.5+18),length,width,angle,fade);}
-function drawProtection(p,hero,cell,x,y,t,strength=1){
+function drawProtection(p,hero,cell,x,y,t,strength=1){if(hero===7)return;
  if(hero===1)return;
  const pulse=1+Math.sin(t*5)*.045,fade=Math.min(1,t*5,Math.max(0,(1.65-t)*3))*strength;if(fade<=0)return;
  // Armor fragments assemble in front of the body; no enclosing polygon.
@@ -100,7 +100,7 @@ function marineFX(p,f,t){
  p.restore();return true;
 }
 function draw(p,f,t,D){
- if(marineFX(p,f,t))return true;
+ if(root.RPG_CHEONBIN_FX?.draw(p,f,t,D))return true;
  if(root.RPG_WARRIOR_FX?.draw(p,f,t))return true;
  if(root.RPG_BARD_FX?.draw(p,f,t))return true;
  if(t<0||t>4.2)return true;

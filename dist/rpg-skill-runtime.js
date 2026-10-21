@@ -113,6 +113,7 @@ P.tickTechniques=function(dt){const c=this.c,undead=c.devices.filter(p=>p.undead
 P.promote=function(cell){const result=old.promote.call(this,cell);if(result&&this.c){this.c.pending=[];this.c.friendly=[];this.c.techZones=[];this.c.devices=[];this.c.mines=[];this.c.buffs={};this.c.meters={combo:0,blood:0,soul:0,heat:0,revenge:0,spellbullet:0,ammo:6};this.c.skillTimer=0;this.c.extraTimers=[0,0,0];}return result;};
 if(typeof module!=='undefined')require('./rpg-bard-runtime.js')(E);else root.RPG_BARD_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-warrior-runtime.js')(E);else root.RPG_WARRIOR_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-cheonbin-runtime.js')(E);else root.RPG_CHEONBIN_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);

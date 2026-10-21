@@ -10578,14 +10578,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-196",
-      "description": "0.16초 간격 2회 · 타격당 90%",
+      "description": "0.16초 간격으로 110% 주먹 2회",
       "actions": [
         {
-          "op": "volley",
-          "count": 2,
-          "power": 0.9,
-          "gap": 0.16,
-          "shape": "single"
+          "op": "cheonbin-kit",
+          "kind": "double-jab",
+          "target": "single",
+          "range": 125,
+          "description": "0.16초 간격으로 110% 주먹 2회"
         }
       ],
       "fx": {
@@ -10596,16 +10596,16 @@
         "recipe": 196,
         "choreography": [
           {
-            "op": "volley",
-            "count": 2,
-            "power": 0.9,
-            "gap": 0.16,
-            "shape": "single"
+            "op": "cheonbin-kit",
+            "kind": "double-jab",
+            "target": "single",
+            "range": 125,
+            "description": "0.16초 간격으로 110% 주먹 2회"
           }
         ],
         "rays": 9,
         "rotation": 52,
-        "shape": "volley"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10630,15 +10630,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-197",
-      "description": "근접 단일 210% 타격 / 적 밀어내기 70 · 보스는 거리 감소",
+      "description": "240% 발차기 · 일반 적 80 밀어내기",
       "actions": [
         {
-          "op": "hit",
-          "power": 2.1
-        },
-        {
-          "op": "knock",
-          "distance": 70
+          "op": "cheonbin-kit",
+          "kind": "front-kick",
+          "target": "single",
+          "range": 125,
+          "description": "240% 발차기 · 일반 적 80 밀어내기"
         }
       ],
       "fx": {
@@ -10649,17 +10648,16 @@
         "recipe": 197,
         "choreography": [
           {
-            "op": "hit",
-            "power": 2.1
-          },
-          {
-            "op": "knock",
-            "distance": 70
+            "op": "cheonbin-kit",
+            "kind": "front-kick",
+            "target": "single",
+            "range": 125,
+            "description": "240% 발차기 · 일반 적 80 밀어내기"
           }
         ],
         "rays": 10,
         "rotation": 89,
-        "shape": "hit+knock"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10684,13 +10682,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-198",
-      "description": "8초 분노 획득량 50% 증가",
+      "description": "8초 동안 기본공격 분노 획득 60% 증가",
       "actions": [
         {
-          "op": "buff",
-          "type": "rageGain",
-          "value": 0.5,
-          "duration": 8
+          "op": "cheonbin-kit",
+          "kind": "combat-breath",
+          "target": "self",
+          "range": 125,
+          "description": "8초 동안 기본공격 분노 획득 60% 증가"
         }
       ],
       "fx": {
@@ -10701,15 +10700,16 @@
         "recipe": 198,
         "choreography": [
           {
-            "op": "buff",
-            "type": "rageGain",
-            "value": 0.5,
-            "duration": 8
+            "op": "cheonbin-kit",
+            "kind": "combat-breath",
+            "target": "self",
+            "range": 125,
+            "description": "8초 동안 기본공격 분노 획득 60% 증가"
           }
         ],
         "rays": 11,
         "rotation": 126,
-        "shape": "buff"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10734,11 +10734,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-199",
-      "description": "근접 단일 600% 타격",
+      "description": "0.5초 주먹을 모은 뒤 단일 850% 정권",
       "actions": [
         {
-          "op": "hit",
-          "power": 6
+          "op": "cheonbin-kit",
+          "kind": "straight-finish",
+          "target": "single",
+          "range": 125,
+          "description": "0.5초 주먹을 모은 뒤 단일 850% 정권"
         }
       ],
       "fx": {
@@ -10749,13 +10752,16 @@
         "recipe": 199,
         "choreography": [
           {
-            "op": "hit",
-            "power": 6
+            "op": "cheonbin-kit",
+            "kind": "straight-finish",
+            "target": "single",
+            "range": 125,
+            "description": "0.5초 주먹을 모은 뒤 단일 850% 정권"
           }
         ],
         "rays": 12,
         "rotation": 163,
-        "shape": "hit"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10776,18 +10782,18 @@
       },
       "cost": 0,
       "cooldown": 5.6000000000000005,
-      "range": 460,
+      "range": 400,
       "radius": 140,
-      "target": "area",
+      "target": "single",
       "effectType": "recipe-200",
-      "description": "0.25초 준비 후 길이 480, 폭 60 직선 250% 관통",
+      "description": "실제로 날아가는 기탄 · 첫 적 충돌 시 280%",
       "actions": [
         {
-          "op": "beam",
-          "power": 2.5,
-          "width": 30,
-          "range": 480,
-          "delay": 0.25
+          "op": "cheonbin-kit",
+          "kind": "qi-orb",
+          "target": "single",
+          "range": 400,
+          "description": "실제로 날아가는 기탄 · 첫 적 충돌 시 280%"
         }
       ],
       "fx": {
@@ -10798,16 +10804,16 @@
         "recipe": 200,
         "choreography": [
           {
-            "op": "beam",
-            "power": 2.5,
-            "width": 30,
-            "range": 480,
-            "delay": 0.25
+            "op": "cheonbin-kit",
+            "kind": "qi-orb",
+            "target": "single",
+            "range": 400,
+            "description": "실제로 날아가는 기탄 · 첫 적 충돌 시 280%"
           }
         ],
         "rays": 5,
         "rotation": 20,
-        "shape": "beam"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10832,12 +10838,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-201",
-      "description": "3초 방어 · 받는 피해 65% 감소, 막은 피해 반격 축적",
+      "description": "2.5초 피해 55% 감소 · 가까운 공격자에게 200% 반격",
       "actions": [
         {
-          "op": "guard",
-          "value": 0.65,
-          "duration": 3
+          "op": "cheonbin-kit",
+          "kind": "qi-parry",
+          "target": "self",
+          "range": 125,
+          "description": "2.5초 피해 55% 감소 · 가까운 공격자에게 200% 반격"
         }
       ],
       "fx": {
@@ -10848,14 +10856,16 @@
         "recipe": 201,
         "choreography": [
           {
-            "op": "guard",
-            "value": 0.65,
-            "duration": 3
+            "op": "cheonbin-kit",
+            "kind": "qi-parry",
+            "target": "self",
+            "range": 125,
+            "description": "2.5초 피해 55% 감소 · 가까운 공격자에게 200% 반격"
           }
         ],
         "rays": 6,
         "rotation": 57,
-        "shape": "guard"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10880,13 +10890,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-202",
-      "description": "9초 분노 획득량 80% 증가",
+      "description": "6초간 기본공격마다 기맥 1중첩 · 최대 4중첩, 다음 기탄·충격파 강화",
       "actions": [
         {
-          "op": "buff",
-          "type": "rageGain",
-          "value": 0.8,
-          "duration": 9
+          "op": "cheonbin-kit",
+          "kind": "qi-breath",
+          "target": "self",
+          "range": 125,
+          "description": "6초간 기본공격마다 기맥 1중첩 · 최대 4중첩, 다음 기탄·충격파 강화"
         }
       ],
       "fx": {
@@ -10897,15 +10908,16 @@
         "recipe": 202,
         "choreography": [
           {
-            "op": "buff",
-            "type": "rageGain",
-            "value": 0.8,
-            "duration": 9
+            "op": "cheonbin-kit",
+            "kind": "qi-breath",
+            "target": "self",
+            "range": 125,
+            "description": "6초간 기본공격마다 기맥 1중첩 · 최대 4중첩, 다음 기탄·충격파 강화"
           }
         ],
         "rays": 7,
         "rotation": 94,
-        "shape": "buff"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10926,18 +10938,18 @@
       },
       "cost": 100,
       "cooldown": 0,
-      "range": 460,
+      "range": 150,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-203",
-      "description": "0.7초 준비 후 길이 480, 폭 110 직선 600% 관통",
+      "description": "자신 중심으로 퍼지는 충격파 · 반경 170에 650%",
       "actions": [
         {
-          "op": "beam",
-          "power": 6,
-          "width": 55,
-          "range": 480,
-          "delay": 0.7
+          "op": "cheonbin-kit",
+          "kind": "qi-burst",
+          "target": "area",
+          "range": 150,
+          "description": "자신 중심으로 퍼지는 충격파 · 반경 170에 650%"
         }
       ],
       "fx": {
@@ -10948,16 +10960,16 @@
         "recipe": 203,
         "choreography": [
           {
-            "op": "beam",
-            "power": 6,
-            "width": 55,
-            "range": 480,
-            "delay": 0.7
+            "op": "cheonbin-kit",
+            "kind": "qi-burst",
+            "target": "area",
+            "range": 150,
+            "description": "자신 중심으로 퍼지는 충격파 · 반경 170에 650%"
           }
         ],
         "rays": 8,
         "rotation": 131,
-        "shape": "beam"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -10978,22 +10990,18 @@
       },
       "cost": 5,
       "cooldown": 5.6000000000000005,
-      "range": 460,
+      "range": 400,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-204",
-      "description": "root 1중첩 부여 · 최대 5중첩, 8초 / 근접 단일 160% 타격",
+      "description": "대상 하나를 덩굴로 감아 180% 피해 · 일반 적 2초 구속",
       "actions": [
         {
-          "op": "status",
-          "type": "root",
-          "power": 0,
-          "stacks": 1,
-          "duration": 8
-        },
-        {
-          "op": "hit",
-          "power": 1.6
+          "op": "cheonbin-kit",
+          "kind": "vine-grab",
+          "target": "single",
+          "range": 400,
+          "description": "대상 하나를 덩굴로 감아 180% 피해 · 일반 적 2초 구속"
         }
       ],
       "fx": {
@@ -11004,20 +11012,16 @@
         "recipe": 204,
         "choreography": [
           {
-            "op": "status",
-            "type": "root",
-            "power": 0,
-            "stacks": 1,
-            "duration": 8
-          },
-          {
-            "op": "hit",
-            "power": 1.6
+            "op": "cheonbin-kit",
+            "kind": "vine-grab",
+            "target": "single",
+            "range": 400,
+            "description": "대상 하나를 덩굴로 감아 180% 피해 · 일반 적 2초 구속"
           }
         ],
         "rays": 9,
         "rotation": 168,
-        "shape": "status+hit"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11038,18 +11042,18 @@
       },
       "cost": 7,
       "cooldown": 7.9,
-      "range": 460,
+      "range": 350,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-205",
-      "description": "덩굴 지대 8초 · 반경 120 · 0.8초마다 공격력 35% 피해",
+      "description": "대상 위치 가시 함정 · 6초간 접근한 적마다 1회 220%",
       "actions": [
         {
-          "op": "zone",
-          "type": "roots",
-          "power": 0.35,
-          "radius": 120,
-          "duration": 8
+          "op": "cheonbin-kit",
+          "kind": "thorn-trap",
+          "target": "area",
+          "range": 350,
+          "description": "대상 위치 가시 함정 · 6초간 접근한 적마다 1회 220%"
         }
       ],
       "fx": {
@@ -11060,16 +11064,16 @@
         "recipe": 205,
         "choreography": [
           {
-            "op": "zone",
-            "type": "roots",
-            "power": 0.35,
-            "radius": 120,
-            "duration": 8
+            "op": "cheonbin-kit",
+            "kind": "thorn-trap",
+            "target": "area",
+            "range": 350,
+            "description": "대상 위치 가시 함정 · 6초간 접근한 적마다 1회 220%"
           }
         ],
         "rays": 10,
         "rotation": 25,
-        "shape": "zone"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11094,11 +11098,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-206",
-      "description": "최대 체력 15% 실제 회복",
+      "description": "4초간 최대 체력 5%씩 총 20% 회복",
       "actions": [
         {
-          "op": "heal",
-          "value": 0.15
+          "op": "cheonbin-kit",
+          "kind": "leaf-heal",
+          "target": "self",
+          "range": 125,
+          "description": "4초간 최대 체력 5%씩 총 20% 회복"
         }
       ],
       "fx": {
@@ -11109,13 +11116,16 @@
         "recipe": 206,
         "choreography": [
           {
-            "op": "heal",
-            "value": 0.15
+            "op": "cheonbin-kit",
+            "kind": "leaf-heal",
+            "target": "self",
+            "range": 125,
+            "description": "4초간 최대 체력 5%씩 총 20% 회복"
           }
         ],
         "rays": 11,
         "rotation": 62,
-        "shape": "heal"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11140,14 +11150,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-207",
-      "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70%",
+      "description": "12초 동안 늑대 2마리 소환 · 각각 공격력 80%",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "beast",
-          "count": 2,
-          "power": 0.7,
-          "duration": 12
+          "op": "cheonbin-kit",
+          "kind": "wolf-call",
+          "target": "self",
+          "range": 125,
+          "description": "12초 동안 늑대 2마리 소환 · 각각 공격력 80%"
         }
       ],
       "fx": {
@@ -11158,16 +11168,16 @@
         "recipe": 207,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "beast",
-            "count": 2,
-            "power": 0.7,
-            "duration": 12
+            "op": "cheonbin-kit",
+            "kind": "wolf-call",
+            "target": "self",
+            "range": 125,
+            "description": "12초 동안 늑대 2마리 소환 · 각각 공격력 80%"
           }
         ],
         "rays": 12,
         "rotation": 99,
-        "shape": "pet"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11192,19 +11202,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-208",
-      "description": "7초 충전 56% 증가 / 7초 분노 획득량 70% 증가",
+      "description": "최대 10초 유지 · 다음 기공포·기공탄·천공포 피해 70% 증가, 사용 후 소모",
       "actions": [
         {
-          "op": "buff",
-          "type": "charge",
-          "value": 0.55,
-          "duration": 7
-        },
-        {
-          "op": "buff",
-          "type": "rageGain",
-          "value": 0.7,
-          "duration": 7
+          "op": "cheonbin-kit",
+          "kind": "cannon-charge",
+          "target": "self",
+          "range": 125,
+          "description": "최대 10초 유지 · 다음 기공포·기공탄·천공포 피해 70% 증가, 사용 후 소모"
         }
       ],
       "fx": {
@@ -11215,21 +11220,16 @@
         "recipe": 208,
         "choreography": [
           {
-            "op": "buff",
-            "type": "charge",
-            "value": 0.55,
-            "duration": 7
-          },
-          {
-            "op": "buff",
-            "type": "rageGain",
-            "value": 0.7,
-            "duration": 7
+            "op": "cheonbin-kit",
+            "kind": "cannon-charge",
+            "target": "self",
+            "range": 125,
+            "description": "최대 10초 유지 · 다음 기공포·기공탄·천공포 피해 70% 증가, 사용 후 소모"
           }
         ],
         "rays": 5,
         "rotation": 136,
-        "shape": "buff+buff"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11254,14 +11254,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-209",
-      "description": "0.85초 준비 후 길이 480, 폭 60 직선 500% 관통",
+      "description": "0.45초 조준 후 폭 28의 가느다란 관통 광선 · 500%",
       "actions": [
         {
-          "op": "beam",
-          "power": 5,
-          "width": 30,
-          "range": 480,
-          "delay": 0.85
+          "op": "cheonbin-kit",
+          "kind": "needle-ray",
+          "target": "area",
+          "range": 460,
+          "description": "0.45초 조준 후 폭 28의 가느다란 관통 광선 · 500%"
         }
       ],
       "fx": {
@@ -11272,16 +11272,16 @@
         "recipe": 209,
         "choreography": [
           {
-            "op": "beam",
-            "power": 5,
-            "width": 30,
-            "range": 480,
-            "delay": 0.85
+            "op": "cheonbin-kit",
+            "kind": "needle-ray",
+            "target": "area",
+            "range": 460,
+            "description": "0.45초 조준 후 폭 28의 가느다란 관통 광선 · 500%"
           }
         ],
         "rays": 6,
         "rotation": 173,
-        "shape": "beam"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11302,16 +11302,18 @@
       },
       "cost": 0,
       "cooldown": 13.8,
-      "range": 460,
+      "range": 420,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-210",
-      "description": "직선 투사체 400% · 실제 충돌 시 피해",
+      "description": "느린 추적 기공탄 · 적중 시 450% 및 주변 반경 75에 150%",
       "actions": [
         {
-          "op": "missile",
-          "power": 4,
-          "speed": 240
+          "op": "cheonbin-kit",
+          "kind": "compressed-orb",
+          "target": "single",
+          "range": 420,
+          "description": "느린 추적 기공탄 · 적중 시 450% 및 주변 반경 75에 150%"
         }
       ],
       "fx": {
@@ -11322,14 +11324,16 @@
         "recipe": 210,
         "choreography": [
           {
-            "op": "missile",
-            "power": 4,
-            "speed": 240
+            "op": "cheonbin-kit",
+            "kind": "compressed-orb",
+            "target": "single",
+            "range": 420,
+            "description": "느린 추적 기공탄 · 적중 시 450% 및 주변 반경 75에 150%"
           }
         ],
         "rays": 7,
         "rotation": 30,
-        "shape": "missile"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11354,14 +11358,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-211",
-      "description": "1.2초 준비 후 길이 480, 폭 140 직선 1200% 관통",
+      "description": "1초 충전 후 1.2초간 전방 굵은 지속포 · 6회 각 230%",
       "actions": [
         {
-          "op": "beam",
-          "power": 12,
-          "width": 70,
-          "range": 480,
-          "delay": 1.2
+          "op": "cheonbin-kit",
+          "kind": "sky-cannon",
+          "target": "area",
+          "range": 460,
+          "description": "1초 충전 후 1.2초간 전방 굵은 지속포 · 6회 각 230%"
         }
       ],
       "fx": {
@@ -11372,16 +11376,16 @@
         "recipe": 211,
         "choreography": [
           {
-            "op": "beam",
-            "power": 12,
-            "width": 70,
-            "range": 480,
-            "delay": 1.2
+            "op": "cheonbin-kit",
+            "kind": "sky-cannon",
+            "target": "area",
+            "range": 460,
+            "description": "1초 충전 후 1.2초간 전방 굵은 지속포 · 6회 각 230%"
           }
         ],
         "rays": 8,
         "rotation": 67,
-        "shape": "beam"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11402,19 +11406,18 @@
       },
       "cost": 0,
       "cooldown": 6,
-      "range": 320,
+      "range": 300,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-212",
-      "description": "앞으로 최대 180 이동 · 경로 충돌 검사 / 근접 단일 320% 타격",
+      "description": "최대 180 접근 후 가까운 대상에게 340% 주먹",
       "actions": [
         {
-          "op": "dash",
-          "distance": 180
-        },
-        {
-          "op": "hit",
-          "power": 3.2
+          "op": "cheonbin-kit",
+          "kind": "marine-rush",
+          "target": "single",
+          "range": 300,
+          "description": "최대 180 접근 후 가까운 대상에게 340% 주먹"
         }
       ],
       "fx": {
@@ -11425,17 +11428,16 @@
         "recipe": 212,
         "choreography": [
           {
-            "op": "dash",
-            "distance": 180
-          },
-          {
-            "op": "hit",
-            "power": 3.2
+            "op": "cheonbin-kit",
+            "kind": "marine-rush",
+            "target": "single",
+            "range": 300,
+            "description": "최대 180 접근 후 가까운 대상에게 340% 주먹"
           }
         ],
         "rays": 9,
         "rotation": 104,
-        "shape": "dash+hit"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11460,15 +11462,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-213",
-      "description": "근접 단일 280% 타격 / 일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가",
+      "description": "대검 300% 찌르기 · 일반 적 1.2초 경직, 보스 기술 0.35초 지연",
       "actions": [
         {
-          "op": "hit",
-          "power": 2.8
-        },
-        {
-          "op": "interrupt",
-          "duration": 1.2
+          "op": "cheonbin-kit",
+          "kind": "knife-suppress",
+          "target": "single",
+          "range": 125,
+          "description": "대검 300% 찌르기 · 일반 적 1.2초 경직, 보스 기술 0.35초 지연"
         }
       ],
       "fx": {
@@ -11479,17 +11480,16 @@
         "recipe": 213,
         "choreography": [
           {
-            "op": "hit",
-            "power": 2.8
-          },
-          {
-            "op": "interrupt",
-            "duration": 1.2
+            "op": "cheonbin-kit",
+            "kind": "knife-suppress",
+            "target": "single",
+            "range": 125,
+            "description": "대검 300% 찌르기 · 일반 적 1.2초 경직, 보스 기술 0.35초 지연"
           }
         ],
         "rays": 10,
         "rotation": 141,
-        "shape": "hit+interrupt"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11514,15 +11514,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-214",
-      "description": "6초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적 / 막은 피해를 다음 공격 스킬에 추가 · 최대 공격력 500%",
+      "description": "6초 피해 55% 감소 · 막은 피해를 다음 공격 스킬에 추가, 최대 공격력 500%",
       "actions": [
         {
-          "op": "guard",
-          "value": 0.55,
-          "duration": 6
-        },
-        {
-          "op": "marine-resolve"
+          "op": "cheonbin-kit",
+          "kind": "marine-resolve",
+          "target": "self",
+          "range": 125,
+          "description": "6초 피해 55% 감소 · 막은 피해를 다음 공격 스킬에 추가, 최대 공격력 500%"
         }
       ],
       "fx": {
@@ -11533,17 +11532,16 @@
         "recipe": 214,
         "choreography": [
           {
-            "op": "guard",
-            "value": 0.55,
-            "duration": 6
-          },
-          {
-            "op": "marine-resolve"
+            "op": "cheonbin-kit",
+            "kind": "marine-resolve",
+            "target": "self",
+            "range": 125,
+            "description": "6초 피해 55% 감소 · 막은 피해를 다음 공격 스킬에 추가, 최대 공격력 500%"
           }
         ],
         "rays": 11,
         "rotation": 178,
-        "shape": "guard+marine-resolve"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11564,25 +11562,18 @@
       },
       "cost": 100,
       "cooldown": 0,
-      "range": 320,
-      "radius": 145,
+      "range": 240,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-215",
-      "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 거리 145 전방 부채꼴 750% / 적 밀어내기 100 · 보스는 거리 감소",
+      "description": "전방 220을 돌파하며 충돌한 적에게 300% · 끝 지점 550% 내려찍기·밀쳐내기",
       "actions": [
         {
-          "op": "dash",
-          "distance": 240
-        },
-        {
-          "op": "cone",
-          "power": 7.5,
-          "radius": 145,
-          "angle": 1.25
-        },
-        {
-          "op": "knock",
-          "distance": 100
+          "op": "cheonbin-kit",
+          "kind": "landing-break",
+          "target": "area",
+          "range": 240,
+          "description": "전방 220을 돌파하며 충돌한 적에게 300% · 끝 지점 550% 내려찍기·밀쳐내기"
         }
       ],
       "fx": {
@@ -11593,23 +11584,16 @@
         "recipe": 215,
         "choreography": [
           {
-            "op": "dash",
-            "distance": 240
-          },
-          {
-            "op": "cone",
-            "power": 7.5,
-            "radius": 145,
-            "angle": 1.25
-          },
-          {
-            "op": "knock",
-            "distance": 100
+            "op": "cheonbin-kit",
+            "kind": "landing-break",
+            "target": "area",
+            "range": 240,
+            "description": "전방 220을 돌파하며 충돌한 적에게 300% · 끝 지점 550% 내려찍기·밀쳐내기"
           }
         ],
         "rays": 12,
         "rotation": 35,
-        "shape": "dash+cone+knock"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11630,24 +11614,18 @@
       },
       "cost": 5,
       "cooldown": 6,
-      "range": 320,
+      "range": 240,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-216",
-      "description": "늑대 8초 실제 변신 · 변신 중 기본공격만 가능 / 앞으로 최대 220 이동 · 경로 충돌 검사 / 근접 단일 350% 타격",
+      "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능",
       "actions": [
         {
-          "op": "shape-form",
-          "form": "wolf",
-          "duration": 8
-        },
-        {
-          "op": "dash",
-          "distance": 220
-        },
-        {
-          "op": "hit",
-          "power": 3.5
+          "op": "cheonbin-kit",
+          "kind": "wolf-form",
+          "target": "single",
+          "range": 240,
+          "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능"
         }
       ],
       "fx": {
@@ -11658,22 +11636,16 @@
         "recipe": 216,
         "choreography": [
           {
-            "op": "shape-form",
-            "form": "wolf",
-            "duration": 8
-          },
-          {
-            "op": "dash",
-            "distance": 220
-          },
-          {
-            "op": "hit",
-            "power": 3.5
+            "op": "cheonbin-kit",
+            "kind": "wolf-form",
+            "target": "single",
+            "range": 240,
+            "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능"
           }
         ],
         "rays": 5,
         "rotation": 72,
-        "shape": "shape-form+dash+hit"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11694,24 +11666,18 @@
       },
       "cost": 7,
       "cooldown": 8.3,
-      "range": 460,
-      "radius": 160,
+      "range": 160,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-217",
-      "description": "거리 160 전방 부채꼴 460% / root 1중첩 부여 · 최대 5중첩, 8초",
+      "description": "전방 160에 300% · 일반 적 1.5초 공포, 자신은 8초 공격속도 25% 증가",
       "actions": [
         {
-          "op": "cone",
-          "power": 4.6,
-          "radius": 160,
-          "angle": 1.25
-        },
-        {
-          "op": "status",
-          "type": "root",
-          "power": 0,
-          "stacks": 1,
-          "duration": 8
+          "op": "cheonbin-kit",
+          "kind": "beast-roar",
+          "target": "area",
+          "range": 160,
+          "description": "전방 160에 300% · 일반 적 1.5초 공포, 자신은 8초 공격속도 25% 증가"
         }
       ],
       "fx": {
@@ -11722,22 +11688,16 @@
         "recipe": 217,
         "choreography": [
           {
-            "op": "cone",
-            "power": 4.6,
-            "radius": 160,
-            "angle": 1.25
-          },
-          {
-            "op": "status",
-            "type": "root",
-            "power": 0,
-            "stacks": 1,
-            "duration": 8
+            "op": "cheonbin-kit",
+            "kind": "beast-roar",
+            "target": "area",
+            "range": 160,
+            "description": "전방 160에 300% · 일반 적 1.5초 공포, 자신은 8초 공격속도 25% 증가"
           }
         ],
         "rays": 6,
         "rotation": 109,
-        "shape": "cone+status"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11762,16 +11722,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-218",
-      "description": "곰 10초 실제 변신 · 변신 중 기본공격만 가능 / 최대 체력 20% 보호막",
+      "description": "10초 곰 변신 · 체력 20% 보호막 · 변신 중 기본공격만 가능",
       "actions": [
         {
-          "op": "shape-form",
-          "form": "bear",
-          "duration": 10
-        },
-        {
-          "op": "shield",
-          "value": 0.2
+          "op": "cheonbin-kit",
+          "kind": "bear-form",
+          "target": "self",
+          "range": 125,
+          "description": "10초 곰 변신 · 체력 20% 보호막 · 변신 중 기본공격만 가능"
         }
       ],
       "fx": {
@@ -11782,18 +11740,16 @@
         "recipe": 218,
         "choreography": [
           {
-            "op": "shape-form",
-            "form": "bear",
-            "duration": 10
-          },
-          {
-            "op": "shield",
-            "value": 0.2
+            "op": "cheonbin-kit",
+            "kind": "bear-form",
+            "target": "self",
+            "range": 125,
+            "description": "10초 곰 변신 · 체력 20% 보호막 · 변신 중 기본공격만 가능"
           }
         ],
         "rays": 7,
         "rotation": 146,
-        "shape": "shape-form+shield"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11814,29 +11770,18 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 230,
+      "range": 140,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-219",
-      "description": "곰 14초 실제 변신 · 변신 중 기본공격만 가능 / 0초 뒤 반경 230에 1100% 착탄 피해 / root 1중첩 부여 · 최대 5중첩, 8초",
+      "description": "자신 주변 반경 150에 750% 강타 후 14초 태고의 곰 변신 · 강화 기본공격만 가능",
       "actions": [
         {
-          "op": "shape-form",
-          "form": "bear",
-          "duration": 14
-        },
-        {
-          "op": "blast",
-          "power": 11,
-          "radius": 230,
-          "delay": 0
-        },
-        {
-          "op": "status",
-          "type": "root",
-          "power": 0,
-          "stacks": 1,
-          "duration": 8
+          "op": "cheonbin-kit",
+          "kind": "primal-form",
+          "target": "area",
+          "range": 140,
+          "description": "자신 주변 반경 150에 750% 강타 후 14초 태고의 곰 변신 · 강화 기본공격만 가능"
         }
       ],
       "fx": {
@@ -11847,27 +11792,16 @@
         "recipe": 219,
         "choreography": [
           {
-            "op": "shape-form",
-            "form": "bear",
-            "duration": 14
-          },
-          {
-            "op": "blast",
-            "power": 11,
-            "radius": 230,
-            "delay": 0
-          },
-          {
-            "op": "status",
-            "type": "root",
-            "power": 0,
-            "stacks": 1,
-            "duration": 8
+            "op": "cheonbin-kit",
+            "kind": "primal-form",
+            "target": "area",
+            "range": 140,
+            "description": "자신 주변 반경 150에 750% 강타 후 14초 태고의 곰 변신 · 강화 기본공격만 가능"
           }
         ],
         "rays": 8,
         "rotation": 3,
-        "shape": "shape-form+blast+status"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11888,18 +11822,18 @@
       },
       "cost": 5,
       "cooldown": 6,
-      "range": 460,
+      "range": 380,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-220",
-      "description": "덩굴 지대 8초 · 반경 140 · 0.8초마다 공격력 20% 피해",
+      "description": "반경 145의 적을 실제 구속 · 일반 적 3초, 보스 0.6초 · 200%",
       "actions": [
         {
-          "op": "zone",
-          "type": "roots",
-          "power": 0.2,
-          "radius": 140,
-          "duration": 8
+          "op": "cheonbin-kit",
+          "kind": "vine-prison",
+          "target": "area",
+          "range": 380,
+          "description": "반경 145의 적을 실제 구속 · 일반 적 3초, 보스 0.6초 · 200%"
         }
       ],
       "fx": {
@@ -11910,16 +11844,16 @@
         "recipe": 220,
         "choreography": [
           {
-            "op": "zone",
-            "type": "roots",
-            "power": 0.2,
-            "radius": 140,
-            "duration": 8
+            "op": "cheonbin-kit",
+            "kind": "vine-prison",
+            "target": "area",
+            "range": 380,
+            "description": "반경 145의 적을 실제 구속 · 일반 적 3초, 보스 0.6초 · 200%"
           }
         ],
         "rays": 9,
         "rotation": 40,
-        "shape": "zone"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11944,14 +11878,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-221",
-      "description": "가시 식물 3마리 실제 소환 · 18초 · 공격력 60%",
+      "description": "18초 가시 식물 3개 설치 · 움직이지 않고 가시탄 발사, 사거리 340",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "plant",
-          "count": 3,
-          "power": 0.6,
-          "duration": 18
+          "op": "cheonbin-kit",
+          "kind": "thorn-sentries",
+          "target": "self",
+          "range": 125,
+          "description": "18초 가시 식물 3개 설치 · 움직이지 않고 가시탄 발사, 사거리 340"
         }
       ],
       "fx": {
@@ -11962,16 +11896,16 @@
         "recipe": 221,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "plant",
-            "count": 3,
-            "power": 0.6,
-            "duration": 18
+            "op": "cheonbin-kit",
+            "kind": "thorn-sentries",
+            "target": "self",
+            "range": 125,
+            "description": "18초 가시 식물 3개 설치 · 움직이지 않고 가시탄 발사, 사거리 340"
           }
         ],
         "rays": 10,
         "rotation": 77,
-        "shape": "pet"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -11992,18 +11926,18 @@
       },
       "cost": 8,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 160,
+      "range": 125,
+      "radius": 140,
       "target": "self",
       "effectType": "recipe-222",
-      "description": "성역 지대 12초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
+      "description": "자신 위치 꽃밭 12초 · 범위 안에서 매초 최대 체력 2% 회복 · 적 피해 없음",
       "actions": [
         {
-          "op": "zone",
-          "type": "sanctuary",
-          "power": 0.35,
-          "radius": 160,
-          "duration": 12
+          "op": "cheonbin-kit",
+          "kind": "flower-garden",
+          "target": "self",
+          "range": 125,
+          "description": "자신 위치 꽃밭 12초 · 범위 안에서 매초 최대 체력 2% 회복 · 적 피해 없음"
         }
       ],
       "fx": {
@@ -12014,16 +11948,16 @@
         "recipe": 222,
         "choreography": [
           {
-            "op": "zone",
-            "type": "sanctuary",
-            "power": 0.35,
-            "radius": 160,
-            "duration": 12
+            "op": "cheonbin-kit",
+            "kind": "flower-garden",
+            "target": "self",
+            "range": 125,
+            "description": "자신 위치 꽃밭 12초 · 범위 안에서 매초 최대 체력 2% 회복 · 적 피해 없음"
           }
         ],
         "rays": 11,
         "rotation": 114,
-        "shape": "zone"
+        "shape": "cheonbin-kit"
       }
     },
     {
@@ -12044,25 +11978,18 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 220,
-      "target": "self",
+      "range": 350,
+      "radius": 140,
+      "target": "area",
       "effectType": "recipe-223",
-      "description": "가시 식물 5마리 실제 소환 · 20초 · 공격력 90% / 덩굴 지대 12초 · 반경 220 · 0.8초마다 공격력 65% 피해",
+      "description": "대상 위치에 거대 고목 1그루 · 16초간 2초마다 주변 210에 220% 뿌리 강타",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "plant",
-          "count": 5,
-          "power": 0.9,
-          "duration": 20
-        },
-        {
-          "op": "zone",
-          "type": "roots",
-          "power": 0.65,
-          "radius": 220,
-          "duration": 12
+          "op": "cheonbin-kit",
+          "kind": "ancient-tree",
+          "target": "area",
+          "range": 350,
+          "description": "대상 위치에 거대 고목 1그루 · 16초간 2초마다 주변 210에 220% 뿌리 강타"
         }
       ],
       "fx": {
@@ -12073,23 +12000,16 @@
         "recipe": 223,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "plant",
-            "count": 5,
-            "power": 0.9,
-            "duration": 20
-          },
-          {
-            "op": "zone",
-            "type": "roots",
-            "power": 0.65,
-            "radius": 220,
-            "duration": 12
+            "op": "cheonbin-kit",
+            "kind": "ancient-tree",
+            "target": "area",
+            "range": 350,
+            "description": "대상 위치에 거대 고목 1그루 · 16초간 2초마다 주변 210에 220% 뿌리 강타"
           }
         ],
         "rays": 12,
         "rotation": 151,
-        "shape": "pet+zone"
+        "shape": "cheonbin-kit"
       }
     },
     {
