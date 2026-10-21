@@ -62,3 +62,8 @@ body.playing #game{height:var(--game-height,100dvh);bottom:auto}
  body.playing .stage-progress{bottom:calc(110px + env(safe-area-inset-bottom))}
  body.playing .joystick{width:76px;height:76px;bottom:calc(54px + env(safe-area-inset-bottom))}
 }
+
+body.playing .boss-hud{top:calc(var(--hud-bottom,180px) + 12px)}
+body.playing.hero-expanded .boss-hud{visibility:hidden}
+body.playing.hero-expanded .hero-panel>.hud-toggle{position:static;width:100%;margin:12px 0 0}
+body.playing.hero-expanded .hero-panel{max-height:calc(var(--game-height,100dvh) - 80px)}
