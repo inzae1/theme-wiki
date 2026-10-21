@@ -1,4 +1,4 @@
-import pathlib,json,re
+import pathlib,json,re,copy
 from PIL import Image
 root=pathlib.Path(__file__).resolve().parents[1];assets=root/'dist/rpg-pixels-v2'
 c=json.loads((assets/'classes.json').read_text())['characters'];w=json.loads((assets/'dungeons.json').read_text())['regions'];items=json.loads((assets/'items.json').read_text())['items']
@@ -39,6 +39,17 @@ family=['sword','warrior','mage','knight','rogue','smith','bard','fighter','arch
 for p in c:p.update({'color':colors[p['id']],'family':family[p['id']]})
 for i,r in enumerate(w):r['index']=i;r['map']='dungeons/'+r['id']+'.png'
 combat=[{'hp':hp,'attack':atk,'armor':arm,'speed':speed,'interval':interval,'crit':crit,'dodge':dodge,'evadeBoss':evade} for hp,atk,arm,speed,interval,crit,dodge,evade in [(1.08,1.04,1,64,.90,.12,.07,False),(1.18,1.08,.9,65,.93,.10,.05,False),(.92,1.10,.85,62,1.0,.14,.07,True),(1.15,1.0,1.2,62,.97,.09,.06,False),(.90,1.0,.85,74,.82,.16,.13,True),(1.08,.98,1.15,60,.96,.10,.07,False),(.98,1.0,.95,69,.87,.12,.09,False),(1.15,1.02,1.05,67,.87,.11,.07,False),(.95,1.06,.9,68,.96,.18,.11,True),(.94,1.0,.9,70,.80,.13,.08,False),(1.10,.96,1.1,61,.98,.09,.07,False),(.98,1.04,.95,64,1.0,.12,.08,True)]]
-data={'combat':combat,'characters':c,'regions':w,'items':items,'frames':frames}
+# Ten late-game chapters reuse normalized art with new encounters and atmosphere.
+expansions=[('whisper-forest','속삭임의 숲',0,'#183256','mist',['밤안개 슬라임','가시 멧돼지','그늘 고블린'],['밤뿌리 수호자','안개 발톱','가시왕','그늘 추적자','달그림자 군주']),('crimson-mine','붉은 폐광',1,'#652222','embers',['핏빛 광부','적철 박쥐','붉은 광석충'],['혈광 골렘','붉은 채굴왕','폭주 발파병','용광로 수호자','적철의 심장']),('spectral-prison','망령 감옥',2,'#34275b','mist',['탈옥 망령','구속의 해골','감시 사제'],['쇠사슬 집행관','망령 간수장','철창의 군주','환영 심문관','영혼 교도소장']),('ash-desert','잿빛 사막',3,'#6a4633','embers',['재의 전갈','갈라진 모래병','잿바람 도적'],['재폭풍 왕','검은 모래 거인','유리송곳니','몰락한 태양왕','사구의 심판자']),('abyss-trench','심연 해구',4,'#102550','rain',['심해 촉수','검은 산호병','심연 해적'],['심연의 포식자','검은 파도 군주','산호 묘지기','해구 사냥꾼','크라켄의 사도']),('glacier-fort','빙하 요새',5,'#243e66','snow',['서리 기사','빙하 늑대','설원 감시자'],['빙벽 거인','서리갑옷 장군','설맹의 포식자','얼음 감옥지기','빙하의 군주']),('poison-marsh','독안개 습지',0,'#354527','mist',['독안개 슬라임','부패 멧돼지','역병 고블린'],['부패한 고목','독늪 추적자','포자 군주','역병 사냥꾼','안개의 재앙']),('molten-citadel','용암 성채',2,'#662616','embers',['용암 기사','재의 망령','흑요석 사제'],['용광 집행관','화염 갑주장','흑요석 수호자','타오르는 환영','재앙의 대공']),('storm-strait','폭풍 해협',4,'#183c50','rain',['폭풍 해적','번개 산호병','돌풍 촉수'],['폭풍의 포식자','번개 파도왕','난파선 군주','해협 추격자','폭풍의 심장']),('final-tundra','종언의 설원',5,'#28203e','snow',['종말의 기사','흑설 늑대','공허 감시자'],['흑빙 거인','종언의 군단장','공허의 포식자','영원의 감옥지기','끝없는 겨울'])]
+patterns=['돌진 후 내려찍기','독 장판을 연속 생성','환영으로 교란 후 흡수','파편을 연속 투척','흡수와 도약을 교대로 사용']
+for slug,name,base,tint,weather,mobs,bosses in expansions:
+ region=copy.deepcopy(w[base]);region.update({'id':slug,'name':name,'index':len(w),'collisionZone':base,'tint':tint,'weather':weather})
+ region['monsters']=[m for m in region['monsters'] if not m.get('boss')]
+ for i,m in enumerate(region['monsters']):m.update({'id':slug+'-mob-'+str(i),'name':mobs[i]})
+ for i,b in enumerate(region['bosses']):b.update({'id':slug+'-boss-'+str(i),'name':bosses[i],'role':patterns[i]})
+ w.append(region)
+skillFile=root/'data/rpg-skill-concepts.json'
+skills=json.loads(skillFile.read_text())['skills'] if skillFile.exists() else []
+data={'skills':skills,'combat':combat,'characters':c,'regions':w,'items':items,'frames':frames}
 (root/'dist/rpg-data.js').write_text("'use strict';\nconst RPG_DATA="+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\nif(typeof module!=="undefined")module.exports=RPG_DATA;\n')
-print('Built RPG data: 84 forms, 48 enemies, 72 items and 204 sprite bounds')
+print('Built RPG data: 84 forms, 16 chapters, 80 bosses, 72 items and 204 sprite bounds')
