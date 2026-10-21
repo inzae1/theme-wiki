@@ -138,5 +138,44 @@
     ],
     "transparentRatio": 0.7469,
     "source": "generated for this project with built-in image generation"
+  },
+  "priest-wave-authored": {
+    "size": [
+      1774,
+      887
+    ],
+    "rect": [
+      27,
+      157,
+      1719,
+      602
+    ],
+    "source": "generated for this project with built-in image generation"
+  },
+  "highpriest-miracle-authored": {
+    "size": [
+      1312,
+      1199
+    ],
+    "rect": [
+      121,
+      18,
+      1070,
+      1166
+    ],
+    "source": "generated for this project with built-in image generation"
+  },
+  "exorcist-rite-authored": {
+    "size": [
+      1312,
+      1199
+    ],
+    "rect": [
+      163,
+      49,
+      1037,
+      1101
+    ],
+    "source": "generated for this project with built-in image generation"
   }
 }

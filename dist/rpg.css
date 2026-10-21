@@ -98,3 +98,7 @@ body.playing .battle-controls #mana-potion:before{background:radial-gradient(cir
 .next-stage{position:absolute;right:18px;bottom:190px;z-index:4;display:flex;align-items:center;gap:10px;padding:10px 14px;background:#263c27ed;border:1px solid #e0d48a;border-radius:9px;box-shadow:0 0 20px #c7cc4c22}.next-stage b{font-size:14px;color:#e6e9a9}.next-stage small{font-size:10px;color:#d9e2c6}@media(max-width:760px){.next-stage{right:10px;bottom:calc(252px + env(safe-area-inset-bottom));padding:8px 11px;gap:7px}.next-stage b{font-size:12px}.next-stage small{font-size:9px}}@media(orientation:landscape) and (max-height:500px){.next-stage{bottom:calc(140px + env(safe-area-inset-bottom));right:10px}}
 
 body.playing .battle-controls #mana-potion[hidden]{display:none!important}
+
+.potion-upgrade-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.potion-upgrade-grid .potion-upgrade{padding:18px 12px;border:1px solid var(--rarity);border-radius:12px;min-width:0}.potion-upgrade-grid .potion-upgrade>button{display:block;width:100%;margin:10px 0;font-size:11px}@media(max-width:600px){.potion-upgrade-grid{grid-template-columns:1fr}.potion-upgrade-grid .potion-upgrade{padding:16px 10px}body.playing .battle-controls #potion b{font-size:8px;line-height:1.2}}
+
+.slot-upgrades{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}.slot-upgrades button{padding:10px;font-size:12px}.slot-upgrades small{display:block;margin-top:4px;color:#b9c9ac;font-size:10px}
