@@ -1,0 +1,85 @@
+﻿캐릭터,단계,직업,무기,전직 전 직업,시트,시트 순서
+박종찬,시작,검사,한손검,,characters/jongchan.png,1
+박종찬,1차,검성,카타나,검사,characters/jongchan.png,2
+박종찬,1차,마검사,룬 대검,검사,characters/jongchan.png,3
+박종찬,2차,검귀,쌍도,검성,characters/jongchan.png,4
+박종찬,2차,수라,장도,검성,characters/jongchan.png,5
+박종찬,2차,룬나이트,룬 장검·룬 방패,마검사,characters/jongchan.png,6
+박종찬,2차,소울브링어,영혼 대검,마검사,characters/jongchan.png,7
+최현석,시작,전사,양손 도끼,,characters/hyunseok.png,1
+최현석,1차,버서커,쌍도끼,전사,characters/hyunseok.png,2
+최현석,1차,디스트로이어,전투망치,전사,characters/hyunseok.png,3
+최현석,2차,블러드로드,흡혈 대도끼,버서커,characters/hyunseok.png,4
+최현석,2차,슬레이어,쌍대검,버서커,characters/hyunseok.png,5
+최현석,2차,타이탄,거대 돌망치,디스트로이어,characters/hyunseok.png,6
+최현석,2차,저거너트,공성망치·철갑,디스트로이어,characters/hyunseok.png,7
+남지훈,시작,마법사,마법 지팡이,,characters/jihoon.png,1
+남지훈,1차,원소술사,삼원소 지팡이,마법사,characters/jihoon.png,2
+남지훈,1차,흑마법사,저주 성서·완드,마법사,characters/jihoon.png,3
+남지훈,2차,아크메이지,대마법 지팡이,원소술사,characters/jihoon.png,4
+남지훈,2차,빙결술사,얼음 수정봉,원소술사,characters/jihoon.png,5
+남지훈,2차,워록,해골 마법봉·마도서,흑마법사,characters/jihoon.png,6
+남지훈,2차,혈마법사,의식 단검·혈석,흑마법사,characters/jihoon.png,7
+양영준,시작,기사,장검·방패,,characters/youngjun.png,1
+양영준,1차,팔라딘,성검·방패,기사,characters/youngjun.png,2
+양영준,1차,드래곤나이트,용창,기사,characters/youngjun.png,3
+양영준,2차,크루세이더,성전 망치·방패,팔라딘,characters/youngjun.png,4
+양영준,2차,템플러,단창·대방패,팔라딘,characters/youngjun.png,5
+양영준,2차,드래곤랜서,쌍날 용창,드래곤나이트,characters/youngjun.png,6
+양영준,2차,용혈기사,용발톱·용창,드래곤나이트,characters/youngjun.png,7
+윤인재,시작,도적,쌍단검,,characters/injae.png,1
+윤인재,1차,어쌔신,곡단검,도적,characters/injae.png,2
+윤인재,1차,트릭스터,단검·폭발 카드,도적,characters/injae.png,3
+윤인재,2차,섀도우댄서,그림자 쌍검,어쌔신,characters/injae.png,4
+윤인재,2차,독살자,독침·독단검,어쌔신,characters/injae.png,5
+윤인재,2차,팬텀,레이피어·환영 카드,트릭스터,characters/injae.png,6
+윤인재,2차,사보추어,쇠뇌·폭발 덫,트릭스터,characters/injae.png,7
+임창기,시작,상인,몽둥이·물품 가방,,characters/changki.png,1
+임창기,1차,블랙스미스,대장장이 망치,상인,characters/changki.png,2
+임창기,1차,연금술사,투척 플라스크,상인,characters/changki.png,3
+임창기,2차,마이스터,변형 전투망치,블랙스미스,characters/changki.png,4
+임창기,2차,메카닉,기계 건틀릿·기관포,블랙스미스,characters/changki.png,5
+임창기,2차,독 연금술사,분사기·독병,연금술사,characters/changki.png,6
+임창기,2차,호문쿨루스 마스터,생체 건틀릿·배양병,연금술사,characters/changki.png,7
+정승욱,시작,음유시인,류트,,characters/seunguk.png,1
+정승욱,1차,바드,하프,음유시인,characters/seunguk.png,2
+정승욱,1차,댄서,전투 부채,음유시인,characters/seunguk.png,3
+정승욱,2차,민스트럴,대형 류트,바드,characters/seunguk.png,4
+정승욱,2차,진혼악사,해골 리라,바드,characters/seunguk.png,5
+정승욱,2차,검무가,쌍곡검,댄서,characters/seunguk.png,6
+정승욱,2차,별무희,별 고리검,댄서,characters/seunguk.png,7
+박천빈,시작,격투가,권투 장갑,,characters/cheonbin.png,1
+박천빈,1차,기공사,기공 건틀릿,격투가,characters/cheonbin.png,2
+박천빈,1차,드루이드,참나무 지팡이,격투가,characters/cheonbin.png,3
+박천빈,2차,기공장,기공 구슬·너클,기공사,characters/cheonbin.png,4
+박천빈,2차,금강승,금강 권갑·염주,기공사,characters/cheonbin.png,5
+박천빈,2차,야성 드루이드,변신 발톱·토템,드루이드,characters/cheonbin.png,6
+박천빈,2차,자연 드루이드,꽃 지팡이·덩굴,드루이드,characters/cheonbin.png,7
+최승영,시작,궁수,단궁,,characters/seungyoung.png,1
+최승영,1차,스나이퍼,장궁,궁수,characters/seungyoung.png,2
+최승영,1차,레인저,복합궁·덫,궁수,characters/seungyoung.png,3
+최승영,2차,신궁,거대 관통궁,스나이퍼,characters/seungyoung.png,4
+최승영,2차,마탄사수,룬 마법궁,스나이퍼,characters/seungyoung.png,5
+최승영,2차,윈드러너,쌍날 단궁,레인저,characters/seungyoung.png,6
+최승영,2차,비스트마스터,야수 토템궁,레인저,characters/seungyoung.png,7
+김규태,시작,총잡이,리볼버,,characters/gyutae.png,1
+김규태,1차,건슬링거,쌍권총,총잡이,characters/gyutae.png,2
+김규태,1차,런처,유탄발사기,총잡이,characters/gyutae.png,3
+김규태,2차,데스페라도,장총열 쌍권총,건슬링거,characters/gyutae.png,4
+김규태,2차,마탄총사,룬 권총·탄환 부적,건슬링거,characters/gyutae.png,5
+김규태,2차,포병장,휴대 박격포,런처,characters/gyutae.png,6
+김규태,2차,중장포병,다목적 중화기,런처,characters/gyutae.png,7
+유상민,시작,사제,메이스·성서,,characters/sangmin.png,1
+유상민,1차,몽크,너클·염주,사제,characters/sangmin.png,2
+유상민,1차,프리스트,십자 지팡이·성서,사제,characters/sangmin.png,3
+유상민,2차,챔피언,대형 권갑,몽크,characters/sangmin.png,4
+유상민,2차,인퀴지터,성화 권갑·낙인,몽크,characters/sangmin.png,5
+유상민,2차,하이프리스트,대성장·성서,프리스트,characters/sangmin.png,6
+유상민,2차,엑소시스트,퇴마검·부적,프리스트,characters/sangmin.png,7
+이근호,시작,소환사,소환 마도서,,characters/keunho.png,1
+이근호,1차,정령사,정령 수정봉,소환사,characters/keunho.png,2
+이근호,1차,네크로맨서,해골 지팡이,소환사,characters/keunho.png,3
+이근호,2차,엘리멘탈로드,정령왕 홀,정령사,characters/keunho.png,4
+이근호,2차,정령융합사,정령 건틀릿,정령사,characters/keunho.png,5
+이근호,2차,리치,영혼 지팡이·성물함,네크로맨서,characters/keunho.png,6
+이근호,2차,데스마스터,사신 낫,네크로맨서,characters/keunho.png,7

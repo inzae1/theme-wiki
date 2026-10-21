@@ -1,0 +1,49 @@
+﻿던전,몬스터,구분,역할,시트,시트 순서
+바람초원,풀슬라임,일반,느린 근접형,monsters/meadow.png,1
+바람초원,성난 멧돼지,일반,직선 돌진형,monsters/meadow.png,2
+바람초원,길목 고블린,일반,빠른 근접형,monsters/meadow.png,3
+바람초원,고목 수호자,보스,보스 · 뿌리 속박과 내려찍기,monsters/meadow.png,4
+바람초원,가시덩굴 마녀,보스,보스 · 독 장판을 펼치고 안전 구역을 옮긴다,monsters/meadow-bosses.png,1
+바람초원,붉은 엄니 대장,보스,보스 · 직선 돌진 뒤 나무에 부딪히면 빈틈이 열린다,monsters/meadow-bosses.png,2
+바람초원,잠든 버섯 장로,보스,보스 · 수면 포자를 뿌리고 깨어날 때 크게 뛰어오른다,monsters/meadow-bosses.png,3
+바람초원,질풍의 늑대왕,보스,보스 · 주변을 돌다 세 차례 연속 도약한다,monsters/meadow-bosses.png,4
+버려진 폐광,동굴 박쥐,일반,빠른 비행형,monsters/mine.png,1
+버려진 폐광,광산 쥐,일반,빠른 근접형,monsters/mine.png,2
+버려진 폐광,해골 광부,일반,느린 강타형,monsters/mine.png,3
+버려진 폐광,철광 골렘,보스,보스 · 충격파와 돌 투척,monsters/mine.png,4
+버려진 폐광,폭주 굴착기,보스,보스 · 드릴 돌진 후 과열되며 잠깐 멈춘다,monsters/mine-bosses.png,1
+버려진 폐광,수정거미 여왕,보스,보스 · 거미줄로 길을 막고 수정 조각을 흩뿌린다,monsters/mine-bosses.png,2
+버려진 폐광,망령 감독관,보스,보스 · 불빛이 닿은 구역에 낙석을 떨어뜨린다,monsters/mine-bosses.png,3
+버려진 폐광,용암먹는 두꺼비,보스,보스 · 용암을 삼킨 뒤 부채꼴로 뱉는다,monsters/mine-bosses.png,4
+잊힌 성채,해골 경비병,일반,방패 방어형,monsters/castle.png,1
+잊힌 성채,성채 망령,일반,원거리 마법형,monsters/castle.png,2
+잊힌 성채,타락한 견습생,일반,범위 마법형,monsters/castle.png,3
+잊힌 성채,검은 성주,보스,보스 · 검기와 돌진,monsters/castle.png,4
+잊힌 성채,철갑 처형기사,보스,보스 · 도끼를 던진 뒤 되돌아오는 경로를 공격한다,monsters/castle-bosses.png,1
+잊힌 성채,핏빛 백작,보스,보스 · 표식이 쌓이면 체력을 흡수한다,monsters/castle-bosses.png,2
+잊힌 성채,종탑의 파수꾼,보스,보스 · 종을 울릴 때 동심원 충격파가 퍼진다,monsters/castle-bosses.png,3
+잊힌 성채,거울 속 여왕,보스,보스 · 거울 환영 중 본체를 찾아 공격한다,monsters/castle-bosses.png,4
+붉은 사막,모래 전갈,일반,독 근접형,monsters/desert.png,1
+붉은 사막,떠도는 미라,일반,느린 속박형,monsters/desert.png,2
+붉은 사막,사막 독사,일반,기습형,monsters/desert.png,3
+붉은 사막,황금 풍뎅이왕,보스,보스 · 돌진과 껍질 방어,monsters/desert.png,4
+붉은 사막,모래폭풍 거인,보스,보스 · 주먹을 내려치고 모래폭풍으로 시야를 좁힌다,monsters/desert-bosses.png,1
+붉은 사막,독침의 여왕,보스,보스 · 꼬리 표식 뒤 독침을 쏘고 독 장판을 남긴다,monsters/desert-bosses.png,2
+붉은 사막,봉인된 파라오,보스,보스 · 석관을 열어 저주를 쌓고 방벽을 세운다,monsters/desert-bosses.png,3
+붉은 사막,사구 포식자,보스,보스 · 땅속에서 이동하다 발밑으로 솟아오른다,monsters/desert-bosses.png,4
+침몰한 해역,산호 집게게,일반,방어 근접형,monsters/ocean.png,1
+침몰한 해역,푸른 해파리,일반,감전 원거리형,monsters/ocean.png,2
+침몰한 해역,난파선 어인,일반,창 돌진형,monsters/ocean.png,3
+침몰한 해역,난파선 소라왕,보스,보스 · 집게 강타와 파편 투척,monsters/ocean.png,4
+침몰한 해역,산호 크라켄,보스,보스 · 촉수로 발판을 순서대로 내리친다,monsters/ocean-bosses.png,1
+침몰한 해역,심해의 세이렌,보스,보스 · 노랫소리로 끌어당긴 뒤 물결을 터뜨린다,monsters/ocean-bosses.png,2
+침몰한 해역,닻을 든 망령선장,보스,보스 · 닻으로 당기고 부채꼴로 휘두른다,monsters/ocean-bosses.png,3
+침몰한 해역,해일의 바다뱀,보스,보스 · 수로를 따라 이동하며 파도를 교차시킨다,monsters/ocean-bosses.png,4
+백야의 극지,설원 늑대,일반,빠른 추격형,monsters/polar.png,1
+백야의 극지,얼음 슬라임,일반,감속형,monsters/polar.png,2
+백야의 극지,눈보라 고블린,일반,투척형,monsters/polar.png,3
+백야의 극지,빙벽의 예티,보스,보스 · 얼음 강타와 눈덩이,monsters/polar.png,4
+백야의 극지,서리발톱 곰왕,보스,보스 · 짧게 돌진한 뒤 얼음을 깨며 충격파를 낸다,monsters/polar-bosses.png,1
+백야의 극지,백야의 마녀,보스,보스 · 얼음 기둥을 세우고 안전한 틈을 바꾼다,monsters/polar-bosses.png,2
+백야의 극지,빙하의 매머드,보스,보스 · 전방을 밀어내고 몸통 돌진으로 길을 막는다,monsters/polar-bosses.png,3
+백야의 극지,영구동토의 빙룡,보스,보스 · 얼음 숨결로 바닥을 얼린 뒤 꼬리로 쓸어낸다,monsters/polar-bosses.png,4

@@ -1,0 +1,348 @@
+{
+  "status": "passed",
+  "assetFiles": 42,
+  "characterForms": 84,
+  "regularMonsters": 18,
+  "bosses": 30,
+  "personalItems": 72,
+  "dungeons": 6,
+  "animationFrames": false,
+  "assets": [
+    {
+      "path": "characters/jongchan.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1547914,
+      "alpha": true
+    },
+    {
+      "path": "characters/hyunseok.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1578094,
+      "alpha": true
+    },
+    {
+      "path": "characters/jihoon.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1483599,
+      "alpha": true
+    },
+    {
+      "path": "characters/youngjun.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1698255,
+      "alpha": true
+    },
+    {
+      "path": "characters/injae.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1516299,
+      "alpha": true
+    },
+    {
+      "path": "characters/changki.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1611639,
+      "alpha": true
+    },
+    {
+      "path": "characters/seunguk.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1585524,
+      "alpha": true
+    },
+    {
+      "path": "characters/cheonbin.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1483679,
+      "alpha": true
+    },
+    {
+      "path": "characters/seungyoung.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1588406,
+      "alpha": true
+    },
+    {
+      "path": "characters/gyutae.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1473778,
+      "alpha": true
+    },
+    {
+      "path": "characters/sangmin.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1591070,
+      "alpha": true
+    },
+    {
+      "path": "characters/keunho.png",
+      "type": "character",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1757188,
+      "alpha": true
+    },
+    {
+      "path": "monsters/meadow.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1069929,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/meadow.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2150919,
+      "alpha": false
+    },
+    {
+      "path": "monsters/mine.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1085602,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/mine.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1861072,
+      "alpha": false
+    },
+    {
+      "path": "monsters/castle.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1062337,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/castle.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1888128,
+      "alpha": false
+    },
+    {
+      "path": "monsters/desert.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1206467,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/desert.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2300513,
+      "alpha": false
+    },
+    {
+      "path": "monsters/ocean.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1278115,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/ocean.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2896566,
+      "alpha": false
+    },
+    {
+      "path": "monsters/polar.png",
+      "type": "monsters",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1232422,
+      "alpha": true
+    },
+    {
+      "path": "dungeons/polar.png",
+      "type": "dungeon",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2074912,
+      "alpha": false
+    },
+    {
+      "path": "monsters/meadow-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1304674,
+      "alpha": true
+    },
+    {
+      "path": "monsters/mine-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1403344,
+      "alpha": true
+    },
+    {
+      "path": "monsters/castle-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1402600,
+      "alpha": true
+    },
+    {
+      "path": "monsters/desert-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1495767,
+      "alpha": true
+    },
+    {
+      "path": "monsters/ocean-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1754534,
+      "alpha": true
+    },
+    {
+      "path": "monsters/polar-bosses.png",
+      "type": "bosses",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1436812,
+      "alpha": true
+    },
+    {
+      "path": "items/jongchan.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1270529,
+      "alpha": true
+    },
+    {
+      "path": "items/hyunseok.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1213090,
+      "alpha": true
+    },
+    {
+      "path": "items/jihoon.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1170359,
+      "alpha": true
+    },
+    {
+      "path": "items/youngjun.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1308124,
+      "alpha": true
+    },
+    {
+      "path": "items/injae.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1186998,
+      "alpha": true
+    },
+    {
+      "path": "items/changki.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1148339,
+      "alpha": true
+    },
+    {
+      "path": "items/seunguk.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1254925,
+      "alpha": true
+    },
+    {
+      "path": "items/cheonbin.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1301576,
+      "alpha": true
+    },
+    {
+      "path": "items/seungyoung.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1241922,
+      "alpha": true
+    },
+    {
+      "path": "items/gyutae.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1252500,
+      "alpha": true
+    },
+    {
+      "path": "items/sangmin.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1291226,
+      "alpha": true
+    },
+    {
+      "path": "items/keunho.png",
+      "type": "items",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1374695,
+      "alpha": true
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "regions": [
+    {
+      "id": "meadow",
+      "name": "바람초원",
+      "theme": "sunny grassy meadow with simple green grass, dirt paths, wildflowers, one pond, low wooden fence, scattered simple round trees",
+      "palette": "soft grass green, tan, sky blue, dark brown",
+      "monsters": [
+        {
+          "id": "slime",
+          "name": "풀슬라임",
+          "visual": "small lime green round slime, two black dot eyes, one pale green highlight, no face detail",
+          "role": "느린 근접형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/meadow.png"
+        },
+        {
+          "id": "boar",
+          "name": "성난 멧돼지",
+          "visual": "small brown boar, chunky short legs, two tiny ivory tusks, round black eyes",
+          "role": "직선 돌진형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/meadow.png"
+        },
+        {
+          "id": "goblin",
+          "name": "길목 고블린",
+          "visual": "short green goblin wearing plain brown vest, holding a small wooden club",
+          "role": "빠른 근접형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/meadow.png"
+        },
+        {
+          "id": "treant",
+          "name": "고목 수호자",
+          "visual": "boss old tree creature, chunky brown trunk body, two branch arms, simple green leaf crown, two dark square eyes; ONLY 1.5 times regular sprite height",
+          "role": "보스 · 뿌리 속박과 내려찍기",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/meadow.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "treant",
+          "name": "고목 수호자",
+          "visual": "boss old tree creature, chunky brown trunk body, two branch arms, simple green leaf crown, two dark square eyes; ONLY 1.5 times regular sprite height",
+          "role": "보스 · 뿌리 속박과 내려찍기",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/meadow.png"
+        },
+        {
+          "id": "thorn-witch",
+          "name": "가시덩굴 마녀",
+          "visual": "small hooded leaf-green witch with short thorn staff, two square purple flowers",
+          "role": "보스 · 독 장판을 펼치고 안전 구역을 옮긴다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/meadow-bosses.png"
+        },
+        {
+          "id": "boar-chief",
+          "name": "붉은 엄니 대장",
+          "visual": "stocky dark red boar with two pale tusks and plain broken wooden shield strapped on back",
+          "role": "보스 · 직선 돌진 뒤 나무에 부딪히면 빈틈이 열린다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/meadow-bosses.png"
+        },
+        {
+          "id": "mushroom-elder",
+          "name": "잠든 버섯 장로",
+          "visual": "round large brown mushroom cap with three cream square spots, tiny beige body",
+          "role": "보스 · 수면 포자를 뿌리고 깨어날 때 크게 뛰어오른다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/meadow-bosses.png"
+        },
+        {
+          "id": "wind-wolf",
+          "name": "질풍의 늑대왕",
+          "visual": "lean green-gray wolf with white pointed tail and small leaf collar",
+          "role": "보스 · 주변을 돌다 세 차례 연속 도약한다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/meadow-bosses.png"
+        }
+      ]
+    },
+    {
+      "id": "mine",
+      "name": "버려진 폐광",
+      "theme": "abandoned mine, simple gray stone ground and brown dirt, rusty narrow rails, timber supports, small minecart, few blue ore crystals, a dark cave entry",
+      "palette": "gray slate, dusty brown, muted blue, iron black",
+      "monsters": [
+        {
+          "id": "bat",
+          "name": "동굴 박쥐",
+          "visual": "tiny purple bat with two wide simple angular wings, dot eyes",
+          "role": "빠른 비행형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/mine.png"
+        },
+        {
+          "id": "rat",
+          "name": "광산 쥐",
+          "visual": "small gray rat with pink ears and short curved tail, simple side-front sprite",
+          "role": "빠른 근접형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/mine.png"
+        },
+        {
+          "id": "pickaxe-skeleton",
+          "name": "해골 광부",
+          "visual": "small ivory skeleton in plain brown mining cap, holding small gray pickaxe, simple skull face",
+          "role": "느린 강타형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/mine.png"
+        },
+        {
+          "id": "golem",
+          "name": "철광 골렘",
+          "visual": "boss squat iron-stone golem, simple gray block torso, thick block arms, three blue ore squares, two tiny blue square eyes; 1.5 times regular height",
+          "role": "보스 · 충격파와 돌 투척",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/mine.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "golem",
+          "name": "철광 골렘",
+          "visual": "boss squat iron-stone golem, simple gray block torso, thick block arms, three blue ore squares, two tiny blue square eyes; 1.5 times regular height",
+          "role": "보스 · 충격파와 돌 투척",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/mine.png"
+        },
+        {
+          "id": "drill-master",
+          "name": "폭주 굴착기",
+          "visual": "small brass mining automaton with one simple iron drill arm and blue square eye",
+          "role": "보스 · 드릴 돌진 후 과열되며 잠깐 멈춘다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/mine-bosses.png"
+        },
+        {
+          "id": "crystal-spider",
+          "name": "수정거미 여왕",
+          "visual": "dark purple spider with six chunky legs and pale blue crystal abdomen",
+          "role": "보스 · 거미줄로 길을 막고 수정 조각을 흩뿌린다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/mine-bosses.png"
+        },
+        {
+          "id": "mine-overseer",
+          "name": "망령 감독관",
+          "visual": "gray ghost miner wearing brown cap and holding a short chain lantern",
+          "role": "보스 · 불빛이 닿은 구역에 낙석을 떨어뜨린다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/mine-bosses.png"
+        },
+        {
+          "id": "lava-toad",
+          "name": "용암먹는 두꺼비",
+          "visual": "squat dark brown toad with orange belly and two coal-black square eyes",
+          "role": "보스 · 용암을 삼킨 뒤 부채꼴로 뱉는다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/mine-bosses.png"
+        }
+      ]
+    },
+    {
+      "id": "castle",
+      "name": "잊힌 성채",
+      "theme": "ruined stone fortress courtyard, simple square gray floor tiles, broken stone walls and pillars, muted red banners, wooden gate, few extinguished braziers, intact open central courtyard",
+      "palette": "cool gray, charcoal, muted red, old gold",
+      "monsters": [
+        {
+          "id": "skeleton-guard",
+          "name": "해골 경비병",
+          "visual": "small skeleton with simple gray cap helmet, short sword and round wooden shield",
+          "role": "방패 방어형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/castle.png"
+        },
+        {
+          "id": "ghost",
+          "name": "성채 망령",
+          "visual": "small pale blue hooded ghost, simple tapered robe shape, two dark dot eyes, no glow haze",
+          "role": "원거리 마법형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/castle.png"
+        },
+        {
+          "id": "dark-mage",
+          "name": "타락한 견습생",
+          "visual": "small dark purple hooded mage, two pale dot eyes, short brown wand with red square tip",
+          "role": "범위 마법형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/castle.png"
+        },
+        {
+          "id": "black-knight",
+          "name": "검은 성주",
+          "visual": "boss black armored knight with modest red cape, simple enclosed dark helmet and red eye slit, gray two-handed sword; 1.5 times regular height",
+          "role": "보스 · 검기와 돌진",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/castle.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "black-knight",
+          "name": "검은 성주",
+          "visual": "boss black armored knight with modest red cape, simple enclosed dark helmet and red eye slit, gray two-handed sword; 1.5 times regular height",
+          "role": "보스 · 검기와 돌진",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/castle.png"
+        },
+        {
+          "id": "headless-knight",
+          "name": "철갑 처형기사",
+          "visual": "gray fully helmeted executioner knight with modest red cape and battleaxe",
+          "role": "보스 · 도끼를 던진 뒤 되돌아오는 경로를 공격한다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/castle-bosses.png"
+        },
+        {
+          "id": "blood-count",
+          "name": "핏빛 백작",
+          "visual": "pale vampire in plain burgundy coat holding a short rapier",
+          "role": "보스 · 표식이 쌓이면 체력을 흡수한다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/castle-bosses.png"
+        },
+        {
+          "id": "bell-warden",
+          "name": "종탑의 파수꾼",
+          "visual": "stone gargoyle with simple folded wings, small bronze bell hammer",
+          "role": "보스 · 종을 울릴 때 동심원 충격파가 퍼진다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/castle-bosses.png"
+        },
+        {
+          "id": "mirror-queen",
+          "name": "거울 속 여왕",
+          "visual": "small ivory crowned mage holding simple oval mirror and silver wand",
+          "role": "보스 · 거울 환영 중 본체를 찾아 공격한다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/castle-bosses.png"
+        }
+      ]
+    },
+    {
+      "id": "desert",
+      "name": "붉은 사막",
+      "theme": "simple sandy desert with blocky dunes, sandstone ruins, a small oasis at top edge, broken stone columns and a broad sandy arena toward the right",
+      "palette": "sand tan, muted orange, pale turquoise, dark brown",
+      "monsters": [
+        {
+          "id": "scorpion",
+          "name": "모래 전갈",
+          "visual": "small orange scorpion, square pincers and curled tail",
+          "role": "독 근접형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/desert.png"
+        },
+        {
+          "id": "mummy",
+          "name": "떠도는 미라",
+          "visual": "small beige bandaged mummy with dark dot eyes and three loose bandage pixels",
+          "role": "느린 속박형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/desert.png"
+        },
+        {
+          "id": "sand-snake",
+          "name": "사막 독사",
+          "visual": "small tan coiled snake with two brown stripe blocks and red dot tongue",
+          "role": "기습형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/desert.png"
+        },
+        {
+          "id": "scarab-king",
+          "name": "황금 풍뎅이왕",
+          "visual": "large squat scarab beetle with flat gold shell, dark legs and small blue square jewel",
+          "role": "보스 · 돌진과 껍질 방어",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/desert.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "scarab-king",
+          "name": "황금 풍뎅이왕",
+          "visual": "large squat scarab beetle with flat gold shell, dark legs and small blue square jewel",
+          "role": "보스 · 돌진과 껍질 방어",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/desert.png"
+        },
+        {
+          "id": "sand-giant",
+          "name": "모래폭풍 거인",
+          "visual": "squat sandstone giant with two thick arms and plain head wrap",
+          "role": "보스 · 주먹을 내려치고 모래폭풍으로 시야를 좁힌다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/desert-bosses.png"
+        },
+        {
+          "id": "scorpion-queen",
+          "name": "독침의 여왕",
+          "visual": "dark purple large scorpion with raised red tail and two pale claws",
+          "role": "보스 · 꼬리 표식 뒤 독침을 쏘고 독 장판을 남긴다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/desert-bosses.png"
+        },
+        {
+          "id": "tomb-pharaoh",
+          "name": "봉인된 파라오",
+          "visual": "small golden masked mummy with simple blue striped headdress and short crook",
+          "role": "보스 · 석관을 열어 저주를 쌓고 방벽을 세운다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/desert-bosses.png"
+        },
+        {
+          "id": "dune-worm",
+          "name": "사구 포식자",
+          "visual": "large tan sandworm head rising from small flat sand ring, simple three tooth mouth",
+          "role": "보스 · 땅속에서 이동하다 발밑으로 솟아오른다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/desert-bosses.png"
+        }
+      ]
+    },
+    {
+      "id": "ocean",
+      "name": "침몰한 해역",
+      "theme": "shallow submerged ancient stone causeway on a coastline, blue water around broad connected pale stone platforms, seaweed at edges, coral, half submerged ship ribs and a clear round boss platform on right",
+      "palette": "sea blue, pale stone gray, muted coral, seaweed green",
+      "monsters": [
+        {
+          "id": "crab",
+          "name": "산호 집게게",
+          "visual": "small red-orange crab with oversized simple square claws",
+          "role": "방어 근접형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/ocean.png"
+        },
+        {
+          "id": "jellyfish",
+          "name": "푸른 해파리",
+          "visual": "small pale blue jellyfish with round cap and four short blocky tentacles",
+          "role": "감전 원거리형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/ocean.png"
+        },
+        {
+          "id": "fishman",
+          "name": "난파선 어인",
+          "visual": "small green-blue fish humanoid holding modest three-prong spear",
+          "role": "창 돌진형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/ocean.png"
+        },
+        {
+          "id": "hermit-king",
+          "name": "난파선 소라왕",
+          "visual": "large hermit crab wearing simple broken wooden ship hull shell, red claw and brown square planks",
+          "role": "보스 · 집게 강타와 파편 투척",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/ocean.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "hermit-king",
+          "name": "난파선 소라왕",
+          "visual": "large hermit crab wearing simple broken wooden ship hull shell, red claw and brown square planks",
+          "role": "보스 · 집게 강타와 파편 투척",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/ocean.png"
+        },
+        {
+          "id": "reef-kraken",
+          "name": "산호 크라켄",
+          "visual": "small purple octopus boss with four thick curled tentacles and coral crown",
+          "role": "보스 · 촉수로 발판을 순서대로 내리친다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/ocean-bosses.png"
+        },
+        {
+          "id": "siren",
+          "name": "심해의 세이렌",
+          "visual": "small teal fish-tailed siren holding a plain shell horn, dark blue hair",
+          "role": "보스 · 노랫소리로 끌어당긴 뒤 물결을 터뜨린다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/ocean-bosses.png"
+        },
+        {
+          "id": "anchor-captain",
+          "name": "닻을 든 망령선장",
+          "visual": "small ghost pirate in navy coat and hat holding modest gray anchor",
+          "role": "보스 · 닻으로 당기고 부채꼴로 휘두른다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/ocean-bosses.png"
+        },
+        {
+          "id": "tide-serpent",
+          "name": "해일의 바다뱀",
+          "visual": "coiled turquoise sea serpent with simple white fin and navy stripe",
+          "role": "보스 · 수로를 따라 이동하며 파도를 교차시킨다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/ocean-bosses.png"
+        }
+      ]
+    },
+    {
+      "id": "polar",
+      "name": "백야의 극지",
+      "theme": "simple snowy tundra and frozen lake with connected ice paths, chunky snowbanks and small pine trees at edges, blue ice rocks and broad icy boss arena toward right",
+      "palette": "snow white, ice cyan, muted navy, pine green",
+      "monsters": [
+        {
+          "id": "snow-wolf",
+          "name": "설원 늑대",
+          "visual": "small white wolf with pale gray back, dot eyes and short muzzle",
+          "role": "빠른 추격형",
+          "boss": false,
+          "cell": 0,
+          "sheet": "monsters/polar.png"
+        },
+        {
+          "id": "ice-slime",
+          "name": "얼음 슬라임",
+          "visual": "small light cyan angular slime with two dark dot eyes and three tiny icicle spikes",
+          "role": "감속형",
+          "boss": false,
+          "cell": 1,
+          "sheet": "monsters/polar.png"
+        },
+        {
+          "id": "snow-goblin",
+          "name": "눈보라 고블린",
+          "visual": "small pale blue goblin in plain fur hood with tiny bone club",
+          "role": "투척형",
+          "boss": false,
+          "cell": 2,
+          "sheet": "monsters/polar.png"
+        },
+        {
+          "id": "yeti",
+          "name": "빙벽의 예티",
+          "visual": "large white squat yeti, two navy fists, small blue face, simple chunky fur edge",
+          "role": "보스 · 얼음 강타와 눈덩이",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/polar.png"
+        }
+      ],
+      "bosses": [
+        {
+          "id": "yeti",
+          "name": "빙벽의 예티",
+          "visual": "large white squat yeti, two navy fists, small blue face, simple chunky fur edge",
+          "role": "보스 · 얼음 강타와 눈덩이",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/polar.png"
+        },
+        {
+          "id": "frost-bear",
+          "name": "서리발톱 곰왕",
+          "visual": "stocky white polar bear with pale blue claw tips and two dark dot eyes",
+          "role": "보스 · 짧게 돌진한 뒤 얼음을 깨며 충격파를 낸다",
+          "boss": true,
+          "cell": 0,
+          "sheet": "monsters/polar-bosses.png"
+        },
+        {
+          "id": "ice-witch",
+          "name": "백야의 마녀",
+          "visual": "small pale blue hooded witch with plain icicle staff and dark eyes",
+          "role": "보스 · 얼음 기둥을 세우고 안전한 틈을 바꾼다",
+          "boss": true,
+          "cell": 1,
+          "sheet": "monsters/polar-bosses.png"
+        },
+        {
+          "id": "mammoth",
+          "name": "빙하의 매머드",
+          "visual": "small stocky brown mammoth with white curved tusks and snow on back",
+          "role": "보스 · 전방을 밀어내고 몸통 돌진으로 길을 막는다",
+          "boss": true,
+          "cell": 2,
+          "sheet": "monsters/polar-bosses.png"
+        },
+        {
+          "id": "frost-wyrm",
+          "name": "영구동토의 빙룡",
+          "visual": "small pale cyan wingless ice dragon with dark blue horns and short thick tail",
+          "role": "보스 · 얼음 숨결로 바닥을 얼린 뒤 꼬리로 쓸어낸다",
+          "boss": true,
+          "cell": 3,
+          "sheet": "monsters/polar-bosses.png"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "dungeons": 6,
+    "regularMonsters": 18,
+    "bosses": 30
+  },
+  "assetStatus": "static design atlases and map backgrounds; no walk/attack frames or collision data"
+}
