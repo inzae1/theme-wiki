@@ -119,3 +119,14 @@ node scripts/verify-game.mjs
 스킬 검토 화면: `dist/rpg-skill-lab.html`. 84개 직업/336개 기술을 검색하고 실제 게임과 같은 이펙트, 스킬별 근접/원거리 배치, 광역 다수 대상, 순환하는 지역별 몬스터, 효과·문제점·미구현 차별화 제안을 함께 표시합니다. 원거리 몬스터에는 활과 화살을 표시합니다. 곰·늑대 상태는 모든 스킬을 차단하고 기본 공격을 강화합니다. 메카닉 포탑과 키메라는 전투/미리보기 양쪽에 실제 개체로 표시합니다.
 
 픽셀 프레임 이펙트는 CodeManu의 Free Pixel Effects Pack과 ansimuz의 Animated Explosions(CC0) 원본 26종을 사용합니다. 출처는 `dist/rpg-fx/CREDITS.md`. 같은 리소스가 여러 기술에 조합되므로 모든 직업의 전투 설계가 고유해졌다는 뜻은 아닙니다. `node scripts/verify-rpg-skill-lab.mjs`는 분석 데이터, 미리보기 배치·모델 교체, 벡터/비트맵 그리기 실행을 검사하며 시각적 고유성을 증명하지 않습니다.
+
+
+### 개테천온라인 스킬 개편 — 2026-10-21
+
+시작 12 / 1차 24 / 2차 48개에 각각 작성한 4개 기술, 총 336개 스킬. `data/rpg-job-kits.cjs`가 원본이며 `node scripts/build-rpg-skills.mjs`로 런타임 데이터를 갱신합니다. `rpg-skill-runtime.js`는 지연 타격, 실제 충돌 투사체, 직선/부채꼴 판정, 상태 중첩/전염/소모, 반격 축적, 합성/설치/명령을 처리합니다.
+
+`rpg-skill-fx.js`는 기술별 동작 순서를 시각화하며, 공유 CC0 소재는 `rpg-fx/CREDITS.md`에 기록했습니다. `rpg-motion.js`는 상체/팔/다리를 분리해 공격·시전·이동·재장전 모션을 그립니다. 포탑·생체·정령·사신·용은 별도 객체 모형과 공격 동작을 사용합니다. 미리보기는 동일한 전투 동작을 실행하며 합성 등 조건부 기술에는 준비 상태를 제공합니다.
+
+검증: `node scripts/verify-rpg.mjs`, `node scripts/verify-rpg-techniques.mjs`, `node scripts/verify-rpg-skill-lab.mjs`, `node scripts/verify-rpg-update.mjs`. 336개 연출의 색·이미지 이름을 제외한 동일 좌표/시간 명령 중복은 0건으로 검사합니다. 이 검사는 사용자가 느끼는 모든 유사성을 보장하지 않으며, 장기 밸런스도 추가 조정 대상입니다.
+
+배포 시 각 실행의 버전을 HTML/스크립트/스타일과 배포 메타데이터에 함께 기록합니다. 게임/미리보기는 30초마다 새 배포를 확인하고, 게임 저장 성공 후 자동 갱신합니다. 저장 실패 시 갱신을 보류합니다.
