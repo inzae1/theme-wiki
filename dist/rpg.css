@@ -31,3 +31,7 @@ body.playing .hero-panel>.meter.xp{display:block!important;grid-column:1/-1;heig
 #xp-gain{display:inline-block;margin-left:4px;font-style:normal;font-weight:700;color:#e5f4a8;opacity:0;transform:translateY(3px);transition:opacity .2s,transform .2s;white-space:nowrap}
 #xp-gain.show{opacity:1;transform:translateY(0)}.xp-label b{font-size:8px;font-variant-numeric:tabular-nums;white-space:nowrap}.xp-level{animation:xpLevel .7s ease-out}@keyframes xpLevel{0%,35%{box-shadow:0 0 16px #e9efab;background:#e8f9b7}100%{box-shadow:none}}
 @media(prefers-reduced-motion:reduce){.xp-level{animation:none}#xp-gain{transition:none}}
+
+/* Keep the compact HUD action in normal flow below every meter. */
+body.playing:not(.hero-expanded) .hero-panel>.hud-toggle{position:static;grid-column:1/-1;width:100%;margin:8px 0 0;padding:5px;min-height:25px;z-index:auto}
+body.playing.hero-expanded .hero-panel>.hud-toggle{position:fixed;top:max(18px,env(safe-area-inset-top));left:18px;width:auto;margin:0}
