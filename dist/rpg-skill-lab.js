@@ -6,85 +6,10 @@ function sprite(sheet,cell){const key=sheet+':'+cell;if(spriteCache.has(key))ret
 function drawSprite(ctx,sheet,cell,x,y,height,flip=false,alpha=1,motion=null){const s=spriteCache.get(sheet+':'+cell);if(!s){sprite(sheet,cell).catch(()=>{});return;}if(motion&&typeof RPG_MOTION!=='undefined'){RPG_MOTION.paint(ctx,s.canvas,s.ax,x,y,height,flip,alpha,motion);return;}const k=height/64;ctx.save();ctx.imageSmoothingEnabled=false;ctx.globalAlpha=alpha;ctx.translate(Math.round(x),Math.round(y));if(flip)ctx.scale(-1,1);ctx.drawImage(s.canvas,Math.round(-s.ax*k),-height,Math.round(s.canvas.width*k),height);ctx.restore();}
 
 function drawCombatFX(f,t,paint=ctx,view=camera){
- const pc=paint,slot=f.slot||0,ult=slot===3,duration=f.fx?.choreography?4.2:ult?1.8:1.1;if(t<0||t>duration)return;const q=t/duration,fade=Math.min(1,(1-q)*2.4),p=Math.min(1,q*3),id=f.heroId??game.s.active??0,cell=f.cell||0,style=f.style||'basic',family=f.family,x=f.x,y=f.y-22,o=f.from||{x,y:y+22},ox=o.x,oy=o.y-22,twist=f.fx?(f.fx.rotation*Math.PI/180):(cell%3-1)*.28,colors={frost:['#8bddff','#efffff'],venom:['#99e85e','#e6ff9e'],root:['#8bdf94','#e1f6a2'],drain:['#e85b85','#ffd2de'],shadow:['#a980ff','#e5d6ff'],holy:['#ffd680','#fffbe4'],beam:['#8fddf8','#f0fcff'],quake:['#e2aa67','#ffdf9d'],heavy:['#ffac67','#ffedd0'],forge:['#f6b46a','#e0f4d3']},palette=colors[style]||[f.color||'#b8e99b',['#fff0bc','#dcefff','#ffd8df'][cell%3]],ink=palette[0],light=palette[1],magical=['element','frost','venom','root','summon'].includes(style)||['mage','priest','summoner','bard'].includes(family),shooting=['archer','gunner','smith'].includes(family)||style==='beam';
- if(typeof RPG_VFX!=='undefined'&&RPG_VFX.draw(pc,{...f,heroId:id},t,D))return;
- pc.save();pc.globalAlpha=fade;pc.lineCap='round';pc.lineJoin='round';pc.shadowColor=ink;pc.shadowBlur=reducedFX?0:ult?18:7;
- const line=(pts,color=ink,w=3)=>{pc.strokeStyle=color;pc.lineWidth=w;pc.beginPath();pts.forEach((v,i)=>i?pc.lineTo(v[0],v[1]):pc.moveTo(v[0],v[1]));pc.stroke();};
- const ring=(cx,cy,r,s=.45,color=ink,w=2)=>{pc.strokeStyle=color;pc.lineWidth=w;pc.beginPath();pc.ellipse(cx,cy,Math.max(0,r),Math.max(0,r*s),0,0,Math.PI*2);pc.stroke();};
- const diamond=(cx,cy,size,color=ink)=>{pc.fillStyle=color;pc.beginPath();pc.moveTo(cx,cy-size);pc.lineTo(cx+size*.45,cy);pc.lineTo(cx,cy+size);pc.lineTo(cx-size*.45,cy);pc.closePath();pc.fill();};
- const sparks=(cx,cy,n,spread,up=0)=>{for(let i=0;i<n;i++){const a=i*2.399+cell*.5,r=(12+(i%7)*spread)*q;pc.fillStyle=i%3?ink:light;pc.fillRect(Math.round((cx+Math.cos(a)*r)/3)*3,Math.round((cy+Math.sin(a)*r*.6-up*q)/3)*3,3+(i%2)*2,3+(i%2)*2);}};
- const slash=(cx,cy,r,a,thickness=6)=>{pc.save();pc.translate(cx,cy);pc.rotate(a);pc.strokeStyle=ink;pc.lineWidth=thickness;pc.beginPath();pc.ellipse(0,0,r,r*.27,0,Math.PI*.95,Math.PI*1.95);pc.stroke();pc.strokeStyle=light;pc.lineWidth=Math.max(1,thickness*.3);pc.beginPath();pc.ellipse(0,-2,r*.91,r*.22,0,Math.PI,Math.PI*1.9);pc.stroke();pc.restore();};
- const rune=(cx,cy,r,points=6)=>{ring(cx,cy,r,.48);ring(cx,cy,r*.78,.48,light,1);const pts=[];for(let i=0;i<=points;i++){const a=i*Math.PI*2/points+q*.55+twist;pts.push([cx+Math.cos(a)*r*.72,cy+Math.sin(a)*r*.35]);}line(pts,ink,1.5);for(let i=0;i<points;i++){const a=i*Math.PI*2/points-q*.9;diamond(cx+Math.cos(a)*r,cy+Math.sin(a)*r*.48,5,light);}};
- const gear=(cx,cy,r)=>{ring(cx,cy,r,.9,ink,5);ring(cx,cy,r*.55,.9,light,2);for(let i=0;i<10;i++){const a=i*Math.PI/5+q*2;line([[cx+Math.cos(a)*r*.8,cy+Math.sin(a)*r*.8],[cx+Math.cos(a)*r*1.2,cy+Math.sin(a)*r*1.2]],ink,6);}};
- const arrow=(ax,ay,bx,by,w=3)=>{line([[ax,ay],[bx,by]],light,w);const a=Math.atan2(by-ay,bx-ax);line([[bx-Math.cos(a-.55)*12,by-Math.sin(a-.55)*12],[bx,by],[bx-Math.cos(a+.55)*12,by-Math.sin(a+.55)*12]],ink,w);};
- const ghost=(gx,gy,alpha)=>{const hero=D.characters[id];if(!hero)return;pc.save();pc.globalAlpha=fade*alpha;drawSprite(pc,hero.sheet,cell,gx,gy,55);pc.restore();};
-
- if(['wolf-lunge','beast-roar','bear-form','bear-slam'].includes(f.effectType)){
-  if(f.effectType==='wolf-lunge'){for(let k=0;k<4;k++){const a=Math.max(0,1-q*1.5-k*.14);if(a>0)drawSprite(pc,'monsters/polar.png',0,ox+(x-ox)*(k+1)/5,oy+22,62,false,a*.3);}for(let k=0;k<3;k++)line([[x-35+k*20,y+38],[x-10+k*20,y-36*p]],'#d3f3ed',4);}
-  else if(f.effectType==='beast-roar'){for(let k=0;k<4;k++){const radius=(q*125+k*18)%150,pts=[];for(let n=0;n<=24;n++){const angle=n*Math.PI/12,r=radius+(n%2?8:0);pts.push([x+Math.cos(angle)*r,y+Math.sin(angle)*r*.6]);}line(pts,k%2?'#e6cf93':'#9ed9a1',2);}}
-  else if(f.effectType==='bear-form'){for(let k=0;k<5;k++){const a=k*Math.PI/2.5+q;line([[ox+Math.cos(a)*30,oy+Math.sin(a)*20],[ox+Math.cos(a)*(70+q*40),oy+Math.sin(a)*(45+q*20)]],'#d5c395',4);}ring(ox,oy+23,55+q*45,.35,'#b6df95',3);}
-  else{for(let claw=0;claw<3;claw++)line([[x-100+claw*75,y-170*(1-p)],[x-40+claw*45,y+35*p]],'#fff1c8',10);for(let k=0;k<10;k++){const a=k*Math.PI/5;line([[x,y+20],[x+Math.cos(a)*90*p,y+20+Math.sin(a)*40*p],[x+Math.cos(a)*190*p,y+20+Math.sin(a)*95*p]],'#c2a373',5);}ring(x,y+20,190*p,.5,'#e5d1a2',4);}
-  pc.restore();return;
- }
- if(f.fx&&slot!==2){const rr=slot===3?120:slot===1?64:28;for(let k=0;k<f.fx.rays;k++){const a=k*Math.PI*2/f.fx.rays+twist,px=x+Math.cos(a)*rr*p,py=y+Math.sin(a)*rr*p*.45;diamond(px,py,slot===3?6:3,ink);}}if(ult){pc.save();pc.shadowBlur=0;pc.globalAlpha=fade*.28;pc.fillStyle='#050d1d';pc.fillRect(view.x,view.y,view.w,view.h);pc.restore();for(let i=0;i<14;i++){const a=i*Math.PI/7+twist,r=100+q*160;line([[x+Math.cos(a)*35,y+Math.sin(a)*20],[x+Math.cos(a)*r,y+Math.sin(a)*r*.6]],i%3?ink:light,1);}ring(x,y,180*p,.47,light,3);}
- if(['traps','minefield','snare','trap-explosion'].includes(f.effectType)){if(f.effectType==='trap-explosion'){for(let i=0;i<3;i++)ring(x,y,(30+i*18)*p,.5,i%2?light:'#f9ad70',3);sparks(x,y,22,11,35);}else{const n=f.effectType==='minefield'?8:3;for(let i=0;i<n;i++){const a=i*Math.PI*2/n,px=x+Math.cos(a)*55,py=y+Math.sin(a)*27;pc.fillStyle=ink;pc.fillRect(px-10,py-4,20,8);pc.fillStyle=light;pc.fillRect(px-3,py-9,6,4);ring(px,py,20+q*20,.45,ink,1);}if(q>.45){ring(x,y,110*p,.4,light,3);sparks(x,y,18,8);}}pc.restore();return;}
- if(f.effectType==='decoy'){ghost(ox-50*p,oy+22,.6);ghost(ox+50*p,oy+22,.6);for(let i=0;i<3;i++)slash(ox,oy,40+i*12,q*2+i*.8,2);pc.restore();return;}
- if(f.effectType==='attack-song'){for(let i=0;i<4;i++){const px=ox+(i-1.5)*26,py=oy-20-q*50+(i%2)*12;diamond(px,py,6,light);line([[px+4,py],[px+4,py-28],[px+15,py-22]],ink,3);}ring(ox,oy+20,70*p,.35,light,3);pc.restore();return;}
- if(f.effectType==='defense-song'||f.effectType==='prayer'){ring(ox,oy,55*p,1,light,3);for(let i=0;i<8;i++){const a=i*Math.PI/4;line([[ox+Math.cos(a)*55*p,oy+Math.sin(a)*55*p],[ox+Math.cos(a)*68*p,oy+Math.sin(a)*68*p]],ink,3);}line([[ox,oy-25],[ox,oy+20],[ox-18,oy],[ox+18,oy]],light,4);pc.restore();return;}
- if(f.effectType==='turret'){gear(x,y,45*p);line([[x-30,y+25],[x+30,y+25],[x+20,y-10],[x-20,y-10],[x-30,y+25]],light,4);line([[x,y-10],[x,y-55*p]],ink,12);pc.restore();return;}
- if(['spirits','skeletons','beasts','undead-legion','spirit-legion','spirit-link'].includes(f.effectType)){const summon=f.effectType==='beasts'?D.regions[5].monsters[0]:['skeletons','undead-legion'].includes(f.effectType)?D.regions[2].monsters[0]:D.regions[2].monsters[1];for(let j=0;j<(f.effectType.includes('legion')?6:3);j++)drawSprite(pc,summon.sheet,summon.cell,ox+40+j*32+Math.min(1,q*2)*70,oy+35+(j%2)*20,43);for(let i=0;i<3;i++){const a=i*Math.PI*2/3+q*4,px=ox+Math.cos(a)*65,py=oy+Math.sin(a)*30;diamond(px,py,13,light);ring(px,py,20,.7,ink,2);}rune(ox,oy+25,70*p,6);pc.restore();return;}
- if(f.effectType==='poison-pool'){for(let i=0;i<9;i++){const a=i*2.399;ring(x+Math.cos(a)*60*p,y+Math.sin(a)*25,12+q*8,.7,i%2?ink:light,2);}ring(x,y,100*p,.4,ink,3);pc.restore();return;}
- if(slot===2){
-  // Stances never reuse the attack animation: shields, halos, gears and orbiting signs.
-  if(family==='smith'){gear(ox,oy,42+q*14);gear(ox,oy,20);}
-  else if(['rogue','archer','gunner'].includes(family)){for(let i=0;i<4;i++){const a=i*Math.PI/2+q*2,r=45+q*10,px=ox+Math.cos(a)*r,py=oy+Math.sin(a)*r*.7;line([[px-8,py],[px,py-7],[px+8,py]],light,2);}ring(ox,oy,45,.7,ink,1);ghost(ox-28*q,oy+22,.22);ghost(ox+28*q,oy+22,.22);}
-  else if(['sword','warrior','knight','fighter'].includes(family)&&!magical){const r=38+p*12;pc.fillStyle=ink;pc.globalAlpha=fade*.15;pc.beginPath();pc.moveTo(ox,oy-r);pc.lineTo(ox+r*.7,oy-r*.45);pc.lineTo(ox+r*.55,oy+r*.5);pc.lineTo(ox,oy+r);pc.lineTo(ox-r*.55,oy+r*.5);pc.lineTo(ox-r*.7,oy-r*.45);pc.closePath();pc.fill();pc.globalAlpha=fade;line([[ox,oy-r],[ox+r*.7,oy-r*.45],[ox+r*.55,oy+r*.5],[ox,oy+r],[ox-r*.55,oy+r*.5],[ox-r*.7,oy-r*.45],[ox,oy-r]],light,2);}
-  else{rune(ox,oy+20,52+p*12,5+cell%3);for(let i=0;i<5;i++){const a=i*Math.PI*2/5+q*2;diamond(ox+Math.cos(a)*44,oy-20+Math.sin(a)*22-q*25,7,i%2?ink:light);}}
-  for(let i=0;i<7;i++){const px=ox+(i-3)*13,py=oy+30-q*90+(i%3)*13;line([[px,py+10],[px,py],[px-4,py+4],[px,py],[px+4,py+4]],ink,2);}pc.restore();return;
- }
- if(slot===0){
-  // Core techniques are concise, focused impacts, shaped by weapon and element.
-  if(style==='frost'){for(let i=0;i<5;i++)diamond(x+(i-2)*16,y+7-(i%2)*12,20*p, i%2?ink:light);}
-  else if(style==='root'){for(let i=0;i<4;i++)line([[x+(i-1.5)*22,y+25],[x+(i-1.5)*13-15,y-20*p],[x+(i-1.5)*10,y-50*p]],ink,4);}
-  else if(style==='venom'){for(let i=0;i<6;i++){const a=i*Math.PI/3;ring(x+Math.cos(a)*28*p,y+Math.sin(a)*18,9+p*5,.9,ink,2);}}
-  else if(style==='beam'){line([[ox,oy],[x,y]],ink,12*(1-q));line([[ox,oy],[x,y]],light,4);ring(x,y,28*p,.85,ink,3);}
-  else if(shooting){if(family==='smith')gear(x,y,26*p);else{const travel=Math.min(1,q*5),px=ox+(x-ox)*travel,py=oy+(y-oy)*travel;arrow(px-(x-ox)*.22,py-(y-oy)*.22,px,py,family==='archer'?2:4);}sparks(x,y,8,5);}
-  else if(family==='bard'){for(let i=0;i<3;i++){pc.strokeStyle=i%2?ink:light;pc.lineWidth=3;pc.beginPath();pc.arc(x,y,20+p*35+i*8,-1.1,1.1);pc.stroke();}line([[x-8,y-24],[x-8,y-50],[x+8,y-46]],light,2);}
-  else if(family==='priest'){line([[x,y-65*p],[x,y+15]],light,7);line([[x-23,y-32],[x+23,y-32]],ink,5);}
-  else if(magical){rune(x,y+12,35*p,5+cell%3);diamond(x,y-20,18*p,light);sparks(x,y,10,5,25);}
-  else if(family==='fighter'){pc.fillStyle=light;pc.fillRect(x-14,y-12,28*p,20);line([[x-25,y],[x+24,y]],ink,4);ring(x,y,35*p,.8,ink,3);}
-  else if(family==='knight'){line([[x-32,y+25],[x+22,y-40]],light,7);line([[x-23,y+25],[x+30,y-40]],ink,2);}
-  else{slash(x,y,45+30*p,(family==='warrior'?1.2:-.5)+twist, family==='warrior'?11:6);if(family==='rogue')slash(x,y,40+p*20,.6,3);sparks(x,y,9,5);}
- }
- else if(slot===1){
-  // Secondary attacks have distinct multi-hit / area choreography, never the core's shape.
-  if(['quake','heavy','forge'].includes(style)||family==='warrior'){for(let i=0;i<8;i++){const a=i*Math.PI/4,r=100*p;line([[x,y],[x+Math.cos(a)*r*.45+8,y+Math.sin(a)*r*.2-8],[x+Math.cos(a)*r,y+Math.sin(a)*r*.45]],ink,3);pc.fillStyle=light;pc.fillRect(x+Math.cos(a)*r-5,y+Math.sin(a)*r*.45-20*Math.sin(q*Math.PI),8,12);}ring(x,y,100*p,.4,ink,3);}
-  else if(family==='rogue'&&!magical){for(let i=0;i<5;i++){const a=i*Math.PI*2/5+twist;ghost(x+Math.cos(a)*60*(1-p),y+22+Math.sin(a)*35,.25);slash(x+Math.cos(a)*20,y+Math.sin(a)*12,40+p*25,a+q*2,3);} }
-  else if(shooting){const n=f.single?5:11;for(let i=0;i<n;i++){const delay=i*.045,travel=Math.max(0,Math.min(1,(q-delay)*5)),spread=f.single?5:16,tx=x+(i-(n-1)/2)*spread,ty=y+(i%3)*7;if(family==='archer'){const ax=tx-65*(1-travel),ay=ty-110*(1-travel);arrow(ax-12,ay-22,ax,ay,2);}else{const px=ox+(tx-ox)*travel,py=oy+(ty-oy)*travel;line([[px-20,py-4],[px,py]],i%2?ink:light,4);}}ring(x,y,70*p,.4,ink,2);}
-  else if(family==='bard'){for(let k=0;k<5;k++)line([[x-90,y+(k-2)*9],[x+90,y+(k-2)*9]],ink,1);for(let i=0;i<7;i++){const px=x+(i-3)*25,py=y+Math.sin(i+q*6)*15;diamond(px,py,5,light);line([[px+3,py],[px+3,py-20]],ink,2);} }
-  else if(magical){rune(x,y,95*p,5+cell%4);for(let i=0;i<8;i++){const a=i*Math.PI/4+q*1.6,r=80*p,px=x+Math.cos(a)*r,py=y+Math.sin(a)*r*.4;diamond(px,py-25*p,style==='root'?10:18, i%2?light:ink);if(style==='root')line([[px,py+15],[px-9,py-15],[px+7,py-50*p]],ink,3);}sparks(x,y,18,9,40);}
-  else if(family==='knight'){for(let i=0;i<4;i++){const px=ox+(x-ox)*i/4,py=oy+(y-oy)*i/4;ghost(px,py+20,.2);}ring(x,y,65*p,.7,light,4);line([[x,y-45],[x,y+35],[x-30,y-5],[x+30,y-5]],ink,5);}
-  else if(family==='fighter'){for(let i=0;i<7;i++){const a=i*Math.PI*2/7,px=x+Math.cos(a)*50*(1-p),py=y+Math.sin(a)*25;pc.fillStyle=i%2?ink:light;pc.fillRect(px-9,py-9,18,15);}ring(x,y,75*p,.7,ink,4);}
-  else{for(let i=0;i<4;i++)if(q>i*.08)slash(x+(i%2?12:-12),y+(i-2)*12,60+p*35,(i%2?-.75:.65)+twist,5);}
- }
- else{
-  // Ultimates have weapon-specific silhouettes, large-scale impact and a finishing seal.
-  if(style==='frost'){for(let i=0;i<12;i++){const a=i*Math.PI/6,r=150*p;diamond(x+Math.cos(a)*r,y+Math.sin(a)*r*.45-35,45*Math.sin(Math.min(1,p)*Math.PI/2),i%2?ink:light);}rune(x,y,170*p,8);}
-  else if(style==='root'){for(let i=0;i<9;i++){const px=x+(i-4)*30;line([[px,y+70],[px-25,y-15*p],[px+18,y-110*p],[px,y-180*p]],i%2?ink:light,5);}ring(x,y,190*p,.4,ink,4);}
-  else if(family==='gunner'||style==='beam'){line([[ox,oy],[x,y]],ink,44*(1-q*.8));line([[ox,oy],[x,y]],light,14*(1-q*.6));ring(x,y,110*p,.8,light,5);for(let i=0;i<3;i++)ring(x,y,45+i*25+p*30,.8,ink,2);}
-  else if(family==='archer'){const a=Math.atan2(y-oy,x-ox);pc.save();pc.translate(x,y);pc.rotate(a);line([[-260,0],[45,0]],ink,19);line([[-260,0],[45,0]],light,5);line([[0,-28],[48,0],[0,28]],light,7);for(let k=0;k<4;k++)line([[-230+k*24,-25],[-200+k*24,0],[-230+k*24,25]],ink,3);pc.restore();}
-  else if(family==='rogue'){for(let i=0;i<8;i++){const a=i*Math.PI/4+twist;ghost(x+Math.cos(a)*110*(1-q*.5),y+30+Math.sin(a)*55,.45);line([[x+Math.cos(a)*110,y+Math.sin(a)*55],[x,y]],ink,2);}slash(x,y,150*p,-.7,12);slash(x,y,150*p,.7,light?9:9);}
-  else if(family==='smith'){gear(x,y,105*p);gear(x,y,52*p);for(let i=0;i<6;i++){const a=i*Math.PI/3;line([[x+Math.cos(a)*140,y-150+Math.sin(a)*40],[x,y]],i%2?ink:light,5);}sparks(x,y,32,16,40);}
-  else if(family==='bard'){for(let i=0;i<5;i++)ring(x,y,55+p*130+i*10,.45,i%2?ink:light,2);for(let i=0;i<12;i++){const a=i*Math.PI/6+q,r=140*p,px=x+Math.cos(a)*r,py=y+Math.sin(a)*r*.5;diamond(px,py,9,light);line([[px+5,py],[px+5,py-30],[px+17,py-24]],ink,3);} }
-  else if(family==='priest'||style==='holy'){line([[x,y-210*p],[x,y+70]],light,18);line([[x-85,y-100],[x+85,y-100]],ink,12);for(let side of [-1,1])for(let i=0;i<7;i++)line([[x+side*12,y-75],[x+side*(70+i*13)*p,y-140+i*18]],i%2?ink:light,5);rune(x,y,150*p,8);}
-  else if(magical||family==='summoner'){rune(x,y,170*p,7+cell%3);for(let i=0;i<7;i++){const a=i*Math.PI*2/7+twist,px=x+Math.cos(a)*120,py=y+Math.sin(a)*50;line([[px,py-150*p],[px,py+20]],ink,11);line([[px,py-150*p],[px,py+20]],light,3);diamond(px,py-80,18,light);}if(family==='summoner'){ring(x,y-80,65*p,1,ink,5);diamond(x-22,y-85,10,light);diamond(x+22,y-85,10,light);}}
-  else if(family==='warrior'||['quake','heavy'].includes(style)){pc.fillStyle=ink;pc.save();pc.translate(x,y-150*(1-p));pc.rotate(twist);pc.fillRect(-55,-70,110,60);pc.fillStyle=light;pc.fillRect(-42,-62,84,8);pc.fillRect(-7,-20,14,95);pc.restore();for(let i=0;i<12;i++){const a=i*Math.PI/6;line([[x,y],[x+Math.cos(a)*80,y+Math.sin(a)*35-12],[x+Math.cos(a)*190*p,y+Math.sin(a)*90*p]],ink,5);}}
-  else if(family==='fighter'){for(let k=0;k<4;k++)ring(x,y,55+p*120+k*10,.7,k%2?ink:light,4);pc.fillStyle=light;pc.fillRect(x-32,y-35,64*p,55);for(let i=0;i<8;i++)line([[x-100,y+(i-4)*12],[x-35,y+(i-4)*6]],ink,4);}
-  else{slash(x,y,170*p,-.7+twist,17);slash(x,y,155*p,.7-twist,11);line([[x,y-210*p],[x,y+100]],light,7);ring(x,y,170*p,.4,ink,3);}
-  sparks(x,y,38,18,35);
- }
- if(slot!==2&&!ult)sparks(x,y,8+cell,slot===1?8:4,slot===1?25:10);pc.restore();
+ const heroId=f.heroId??game.s.active??0;
+ RPG_SKILL_FX.draw(paint,{...f,heroId},t,D);
 }
+
 const params=new URLSearchParams(location.search);let heroID=Math.max(0,Math.min(11,Number(params.get('hero'))||0)),jobCell=Math.max(0,Math.min(6,Number(params.get('job'))||0)),slot=Math.max(0,Math.min(3,Number(params.get('skill'))||0)),age=0,round=0,last=performance.now(),auto=false,basicMotion=false,analysis=null;
 let game=new E.Game(D);game.select(heroID);game.h.level=99;game.h.cell=jobCell;game.h.autoPotion=false;
 const camera={x:0,y:0,w:600,h:340};const ctx=$('#lab-field').getContext('2d');const reducedFX=matchMedia('(prefers-reduced-motion: reduce)').matches;

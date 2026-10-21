@@ -26,3 +26,11 @@ Credit is retained voluntarily. Class-specific timing, placement, projectiles, c
 - dragon-form.png: Blarumyrran, Dragons, CC0 (pisilohepunane3.png). Original unchanged. https://opengameart.org/content/dragons
 - bomb-blast.png: Umplix, Bomb Animation 24p DX, CC0 (bomb_spritesheet.png). Original unchanged. https://opengameart.org/content/bomb-animation-24p-dx
 - vines.png: Matt Rumble, Vines, CC0 (Vines.png). Original unchanged. https://opengameart.org/content/vines
+
+## Sprite replacement for geometric placeholder FX (2026-10-21)
+- dragonhide-shield.png / holy-shield.png: LordNeo, kite shield [64x64], CC0. Original dragonhide and gold images unchanged. https://opengameart.org/content/kite-shield-64x64
+- holy-wings.png / arcane-wings.png: Cethiel, Angel Shield Effect, CC0. Original variants 17 / 19 unchanged. Static source sprites are animated by scaling/placement/fade; these are not frame sequences. https://opengameart.org/content/angel-shield-effect
+- music-blue.png / music-gold.png / music-purple.png: Cethiel, Music - Magic Effect, CC0. Original/Gold/Purple 25 original 150px frames packed into 5×5 runtime atlases without recoloring or resampling. Each row is a separate five-frame musical motif. https://opengameart.org/content/music-magic-effect
+- nature-regrowth.png: Cethiel, Nature - Magic Effect, CC0. Original 0-1 through 0-5 images packed into equally padded atlas cells, original pixels preserved. https://opengameart.org/content/nature-magic-effect
+- lightning-spark.png: 13rice, Radial lightning effect, CC0. Original pixelated_tilesheet.png, 4×2 frames of 64px. https://opengameart.org/content/radial-lightning-effect
+- blast-fire.png / blast-heavy.png: Soluna Software, CC0. Original Explosion03.png / Explosion21.png, 4×4 frames of 128px. https://opengameart.org/content/explosion-effects-and-more
