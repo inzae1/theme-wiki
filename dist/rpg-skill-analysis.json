@@ -505,7 +505,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -559,7 +559,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -621,7 +621,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -675,7 +675,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
@@ -1226,7 +1226,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -1280,7 +1280,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -1330,7 +1330,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -1396,7 +1396,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 125,
           "radius": 140,
@@ -1461,7 +1461,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -1529,7 +1529,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -1587,7 +1587,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -1653,7 +1653,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -3469,7 +3469,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -3519,7 +3519,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
@@ -3585,7 +3585,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
@@ -3637,7 +3637,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34,
           "range": 460,
           "radius": 150,
@@ -3702,7 +3702,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -3764,7 +3764,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -3830,7 +3830,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -3880,7 +3880,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 460,
           "radius": 180,
@@ -3955,7 +3955,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -4017,7 +4017,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -4075,7 +4075,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -4135,7 +4135,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 460,
           "radius": 160,
@@ -4210,7 +4210,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4260,7 +4260,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -4324,7 +4324,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4388,7 +4388,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -4461,7 +4461,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4529,7 +4529,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 160,
@@ -4583,7 +4583,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4633,7 +4633,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 220,
@@ -4722,7 +4722,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -4776,7 +4776,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 190,
@@ -4826,7 +4826,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -4884,7 +4884,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 260,
@@ -4971,7 +4971,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -5037,7 +5037,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -5101,7 +5101,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -5149,7 +5149,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -5234,7 +5234,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.2,
           "range": 125,
           "radius": 140,
@@ -5282,7 +5282,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.5,
           "range": 100,
           "radius": 140,
@@ -5334,7 +5334,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13,
           "range": 125,
           "radius": 140,
@@ -5384,7 +5384,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34,
           "range": 125,
           "radius": 140,
@@ -5457,7 +5457,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 110,
           "radius": 140,
@@ -5517,7 +5517,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -5571,7 +5571,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -5621,7 +5621,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 125,
           "radius": 160,
@@ -5921,7 +5921,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 130,
           "radius": 140,
@@ -5981,7 +5981,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 150,
@@ -6035,7 +6035,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -6091,7 +6091,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -6170,7 +6170,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 125,
           "radius": 140,
@@ -6220,7 +6220,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -6270,7 +6270,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -6330,7 +6330,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 125,
           "radius": 200,
@@ -10228,8 +10228,8 @@
       "parent": "시작",
       "style": "basic",
       "resource": "마력",
-      "review": "짧은 음파 — cone / 힘찬 연주 — attack-song / 잔잔한 연주 — defense-song → heal / 작은 피날레 — blast",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "튕기는 음표 — bounce / 힘찬 연주 — simple-power / 잔잔한 연주 — simple-heal / 작은 피날레 — small-finale",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-0-skill-0",
@@ -10237,7 +10237,7 @@
           "heroId": 6,
           "cell": 0,
           "slot": 0,
-          "name": "짧은 음파",
+          "name": "튕기는 음표",
           "unlock": 1,
           "mechanicsVersion": 3,
           "resource": {
@@ -10247,19 +10247,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.2,
           "range": 460,
-          "radius": 170,
-          "target": "area",
+          "radius": 140,
+          "target": "single",
           "effectType": "recipe-168",
-          "description": "거리 170 전방 부채꼴 180%",
+          "description": "적에게 180% 음표탄을 발사하고 다른 적에게 100%로 한 번 튕김",
           "actions": [
             {
-              "op": "cone",
-              "power": 1.8,
-              "radius": 170,
-              "angle": 1.25
+              "op": "bard-kit",
+              "kind": "bounce",
+              "description": "적에게 180% 음표탄을 발사하고 다른 적에게 100%로 한 번 튕김",
+              "target": "single"
             }
           ],
           "fx": {
@@ -10270,18 +10270,18 @@
             "recipe": 168,
             "choreography": [
               {
-                "op": "cone",
-                "power": 1.8,
-                "radius": 170,
-                "angle": 1.25
+                "op": "bard-kit",
+                "kind": "bounce",
+                "description": "적에게 180% 음표탄을 발사하고 다른 적에게 100%로 한 번 튕김",
+                "target": "single"
               }
             ],
             "rays": 5,
             "rotation": 96,
-            "shape": "cone"
+            "shape": "bard-kit"
           },
-          "actualText": "거리 170 전방 부채꼴 180%",
-          "visual": "전용 연출 seunguk-0:0 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "적에게 180% 음표탄을 발사하고 다른 적에게 100%로 한 번 튕김",
+          "visual": "전용 연출 seunguk-0:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-0-skill-1",
@@ -10299,17 +10299,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-169",
-          "description": "8초 공격 선율 · 교대 시 화음 축적",
+          "description": "8초 동안 기본 공격 피해 30% 증가",
           "actions": [
             {
-              "op": "attack-song",
-              "duration": 8
+              "op": "bard-kit",
+              "kind": "simple-power",
+              "description": "8초 동안 기본 공격 피해 30% 증가",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10320,16 +10322,18 @@
             "recipe": 169,
             "choreography": [
               {
-                "op": "attack-song",
-                "duration": 8
+                "op": "bard-kit",
+                "kind": "simple-power",
+                "description": "8초 동안 기본 공격 피해 30% 증가",
+                "target": "self"
               }
             ],
             "rays": 6,
             "rotation": 133,
-            "shape": "attack-song"
+            "shape": "bard-kit"
           },
-          "actualText": "8초 공격 선율 · 교대 시 화음 축적",
-          "visual": "전용 연출 seunguk-0:1 · attack-song · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 동안 기본 공격 피해 30% 증가",
+          "visual": "전용 연출 seunguk-0:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-0-skill-2",
@@ -10347,21 +10351,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-170",
-          "description": "8초 방어 선율 · 교대 시 화음 축적 / 최대 체력 6% 실제 회복",
+          "description": "8초 동안 매초 최대 체력 2% 회복",
           "actions": [
             {
-              "op": "defense-song",
-              "duration": 8
-            },
-            {
-              "op": "heal",
-              "value": 0.06
+              "op": "bard-kit",
+              "kind": "simple-heal",
+              "description": "8초 동안 매초 최대 체력 1.5% 회복",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10372,20 +10374,18 @@
             "recipe": 170,
             "choreography": [
               {
-                "op": "defense-song",
-                "duration": 8
-              },
-              {
-                "op": "heal",
-                "value": 0.06
+                "op": "bard-kit",
+                "kind": "simple-heal",
+                "description": "8초 동안 매초 최대 체력 1.5% 회복",
+                "target": "self"
               }
             ],
             "rays": 7,
             "rotation": 170,
-            "shape": "defense-song+heal"
+            "shape": "bard-kit"
           },
-          "actualText": "8초 방어 선율 · 교대 시 화음 축적 / 최대 체력 6% 실제 회복",
-          "visual": "전용 연출 seunguk-0:2 · defense-song → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 동안 매초 최대 체력 2% 회복",
+          "visual": "전용 연출 seunguk-0:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-0-skill-3",
@@ -10403,19 +10403,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34,
           "range": 460,
-          "radius": 160,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-171",
-          "description": "0.4초 뒤 반경 160에 500% 착탄 피해",
+          "description": "전방에 큰 음파를 보내 경로상의 적에게 500% 피해",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 160,
-              "delay": 0.4
+              "op": "bard-kit",
+              "kind": "small-finale",
+              "description": "전방에 큰 음파를 보내 경로상의 적에게 500% 피해",
+              "target": "area"
             }
           ],
           "fx": {
@@ -10426,18 +10426,18 @@
             "recipe": 171,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 160,
-                "delay": 0.4
+                "op": "bard-kit",
+                "kind": "small-finale",
+                "description": "전방에 큰 음파를 보내 경로상의 적에게 500% 피해",
+                "target": "area"
               }
             ],
             "rays": 8,
             "rotation": 27,
-            "shape": "blast"
+            "shape": "bard-kit"
           },
-          "actualText": "0.4초 뒤 반경 160에 500% 착탄 피해",
-          "visual": "전용 연출 seunguk-0:3 · blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "전방에 큰 음파를 보내 경로상의 적에게 500% 피해",
+          "visual": "전용 연출 seunguk-0:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -10449,8 +10449,8 @@
       "parent": "seunguk-0",
       "style": "holy",
       "resource": "마력",
-      "review": "공명 음파 — cone / 용기의 노래 — attack-song / 안식의 노래 — defense-song → heal / 화음 피날레 — chord",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "교차 화음 — cross-chord / 용기의 노래 — bravery / 안식의 노래 — rest / 화음 피날레 — chord-finale",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-1-skill-0",
@@ -10458,7 +10458,7 @@
           "heroId": 6,
           "cell": 1,
           "slot": 0,
-          "name": "공명 음파",
+          "name": "교차 화음",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -10468,19 +10468,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
-          "radius": 190,
-          "target": "area",
+          "radius": 140,
+          "target": "single",
           "effectType": "recipe-172",
-          "description": "거리 190 전방 부채꼴 230%",
+          "description": "공격곡 중 추가 음표탄, 방어곡 중 최대 체력 8% 보호막을 얻는 230% 공격",
           "actions": [
             {
-              "op": "cone",
-              "power": 2.3,
-              "radius": 190,
-              "angle": 1.25
+              "op": "bard-kit",
+              "kind": "cross-chord",
+              "description": "공격곡 중 추가 음표탄, 방어곡 중 최대 체력 8% 보호막을 얻는 230% 공격",
+              "target": "single"
             }
           ],
           "fx": {
@@ -10491,18 +10491,18 @@
             "recipe": 172,
             "choreography": [
               {
-                "op": "cone",
-                "power": 2.3,
-                "radius": 190,
-                "angle": 1.25
+                "op": "bard-kit",
+                "kind": "cross-chord",
+                "description": "공격곡 중 추가 음표탄, 방어곡 중 최대 체력 8% 보호막을 얻는 230% 공격",
+                "target": "single"
               }
             ],
             "rays": 9,
             "rotation": 64,
-            "shape": "cone"
+            "shape": "bard-kit"
           },
-          "actualText": "거리 190 전방 부채꼴 230%",
-          "visual": "전용 연출 seunguk-1:0 · cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "공격곡 중 추가 음표탄, 방어곡 중 최대 체력 8% 보호막을 얻는 230% 공격",
+          "visual": "전용 연출 seunguk-1:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-1-skill-1",
@@ -10520,17 +10520,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-173",
-          "description": "12초 공격 선율 · 교대 시 화음 축적",
+          "description": "12초 동안 기본 공격에 50% 추가 음표탄. 방어곡에서 전환하면 화음 +1",
           "actions": [
             {
-              "op": "attack-song",
-              "duration": 12
+              "op": "bard-kit",
+              "kind": "bravery",
+              "description": "12초 동안 기본 공격에 50% 추가 음표탄. 방어곡에서 전환하면 화음 +1",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10541,16 +10543,18 @@
             "recipe": 173,
             "choreography": [
               {
-                "op": "attack-song",
-                "duration": 12
+                "op": "bard-kit",
+                "kind": "bravery",
+                "description": "12초 동안 기본 공격에 50% 추가 음표탄. 방어곡에서 전환하면 화음 +1",
+                "target": "self"
               }
             ],
             "rays": 10,
             "rotation": 101,
-            "shape": "attack-song"
+            "shape": "bard-kit"
           },
-          "actualText": "12초 공격 선율 · 교대 시 화음 축적",
-          "visual": "전용 연출 seunguk-1:1 · attack-song · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 동안 기본 공격에 50% 추가 음표탄. 방어곡에서 전환하면 화음 +1",
+          "visual": "전용 연출 seunguk-1:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-1-skill-2",
@@ -10568,21 +10572,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-174",
-          "description": "12초 방어 선율 · 교대 시 화음 축적 / 최대 체력 10% 실제 회복",
+          "description": "12초 동안 피해 25% 감소·매초 체력 1% 회복. 공격곡에서 전환하면 화음 +1",
           "actions": [
             {
-              "op": "defense-song",
-              "duration": 12
-            },
-            {
-              "op": "heal",
-              "value": 0.1
+              "op": "bard-kit",
+              "kind": "rest",
+              "description": "12초 동안 피해 25% 감소·매초 체력 1% 회복. 공격곡에서 전환하면 화음 +1",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10593,20 +10595,18 @@
             "recipe": 174,
             "choreography": [
               {
-                "op": "defense-song",
-                "duration": 12
-              },
-              {
-                "op": "heal",
-                "value": 0.1
+                "op": "bard-kit",
+                "kind": "rest",
+                "description": "12초 동안 피해 25% 감소·매초 체력 1% 회복. 공격곡에서 전환하면 화음 +1",
+                "target": "self"
               }
             ],
             "rays": 11,
             "rotation": 138,
-            "shape": "defense-song+heal"
+            "shape": "bard-kit"
           },
-          "actualText": "12초 방어 선율 · 교대 시 화음 축적 / 최대 체력 10% 실제 회복",
-          "visual": "전용 연출 seunguk-1:2 · defense-song → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 동안 피해 25% 감소·매초 체력 1% 회복. 공격곡에서 전환하면 화음 +1",
+          "visual": "전용 연출 seunguk-1:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-1-skill-3",
@@ -10624,17 +10624,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-175",
-          "description": "쌓인 화음에 비례하는 음파 피해",
+          "description": "화음 최대 3개를 모두 소모해 2~5겹의 전방 음파. 겹마다 150% 피해",
           "actions": [
             {
-              "op": "chord",
-              "power": 5
+              "op": "bard-kit",
+              "kind": "chord-finale",
+              "description": "화음 최대 3개를 모두 소모해 2~5겹의 전방 음파. 겹마다 150% 피해",
+              "target": "area"
             }
           ],
           "fx": {
@@ -10645,16 +10647,18 @@
             "recipe": 175,
             "choreography": [
               {
-                "op": "chord",
-                "power": 5
+                "op": "bard-kit",
+                "kind": "chord-finale",
+                "description": "화음 최대 3개를 모두 소모해 2~5겹의 전방 음파. 겹마다 150% 피해",
+                "target": "area"
               }
             ],
             "rays": 12,
             "rotation": 175,
-            "shape": "chord"
+            "shape": "bard-kit"
           },
-          "actualText": "쌓인 화음에 비례하는 음파 피해",
-          "visual": "전용 연출 seunguk-1:3 · chord · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "화음 최대 3개를 모두 소모해 2~5겹의 전방 음파. 겹마다 150% 피해",
+          "visual": "전용 연출 seunguk-1:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -10666,8 +10670,8 @@
       "parent": "seunguk-0",
       "style": "dance",
       "resource": "마력",
-      "review": "회전 스텝 — dash → cone / 검무 선회 — whirl / 가벼운 발놀림 — buff / 무대의 중심 — blast → buff",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "교차 스텝 — cross-step / 원무 — moving-dance / 가벼운 발놀림 — light-feet / 무대의 중심 — stage-center",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-2-skill-0",
@@ -10675,7 +10679,7 @@
           "heroId": 6,
           "cell": 2,
           "slot": 0,
-          "name": "회전 스텝",
+          "name": "교차 스텝",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -10685,23 +10689,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
-          "range": 320,
+          "range": 125,
           "radius": 140,
-          "target": "area",
+          "target": "single",
           "effectType": "recipe-176",
-          "description": "앞으로 최대 100 이동 · 경로 충돌 검사 / 거리 110 전방 부채꼴 240%",
+          "description": "대상을 통과해 130% 타격 후 돌아오며 130% 재타격",
           "actions": [
             {
-              "op": "dash",
-              "distance": 100
-            },
-            {
-              "op": "cone",
-              "power": 2.4,
-              "radius": 110,
-              "angle": 1.25
+              "op": "bard-kit",
+              "kind": "cross-step",
+              "description": "대상을 통과해 130% 타격 후 돌아오며 130% 재타격",
+              "target": "single"
             }
           ],
           "fx": {
@@ -10712,22 +10712,18 @@
             "recipe": 176,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 100
-              },
-              {
-                "op": "cone",
-                "power": 2.4,
-                "radius": 110,
-                "angle": 1.25
+                "op": "bard-kit",
+                "kind": "cross-step",
+                "description": "대상을 통과해 130% 타격 후 돌아오며 130% 재타격",
+                "target": "single"
               }
             ],
             "rays": 5,
             "rotation": 32,
-            "shape": "dash+cone"
+            "shape": "bard-kit"
           },
-          "actualText": "앞으로 최대 100 이동 · 경로 충돌 검사 / 거리 110 전방 부채꼴 240%",
-          "visual": "전용 연출 seunguk-2:0 · dash → cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상을 통과해 130% 타격 후 돌아오며 130% 재타격",
+          "visual": "전용 연출 seunguk-2:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-2-skill-1",
@@ -10735,7 +10731,7 @@
           "heroId": 6,
           "cell": 2,
           "slot": 1,
-          "name": "검무 선회",
+          "name": "원무",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -10745,20 +10741,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 125,
           "radius": 140,
-          "target": "area",
+          "target": "self",
           "effectType": "recipe-177",
-          "description": "이동 가능한 회전 공격 4회 · 0.2초 간격 · 반경 100",
+          "description": "8초 동안 이동할 때만 0.6초마다 주변 적에게 65% 피해",
           "actions": [
             {
-              "op": "whirl",
-              "count": 4,
-              "power": 0.7,
-              "radius": 100,
-              "gap": 0.2
+              "op": "bard-kit",
+              "kind": "moving-dance",
+              "description": "8초 동안 이동할 때만 0.6초마다 주변 적에게 65% 피해",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10769,19 +10764,18 @@
             "recipe": 177,
             "choreography": [
               {
-                "op": "whirl",
-                "count": 4,
-                "power": 0.7,
-                "radius": 100,
-                "gap": 0.2
+                "op": "bard-kit",
+                "kind": "moving-dance",
+                "description": "8초 동안 이동할 때만 0.6초마다 주변 적에게 65% 피해",
+                "target": "self"
               }
             ],
             "rays": 6,
             "rotation": 69,
-            "shape": "whirl"
+            "shape": "bard-kit"
           },
-          "actualText": "이동 가능한 회전 공격 4회 · 0.2초 간격 · 반경 100",
-          "visual": "전용 연출 seunguk-2:1 · whirl · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 동안 이동할 때만 0.6초마다 주변 적에게 65% 피해",
+          "visual": "전용 연출 seunguk-2:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-2-skill-2",
@@ -10799,19 +10793,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-178",
-          "description": "7초 회피율 30% 증가",
+          "description": "7초 동안 회피 +30%. 실제 회피 성공 시 다음 기본 공격 피해 100% 증가",
           "actions": [
             {
-              "op": "buff",
-              "type": "evasion",
-              "value": 0.3,
-              "duration": 7
+              "op": "bard-kit",
+              "kind": "light-feet",
+              "description": "7초 동안 회피 +30%. 실제 회피 성공 시 다음 기본 공격 피해 100% 증가",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10822,18 +10816,18 @@
             "recipe": 178,
             "choreography": [
               {
-                "op": "buff",
-                "type": "evasion",
-                "value": 0.3,
-                "duration": 7
+                "op": "bard-kit",
+                "kind": "light-feet",
+                "description": "7초 동안 회피 +30%. 실제 회피 성공 시 다음 기본 공격 피해 100% 증가",
+                "target": "self"
               }
             ],
             "rays": 7,
             "rotation": 106,
-            "shape": "buff"
+            "shape": "bard-kit"
           },
-          "actualText": "7초 회피율 30% 증가",
-          "visual": "전용 연출 seunguk-2:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "7초 동안 회피 +30%. 실제 회피 성공 시 다음 기본 공격 피해 100% 증가",
+          "visual": "전용 연출 seunguk-2:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-2-skill-3",
@@ -10851,25 +10845,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-179",
-          "description": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 공격속도 25% 증가",
+          "description": "주변 적을 무대 중심으로 모아 5회 회전 타격. 보스는 당기지 않음",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 140,
-              "delay": 0
-            },
-            {
-              "op": "buff",
-              "type": "haste",
-              "value": 0.25,
-              "duration": 5
+              "op": "bard-kit",
+              "kind": "stage-center",
+              "description": "주변 적을 무대 중심으로 모아 5회 회전 타격. 보스는 당기지 않음",
+              "target": "area"
             }
           ],
           "fx": {
@@ -10880,24 +10868,18 @@
             "recipe": 179,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 140,
-                "delay": 0
-              },
-              {
-                "op": "buff",
-                "type": "haste",
-                "value": 0.25,
-                "duration": 5
+                "op": "bard-kit",
+                "kind": "stage-center",
+                "description": "주변 적을 무대 중심으로 모아 5회 회전 타격. 보스는 당기지 않음",
+                "target": "area"
               }
             ],
             "rays": 8,
             "rotation": 143,
-            "shape": "blast+buff"
+            "shape": "bard-kit"
           },
-          "actualText": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 공격속도 25% 증가",
-          "visual": "전용 연출 seunguk-2:3 · blast → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "주변 적을 무대 중심으로 모아 5회 회전 타격. 보스는 당기지 않음",
+          "visual": "전용 연출 seunguk-2:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -10909,8 +10891,8 @@
       "parent": "seunguk-1",
       "style": "quake",
       "resource": "마력",
-      "review": "공명 파동 — chord / 진격의 선율 — attack-song / 수호의 선율 — defense-song → heal / 앙코르 — encore",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "연속 악절 — phrase / 고조 — crescendo / 잔향 연주 — echo-phrase / 앙코르 — concerto",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-3-skill-0",
@@ -10918,7 +10900,7 @@
           "heroId": 6,
           "cell": 3,
           "slot": 0,
-          "name": "공명 파동",
+          "name": "연속 악절",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -10928,17 +10910,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
-          "target": "area",
+          "target": "single",
           "effectType": "recipe-180",
-          "description": "쌓인 화음에 비례하는 음파 피해",
+          "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
           "actions": [
             {
-              "op": "chord",
-              "power": 2.8
+              "op": "bard-kit",
+              "kind": "phrase",
+              "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+              "target": "single"
             }
           ],
           "fx": {
@@ -10949,16 +10933,18 @@
             "recipe": 180,
             "choreography": [
               {
-                "op": "chord",
-                "power": 2.8
+                "op": "bard-kit",
+                "kind": "phrase",
+                "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+                "target": "single"
               }
             ],
             "rays": 9,
             "rotation": 0,
-            "shape": "chord"
+            "shape": "bard-kit"
           },
-          "actualText": "쌓인 화음에 비례하는 음파 피해",
-          "visual": "전용 연출 seunguk-3:0 · chord · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+          "visual": "전용 연출 seunguk-3:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-3-skill-1",
@@ -10966,7 +10952,7 @@
           "heroId": 6,
           "cell": 3,
           "slot": 1,
-          "name": "진격의 선율",
+          "name": "고조",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -10976,17 +10962,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-181",
-          "description": "15초 공격 선율 · 교대 시 화음 축적",
+          "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
           "actions": [
             {
-              "op": "attack-song",
-              "duration": 15
+              "op": "bard-kit",
+              "kind": "crescendo",
+              "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+              "target": "self"
             }
           ],
           "fx": {
@@ -10997,16 +10985,18 @@
             "recipe": 181,
             "choreography": [
               {
-                "op": "attack-song",
-                "duration": 15
+                "op": "bard-kit",
+                "kind": "crescendo",
+                "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+                "target": "self"
               }
             ],
             "rays": 10,
             "rotation": 37,
-            "shape": "attack-song"
+            "shape": "bard-kit"
           },
-          "actualText": "15초 공격 선율 · 교대 시 화음 축적",
-          "visual": "전용 연출 seunguk-3:1 · attack-song · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+          "visual": "전용 연출 seunguk-3:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-3-skill-2",
@@ -11014,7 +11004,7 @@
           "heroId": 6,
           "cell": 3,
           "slot": 2,
-          "name": "수호의 선율",
+          "name": "잔향 연주",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11024,21 +11014,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-182",
-          "description": "15초 방어 선율 · 교대 시 화음 축적 / 최대 체력 12% 실제 회복",
+          "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
           "actions": [
             {
-              "op": "defense-song",
-              "duration": 15
-            },
-            {
-              "op": "heal",
-              "value": 0.12
+              "op": "bard-kit",
+              "kind": "echo-phrase",
+              "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11049,20 +11037,18 @@
             "recipe": 182,
             "choreography": [
               {
-                "op": "defense-song",
-                "duration": 15
-              },
-              {
-                "op": "heal",
-                "value": 0.12
+                "op": "bard-kit",
+                "kind": "echo-phrase",
+                "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+                "target": "self"
               }
             ],
             "rays": 11,
             "rotation": 74,
-            "shape": "defense-song+heal"
+            "shape": "bard-kit"
           },
-          "actualText": "15초 방어 선율 · 교대 시 화음 축적 / 최대 체력 12% 실제 회복",
-          "visual": "전용 연출 seunguk-3:2 · defense-song → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+          "visual": "전용 연출 seunguk-3:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-3-skill-3",
@@ -11080,18 +11066,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
-          "target": "self",
+          "target": "single",
           "effectType": "recipe-183",
-          "description": "공격·방어 선율 연장, 화음을 소비하는 피날레",
+          "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
           "actions": [
             {
-              "op": "encore",
-              "duration": 8,
-              "power": 6
+              "op": "bard-kit",
+              "kind": "concerto",
+              "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11102,17 +11089,18 @@
             "recipe": 183,
             "choreography": [
               {
-                "op": "encore",
-                "duration": 8,
-                "power": 6
+                "op": "bard-kit",
+                "kind": "concerto",
+                "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+                "target": "single"
               }
             ],
             "rays": 12,
             "rotation": 111,
-            "shape": "encore"
+            "shape": "bard-kit"
           },
-          "actualText": "공격·방어 선율 연장, 화음을 소비하는 피날레",
-          "visual": "전용 연출 seunguk-3:3 · encore · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+          "visual": "전용 연출 seunguk-3:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -11124,8 +11112,8 @@
       "parent": "seunguk-1",
       "style": "drain",
       "resource": "마력",
-      "review": "진혼곡 — status / 혼 흡수 — consume → heal / 애도의 울림 — zone / 망자의 합창 — spread → pet → consume",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "진혼곡 — dirge-note / 혼 흡수 — soul-drain / 장송 행진 — funeral / 망자의 합창 — ghost-choir",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-4-skill-0",
@@ -11143,20 +11131,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-184",
-          "description": "dirge 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45%",
+          "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
           "actions": [
             {
-              "op": "status",
-              "type": "dirge",
-              "power": 0.45,
-              "stacks": 2,
-              "duration": 8
+              "op": "bard-kit",
+              "kind": "dirge-note",
+              "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11167,19 +11154,18 @@
             "recipe": 184,
             "choreography": [
               {
-                "op": "status",
-                "type": "dirge",
-                "power": 0.45,
-                "stacks": 2,
-                "duration": 8
+                "op": "bard-kit",
+                "kind": "dirge-note",
+                "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
+                "target": "single"
               }
             ],
             "rays": 5,
             "rotation": 148,
-            "shape": "status"
+            "shape": "bard-kit"
           },
-          "actualText": "dirge 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45%",
-          "visual": "전용 연출 seunguk-4:0 · status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
+          "visual": "전용 연출 seunguk-4:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-4-skill-1",
@@ -11197,22 +11183,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-185",
-          "description": "dirge를 소비해 중첩당 221% 타격 / 최대 체력 12% 실제 회복",
+          "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
           "actions": [
             {
-              "op": "consume",
-              "type": "dirge",
-              "power": 2.2
-            },
-            {
-              "op": "heal",
-              "value": 0.12
+              "op": "bard-kit",
+              "kind": "soul-drain",
+              "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11223,21 +11206,18 @@
             "recipe": 185,
             "choreography": [
               {
-                "op": "consume",
-                "type": "dirge",
-                "power": 2.2
-              },
-              {
-                "op": "heal",
-                "value": 0.12
+                "op": "bard-kit",
+                "kind": "soul-drain",
+                "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
+                "target": "single"
               }
             ],
             "rays": 6,
             "rotation": 5,
-            "shape": "consume+heal"
+            "shape": "bard-kit"
           },
-          "actualText": "dirge를 소비해 중첩당 221% 타격 / 최대 체력 12% 실제 회복",
-          "visual": "전용 연출 seunguk-4:1 · consume → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
+          "visual": "전용 연출 seunguk-4:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-4-skill-2",
@@ -11245,7 +11225,7 @@
           "heroId": 6,
           "cell": 4,
           "slot": 2,
-          "name": "애도의 울림",
+          "name": "장송 행진",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11255,20 +11235,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
-          "radius": 180,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-186",
-          "description": "진혼 지대 10초 · 반경 180 · 0.8초마다 공격력 45% 피해",
+          "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
           "actions": [
             {
-              "op": "zone",
-              "type": "dirge",
-              "power": 0.45,
-              "radius": 180,
-              "duration": 10
+              "op": "bard-kit",
+              "kind": "funeral",
+              "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11279,19 +11258,18 @@
             "recipe": 186,
             "choreography": [
               {
-                "op": "zone",
-                "type": "dirge",
-                "power": 0.45,
-                "radius": 180,
-                "duration": 10
+                "op": "bard-kit",
+                "kind": "funeral",
+                "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
+                "target": "self"
               }
             ],
             "rays": 7,
             "rotation": 42,
-            "shape": "zone"
+            "shape": "bard-kit"
           },
-          "actualText": "진혼 지대 10초 · 반경 180 · 0.8초마다 공격력 45% 피해",
-          "visual": "전용 연출 seunguk-4:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
+          "visual": "전용 연출 seunguk-4:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-4-skill-3",
@@ -11309,30 +11287,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
-          "radius": 220,
-          "target": "area",
+          "radius": 140,
+          "target": "self",
           "effectType": "recipe-187",
-          "description": "대상의 dirge 상태를 반경 220의 적에게 전염 / 망령 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
+          "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
           "actions": [
             {
-              "op": "spread",
-              "type": "dirge",
-              "radius": 220
-            },
-            {
-              "op": "pet",
-              "appearance": "ghost",
-              "count": 3,
-              "power": 0.65,
-              "duration": 12
-            },
-            {
-              "op": "consume",
-              "type": "dirge",
-              "power": 3
+              "op": "bard-kit",
+              "kind": "ghost-choir",
+              "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11343,29 +11310,18 @@
             "recipe": 187,
             "choreography": [
               {
-                "op": "spread",
-                "type": "dirge",
-                "radius": 220
-              },
-              {
-                "op": "pet",
-                "appearance": "ghost",
-                "count": 3,
-                "power": 0.65,
-                "duration": 12
-              },
-              {
-                "op": "consume",
-                "type": "dirge",
-                "power": 3
+                "op": "bard-kit",
+                "kind": "ghost-choir",
+                "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
+                "target": "self"
               }
             ],
             "rays": 8,
             "rotation": 79,
-            "shape": "spread+pet+consume"
+            "shape": "bard-kit"
           },
-          "actualText": "대상의 dirge 상태를 반경 220의 적에게 전염 / 망령 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
-          "visual": "전용 연출 seunguk-4:3 · spread → pet → consume · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
+          "visual": "전용 연출 seunguk-4:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -11377,8 +11333,8 @@
       "parent": "seunguk-2",
       "style": "dance",
       "resource": "마력",
-      "review": "검무 삼연격 — dash → volley / 반월 선회 — whirl / 회피 스텝 — dash → buff → counter / 만화검무 — dash → volley → buff",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "검무 삼연격 — sword-triple / 검끝 집중 — sword-focus / 회피 스텝 — sword-counter / 만화검무 — sword-finale",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-5-skill-0",
@@ -11396,24 +11352,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
-          "range": 320,
+          "range": 125,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-188",
-          "description": "앞으로 최대 140 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 90%",
+          "description": "대상에게 접근해 3회 검격, 타격당 100%",
           "actions": [
             {
-              "op": "dash",
-              "distance": 140
-            },
-            {
-              "op": "volley",
-              "count": 3,
-              "power": 0.9,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "bard-kit",
+              "kind": "sword-triple",
+              "description": "대상에게 접근해 3회 검격, 타격당 100%",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11424,23 +11375,18 @@
             "recipe": 188,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 140
-              },
-              {
-                "op": "volley",
-                "count": 3,
-                "power": 0.9,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "bard-kit",
+                "kind": "sword-triple",
+                "description": "대상에게 접근해 3회 검격, 타격당 100%",
+                "target": "single"
               }
             ],
             "rays": 9,
             "rotation": 116,
-            "shape": "dash+volley"
+            "shape": "bard-kit"
           },
-          "actualText": "앞으로 최대 140 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 90%",
-          "visual": "전용 연출 seunguk-5:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상에게 접근해 3회 검격, 타격당 100%",
+          "visual": "전용 연출 seunguk-5:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-1",
@@ -11448,7 +11394,7 @@
           "heroId": 6,
           "cell": 5,
           "slot": 1,
-          "name": "반월 선회",
+          "name": "검끝 집중",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11458,20 +11404,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
-          "target": "area",
+          "target": "self",
           "effectType": "recipe-189",
-          "description": "이동 가능한 회전 공격 5회 · 0.18초 간격 · 반경 110",
+          "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
           "actions": [
             {
-              "op": "whirl",
-              "count": 5,
-              "power": 0.8,
-              "radius": 110,
-              "gap": 0.18
+              "op": "bard-kit",
+              "kind": "sword-focus",
+              "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11482,19 +11427,18 @@
             "recipe": 189,
             "choreography": [
               {
-                "op": "whirl",
-                "count": 5,
-                "power": 0.8,
-                "radius": 110,
-                "gap": 0.18
+                "op": "bard-kit",
+                "kind": "sword-focus",
+                "description": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
+                "target": "self"
               }
             ],
             "rays": 10,
             "rotation": 153,
-            "shape": "whirl"
+            "shape": "bard-kit"
           },
-          "actualText": "이동 가능한 회전 공격 5회 · 0.18초 간격 · 반경 110",
-          "visual": "전용 연출 seunguk-5:1 · whirl · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "12초 동안 같은 대상 기본 공격·삼연격마다 집중 축적. 최대 5중첩에서 피해 50% 증가",
+          "visual": "전용 연출 seunguk-5:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-2",
@@ -11512,28 +11456,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
-          "range": 320,
+          "range": 125,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-190",
-          "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 회피율 45% 증가 / 5초 방어 성공 시 200% 반격",
+          "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
           "actions": [
             {
-              "op": "dash",
-              "distance": -110
-            },
-            {
-              "op": "buff",
-              "type": "evasion",
-              "value": 0.45,
-              "duration": 5
-            },
-            {
-              "op": "counter",
-              "power": 2,
-              "duration": 5
+              "op": "bard-kit",
+              "kind": "sword-counter",
+              "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11544,27 +11479,18 @@
             "recipe": 190,
             "choreography": [
               {
-                "op": "dash",
-                "distance": -110
-              },
-              {
-                "op": "buff",
-                "type": "evasion",
-                "value": 0.45,
-                "duration": 5
-              },
-              {
-                "op": "counter",
-                "power": 2,
-                "duration": 5
+                "op": "bard-kit",
+                "kind": "sword-counter",
+                "description": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
+                "target": "self"
               }
             ],
             "rays": 11,
             "rotation": 10,
-            "shape": "dash+buff+counter"
+            "shape": "bard-kit"
           },
-          "actualText": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 회피율 45% 증가 / 5초 방어 성공 시 200% 반격",
-          "visual": "전용 연출 seunguk-5:2 · dash → buff → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "뒤로 물러나 5초간 회피 +45%. 실제 회피 성공 시 대상에게 돌진해 250% 반격",
+          "visual": "전용 연출 seunguk-5:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-5-skill-3",
@@ -11582,30 +11508,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
-          "range": 320,
+          "range": 125,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-191",
-          "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 회피율 30% 증가",
+          "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
           "actions": [
             {
-              "op": "dash",
-              "distance": 200
-            },
-            {
-              "op": "volley",
-              "count": 10,
-              "power": 0.7,
-              "gap": 0.1,
-              "shape": "single"
-            },
-            {
-              "op": "buff",
-              "type": "evasion",
-              "value": 0.3,
-              "duration": 3
+              "op": "bard-kit",
+              "kind": "sword-finale",
+              "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11616,29 +11531,18 @@
             "recipe": 191,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 200
-              },
-              {
-                "op": "volley",
-                "count": 10,
-                "power": 0.7,
-                "gap": 0.1,
-                "shape": "single"
-              },
-              {
-                "op": "buff",
-                "type": "evasion",
-                "value": 0.3,
-                "duration": 3
+                "op": "bard-kit",
+                "kind": "sword-finale",
+                "description": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
+                "target": "single"
               }
             ],
             "rays": 12,
             "rotation": 47,
-            "shape": "dash+volley+buff"
+            "shape": "bard-kit"
           },
-          "actualText": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 회피율 30% 증가",
-          "visual": "전용 연출 seunguk-5:3 · dash → volley → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상 주위를 오가며 8회 65% 검격 후 240% 내려찍기",
+          "visual": "전용 연출 seunguk-5:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -11650,8 +11554,8 @@
       "parent": "seunguk-2",
       "style": "echo",
       "resource": "마력",
-      "review": "별빛 사출 — missile / 공전하는 별 — pet / 별자리 예고 — zone / 유성 군무 — barrage",
-      "intendedIdentity": "공격/방어 선율·진혼·검무·별 궤도 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "별빛 사출 — star-shot / 공전하는 별 — orbit-stars / 별자리 연결 — constellation / 유성 군무 — meteor-dance",
+      "intendedIdentity": "노래 전환·합주와 재연·저주 전염·단일 검무·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-6-skill-0",
@@ -11669,19 +11573,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-192",
-          "description": "추적 투사체 250% · 실제 충돌 시 피해",
+          "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
           "actions": [
             {
-              "op": "missile",
-              "power": 2.5,
-              "speed": 260,
-              "homing": true
+              "op": "bard-kit",
+              "kind": "star-shot",
+              "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
+              "target": "single"
             }
           ],
           "fx": {
@@ -11692,18 +11596,18 @@
             "recipe": 192,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2.5,
-                "speed": 260,
-                "homing": true
+                "op": "bard-kit",
+                "kind": "star-shot",
+                "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
+                "target": "single"
               }
             ],
             "rays": 5,
             "rotation": 84,
-            "shape": "missile"
+            "shape": "bard-kit"
           },
-          "actualText": "추적 투사체 250% · 실제 충돌 시 피해",
-          "visual": "전용 연출 seunguk-6:0 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
+          "visual": "전용 연출 seunguk-6:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-1",
@@ -11721,20 +11625,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
           "target": "self",
           "effectType": "recipe-193",
-          "description": "공전 별 3마리 실제 소환 · 14초 · 공격력 45%",
+          "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
           "actions": [
             {
-              "op": "pet",
-              "appearance": "star",
-              "count": 3,
-              "power": 0.45,
-              "duration": 14
+              "op": "bard-kit",
+              "kind": "orbit-stars",
+              "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
+              "target": "self"
             }
           ],
           "fx": {
@@ -11745,19 +11648,18 @@
             "recipe": 193,
             "choreography": [
               {
-                "op": "pet",
-                "appearance": "star",
-                "count": 3,
-                "power": 0.45,
-                "duration": 14
+                "op": "bard-kit",
+                "kind": "orbit-stars",
+                "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
+                "target": "self"
               }
             ],
             "rays": 6,
             "rotation": 121,
-            "shape": "pet"
+            "shape": "bard-kit"
           },
-          "actualText": "공전 별 3마리 실제 소환 · 14초 · 공격력 45%",
-          "visual": "전용 연출 seunguk-6:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
+          "visual": "전용 연출 seunguk-6:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-2",
@@ -11765,7 +11667,7 @@
           "heroId": 6,
           "cell": 6,
           "slot": 2,
-          "name": "별자리 예고",
+          "name": "별자리 연결",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11775,20 +11677,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
-          "radius": 160,
-          "target": "self",
+          "radius": 140,
+          "target": "area",
           "effectType": "recipe-194",
-          "description": "별빛 지대 8초 · 반경 160 · 0.8초마다 공격력 45% 피해",
+          "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
           "actions": [
             {
-              "op": "zone",
-              "type": "stars",
-              "power": 0.45,
-              "radius": 160,
-              "duration": 8
+              "op": "bard-kit",
+              "kind": "constellation",
+              "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
+              "target": "area"
             }
           ],
           "fx": {
@@ -11799,19 +11700,18 @@
             "recipe": 194,
             "choreography": [
               {
-                "op": "zone",
-                "type": "stars",
-                "power": 0.45,
-                "radius": 160,
-                "duration": 8
+                "op": "bard-kit",
+                "kind": "constellation",
+                "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
+                "target": "area"
               }
             ],
             "rays": 7,
             "rotation": 158,
-            "shape": "zone"
+            "shape": "bard-kit"
           },
-          "actualText": "별빛 지대 8초 · 반경 160 · 0.8초마다 공격력 45% 피해",
-          "visual": "전용 연출 seunguk-6:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
+          "visual": "전용 연출 seunguk-6:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-3",
@@ -11829,21 +11729,19 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-195",
-          "description": "0.7초 후 0.25초 간격 7개 착탄 · 각 반경 65, 150%",
+          "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
           "actions": [
             {
-              "op": "barrage",
-              "count": 7,
-              "power": 1.5,
-              "radius": 65,
-              "gap": 0.25,
-              "delay": 0.7
+              "op": "bard-kit",
+              "kind": "meteor-dance",
+              "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
+              "target": "area"
             }
           ],
           "fx": {
@@ -11854,20 +11752,18 @@
             "recipe": 195,
             "choreography": [
               {
-                "op": "barrage",
-                "count": 7,
-                "power": 1.5,
-                "radius": 65,
-                "gap": 0.25,
-                "delay": 0.7
+                "op": "bard-kit",
+                "kind": "meteor-dance",
+                "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
+                "target": "area"
               }
             ],
             "rays": 8,
             "rotation": 15,
-            "shape": "barrage"
+            "shape": "bard-kit"
           },
-          "actualText": "0.7초 후 0.25초 간격 7개 착탄 · 각 반경 65, 150%",
-          "visual": "전용 연출 seunguk-6:3 · barrage · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
+          "visual": "전용 연출 seunguk-6:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -12344,7 +12240,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -12406,7 +12302,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -12460,7 +12356,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 125,
           "radius": 140,
@@ -12508,7 +12404,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 125,
           "radius": 140,
@@ -13043,7 +12939,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 320,
           "radius": 140,
@@ -13109,7 +13005,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 160,
@@ -13175,7 +13071,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -13233,7 +13129,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 230,
@@ -13322,7 +13218,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -13376,7 +13272,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -13430,7 +13326,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 160,
@@ -13484,7 +13380,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 220,
@@ -16869,7 +16765,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -16917,7 +16813,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.5,
           "range": 125,
           "radius": 140,
@@ -16965,7 +16861,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13,
           "range": 125,
           "radius": 140,
@@ -17013,7 +16909,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34,
           "range": 125,
           "radius": 150,
@@ -17309,7 +17205,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -17357,7 +17253,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 125,
           "radius": 140,
@@ -17405,7 +17301,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 190,
@@ -17463,7 +17359,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 125,
           "radius": 160,
@@ -18022,7 +17918,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 125,
           "radius": 140,
@@ -18078,7 +17974,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 125,
           "radius": 140,
@@ -18126,7 +18022,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 230,
@@ -18186,7 +18082,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 125,
           "radius": 170,
@@ -18267,7 +18163,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -18329,7 +18225,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 150,
@@ -18383,7 +18279,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 125,
           "radius": 140,
@@ -18441,7 +18337,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 180,
@@ -18538,7 +18434,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.2,
           "range": 460,
           "radius": 140,
@@ -18592,7 +18488,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.5,
           "range": 460,
           "radius": 140,
@@ -18640,7 +18536,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13,
           "range": 460,
           "radius": 140,
@@ -18690,7 +18586,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34,
           "range": 460,
           "radius": 140,
@@ -18757,7 +18653,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -18811,7 +18707,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -18859,7 +18755,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -18917,7 +18813,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
@@ -18986,7 +18882,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 5.6000000000000005,
           "range": 460,
           "radius": 140,
@@ -19054,7 +18950,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
@@ -19108,7 +19004,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.4,
           "range": 460,
           "radius": 140,
@@ -19158,7 +19054,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.4,
           "range": 460,
           "radius": 140,
@@ -19225,7 +19121,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19283,7 +19179,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19337,7 +19233,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19395,7 +19291,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 190,
@@ -19478,7 +19374,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19532,7 +19428,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19586,7 +19482,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19640,7 +19536,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 170,
@@ -19721,7 +19617,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -19803,7 +19699,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -19861,7 +19757,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -19911,7 +19807,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
@@ -20024,7 +19920,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 9,
+          "cost": 5,
           "cooldown": 6,
           "range": 460,
           "radius": 140,
@@ -20080,7 +19976,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 12,
+          "cost": 7,
           "cooldown": 8.3,
           "range": 460,
           "radius": 140,
@@ -20142,7 +20038,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 14,
+          "cost": 8,
           "cooldown": 13.8,
           "range": 460,
           "radius": 140,
@@ -20202,7 +20098,7 @@
             "start": 100,
             "color": "#73b4ed"
           },
-          "cost": 27,
+          "cost": 16,
           "cooldown": 34.8,
           "range": 460,
           "radius": 140,
