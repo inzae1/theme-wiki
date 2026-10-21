@@ -58,7 +58,7 @@ class Game{
  spawnPoint(index,boss=false){const c=this.c,angle=index*Math.PI/4+(this.random()-.5)*.30,radius=(boss?250:180)+this.random()*(boss?40:130);return safePoint({x:c.x+Math.cos(angle)*radius,y:c.y+Math.sin(angle)*radius},c.zone);}
  spawn(){const c=this.c,r=this.D.regions[c.zone],alive=c.enemies.filter(e=>e.hp>0).length;
  if(c.boss&&c.spawned>=24){if(!c.bossSpawned&&alive===0){const b=r.bosses[Math.floor((c.local-1)/2)],point=this.spawnPoint(Math.floor(this.random()*8),true);c.enemies.push(this.enemy(b,true,point.x,point.y));c.spawned++;c.bossSpawned=true;this.emit('boss',{name:b.name});this.log(b.name+' 출현','boss');}return;}
- if(c.spawnClock>0)return;const total=c.boss?24:c.goal,batch=Math.min(15,total-c.spawned);if(batch<=0||alive+batch>72)return;for(let i=0;i<batch;i++){const m=r.monsters[Math.floor(this.random()*3)],point=this.spawnPoint(c.spawned);c.enemies.push(this.enemy(m,false,point.x,point.y));c.spawned++;}c.spawnClock=5;
+ if(c.spawnClock>0)return;const total=c.boss?24:c.goal,batch=Math.min(15,total-c.spawned);if(batch<=0||alive+batch>72)return;for(let i=0;i<batch;i++){const m=r.monsters[Math.floor(this.random()*3)],point=this.spawnPoint(c.spawned);c.enemies.push(this.enemy(m,false,point.x,point.y));c.spawned++;}c.spawnClock=8;
  }
 
 
