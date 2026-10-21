@@ -1,0 +1,142 @@
+{
+  "impact-crack-authored": {
+    "size": [
+      1774,
+      887
+    ],
+    "rect": [
+      90,
+      105,
+      1602,
+      674
+    ],
+    "transparentRatio": 0.8534,
+    "source": "generated for this project with built-in image generation"
+  },
+  "arrow-authored": {
+    "size": [
+      1774,
+      887
+    ],
+    "rect": [
+      220,
+      382,
+      1334,
+      122
+    ],
+    "transparentRatio": 0.9628,
+    "source": "generated for this project with built-in image generation"
+  },
+  "shell-authored": {
+    "size": [
+      1983,
+      793
+    ],
+    "rect": [
+      418,
+      246,
+      1141,
+      302
+    ],
+    "transparentRatio": 0.8264,
+    "source": "generated for this project with built-in image generation"
+  },
+  "thorn-plant-authored": {
+    "size": [
+      1254,
+      1254
+    ],
+    "rect": [
+      125,
+      100,
+      1027,
+      1049
+    ],
+    "transparentRatio": 0.6849,
+    "source": "generated for this project with built-in image generation"
+  },
+  "healing-authored": {
+    "size": [
+      1086,
+      1448
+    ],
+    "rect": [
+      419,
+      254,
+      293,
+      874
+    ],
+    "transparentRatio": 0.9816,
+    "source": "generated for this project with built-in image generation"
+  },
+  "energy-beam-authored": {
+    "size": [
+      1914,
+      822
+    ],
+    "rect": [
+      26,
+      212,
+      1868,
+      434
+    ],
+    "transparentRatio": 0.71,
+    "source": "generated for this project with built-in image generation"
+  },
+  "roots-authored": {
+    "size": [
+      1086,
+      1448
+    ],
+    "rect": [
+      241,
+      255,
+      780,
+      987
+    ],
+    "transparentRatio": 0.8025,
+    "source": "generated for this project with built-in image generation"
+  },
+  "fighter-fist-authored": {
+    "size": [
+      1774,
+      887
+    ],
+    "rect": [
+      281,
+      131,
+      1252,
+      571
+    ],
+    "transparentRatio": 0.6351,
+    "source": "generated for this project with built-in image generation"
+  },
+  "monk-fist-authored": {
+    "size": [
+      1774,
+      887
+    ],
+    "rect": [
+      420,
+      215,
+      938,
+      463
+    ],
+    "transparentRatio": 0.7855,
+    "source": "generated for this project with built-in image generation"
+  },
+  "sanctuary-authored": {
+    "size": [
+      1278,
+      1230
+    ],
+    "rect": [
+      71,
+      57,
+      1137,
+      1094
+    ],
+    "transparentRatio": 0.7469,
+    "source": "generated for this project with built-in image generation"
+  }
+}

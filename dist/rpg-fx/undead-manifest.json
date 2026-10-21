@@ -1,0 +1,54 @@
+{
+  "skeleton-archer": {
+    "file": "summon-skeleton-archer.png",
+    "crop": [
+      255,
+      251,
+      800,
+      973
+    ],
+    "width": 1145,
+    "height": 1374,
+    "transparent": 0.7717441187874627,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
+  },
+  "zombie": {
+    "file": "summon-zombie.png",
+    "crop": [
+      253,
+      194,
+      818,
+      1018
+    ],
+    "width": 1145,
+    "height": 1374,
+    "transparent": 0.741862918962898,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
+  },
+  "bone-dragon": {
+    "file": "summon-bone-dragon.png",
+    "crop": [
+      41,
+      136,
+      1343,
+      907
+    ],
+    "width": 1402,
+    "height": 1122,
+    "transparent": 0.6174983026539627,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
+  },
+  "grave-golem": {
+    "file": "summon-grave-golem.png",
+    "crop": [
+      69,
+      146,
+      1190,
+      977
+    ],
+    "width": 1312,
+    "height": 1199,
+    "transparent": 0.49875722146504203,
+    "source": "Original artwork generated for this project with the built-in image generation tool."
+  }
+}

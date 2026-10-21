@@ -34,3 +34,11 @@ Credit is retained voluntarily. Class-specific timing, placement, projectiles, c
 - nature-regrowth.png: Cethiel, Nature - Magic Effect, CC0. Original 0-1 through 0-5 images packed into equally padded atlas cells, original pixels preserved. https://opengameart.org/content/nature-magic-effect
 - lightning-spark.png: 13rice, Radial lightning effect, CC0. Original pixelated_tilesheet.png, 4×2 frames of 64px. https://opengameart.org/content/radial-lightning-effect
 - blast-fire.png / blast-heavy.png: Soluna Software, CC0. Original Explosion03.png / Explosion21.png, 4×4 frames of 128px. https://opengameart.org/content/explosion-effects-and-more
+
+## Weapon-family attack animations (2026-10-21)
+Viktor Hahn (Viktor.Hahn@web.de), also credited as Unnamed — Pixelated attack/hit animations and More pixelated attack/hit animations. Licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+Sources: https://opengameart.org/content/pixelated-attackhit-animations and https://opengameart.org/content/more-pixelated-attackhit-animations
+Runtime copies were renamed only, without recoloring: melee-punch.png, melee-jab.png, melee-thrust.png, melee-saber.png, melee-fan.png, melee-reap.png, melee-claw.png, melee-bloodcut.png, melee-stab.png, melee-armorbreak.png, melee-baghit.png, melee-shatter.png, melee-shock.png. Frame placement, size and playback are controlled by game code.
+
+## Original project artwork
+The ten *-authored.png effect/plant assets and four summon-*.png undead sprites were generated specifically for this project using the built-in image generation tool. Original transparent PNGs are preserved; cropping, motion and scaling occur at runtime. Metadata is recorded in authored-manifest.json and undead-manifest.json.

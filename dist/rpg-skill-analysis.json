@@ -380,7 +380,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-6",
-          "description": "9초 combo 강화 22%",
+          "description": "9초 연격 22% 증가",
           "actions": [
             {
               "op": "buff",
@@ -407,7 +407,7 @@
             "rotation": 42,
             "shape": "buff"
           },
-          "actualText": "9초 combo 강화 22%",
+          "actualText": "9초 연격 22% 증가",
           "visual": "전용 연출 jongchan-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -627,7 +627,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-10",
-          "description": "ghost 1마리 실제 소환 · 12초 · 공격력 40%",
+          "description": "망령 1마리 실제 소환 · 12초 · 공격력 40%",
           "actions": [
             {
               "op": "pet",
@@ -656,7 +656,7 @@
             "rotation": 10,
             "shape": "pet"
           },
-          "actualText": "ghost 1마리 실제 소환 · 12초 · 공격력 40%",
+          "actualText": "망령 1마리 실제 소환 · 12초 · 공격력 40%",
           "visual": "전용 연출 jongchan-2:2 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -756,7 +756,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-12",
-          "description": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 55%",
+          "description": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 56%",
           "actions": [
             {
               "op": "dash",
@@ -793,7 +793,7 @@
             "rotation": 84,
             "shape": "dash+volley"
           },
-          "actualText": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 55%",
+          "actualText": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 56%",
           "visual": "전용 연출 jongchan-3:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -872,7 +872,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-14",
-          "description": "10초 combo 강화 35%",
+          "description": "10초 연격 35% 증가",
           "actions": [
             {
               "op": "buff",
@@ -899,7 +899,7 @@
             "rotation": 158,
             "shape": "buff"
           },
-          "actualText": "10초 combo 강화 35%",
+          "actualText": "10초 연격 35% 증가",
           "visual": "전용 연출 jongchan-3:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1232,7 +1232,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-20",
-          "description": "rune 지대 12초 · 반경 65 · 0.8초마다 15%",
+          "description": "룬 지대 12초 · 반경 65 · 0.8초마다 공격력 15% 피해",
           "actions": [
             {
               "op": "zone",
@@ -1261,7 +1261,7 @@
             "rotation": 20,
             "shape": "zone"
           },
-          "actualText": "rune 지대 12초 · 반경 65 · 0.8초마다 15%",
+          "actualText": "룬 지대 12초 · 반경 65 · 0.8초마다 공격력 15% 피해",
           "visual": "전용 연출 jongchan-5:0 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1336,7 +1336,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-22",
-          "description": "10초 efficiency 강화 30% / rune 지대 12초 · 반경 50 · 0.8초마다 10%",
+          "description": "10초 효율 30% 증가 / 룬 지대 12초 · 반경 50 · 0.8초마다 공격력 10% 피해",
           "actions": [
             {
               "op": "buff",
@@ -1377,7 +1377,7 @@
             "rotation": 94,
             "shape": "buff+zone"
           },
-          "actualText": "10초 efficiency 강화 30% / rune 지대 12초 · 반경 50 · 0.8초마다 10%",
+          "actualText": "10초 효율 30% 증가 / 룬 지대 12초 · 반경 50 · 0.8초마다 공격력 10% 피해",
           "visual": "전용 연출 jongchan-5:2 · buff → zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1467,7 +1467,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-24",
-          "description": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / ghost 1마리 실제 소환 · 15초 · 공격력 50%",
+          "description": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 망령 1마리 실제 소환 · 15초 · 공격력 50%",
           "actions": [
             {
               "op": "status",
@@ -1510,7 +1510,7 @@
             "rotation": 168,
             "shape": "status+pet"
           },
-          "actualText": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / ghost 1마리 실제 소환 · 15초 · 공격력 50%",
+          "actualText": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 망령 1마리 실제 소환 · 15초 · 공격력 50%",
           "visual": "전용 연출 jongchan-6:0 · status → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1593,7 +1593,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-26",
-          "description": "ghost 2마리 실제 소환 · 15초 · 공격력 65% / 10초 lifesteal 강화 12%",
+          "description": "망령 2마리 실제 소환 · 15초 · 공격력 65% / 10초 흡혈 12% 증가",
           "actions": [
             {
               "op": "pet",
@@ -1634,7 +1634,7 @@
             "rotation": 62,
             "shape": "pet+buff"
           },
-          "actualText": "ghost 2마리 실제 소환 · 15초 · 공격력 65% / 10초 lifesteal 강화 12%",
+          "actualText": "망령 2마리 실제 소환 · 15초 · 공격력 65% / 10초 흡혈 12% 증가",
           "visual": "전용 연출 jongchan-6:2 · pet → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -1659,7 +1659,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-27",
-          "description": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / ghost 3마리 실제 소환 · 18초 · 공격력 80%",
+          "description": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / 망령 3마리 실제 소환 · 18초 · 공격력 80%",
           "actions": [
             {
               "op": "status",
@@ -1712,7 +1712,7 @@
             "rotation": 99,
             "shape": "status+consume+pet"
           },
-          "actualText": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / ghost 3마리 실제 소환 · 18초 · 공격력 80%",
+          "actualText": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / 망령 3마리 실제 소환 · 18초 · 공격력 80%",
           "visual": "전용 연출 jongchan-6:3 · status → consume → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -1850,7 +1850,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-30",
-          "description": "7초 rageGain 강화 60%",
+          "description": "7초 분노 획득량 60% 증가",
           "actions": [
             {
               "op": "buff",
@@ -1877,7 +1877,7 @@
             "rotation": 30,
             "shape": "buff"
           },
-          "actualText": "7초 rageGain 강화 60%",
+          "actualText": "7초 분노 획득량 60% 증가",
           "visual": "전용 연출 hyunseok-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -2089,7 +2089,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-34",
-          "description": "7초 haste 강화 35%",
+          "description": "7초 공격속도 35% 증가",
           "actions": [
             {
               "op": "buff",
@@ -2116,7 +2116,7 @@
             "rotation": 178,
             "shape": "buff"
           },
-          "actualText": "7초 haste 강화 35%",
+          "actualText": "7초 공격속도 35% 증가",
           "visual": "전용 연출 hyunseok-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -2328,7 +2328,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-38",
-          "description": "5초 방어 · 받는 피해 55% 감소, 막은 피해 반격 축적",
+          "description": "5초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적",
           "actions": [
             {
               "op": "guard",
@@ -2353,7 +2353,7 @@
             "rotation": 146,
             "shape": "guard"
           },
-          "actualText": "5초 방어 · 받는 피해 55% 감소, 막은 피해 반격 축적",
+          "actualText": "5초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적",
           "visual": "전용 연출 hyunseok-2:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -2445,7 +2445,7 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-40",
-          "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 lifesteal 강화 20%",
+          "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 흡혈 20% 증가",
           "actions": [
             {
               "op": "hp-cost",
@@ -2494,7 +2494,7 @@
             "rotation": 40,
             "shape": "hp-cost+whirl+buff"
           },
-          "actualText": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 lifesteal 강화 20%",
+          "actualText": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 흡혈 20% 증가",
           "visual": "전용 연출 hyunseok-3:0 · hp-cost → whirl → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -2585,7 +2585,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-42",
-          "description": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 lifesteal 강화 35% / 10초 power 강화 30%",
+          "description": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 흡혈 35% 증가 / 10초 공격력 30% 증가",
           "actions": [
             {
               "op": "hp-cost",
@@ -2632,7 +2632,7 @@
             "rotation": 114,
             "shape": "hp-cost+buff+buff"
           },
-          "actualText": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 lifesteal 강화 35% / 10초 power 강화 30%",
+          "actualText": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 흡혈 35% 증가 / 10초 공격력 30% 증가",
           "visual": "전용 연출 hyunseok-3:2 · hp-cost → buff → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -2657,7 +2657,7 @@
           "radius": 150,
           "target": "area",
           "effectType": "recipe-43",
-          "description": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 lifesteal 강화 30%",
+          "description": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 흡혈 30% 증가",
           "actions": [
             {
               "op": "whirl",
@@ -2698,7 +2698,7 @@
             "rotation": 151,
             "shape": "whirl+buff"
           },
-          "actualText": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 lifesteal 강화 30%",
+          "actualText": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 흡혈 30% 증가",
           "visual": "전용 연출 hyunseok-3:3 · whirl → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -2850,7 +2850,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-46",
-          "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 crit 강화 25%",
+          "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 치명타 25% 증가",
           "actions": [
             {
               "op": "dash",
@@ -2885,7 +2885,7 @@
             "rotation": 82,
             "shape": "dash+buff"
           },
-          "actualText": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 crit 강화 25%",
+          "actualText": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 치명타 25% 증가",
           "visual": "전용 연출 hyunseok-4:2 · dash → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3089,7 +3089,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-50",
-          "description": "8초 charge 강화 65%",
+          "description": "8초 충전 65% 증가",
           "actions": [
             {
               "op": "buff",
@@ -3116,7 +3116,7 @@
             "rotation": 50,
             "shape": "buff"
           },
-          "actualText": "8초 charge 강화 65%",
+          "actualText": "8초 충전 65% 증가",
           "visual": "전용 연출 hyunseok-5:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3332,7 +3332,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-54",
-          "description": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 unstoppable 강화 100%",
+          "description": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 저지 저항 100% 증가",
           "actions": [
             {
               "op": "guard",
@@ -3369,7 +3369,7 @@
             "rotation": 18,
             "shape": "guard+buff"
           },
-          "actualText": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 unstoppable 강화 100%",
+          "actualText": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 저지 저항 100% 증가",
           "visual": "전용 연출 hyunseok-6:2 · guard → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -3591,7 +3591,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-58",
-          "description": "8초 efficiency 강화 25%",
+          "description": "8초 효율 25% 증가",
           "actions": [
             {
               "op": "buff",
@@ -3618,7 +3618,7 @@
             "rotation": 166,
             "shape": "buff"
           },
-          "actualText": "8초 efficiency 강화 25%",
+          "actualText": "8초 효율 25% 증가",
           "visual": "전용 연출 jihoon-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -4081,7 +4081,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-66",
-          "description": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 power 강화 35%",
+          "description": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 공격력 35% 증가",
           "actions": [
             {
               "op": "hp-cost",
@@ -4116,7 +4116,7 @@
             "rotation": 102,
             "shape": "hp-cost+buff"
           },
-          "actualText": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 power 강화 35%",
+          "actualText": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 공격력 35% 증가",
           "visual": "전용 연출 jihoon-2:2 · hp-cost → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -4535,7 +4535,7 @@
           "radius": 160,
           "target": "self",
           "effectType": "recipe-73",
-          "description": "frost 지대 9초 · 반경 160 · 0.8초마다 40%",
+          "description": "빙결 지대 9초 · 반경 160 · 0.8초마다 공격력 40% 피해",
           "actions": [
             {
               "op": "zone",
@@ -4564,7 +4564,7 @@
             "rotation": 1,
             "shape": "zone"
           },
-          "actualText": "frost 지대 9초 · 반경 160 · 0.8초마다 40%",
+          "actualText": "빙결 지대 9초 · 반경 160 · 0.8초마다 공격력 40% 피해",
           "visual": "전용 연출 jihoon-4:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -5523,7 +5523,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-89",
-          "description": "sanctuary 지대 8초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+          "description": "성역 지대 8초 · 반경 120 · 0.8초마다 공격력 25% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "zone",
@@ -5552,7 +5552,7 @@
             "rotation": 53,
             "shape": "zone"
           },
-          "actualText": "sanctuary 지대 8초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+          "actualText": "성역 지대 8초 · 반경 120 · 0.8초마다 공격력 25% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 youngjun-1:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -5810,7 +5810,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-94",
-          "description": "9초 rageGain 강화 70%",
+          "description": "9초 분노 획득량 70% 증가",
           "actions": [
             {
               "op": "buff",
@@ -5837,7 +5837,7 @@
             "rotation": 58,
             "shape": "buff"
           },
-          "actualText": "9초 rageGain 강화 70%",
+          "actualText": "9초 분노 획득량 70% 증가",
           "visual": "전용 연출 youngjun-2:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -5987,7 +5987,7 @@
           "radius": 150,
           "target": "self",
           "effectType": "recipe-97",
-          "description": "banner 지대 12초 · 반경 150 · 0.8초마다 40% 및 지대 내 자가 회복",
+          "description": "수호 지대 12초 · 반경 150 · 0.8초마다 공격력 40% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "zone",
@@ -6016,7 +6016,7 @@
             "rotation": 169,
             "shape": "zone"
           },
-          "actualText": "banner 지대 12초 · 반경 150 · 0.8초마다 40% 및 지대 내 자가 회복",
+          "actualText": "수호 지대 12초 · 반경 150 · 0.8초마다 공격력 40% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 youngjun-3:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -6097,7 +6097,7 @@
           "radius": 190,
           "target": "self",
           "effectType": "recipe-99",
-          "description": "sanctuary 지대 14초 · 반경 190 · 0.8초마다 80% 및 지대 내 자가 회복 / 10초 power 강화 40%",
+          "description": "성역 지대 14초 · 반경 190 · 0.8초마다 공격력 80% 피해 및 지대 내 자가 회복 / 10초 공격력 40% 증가",
           "actions": [
             {
               "op": "zone",
@@ -6138,7 +6138,7 @@
             "rotation": 63,
             "shape": "zone+buff"
           },
-          "actualText": "sanctuary 지대 14초 · 반경 190 · 0.8초마다 80% 및 지대 내 자가 회복 / 10초 power 강화 40%",
+          "actualText": "성역 지대 14초 · 반경 190 · 0.8초마다 공격력 80% 피해 및 지대 내 자가 회복 / 10초 공격력 40% 증가",
           "visual": "전용 연출 youngjun-3:3 · zone → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -6523,7 +6523,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-106",
-          "description": "8초 aim 강화 60%",
+          "description": "8초 조준 60% 증가",
           "actions": [
             {
               "op": "buff",
@@ -6550,7 +6550,7 @@
             "rotation": 142,
             "shape": "buff"
           },
-          "actualText": "8초 aim 강화 60%",
+          "actualText": "8초 조준 60% 증가",
           "visual": "전용 연출 youngjun-5:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -6752,7 +6752,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-110",
-          "description": "10초 rageGain 강화 100%",
+          "description": "10초 분노 획득량 100% 증가",
           "actions": [
             {
               "op": "buff",
@@ -6779,7 +6779,7 @@
             "rotation": 110,
             "shape": "buff"
           },
-          "actualText": "10초 rageGain 강화 100%",
+          "actualText": "10초 분노 획득량 100% 증가",
           "visual": "전용 연출 youngjun-6:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -6983,7 +6983,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-114",
-          "description": "4초 evasion 강화 30%",
+          "description": "4초 회피율 30% 증가",
           "actions": [
             {
               "op": "buff",
@@ -7010,7 +7010,7 @@
             "rotation": 78,
             "shape": "buff"
           },
-          "actualText": "4초 evasion 강화 30%",
+          "actualText": "4초 회피율 30% 증가",
           "visual": "전용 연출 injae-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -7218,7 +7218,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-118",
-          "description": "1.5초 은신·무적 / 5초 crit 강화 20%",
+          "description": "1.5초 은신·무적 / 5초 치명타 20% 증가",
           "actions": [
             {
               "op": "stealth",
@@ -7253,7 +7253,7 @@
             "rotation": 46,
             "shape": "stealth+buff"
           },
-          "actualText": "1.5초 은신·무적 / 5초 crit 강화 20%",
+          "actualText": "1.5초 은신·무적 / 5초 치명타 20% 증가",
           "visual": "전용 연출 injae-1:2 · stealth → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -7624,7 +7624,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-125",
-          "description": "0.16초 간격 6회 · 타격당 65% / shadow 2마리 실제 소환 · 6초 · 공격력 60%",
+          "description": "0.16초 간격 6회 · 타격당 65% / 전투 잔영 2마리 실제 소환 · 6초 · 공격력 60%",
           "actions": [
             {
               "op": "volley",
@@ -7667,7 +7667,7 @@
             "rotation": 125,
             "shape": "volley+pet"
           },
-          "actualText": "0.16초 간격 6회 · 타격당 65% / shadow 2마리 실제 소환 · 6초 · 공격력 60%",
+          "actualText": "0.16초 간격 6회 · 타격당 65% / 전투 잔영 2마리 실제 소환 · 6초 · 공격력 60%",
           "visual": "전용 연출 injae-3:1 · volley → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -7692,7 +7692,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-126",
-          "description": "1초 은신·무적 / 8초 combo 강화 30%",
+          "description": "1초 은신·무적 / 8초 연격 30% 증가",
           "actions": [
             {
               "op": "stealth",
@@ -7727,7 +7727,7 @@
             "rotation": 162,
             "shape": "stealth+buff"
           },
-          "actualText": "1초 은신·무적 / 8초 combo 강화 30%",
+          "actualText": "1초 은신·무적 / 8초 연격 30% 증가",
           "visual": "전용 연출 injae-3:2 · stealth → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -7752,7 +7752,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-127",
-          "description": "shadow 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
+          "description": "전투 잔영 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
           "actions": [
             {
               "op": "pet",
@@ -7795,7 +7795,7 @@
             "rotation": 19,
             "shape": "pet+volley"
           },
-          "actualText": "shadow 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
+          "actualText": "전투 잔영 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
           "visual": "전용 연출 injae-3:3 · pet → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -8188,7 +8188,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-134",
-          "description": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 crit 강화 35%",
+          "description": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 치명타 35% 증가",
           "actions": [
             {
               "op": "swap"
@@ -8221,7 +8221,7 @@
             "rotation": 98,
             "shape": "swap+buff"
           },
-          "actualText": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 crit 강화 35%",
+          "actualText": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 치명타 35% 증가",
           "visual": "전용 연출 injae-5:2 · swap → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -8893,7 +8893,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-146",
-          "description": "9초 power 강화 25%",
+          "description": "9초 공격력 25% 증가",
           "actions": [
             {
               "op": "buff",
@@ -8920,7 +8920,7 @@
             "rotation": 2,
             "shape": "buff"
           },
-          "actualText": "9초 power 강화 25%",
+          "actualText": "9초 공격력 25% 증가",
           "visual": "전용 연출 changki-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -9078,7 +9078,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-149",
-          "description": "acid 지대 8초 · 반경 110 · 0.8초마다 35%",
+          "description": "산성 지대 8초 · 반경 110 · 0.8초마다 공격력 35% 피해",
           "actions": [
             {
               "op": "zone",
@@ -9107,7 +9107,7 @@
             "rotation": 113,
             "shape": "zone"
           },
-          "actualText": "acid 지대 8초 · 반경 110 · 0.8초마다 35%",
+          "actualText": "산성 지대 8초 · 반경 110 · 0.8초마다 공격력 35% 피해",
           "visual": "전용 연출 changki-2:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -9132,7 +9132,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-150",
-          "description": "homunculus 1마리 실제 소환 · 14초 · 공격력 45%",
+          "description": "호문쿨루스 1마리 실제 소환 · 14초 · 공격력 45%",
           "actions": [
             {
               "op": "pet",
@@ -9161,7 +9161,7 @@
             "rotation": 150,
             "shape": "pet"
           },
-          "actualText": "homunculus 1마리 실제 소환 · 14초 · 공격력 45%",
+          "actualText": "호문쿨루스 1마리 실제 소환 · 14초 · 공격력 45%",
           "visual": "전용 연출 changki-2:2 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -9668,7 +9668,7 @@
           "radius": 160,
           "target": "self",
           "effectType": "recipe-159",
-          "description": "실제 공격 포탑 3개 · 20초 / banner 지대 14초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+          "description": "실제 공격 포탑 3개 · 20초 / 수호 지대 14초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "turret",
@@ -9709,7 +9709,7 @@
             "rotation": 123,
             "shape": "turret+zone"
           },
-          "actualText": "실제 공격 포탑 3개 · 20초 / banner 지대 14초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+          "actualText": "실제 공격 포탑 3개 · 20초 / 수호 지대 14초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 changki-4:3 · turret → zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -9809,7 +9809,7 @@
           "radius": 165,
           "target": "self",
           "effectType": "recipe-161",
-          "description": "acid 지대 10초 · 반경 165 · 0.8초마다 60%",
+          "description": "산성 지대 10초 · 반경 165 · 0.8초마다 공격력 60% 피해",
           "actions": [
             {
               "op": "zone",
@@ -9838,7 +9838,7 @@
             "rotation": 17,
             "shape": "zone"
           },
-          "actualText": "acid 지대 10초 · 반경 165 · 0.8초마다 60%",
+          "actualText": "산성 지대 10초 · 반경 165 · 0.8초마다 공격력 60% 피해",
           "visual": "전용 연출 changki-5:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -10008,7 +10008,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-164",
-          "description": "homunculus 2마리 실제 소환 · 20초 · 공격력 45%",
+          "description": "호문쿨루스 2마리 실제 소환 · 20초 · 공격력 45%",
           "actions": [
             {
               "op": "pet",
@@ -10037,7 +10037,7 @@
             "rotation": 128,
             "shape": "pet"
           },
-          "actualText": "homunculus 2마리 실제 소환 · 20초 · 공격력 45%",
+          "actualText": "호문쿨루스 2마리 실제 소환 · 20초 · 공격력 45%",
           "visual": "전용 연출 changki-6:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -10805,7 +10805,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-178",
-          "description": "7초 evasion 강화 30%",
+          "description": "7초 회피율 30% 증가",
           "actions": [
             {
               "op": "buff",
@@ -10832,7 +10832,7 @@
             "rotation": 106,
             "shape": "buff"
           },
-          "actualText": "7초 evasion 강화 30%",
+          "actualText": "7초 회피율 30% 증가",
           "visual": "전용 연출 seunguk-2:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -10857,7 +10857,7 @@
           "radius": 140,
           "target": "area",
           "effectType": "recipe-179",
-          "description": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 haste 강화 25%",
+          "description": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 공격속도 25% 증가",
           "actions": [
             {
               "op": "blast",
@@ -10896,7 +10896,7 @@
             "rotation": 143,
             "shape": "blast+buff"
           },
-          "actualText": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 haste 강화 25%",
+          "actualText": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 공격속도 25% 증가",
           "visual": "전용 연출 seunguk-2:3 · blast → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -11261,7 +11261,7 @@
           "radius": 180,
           "target": "self",
           "effectType": "recipe-186",
-          "description": "dirge 지대 10초 · 반경 180 · 0.8초마다 45%",
+          "description": "진혼 지대 10초 · 반경 180 · 0.8초마다 공격력 45% 피해",
           "actions": [
             {
               "op": "zone",
@@ -11290,7 +11290,7 @@
             "rotation": 42,
             "shape": "zone"
           },
-          "actualText": "dirge 지대 10초 · 반경 180 · 0.8초마다 45%",
+          "actualText": "진혼 지대 10초 · 반경 180 · 0.8초마다 공격력 45% 피해",
           "visual": "전용 연출 seunguk-4:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -11315,7 +11315,7 @@
           "radius": 220,
           "target": "area",
           "effectType": "recipe-187",
-          "description": "대상의 dirge 상태를 반경 220의 적에게 전염 / ghost 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
+          "description": "대상의 dirge 상태를 반경 220의 적에게 전염 / 망령 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
           "actions": [
             {
               "op": "spread",
@@ -11364,7 +11364,7 @@
             "rotation": 79,
             "shape": "spread+pet+consume"
           },
-          "actualText": "대상의 dirge 상태를 반경 220의 적에게 전염 / ghost 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
+          "actualText": "대상의 dirge 상태를 반경 220의 적에게 전염 / 망령 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
           "visual": "전용 연출 seunguk-4:3 · spread → pet → consume · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -11518,7 +11518,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-190",
-          "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 evasion 강화 45% / 5초 방어 성공 시 200% 반격",
+          "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 회피율 45% 증가 / 5초 방어 성공 시 200% 반격",
           "actions": [
             {
               "op": "dash",
@@ -11563,7 +11563,7 @@
             "rotation": 10,
             "shape": "dash+buff+counter"
           },
-          "actualText": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 evasion 강화 45% / 5초 방어 성공 시 200% 반격",
+          "actualText": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 회피율 45% 증가 / 5초 방어 성공 시 200% 반격",
           "visual": "전용 연출 seunguk-5:2 · dash → buff → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -11588,7 +11588,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-191",
-          "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 evasion 강화 30%",
+          "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 회피율 30% 증가",
           "actions": [
             {
               "op": "dash",
@@ -11637,7 +11637,7 @@
             "rotation": 47,
             "shape": "dash+volley+buff"
           },
-          "actualText": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 evasion 강화 30%",
+          "actualText": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 회피율 30% 증가",
           "visual": "전용 연출 seunguk-5:3 · dash → volley → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -11727,7 +11727,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-193",
-          "description": "star 3마리 실제 소환 · 14초 · 공격력 45%",
+          "description": "공전 별 3마리 실제 소환 · 14초 · 공격력 45%",
           "actions": [
             {
               "op": "pet",
@@ -11756,7 +11756,7 @@
             "rotation": 121,
             "shape": "pet"
           },
-          "actualText": "star 3마리 실제 소환 · 14초 · 공격력 45%",
+          "actualText": "공전 별 3마리 실제 소환 · 14초 · 공격력 45%",
           "visual": "전용 연출 seunguk-6:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -11781,7 +11781,7 @@
           "radius": 160,
           "target": "self",
           "effectType": "recipe-194",
-          "description": "stars 지대 8초 · 반경 160 · 0.8초마다 45%",
+          "description": "별빛 지대 8초 · 반경 160 · 0.8초마다 공격력 45% 피해",
           "actions": [
             {
               "op": "zone",
@@ -11810,7 +11810,7 @@
             "rotation": 158,
             "shape": "zone"
           },
-          "actualText": "stars 지대 8초 · 반경 160 · 0.8초마다 45%",
+          "actualText": "별빛 지대 8초 · 반경 160 · 0.8초마다 공격력 45% 피해",
           "visual": "전용 연출 seunguk-6:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -12014,7 +12014,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-198",
-          "description": "8초 rageGain 강화 50%",
+          "description": "8초 분노 획득량 50% 증가",
           "actions": [
             {
               "op": "buff",
@@ -12041,7 +12041,7 @@
             "rotation": 126,
             "shape": "buff"
           },
-          "actualText": "8초 rageGain 강화 50%",
+          "actualText": "8초 분노 획득량 50% 증가",
           "visual": "전용 연출 cheonbin-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -12231,7 +12231,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-202",
-          "description": "9초 rageGain 강화 80%",
+          "description": "9초 분노 획득량 80% 증가",
           "actions": [
             {
               "op": "buff",
@@ -12258,7 +12258,7 @@
             "rotation": 94,
             "shape": "buff"
           },
-          "actualText": "9초 rageGain 강화 80%",
+          "actualText": "9초 분노 획득량 80% 증가",
           "visual": "전용 연출 cheonbin-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -12412,7 +12412,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-205",
-          "description": "roots 지대 8초 · 반경 120 · 0.8초마다 35%",
+          "description": "덩굴 지대 8초 · 반경 120 · 0.8초마다 공격력 35% 피해",
           "actions": [
             {
               "op": "zone",
@@ -12441,7 +12441,7 @@
             "rotation": 25,
             "shape": "zone"
           },
-          "actualText": "roots 지대 8초 · 반경 120 · 0.8초마다 35%",
+          "actualText": "덩굴 지대 8초 · 반경 120 · 0.8초마다 공격력 35% 피해",
           "visual": "전용 연출 cheonbin-2:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -12514,7 +12514,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-207",
-          "description": "beast 2마리 실제 소환 · 12초 · 공격력 70%",
+          "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70%",
           "actions": [
             {
               "op": "pet",
@@ -12543,7 +12543,7 @@
             "rotation": 99,
             "shape": "pet"
           },
-          "actualText": "beast 2마리 실제 소환 · 12초 · 공격력 70%",
+          "actualText": "늑대 2마리 실제 소환 · 12초 · 공격력 70%",
           "visual": "전용 연출 cheonbin-2:3 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -12581,7 +12581,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-208",
-          "description": "7초 charge 강화 55% / 7초 rageGain 강화 70%",
+          "description": "7초 충전 56% 증가 / 7초 분노 획득량 70% 증가",
           "actions": [
             {
               "op": "buff",
@@ -12620,7 +12620,7 @@
             "rotation": 136,
             "shape": "buff+buff"
           },
-          "actualText": "7초 charge 강화 55% / 7초 rageGain 강화 70%",
+          "actualText": "7초 충전 56% 증가 / 7초 분노 획득량 70% 증가",
           "visual": "전용 연출 cheonbin-3:0 · buff → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13328,7 +13328,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-220",
-          "description": "roots 지대 8초 · 반경 140 · 0.8초마다 20%",
+          "description": "덩굴 지대 8초 · 반경 140 · 0.8초마다 공격력 20% 피해",
           "actions": [
             {
               "op": "zone",
@@ -13357,7 +13357,7 @@
             "rotation": 40,
             "shape": "zone"
           },
-          "actualText": "roots 지대 8초 · 반경 140 · 0.8초마다 20%",
+          "actualText": "덩굴 지대 8초 · 반경 140 · 0.8초마다 공격력 20% 피해",
           "visual": "전용 연출 cheonbin-6:0 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13382,7 +13382,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-221",
-          "description": "plant 3마리 실제 소환 · 18초 · 공격력 60%",
+          "description": "가시 식물 3마리 실제 소환 · 18초 · 공격력 60%",
           "actions": [
             {
               "op": "pet",
@@ -13411,7 +13411,7 @@
             "rotation": 77,
             "shape": "pet"
           },
-          "actualText": "plant 3마리 실제 소환 · 18초 · 공격력 60%",
+          "actualText": "가시 식물 3마리 실제 소환 · 18초 · 공격력 60%",
           "visual": "전용 연출 cheonbin-6:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13436,7 +13436,7 @@
           "radius": 160,
           "target": "self",
           "effectType": "recipe-222",
-          "description": "sanctuary 지대 12초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+          "description": "성역 지대 12초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "zone",
@@ -13465,7 +13465,7 @@
             "rotation": 114,
             "shape": "zone"
           },
-          "actualText": "sanctuary 지대 12초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+          "actualText": "성역 지대 12초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 cheonbin-6:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13490,7 +13490,7 @@
           "radius": 220,
           "target": "self",
           "effectType": "recipe-223",
-          "description": "plant 5마리 실제 소환 · 20초 · 공격력 90% / roots 지대 12초 · 반경 220 · 0.8초마다 65%",
+          "description": "가시 식물 5마리 실제 소환 · 20초 · 공격력 90% / 덩굴 지대 12초 · 반경 220 · 0.8초마다 공격력 65% 피해",
           "actions": [
             {
               "op": "pet",
@@ -13533,7 +13533,7 @@
             "rotation": 151,
             "shape": "pet+zone"
           },
-          "actualText": "plant 5마리 실제 소환 · 20초 · 공격력 90% / roots 지대 12초 · 반경 220 · 0.8초마다 65%",
+          "actualText": "가시 식물 5마리 실제 소환 · 20초 · 공격력 90% / 덩굴 지대 12초 · 반경 220 · 0.8초마다 공격력 65% 피해",
           "visual": "전용 연출 cheonbin-6:3 · pet → zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -13673,7 +13673,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-226",
-          "description": "6초 aim 강화 25%",
+          "description": "6초 조준 25% 증가",
           "actions": [
             {
               "op": "buff",
@@ -13700,7 +13700,7 @@
             "rotation": 82,
             "shape": "buff"
           },
-          "actualText": "6초 aim 강화 25%",
+          "actualText": "6초 조준 25% 증가",
           "visual": "전용 연출 seungyoung-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -13896,7 +13896,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-230",
-          "description": "8초 aim 강화 50%",
+          "description": "8초 조준 50% 증가",
           "actions": [
             {
               "op": "buff",
@@ -13923,7 +13923,7 @@
             "rotation": 50,
             "shape": "buff"
           },
-          "actualText": "8초 aim 강화 50%",
+          "actualText": "8초 조준 50% 증가",
           "visual": "전용 연출 seungyoung-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -14071,7 +14071,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-233",
-          "description": "beast 1마리 실제 소환 · 14초 · 공격력 65%",
+          "description": "늑대 1마리 실제 소환 · 14초 · 공격력 65%",
           "actions": [
             {
               "op": "pet",
@@ -14100,7 +14100,7 @@
             "rotation": 161,
             "shape": "pet"
           },
-          "actualText": "beast 1마리 실제 소환 · 14초 · 공격력 65%",
+          "actualText": "늑대 1마리 실제 소환 · 14초 · 공격력 65%",
           "visual": "전용 연출 seungyoung-2:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -14125,7 +14125,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-234",
-          "description": "7초 haste 강화 25% / 7초 evasion 강화 20%",
+          "description": "7초 공격속도 25% 증가 / 7초 회피율 20% 증가",
           "actions": [
             {
               "op": "buff",
@@ -14164,7 +14164,7 @@
             "rotation": 18,
             "shape": "buff+buff"
           },
-          "actualText": "7초 haste 강화 25% / 7초 evasion 강화 20%",
+          "actualText": "7초 공격속도 25% 증가 / 7초 회피율 20% 증가",
           "visual": "전용 연출 seungyoung-2:2 · buff → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -14189,7 +14189,7 @@
           "radius": 230,
           "target": "area",
           "effectType": "recipe-235",
-          "description": "beast 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
+          "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
           "actions": [
             {
               "op": "pet",
@@ -14230,7 +14230,7 @@
             "rotation": 55,
             "shape": "pet+cone"
           },
-          "actualText": "beast 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
+          "actualText": "늑대 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
           "visual": "전용 연출 seungyoung-2:3 · pet → cone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -14376,7 +14376,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-238",
-          "description": "10초 aim 강화 90%",
+          "description": "10초 조준 90% 증가",
           "actions": [
             {
               "op": "buff",
@@ -14403,7 +14403,7 @@
             "rotation": 166,
             "shape": "buff"
           },
-          "actualText": "10초 aim 강화 90%",
+          "actualText": "10초 조준 90% 증가",
           "visual": "전용 연출 seungyoung-3:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -14834,7 +14834,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-246",
-          "description": "6초 evasion 강화 50% / 6초 haste 강화 35%",
+          "description": "6초 회피율 50% 증가 / 6초 공격속도 35% 증가",
           "actions": [
             {
               "op": "buff",
@@ -14873,7 +14873,7 @@
             "rotation": 102,
             "shape": "buff+buff"
           },
-          "actualText": "6초 evasion 강화 50% / 6초 haste 강화 35%",
+          "actualText": "6초 회피율 50% 증가 / 6초 공격속도 35% 증가",
           "visual": "전용 연출 seungyoung-5:2 · buff → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -15033,7 +15033,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-249",
-          "description": "beast 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
+          "description": "늑대 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
           "actions": [
             {
               "op": "pet",
@@ -15070,7 +15070,7 @@
             "rotation": 33,
             "shape": "pet+command"
           },
-          "actualText": "beast 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
+          "actualText": "늑대 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
           "visual": "전용 연출 seungyoung-6:1 · pet → command · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -15151,7 +15151,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-251",
-          "description": "beast 4마리 실제 소환 · 20초 · 공격력 110% / 소환체 표적 통일·즉시 협공",
+          "description": "늑대 4마리 실제 소환 · 20초 · 공격력 111% / 소환체 표적 통일·즉시 협공",
           "actions": [
             {
               "op": "pet",
@@ -15188,7 +15188,7 @@
             "rotation": 107,
             "shape": "pet+command"
           },
-          "actualText": "beast 4마리 실제 소환 · 20초 · 공격력 110% / 소환체 표적 통일·즉시 협공",
+          "actualText": "늑대 4마리 실제 소환 · 20초 · 공격력 111% / 소환체 표적 통일·즉시 협공",
           "visual": "전용 연출 seungyoung-6:3 · pet → command · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -15764,7 +15764,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-262",
-          "description": "9초 aim 강화 40%",
+          "description": "9초 조준 40% 증가",
           "actions": [
             {
               "op": "buff",
@@ -15791,7 +15791,7 @@
             "rotation": 154,
             "shape": "buff"
           },
-          "actualText": "9초 aim 강화 40%",
+          "actualText": "9초 조준 40% 증가",
           "visual": "전용 연출 gyutae-2:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -15987,7 +15987,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-266",
-          "description": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 evasion 강화 25%",
+          "description": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 회피율 25% 증가",
           "actions": [
             {
               "op": "reload",
@@ -16024,7 +16024,7 @@
             "rotation": 122,
             "shape": "reload+buff"
           },
-          "actualText": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 evasion 강화 25%",
+          "actualText": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 회피율 25% 증가",
           "visual": "전용 연출 gyutae-3:2 · reload → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -16240,7 +16240,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-270",
-          "description": "spellbullet 자원 3 축적 / 8초 aim 강화 30%",
+          "description": "spellbullet 자원 3 축적 / 8초 조준 30% 증가",
           "actions": [
             {
               "op": "meter",
@@ -16277,7 +16277,7 @@
             "rotation": 90,
             "shape": "meter+buff"
           },
-          "actualText": "spellbullet 자원 3 축적 / 8초 aim 강화 30%",
+          "actualText": "spellbullet 자원 3 축적 / 8초 조준 30% 증가",
           "visual": "전용 연출 gyutae-4:2 · meter → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -16497,7 +16497,7 @@
           "radius": 180,
           "target": "self",
           "effectType": "recipe-274",
-          "description": "target 지대 8초 · 반경 180 · 0.8초마다 15% / 8초 aim 강화 30%",
+          "description": "포격 조준 지대 8초 · 반경 180 · 0.8초마다 공격력 15% 피해 / 8초 조준 30% 증가",
           "actions": [
             {
               "op": "zone",
@@ -16538,7 +16538,7 @@
             "rotation": 58,
             "shape": "zone+buff"
           },
-          "actualText": "target 지대 8초 · 반경 180 · 0.8초마다 15% / 8초 aim 강화 30%",
+          "actualText": "포격 조준 지대 8초 · 반경 180 · 0.8초마다 공격력 15% 피해 / 8초 조준 30% 증가",
           "visual": "전용 연출 gyutae-5:2 · zone → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -17202,7 +17202,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-286",
-          "description": "9초 combo 강화 30%",
+          "description": "9초 연격 30% 증가",
           "actions": [
             {
               "op": "buff",
@@ -17229,7 +17229,7 @@
             "rotation": 142,
             "shape": "buff"
           },
-          "actualText": "9초 combo 강화 30%",
+          "actualText": "9초 연격 30% 증가",
           "visual": "전용 연출 sangmin-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -17408,17 +17408,19 @@
           "cost": 19,
           "cooldown": 13.4,
           "range": 460,
-          "radius": 140,
+          "radius": 190,
           "target": "self",
           "effectType": "recipe-290",
-          "description": "sanctuary 지대 9초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+          "description": "성역 지대 10초 · 반경 190 · 0.8초마다 공격력 65% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "zone",
               "type": "sanctuary",
-              "power": 0.25,
-              "radius": 120,
-              "duration": 9
+              "power": 0.65,
+              "radius": 190,
+              "duration": 10,
+              "interval": 0.8,
+              "holyAura": true
             }
           ],
           "fx": {
@@ -17431,16 +17433,18 @@
               {
                 "op": "zone",
                 "type": "sanctuary",
-                "power": 0.25,
-                "radius": 120,
-                "duration": 9
+                "power": 0.65,
+                "radius": 190,
+                "duration": 10,
+                "interval": 0.8,
+                "holyAura": true
               }
             ],
             "rays": 7,
             "rotation": 110,
             "shape": "zone"
           },
-          "actualText": "sanctuary 지대 9초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+          "actualText": "성역 지대 10초 · 반경 190 · 0.8초마다 공격력 65% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 sangmin-2:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -17592,7 +17596,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-293",
-          "description": "0.16초 간격 3회 · 타격당 80% / 6초 lifesteal 강화 20%",
+          "description": "0.16초 간격 3회 · 타격당 80% / 6초 흡혈 20% 증가",
           "actions": [
             {
               "op": "volley",
@@ -17633,7 +17637,7 @@
             "rotation": 41,
             "shape": "volley+buff"
           },
-          "actualText": "0.16초 간격 3회 · 타격당 80% / 6초 lifesteal 강화 20%",
+          "actualText": "0.16초 간격 3회 · 타격당 80% / 6초 흡혈 20% 증가",
           "visual": "전용 연출 sangmin-3:1 · volley → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -17658,7 +17662,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-294",
-          "description": "10초 combo 강화 45%",
+          "description": "10초 연격 45% 증가",
           "actions": [
             {
               "op": "buff",
@@ -17685,7 +17689,7 @@
             "rotation": 78,
             "shape": "buff"
           },
-          "actualText": "10초 combo 강화 45%",
+          "actualText": "10초 연격 45% 증가",
           "visual": "전용 연출 sangmin-3:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18080,7 +18084,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-301",
-          "description": "최대 체력 28% 보호막",
+          "description": "최대 체력 29% 보호막",
           "actions": [
             {
               "op": "shield",
@@ -18103,7 +18107,7 @@
             "rotation": 157,
             "shape": "shield"
           },
-          "actualText": "최대 체력 28% 보호막",
+          "actualText": "최대 체력 29% 보호막",
           "visual": "전용 연출 sangmin-5:1 · shield · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18125,17 +18129,20 @@
           "cost": 19,
           "cooldown": 13.8,
           "range": 460,
-          "radius": 175,
+          "radius": 230,
           "target": "self",
           "effectType": "recipe-302",
-          "description": "sanctuary 지대 14초 · 반경 175 · 0.8초마다 60% 및 지대 내 자가 회복",
+          "description": "성역 추종 오라 16초 · 반경 230 · 0.65초마다 공격력 95% 피해 및 지대 내 자가 회복",
           "actions": [
             {
               "op": "zone",
               "type": "sanctuary",
-              "power": 0.6,
-              "radius": 175,
-              "duration": 14
+              "power": 0.95,
+              "radius": 230,
+              "duration": 16,
+              "interval": 0.65,
+              "holyAura": true,
+              "follow": true
             }
           ],
           "fx": {
@@ -18148,16 +18155,19 @@
               {
                 "op": "zone",
                 "type": "sanctuary",
-                "power": 0.6,
-                "radius": 175,
-                "duration": 14
+                "power": 0.95,
+                "radius": 230,
+                "duration": 16,
+                "interval": 0.65,
+                "holyAura": true,
+                "follow": true
               }
             ],
             "rays": 11,
             "rotation": 14,
             "shape": "zone"
           },
-          "actualText": "sanctuary 지대 14초 · 반경 175 · 0.8초마다 60% 및 지대 내 자가 회복",
+          "actualText": "성역 추종 오라 16초 · 반경 230 · 0.65초마다 공격력 95% 피해 및 지대 내 자가 회복",
           "visual": "전용 연출 sangmin-5:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18182,7 +18192,7 @@
           "radius": 170,
           "target": "area",
           "effectType": "recipe-303",
-          "description": "최대 체력 55% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
+          "description": "최대 체력 56% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
           "actions": [
             {
               "op": "heal",
@@ -18225,7 +18235,7 @@
             "rotation": 51,
             "shape": "heal+overheal+blast"
           },
-          "actualText": "최대 체력 55% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
+          "actualText": "최대 체력 56% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
           "visual": "전용 연출 sangmin-5:3 · heal → overheal → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -18325,7 +18335,7 @@
           "radius": 150,
           "target": "self",
           "effectType": "recipe-305",
-          "description": "seal 지대 9초 · 반경 150 · 0.8초마다 40%",
+          "description": "봉인 지대 9초 · 반경 150 · 0.8초마다 공격력 40% 피해",
           "actions": [
             {
               "op": "zone",
@@ -18354,7 +18364,7 @@
             "rotation": 125,
             "shape": "zone"
           },
-          "actualText": "seal 지대 9초 · 반경 150 · 0.8초마다 40%",
+          "actualText": "봉인 지대 9초 · 반경 150 · 0.8초마다 공격력 40% 피해",
           "visual": "전용 연출 sangmin-6:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18534,7 +18544,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-308",
-          "description": "spirit 1마리 실제 소환 · 13초 · 공격력 60%",
+          "description": "정령 1마리 실제 소환 · 13초 · 공격력 60%",
           "actions": [
             {
               "op": "pet",
@@ -18563,7 +18573,7 @@
             "rotation": 56,
             "shape": "pet"
           },
-          "actualText": "spirit 1마리 실제 소환 · 13초 · 공격력 60%",
+          "actualText": "정령 1마리 실제 소환 · 13초 · 공격력 60%",
           "visual": "전용 연출 keunho-0:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18686,7 +18696,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-311",
-          "description": "spirit 3마리 실제 소환 · 14초 · 공격력 70%",
+          "description": "정령 3마리 실제 소환 · 14초 · 공격력 70%",
           "actions": [
             {
               "op": "pet",
@@ -18715,7 +18725,7 @@
             "rotation": 167,
             "shape": "pet"
           },
-          "actualText": "spirit 3마리 실제 소환 · 14초 · 공격력 70%",
+          "actualText": "정령 3마리 실제 소환 · 14초 · 공격력 70%",
           "visual": "전용 연출 keunho-0:3 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -18753,7 +18763,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-312",
-          "description": "spirit 2마리 실제 소환 · 15초 · 공격력 65%",
+          "description": "정령 2마리 실제 소환 · 15초 · 공격력 65%",
           "actions": [
             {
               "op": "pet",
@@ -18782,7 +18792,7 @@
             "rotation": 24,
             "shape": "pet"
           },
-          "actualText": "spirit 2마리 실제 소환 · 15초 · 공격력 65%",
+          "actualText": "정령 2마리 실제 소환 · 15초 · 공격력 65%",
           "visual": "전용 연출 keunho-1:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -18913,7 +18923,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-315",
-          "description": "king 1마리 실제 소환 · 16초 · 공격력 140%",
+          "description": "정령왕 1마리 실제 소환 · 16초 · 공격력 140%",
           "actions": [
             {
               "op": "pet",
@@ -18944,7 +18954,7 @@
             "rotation": 135,
             "shape": "pet"
           },
-          "actualText": "king 1마리 실제 소환 · 16초 · 공격력 140%",
+          "actualText": "정령왕 1마리 실제 소환 · 16초 · 공격력 140%",
           "visual": "전용 연출 keunho-1:3 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -18957,7 +18967,7 @@
       "parent": "keunho-0",
       "style": "drain",
       "resource": "마력",
-      "review": "해골 모집 — pet / 혼 수확 — missile → meter / 망자의 유대 — pet-buff / 네크로맨서 · 망령 소환 — pet",
+      "review": "해골 부대 — pet → pet / 좀비 소환 — pet / 망자의 유대 — pet-buff / 네크로맨서 · 망령 소환 — pet",
       "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
@@ -18966,7 +18976,7 @@
           "heroId": 11,
           "cell": 2,
           "slot": 0,
-          "name": "해골 모집",
+          "name": "해골 부대",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -18982,14 +18992,21 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-316",
-          "description": "skeleton 3마리 실제 소환 · 15초 · 공격력 35%",
+          "description": "해골 병사 2마리 실제 소환 · 18초 · 공격력 35% / 해골 궁수 2마리 실제 소환 · 18초 · 공격력 45%",
           "actions": [
             {
               "op": "pet",
               "appearance": "skeleton",
-              "count": 3,
+              "count": 2,
               "power": 0.35,
-              "duration": 15
+              "duration": 18
+            },
+            {
+              "op": "pet",
+              "appearance": "skeleton-archer",
+              "count": 2,
+              "power": 0.45,
+              "duration": 18
             }
           ],
           "fx": {
@@ -19002,17 +19019,24 @@
               {
                 "op": "pet",
                 "appearance": "skeleton",
-                "count": 3,
+                "count": 2,
                 "power": 0.35,
-                "duration": 15
+                "duration": 18
+              },
+              {
+                "op": "pet",
+                "appearance": "skeleton-archer",
+                "count": 2,
+                "power": 0.45,
+                "duration": 18
               }
             ],
             "rays": 9,
             "rotation": 172,
-            "shape": "pet"
+            "shape": "pet+pet"
           },
-          "actualText": "skeleton 3마리 실제 소환 · 15초 · 공격력 35%",
-          "visual": "전용 연출 keunho-2:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "해골 병사 2마리 실제 소환 · 18초 · 공격력 35% / 해골 궁수 2마리 실제 소환 · 18초 · 공격력 45%",
+          "visual": "전용 연출 keunho-2:0 · pet → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-2-skill-1",
@@ -19020,7 +19044,7 @@
           "heroId": 11,
           "cell": 2,
           "slot": 1,
-          "name": "혼 수확",
+          "name": "좀비 소환",
           "unlock": 35,
           "mechanicsVersion": 3,
           "resource": {
@@ -19034,18 +19058,16 @@
           "cooldown": 7.9,
           "range": 460,
           "radius": 140,
-          "target": "single",
+          "target": "self",
           "effectType": "recipe-317",
-          "description": "직선 투사체 200% · 실제 충돌 시 피해 / soul 자원 1 축적",
+          "description": "좀비 2마리 실제 소환 · 20초 · 공격력 70%",
           "actions": [
             {
-              "op": "missile",
-              "power": 2
-            },
-            {
-              "op": "meter",
-              "key": "soul",
-              "value": 1
+              "op": "pet",
+              "appearance": "zombie",
+              "count": 2,
+              "power": 0.7,
+              "duration": 20
             }
           ],
           "fx": {
@@ -19056,21 +19078,19 @@
             "recipe": 317,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2
-              },
-              {
-                "op": "meter",
-                "key": "soul",
-                "value": 1
+                "op": "pet",
+                "appearance": "zombie",
+                "count": 2,
+                "power": 0.7,
+                "duration": 20
               }
             ],
             "rays": 10,
             "rotation": 29,
-            "shape": "missile+meter"
+            "shape": "pet"
           },
-          "actualText": "직선 투사체 200% · 실제 충돌 시 피해 / soul 자원 1 축적",
-          "visual": "전용 연출 keunho-2:1 · missile → meter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "좀비 2마리 실제 소환 · 20초 · 공격력 70%",
+          "visual": "전용 연출 keunho-2:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-2-skill-2",
@@ -19144,7 +19164,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-319",
-          "description": "reaper 1마리 실제 소환 · 15초 · 공격력 120%",
+          "description": "사신 1마리 실제 소환 · 15초 · 공격력 120%",
           "actions": [
             {
               "op": "pet",
@@ -19173,7 +19193,7 @@
             "rotation": 103,
             "shape": "pet"
           },
-          "actualText": "reaper 1마리 실제 소환 · 15초 · 공격력 120%",
+          "actualText": "사신 1마리 실제 소환 · 15초 · 공격력 120%",
           "visual": "전용 연출 keunho-2:3 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -19211,7 +19231,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-320",
-          "description": "king 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
+          "description": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
           "actions": [
             {
               "op": "pet",
@@ -19244,7 +19264,7 @@
             "rotation": 140,
             "shape": "pet"
           },
-          "actualText": "king 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
+          "actualText": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
           "visual": "전용 연출 keunho-3:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -19381,7 +19401,7 @@
           "radius": 190,
           "target": "area",
           "effectType": "recipe-323",
-          "description": "king 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
+          "description": "정령왕 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
           "actions": [
             {
               "op": "pet",
@@ -19426,7 +19446,7 @@
             "rotation": 71,
             "shape": "pet+blast"
           },
-          "actualText": "king 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
+          "actualText": "정령왕 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
           "visual": "전용 연출 keunho-3:3 · pet → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
@@ -19464,7 +19484,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-324",
-          "description": "spirit 3마리 실제 소환 · 20초 · 공격력 40%",
+          "description": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
           "actions": [
             {
               "op": "pet",
@@ -19493,7 +19513,7 @@
             "rotation": 108,
             "shape": "pet"
           },
-          "actualText": "spirit 3마리 실제 소환 · 20초 · 공격력 40%",
+          "actualText": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
           "visual": "전용 연출 keunho-4:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -19682,7 +19702,7 @@
       "parent": "keunho-2",
       "style": "drain",
       "resource": "마력",
-      "review": "해골 군단 — pet / 시체 회수 — corpses / 군단 강화 — pet-buff / 망자의 행진 — pet → pet",
+      "review": "해골 군단 — pet → pet → pet / 묘지 골렘 — pet / 군단 강화 — pet-buff / 해골용 강림 — pet → pet → pet → pet",
       "intendedIdentity": "정령왕·융합·해골 군단·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
@@ -19707,14 +19727,28 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-328",
-          "description": "skeleton 5마리 실제 소환 · 20초 · 공격력 40%",
+          "description": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
           "actions": [
             {
               "op": "pet",
               "appearance": "skeleton",
-              "count": 5,
+              "count": 3,
               "power": 0.4,
-              "duration": 20
+              "duration": 24
+            },
+            {
+              "op": "pet",
+              "appearance": "skeleton-archer",
+              "count": 3,
+              "power": 0.5,
+              "duration": 24
+            },
+            {
+              "op": "pet",
+              "appearance": "zombie",
+              "count": 2,
+              "power": 0.7,
+              "duration": 24
             }
           ],
           "fx": {
@@ -19727,17 +19761,31 @@
               {
                 "op": "pet",
                 "appearance": "skeleton",
-                "count": 5,
+                "count": 3,
                 "power": 0.4,
-                "duration": 20
+                "duration": 24
+              },
+              {
+                "op": "pet",
+                "appearance": "skeleton-archer",
+                "count": 3,
+                "power": 0.5,
+                "duration": 24
+              },
+              {
+                "op": "pet",
+                "appearance": "zombie",
+                "count": 2,
+                "power": 0.7,
+                "duration": 24
               }
             ],
             "rays": 5,
             "rotation": 76,
-            "shape": "pet"
+            "shape": "pet+pet+pet"
           },
-          "actualText": "skeleton 5마리 실제 소환 · 20초 · 공격력 40%",
-          "visual": "전용 연출 keunho-5:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
+          "visual": "전용 연출 keunho-5:0 · pet → pet → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-5-skill-1",
@@ -19745,7 +19793,7 @@
           "heroId": 11,
           "cell": 5,
           "slot": 1,
-          "name": "시체 회수",
+          "name": "묘지 골렘",
           "unlock": 65,
           "mechanicsVersion": 3,
           "resource": {
@@ -19761,12 +19809,16 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-329",
-          "description": "남아 있는 시체를 소비해 해골 모집",
+          "description": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
           "actions": [
             {
-              "op": "corpses",
-              "count": 4,
-              "power": 0.5
+              "op": "pet",
+              "appearance": "grave-golem",
+              "count": 1,
+              "power": 1.8,
+              "duration": 26,
+              "large": true,
+              "exclusive": true
             }
           ],
           "fx": {
@@ -19777,17 +19829,21 @@
             "recipe": 329,
             "choreography": [
               {
-                "op": "corpses",
-                "count": 4,
-                "power": 0.5
+                "op": "pet",
+                "appearance": "grave-golem",
+                "count": 1,
+                "power": 1.8,
+                "duration": 26,
+                "large": true,
+                "exclusive": true
               }
             ],
             "rays": 6,
             "rotation": 113,
-            "shape": "corpses"
+            "shape": "pet"
           },
-          "actualText": "남아 있는 시체를 소비해 해골 모집",
-          "visual": "전용 연출 keunho-5:1 · corpses · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
+          "visual": "전용 연출 keunho-5:1 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "keunho-5-skill-2",
@@ -19845,7 +19901,7 @@
           "heroId": 11,
           "cell": 5,
           "slot": 3,
-          "name": "망자의 행진",
+          "name": "해골용 강림",
           "unlock": 90,
           "mechanicsVersion": 3,
           "resource": {
@@ -19861,21 +19917,37 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-331",
-          "description": "skeleton 9마리 실제 소환 · 24초 · 공격력 55% / skeleton-mage 3마리 실제 소환 · 24초 · 공격력 65%",
+          "description": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
           "actions": [
             {
               "op": "pet",
-              "appearance": "skeleton",
-              "count": 9,
-              "power": 0.55,
-              "duration": 24
+              "appearance": "skeleton-archer",
+              "count": 3,
+              "power": 0.6,
+              "duration": 28
+            },
+            {
+              "op": "pet",
+              "appearance": "zombie",
+              "count": 3,
+              "power": 0.8,
+              "duration": 28
             },
             {
               "op": "pet",
               "appearance": "skeleton-mage",
-              "count": 3,
+              "count": 2,
               "power": 0.65,
-              "duration": 24
+              "duration": 28
+            },
+            {
+              "op": "pet",
+              "appearance": "bone-dragon",
+              "count": 1,
+              "power": 2.8,
+              "duration": 28,
+              "large": true,
+              "exclusive": true
             }
           ],
           "fx": {
@@ -19887,25 +19959,41 @@
             "choreography": [
               {
                 "op": "pet",
-                "appearance": "skeleton",
-                "count": 9,
-                "power": 0.55,
-                "duration": 24
+                "appearance": "skeleton-archer",
+                "count": 3,
+                "power": 0.6,
+                "duration": 28
+              },
+              {
+                "op": "pet",
+                "appearance": "zombie",
+                "count": 3,
+                "power": 0.8,
+                "duration": 28
               },
               {
                 "op": "pet",
                 "appearance": "skeleton-mage",
-                "count": 3,
+                "count": 2,
                 "power": 0.65,
-                "duration": 24
+                "duration": 28
+              },
+              {
+                "op": "pet",
+                "appearance": "bone-dragon",
+                "count": 1,
+                "power": 2.8,
+                "duration": 28,
+                "large": true,
+                "exclusive": true
               }
             ],
             "rays": 8,
             "rotation": 7,
-            "shape": "pet+pet"
+            "shape": "pet+pet+pet+pet"
           },
-          "actualText": "skeleton 9마리 실제 소환 · 24초 · 공격력 55% / skeleton-mage 3마리 실제 소환 · 24초 · 공격력 65%",
-          "visual": "전용 연출 keunho-5:3 · pet → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
+          "visual": "전용 연출 keunho-5:3 · pet → pet → pet → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -19942,7 +20030,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-332",
-          "description": "reaper 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
+          "description": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
           "actions": [
             {
               "op": "pet",
@@ -19973,7 +20061,7 @@
             "rotation": 44,
             "shape": "pet"
           },
-          "actualText": "reaper 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
+          "actualText": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
           "visual": "전용 연출 keunho-6:0 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
@@ -20120,7 +20208,7 @@
           "radius": 140,
           "target": "single",
           "effectType": "recipe-335",
-          "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / reaper 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
+          "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
           "actions": [
             {
               "op": "spend",
@@ -20171,7 +20259,7 @@
             "rotation": 155,
             "shape": "spend+execute+pet"
           },
-          "actualText": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / reaper 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
+          "actualText": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
           "visual": "전용 연출 keunho-6:3 · spend → execute → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]

@@ -95,19 +95,19 @@ module.exports=[
 [
 [K('신성한 빛',A('missile',{power:1.8})),K('작은 치유',Q(.2)),K('신앙의 보호',A('shield',{value:.15})),K('빛의 심판',B(5,150,.4),Q(.08))],
 [K('연환 정권',M(3,.7)),K('회복 타격',H(2.2),Q(.08)),K('수행의 호흡',U('combo',.3,9)),K('권사의 일격',A('combo-finish',{power:6}))],
-[K('성스러운 화살',A('missile',{power:2})),K('치유 기도',Q(.24)),K('작은 성역',F('sanctuary',.25,120,9)),K('신성한 파동',B(5,160),Q(.15))],
+[K('성스러운 화살',A('missile',{power:2})),K('치유 기도',Q(.24)),K('작은 성역',A('zone',{type:'sanctuary',power:.65,radius:190,duration:10,interval:.8,holyAura:true})),K('신성한 파동',B(5,160),Q(.15))],
 [K('연환권',M(4,.65)),K('타격 치유',M(3,.8),U('lifesteal',.2,6)),K('연계 집중',U('combo',.45,10)),K('최종 정권',A('combo-finish',{power:8}))],
 [K('심판 낙인',H(2),S('brand',.3,2)),K('성화 점화',S('brand',.45,2),B(2,115)),K('낙인 전이',A('spread',{type:'brand',radius:170})),K('최후의 심판',X('brand',3.5),B(4,170,.5))],
-[K('치유 기도',Q(.3),A('overheal',{power:1.8})),K('대보호막',A('shield',{value:.28})),K('성역',F('sanctuary',.6,175,14)),K('기적의 빛',Q(.55),A('overheal',{power:4}),B(4,170,.6))],
+[K('치유 기도',Q(.3),A('overheal',{power:1.8})),K('대보호막',A('shield',{value:.28})),K('성역',A('zone',{type:'sanctuary',power:.95,radius:230,duration:16,interval:.65,holyAura:true,follow:true})),K('기적의 빛',Q(.55),A('overheal',{power:4}),B(4,170,.6))],
 [K('봉인 부적',A('missile',{power:2.4}),S('seal',.1)),K('봉인 결계',F('seal',.4,150,9)),K('주문 차단',A('interrupt',{duration:2.5}),X('seal',2)),K('퇴마 의식',S('seal',.2,3),X('seal',3),A('interrupt',{duration:4}),B(5,180,.6))]
 ],
 [
 [K('작은 정령',P('spirit',1,.6,13)),K('영혼탄',A('missile',{power:2})),K('정령 유대',A('pet-buff',{value:.3,duration:8})),K('정령 행진',P('spirit',3,.7,14))],
 [K('정령 교대',P('spirit',2,.65,15)),K('정령 명령',A('command',{power:1})),K('정령 보호',A('pet-buff',{value:.35,duration:10}),A('shield',{value:.12})),K('대정령 소환',P('king',1,1.4,16,{large:true}))],
-[K('해골 모집',P('skeleton',3,.35,15)),K('혼 수확',A('missile',{power:2}),A('meter',{key:'soul',value:1})),K('망자의 유대',A('pet-buff',{value:.25,duration:9})),K('망령 소환',P('reaper',1,1.2,15))],
+[K('해골 부대',P('skeleton',2,.35,18),P('skeleton-archer',2,.45,18)),K('좀비 소환',P('zombie',2,.7,20)),K('망자의 유대',A('pet-buff',{value:.25,duration:9})),K('망령 소환',P('reaper',1,1.2,15))],
 [K('정령왕 소환',P('king',1,1.8,22,{large:true,exclusive:true})),K('속성 명령',A('king-element'),A('command',{power:1.4})),K('왕의 수호',A('pet-buff',{value:.4,duration:12}),A('shield',{value:.2})),K('왕의 강림',P('king',1,2.8,24,{large:true,exclusive:true}),B(6,190,.8))],
 [K('작은 정령 소환',P('spirit',3,.4,20)),K('융합 지시',A('fusion',{appearance:'fusion',count:1,power:1.7,duration:20})),K('분리 회수',A('split'),Q(.1)),K('완전 융합',A('fusion',{appearance:'fusion',count:1,power:2.8,duration:24,large:true}),B(5,170,.7))],
-[K('해골 군단',P('skeleton',5,.4,20)),K('시체 회수',A('corpses',{count:4,power:.5})),K('군단 강화',A('pet-buff',{value:.5,duration:12})),K('망자의 행진',P('skeleton',9,.55,24),P('skeleton-mage',3,.65,24))],
+[K('해골 군단',P('skeleton',3,.4,24),P('skeleton-archer',3,.5,24),P('zombie',2,.7,24)),K('묘지 골렘',P('grave-golem',1,1.8,26,{large:true,exclusive:true})),K('군단 강화',A('pet-buff',{value:.5,duration:12})),K('해골용 강림',P('skeleton-archer',3,.6,28),P('zombie',3,.8,28),P('skeleton-mage',2,.65,28),P('bone-dragon',1,2.8,28,{large:true,exclusive:true}))],
 [K('사신 소환',P('reaper',1,1.7,22,{exclusive:true})),K('죽음 표식',S('death',.2,2),A('command',{power:1.2})),K('영혼 수확',X('death',2.2),A('meter',{key:'soul',value:2})),K('사형 선고',A('spend',{key:'soul',power:2}),A('execute',{power:7,threshold:.4}),P('reaper',1,2.5,20,{exclusive:true}))]
 ]
 ];

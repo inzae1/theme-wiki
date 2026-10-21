@@ -67,3 +67,24 @@ body.playing .boss-hud{top:calc(var(--hud-bottom,180px) + 12px)}
 body.playing.hero-expanded .boss-hud{visibility:hidden}
 body.playing.hero-expanded .hero-panel>.hud-toggle{position:static;width:100%;margin:12px 0 0}
 body.playing.hero-expanded .hero-panel{max-height:calc(var(--game-height,100dvh) - 80px)}
+
+body.playing.has-mana .battle-controls{grid-template-columns:repeat(7,74px)}
+body.playing .battle-controls #mana-potion{position:relative;inset:auto;grid-column:7;grid-row:1;--orb:#79bdf5;color:#e7f4ff}
+body.playing .battle-controls #mana-potion:before{background:radial-gradient(circle at 38% 26%,#25465d,#102534 75%)}
+@media(max-width:760px){
+ body.playing.has-mana .battle-controls{--action-size:clamp(44px,14vw,56px);grid-template-columns:repeat(4,var(--action-size))}
+ body.playing.has-mana .battle-controls #basic-attack{grid-column:1;grid-row:1}
+ body.playing.has-mana .battle-controls #skill{grid-column:2;grid-row:1}
+ body.playing.has-mana .battle-controls #skill-two{grid-column:3;grid-row:1}
+ body.playing.has-mana .battle-controls #skill-three{grid-column:4;grid-row:1}
+ body.playing.has-mana .battle-controls #skill-ultimate{grid-column:2;grid-row:2}
+ body.playing.has-mana .battle-controls #potion{grid-column:3;grid-row:2}
+ body.playing.has-mana .battle-controls #mana-potion{grid-column:4;grid-row:2}
+ body.playing.has-mana .battle-controls .action-orb b{font-size:7px}
+}
+@media(orientation:landscape) and (max-height:500px){
+ body.playing.has-mana .battle-controls{grid-template-columns:repeat(7,44px)}
+ body.playing.has-mana .battle-controls #basic-attack,body.playing.has-mana .battle-controls #skill,body.playing.has-mana .battle-controls #skill-two,body.playing.has-mana .battle-controls #skill-three,body.playing.has-mana .battle-controls #skill-ultimate,body.playing.has-mana .battle-controls #potion,body.playing.has-mana .battle-controls #mana-potion{grid-column:auto;grid-row:1}
+}
+
+.roster-entry{position:relative;min-width:0}.roster-entry>.roster-card{width:100%;height:100%}.roster-delete{position:absolute;right:10px;top:10px;width:30px;height:30px;padding:0;font:22px/1 sans-serif;color:#dcb8a8;background:#14231cec;border:1px solid #8e665b77;border-radius:50%;z-index:2}.roster-delete:hover{color:#fff;background:#643b32}.roster-entry .roster-chapter{padding-right:24px}

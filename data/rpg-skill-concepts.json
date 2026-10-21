@@ -340,7 +340,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-6",
-      "description": "9초 combo 강화 22%",
+      "description": "9초 연격 22% 증가",
       "actions": [
         {
           "op": "buff",
@@ -566,7 +566,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-10",
-      "description": "ghost 1마리 실제 소환 · 12초 · 공격력 40%",
+      "description": "망령 1마리 실제 소환 · 12초 · 공격력 40%",
       "actions": [
         {
           "op": "pet",
@@ -678,7 +678,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-12",
-      "description": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 55%",
+      "description": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 56%",
       "actions": [
         {
           "op": "dash",
@@ -790,7 +790,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-14",
-      "description": "10초 combo 강화 35%",
+      "description": "10초 연격 35% 증가",
       "actions": [
         {
           "op": "buff",
@@ -1112,7 +1112,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-20",
-      "description": "rune 지대 12초 · 반경 65 · 0.8초마다 15%",
+      "description": "룬 지대 12초 · 반경 65 · 0.8초마다 공격력 15% 피해",
       "actions": [
         {
           "op": "zone",
@@ -1212,7 +1212,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-22",
-      "description": "10초 efficiency 강화 30% / rune 지대 12초 · 반경 50 · 0.8초마다 10%",
+      "description": "10초 효율 30% 증가 / 룬 지대 12초 · 반경 50 · 0.8초마다 공격력 10% 피해",
       "actions": [
         {
           "op": "buff",
@@ -1326,7 +1326,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-24",
-      "description": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / ghost 1마리 실제 소환 · 15초 · 공격력 50%",
+      "description": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 망령 1마리 실제 소환 · 15초 · 공격력 50%",
       "actions": [
         {
           "op": "status",
@@ -1392,7 +1392,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-25",
-      "description": "soul를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+      "description": "soul를 소비해 중첩당 221% 타격 / 최대 체력 8% 실제 회복",
       "actions": [
         {
           "op": "consume",
@@ -1448,7 +1448,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-26",
-      "description": "ghost 2마리 실제 소환 · 15초 · 공격력 65% / 10초 lifesteal 강화 12%",
+      "description": "망령 2마리 실제 소환 · 15초 · 공격력 65% / 10초 흡혈 12% 증가",
       "actions": [
         {
           "op": "pet",
@@ -1512,7 +1512,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-27",
-      "description": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / ghost 3마리 실제 소환 · 18초 · 공격력 80%",
+      "description": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / 망령 3마리 실제 소환 · 18초 · 공격력 80%",
       "actions": [
         {
           "op": "status",
@@ -1588,7 +1588,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-28",
-      "description": "근접 단일 229.99999999999997% 타격",
+      "description": "근접 단일 230% 타격",
       "actions": [
         {
           "op": "hit",
@@ -1684,7 +1684,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-30",
-      "description": "7초 rageGain 강화 60%",
+      "description": "7초 분노 획득량 60% 증가",
       "actions": [
         {
           "op": "buff",
@@ -1902,7 +1902,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-34",
-      "description": "7초 haste 강화 35%",
+      "description": "7초 공격속도 35% 증가",
       "actions": [
         {
           "op": "buff",
@@ -2120,7 +2120,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-38",
-      "description": "5초 방어 · 받는 피해 55% 감소, 막은 피해 반격 축적",
+      "description": "5초 방어 · 받는 피해 56% 감소, 막은 피해 반격 축적",
       "actions": [
         {
           "op": "guard",
@@ -2220,7 +2220,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-40",
-      "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 lifesteal 강화 20%",
+      "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / 이동 가능한 회전 공격 6회 · 0.2초 간격 · 반경 100 / 4초 흡혈 20% 증가",
       "actions": [
         {
           "op": "hp-cost",
@@ -2356,7 +2356,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-42",
-      "description": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 lifesteal 강화 35% / 10초 power 강화 30%",
+      "description": "최대 체력 8% 소비 · 체력 1 미만 소비 불가 / 10초 흡혈 35% 증가 / 10초 공격력 30% 증가",
       "actions": [
         {
           "op": "hp-cost",
@@ -2426,7 +2426,7 @@
       "radius": 150,
       "target": "area",
       "effectType": "recipe-43",
-      "description": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 lifesteal 강화 30%",
+      "description": "이동 가능한 회전 공격 10회 · 0.2초 간격 · 반경 150 / 5초 흡혈 30% 증가",
       "actions": [
         {
           "op": "whirl",
@@ -2600,7 +2600,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-46",
-      "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 crit 강화 25%",
+      "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 6초 치명타 25% 증가",
       "actions": [
         {
           "op": "dash",
@@ -2818,7 +2818,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-50",
-      "description": "8초 charge 강화 65%",
+      "description": "8초 충전 65% 증가",
       "actions": [
         {
           "op": "buff",
@@ -2926,7 +2926,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-52",
-      "description": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 229.99999999999997%에 방어력을 더한 범위 타격",
+      "description": "앞으로 최대 230 이동 · 경로 충돌 검사 / 공격력 230%에 방어력을 더한 범위 타격",
       "actions": [
         {
           "op": "dash",
@@ -3040,7 +3040,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-54",
-      "description": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 unstoppable 강화 100%",
+      "description": "7초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 7초 저지 저항 100% 증가",
       "actions": [
         {
           "op": "guard",
@@ -3278,7 +3278,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-58",
-      "description": "8초 efficiency 강화 25%",
+      "description": "8초 효율 25% 증가",
       "actions": [
         {
           "op": "buff",
@@ -3378,7 +3378,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-60",
-      "description": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
+      "description": "직선 투사체 230% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
       "actions": [
         {
           "op": "missile",
@@ -3726,7 +3726,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-66",
-      "description": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 power 강화 35%",
+      "description": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 공격력 35% 증가",
       "actions": [
         {
           "op": "hp-cost",
@@ -4140,7 +4140,7 @@
       "radius": 160,
       "target": "self",
       "effectType": "recipe-73",
-      "description": "frost 지대 9초 · 반경 160 · 0.8초마다 40%",
+      "description": "빙결 지대 9초 · 반경 160 · 0.8초마다 공격력 40% 피해",
       "actions": [
         {
           "op": "zone",
@@ -4414,7 +4414,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-78",
-      "description": "curse를 소비해 중첩당 229.99999999999997% 타격 / 최대 체력 10% 실제 회복",
+      "description": "curse를 소비해 중첩당 230% 타격 / 최대 체력 10% 실제 회복",
       "actions": [
         {
           "op": "consume",
@@ -4542,7 +4542,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-80",
-      "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+      "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 221% · 실제 충돌 시 피해",
       "actions": [
         {
           "op": "hp-cost",
@@ -4830,7 +4830,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-85",
-      "description": "거리 100 전방 부채꼴 229.99999999999997%",
+      "description": "거리 100 전방 부채꼴 230%",
       "actions": [
         {
           "op": "cone",
@@ -5044,7 +5044,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-89",
-      "description": "sanctuary 지대 8초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+      "description": "성역 지대 8초 · 반경 120 · 0.8초마다 공격력 25% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "zone",
@@ -5308,7 +5308,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-94",
-      "description": "9초 rageGain 강화 70%",
+      "description": "9초 분노 획득량 70% 증가",
       "actions": [
         {
           "op": "buff",
@@ -5466,7 +5466,7 @@
       "radius": 150,
       "target": "self",
       "effectType": "recipe-97",
-      "description": "banner 지대 12초 · 반경 150 · 0.8초마다 40% 및 지대 내 자가 회복",
+      "description": "수호 지대 12초 · 반경 150 · 0.8초마다 공격력 40% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "zone",
@@ -5572,7 +5572,7 @@
       "radius": 190,
       "target": "self",
       "effectType": "recipe-99",
-      "description": "sanctuary 지대 14초 · 반경 190 · 0.8초마다 80% 및 지대 내 자가 회복 / 10초 power 강화 40%",
+      "description": "성역 지대 14초 · 반경 190 · 0.8초마다 공격력 80% 피해 및 지대 내 자가 회복 / 10초 공격력 40% 증가",
       "actions": [
         {
           "op": "zone",
@@ -5958,7 +5958,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-106",
-      "description": "8초 aim 강화 60%",
+      "description": "8초 조준 60% 증가",
       "actions": [
         {
           "op": "buff",
@@ -6166,7 +6166,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-110",
-      "description": "10초 rageGain 강화 100%",
+      "description": "10초 분노 획득량 100% 증가",
       "actions": [
         {
           "op": "buff",
@@ -6376,7 +6376,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-114",
-      "description": "4초 evasion 강화 30%",
+      "description": "4초 회피율 30% 증가",
       "actions": [
         {
           "op": "buff",
@@ -6590,7 +6590,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-118",
-      "description": "1.5초 은신·무적 / 5초 crit 강화 20%",
+      "description": "1.5초 은신·무적 / 5초 치명타 20% 증가",
       "actions": [
         {
           "op": "stealth",
@@ -6700,7 +6700,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-120",
-      "description": "직선 투사체 220.00000000000003% · 실제 충돌 시 피해",
+      "description": "직선 투사체 221% · 실제 충돌 시 피해",
       "actions": [
         {
           "op": "missile",
@@ -6956,7 +6956,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-125",
-      "description": "0.16초 간격 6회 · 타격당 65% / shadow 2마리 실제 소환 · 6초 · 공격력 60%",
+      "description": "0.16초 간격 6회 · 타격당 65% / 전투 잔영 2마리 실제 소환 · 6초 · 공격력 60%",
       "actions": [
         {
           "op": "volley",
@@ -7022,7 +7022,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-126",
-      "description": "1초 은신·무적 / 8초 combo 강화 30%",
+      "description": "1초 은신·무적 / 8초 연격 30% 증가",
       "actions": [
         {
           "op": "stealth",
@@ -7080,7 +7080,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-127",
-      "description": "shadow 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
+      "description": "전투 잔영 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
       "actions": [
         {
           "op": "pet",
@@ -7476,7 +7476,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-134",
-      "description": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 crit 강화 35%",
+      "description": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 치명타 35% 증가",
       "actions": [
         {
           "op": "swap"
@@ -8118,7 +8118,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-146",
-      "description": "9초 power 강화 25%",
+      "description": "9초 공격력 25% 증가",
       "actions": [
         {
           "op": "buff",
@@ -8284,7 +8284,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-149",
-      "description": "acid 지대 8초 · 반경 110 · 0.8초마다 35%",
+      "description": "산성 지대 8초 · 반경 110 · 0.8초마다 공격력 35% 피해",
       "actions": [
         {
           "op": "zone",
@@ -8336,7 +8336,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-150",
-      "description": "homunculus 1마리 실제 소환 · 14초 · 공격력 45%",
+      "description": "호문쿨루스 1마리 실제 소환 · 14초 · 공격력 45%",
       "actions": [
         {
           "op": "pet",
@@ -8506,7 +8506,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-153",
-      "description": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 220.00000000000003% 관통",
+      "description": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 221% 관통",
       "actions": [
         {
           "op": "weapon-mode"
@@ -8828,7 +8828,7 @@
       "radius": 160,
       "target": "self",
       "effectType": "recipe-159",
-      "description": "실제 공격 포탑 3개 · 20초 / banner 지대 14초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+      "description": "실제 공격 포탑 3개 · 20초 / 수호 지대 14초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "turret",
@@ -8952,7 +8952,7 @@
       "radius": 165,
       "target": "self",
       "effectType": "recipe-161",
-      "description": "acid 지대 10초 · 반경 165 · 0.8초마다 60%",
+      "description": "산성 지대 10초 · 반경 165 · 0.8초마다 공격력 60% 피해",
       "actions": [
         {
           "op": "zone",
@@ -9132,7 +9132,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-164",
-      "description": "homunculus 2마리 실제 소환 · 20초 · 공격력 45%",
+      "description": "호문쿨루스 2마리 실제 소환 · 20초 · 공격력 45%",
       "actions": [
         {
           "op": "pet",
@@ -9556,7 +9556,7 @@
       "radius": 190,
       "target": "area",
       "effectType": "recipe-172",
-      "description": "거리 190 전방 부채꼴 229.99999999999997%",
+      "description": "거리 190 전방 부채꼴 230%",
       "actions": [
         {
           "op": "cone",
@@ -9862,7 +9862,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-178",
-      "description": "7초 evasion 강화 30%",
+      "description": "7초 회피율 30% 증가",
       "actions": [
         {
           "op": "buff",
@@ -9912,7 +9912,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-179",
-      "description": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 haste 강화 25%",
+      "description": "0초 뒤 반경 140에 500% 착탄 피해 / 5초 공격속도 25% 증가",
       "actions": [
         {
           "op": "blast",
@@ -10220,7 +10220,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-185",
-      "description": "dirge를 소비해 중첩당 220.00000000000003% 타격 / 최대 체력 12% 실제 회복",
+      "description": "dirge를 소비해 중첩당 221% 타격 / 최대 체력 12% 실제 회복",
       "actions": [
         {
           "op": "consume",
@@ -10276,7 +10276,7 @@
       "radius": 180,
       "target": "self",
       "effectType": "recipe-186",
-      "description": "dirge 지대 10초 · 반경 180 · 0.8초마다 45%",
+      "description": "진혼 지대 10초 · 반경 180 · 0.8초마다 공격력 45% 피해",
       "actions": [
         {
           "op": "zone",
@@ -10328,7 +10328,7 @@
       "radius": 220,
       "target": "area",
       "effectType": "recipe-187",
-      "description": "대상의 dirge 상태를 반경 220의 적에게 전염 / ghost 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
+      "description": "대상의 dirge 상태를 반경 220의 적에게 전염 / 망령 3마리 실제 소환 · 12초 · 공격력 65% / dirge를 소비해 중첩당 300% 타격",
       "actions": [
         {
           "op": "spread",
@@ -10512,7 +10512,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-190",
-      "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 evasion 강화 45% / 5초 방어 성공 시 200% 반격",
+      "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 5초 회피율 45% 증가 / 5초 방어 성공 시 200% 반격",
       "actions": [
         {
           "op": "dash",
@@ -10580,7 +10580,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-191",
-      "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 evasion 강화 30%",
+      "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.1초 간격 10회 · 타격당 70% / 3초 회피율 30% 증가",
       "actions": [
         {
           "op": "dash",
@@ -10702,7 +10702,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-193",
-      "description": "star 3마리 실제 소환 · 14초 · 공격력 45%",
+      "description": "공전 별 3마리 실제 소환 · 14초 · 공격력 45%",
       "actions": [
         {
           "op": "pet",
@@ -10754,7 +10754,7 @@
       "radius": 160,
       "target": "self",
       "effectType": "recipe-194",
-      "description": "stars 지대 8초 · 반경 160 · 0.8초마다 45%",
+      "description": "별빛 지대 8초 · 반경 160 · 0.8초마다 공격력 45% 피해",
       "actions": [
         {
           "op": "zone",
@@ -10966,7 +10966,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-198",
-      "description": "8초 rageGain 강화 50%",
+      "description": "8초 분노 획득량 50% 증가",
       "actions": [
         {
           "op": "buff",
@@ -11162,7 +11162,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-202",
-      "description": "9초 rageGain 강화 80%",
+      "description": "9초 분노 획득량 80% 증가",
       "actions": [
         {
           "op": "buff",
@@ -11324,7 +11324,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-205",
-      "description": "roots 지대 8초 · 반경 120 · 0.8초마다 35%",
+      "description": "덩굴 지대 8초 · 반경 120 · 0.8초마다 공격력 35% 피해",
       "actions": [
         {
           "op": "zone",
@@ -11422,7 +11422,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-207",
-      "description": "beast 2마리 실제 소환 · 12초 · 공격력 70%",
+      "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70%",
       "actions": [
         {
           "op": "pet",
@@ -11474,7 +11474,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-208",
-      "description": "7초 charge 강화 55% / 7초 rageGain 강화 70%",
+      "description": "7초 충전 56% 증가 / 7초 분노 획득량 70% 증가",
       "actions": [
         {
           "op": "buff",
@@ -11964,7 +11964,7 @@
       "radius": 160,
       "target": "area",
       "effectType": "recipe-217",
-      "description": "거리 160 전방 부채꼴 459.99999999999994% / root 1중첩 부여 · 최대 5중첩, 8초",
+      "description": "거리 160 전방 부채꼴 460% / root 1중첩 부여 · 최대 5중첩, 8초",
       "actions": [
         {
           "op": "cone",
@@ -12158,7 +12158,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-220",
-      "description": "roots 지대 8초 · 반경 140 · 0.8초마다 20%",
+      "description": "덩굴 지대 8초 · 반경 140 · 0.8초마다 공격력 20% 피해",
       "actions": [
         {
           "op": "zone",
@@ -12210,7 +12210,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-221",
-      "description": "plant 3마리 실제 소환 · 18초 · 공격력 60%",
+      "description": "가시 식물 3마리 실제 소환 · 18초 · 공격력 60%",
       "actions": [
         {
           "op": "pet",
@@ -12262,7 +12262,7 @@
       "radius": 160,
       "target": "self",
       "effectType": "recipe-222",
-      "description": "sanctuary 지대 12초 · 반경 160 · 0.8초마다 35% 및 지대 내 자가 회복",
+      "description": "성역 지대 12초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "zone",
@@ -12314,7 +12314,7 @@
       "radius": 220,
       "target": "self",
       "effectType": "recipe-223",
-      "description": "plant 5마리 실제 소환 · 20초 · 공격력 90% / roots 지대 12초 · 반경 220 · 0.8초마다 65%",
+      "description": "가시 식물 5마리 실제 소환 · 20초 · 공격력 90% / 덩굴 지대 12초 · 반경 220 · 0.8초마다 공격력 65% 피해",
       "actions": [
         {
           "op": "pet",
@@ -12478,7 +12478,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-226",
-      "description": "6초 aim 강화 25%",
+      "description": "6초 조준 25% 증가",
       "actions": [
         {
           "op": "buff",
@@ -12680,7 +12680,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-230",
-      "description": "8초 aim 강화 50%",
+      "description": "8초 조준 50% 증가",
       "actions": [
         {
           "op": "buff",
@@ -12836,7 +12836,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-233",
-      "description": "beast 1마리 실제 소환 · 14초 · 공격력 65%",
+      "description": "늑대 1마리 실제 소환 · 14초 · 공격력 65%",
       "actions": [
         {
           "op": "pet",
@@ -12888,7 +12888,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-234",
-      "description": "7초 haste 강화 25% / 7초 evasion 강화 20%",
+      "description": "7초 공격속도 25% 증가 / 7초 회피율 20% 증가",
       "actions": [
         {
           "op": "buff",
@@ -12950,7 +12950,7 @@
       "radius": 230,
       "target": "area",
       "effectType": "recipe-235",
-      "description": "beast 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
+      "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
       "actions": [
         {
           "op": "pet",
@@ -13118,7 +13118,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-238",
-      "description": "10초 aim 강화 90%",
+      "description": "10초 조준 90% 증가",
       "actions": [
         {
           "op": "buff",
@@ -13534,7 +13534,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-246",
-      "description": "6초 evasion 강화 50% / 6초 haste 강화 35%",
+      "description": "6초 회피율 50% 증가 / 6초 공격속도 35% 증가",
       "actions": [
         {
           "op": "buff",
@@ -13714,7 +13714,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-249",
-      "description": "beast 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
+      "description": "늑대 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
       "actions": [
         {
           "op": "pet",
@@ -13828,7 +13828,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-251",
-      "description": "beast 4마리 실제 소환 · 20초 · 공격력 110% / 소환체 표적 통일·즉시 협공",
+      "description": "늑대 4마리 실제 소환 · 20초 · 공격력 111% / 소환체 표적 통일·즉시 협공",
       "actions": [
         {
           "op": "pet",
@@ -14380,7 +14380,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-262",
-      "description": "9초 aim 강화 40%",
+      "description": "9초 조준 40% 증가",
       "actions": [
         {
           "op": "buff",
@@ -14582,7 +14582,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-266",
-      "description": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 evasion 강화 25%",
+      "description": "0.8초 동안 이동·공격 중지 후 12발 장전 / 2초 회피율 25% 증가",
       "actions": [
         {
           "op": "reload",
@@ -14700,7 +14700,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-268",
-      "description": "직선 투사체 229.99999999999997% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+      "description": "직선 투사체 230% · 실제 충돌 시 피해 / bulletmark 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
       "actions": [
         {
           "op": "missile",
@@ -14814,7 +14814,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-270",
-      "description": "spellbullet 자원 3 축적 / 8초 aim 강화 30%",
+      "description": "spellbullet 자원 3 축적 / 8초 조준 30% 증가",
       "actions": [
         {
           "op": "meter",
@@ -15050,7 +15050,7 @@
       "radius": 180,
       "target": "self",
       "effectType": "recipe-274",
-      "description": "target 지대 8초 · 반경 180 · 0.8초마다 15% / 8초 aim 강화 30%",
+      "description": "포격 조준 지대 8초 · 반경 180 · 0.8초마다 공격력 15% 피해 / 8초 조준 30% 증가",
       "actions": [
         {
           "op": "zone",
@@ -15638,7 +15638,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-285",
-      "description": "근접 단일 220.00000000000003% 타격 / 최대 체력 8% 실제 회복",
+      "description": "근접 단일 221% 타격 / 최대 체력 8% 실제 회복",
       "actions": [
         {
           "op": "hit",
@@ -15692,7 +15692,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-286",
-      "description": "9초 combo 강화 30%",
+      "description": "9초 연격 30% 증가",
       "actions": [
         {
           "op": "buff",
@@ -15877,17 +15877,19 @@
       "cost": 19,
       "cooldown": 13.4,
       "range": 460,
-      "radius": 140,
+      "radius": 190,
       "target": "self",
       "effectType": "recipe-290",
-      "description": "sanctuary 지대 9초 · 반경 120 · 0.8초마다 25% 및 지대 내 자가 회복",
+      "description": "성역 지대 10초 · 반경 190 · 0.8초마다 공격력 65% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "zone",
           "type": "sanctuary",
-          "power": 0.25,
-          "radius": 120,
-          "duration": 9
+          "power": 0.65,
+          "radius": 190,
+          "duration": 10,
+          "interval": 0.8,
+          "holyAura": true
         }
       ],
       "fx": {
@@ -15900,9 +15902,11 @@
           {
             "op": "zone",
             "type": "sanctuary",
-            "power": 0.25,
-            "radius": 120,
-            "duration": 9
+            "power": 0.65,
+            "radius": 190,
+            "duration": 10,
+            "interval": 0.8,
+            "holyAura": true
           }
         ],
         "rays": 7,
@@ -16042,7 +16046,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-293",
-      "description": "0.16초 간격 3회 · 타격당 80% / 6초 lifesteal 강화 20%",
+      "description": "0.16초 간격 3회 · 타격당 80% / 6초 흡혈 20% 증가",
       "actions": [
         {
           "op": "volley",
@@ -16106,7 +16110,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-294",
-      "description": "10초 combo 강화 45%",
+      "description": "10초 연격 45% 증가",
       "actions": [
         {
           "op": "buff",
@@ -16488,7 +16492,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-301",
-      "description": "최대 체력 28% 보호막",
+      "description": "최대 체력 29% 보호막",
       "actions": [
         {
           "op": "shield",
@@ -16531,17 +16535,20 @@
       "cost": 19,
       "cooldown": 13.8,
       "range": 460,
-      "radius": 175,
+      "radius": 230,
       "target": "self",
       "effectType": "recipe-302",
-      "description": "sanctuary 지대 14초 · 반경 175 · 0.8초마다 60% 및 지대 내 자가 회복",
+      "description": "성역 추종 오라 16초 · 반경 230 · 0.65초마다 공격력 95% 피해 및 지대 내 자가 회복",
       "actions": [
         {
           "op": "zone",
           "type": "sanctuary",
-          "power": 0.6,
-          "radius": 175,
-          "duration": 14
+          "power": 0.95,
+          "radius": 230,
+          "duration": 16,
+          "interval": 0.65,
+          "holyAura": true,
+          "follow": true
         }
       ],
       "fx": {
@@ -16554,9 +16561,12 @@
           {
             "op": "zone",
             "type": "sanctuary",
-            "power": 0.6,
-            "radius": 175,
-            "duration": 14
+            "power": 0.95,
+            "radius": 230,
+            "duration": 16,
+            "interval": 0.65,
+            "holyAura": true,
+            "follow": true
           }
         ],
         "rays": 11,
@@ -16586,7 +16596,7 @@
       "radius": 170,
       "target": "area",
       "effectType": "recipe-303",
-      "description": "최대 체력 55% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
+      "description": "최대 체력 56% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
       "actions": [
         {
           "op": "heal",
@@ -16712,7 +16722,7 @@
       "radius": 150,
       "target": "self",
       "effectType": "recipe-305",
-      "description": "seal 지대 9초 · 반경 150 · 0.8초마다 40%",
+      "description": "봉인 지대 9초 · 반경 150 · 0.8초마다 공격력 40% 피해",
       "actions": [
         {
           "op": "zone",
@@ -16902,7 +16912,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-308",
-      "description": "spirit 1마리 실제 소환 · 13초 · 공격력 60%",
+      "description": "정령 1마리 실제 소환 · 13초 · 공격력 60%",
       "actions": [
         {
           "op": "pet",
@@ -17048,7 +17058,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-311",
-      "description": "spirit 3마리 실제 소환 · 14초 · 공격력 70%",
+      "description": "정령 3마리 실제 소환 · 14초 · 공격력 70%",
       "actions": [
         {
           "op": "pet",
@@ -17100,7 +17110,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-312",
-      "description": "spirit 2마리 실제 소환 · 15초 · 공격력 65%",
+      "description": "정령 2마리 실제 소환 · 15초 · 공격력 65%",
       "actions": [
         {
           "op": "pet",
@@ -17254,7 +17264,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-315",
-      "description": "king 1마리 실제 소환 · 16초 · 공격력 140%",
+      "description": "정령왕 1마리 실제 소환 · 16초 · 공격력 140%",
       "actions": [
         {
           "op": "pet",
@@ -17292,7 +17302,7 @@
       "heroId": 11,
       "cell": 2,
       "slot": 0,
-      "name": "해골 모집",
+      "name": "해골 부대",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -17308,14 +17318,21 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-316",
-      "description": "skeleton 3마리 실제 소환 · 15초 · 공격력 35%",
+      "description": "해골 병사 2마리 실제 소환 · 18초 · 공격력 35% / 해골 궁수 2마리 실제 소환 · 18초 · 공격력 45%",
       "actions": [
         {
           "op": "pet",
           "appearance": "skeleton",
-          "count": 3,
+          "count": 2,
           "power": 0.35,
-          "duration": 15
+          "duration": 18
+        },
+        {
+          "op": "pet",
+          "appearance": "skeleton-archer",
+          "count": 2,
+          "power": 0.45,
+          "duration": 18
         }
       ],
       "fx": {
@@ -17328,14 +17345,21 @@
           {
             "op": "pet",
             "appearance": "skeleton",
-            "count": 3,
+            "count": 2,
             "power": 0.35,
-            "duration": 15
+            "duration": 18
+          },
+          {
+            "op": "pet",
+            "appearance": "skeleton-archer",
+            "count": 2,
+            "power": 0.45,
+            "duration": 18
           }
         ],
         "rays": 9,
         "rotation": 172,
-        "shape": "pet"
+        "shape": "pet+pet"
       }
     },
     {
@@ -17344,7 +17368,7 @@
       "heroId": 11,
       "cell": 2,
       "slot": 1,
-      "name": "혼 수확",
+      "name": "좀비 소환",
       "unlock": 35,
       "mechanicsVersion": 3,
       "resource": {
@@ -17358,18 +17382,16 @@
       "cooldown": 7.9,
       "range": 460,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-317",
-      "description": "직선 투사체 200% · 실제 충돌 시 피해 / soul 자원 1 축적",
+      "description": "좀비 2마리 실제 소환 · 20초 · 공격력 70%",
       "actions": [
         {
-          "op": "missile",
-          "power": 2
-        },
-        {
-          "op": "meter",
-          "key": "soul",
-          "value": 1
+          "op": "pet",
+          "appearance": "zombie",
+          "count": 2,
+          "power": 0.7,
+          "duration": 20
         }
       ],
       "fx": {
@@ -17380,18 +17402,16 @@
         "recipe": 317,
         "choreography": [
           {
-            "op": "missile",
-            "power": 2
-          },
-          {
-            "op": "meter",
-            "key": "soul",
-            "value": 1
+            "op": "pet",
+            "appearance": "zombie",
+            "count": 2,
+            "power": 0.7,
+            "duration": 20
           }
         ],
         "rays": 10,
         "rotation": 29,
-        "shape": "missile+meter"
+        "shape": "pet"
       }
     },
     {
@@ -17464,7 +17484,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-319",
-      "description": "reaper 1마리 실제 소환 · 15초 · 공격력 120%",
+      "description": "사신 1마리 실제 소환 · 15초 · 공격력 120%",
       "actions": [
         {
           "op": "pet",
@@ -17516,7 +17536,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-320",
-      "description": "king 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
+      "description": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
       "actions": [
         {
           "op": "pet",
@@ -17680,7 +17700,7 @@
       "radius": 190,
       "target": "area",
       "effectType": "recipe-323",
-      "description": "king 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
+      "description": "정령왕 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
       "actions": [
         {
           "op": "pet",
@@ -17748,7 +17768,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-324",
-      "description": "spirit 3마리 실제 소환 · 20초 · 공격력 40%",
+      "description": "정령 3마리 실제 소환 · 20초 · 공격력 40%",
       "actions": [
         {
           "op": "pet",
@@ -17970,14 +17990,28 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-328",
-      "description": "skeleton 5마리 실제 소환 · 20초 · 공격력 40%",
+      "description": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
       "actions": [
         {
           "op": "pet",
           "appearance": "skeleton",
-          "count": 5,
+          "count": 3,
           "power": 0.4,
-          "duration": 20
+          "duration": 24
+        },
+        {
+          "op": "pet",
+          "appearance": "skeleton-archer",
+          "count": 3,
+          "power": 0.5,
+          "duration": 24
+        },
+        {
+          "op": "pet",
+          "appearance": "zombie",
+          "count": 2,
+          "power": 0.7,
+          "duration": 24
         }
       ],
       "fx": {
@@ -17990,14 +18024,28 @@
           {
             "op": "pet",
             "appearance": "skeleton",
-            "count": 5,
+            "count": 3,
             "power": 0.4,
-            "duration": 20
+            "duration": 24
+          },
+          {
+            "op": "pet",
+            "appearance": "skeleton-archer",
+            "count": 3,
+            "power": 0.5,
+            "duration": 24
+          },
+          {
+            "op": "pet",
+            "appearance": "zombie",
+            "count": 2,
+            "power": 0.7,
+            "duration": 24
           }
         ],
         "rays": 5,
         "rotation": 76,
-        "shape": "pet"
+        "shape": "pet+pet+pet"
       }
     },
     {
@@ -18006,7 +18054,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 1,
-      "name": "시체 회수",
+      "name": "묘지 골렘",
       "unlock": 65,
       "mechanicsVersion": 3,
       "resource": {
@@ -18022,12 +18070,16 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-329",
-      "description": "남아 있는 시체를 소비해 해골 모집",
+      "description": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
       "actions": [
         {
-          "op": "corpses",
-          "count": 4,
-          "power": 0.5
+          "op": "pet",
+          "appearance": "grave-golem",
+          "count": 1,
+          "power": 1.8,
+          "duration": 26,
+          "large": true,
+          "exclusive": true
         }
       ],
       "fx": {
@@ -18038,14 +18090,18 @@
         "recipe": 329,
         "choreography": [
           {
-            "op": "corpses",
-            "count": 4,
-            "power": 0.5
+            "op": "pet",
+            "appearance": "grave-golem",
+            "count": 1,
+            "power": 1.8,
+            "duration": 26,
+            "large": true,
+            "exclusive": true
           }
         ],
         "rays": 6,
         "rotation": 113,
-        "shape": "corpses"
+        "shape": "pet"
       }
     },
     {
@@ -18102,7 +18158,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 3,
-      "name": "망자의 행진",
+      "name": "해골용 강림",
       "unlock": 90,
       "mechanicsVersion": 3,
       "resource": {
@@ -18118,21 +18174,37 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-331",
-      "description": "skeleton 9마리 실제 소환 · 24초 · 공격력 55% / skeleton-mage 3마리 실제 소환 · 24초 · 공격력 65%",
+      "description": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
       "actions": [
         {
           "op": "pet",
-          "appearance": "skeleton",
-          "count": 9,
-          "power": 0.55,
-          "duration": 24
+          "appearance": "skeleton-archer",
+          "count": 3,
+          "power": 0.6,
+          "duration": 28
+        },
+        {
+          "op": "pet",
+          "appearance": "zombie",
+          "count": 3,
+          "power": 0.8,
+          "duration": 28
         },
         {
           "op": "pet",
           "appearance": "skeleton-mage",
-          "count": 3,
+          "count": 2,
           "power": 0.65,
-          "duration": 24
+          "duration": 28
+        },
+        {
+          "op": "pet",
+          "appearance": "bone-dragon",
+          "count": 1,
+          "power": 2.8,
+          "duration": 28,
+          "large": true,
+          "exclusive": true
         }
       ],
       "fx": {
@@ -18144,22 +18216,38 @@
         "choreography": [
           {
             "op": "pet",
-            "appearance": "skeleton",
-            "count": 9,
-            "power": 0.55,
-            "duration": 24
+            "appearance": "skeleton-archer",
+            "count": 3,
+            "power": 0.6,
+            "duration": 28
+          },
+          {
+            "op": "pet",
+            "appearance": "zombie",
+            "count": 3,
+            "power": 0.8,
+            "duration": 28
           },
           {
             "op": "pet",
             "appearance": "skeleton-mage",
-            "count": 3,
+            "count": 2,
             "power": 0.65,
-            "duration": 24
+            "duration": 28
+          },
+          {
+            "op": "pet",
+            "appearance": "bone-dragon",
+            "count": 1,
+            "power": 2.8,
+            "duration": 28,
+            "large": true,
+            "exclusive": true
           }
         ],
         "rays": 8,
         "rotation": 7,
-        "shape": "pet+pet"
+        "shape": "pet+pet+pet+pet"
       }
     },
     {
@@ -18184,7 +18272,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-332",
-      "description": "reaper 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
+      "description": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
       "actions": [
         {
           "op": "pet",
@@ -18298,7 +18386,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-334",
-      "description": "death를 소비해 중첩당 220.00000000000003% 타격 / soul 자원 2 축적",
+      "description": "death를 소비해 중첩당 221% 타격 / soul 자원 2 축적",
       "actions": [
         {
           "op": "consume",
@@ -18356,7 +18444,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-335",
-      "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / reaper 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
+      "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
       "actions": [
         {
           "op": "spend",
