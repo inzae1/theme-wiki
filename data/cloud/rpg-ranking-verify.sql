@@ -1,0 +1,31 @@
+begin;
+insert into auth.users(id,email) values('00000000-0000-4000-a000-000000000069','ranking-test-a@example.invalid'),('00000000-0000-4000-a000-000000000070','ranking-test-b@example.invalid');
+set local role authenticated;
+select set_config('request.jwt.claim.sub','00000000-0000-4000-a000-000000000069',true);
+select public.rpg_set_expedition_name('랭킹검사A69');
+select public.rpg_save_progress(0,jsonb_build_object('heroes',(select jsonb_agg(jsonb_build_object('recruited',i=0,'cell',0,'level',25,'best',21,'stage',20,'cycle',0,'rankProgress',20)) from generate_series(0,11)i)));
+select public.rpg_sync_ranking(1,'[1000,0,0,0,0,0,0,0,0,0,0,0]');
+select set_config('request.jwt.claim.sub','00000000-0000-4000-a000-000000000070',true);
+select public.rpg_set_expedition_name('랭킹검사B69');
+select public.rpg_save_progress(0,jsonb_build_object('heroes',(select jsonb_agg(jsonb_build_object('recruited',i=0,'cell',0,'level',30,'best',11,'stage',10,'cycle',0,'rankProgress',10)) from generate_series(0,11)i)));
+select public.rpg_sync_ranking(1,'[2000,0,0,0,0,0,0,0,0,0,0,0]');
+do $$declare n integer;begin
+ if (select count(*) from public.rpg_expeditions)<>1 then raise exception 'PROFILE_RLS_FAILED';end if;
+ if (select count(*) from public.rpg_ranking_entries)<>1 then raise exception 'RANKING_RLS_FAILED';end if;
+ if not exists(select 1 from public.rpg_get_rankings('progress') where expedition_name='랭킹검사A69' and rank_position=1) then raise exception 'PROGRESS_ORDER_FAILED';end if;
+ if not exists(select 1 from public.rpg_get_rankings('power') where expedition_name='랭킹검사B69' and rank_position=1 and is_me) then raise exception 'POWER_ORDER_OR_MINE_FAILED';end if;
+ update public.rpg_ranking_entries set level=99 where user_id='00000000-0000-4000-a000-000000000069';get diagnostics n=row_count;if n<>0 then raise exception 'FOREIGN_UPDATE_FAILED';end if;
+ begin perform public.rpg_set_expedition_name('랭킹검사A69');raise exception 'DUPLICATE_NOT_REJECTED';exception when unique_violation then null;end;
+ begin perform public.rpg_set_expedition_name('<script>');raise exception 'BAD_NAME_NOT_REJECTED';exception when invalid_parameter_value then null;end;
+ begin perform public.rpg_sync_ranking(99,'[2000,0,0,0,0,0,0,0,0,0,0,0]');raise exception 'STALE_NOT_REJECTED';exception when serialization_failure then null;end;
+ begin update public.rpg_ranking_entries set level=99;raise exception 'MISMATCH_NOT_REJECTED';exception when invalid_parameter_value then null;end;
+end $$;
+set local role anon;
+select set_config('request.jwt.claim.sub','',true);
+do $$begin
+ if (select count(*) from public.rpg_get_rankings('progress'))<2 then raise exception 'PUBLIC_LIST_FAILED';end if;
+ begin perform 1 from public.rpg_cloud_saves;raise exception 'PRIVATE_SAVE_LEAK';exception when insufficient_privilege then null;end;
+ begin perform public.rpg_set_expedition_name('익명실패');raise exception 'ANON_WRITE_ALLOWED';exception when insufficient_privilege then null;end;
+end $$;
+rollback;
+select 'PASS: names, duplicates, per-user RLS, public safe rows, progress/power ordering, my rank, stale revision and forged metadata rejection; all fixtures rolled back' as result;

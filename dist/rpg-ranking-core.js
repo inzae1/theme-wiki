@@ -1,0 +1,10 @@
+'use strict';
+(function(root){const validName=name=>typeof name==='string'&&/^[가-힣A-Za-z0-9 _-]{2,16}$/.test(name.trim());
+function powers(payload,D,E){const safe=E.validate(payload,D),g=new E.Game(D,safe);return safe.heroes.map((h,i)=>{if(!h.recruited)return 0;g.s.active=i;g.c=null;return g.power();});}
+class Expedition{
+constructor(client,account,compute){this.client=client;this.account=account;this.compute=compute;this.profile=null;this.owner=null;this.syncKey='';}
+async refreshProfile(){const uid=this.account.user?.id;this.owner=uid;this.profile=null;if(!uid)return null;const {data,error}=await this.client.from('rpg_expeditions').select('name,updated_at').eq('user_id',uid).maybeSingle();if(error)throw error;if(this.account.user?.id!==uid)return null;this.profile=data;return data;}
+async setName(name){const clean=name.trim();if(!validName(clean))throw Error('이름은 한글·영문·숫자·공백·_-로 2~16자 입력해 주세요.');if(!this.account.user)throw Error('구글 로그인이 필요해요.');const uid=this.account.user.id,{error}=await this.client.rpc('rpg_set_expedition_name',{p_name:clean});if(error){if(error.code==='23505')throw Error('이미 사용 중인 원정대 이름이에요.');throw error;}if(this.account.user?.id!==uid)throw Error('계정이 변경됐어요.');await this.refreshProfile();this.syncKey='';return this.profile;}
+async sync(){const uid=this.account.user?.id,remote=this.account.remote;if(!uid||this.owner!==uid||!this.profile||!remote)return false;const key=uid+':'+remote.revision;if(this.syncKey===key)return true;const p=this.compute(remote.payload),{error}=await this.client.rpc('rpg_sync_ranking',{p_revision:remote.revision,p_powers:p});if(error)throw error;if(this.account.user?.id!==uid)return false;this.syncKey=key;return true;}
+async list(sort='progress'){const {data,error}=await this.client.rpc('rpg_get_rankings',{p_sort:sort==='power'?'power':'progress'});if(error)throw error;return data||[];}
+}const api={Expedition,validName,powers};if(typeof module!=='undefined')module.exports=api;root.RPG_RANKING_CORE=api;})(typeof window!=='undefined'?window:globalThis);
