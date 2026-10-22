@@ -114,3 +114,9 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 - `warrior/warrior-impact-atlas.png`: 원화 투명도를 유지해 4단계 애니메이션으로 배치. 재생성은 `scripts/build-rpg-warrior-impact.py`.
 - 직업별 전용 타격 GIF 4종은 게임과 같은 프레임을 사용한다. GIF 배경은 미리보기용이며 게임에는 투명 PNG가 사용된다.
 - 준비 연출·강화 상태는 기존 직업별 SVG를 사용하고, 실제 타격·회수·균열·충격은 명중 이벤트를 기준으로 재생해 중복된 가짜 타격 연출을 줄였다.
+
+## r81 — 박종찬 검사 계열
+
+- `sword/sword-source.png`: 내장 image_gen으로 제작한 검사·검성·마검사·검귀·수라·룬나이트·소울브링어 전용 원화. 정확한 생성 프롬프트: `sword/sword-prompt.txt`.
+- `sword/sword-atlas.png`, `sword/rune-glyph.png`: 생성 원화의 투명도를 유지해 분리한 게임용 프레임. 재생성: `scripts/build-rpg-sword-fx.py`.
+- 직업별 GIF 7종은 같은 프레임을 사용한다. GIF의 초록 배경은 미리보기용이며 게임은 투명 PNG를 사용한다.

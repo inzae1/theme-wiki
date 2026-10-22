@@ -123,6 +123,7 @@ if(typeof module!=='undefined')require('./rpg-priest-runtime.js')(E);else root.R
 if(typeof module!=='undefined')require('./rpg-lich-runtime.js')(E);else root.RPG_LICH_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-idol-runtime.js')(E);else root.RPG_IDOL_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-archer-runtime.js')(E);else root.RPG_ARCHER_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-sword-runtime.js')(E);else root.RPG_SWORD_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);

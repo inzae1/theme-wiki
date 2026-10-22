@@ -12,10 +12,10 @@
       "id": "jongchan-0",
       "tier": 0,
       "parent": "시작",
-      "style": "basic",
+      "style": "sword",
       "resource": "기력",
-      "review": "빠른 베기 — hit / 연속 베기 — volley / 칼등 방어 — guard / 결의의 일섬 — beam",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "빠른 베기 — quick-cut / 연속 베기 — three-cuts / 칼등 방어 — blade-guard / 결의의 일섬 — resolve-wave",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-0-skill-0",
@@ -35,35 +35,37 @@
           },
           "cost": 12,
           "cooldown": 5.2,
-          "range": 125,
-          "radius": 140,
+          "range": 110,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-0",
-          "description": "근접 단일 180% 타격",
+          "description": "근접 110 이내 단일 180% · 실제 명중 시 연격 1 획득",
           "actions": [
             {
-              "op": "hit",
-              "power": 1.8
+              "op": "sword-kit",
+              "kind": "quick-cut",
+              "profile": "sword-cut"
             }
           ],
           "fx": {
             "signature": "jongchan-0:0",
-            "theme": "basic",
+            "theme": "sword",
             "weapon": "한손검",
             "palette": "#f0c675",
             "recipe": 0,
             "choreography": [
               {
-                "op": "hit",
-                "power": 1.8
+                "op": "sword-kit",
+                "kind": "quick-cut",
+                "profile": "sword-cut"
               }
             ],
             "rays": 5,
             "rotation": 0,
-            "shape": "hit"
+            "shape": "quick-cut"
           },
-          "actualText": "근접 단일 180% 타격",
-          "visual": "전용 연출 jongchan-0:0 · hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 110 이내 단일 180% · 실제 명중 시 연격 1 획득",
+          "visual": "전용 연출 jongchan-0:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-0-skill-1",
@@ -84,40 +86,36 @@
           "cost": 17,
           "cooldown": 7.5,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-1",
-          "description": "0.16초 간격 3회 · 타격당 80%",
+          "description": "0.16초 간격 근접 3회 · 타격당 80% · 각 명중마다 연격 1 획득",
           "actions": [
             {
-              "op": "volley",
-              "count": 3,
-              "power": 0.8,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "sword-kit",
+              "kind": "three-cuts",
+              "profile": "sword-chain"
             }
           ],
           "fx": {
             "signature": "jongchan-0:1",
-            "theme": "basic",
+            "theme": "sword",
             "weapon": "한손검",
             "palette": "#f0c675",
             "recipe": 1,
             "choreography": [
               {
-                "op": "volley",
-                "count": 3,
-                "power": 0.8,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "sword-kit",
+                "kind": "three-cuts",
+                "profile": "sword-chain"
               }
             ],
             "rays": 6,
             "rotation": 37,
-            "shape": "volley"
+            "shape": "three-cuts"
           },
-          "actualText": "0.16초 간격 3회 · 타격당 80%",
-          "visual": "전용 연출 jongchan-0:1 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.16초 간격 근접 3회 · 타격당 80% · 각 명중마다 연격 1 획득",
+          "visual": "전용 연출 jongchan-0:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-0-skill-2",
@@ -138,36 +136,36 @@
           "cost": 19,
           "cooldown": 13,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-2",
-          "description": "2초 방어 · 받는 피해 40% 감소, 막은 피해 반격 축적",
+          "description": "2초 피해 40% 감소 · 실제로 줄인 피해만 저장 · 다음 기본공격에 최대 공격력 60% 추가 후 저장량 소모",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.4,
-              "duration": 2
+              "op": "sword-kit",
+              "kind": "blade-guard",
+              "profile": "blade-guard"
             }
           ],
           "fx": {
             "signature": "jongchan-0:2",
-            "theme": "basic",
+            "theme": "sword",
             "weapon": "한손검",
             "palette": "#f0c675",
             "recipe": 2,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.4,
-                "duration": 2
+                "op": "sword-kit",
+                "kind": "blade-guard",
+                "profile": "blade-guard"
               }
             ],
             "rays": 7,
             "rotation": 74,
-            "shape": "guard"
+            "shape": "blade-guard"
           },
-          "actualText": "2초 방어 · 받는 피해 40% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 jongchan-0:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "2초 피해 40% 감소 · 실제로 줄인 피해만 저장 · 다음 기본공격에 최대 공격력 60% 추가 후 저장량 소모",
+          "visual": "전용 연출 jongchan-0:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-0-skill-3",
@@ -187,41 +185,37 @@
           },
           "cost": 38,
           "cooldown": 34,
-          "range": 460,
-          "radius": 140,
+          "range": 480,
+          "radius": 0,
           "target": "area",
           "effectType": "recipe-3",
-          "description": "0.5초 준비 후 길이 480, 폭 72 직선 600% 관통",
+          "description": "0.5초 준비 후 사거리 480의 600% 관통 검광 · 실제 지나간 적에게 명중",
           "actions": [
             {
-              "op": "beam",
-              "power": 6,
-              "width": 36,
-              "range": 480,
-              "delay": 0.5
+              "op": "sword-kit",
+              "kind": "resolve-wave",
+              "profile": "iai-draw"
             }
           ],
           "fx": {
             "signature": "jongchan-0:3",
-            "theme": "basic",
+            "theme": "sword",
             "weapon": "한손검",
             "palette": "#f0c675",
             "recipe": 3,
             "choreography": [
               {
-                "op": "beam",
-                "power": 6,
-                "width": 36,
-                "range": 480,
-                "delay": 0.5
+                "op": "sword-kit",
+                "kind": "resolve-wave",
+                "profile": "iai-draw"
               }
             ],
             "rays": 8,
             "rotation": 111,
-            "shape": "beam"
+            "shape": "resolve-wave"
           },
-          "actualText": "0.5초 준비 후 길이 480, 폭 72 직선 600% 관통",
-          "visual": "전용 연출 jongchan-0:3 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.5초 준비 후 사거리 480의 600% 관통 검광 · 실제 지나간 적에게 명중",
+          "visual": "전용 연출 jongchan-0:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -231,10 +225,10 @@
       "id": "jongchan-1",
       "tier": 1,
       "parent": "jongchan-0",
-      "style": "counter",
+      "style": "iai",
       "resource": "기력",
-      "review": "발도 연격 — dash → volley / 받아치기 — guard → counter / 검술 집중 — buff / 십자 발도 — beam → blast",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "발도 연격 — iai-chain / 받아치기 — riposte / 검술 집중 — sword-focus / 십자 발도 — cross-draw",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-1-skill-0",
@@ -254,49 +248,37 @@
           },
           "cost": 12,
           "cooldown": 5.6,
-          "range": 320,
-          "radius": 140,
+          "range": 220,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-4",
-          "description": "앞으로 최대 150 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 80%",
+          "description": "지형을 확인하며 최대 150 접근 후 근접 3연격 · 각 80% · 접근 실패 시 원거리 타격 없음",
           "actions": [
             {
-              "op": "dash",
-              "distance": 150
-            },
-            {
-              "op": "volley",
-              "count": 3,
-              "power": 0.8,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "sword-kit",
+              "kind": "iai-chain",
+              "profile": "iai-rush"
             }
           ],
           "fx": {
             "signature": "jongchan-1:0",
-            "theme": "counter",
+            "theme": "iai",
             "weapon": "카타나",
             "palette": "#f0c675",
             "recipe": 4,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 150
-              },
-              {
-                "op": "volley",
-                "count": 3,
-                "power": 0.8,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "sword-kit",
+                "kind": "iai-chain",
+                "profile": "iai-rush"
               }
             ],
             "rays": 9,
             "rotation": 148,
-            "shape": "dash+volley"
+            "shape": "iai-chain"
           },
-          "actualText": "앞으로 최대 150 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 80%",
-          "visual": "전용 연출 jongchan-1:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "지형을 확인하며 최대 150 접근 후 근접 3연격 · 각 80% · 접근 실패 시 원거리 타격 없음",
+          "visual": "전용 연출 jongchan-1:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-1-skill-1",
@@ -317,46 +299,36 @@
           "cost": 17,
           "cooldown": 7.9,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-5",
-          "description": "2초 방어 · 받는 피해 60% 감소, 막은 피해 반격 축적 / 4초 방어 성공 시 140% 반격",
+          "description": "2초 피해 60% 감소 · 실제 방어 성공 시 165 이내 공격자에게 140% 반격 · 반격 간격 0.45초",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.6,
-              "duration": 2
-            },
-            {
-              "op": "counter",
-              "power": 1.4,
-              "duration": 4
+              "op": "sword-kit",
+              "kind": "riposte",
+              "profile": "blade-guard"
             }
           ],
           "fx": {
             "signature": "jongchan-1:1",
-            "theme": "counter",
+            "theme": "iai",
             "weapon": "카타나",
             "palette": "#f0c675",
             "recipe": 5,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.6,
-                "duration": 2
-              },
-              {
-                "op": "counter",
-                "power": 1.4,
-                "duration": 4
+                "op": "sword-kit",
+                "kind": "riposte",
+                "profile": "blade-guard"
               }
             ],
             "rays": 10,
             "rotation": 5,
-            "shape": "guard+counter"
+            "shape": "riposte"
           },
-          "actualText": "2초 방어 · 받는 피해 60% 감소, 막은 피해 반격 축적 / 4초 방어 성공 시 140% 반격",
-          "visual": "전용 연출 jongchan-1:1 · guard → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "2초 피해 60% 감소 · 실제 방어 성공 시 165 이내 공격자에게 140% 반격 · 반격 간격 0.45초",
+          "visual": "전용 연출 jongchan-1:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-1-skill-2",
@@ -377,38 +349,36 @@
           "cost": 19,
           "cooldown": 13.4,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-6",
-          "description": "9초 연격 22% 증가",
+          "description": "9초 연격 1당 공격력 증가 · 12연격에서 최대 22% · 기본공격과 직접 기술에 적용",
           "actions": [
             {
-              "op": "buff",
-              "type": "combo",
-              "value": 0.22,
-              "duration": 9
+              "op": "sword-kit",
+              "kind": "sword-focus",
+              "profile": "sword-focus"
             }
           ],
           "fx": {
             "signature": "jongchan-1:2",
-            "theme": "counter",
+            "theme": "iai",
             "weapon": "카타나",
             "palette": "#f0c675",
             "recipe": 6,
             "choreography": [
               {
-                "op": "buff",
-                "type": "combo",
-                "value": 0.22,
-                "duration": 9
+                "op": "sword-kit",
+                "kind": "sword-focus",
+                "profile": "sword-focus"
               }
             ],
             "rays": 11,
             "rotation": 42,
-            "shape": "buff"
+            "shape": "sword-focus"
           },
-          "actualText": "9초 연격 22% 증가",
-          "visual": "전용 연출 jongchan-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "9초 연격 1당 공격력 증가 · 12연격에서 최대 22% · 기본공격과 직접 기술에 적용",
+          "visual": "전용 연출 jongchan-1:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-1-skill-3",
@@ -428,53 +398,37 @@
           },
           "cost": 38,
           "cooldown": 34.4,
-          "range": 460,
-          "radius": 140,
-          "target": "area",
+          "range": 300,
+          "radius": 0,
+          "target": "single",
           "effectType": "recipe-7",
-          "description": "0.2초 준비 후 길이 480, 폭 50 직선 400% 관통 / 0.5초 뒤 반경 80에 300% 착탄 피해",
+          "description": "지형을 확인하며 최대 220 접근 후 400% 발도 · 0.2초 뒤 적중 지점 반경 80에 300% 교차 베기",
           "actions": [
             {
-              "op": "beam",
-              "power": 4,
-              "width": 25,
-              "range": 480,
-              "delay": 0.2
-            },
-            {
-              "op": "blast",
-              "power": 3,
-              "radius": 80,
-              "delay": 0.5
+              "op": "sword-kit",
+              "kind": "cross-draw",
+              "profile": "iai-cross"
             }
           ],
           "fx": {
             "signature": "jongchan-1:3",
-            "theme": "counter",
+            "theme": "iai",
             "weapon": "카타나",
             "palette": "#f0c675",
             "recipe": 7,
             "choreography": [
               {
-                "op": "beam",
-                "power": 4,
-                "width": 25,
-                "range": 480,
-                "delay": 0.2
-              },
-              {
-                "op": "blast",
-                "power": 3,
-                "radius": 80,
-                "delay": 0.5
+                "op": "sword-kit",
+                "kind": "cross-draw",
+                "profile": "iai-cross"
               }
             ],
             "rays": 12,
             "rotation": 79,
-            "shape": "beam+blast"
+            "shape": "cross-draw"
           },
-          "actualText": "0.2초 준비 후 길이 480, 폭 50 직선 400% 관통 / 0.5초 뒤 반경 80에 300% 착탄 피해",
-          "visual": "전용 연출 jongchan-1:3 · beam → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "지형을 확인하며 최대 220 접근 후 400% 발도 · 0.2초 뒤 적중 지점 반경 80에 300% 교차 베기",
+          "visual": "전용 연출 jongchan-1:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -484,10 +438,10 @@
       "id": "jongchan-2",
       "tier": 1,
       "parent": "jongchan-0",
-      "style": "element",
+      "style": "runeblade",
       "resource": "마력",
-      "review": "마력 검기 — beam / 룬 절개 — status → hit / 영혼 결속 — pet / 마검 해방 — consume → blast",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "마력 검기 — arcane-edge / 룬 절개 — rune-incision / 룬 검신 — rune-enchant / 마검 해방 — arcane-release",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-2-skill-0",
@@ -507,41 +461,37 @@
           },
           "cost": 5,
           "cooldown": 5.6,
-          "range": 460,
-          "radius": 140,
+          "range": 420,
+          "radius": 0,
           "target": "area",
           "effectType": "recipe-8",
-          "description": "0.25초 준비 후 길이 480, 폭 56 직선 250% 관통",
+          "description": "0.25초 준비 후 250% 관통 마력 검기 · 사거리 420 · 실제 명중 시 룬 1중첩, 최대 3·10초",
           "actions": [
             {
-              "op": "beam",
-              "power": 2.5,
-              "width": 28,
-              "range": 480,
-              "delay": 0.25
+              "op": "sword-kit",
+              "kind": "arcane-edge",
+              "profile": "rune-cut"
             }
           ],
           "fx": {
             "signature": "jongchan-2:0",
-            "theme": "element",
+            "theme": "runeblade",
             "weapon": "룬 대검",
             "palette": "#f0c675",
             "recipe": 8,
             "choreography": [
               {
-                "op": "beam",
-                "power": 2.5,
-                "width": 28,
-                "range": 480,
-                "delay": 0.25
+                "op": "sword-kit",
+                "kind": "arcane-edge",
+                "profile": "rune-cut"
               }
             ],
             "rays": 5,
             "rotation": 116,
-            "shape": "beam"
+            "shape": "arcane-edge"
           },
-          "actualText": "0.25초 준비 후 길이 480, 폭 56 직선 250% 관통",
-          "visual": "전용 연출 jongchan-2:0 · beam · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.25초 준비 후 250% 관통 마력 검기 · 사거리 420 · 실제 명중 시 룬 1중첩, 최대 3·10초",
+          "visual": "전용 연출 jongchan-2:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-2-skill-1",
@@ -561,49 +511,37 @@
           },
           "cost": 7,
           "cooldown": 7.9,
-          "range": 460,
-          "radius": 140,
+          "range": 120,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-9",
-          "description": "rune 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10% / 근접 단일 200% 타격",
+          "description": "근접 120 이내 200% 검격 · 실제 명중 시 룬 1중첩, 최대 3·10초",
           "actions": [
             {
-              "op": "status",
-              "type": "rune",
-              "power": 0.1,
-              "stacks": 1,
-              "duration": 8
-            },
-            {
-              "op": "hit",
-              "power": 2
+              "op": "sword-kit",
+              "kind": "rune-incision",
+              "profile": "rune-cut"
             }
           ],
           "fx": {
             "signature": "jongchan-2:1",
-            "theme": "element",
+            "theme": "runeblade",
             "weapon": "룬 대검",
             "palette": "#f0c675",
             "recipe": 9,
             "choreography": [
               {
-                "op": "status",
-                "type": "rune",
-                "power": 0.1,
-                "stacks": 1,
-                "duration": 8
-              },
-              {
-                "op": "hit",
-                "power": 2
+                "op": "sword-kit",
+                "kind": "rune-incision",
+                "profile": "rune-cut"
               }
             ],
             "rays": 6,
             "rotation": 153,
-            "shape": "status+hit"
+            "shape": "rune-incision"
           },
-          "actualText": "rune 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10% / 근접 단일 200% 타격",
-          "visual": "전용 연출 jongchan-2:1 · status → hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 120 이내 200% 검격 · 실제 명중 시 룬 1중첩, 최대 3·10초",
+          "visual": "전용 연출 jongchan-2:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-2-skill-2",
@@ -611,7 +549,7 @@
           "heroId": 0,
           "cell": 2,
           "slot": 2,
-          "name": "영혼 결속",
+          "name": "룬 검신",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -624,40 +562,36 @@
           "cost": 8,
           "cooldown": 13.4,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-10",
-          "description": "망령 1마리 실제 소환 · 12초 · 공격력 40%",
+          "description": "9초 기본공격 적중 시 룬 1중첩·30% 추가 마력 검격 · 망령을 소환하지 않음",
           "actions": [
             {
-              "op": "pet",
-              "appearance": "ghost",
-              "count": 1,
-              "power": 0.4,
-              "duration": 12
+              "op": "sword-kit",
+              "kind": "rune-enchant",
+              "profile": "rune-charge"
             }
           ],
           "fx": {
             "signature": "jongchan-2:2",
-            "theme": "element",
+            "theme": "runeblade",
             "weapon": "룬 대검",
             "palette": "#f0c675",
             "recipe": 10,
             "choreography": [
               {
-                "op": "pet",
-                "appearance": "ghost",
-                "count": 1,
-                "power": 0.4,
-                "duration": 12
+                "op": "sword-kit",
+                "kind": "rune-enchant",
+                "profile": "rune-charge"
               }
             ],
             "rays": 7,
             "rotation": 10,
-            "shape": "pet"
+            "shape": "rune-enchant"
           },
-          "actualText": "망령 1마리 실제 소환 · 12초 · 공격력 40%",
-          "visual": "전용 연출 jongchan-2:2 · pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "9초 기본공격 적중 시 룬 1중첩·30% 추가 마력 검격 · 망령을 소환하지 않음",
+          "visual": "전용 연출 jongchan-2:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-2-skill-3",
@@ -677,49 +611,37 @@
           },
           "cost": 16,
           "cooldown": 34.4,
-          "range": 125,
-          "radius": 140,
+          "range": 210,
+          "radius": 0,
           "target": "area",
           "effectType": "recipe-11",
-          "description": "rune를 소비해 중첩당 300% 타격 / 0.4초 뒤 반경 125에 400% 착탄 피해",
+          "description": "주변 210 이내 룬을 소모해 중첩당 300% 피해 · 0.4초 뒤 자신 중심 반경 150에 400% 해방 파동",
           "actions": [
             {
-              "op": "consume",
-              "type": "rune",
-              "power": 3
-            },
-            {
-              "op": "blast",
-              "power": 4,
-              "radius": 125,
-              "delay": 0.4
+              "op": "sword-kit",
+              "kind": "arcane-release",
+              "profile": "rune-release"
             }
           ],
           "fx": {
             "signature": "jongchan-2:3",
-            "theme": "element",
+            "theme": "runeblade",
             "weapon": "룬 대검",
             "palette": "#f0c675",
             "recipe": 11,
             "choreography": [
               {
-                "op": "consume",
-                "type": "rune",
-                "power": 3
-              },
-              {
-                "op": "blast",
-                "power": 4,
-                "radius": 125,
-                "delay": 0.4
+                "op": "sword-kit",
+                "kind": "arcane-release",
+                "profile": "rune-release"
               }
             ],
             "rays": 8,
             "rotation": 47,
-            "shape": "consume+blast"
+            "shape": "arcane-release"
           },
-          "actualText": "rune를 소비해 중첩당 300% 타격 / 0.4초 뒤 반경 125에 400% 착탄 피해",
-          "visual": "전용 연출 jongchan-2:3 · consume → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "주변 210 이내 룬을 소모해 중첩당 300% 피해 · 0.4초 뒤 자신 중심 반경 150에 400% 해방 파동",
+          "visual": "전용 연출 jongchan-2:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -729,10 +651,10 @@
       "id": "jongchan-3",
       "tier": 2,
       "parent": "jongchan-1",
-      "style": "rapid",
+      "style": "shadowblade",
       "resource": "기력",
-      "review": "귀영 추격 — dash → volley / 잔영 육연참 — volley / 검귀의 호흡 — buff / 백귀난무 — combo-finish → volley",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "귀영 추격 — shadow-chase / 잔영 육연참 — six-cuts / 검귀의 호흡 — demon-breath / 백귀난무 — hundred-cuts",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-3-skill-0",
@@ -752,49 +674,37 @@
           },
           "cost": 12,
           "cooldown": 6,
-          "range": 320,
-          "radius": 140,
+          "range": 270,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-12",
-          "description": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 56%",
+          "description": "지형을 확인하며 최대 190 접근 후 4회 근접 잔영 베기 · 각 55% · 실제 명중 시 연격 축적",
           "actions": [
             {
-              "op": "dash",
-              "distance": 190
-            },
-            {
-              "op": "volley",
-              "count": 4,
-              "power": 0.55,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "sword-kit",
+              "kind": "shadow-chase",
+              "profile": "shadow-rush"
             }
           ],
           "fx": {
             "signature": "jongchan-3:0",
-            "theme": "rapid",
+            "theme": "shadowblade",
             "weapon": "쌍도",
             "palette": "#f0c675",
             "recipe": 12,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 190
-              },
-              {
-                "op": "volley",
-                "count": 4,
-                "power": 0.55,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "sword-kit",
+                "kind": "shadow-chase",
+                "profile": "shadow-rush"
               }
             ],
             "rays": 9,
             "rotation": 84,
-            "shape": "dash+volley"
+            "shape": "shadow-chase"
           },
-          "actualText": "앞으로 최대 190 이동 · 경로 충돌 검사 / 0.16초 간격 4회 · 타격당 56%",
-          "visual": "전용 연출 jongchan-3:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "지형을 확인하며 최대 190 접근 후 4회 근접 잔영 베기 · 각 55% · 실제 명중 시 연격 축적",
+          "visual": "전용 연출 jongchan-3:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-3-skill-1",
@@ -815,40 +725,36 @@
           "cost": 17,
           "cooldown": 8.3,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-13",
-          "description": "0.12초 간격 6회 · 타격당 65%",
+          "description": "0.12초 간격 근접 6회 · 타격당 65% · 실제 명중 시 연격 1 획득",
           "actions": [
             {
-              "op": "volley",
-              "count": 6,
-              "power": 0.65,
-              "gap": 0.12,
-              "shape": "single"
+              "op": "sword-kit",
+              "kind": "six-cuts",
+              "profile": "shadow-flurry"
             }
           ],
           "fx": {
             "signature": "jongchan-3:1",
-            "theme": "rapid",
+            "theme": "shadowblade",
             "weapon": "쌍도",
             "palette": "#f0c675",
             "recipe": 13,
             "choreography": [
               {
-                "op": "volley",
-                "count": 6,
-                "power": 0.65,
-                "gap": 0.12,
-                "shape": "single"
+                "op": "sword-kit",
+                "kind": "six-cuts",
+                "profile": "shadow-flurry"
               }
             ],
             "rays": 10,
             "rotation": 121,
-            "shape": "volley"
+            "shape": "six-cuts"
           },
-          "actualText": "0.12초 간격 6회 · 타격당 65%",
-          "visual": "전용 연출 jongchan-3:1 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.12초 간격 근접 6회 · 타격당 65% · 실제 명중 시 연격 1 획득",
+          "visual": "전용 연출 jongchan-3:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-3-skill-2",
@@ -869,38 +775,36 @@
           "cost": 19,
           "cooldown": 13.8,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-14",
-          "description": "10초 연격 35% 증가",
+          "description": "10초 연격 비례 공격력 증가 · 12연격에서 최대 35% · 기본공격과 직접 기술에 적용",
           "actions": [
             {
-              "op": "buff",
-              "type": "combo",
-              "value": 0.35,
-              "duration": 10
+              "op": "sword-kit",
+              "kind": "demon-breath",
+              "profile": "sword-focus"
             }
           ],
           "fx": {
             "signature": "jongchan-3:2",
-            "theme": "rapid",
+            "theme": "shadowblade",
             "weapon": "쌍도",
             "palette": "#f0c675",
             "recipe": 14,
             "choreography": [
               {
-                "op": "buff",
-                "type": "combo",
-                "value": 0.35,
-                "duration": 10
+                "op": "sword-kit",
+                "kind": "demon-breath",
+                "profile": "sword-focus"
               }
             ],
             "rays": 11,
             "rotation": 158,
-            "shape": "buff"
+            "shape": "demon-breath"
           },
-          "actualText": "10초 연격 35% 증가",
-          "visual": "전용 연출 jongchan-3:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초 연격 비례 공격력 증가 · 12연격에서 최대 35% · 기본공격과 직접 기술에 적용",
+          "visual": "전용 연출 jongchan-3:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-3-skill-3",
@@ -920,49 +824,37 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 125,
-          "radius": 140,
+          "range": 130,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-15",
-          "description": "연격을 전부 소모해 단일 마무리 피해 증폭 / 0.1초 간격 8회 · 타격당 50%",
+          "description": "근접 8연타로 타격당 50%·연격 축적 후 마지막 500%+소모 연격당 75% 결정타 · 마지막 명중에 연격 전부 소모",
           "actions": [
             {
-              "op": "combo-finish",
-              "power": 5
-            },
-            {
-              "op": "volley",
-              "count": 8,
-              "power": 0.5,
-              "gap": 0.1,
-              "shape": "single"
+              "op": "sword-kit",
+              "kind": "hundred-cuts",
+              "profile": "shadow-finish"
             }
           ],
           "fx": {
             "signature": "jongchan-3:3",
-            "theme": "rapid",
+            "theme": "shadowblade",
             "weapon": "쌍도",
             "palette": "#f0c675",
             "recipe": 15,
             "choreography": [
               {
-                "op": "combo-finish",
-                "power": 5
-              },
-              {
-                "op": "volley",
-                "count": 8,
-                "power": 0.5,
-                "gap": 0.1,
-                "shape": "single"
+                "op": "sword-kit",
+                "kind": "hundred-cuts",
+                "profile": "shadow-finish"
               }
             ],
             "rays": 12,
             "rotation": 15,
-            "shape": "combo-finish+volley"
+            "shape": "hundred-cuts"
           },
-          "actualText": "연격을 전부 소모해 단일 마무리 피해 증폭 / 0.1초 간격 8회 · 타격당 50%",
-          "visual": "전용 연출 jongchan-3:3 · combo-finish → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 8연타로 타격당 50%·연격 축적 후 마지막 500%+소모 연격당 75% 결정타 · 마지막 명중에 연격 전부 소모",
+          "visual": "전용 연출 jongchan-3:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -972,10 +864,10 @@
       "id": "jongchan-4",
       "tier": 2,
       "parent": "jongchan-1",
-      "style": "counter",
+      "style": "parry",
       "resource": "기력",
-      "review": "수라 반격 — guard → counter / 축적 방출 — revenge / 불동 자세 — guard / 만격반환 — revenge → guard",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "수라 반격 — asura-parry / 축적 방출 — stored-cut / 불동 자세 — immovable / 만격반환 — thousand-return",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-4-skill-0",
@@ -996,46 +888,36 @@
           "cost": 12,
           "cooldown": 6,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-16",
-          "description": "2.5초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 4초 방어 성공 시 240% 반격",
+          "description": "2.5초 피해 70% 감소 · 실제 방어 성공 시 165 이내 공격자에게 240% 반격 · 반격 간격 0.45초",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.7,
-              "duration": 2.5
-            },
-            {
-              "op": "counter",
-              "power": 2.4,
-              "duration": 4
+              "op": "sword-kit",
+              "kind": "asura-parry",
+              "profile": "blade-guard"
             }
           ],
           "fx": {
             "signature": "jongchan-4:0",
-            "theme": "counter",
+            "theme": "parry",
             "weapon": "장도",
             "palette": "#f0c675",
             "recipe": 16,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.7,
-                "duration": 2.5
-              },
-              {
-                "op": "counter",
-                "power": 2.4,
-                "duration": 4
+                "op": "sword-kit",
+                "kind": "asura-parry",
+                "profile": "blade-guard"
               }
             ],
             "rays": 5,
             "rotation": 52,
-            "shape": "guard+counter"
+            "shape": "asura-parry"
           },
-          "actualText": "2.5초 방어 · 받는 피해 70% 감소, 막은 피해 반격 축적 / 4초 방어 성공 시 240% 반격",
-          "visual": "전용 연출 jongchan-4:0 · guard → counter · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "2.5초 피해 70% 감소 · 실제 방어 성공 시 165 이내 공격자에게 240% 반격 · 반격 간격 0.45초",
+          "visual": "전용 연출 jongchan-4:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-4-skill-1",
@@ -1055,37 +937,37 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 140,
-          "target": "single",
+          "range": 100,
+          "radius": 100,
+          "target": "area",
           "effectType": "recipe-17",
-          "description": "축적한 방어 피해를 소비 · 기본 300% + 축적량 · 반경 100",
+          "description": "반경 100에 300%+저장 충격량 피해 · 충격량 전부 소모 · 저장 상한은 공격력 8배",
           "actions": [
             {
-              "op": "revenge",
-              "power": 3,
-              "radius": 100
+              "op": "sword-kit",
+              "kind": "stored-cut",
+              "profile": "sword-riposte"
             }
           ],
           "fx": {
             "signature": "jongchan-4:1",
-            "theme": "counter",
+            "theme": "parry",
             "weapon": "장도",
             "palette": "#f0c675",
             "recipe": 17,
             "choreography": [
               {
-                "op": "revenge",
-                "power": 3,
-                "radius": 100
+                "op": "sword-kit",
+                "kind": "stored-cut",
+                "profile": "sword-riposte"
               }
             ],
             "rays": 6,
             "rotation": 89,
-            "shape": "revenge"
+            "shape": "stored-cut"
           },
-          "actualText": "축적한 방어 피해를 소비 · 기본 300% + 축적량 · 반경 100",
-          "visual": "전용 연출 jongchan-4:1 · revenge · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "반경 100에 300%+저장 충격량 피해 · 충격량 전부 소모 · 저장 상한은 공격력 8배",
+          "visual": "전용 연출 jongchan-4:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-4-skill-2",
@@ -1106,36 +988,36 @@
           "cost": 19,
           "cooldown": 13.8,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-18",
-          "description": "5초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
+          "description": "5초 피해 80% 감소 · 약한 방어를 겹쳐도 유지 시간 동안 가장 강한 방어율 적용 · 실제 감소량만 저장",
           "actions": [
             {
-              "op": "guard",
-              "value": 0.8,
-              "duration": 5
+              "op": "sword-kit",
+              "kind": "immovable",
+              "profile": "blade-guard"
             }
           ],
           "fx": {
             "signature": "jongchan-4:2",
-            "theme": "counter",
+            "theme": "parry",
             "weapon": "장도",
             "palette": "#f0c675",
             "recipe": 18,
             "choreography": [
               {
-                "op": "guard",
-                "value": 0.8,
-                "duration": 5
+                "op": "sword-kit",
+                "kind": "immovable",
+                "profile": "blade-guard"
               }
             ],
             "rays": 7,
             "rotation": 126,
-            "shape": "guard"
+            "shape": "immovable"
           },
-          "actualText": "5초 방어 · 받는 피해 80% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 jongchan-4:2 · guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "5초 피해 80% 감소 · 약한 방어를 겹쳐도 유지 시간 동안 가장 강한 방어율 적용 · 실제 감소량만 저장",
+          "visual": "전용 연출 jongchan-4:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-4-skill-3",
@@ -1155,47 +1037,37 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 125,
+          "range": 180,
           "radius": 180,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-19",
-          "description": "축적한 방어 피해를 소비 · 기본 700% + 축적량 · 반경 180 / 2초 방어 · 받는 피해 90% 감소, 막은 피해 반격 축적",
+          "description": "반경 180에 700%+저장 충격량 방출 후 2초 피해 90% 감소 · 저장량 전부 소모",
           "actions": [
             {
-              "op": "revenge",
-              "power": 7,
-              "radius": 180
-            },
-            {
-              "op": "guard",
-              "value": 0.9,
-              "duration": 2
+              "op": "sword-kit",
+              "kind": "thousand-return",
+              "profile": "sword-riposte"
             }
           ],
           "fx": {
             "signature": "jongchan-4:3",
-            "theme": "counter",
+            "theme": "parry",
             "weapon": "장도",
             "palette": "#f0c675",
             "recipe": 19,
             "choreography": [
               {
-                "op": "revenge",
-                "power": 7,
-                "radius": 180
-              },
-              {
-                "op": "guard",
-                "value": 0.9,
-                "duration": 2
+                "op": "sword-kit",
+                "kind": "thousand-return",
+                "profile": "sword-riposte"
               }
             ],
             "rays": 8,
             "rotation": 163,
-            "shape": "revenge+guard"
+            "shape": "thousand-return"
           },
-          "actualText": "축적한 방어 피해를 소비 · 기본 700% + 축적량 · 반경 180 / 2초 방어 · 받는 피해 90% 감소, 막은 피해 반격 축적",
-          "visual": "전용 연출 jongchan-4:3 · revenge → guard · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "반경 180에 700%+저장 충격량 방출 후 2초 피해 90% 감소 · 저장량 전부 소모",
+          "visual": "전용 연출 jongchan-4:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -1205,10 +1077,10 @@
       "id": "jongchan-5",
       "tier": 2,
       "parent": "jongchan-2",
-      "style": "element",
+      "style": "rune-ward",
       "resource": "마력",
-      "review": "룬 각인 — zone / 룬 연결 — link-runes / 마력 응축 — buff → zone / 룬 대붕괴 — detonate",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "룬 각인 — rune-anchor / 룬 연결 — rune-link / 룬 방벽 — rune-ward / 룬 대붕괴 — rune-collapse",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-5-skill-0",
@@ -1228,41 +1100,37 @@
           },
           "cost": 5,
           "cooldown": 6,
-          "range": 460,
-          "radius": 140,
-          "target": "self",
+          "range": 120,
+          "radius": 0,
+          "target": "single",
           "effectType": "recipe-20",
-          "description": "룬 지대 12초 · 반경 65 · 0.8초마다 공격력 15% 피해",
+          "description": "근접 120 이내 180% 검격 명중 후 18초 지면 룬 설치 · 최대 3개·룬 간격 최소 70",
           "actions": [
             {
-              "op": "zone",
-              "type": "rune",
-              "power": 0.15,
-              "radius": 65,
-              "duration": 12
+              "op": "sword-kit",
+              "kind": "rune-anchor",
+              "profile": "rune-cut"
             }
           ],
           "fx": {
             "signature": "jongchan-5:0",
-            "theme": "element",
+            "theme": "rune-ward",
             "weapon": "룬 장검·룬 방패",
             "palette": "#f0c675",
             "recipe": 20,
             "choreography": [
               {
-                "op": "zone",
-                "type": "rune",
-                "power": 0.15,
-                "radius": 65,
-                "duration": 12
+                "op": "sword-kit",
+                "kind": "rune-anchor",
+                "profile": "rune-cut"
               }
             ],
             "rays": 9,
             "rotation": 20,
-            "shape": "zone"
+            "shape": "rune-anchor"
           },
-          "actualText": "룬 지대 12초 · 반경 65 · 0.8초마다 공격력 15% 피해",
-          "visual": "전용 연출 jongchan-5:0 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 120 이내 180% 검격 명중 후 18초 지면 룬 설치 · 최대 3개·룬 간격 최소 70",
+          "visual": "전용 연출 jongchan-5:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-5-skill-1",
@@ -1282,37 +1150,37 @@
           },
           "cost": 7,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 140,
+          "range": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-21",
-          "description": "설치된 룬 사이 직선에 피해",
+          "description": "서로 떨어진 룬 사이 연결선 폭 70에 250% 피해 · 적마다 1회 · 유효한 룬 2개 이상 필요",
           "actions": [
             {
-              "op": "link-runes",
-              "power": 2.5,
-              "width": 35
+              "op": "sword-kit",
+              "kind": "rune-link",
+              "profile": "rune-release"
             }
           ],
           "fx": {
             "signature": "jongchan-5:1",
-            "theme": "element",
+            "theme": "rune-ward",
             "weapon": "룬 장검·룬 방패",
             "palette": "#f0c675",
             "recipe": 21,
             "choreography": [
               {
-                "op": "link-runes",
-                "power": 2.5,
-                "width": 35
+                "op": "sword-kit",
+                "kind": "rune-link",
+                "profile": "rune-release"
               }
             ],
             "rays": 10,
             "rotation": 57,
-            "shape": "link-runes"
+            "shape": "rune-link"
           },
-          "actualText": "설치된 룬 사이 직선에 피해",
-          "visual": "전용 연출 jongchan-5:1 · link-runes · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "서로 떨어진 룬 사이 연결선 폭 70에 250% 피해 · 적마다 1회 · 유효한 룬 2개 이상 필요",
+          "visual": "전용 연출 jongchan-5:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-5-skill-2",
@@ -1320,7 +1188,7 @@
           "heroId": 0,
           "cell": 5,
           "slot": 2,
-          "name": "마력 응축",
+          "name": "룬 방벽",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -1332,53 +1200,37 @@
           },
           "cost": 8,
           "cooldown": 13.8,
-          "range": 460,
-          "radius": 140,
+          "range": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-22",
-          "description": "10초 효율 30% 증가 / 룬 지대 12초 · 반경 50 · 0.8초마다 공격력 10% 피해",
+          "description": "5초 피해 35% 감소·최대 체력 12% 보호막 · 주변에 간격을 확보한 지면 룬 1개 설치",
           "actions": [
             {
-              "op": "buff",
-              "type": "efficiency",
-              "value": 0.3,
-              "duration": 10
-            },
-            {
-              "op": "zone",
-              "type": "rune",
-              "power": 0.1,
-              "radius": 50,
-              "duration": 12
+              "op": "sword-kit",
+              "kind": "rune-ward",
+              "profile": "rune-ward"
             }
           ],
           "fx": {
             "signature": "jongchan-5:2",
-            "theme": "element",
+            "theme": "rune-ward",
             "weapon": "룬 장검·룬 방패",
             "palette": "#f0c675",
             "recipe": 22,
             "choreography": [
               {
-                "op": "buff",
-                "type": "efficiency",
-                "value": 0.3,
-                "duration": 10
-              },
-              {
-                "op": "zone",
-                "type": "rune",
-                "power": 0.1,
-                "radius": 50,
-                "duration": 12
+                "op": "sword-kit",
+                "kind": "rune-ward",
+                "profile": "rune-ward"
               }
             ],
             "rays": 11,
             "rotation": 94,
-            "shape": "buff+zone"
+            "shape": "rune-ward"
           },
-          "actualText": "10초 효율 30% 증가 / 룬 지대 12초 · 반경 50 · 0.8초마다 공격력 10% 피해",
-          "visual": "전용 연출 jongchan-5:2 · buff → zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "5초 피해 35% 감소·최대 체력 12% 보호막 · 주변에 간격을 확보한 지면 룬 1개 설치",
+          "visual": "전용 연출 jongchan-5:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-5-skill-3",
@@ -1398,39 +1250,37 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 125,
-          "radius": 140,
+          "range": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-23",
-          "description": "rune 설치물 소비·위치별 폭발",
+          "description": "지면 룬 전부 소모 · 룬마다 반경 100에 500% 폭발 · 같은 적 최대 2회 피격",
           "actions": [
             {
-              "op": "detonate",
-              "type": "rune",
-              "power": 5,
-              "radius": 130
+              "op": "sword-kit",
+              "kind": "rune-collapse",
+              "profile": "rune-release"
             }
           ],
           "fx": {
             "signature": "jongchan-5:3",
-            "theme": "element",
+            "theme": "rune-ward",
             "weapon": "룬 장검·룬 방패",
             "palette": "#f0c675",
             "recipe": 23,
             "choreography": [
               {
-                "op": "detonate",
-                "type": "rune",
-                "power": 5,
-                "radius": 130
+                "op": "sword-kit",
+                "kind": "rune-collapse",
+                "profile": "rune-release"
               }
             ],
             "rays": 12,
             "rotation": 131,
-            "shape": "detonate"
+            "shape": "rune-collapse"
           },
-          "actualText": "rune 설치물 소비·위치별 폭발",
-          "visual": "전용 연출 jongchan-5:3 · detonate · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "지면 룬 전부 소모 · 룬마다 반경 100에 500% 폭발 · 같은 적 최대 2회 피격",
+          "visual": "전용 연출 jongchan-5:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -1440,10 +1290,10 @@
       "id": "jongchan-6",
       "tier": 2,
       "parent": "jongchan-2",
-      "style": "drain",
+      "style": "soulblade",
       "resource": "마력",
-      "review": "귀신 부착 — status → pet / 영혼 흡수 — consume → heal / 망령 소환 — pet → buff / 황천 개방 — status → consume → pet",
-      "intendedIdentity": "검술·연격·반격·룬·영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "귀신 부착 — soul-bind / 영혼 흡수 — soul-absorb / 망령 결속 — ghost-bond / 황천 개방 — nether-edge",
+      "intendedIdentity": "발도 접근·실제 방어 반격·연격 후 결정타·간격을 확보한 룬 연결·대검에 결속한 영혼 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "jongchan-6-skill-0",
@@ -1463,55 +1313,37 @@
           },
           "cost": 5,
           "cooldown": 6,
-          "range": 460,
-          "radius": 140,
+          "range": 420,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-24",
-          "description": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 망령 1마리 실제 소환 · 15초 · 공격력 50%",
+          "description": "사거리 420에 180% 영혼 검기 · 명중 시 영혼 1중첩, 최대 5·12초 · 결속 망령 1개 유지",
           "actions": [
             {
-              "op": "status",
-              "type": "soul",
-              "power": 0.35,
-              "stacks": 1,
-              "duration": 8
-            },
-            {
-              "op": "pet",
-              "appearance": "ghost",
-              "count": 1,
-              "power": 0.5,
-              "duration": 15
+              "op": "sword-kit",
+              "kind": "soul-bind",
+              "profile": "soul-release"
             }
           ],
           "fx": {
             "signature": "jongchan-6:0",
-            "theme": "drain",
+            "theme": "soulblade",
             "weapon": "영혼 대검",
             "palette": "#f0c675",
             "recipe": 24,
             "choreography": [
               {
-                "op": "status",
-                "type": "soul",
-                "power": 0.35,
-                "stacks": 1,
-                "duration": 8
-              },
-              {
-                "op": "pet",
-                "appearance": "ghost",
-                "count": 1,
-                "power": 0.5,
-                "duration": 15
+                "op": "sword-kit",
+                "kind": "soul-bind",
+                "profile": "soul-release"
               }
             ],
             "rays": 5,
             "rotation": 168,
-            "shape": "status+pet"
+            "shape": "soul-bind"
           },
-          "actualText": "soul 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 35% / 망령 1마리 실제 소환 · 15초 · 공격력 50%",
-          "visual": "전용 연출 jongchan-6:0 · status → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "사거리 420에 180% 영혼 검기 · 명중 시 영혼 1중첩, 최대 5·12초 · 결속 망령 1개 유지",
+          "visual": "전용 연출 jongchan-6:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-6-skill-1",
@@ -1532,44 +1364,36 @@
           "cost": 7,
           "cooldown": 8.3,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-25",
-          "description": "soul를 소비해 중첩당 221% 타격 / 최대 체력 8% 실제 회복",
+          "description": "근접 125 이내 영혼 중첩당 220% 피해 · 소모 중첩당 체력 2% 회복, 최대 10% · 영혼 없는 적에게 사용 불가",
           "actions": [
             {
-              "op": "consume",
-              "type": "soul",
-              "power": 2.2
-            },
-            {
-              "op": "heal",
-              "value": 0.08
+              "op": "sword-kit",
+              "kind": "soul-absorb",
+              "profile": "soul-bond"
             }
           ],
           "fx": {
             "signature": "jongchan-6:1",
-            "theme": "drain",
+            "theme": "soulblade",
             "weapon": "영혼 대검",
             "palette": "#f0c675",
             "recipe": 25,
             "choreography": [
               {
-                "op": "consume",
-                "type": "soul",
-                "power": 2.2
-              },
-              {
-                "op": "heal",
-                "value": 0.08
+                "op": "sword-kit",
+                "kind": "soul-absorb",
+                "profile": "soul-bond"
               }
             ],
             "rays": 6,
             "rotation": 25,
-            "shape": "consume+heal"
+            "shape": "soul-absorb"
           },
-          "actualText": "soul를 소비해 중첩당 221% 타격 / 최대 체력 8% 실제 회복",
-          "visual": "전용 연출 jongchan-6:1 · consume → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "근접 125 이내 영혼 중첩당 220% 피해 · 소모 중첩당 체력 2% 회복, 최대 10% · 영혼 없는 적에게 사용 불가",
+          "visual": "전용 연출 jongchan-6:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-6-skill-2",
@@ -1577,7 +1401,7 @@
           "heroId": 0,
           "cell": 6,
           "slot": 2,
-          "name": "망령 소환",
+          "name": "망령 결속",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -1590,52 +1414,36 @@
           "cost": 8,
           "cooldown": 13.8,
           "range": 125,
-          "radius": 140,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-26",
-          "description": "망령 2마리 실제 소환 · 15초 · 공격력 65% / 10초 흡혈 12% 증가",
+          "description": "결속 망령 1개를 18초 유지 · 0.75초 간격 근거리 검격 후 35% 잔격 · 10초 직접 명중 피해 12% 흡수·영혼 대상 피해 20% 증가",
           "actions": [
             {
-              "op": "pet",
-              "appearance": "ghost",
-              "count": 2,
-              "power": 0.65,
-              "duration": 15
-            },
-            {
-              "op": "buff",
-              "type": "lifesteal",
-              "value": 0.12,
-              "duration": 10
+              "op": "sword-kit",
+              "kind": "ghost-bond",
+              "profile": "soul-bond"
             }
           ],
           "fx": {
             "signature": "jongchan-6:2",
-            "theme": "drain",
+            "theme": "soulblade",
             "weapon": "영혼 대검",
             "palette": "#f0c675",
             "recipe": 26,
             "choreography": [
               {
-                "op": "pet",
-                "appearance": "ghost",
-                "count": 2,
-                "power": 0.65,
-                "duration": 15
-              },
-              {
-                "op": "buff",
-                "type": "lifesteal",
-                "value": 0.12,
-                "duration": 10
+                "op": "sword-kit",
+                "kind": "ghost-bond",
+                "profile": "soul-bond"
               }
             ],
             "rays": 7,
             "rotation": 62,
-            "shape": "pet+buff"
+            "shape": "ghost-bond"
           },
-          "actualText": "망령 2마리 실제 소환 · 15초 · 공격력 65% / 10초 흡혈 12% 증가",
-          "visual": "전용 연출 jongchan-6:2 · pet → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "결속 망령 1개를 18초 유지 · 0.75초 간격 근거리 검격 후 35% 잔격 · 10초 직접 명중 피해 12% 흡수·영혼 대상 피해 20% 증가",
+          "visual": "전용 연출 jongchan-6:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "jongchan-6-skill-3",
@@ -1655,65 +1463,37 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 460,
-          "radius": 140,
+          "range": 420,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-27",
-          "description": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / 망령 3마리 실제 소환 · 18초 · 공격력 80%",
+          "description": "0.45초 준비 후 영혼 검기 발사 · 실제 명중 시 영혼 3중첩 부여 후 전부 소모, 중첩당 350% · 주변 110에 250% 영혼 균열 · 소환 군단 없음",
           "actions": [
             {
-              "op": "status",
-              "type": "soul",
-              "power": 0.25,
-              "stacks": 3,
-              "duration": 8
-            },
-            {
-              "op": "consume",
-              "type": "soul",
-              "power": 3.5
-            },
-            {
-              "op": "pet",
-              "appearance": "ghost",
-              "count": 3,
-              "power": 0.8,
-              "duration": 18
+              "op": "sword-kit",
+              "kind": "nether-edge",
+              "profile": "soul-release"
             }
           ],
           "fx": {
             "signature": "jongchan-6:3",
-            "theme": "drain",
+            "theme": "soulblade",
             "weapon": "영혼 대검",
             "palette": "#f0c675",
             "recipe": 27,
             "choreography": [
               {
-                "op": "status",
-                "type": "soul",
-                "power": 0.25,
-                "stacks": 3,
-                "duration": 8
-              },
-              {
-                "op": "consume",
-                "type": "soul",
-                "power": 3.5
-              },
-              {
-                "op": "pet",
-                "appearance": "ghost",
-                "count": 3,
-                "power": 0.8,
-                "duration": 18
+                "op": "sword-kit",
+                "kind": "nether-edge",
+                "profile": "soul-release"
               }
             ],
             "rays": 8,
             "rotation": 99,
-            "shape": "status+consume+pet"
+            "shape": "nether-edge"
           },
-          "actualText": "soul 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25% / soul를 소비해 중첩당 350% 타격 / 망령 3마리 실제 소환 · 18초 · 공격력 80%",
-          "visual": "전용 연출 jongchan-6:3 · status → consume → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.45초 준비 후 영혼 검기 발사 · 실제 명중 시 영혼 3중첩 부여 후 전부 소모, 중첩당 350% · 주변 110에 250% 영혼 균열 · 소환 군단 없음",
+          "visual": "전용 연출 jongchan-6:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },

@@ -81,10 +81,12 @@
           "tier": 2,
           "parent": "jongchan-2",
           "weapon": "영혼 대검",
-          "visual": "tattered purple cloak, emerald spirit greatsword and tiny ghost",
+          "visual": "tattered purple cloak, emerald spirit greatsword with one bound jade wisp, no summoned army",
           "cell": 6
         }
-      ]
+      ],
+      "color": "#f0c675",
+      "family": "sword"
     },
     {
       "id": 1,
