@@ -85,3 +85,15 @@ Created for this game with OpenAI's built-in image generation tool: `gunner-frag
 
 ### Element fusion summoner dual-orb avatar
 `rpg-pixels-v2/characters/keunho-orbs.png` was created using the built-in OpenAI image generation tool, based on the existing project character sheet. Transparent alpha preserved.
+
+
+### r76 elemental fusion transition
+`fusion-transition-atlas.png` and its GIF preview were created with the built-in OpenAI image generation tool. Eight transparent animation frames; reverse frame order provides the split transition. Generated alpha is preserved in the runtime atlas. Prompt: `fusion-transition-prompt.txt`.
+
+
+### r76 lich soul ritual
+`lich-ritual-atlas.png` and its GIF preview use original built-in OpenAI image generation artwork. The eight source frames are cropped and packed into equal transparent atlas cells; the first frame supplies the phylactery prop. Prompt: `lich-ritual-prompt.txt`.
+
+
+### r76 Harmonist elemental attack animations
+Five original eight-frame transparent image atlases: `element-fire-attack-atlas.png`, `element-water-attack-atlas.png`, `element-wind-attack-atlas.png`, `element-earth-attack-atlas.png`, and `element-fusion-attack-atlas.png`. Created using the built-in OpenAI image generation tool; source alpha preserved. Corresponding GIF previews and individual prompt files are supplied.

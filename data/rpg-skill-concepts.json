@@ -9854,7 +9854,7 @@
       "heroId": 6,
       "cell": 4,
       "slot": 0,
-      "name": "진혼곡",
+      "name": "망자의 악단",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -9868,15 +9868,30 @@
       "cooldown": 6,
       "range": 460,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-184",
-      "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
+      "description": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "dirge-note",
-          "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
-          "target": "single"
+          "op": "pet",
+          "appearance": "skeleton",
+          "count": 3,
+          "power": 0.4,
+          "duration": 24
+        },
+        {
+          "op": "pet",
+          "appearance": "skeleton-archer",
+          "count": 3,
+          "power": 0.5,
+          "duration": 24
+        },
+        {
+          "op": "pet",
+          "appearance": "zombie",
+          "count": 2,
+          "power": 0.7,
+          "duration": 24
         }
       ],
       "fx": {
@@ -9887,15 +9902,30 @@
         "recipe": 184,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "dirge-note",
-            "description": "대상에게 150% 피해와 8초간 초당 35% 진혼 저주 부여",
-            "target": "single"
+            "op": "pet",
+            "appearance": "skeleton",
+            "count": 3,
+            "power": 0.4,
+            "duration": 24
+          },
+          {
+            "op": "pet",
+            "appearance": "skeleton-archer",
+            "count": 3,
+            "power": 0.5,
+            "duration": 24
+          },
+          {
+            "op": "pet",
+            "appearance": "zombie",
+            "count": 2,
+            "power": 0.7,
+            "duration": 24
           }
         ],
         "rays": 5,
         "rotation": 148,
-        "shape": "bard-kit"
+        "shape": "pet+pet+pet"
       }
     },
     {
@@ -9904,7 +9934,7 @@
       "heroId": 6,
       "cell": 4,
       "slot": 1,
-      "name": "혼 흡수",
+      "name": "묘지의 수호자",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -9918,15 +9948,18 @@
       "cooldown": 8.3,
       "range": 460,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-185",
-      "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
+      "description": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "soul-drain",
-          "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
-          "target": "single"
+          "op": "pet",
+          "appearance": "grave-golem",
+          "count": 1,
+          "power": 1.8,
+          "duration": 26,
+          "large": true,
+          "exclusive": true
         }
       ],
       "fx": {
@@ -9937,15 +9970,18 @@
         "recipe": 185,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "soul-drain",
-            "description": "대상의 진혼 저주를 소모해 중첩당 120% 피해·최대 체력 4% 회복",
-            "target": "single"
+            "op": "pet",
+            "appearance": "grave-golem",
+            "count": 1,
+            "power": 1.8,
+            "duration": 26,
+            "large": true,
+            "exclusive": true
           }
         ],
         "rays": 6,
         "rotation": 5,
-        "shape": "bard-kit"
+        "shape": "pet"
       }
     },
     {
@@ -9954,7 +9990,7 @@
       "heroId": 6,
       "cell": 4,
       "slot": 2,
-      "name": "장송 행진",
+      "name": "장송 지휘",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -9970,13 +10006,12 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-186",
-      "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
+      "description": "소환체 공격력 일시 강화 · 중복 증폭 방지",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "funeral",
-          "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
-          "target": "self"
+          "op": "pet-buff",
+          "value": 0.5,
+          "duration": 12
         }
       ],
       "fx": {
@@ -9987,15 +10022,14 @@
         "recipe": 186,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "funeral",
-            "description": "12초 동안 저주받은 적 처치 시 주변 3명에게 저주 전염·영혼 수확",
-            "target": "self"
+            "op": "pet-buff",
+            "value": 0.5,
+            "duration": 12
           }
         ],
         "rays": 7,
         "rotation": 42,
-        "shape": "bard-kit"
+        "shape": "pet-buff"
       }
     },
     {
@@ -10004,7 +10038,7 @@
       "heroId": 6,
       "cell": 4,
       "slot": 3,
-      "name": "망자의 합창",
+      "name": "해골용의 레퀴엠",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10020,13 +10054,37 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-187",
-      "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
+      "description": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "ghost-choir",
-          "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
-          "target": "self"
+          "op": "pet",
+          "appearance": "skeleton-archer",
+          "count": 3,
+          "power": 0.6,
+          "duration": 28
+        },
+        {
+          "op": "pet",
+          "appearance": "zombie",
+          "count": 3,
+          "power": 0.8,
+          "duration": 28
+        },
+        {
+          "op": "pet",
+          "appearance": "skeleton-mage",
+          "count": 2,
+          "power": 0.65,
+          "duration": 28
+        },
+        {
+          "op": "pet",
+          "appearance": "bone-dragon",
+          "count": 1,
+          "power": 2.8,
+          "duration": 28,
+          "large": true,
+          "exclusive": true
         }
       ],
       "fx": {
@@ -10037,15 +10095,39 @@
         "recipe": 187,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "ghost-choir",
-            "description": "영혼을 소모해 3~6마리 망령을 12초 소환. 저주 대상을 우선 공격",
-            "target": "self"
+            "op": "pet",
+            "appearance": "skeleton-archer",
+            "count": 3,
+            "power": 0.6,
+            "duration": 28
+          },
+          {
+            "op": "pet",
+            "appearance": "zombie",
+            "count": 3,
+            "power": 0.8,
+            "duration": 28
+          },
+          {
+            "op": "pet",
+            "appearance": "skeleton-mage",
+            "count": 2,
+            "power": 0.65,
+            "duration": 28
+          },
+          {
+            "op": "pet",
+            "appearance": "bone-dragon",
+            "count": 1,
+            "power": 2.8,
+            "duration": 28,
+            "large": true,
+            "exclusive": true
           }
         ],
         "rays": 8,
         "rotation": 79,
-        "shape": "bard-kit"
+        "shape": "pet+pet+pet+pet"
       }
     },
     {
@@ -17214,14 +17296,11 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-324",
-      "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타",
+      "description": "불·물·바람·대지 각 1마리 · 24초 · 폭발/둔화/관통/근접 제어 · 자동사냥 중 유지",
       "actions": [
         {
           "op": "fusion-kit",
-          "kind": "four-call",
-          "target": "self",
-          "range": 460,
-          "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
+          "kind": "four-call"
         }
       ],
       "fx": {
@@ -17233,10 +17312,7 @@
         "choreography": [
           {
             "op": "fusion-kit",
-            "kind": "four-call",
-            "target": "self",
-            "range": 460,
-            "description": "불·물·바람·대지 정령 각 1마리 · 24초 · 폭발/둔화/관통/근접 강타"
+            "kind": "four-call"
           }
         ],
         "rays": 9,
@@ -17250,7 +17326,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 1,
-      "name": "정령 융합",
+      "name": "사원소 협공",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17266,14 +17342,11 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-325",
-      "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격",
+      "description": "네 정령이 각자 고유 속성으로 140% 위력 협공 · 융합 중에는 사원소 연속 공격",
       "actions": [
         {
           "op": "fusion-kit",
-          "kind": "merge",
-          "target": "self",
-          "range": 460,
-          "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
+          "kind": "convergence"
         }
       ],
       "fx": {
@@ -17285,10 +17358,7 @@
         "choreography": [
           {
             "op": "fusion-kit",
-            "kind": "merge",
-            "target": "self",
-            "range": 460,
-            "description": "서로 다른 사원소 4마리 → 융합체 1마리 · 32초 · 네 속성 순환 공격"
+            "kind": "convergence"
           }
         ],
         "rays": 10,
@@ -17302,7 +17372,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 2,
-      "name": "정령융합사 · 원소 공명",
+      "name": "원소 공명",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17318,14 +17388,11 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-326",
-      "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%",
+      "description": "8초간 사원소 공격 위력·공격 속도 25% 증가 · 정령을 합치지 않음",
       "actions": [
         {
           "op": "fusion-kit",
-          "kind": "resonance",
-          "target": "area",
-          "range": 460,
-          "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
+          "kind": "resonance"
         }
       ],
       "fx": {
@@ -17337,10 +17404,7 @@
         "choreography": [
           {
             "op": "fusion-kit",
-            "kind": "resonance",
-            "target": "area",
-            "range": 460,
-            "description": "융합체가 불·물·바람·대지 연속 공격 · 각 속성 위력 140%"
+            "kind": "resonance"
           }
         ],
         "rays": 11,
@@ -17354,7 +17418,7 @@
       "heroId": 11,
       "cell": 4,
       "slot": 3,
-      "name": "원소 대해방",
+      "name": "사원소 융합 · 대해방",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17370,14 +17434,11 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-327",
-      "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타",
+      "description": "사원소 4마리를 8초간 융합 · 0.5초마다 속성 순환 공격 · 400% 강타 후 종료 시 네 정령으로 복귀 · 자동 사용은 소환 후 6초 및 보스/다수 적 조건",
       "actions": [
         {
           "op": "fusion-kit",
-          "kind": "overdrive",
-          "target": "area",
-          "range": 460,
-          "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
+          "kind": "overdrive"
         }
       ],
       "fx": {
@@ -17389,10 +17450,7 @@
         "choreography": [
           {
             "op": "fusion-kit",
-            "kind": "overdrive",
-            "target": "area",
-            "range": 460,
-            "description": "융합체 8초 과부하 · 공격 간격 0.5초, 위력 180% · 사원소 연계 후 반경 160에 400% 강타"
+            "kind": "overdrive"
           }
         ],
         "rays": 12,
@@ -17406,7 +17464,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 0,
-      "name": "해골 군단",
+      "name": "영혼 수확",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17416,68 +17474,34 @@
         "start": 100,
         "color": "#73b4ed"
       },
-      "cost": 5,
-      "cooldown": 6,
-      "range": 460,
-      "radius": 140,
-      "target": "self",
+      "cost": 8,
+      "cooldown": 5.8,
+      "range": 440,
+      "radius": 180,
+      "target": "single",
       "effectType": "recipe-328",
-      "description": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
+      "description": "실제 영혼탄 명중 시 260% 피해·영혼 1개 수확 · 낙인 대상 처치 시 추가 수확 · 최대 6개",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "skeleton",
-          "count": 3,
-          "power": 0.4,
-          "duration": 24
-        },
-        {
-          "op": "pet",
-          "appearance": "skeleton-archer",
-          "count": 3,
-          "power": 0.5,
-          "duration": 24
-        },
-        {
-          "op": "pet",
-          "appearance": "zombie",
-          "count": 2,
-          "power": 0.7,
-          "duration": 24
+          "op": "lich-kit",
+          "kind": "harvest"
         }
       ],
       "fx": {
         "signature": "keunho-5:0",
         "theme": "drain",
-        "weapon": "영혼 지팡이·성물함",
+        "weapon": "성물함·영혼 지팡이",
         "palette": "#8fdec4",
         "recipe": 328,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "skeleton",
-            "count": 3,
-            "power": 0.4,
-            "duration": 24
-          },
-          {
-            "op": "pet",
-            "appearance": "skeleton-archer",
-            "count": 3,
-            "power": 0.5,
-            "duration": 24
-          },
-          {
-            "op": "pet",
-            "appearance": "zombie",
-            "count": 2,
-            "power": 0.7,
-            "duration": 24
+            "op": "lich-kit",
+            "kind": "harvest"
           }
         ],
         "rays": 5,
         "rotation": 76,
-        "shape": "pet+pet+pet"
+        "shape": "lich-kit"
       }
     },
     {
@@ -17486,7 +17510,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 1,
-      "name": "묘지 골렘",
+      "name": "성물함 개방",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17498,42 +17522,32 @@
       },
       "cost": 7,
       "cooldown": 8.3,
-      "range": 460,
-      "radius": 140,
+      "range": 440,
+      "radius": 180,
       "target": "self",
       "effectType": "recipe-329",
-      "description": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
+      "description": "24초간 성물함 설치 · 사거리 330 내 적에게 1.2초마다 50% 피해 · 주변 적 처치 시 영혼 수확",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "grave-golem",
-          "count": 1,
-          "power": 1.8,
-          "duration": 26,
-          "large": true,
-          "exclusive": true
+          "op": "lich-kit",
+          "kind": "phylactery"
         }
       ],
       "fx": {
         "signature": "keunho-5:1",
         "theme": "drain",
-        "weapon": "영혼 지팡이·성물함",
+        "weapon": "성물함·영혼 지팡이",
         "palette": "#8fdec4",
         "recipe": 329,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "grave-golem",
-            "count": 1,
-            "power": 1.8,
-            "duration": 26,
-            "large": true,
-            "exclusive": true
+            "op": "lich-kit",
+            "kind": "phylactery"
           }
         ],
         "rays": 6,
         "rotation": 113,
-        "shape": "pet"
+        "shape": "lich-kit"
       }
     },
     {
@@ -17542,7 +17556,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 2,
-      "name": "군단 강화",
+      "name": "혼령 방벽",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17554,34 +17568,32 @@
       },
       "cost": 8,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "range": 440,
+      "radius": 180,
       "target": "self",
       "effectType": "recipe-330",
-      "description": "소환체 공격력 일시 강화 · 중복 증폭 방지",
+      "description": "영혼 최대 3개 소비 · 개당 최대 체력 4% 회복·5% 보호막 · 자동 사용은 체력 80% 미만 또는 적 근접 시",
       "actions": [
         {
-          "op": "pet-buff",
-          "value": 0.5,
-          "duration": 12
+          "op": "lich-kit",
+          "kind": "soul-ward"
         }
       ],
       "fx": {
         "signature": "keunho-5:2",
         "theme": "drain",
-        "weapon": "영혼 지팡이·성물함",
+        "weapon": "성물함·영혼 지팡이",
         "palette": "#8fdec4",
         "recipe": 330,
         "choreography": [
           {
-            "op": "pet-buff",
-            "value": 0.5,
-            "duration": 12
+            "op": "lich-kit",
+            "kind": "soul-ward"
           }
         ],
         "rays": 7,
         "rotation": 150,
-        "shape": "pet-buff"
+        "shape": "lich-kit"
       }
     },
     {
@@ -17590,7 +17602,7 @@
       "heroId": 11,
       "cell": 5,
       "slot": 3,
-      "name": "해골용 강림",
+      "name": "사멸 의식",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -17602,84 +17614,32 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 140,
-      "target": "self",
+      "range": 440,
+      "radius": 180,
+      "target": "area",
       "effectType": "recipe-331",
-      "description": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
+      "description": "성물함 필요 · 보유 영혼 전부 소비 · 0.8초 준비 후 반경 180에 450% + 영혼당 80% 피해 · 자동 사용은 영혼 3개 이상",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "skeleton-archer",
-          "count": 3,
-          "power": 0.6,
-          "duration": 28
-        },
-        {
-          "op": "pet",
-          "appearance": "zombie",
-          "count": 3,
-          "power": 0.8,
-          "duration": 28
-        },
-        {
-          "op": "pet",
-          "appearance": "skeleton-mage",
-          "count": 2,
-          "power": 0.65,
-          "duration": 28
-        },
-        {
-          "op": "pet",
-          "appearance": "bone-dragon",
-          "count": 1,
-          "power": 2.8,
-          "duration": 28,
-          "large": true,
-          "exclusive": true
+          "op": "lich-kit",
+          "kind": "annihilation"
         }
       ],
       "fx": {
         "signature": "keunho-5:3",
         "theme": "drain",
-        "weapon": "영혼 지팡이·성물함",
+        "weapon": "성물함·영혼 지팡이",
         "palette": "#8fdec4",
         "recipe": 331,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "skeleton-archer",
-            "count": 3,
-            "power": 0.6,
-            "duration": 28
-          },
-          {
-            "op": "pet",
-            "appearance": "zombie",
-            "count": 3,
-            "power": 0.8,
-            "duration": 28
-          },
-          {
-            "op": "pet",
-            "appearance": "skeleton-mage",
-            "count": 2,
-            "power": 0.65,
-            "duration": 28
-          },
-          {
-            "op": "pet",
-            "appearance": "bone-dragon",
-            "count": 1,
-            "power": 2.8,
-            "duration": 28,
-            "large": true,
-            "exclusive": true
+            "op": "lich-kit",
+            "kind": "annihilation"
           }
         ],
         "rays": 8,
         "rotation": 7,
-        "shape": "pet+pet+pet+pet"
+        "shape": "lich-kit"
       }
     },
     {

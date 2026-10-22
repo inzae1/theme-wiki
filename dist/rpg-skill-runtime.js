@@ -13,7 +13,7 @@ P.newPet=function(a,ctx){const c=this.c;const names={king:'정령왕',fusion:'�
  if(a.exclusive)c.devices=c.devices.filter(p=>p.appearance!==appearance);
  const summonRole={'skeleton-archer':{range:300,interval:1.4,speed:72,hp:.35,height:52},zombie:{range:38,interval:1.6,speed:48,hp:.9,height:55},'bone-dragon':{range:250,interval:2.8,speed:70,hp:1.1,height:88},'grave-golem':{range:54,interval:2.1,speed:38,hp:2,height:78}}[appearance];
  const formationStart=c.devices.length;for(let i=0;i<a.count;i++){const n=(formationStart+i)%12,offset=appearance==='bone-dragon'?{x:120,y:8}:appearance==='grave-golem'?{x:90,y:65}:{x:35+(n%4)*27,y:28+Math.floor(n/4)*27};const pos=E.safePoint({x:c.x+offset.x,y:c.y+offset.y},c.zone);c.devices.push({...pos,kind:'spirit',appearance,renderHeight:appearance==='spirit'?38:undefined,...(summonRole?{undead:true,role:summonRole,sourceSkill:ctx.d,renderHeight:summonRole.height,lastAttack:-99}:{}),skin:['king','fusion','reaper','plant','star','shadow','ghost','chimera','homunculus','skeleton-mage','spirit','skeleton-archer','zombie','bone-dragon','grave-golem'].includes(appearance)?appearance:null,name:names[appearance],sheet:m.sheet,cell:m.cell,large:a.large,index:i,life:a.duration||15,timer:i*.15,damage:ctx.attack*a.power,maxPetHP:this.stats().maxHP*(summonRole?.hp||.35),petHP:this.stats().maxHP*(summonRole?.hp||.35),rooted:appearance==='plant',level:1});}
- const cap=id(this)==='11:5'?18:id(this)==='11:6'?2:12;const guardians=c.devices.filter(p=>['bone-dragon','grave-golem'].includes(p.appearance));c.devices=guardians.concat(c.devices.filter(p=>!guardians.includes(p)).slice(-(cap-guardians.length)));
+ const cap=['11:5','6:4'].includes(id(this))?18:id(this)==='11:6'?2:12;const guardians=c.devices.filter(p=>['bone-dragon','grave-golem'].includes(p.appearance));c.devices=guardians.concat(c.devices.filter(p=>!guardians.includes(p)).slice(-(cap-guardians.length)));
 };
 P.performSkillAction=function(a,ctx){const c=this.c;if(!c||c!==ctx.combat||c.hp<=0||c.deadTimer>0||c.transition>0)return;const t=c.enemies.find(e=>e.id===ctx.target.id&&e.hp>0)||alive(this)[0];const point=ctx.point,s=this.stats(),span=a.duration||8,hit=(e,p)=>this.damageTechnique(e,p,ctx),selected=ctx.d.target==='single'?(t?[t]:[]):near(this,point,ctx.d.radius||180);const emit=(x=point.x,y=point.y,extra={})=>this.emit('skill',{...ctx.event,x,y,from:{...ctx.origin},phase:true,...extra});
  switch(a.op){
@@ -120,6 +120,7 @@ if(typeof module!=='undefined')require('./rpg-knight-runtime.js')(E);else root.R
 if(typeof module!=='undefined')require('./rpg-gunner-runtime.js')(E);else root.RPG_GUNNER_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-merchant-runtime.js')(E);else root.RPG_MERCHANT_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-priest-runtime.js')(E);else root.RPG_PRIEST_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-lich-runtime.js')(E);else root.RPG_LICH_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);

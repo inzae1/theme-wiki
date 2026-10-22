@@ -851,7 +851,7 @@
         },
         {
           "id": "keunho-4",
-          "name": "정령융합사",
+          "name": "하모니스트",
           "tier": 2,
           "parent": "keunho-1",
           "weapon": "쌍원소 오브",
@@ -863,7 +863,7 @@
           "name": "리치",
           "tier": 2,
           "parent": "keunho-2",
-          "weapon": "영혼 지팡이·성물함",
+          "weapon": "성물함·영혼 지팡이",
           "visual": "ragged purple black robes, partly skeletal hands but recognizable freckled human face, soul staff and phylactery",
           "cell": 5
         },
