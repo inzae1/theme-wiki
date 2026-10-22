@@ -2765,33 +2765,33 @@
       "cost": 5,
       "cooldown": 5.2,
       "range": 460,
-      "radius": 140,
+      "radius": 95,
       "target": "single",
       "effectType": "recipe-56",
-      "description": "직선 투사체 200% · 실제 충돌 시 피해",
+      "description": "직선 마력탄 200% · 먼저 닿은 적에게 피해 · 지형 충돌",
       "actions": [
         {
-          "op": "missile",
-          "power": 2,
-          "speed": 380
+          "op": "mage-kit",
+          "kind": "arcane-bolt",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-0:0",
-        "theme": "basic",
+        "theme": "arcane",
         "weapon": "마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 56,
         "choreography": [
           {
-            "op": "missile",
-            "power": 2,
-            "speed": 380
+            "op": "mage-kit",
+            "kind": "arcane-bolt",
+            "profile": "prayer"
           }
         ],
         "rays": 5,
         "rotation": 92,
-        "shape": "missile"
+        "shape": "arcane-bolt"
       }
     },
     {
@@ -2813,49 +2813,33 @@
       "cost": 7,
       "cooldown": 7.5,
       "range": 460,
-      "radius": 140,
+      "radius": 95,
       "target": "area",
       "effectType": "recipe-57",
-      "description": "0초 뒤 반경 95에 200% 착탄 피해 / chill 1중첩 부여 · 최대 5중첩, 8초",
+      "description": "0.25초 후 반경 95에 200% 냉기 파동 · 적중한 적에게 냉기 1중첩",
       "actions": [
         {
-          "op": "blast",
-          "power": 2,
-          "radius": 95,
-          "delay": 0
-        },
-        {
-          "op": "status",
-          "type": "chill",
-          "power": 0,
-          "stacks": 1,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "frost-wave",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-0:1",
-        "theme": "basic",
+        "theme": "arcane",
         "weapon": "마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 57,
         "choreography": [
           {
-            "op": "blast",
-            "power": 2,
-            "radius": 95,
-            "delay": 0
-          },
-          {
-            "op": "status",
-            "type": "chill",
-            "power": 0,
-            "stacks": 1,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "frost-wave",
+            "profile": "prayer"
           }
         ],
         "rays": 6,
         "rotation": 129,
-        "shape": "blast+status"
+        "shape": "frost-wave"
       }
     },
     {
@@ -2874,38 +2858,36 @@
         "start": 100,
         "color": "#73b4ed"
       },
-      "cost": 8,
+      "cost": 0,
       "cooldown": 13,
-      "range": 460,
-      "radius": 140,
+      "range": 0,
+      "radius": 95,
       "target": "self",
       "effectType": "recipe-58",
-      "description": "8초 효율 25% 증가",
+      "description": "마력 소모 없이 8초 동안 마력 소비 25% 감소 · 자동 시전은 효과 종료 후 갱신",
       "actions": [
         {
-          "op": "buff",
-          "type": "efficiency",
-          "value": 0.25,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "efficiency",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-0:2",
-        "theme": "basic",
+        "theme": "arcane",
         "weapon": "마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 58,
         "choreography": [
           {
-            "op": "buff",
-            "type": "efficiency",
-            "value": 0.25,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "efficiency",
+            "profile": "prayer"
           }
         ],
         "rays": 7,
         "rotation": 166,
-        "shape": "buff"
+        "shape": "efficiency"
       }
     },
     {
@@ -2927,35 +2909,33 @@
       "cost": 16,
       "cooldown": 34,
       "range": 460,
-      "radius": 150,
+      "radius": 95,
       "target": "area",
       "effectType": "recipe-59",
-      "description": "1초 뒤 반경 150에 700% 착탄 피해",
+      "description": "낙하 예고 후 1초 뒤 반경 150에 700% 운석 착탄",
       "actions": [
         {
-          "op": "blast",
-          "power": 7,
-          "radius": 150,
-          "delay": 1
+          "op": "mage-kit",
+          "kind": "meteor",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-0:3",
-        "theme": "basic",
+        "theme": "arcane",
         "weapon": "마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 59,
         "choreography": [
           {
-            "op": "blast",
-            "power": 7,
-            "radius": 150,
-            "delay": 1
+            "op": "mage-kit",
+            "kind": "meteor",
+            "profile": "charge"
           }
         ],
         "rays": 8,
         "rotation": 23,
-        "shape": "blast"
+        "shape": "meteor"
       }
     },
     {
@@ -2980,42 +2960,30 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-60",
-      "description": "직선 투사체 230% · 실제 충돌 시 피해 / fire 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 25%",
+      "description": "직선 화염탄 230% · 실제 적중 시 화상 1중첩, 중첩당 매초 25%·8초 · 원소 공명 축적",
       "actions": [
         {
-          "op": "missile",
-          "power": 2.3
-        },
-        {
-          "op": "status",
-          "type": "fire",
-          "power": 0.25,
-          "stacks": 1,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "ignite",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-1:0",
-        "theme": "element",
+        "theme": "elements",
         "weapon": "삼원소 지팡이",
         "palette": "#7bd2e8",
         "recipe": 60,
         "choreography": [
           {
-            "op": "missile",
-            "power": 2.3
-          },
-          {
-            "op": "status",
-            "type": "fire",
-            "power": 0.25,
-            "stacks": 1,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "ignite",
+            "profile": "prayer"
           }
         ],
         "rays": 9,
         "rotation": 60,
-        "shape": "missile+status"
+        "shape": "ignite"
       }
     },
     {
@@ -3040,46 +3008,30 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-61",
-      "description": "0초 뒤 반경 140에 250% 착탄 피해 / chill 2중첩 부여 · 최대 5중첩, 8초",
+      "description": "0.3초 후 반경 140에 250% · 냉기 2중첩 · 원소 공명 축적",
       "actions": [
         {
-          "op": "blast",
-          "power": 2.5,
-          "radius": 140,
-          "delay": 0
-        },
-        {
-          "op": "status",
-          "type": "chill",
-          "power": 0,
-          "stacks": 2,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "frost-ring",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-1:1",
-        "theme": "element",
+        "theme": "elements",
         "weapon": "삼원소 지팡이",
         "palette": "#7bd2e8",
         "recipe": 61,
         "choreography": [
           {
-            "op": "blast",
-            "power": 2.5,
-            "radius": 140,
-            "delay": 0
-          },
-          {
-            "op": "status",
-            "type": "chill",
-            "power": 0,
-            "stacks": 2,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "frost-ring",
+            "profile": "prayer"
           }
         ],
         "rays": 10,
         "rotation": 97,
-        "shape": "blast+status"
+        "shape": "frost-ring"
       }
     },
     {
@@ -3104,30 +3056,30 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-62",
-      "description": "lightning 공명 축적·다른 속성과 연계",
+      "description": "0.2초 후 표적에게 250% 낙뢰 · 서로 다른 원소를 모을 때마다 최대 30% 위력 증가",
       "actions": [
         {
-          "op": "element",
-          "element": "lightning",
-          "power": 2.5
+          "op": "mage-kit",
+          "kind": "element-surge",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-1:2",
-        "theme": "element",
+        "theme": "elements",
         "weapon": "삼원소 지팡이",
         "palette": "#7bd2e8",
         "recipe": 62,
         "choreography": [
           {
-            "op": "element",
-            "element": "lightning",
-            "power": 2.5
+            "op": "mage-kit",
+            "kind": "element-surge",
+            "profile": "prayer"
           }
         ],
         "rays": 11,
         "rotation": 134,
-        "shape": "element"
+        "shape": "element-surge"
       }
     },
     {
@@ -3149,45 +3101,33 @@
       "cost": 16,
       "cooldown": 34.4,
       "range": 460,
-      "radius": 180,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-63",
-      "description": "fire 공명 축적·다른 속성과 연계 / 0.7초 뒤 반경 180에 500% 착탄 피해",
+      "description": "0.7초 후 반경 180에 800% · 모은 원소 종류마다 위력 20% 증가 후 공명 초기화 · 화상·냉기 1중첩",
       "actions": [
         {
-          "op": "element",
-          "element": "fire",
-          "power": 3
-        },
-        {
-          "op": "blast",
-          "power": 5,
-          "radius": 180,
-          "delay": 0.7
+          "op": "mage-kit",
+          "kind": "element-storm",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-1:3",
-        "theme": "element",
+        "theme": "elements",
         "weapon": "삼원소 지팡이",
         "palette": "#7bd2e8",
         "recipe": 63,
         "choreography": [
           {
-            "op": "element",
-            "element": "fire",
-            "power": 3
-          },
-          {
-            "op": "blast",
-            "power": 5,
-            "radius": 180,
-            "delay": 0.7
+            "op": "mage-kit",
+            "kind": "element-storm",
+            "profile": "charge"
           }
         ],
         "rays": 12,
         "rotation": 171,
-        "shape": "element+blast"
+        "shape": "element-storm"
       }
     },
     {
@@ -3209,45 +3149,33 @@
       "cost": 5,
       "cooldown": 5.6,
       "range": 460,
-      "radius": 140,
+      "radius": 160,
       "target": "single",
       "effectType": "recipe-64",
-      "description": "직선 투사체 160% · 실제 충돌 시 피해 / curse 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30%",
+      "description": "직선 저주탄 160% · 실제 적중 시 저주 1중첩, 중첩당 매초 30%·8초",
       "actions": [
         {
-          "op": "missile",
-          "power": 1.6
-        },
-        {
-          "op": "status",
-          "type": "curse",
-          "power": 0.3,
-          "stacks": 1,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "curse-bolt",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-2:0",
-        "theme": "venom",
+        "theme": "curse",
         "weapon": "저주 성서·완드",
         "palette": "#7bd2e8",
         "recipe": 64,
         "choreography": [
           {
-            "op": "missile",
-            "power": 1.6
-          },
-          {
-            "op": "status",
-            "type": "curse",
-            "power": 0.3,
-            "stacks": 1,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "curse-bolt",
+            "profile": "prayer"
           }
         ],
         "rays": 5,
         "rotation": 28,
-        "shape": "missile+status"
+        "shape": "curse-bolt"
       }
     },
     {
@@ -3269,41 +3197,33 @@
       "cost": 7,
       "cooldown": 7.9,
       "range": 460,
-      "radius": 140,
+      "radius": 160,
       "target": "single",
       "effectType": "recipe-65",
-      "description": "curse를 소비해 중첩당 180% 타격 / 최대 체력 8% 실제 회복",
+      "description": "저주 표적의 중첩을 소비해 중첩당 180% 피해 · 적중 시 최대 체력 8% 회복 · 저주가 없으면 자원 소모 없음",
       "actions": [
         {
-          "op": "consume",
-          "type": "curse",
-          "power": 1.8
-        },
-        {
-          "op": "heal",
-          "value": 0.08
+          "op": "mage-kit",
+          "kind": "siphon",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-2:1",
-        "theme": "venom",
+        "theme": "curse",
         "weapon": "저주 성서·완드",
         "palette": "#7bd2e8",
         "recipe": 65,
         "choreography": [
           {
-            "op": "consume",
-            "type": "curse",
-            "power": 1.8
-          },
-          {
-            "op": "heal",
-            "value": 0.08
+            "op": "mage-kit",
+            "kind": "siphon",
+            "profile": "prayer"
           }
         ],
         "rays": 6,
         "rotation": 65,
-        "shape": "consume+heal"
+        "shape": "siphon"
       }
     },
     {
@@ -3324,44 +3244,34 @@
       },
       "cost": 8,
       "cooldown": 13.4,
-      "range": 460,
-      "radius": 140,
+      "range": 0,
+      "radius": 160,
       "target": "self",
       "effectType": "recipe-66",
-      "description": "최대 체력 5% 소비 · 체력 1 미만 소비 불가 / 9초 공격력 35% 증가",
+      "description": "최대 체력 5% 소비 후 9초 공격력 35% 증가 · 체력이 부족하면 시전하지 않음",
       "actions": [
         {
-          "op": "hp-cost",
-          "value": 0.05
-        },
-        {
-          "op": "buff",
-          "type": "power",
-          "value": 0.35,
-          "duration": 9
+          "op": "mage-kit",
+          "kind": "contract",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-2:2",
-        "theme": "venom",
+        "theme": "curse",
         "weapon": "저주 성서·완드",
         "palette": "#7bd2e8",
         "recipe": 66,
         "choreography": [
           {
-            "op": "hp-cost",
-            "value": 0.05
-          },
-          {
-            "op": "buff",
-            "type": "power",
-            "value": 0.35,
-            "duration": 9
+            "op": "mage-kit",
+            "kind": "contract",
+            "profile": "prayer"
           }
         ],
         "rays": 7,
         "rotation": 102,
-        "shape": "hp-cost+buff"
+        "shape": "contract"
       }
     },
     {
@@ -3386,42 +3296,30 @@
       "radius": 160,
       "target": "area",
       "effectType": "recipe-67",
-      "description": "대상의 curse 상태를 반경 160의 적에게 전염 / 0.4초 뒤 반경 145에 400% 착탄 피해",
+      "description": "0.5초 후 반경 160에 400% · 적중한 적에게 저주 2중첩 · 사전 저주 없이도 사용 가능",
       "actions": [
         {
-          "op": "spread",
-          "type": "curse",
-          "radius": 160
-        },
-        {
-          "op": "blast",
-          "power": 4,
-          "radius": 145,
-          "delay": 0.4
+          "op": "mage-kit",
+          "kind": "curse-flood",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-2:3",
-        "theme": "venom",
+        "theme": "curse",
         "weapon": "저주 성서·완드",
         "palette": "#7bd2e8",
         "recipe": 67,
         "choreography": [
           {
-            "op": "spread",
-            "type": "curse",
-            "radius": 160
-          },
-          {
-            "op": "blast",
-            "power": 4,
-            "radius": 145,
-            "delay": 0.4
+            "op": "mage-kit",
+            "kind": "curse-flood",
+            "profile": "charge"
           }
         ],
         "rays": 8,
         "rotation": 139,
-        "shape": "spread+blast"
+        "shape": "curse-flood"
       }
     },
     {
@@ -3443,33 +3341,33 @@
       "cost": 5,
       "cooldown": 6,
       "range": 460,
-      "radius": 140,
+      "radius": 190,
       "target": "single",
       "effectType": "recipe-68",
-      "description": "fire 공명 축적·다른 속성과 연계",
+      "description": "0.2초 후 300% · 화상 1중첩, 중첩당 매초 30%·8초 · 화염 공명 축적",
       "actions": [
         {
-          "op": "element",
-          "element": "fire",
-          "power": 3
+          "op": "mage-kit",
+          "kind": "fire-brand",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-3:0",
-        "theme": "element",
+        "theme": "trinity",
         "weapon": "대마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 68,
         "choreography": [
           {
-            "op": "element",
-            "element": "fire",
-            "power": 3
+            "op": "mage-kit",
+            "kind": "fire-brand",
+            "profile": "prayer"
           }
         ],
         "rays": 9,
         "rotation": 176,
-        "shape": "element"
+        "shape": "fire-brand"
       }
     },
     {
@@ -3491,47 +3389,33 @@
       "cost": 7,
       "cooldown": 8.3,
       "range": 460,
-      "radius": 140,
-      "target": "single",
+      "radius": 190,
+      "target": "area",
       "effectType": "recipe-69",
-      "description": "ice 공명 축적·다른 속성과 연계 / chill 2중첩 부여 · 최대 5중첩, 8초",
+      "description": "0.25초 후 반경 110에 250% · 냉기 2중첩 · 냉기 공명 축적",
       "actions": [
         {
-          "op": "element",
-          "element": "ice",
-          "power": 2.5
-        },
-        {
-          "op": "status",
-          "type": "chill",
-          "power": 0,
-          "stacks": 2,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "ice-shift",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-3:1",
-        "theme": "element",
+        "theme": "trinity",
         "weapon": "대마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 69,
         "choreography": [
           {
-            "op": "element",
-            "element": "ice",
-            "power": 2.5
-          },
-          {
-            "op": "status",
-            "type": "chill",
-            "power": 0,
-            "stacks": 2,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "ice-shift",
+            "profile": "prayer"
           }
         ],
         "rays": 10,
         "rotation": 33,
-        "shape": "element+status"
+        "shape": "ice-shift"
       }
     },
     {
@@ -3553,47 +3437,33 @@
       "cost": 8,
       "cooldown": 13.8,
       "range": 460,
-      "radius": 140,
+      "radius": 190,
       "target": "area",
       "effectType": "recipe-70",
-      "description": "lightning 공명 축적·다른 속성과 연계 / 0.25초 준비 후 길이 480, 폭 48 직선 200% 관통",
+      "description": "0.3초 후 길이 460·폭 48의 번개 관통 500% · 명중한 적 주변 110에 최대 2명에게 150% 연쇄 번개 · 번개 공명 축적",
       "actions": [
         {
-          "op": "element",
-          "element": "lightning",
-          "power": 3
-        },
-        {
-          "op": "beam",
-          "power": 2,
-          "width": 24,
-          "range": 480,
-          "delay": 0.25
+          "op": "mage-kit",
+          "kind": "lightning-link",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-3:2",
-        "theme": "element",
+        "theme": "trinity",
         "weapon": "대마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 70,
         "choreography": [
           {
-            "op": "element",
-            "element": "lightning",
-            "power": 3
-          },
-          {
-            "op": "beam",
-            "power": 2,
-            "width": 24,
-            "range": 480,
-            "delay": 0.25
+            "op": "mage-kit",
+            "kind": "lightning-link",
+            "profile": "prayer"
           }
         ],
         "rays": 11,
         "rotation": 70,
-        "shape": "element+beam"
+        "shape": "lightning-link"
       }
     },
     {
@@ -3618,40 +3488,30 @@
       "radius": 190,
       "target": "area",
       "effectType": "recipe-71",
-      "description": "축적된 속성 종류를 소비해 피해 증폭 / 1.2초 뒤 반경 190에 800% 착탄 피해",
+      "description": "1.2초 후 반경 190에 1000% · 모은 원소 종류마다 위력 25% 증가 후 소비 · 화상·냉기 1중첩 · 자동 시전은 2종 이상 공명 시 사용",
       "actions": [
         {
-          "op": "element-finish",
-          "power": 5
-        },
-        {
-          "op": "blast",
-          "power": 8,
-          "radius": 190,
-          "delay": 1.2
+          "op": "mage-kit",
+          "kind": "tri-meteor",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-3:3",
-        "theme": "element",
+        "theme": "trinity",
         "weapon": "대마법 지팡이",
         "palette": "#7bd2e8",
         "recipe": 71,
         "choreography": [
           {
-            "op": "element-finish",
-            "power": 5
-          },
-          {
-            "op": "blast",
-            "power": 8,
-            "radius": 190,
-            "delay": 1.2
+            "op": "mage-kit",
+            "kind": "tri-meteor",
+            "profile": "charge"
           }
         ],
         "rays": 12,
         "rotation": 107,
-        "shape": "element-finish+blast"
+        "shape": "tri-meteor"
       }
     },
     {
@@ -3673,24 +3533,15 @@
       "cost": 5,
       "cooldown": 6,
       "range": 460,
-      "radius": 140,
+      "radius": 220,
       "target": "area",
       "effectType": "recipe-72",
-      "description": "0.25초 준비 후 길이 480, 폭 48 직선 270% 관통 / chill 2중첩 부여 · 최대 5중첩, 8초",
+      "description": "0.3초 후 길이 460·폭 48에 270% 관통 얼음창 · 실제 적중한 적에게 냉기 2중첩",
       "actions": [
         {
-          "op": "beam",
-          "power": 2.7,
-          "width": 24,
-          "range": 480,
-          "delay": 0.25
-        },
-        {
-          "op": "status",
-          "type": "chill",
-          "power": 0,
-          "stacks": 2,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "ice-lance",
+          "profile": "prayer"
         }
       ],
       "fx": {
@@ -3701,23 +3552,14 @@
         "recipe": 72,
         "choreography": [
           {
-            "op": "beam",
-            "power": 2.7,
-            "width": 24,
-            "range": 480,
-            "delay": 0.25
-          },
-          {
-            "op": "status",
-            "type": "chill",
-            "power": 0,
-            "stacks": 2,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "ice-lance",
+            "profile": "prayer"
           }
         ],
         "rays": 5,
         "rotation": 144,
-        "shape": "beam+status"
+        "shape": "ice-lance"
       }
     },
     {
@@ -3739,17 +3581,15 @@
       "cost": 7,
       "cooldown": 8.3,
       "range": 460,
-      "radius": 160,
-      "target": "self",
+      "radius": 220,
+      "target": "area",
       "effectType": "recipe-73",
-      "description": "빙결 지대 9초 · 반경 160 · 0.8초마다 공격력 40% 피해",
+      "description": "반경 160에 9초 냉기 지대 · 0.8초마다 40% 피해와 냉기 1중첩 · 자동 시전은 지대 종료 후 갱신",
       "actions": [
         {
-          "op": "zone",
-          "type": "frost",
-          "power": 0.4,
-          "radius": 160,
-          "duration": 9
+          "op": "mage-kit",
+          "kind": "permafrost",
+          "profile": "prayer"
         }
       ],
       "fx": {
@@ -3760,16 +3600,14 @@
         "recipe": 73,
         "choreography": [
           {
-            "op": "zone",
-            "type": "frost",
-            "power": 0.4,
-            "radius": 160,
-            "duration": 9
+            "op": "mage-kit",
+            "kind": "permafrost",
+            "profile": "prayer"
           }
         ],
         "rays": 6,
         "rotation": 1,
-        "shape": "zone"
+        "shape": "permafrost"
       }
     },
     {
@@ -3791,15 +3629,15 @@
       "cost": 8,
       "cooldown": 13.8,
       "range": 460,
-      "radius": 140,
-      "target": "single",
+      "radius": 220,
+      "target": "area",
       "effectType": "recipe-74",
-      "description": "chill를 소비해 중첩당 250% 타격",
+      "description": "냉기 표적 주변 반경 130의 냉기를 소비 · 중첩당 250% · 냉기가 없으면 자원 소모 없음",
       "actions": [
         {
-          "op": "consume",
-          "type": "chill",
-          "power": 2.5
+          "op": "mage-kit",
+          "kind": "ice-shatter",
+          "profile": "prayer"
         }
       ],
       "fx": {
@@ -3810,14 +3648,14 @@
         "recipe": 74,
         "choreography": [
           {
-            "op": "consume",
-            "type": "chill",
-            "power": 2.5
+            "op": "mage-kit",
+            "kind": "ice-shatter",
+            "profile": "prayer"
           }
         ],
         "rays": 7,
         "rotation": 38,
-        "shape": "consume"
+        "shape": "ice-shatter"
       }
     },
     {
@@ -3842,25 +3680,12 @@
       "radius": 220,
       "target": "area",
       "effectType": "recipe-75",
-      "description": "0.8초 뒤 반경 220에 500% 착탄 피해 / chill 5중첩 부여 · 최대 5중첩, 8초 / chill를 소비해 중첩당 200% 타격",
+      "description": "0.8초 후 반경 220에 500%와 냉기 5중첩 · 1.2초에 냉기를 소비해 중첩당 200% 파쇄 · 보스 동결 0.35초, 재동결 간격 3초",
       "actions": [
         {
-          "op": "blast",
-          "power": 5,
-          "radius": 220,
-          "delay": 0.8
-        },
-        {
-          "op": "status",
-          "type": "chill",
-          "power": 0,
-          "stacks": 5,
-          "duration": 8
-        },
-        {
-          "op": "consume",
-          "type": "chill",
-          "power": 2
+          "op": "mage-kit",
+          "kind": "absolute-zero",
+          "profile": "charge"
         }
       ],
       "fx": {
@@ -3871,27 +3696,14 @@
         "recipe": 75,
         "choreography": [
           {
-            "op": "blast",
-            "power": 5,
-            "radius": 220,
-            "delay": 0.8
-          },
-          {
-            "op": "status",
-            "type": "chill",
-            "power": 0,
-            "stacks": 5,
-            "duration": 8
-          },
-          {
-            "op": "consume",
-            "type": "chill",
-            "power": 2
+            "op": "mage-kit",
+            "kind": "absolute-zero",
+            "profile": "charge"
           }
         ],
         "rays": 8,
         "rotation": 75,
-        "shape": "blast+status+consume"
+        "shape": "absolute-zero"
       }
     },
     {
@@ -3913,37 +3725,33 @@
       "cost": 5,
       "cooldown": 6,
       "range": 460,
-      "radius": 140,
+      "radius": 95,
       "target": "single",
       "effectType": "recipe-76",
-      "description": "curse 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45%",
+      "description": "100% 직접 피해 · 저주 2중첩, 중첩당 매초 45%·8초 · 독과 구별되는 주술 인장",
       "actions": [
         {
-          "op": "status",
-          "type": "curse",
-          "power": 0.45,
-          "stacks": 2,
-          "duration": 8
+          "op": "mage-kit",
+          "kind": "pain-sigil",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-5:0",
-        "theme": "venom",
+        "theme": "ritual",
         "weapon": "해골 마법봉·마도서",
         "palette": "#7bd2e8",
         "recipe": 76,
         "choreography": [
           {
-            "op": "status",
-            "type": "curse",
-            "power": 0.45,
-            "stacks": 2,
-            "duration": 8
+            "op": "mage-kit",
+            "kind": "pain-sigil",
+            "profile": "prayer"
           }
         ],
         "rays": 9,
         "rotation": 112,
-        "shape": "status"
+        "shape": "pain-sigil"
       }
     },
     {
@@ -3952,7 +3760,7 @@
       "heroId": 2,
       "cell": 5,
       "slot": 1,
-      "name": "역병 전이",
+      "name": "저주 전이",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -3965,33 +3773,33 @@
       "cost": 7,
       "cooldown": 8.3,
       "range": 460,
-      "radius": 190,
-      "target": "self",
+      "radius": 95,
+      "target": "single",
       "effectType": "recipe-77",
-      "description": "대상의 curse 상태를 반경 190의 적에게 전염",
+      "description": "150% 직접 피해와 저주 1중첩 후 반경 190에 저주 전이 · 보스 단독 전투에서도 사용 가능",
       "actions": [
         {
-          "op": "spread",
-          "type": "curse",
-          "radius": 190
+          "op": "mage-kit",
+          "kind": "curse-transfer",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-5:1",
-        "theme": "venom",
+        "theme": "ritual",
         "weapon": "해골 마법봉·마도서",
         "palette": "#7bd2e8",
         "recipe": 77,
         "choreography": [
           {
-            "op": "spread",
-            "type": "curse",
-            "radius": 190
+            "op": "mage-kit",
+            "kind": "curse-transfer",
+            "profile": "prayer"
           }
         ],
         "rays": 10,
         "rotation": 149,
-        "shape": "spread"
+        "shape": "curse-transfer"
       }
     },
     {
@@ -4013,41 +3821,33 @@
       "cost": 8,
       "cooldown": 13.8,
       "range": 460,
-      "radius": 140,
-      "target": "single",
+      "radius": 95,
+      "target": "area",
       "effectType": "recipe-78",
-      "description": "curse를 소비해 중첩당 230% 타격 / 최대 체력 10% 실제 회복",
+      "description": "저주 표적 주변 반경 160의 저주를 소비 · 중첩당 230% · 소비한 총 중첩당 체력 2%, 최대 12% 회복",
       "actions": [
         {
-          "op": "consume",
-          "type": "curse",
-          "power": 2.3
-        },
-        {
-          "op": "heal",
-          "value": 0.1
+          "op": "mage-kit",
+          "kind": "curse-harvest",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-5:2",
-        "theme": "venom",
+        "theme": "ritual",
         "weapon": "해골 마법봉·마도서",
         "palette": "#7bd2e8",
         "recipe": 78,
         "choreography": [
           {
-            "op": "consume",
-            "type": "curse",
-            "power": 2.3
-          },
-          {
-            "op": "heal",
-            "value": 0.1
+            "op": "mage-kit",
+            "kind": "curse-harvest",
+            "profile": "prayer"
           }
         ],
         "rays": 11,
         "rotation": 6,
-        "shape": "consume+heal"
+        "shape": "curse-harvest"
       }
     },
     {
@@ -4069,57 +3869,33 @@
       "cost": 16,
       "cooldown": 34.8,
       "range": 460,
-      "radius": 260,
+      "radius": 95,
       "target": "area",
       "effectType": "recipe-79",
-      "description": "curse 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 50% / 대상의 curse 상태를 반경 260의 적에게 전염 / curse를 소비해 중첩당 300% 타격",
+      "description": "0.65초 후 반경 220에 저주 3중첩 · 1초 후 각 적의 저주를 소비해 중첩당 300% · 사전 저주 없이도 사용 가능",
       "actions": [
         {
-          "op": "status",
-          "type": "curse",
-          "power": 0.5,
-          "stacks": 3,
-          "duration": 8
-        },
-        {
-          "op": "spread",
-          "type": "curse",
-          "radius": 260
-        },
-        {
-          "op": "consume",
-          "type": "curse",
-          "power": 3
+          "op": "mage-kit",
+          "kind": "calamity",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-5:3",
-        "theme": "venom",
+        "theme": "ritual",
         "weapon": "해골 마법봉·마도서",
         "palette": "#7bd2e8",
         "recipe": 79,
         "choreography": [
           {
-            "op": "status",
-            "type": "curse",
-            "power": 0.5,
-            "stacks": 3,
-            "duration": 8
-          },
-          {
-            "op": "spread",
-            "type": "curse",
-            "radius": 260
-          },
-          {
-            "op": "consume",
-            "type": "curse",
-            "power": 3
+            "op": "mage-kit",
+            "kind": "calamity",
+            "profile": "charge"
           }
         ],
         "rays": 12,
         "rotation": 43,
-        "shape": "status+spread+consume"
+        "shape": "calamity"
       }
     },
     {
@@ -4144,46 +3920,30 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-80",
-      "description": "최대 체력 6% 소비 · 체력 1 미만 소비 불가 / blood 자원 2 축적 / 직선 투사체 221% · 실제 충돌 시 피해",
+      "description": "최대 체력 6% 소비 · 혈탄 220% 실제 명중 시 혈석 2개 생성, 최대 8개 · 기본공격 3회 적중마다 혈석 1개 추가",
       "actions": [
         {
-          "op": "hp-cost",
-          "value": 0.06
-        },
-        {
-          "op": "meter",
-          "key": "blood",
-          "value": 2
-        },
-        {
-          "op": "missile",
-          "power": 2.2
+          "op": "mage-kit",
+          "kind": "blood-gem",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-6:0",
-        "theme": "drain",
+        "theme": "blood",
         "weapon": "의식 단검·혈석",
         "palette": "#7bd2e8",
         "recipe": 80,
         "choreography": [
           {
-            "op": "hp-cost",
-            "value": 0.06
-          },
-          {
-            "op": "meter",
-            "key": "blood",
-            "value": 2
-          },
-          {
-            "op": "missile",
-            "power": 2.2
+            "op": "mage-kit",
+            "kind": "blood-gem",
+            "profile": "prayer"
           }
         ],
         "rays": 5,
         "rotation": 80,
-        "shape": "hp-cost+meter+missile"
+        "shape": "blood-gem"
       }
     },
     {
@@ -4208,44 +3968,30 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-81",
-      "description": "blood를 전부 소비해 단일 피해 / 0.25초 준비 후 길이 480, 폭 60 직선 350% 관통",
+      "description": "0.3초 후 길이 460·폭 60에 기본 350% + 혈석당 100% 관통 · 실제 명중하면 혈석 전부 소비 · 빗나가면 혈석 유지",
       "actions": [
         {
-          "op": "spend",
-          "key": "blood",
-          "power": 2
-        },
-        {
-          "op": "beam",
-          "power": 3.5,
-          "width": 30,
-          "range": 480,
-          "delay": 0.25
+          "op": "mage-kit",
+          "kind": "blood-lance",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-6:1",
-        "theme": "drain",
+        "theme": "blood",
         "weapon": "의식 단검·혈석",
         "palette": "#7bd2e8",
         "recipe": 81,
         "choreography": [
           {
-            "op": "spend",
-            "key": "blood",
-            "power": 2
-          },
-          {
-            "op": "beam",
-            "power": 3.5,
-            "width": 30,
-            "range": 480,
-            "delay": 0.25
+            "op": "mage-kit",
+            "kind": "blood-lance",
+            "profile": "prayer"
           }
         ],
         "rays": 6,
         "rotation": 117,
-        "shape": "spend+beam"
+        "shape": "blood-lance"
       }
     },
     {
@@ -4266,32 +4012,34 @@
       },
       "cost": 8,
       "cooldown": 13.8,
-      "range": 460,
+      "range": 0,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-82",
-      "description": "혈석을 소비해 자기 회복",
+      "description": "혈석 전부 소비 · 혈석당 최대 체력 4% 회복 · 혈석이 2개 미만이거나 체력이 가득 차면 자원 소모 없음",
       "actions": [
         {
-          "op": "blood-heal",
-          "value": 0.04
+          "op": "mage-kit",
+          "kind": "blood-return",
+          "profile": "prayer"
         }
       ],
       "fx": {
         "signature": "jihoon-6:2",
-        "theme": "drain",
+        "theme": "blood",
         "weapon": "의식 단검·혈석",
         "palette": "#7bd2e8",
         "recipe": 82,
         "choreography": [
           {
-            "op": "blood-heal",
-            "value": 0.04
+            "op": "mage-kit",
+            "kind": "blood-return",
+            "profile": "prayer"
           }
         ],
         "rays": 7,
         "rotation": 154,
-        "shape": "blood-heal"
+        "shape": "blood-return"
       }
     },
     {
@@ -4316,52 +4064,30 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-83",
-      "description": "최대 체력 10% 소비 · 체력 1 미만 소비 불가 / blood를 전부 소비해 단일 피해 / 0.25초 간격 4회 · 타격당 150%",
+      "description": "최대 체력 10% 소비 후 0.4초부터 0.22초 간격으로 4회 · 각 150% + 혈석 비례 피해, 4회 합계 혈석당 350% · 첫 적중 시 혈석 소비",
       "actions": [
         {
-          "op": "hp-cost",
-          "value": 0.1
-        },
-        {
-          "op": "spend",
-          "key": "blood",
-          "power": 3.5
-        },
-        {
-          "op": "volley",
-          "count": 4,
-          "power": 1.5,
-          "gap": 0.25,
-          "shape": "single"
+          "op": "mage-kit",
+          "kind": "crimson-heart",
+          "profile": "charge"
         }
       ],
       "fx": {
         "signature": "jihoon-6:3",
-        "theme": "drain",
+        "theme": "blood",
         "weapon": "의식 단검·혈석",
         "palette": "#7bd2e8",
         "recipe": 83,
         "choreography": [
           {
-            "op": "hp-cost",
-            "value": 0.1
-          },
-          {
-            "op": "spend",
-            "key": "blood",
-            "power": 3.5
-          },
-          {
-            "op": "volley",
-            "count": 4,
-            "power": 1.5,
-            "gap": 0.25,
-            "shape": "single"
+            "op": "mage-kit",
+            "kind": "crimson-heart",
+            "profile": "charge"
           }
         ],
         "rays": 8,
         "rotation": 11,
-        "shape": "hp-cost+spend+volley"
+        "shape": "crimson-heart"
       }
     },
     {

@@ -106,6 +106,7 @@ function draw(p,f,t,D){
  if(root.RPG_GUNNER_FX?.draw(p,f,t,D))return true;
  if(root.RPG_KNIGHT_FX?.draw(p,f,t,D))return true;
  if(root.RPG_SWORD_FX?.draw(p,f,t))return true;
+ if(root.RPG_MAGE_FX?.draw(p,f,t,D))return true;
  if(root.RPG_ARCHER_FX?.draw(p,f,t))return true;
  if(root.RPG_IDOL_FX?.draw(p,f,t))return true;
  if(root.RPG_LICH_FX?.draw(p,f,t))return true;
