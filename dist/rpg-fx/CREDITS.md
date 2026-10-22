@@ -77,3 +77,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 ## Original priest marks and barriers — 2026-10-22
 
 Created for this game with OpenAI's built-in image generation tool: `priest-brand-atlas.png` (inquisitor judgement crest), `priest-seal-atlas.png` (four-talisman exorcist binding barrier), `priest-chapel-atlas.png` (high priest cathedral sanctuary). Each sheet contains eight frames; runtime preserves source alpha and uses explicit frame timing. The corresponding `*-preview.gif` files preview those eight frames. Final prompts: [priest-art-prompts.txt](priest-art-prompts.txt). These are original generated assets, not downloaded third-party game sprites.
+
+## Original gunner effect atlases — 2026-10-22
+
+Created for this game with OpenAI's built-in image generation tool: `gunner-frag-atlas.png` (grenade fragments), `gunner-rocket-atlas.png` (directional rocket flame), `gunner-cluster-atlas.png` (opening cluster-shell payload), `gunner-rune-atlas.png` (arcane cartridge seal), `gunner-artillery-atlas.png` (earth-and-smoke mortar impact). All five are eight-frame 4x2 sheets with preserved alpha. Matching `*-preview.gif` files preview their frames. Prompts: [gunner-art-prompts.txt](gunner-art-prompts.txt). Runtime timing is tied to actual projectile impact and separation events.
