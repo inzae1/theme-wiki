@@ -620,7 +620,7 @@
           "name": "레인저",
           "tier": 1,
           "parent": "seungyoung-0",
-          "weapon": "복합궁·덫",
+          "weapon": "복합궁·올가미 덫",
           "visual": "green hood down leather, compact composite bow and trap pouch",
           "cell": 2
         },
@@ -656,11 +656,13 @@
           "name": "비스트마스터",
           "tier": 2,
           "parent": "seungyoung-2",
-          "weapon": "야수 토템궁",
-          "visual": "brown green fur cloak, horn-tipped totem bow with spectral wolf-shaped arrow; no separate pet",
+          "weapon": "야수 지휘궁",
+          "visual": "brown green fur cloak, horn-tipped bow, wolf hawk and bear companions summoned separately",
           "cell": 6
         }
-      ]
+      ],
+      "color": "#91c8d9",
+      "family": "archer"
     },
     {
       "id": 9,

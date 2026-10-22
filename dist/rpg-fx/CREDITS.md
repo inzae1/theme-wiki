@@ -101,3 +101,9 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 
 ### r78 K-pop idol
 `rpg-pixels-v2/characters/seunguk-idol.png` was created using the built-in OpenAI image generation tool from the existing bard avatar, with user-approved K-pop styling. Transparent alpha preserved. Prompt: `rpg-pixels-v2/characters/seunguk-idol-prompt.txt`. Four original animated SVG effect strips in `rpg-fx/idol/` are authored by `scripts/build-rpg-idol-fx.py`.
+
+## r79 — 최승영 궁수 계열 전용 애니메이션
+
+- `archer/archer-atlas.png`: 25행·200프레임. 목제 화살, 정밀 강철 화살, 숲 화살, 거궁·파쇄·천리일섬, 룬·쌍성·분열·폭우 마탄, 바람·돌풍·폭풍 화살, 사냥 화살·깃털, 조준·명중·덫·바람·치유 연출은 프로젝트 전용으로 직접 제작.
+- 늑대·매·곰 원화와 네 가지 자세는 내장 image_gen으로 생성. 원본 `archer/beasts-source.png`, 정확한 프롬프트 `archer/beasts-prompt.txt`. 생성된 투명도를 유지한 채 프레임을 잘라 게임용 아틀라스에 배치.
+- 재생성: `scripts/build-rpg-archer-fx.py`. 직업별 GIF 7종도 동일 프레임을 사용하며, GIF의 초록색 배경은 미리보기 전용. 게임은 투명 PNG 아틀라스를 사용해 실제 충돌·접근·속박 시점에 맞춰 재생.

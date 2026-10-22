@@ -11996,34 +11996,34 @@
       },
       "cost": 12,
       "cooldown": 5.2,
-      "range": 460,
-      "radius": 140,
+      "range": 440,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-224",
-      "description": "직선 투사체 190% · 실제 충돌 시 피해",
+      "description": "0.16초 간격 화살 2발 · 각 95% · 실제 충돌 시 피해",
       "actions": [
         {
-          "op": "missile",
-          "power": 1.9,
-          "speed": 500
+          "op": "archer-kit",
+          "kind": "quick-pair",
+          "profile": "bow-release"
         }
       ],
       "fx": {
         "signature": "seungyoung-0:0",
-        "theme": "basic",
+        "theme": "archery",
         "weapon": "단궁",
         "palette": "#91c8d9",
         "recipe": 224,
         "choreography": [
           {
-            "op": "missile",
-            "power": 1.9,
-            "speed": 500
+            "op": "archer-kit",
+            "kind": "quick-pair",
+            "profile": "bow-release"
           }
         ],
         "rays": 5,
         "rotation": 8,
-        "shape": "missile"
+        "shape": "quick-pair"
       }
     },
     {
@@ -12044,36 +12044,34 @@
       },
       "cost": 17,
       "cooldown": 7.5,
-      "range": 460,
-      "radius": 230,
+      "range": 330,
+      "radius": 330,
       "target": "area",
       "effectType": "recipe-225",
-      "description": "거리 230 전방 부채꼴 240%",
+      "description": "전방으로 화살 5발 산개 · 각 80% · 사거리 330 · 화살별 실제 충돌",
       "actions": [
         {
-          "op": "cone",
-          "power": 2.4,
-          "radius": 230,
-          "angle": 1.25
+          "op": "archer-kit",
+          "kind": "fan-arrows",
+          "profile": "bow-release"
         }
       ],
       "fx": {
         "signature": "seungyoung-0:1",
-        "theme": "basic",
+        "theme": "archery",
         "weapon": "단궁",
         "palette": "#91c8d9",
         "recipe": 225,
         "choreography": [
           {
-            "op": "cone",
-            "power": 2.4,
-            "radius": 230,
-            "angle": 1.25
+            "op": "archer-kit",
+            "kind": "fan-arrows",
+            "profile": "bow-release"
           }
         ],
         "rays": 6,
         "rotation": 45,
-        "shape": "cone"
+        "shape": "fan-arrows"
       }
     },
     {
@@ -12094,36 +12092,34 @@
       },
       "cost": 19,
       "cooldown": 13,
-      "range": 460,
-      "radius": 140,
+      "range": 440,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-226",
-      "description": "6초 조준 25% 증가",
+      "description": "6초 동안 제자리 조준 · 정지 1초에 걸쳐 기본공격·직접 스킬 공격력 최대 25% 증가",
       "actions": [
         {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.25,
-          "duration": 6
+          "op": "archer-kit",
+          "kind": "focus",
+          "profile": "bow-focus"
         }
       ],
       "fx": {
         "signature": "seungyoung-0:2",
-        "theme": "basic",
+        "theme": "archery",
         "weapon": "단궁",
         "palette": "#91c8d9",
         "recipe": 226,
         "choreography": [
           {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.25,
-            "duration": 6
+            "op": "archer-kit",
+            "kind": "focus",
+            "profile": "bow-focus"
           }
         ],
         "rays": 7,
         "rotation": 82,
-        "shape": "buff"
+        "shape": "focus"
       }
     },
     {
@@ -12144,38 +12140,34 @@
       },
       "cost": 38,
       "cooldown": 34,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-227",
-      "description": "0.5초 준비 후 길이 480, 폭 48 직선 600% 관통",
+      "description": "0.45초 당긴 뒤 600% 관통 화살 · 사거리 500 · 실제 지나간 적 타격",
       "actions": [
         {
-          "op": "beam",
-          "power": 6,
-          "width": 24,
-          "range": 480,
-          "delay": 0.5
+          "op": "archer-kit",
+          "kind": "first-pierce",
+          "profile": "bow-heavy"
         }
       ],
       "fx": {
         "signature": "seungyoung-0:3",
-        "theme": "basic",
+        "theme": "archery",
         "weapon": "단궁",
         "palette": "#91c8d9",
         "recipe": 227,
         "choreography": [
           {
-            "op": "beam",
-            "power": 6,
-            "width": 24,
-            "range": 480,
-            "delay": 0.5
+            "op": "archer-kit",
+            "kind": "first-pierce",
+            "profile": "bow-heavy"
           }
         ],
         "rays": 8,
         "rotation": 119,
-        "shape": "beam"
+        "shape": "first-pierce"
       }
     },
     {
@@ -12196,34 +12188,34 @@
       },
       "cost": 12,
       "cooldown": 5.6,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-228",
-      "description": "직선 투사체 270% · 실제 충돌 시 피해",
+      "description": "280% 정밀 화살 · 명중 시 약점 1중첩, 최대 3 · 8초간 중첩당 직접 피해 8% 증가",
       "actions": [
         {
-          "op": "missile",
-          "power": 2.7,
-          "speed": 600
+          "op": "archer-kit",
+          "kind": "precision",
+          "profile": "bow-release"
         }
       ],
       "fx": {
         "signature": "seungyoung-1:0",
-        "theme": "pierce",
+        "theme": "precision",
         "weapon": "장궁",
         "palette": "#91c8d9",
         "recipe": 228,
         "choreography": [
           {
-            "op": "missile",
-            "power": 2.7,
-            "speed": 600
+            "op": "archer-kit",
+            "kind": "precision",
+            "profile": "bow-release"
           }
         ],
         "rays": 9,
         "rotation": 156,
-        "shape": "missile"
+        "shape": "precision"
       }
     },
     {
@@ -12232,7 +12224,7 @@
       "heroId": 8,
       "cell": 1,
       "slot": 1,
-      "name": "사선 관통",
+      "name": "사선 봉쇄",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -12244,38 +12236,34 @@
       },
       "cost": 17,
       "cooldown": 7.9,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-229",
-      "description": "0.35초 준비 후 길이 480, 폭 44 직선 300% 관통",
+      "description": "0.3초 준비 후 300% 관통 · 명중한 일반 적 0.7초 속박, 보스 0.35초",
       "actions": [
         {
-          "op": "beam",
-          "power": 3,
-          "width": 22,
-          "range": 480,
-          "delay": 0.35
+          "op": "archer-kit",
+          "kind": "pinning-line",
+          "profile": "bow-heavy"
         }
       ],
       "fx": {
         "signature": "seungyoung-1:1",
-        "theme": "pierce",
+        "theme": "precision",
         "weapon": "장궁",
         "palette": "#91c8d9",
         "recipe": 229,
         "choreography": [
           {
-            "op": "beam",
-            "power": 3,
-            "width": 22,
-            "range": 480,
-            "delay": 0.35
+            "op": "archer-kit",
+            "kind": "pinning-line",
+            "profile": "bow-heavy"
           }
         ],
         "rays": 10,
         "rotation": 13,
-        "shape": "beam"
+        "shape": "pinning-line"
       }
     },
     {
@@ -12296,36 +12284,34 @@
       },
       "cost": 19,
       "cooldown": 13.4,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-230",
-      "description": "8초 조준 50% 증가",
+      "description": "8초 동안 제자리 조준 · 정지 1초에 걸쳐 기본공격·직접 스킬 공격력 최대 50% 증가",
       "actions": [
         {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.5,
-          "duration": 8
+          "op": "archer-kit",
+          "kind": "steady",
+          "profile": "bow-focus"
         }
       ],
       "fx": {
         "signature": "seungyoung-1:2",
-        "theme": "pierce",
+        "theme": "precision",
         "weapon": "장궁",
         "palette": "#91c8d9",
         "recipe": 230,
         "choreography": [
           {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.5,
-            "duration": 8
+            "op": "archer-kit",
+            "kind": "steady",
+            "profile": "bow-focus"
           }
         ],
         "rays": 11,
         "rotation": 50,
-        "shape": "buff"
+        "shape": "steady"
       }
     },
     {
@@ -12334,7 +12320,7 @@
       "heroId": 8,
       "cell": 1,
       "slot": 3,
-      "name": "치명 조준",
+      "name": "약점 저격",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -12346,38 +12332,34 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 460,
-      "radius": 140,
-      "target": "area",
+      "range": 550,
+      "radius": 0,
+      "target": "single",
       "effectType": "recipe-231",
-      "description": "0.8초 준비 후 길이 480, 폭 64 직선 700% 관통",
+      "description": "0.7초 조준 후 한 적에게 800% 정밀 화살 · 약점 1중첩 추가",
       "actions": [
         {
-          "op": "beam",
-          "power": 7,
-          "width": 32,
-          "range": 480,
-          "delay": 0.8
+          "op": "archer-kit",
+          "kind": "deadeye",
+          "profile": "bow-focus"
         }
       ],
       "fx": {
         "signature": "seungyoung-1:3",
-        "theme": "pierce",
+        "theme": "precision",
         "weapon": "장궁",
         "palette": "#91c8d9",
         "recipe": 231,
         "choreography": [
           {
-            "op": "beam",
-            "power": 7,
-            "width": 32,
-            "range": 480,
-            "delay": 0.8
+            "op": "archer-kit",
+            "kind": "deadeye",
+            "profile": "bow-focus"
           }
         ],
         "rays": 12,
         "rotation": 87,
-        "shape": "beam"
+        "shape": "deadeye"
       }
     },
     {
@@ -12386,7 +12368,7 @@
       "heroId": 8,
       "cell": 2,
       "slot": 0,
-      "name": "이동 사격",
+      "name": "후퇴 사격",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -12398,40 +12380,34 @@
       },
       "cost": 12,
       "cooldown": 5.6,
-      "range": 320,
-      "radius": 140,
+      "range": 440,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-232",
-      "description": "뒤로 최대 110 이동 · 경로 충돌 검사 / 직선 투사체 210% · 실제 충돌 시 피해",
+      "description": "충돌 없는 경로로 최대 100 후퇴 후 화살 2발 · 각 115% · 벽에 막히면 제자리 발사",
       "actions": [
         {
-          "op": "dash",
-          "distance": -110
-        },
-        {
-          "op": "missile",
-          "power": 2.1
+          "op": "archer-kit",
+          "kind": "retreat-pair",
+          "profile": "bow-step"
         }
       ],
       "fx": {
         "signature": "seungyoung-2:0",
-        "theme": "dance",
+        "theme": "ranger",
         "weapon": "복합궁·덫",
         "palette": "#91c8d9",
         "recipe": 232,
         "choreography": [
           {
-            "op": "dash",
-            "distance": -110
-          },
-          {
-            "op": "missile",
-            "power": 2.1
+            "op": "archer-kit",
+            "kind": "retreat-pair",
+            "profile": "bow-step"
           }
         ],
         "rays": 5,
         "rotation": 124,
-        "shape": "dash+missile"
+        "shape": "retreat-pair"
       }
     },
     {
@@ -12440,7 +12416,7 @@
       "heroId": 8,
       "cell": 2,
       "slot": 1,
-      "name": "야수 친구",
+      "name": "올가미 덫",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -12452,38 +12428,34 @@
       },
       "cost": 17,
       "cooldown": 7.9,
-      "range": 460,
-      "radius": 140,
-      "target": "self",
+      "range": 300,
+      "radius": 75,
+      "target": "area",
       "effectType": "recipe-233",
-      "description": "늑대 1마리 실제 소환 · 14초 · 공격력 65%",
+      "description": "적 방향 240 이내에 12초 덫 설치 · 접근 반경 75에 240% · 일반 적 1.7초 속박, 보스 0.35초 · 최대 2개",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "beast",
-          "count": 1,
-          "power": 0.65,
-          "duration": 14
+          "op": "archer-kit",
+          "kind": "snare",
+          "profile": "bow-trap"
         }
       ],
       "fx": {
         "signature": "seungyoung-2:1",
-        "theme": "dance",
+        "theme": "ranger",
         "weapon": "복합궁·덫",
         "palette": "#91c8d9",
         "recipe": 233,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "beast",
-            "count": 1,
-            "power": 0.65,
-            "duration": 14
+            "op": "archer-kit",
+            "kind": "snare",
+            "profile": "bow-trap"
           }
         ],
         "rays": 6,
         "rotation": 161,
-        "shape": "pet"
+        "shape": "snare"
       }
     },
     {
@@ -12492,7 +12464,7 @@
       "heroId": 8,
       "cell": 2,
       "slot": 2,
-      "name": "바람 걸음",
+      "name": "늑대 동료",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -12504,48 +12476,34 @@
       },
       "cost": 19,
       "cooldown": 13.4,
-      "range": 460,
-      "radius": 140,
+      "range": 440,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-234",
-      "description": "7초 공격속도 25% 증가 / 7초 회피율 20% 증가",
+      "description": "24초 늑대 동료 1마리 · 65% 근접 공격 · 재사용은 유지·회복, 중복 소환하지 않음",
       "actions": [
         {
-          "op": "buff",
-          "type": "haste",
-          "value": 0.25,
-          "duration": 7
-        },
-        {
-          "op": "buff",
-          "type": "evasion",
-          "value": 0.2,
-          "duration": 7
+          "op": "archer-kit",
+          "kind": "wolf-call",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-2:2",
-        "theme": "dance",
+        "theme": "ranger",
         "weapon": "복합궁·덫",
         "palette": "#91c8d9",
         "recipe": 234,
         "choreography": [
           {
-            "op": "buff",
-            "type": "haste",
-            "value": 0.25,
-            "duration": 7
-          },
-          {
-            "op": "buff",
-            "type": "evasion",
-            "value": 0.2,
-            "duration": 7
+            "op": "archer-kit",
+            "kind": "wolf-call",
+            "profile": "bow-command"
           }
         ],
         "rays": 7,
         "rotation": 18,
-        "shape": "buff+buff"
+        "shape": "wolf-call"
       }
     },
     {
@@ -12566,50 +12524,34 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 460,
-      "radius": 230,
+      "range": 480,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-235",
-      "description": "늑대 2마리 실제 소환 · 12초 · 공격력 70% / 거리 230 전방 부채꼴 500%",
+      "description": "늑대가 실제 돌진한 뒤 강화 물기 · 서로 다른 적을 향해 130% 화살 4발 · 마지막 화살 관통",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "beast",
-          "count": 2,
-          "power": 0.7,
-          "duration": 12
-        },
-        {
-          "op": "cone",
-          "power": 5,
-          "radius": 230,
-          "angle": 1.25
+          "op": "archer-kit",
+          "kind": "forest-crossfire",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-2:3",
-        "theme": "dance",
+        "theme": "ranger",
         "weapon": "복합궁·덫",
         "palette": "#91c8d9",
         "recipe": 235,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "beast",
-            "count": 2,
-            "power": 0.7,
-            "duration": 12
-          },
-          {
-            "op": "cone",
-            "power": 5,
-            "radius": 230,
-            "angle": 1.25
+            "op": "archer-kit",
+            "kind": "forest-crossfire",
+            "profile": "bow-command"
           }
         ],
         "rays": 8,
         "rotation": 55,
-        "shape": "pet+cone"
+        "shape": "forest-crossfire"
       }
     },
     {
@@ -12618,7 +12560,7 @@
       "heroId": 8,
       "cell": 3,
       "slot": 0,
-      "name": "장거리 저격",
+      "name": "거궁 관통",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -12630,38 +12572,34 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
-      "radius": 140,
+      "range": 550,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-236",
-      "description": "0.8초 준비 후 길이 480, 폭 40 직선 400% 관통",
+      "description": "0.55초 당긴 뒤 400% 대형 관통 화살 · 약점 1중첩 · 최대 3중첩, 8초간 중첩당 직접 피해 8% 증가",
       "actions": [
         {
-          "op": "beam",
-          "power": 4,
-          "width": 20,
-          "range": 480,
-          "delay": 0.8
+          "op": "archer-kit",
+          "kind": "great-arrow",
+          "profile": "bow-heavy"
         }
       ],
       "fx": {
         "signature": "seungyoung-3:0",
-        "theme": "pierce",
+        "theme": "greatbow",
         "weapon": "거대 관통궁",
         "palette": "#91c8d9",
         "recipe": 236,
         "choreography": [
           {
-            "op": "beam",
-            "power": 4,
-            "width": 20,
-            "range": 480,
-            "delay": 0.8
+            "op": "archer-kit",
+            "kind": "great-arrow",
+            "profile": "bow-heavy"
           }
         ],
         "rays": 9,
         "rotation": 92,
-        "shape": "beam"
+        "shape": "great-arrow"
       }
     },
     {
@@ -12670,7 +12608,7 @@
       "heroId": 8,
       "cell": 3,
       "slot": 1,
-      "name": "갑옷 관통",
+      "name": "장갑 파쇄",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -12682,38 +12620,34 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
-      "radius": 140,
+      "range": 550,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-237",
-      "description": "1.1초 준비 후 길이 480, 폭 32 직선 500% 관통",
+      "description": "0.8초 준비 후 500% 넓은 관통 화살 · 약점 1중첩 · 기존 약점 피해 증폭 적용",
       "actions": [
         {
-          "op": "beam",
-          "power": 5,
-          "width": 16,
-          "range": 480,
-          "delay": 1.1
+          "op": "archer-kit",
+          "kind": "armor-break",
+          "profile": "bow-heavy"
         }
       ],
       "fx": {
         "signature": "seungyoung-3:1",
-        "theme": "pierce",
+        "theme": "greatbow",
         "weapon": "거대 관통궁",
         "palette": "#91c8d9",
         "recipe": 237,
         "choreography": [
           {
-            "op": "beam",
-            "power": 5,
-            "width": 16,
-            "range": 480,
-            "delay": 1.1
+            "op": "archer-kit",
+            "kind": "armor-break",
+            "profile": "bow-heavy"
           }
         ],
         "rays": 10,
         "rotation": 129,
-        "shape": "beam"
+        "shape": "armor-break"
       }
     },
     {
@@ -12734,36 +12668,34 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "range": 550,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-238",
-      "description": "10초 조준 90% 증가",
+      "description": "10초 동안 제자리 조준 · 정지 1초에 걸쳐 기본공격·직접 스킬 공격력 최대 60% 증가",
       "actions": [
         {
-          "op": "buff",
-          "type": "aim",
-          "value": 0.9,
-          "duration": 10
+          "op": "archer-kit",
+          "kind": "absolute-aim",
+          "profile": "bow-focus"
         }
       ],
       "fx": {
         "signature": "seungyoung-3:2",
-        "theme": "pierce",
+        "theme": "greatbow",
         "weapon": "거대 관통궁",
         "palette": "#91c8d9",
         "recipe": 238,
         "choreography": [
           {
-            "op": "buff",
-            "type": "aim",
-            "value": 0.9,
-            "duration": 10
+            "op": "archer-kit",
+            "kind": "absolute-aim",
+            "profile": "bow-focus"
           }
         ],
         "rays": 11,
         "rotation": 166,
-        "shape": "buff"
+        "shape": "absolute-aim"
       }
     },
     {
@@ -12784,38 +12716,34 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 140,
+      "range": 650,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-239",
-      "description": "1.6초 준비 후 길이 480, 폭 56 직선 1300% 관통",
+      "description": "1.2초 최대 장력 후 1300% 초대형 관통 화살 · 사거리 650 · 약점 1중첩",
       "actions": [
         {
-          "op": "beam",
-          "power": 13,
-          "width": 28,
-          "range": 480,
-          "delay": 1.6
+          "op": "archer-kit",
+          "kind": "horizon",
+          "profile": "bow-heavy"
         }
       ],
       "fx": {
         "signature": "seungyoung-3:3",
-        "theme": "pierce",
+        "theme": "greatbow",
         "weapon": "거대 관통궁",
         "palette": "#91c8d9",
         "recipe": 239,
         "choreography": [
           {
-            "op": "beam",
-            "power": 13,
-            "width": 28,
-            "range": 480,
-            "delay": 1.6
+            "op": "archer-kit",
+            "kind": "horizon",
+            "profile": "bow-heavy"
           }
         ],
         "rays": 12,
         "rotation": 23,
-        "shape": "beam"
+        "shape": "horizon"
       }
     },
     {
@@ -12824,7 +12752,7 @@
       "heroId": 8,
       "cell": 4,
       "slot": 0,
-      "name": "추적 표식",
+      "name": "룬 추적 화살",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -12836,38 +12764,34 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-240",
-      "description": "arrowmark 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+      "description": "160% 유도 화살 · 명중 시 룬 표식 2중첩, 최대 3 · 10초간 중첩당 직접 화살 피해 12% 증가",
       "actions": [
         {
-          "op": "status",
-          "type": "arrowmark",
-          "power": 0.1,
-          "stacks": 2,
-          "duration": 8
+          "op": "archer-kit",
+          "kind": "rune-tag",
+          "profile": "bow-rune"
         }
       ],
       "fx": {
         "signature": "seungyoung-4:0",
-        "theme": "element",
+        "theme": "runebow",
         "weapon": "룬 마법궁",
         "palette": "#91c8d9",
         "recipe": 240,
         "choreography": [
           {
-            "op": "status",
-            "type": "arrowmark",
-            "power": 0.1,
-            "stacks": 2,
-            "duration": 8
+            "op": "archer-kit",
+            "kind": "rune-tag",
+            "profile": "bow-rune"
           }
         ],
         "rays": 5,
         "rotation": 60,
-        "shape": "status"
+        "shape": "rune-tag"
       }
     },
     {
@@ -12876,7 +12800,7 @@
       "heroId": 8,
       "cell": 4,
       "slot": 1,
-      "name": "유도 마탄",
+      "name": "쌍성 마탄",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -12888,36 +12812,34 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-241",
-      "description": "추적 투사체 350% · 실제 충돌 시 피해",
+      "description": "유도 마탄 2발 · 각 165% · 각각 명중 시 표식 1중첩 · 표식 증폭 적용",
       "actions": [
         {
-          "op": "missile",
-          "power": 3.5,
-          "speed": 250,
-          "homing": true
+          "op": "archer-kit",
+          "kind": "rune-seekers",
+          "profile": "bow-rune"
         }
       ],
       "fx": {
         "signature": "seungyoung-4:1",
-        "theme": "element",
+        "theme": "runebow",
         "weapon": "룬 마법궁",
         "palette": "#91c8d9",
         "recipe": 241,
         "choreography": [
           {
-            "op": "missile",
-            "power": 3.5,
-            "speed": 250,
-            "homing": true
+            "op": "archer-kit",
+            "kind": "rune-seekers",
+            "profile": "bow-rune"
           }
         ],
         "rays": 6,
         "rotation": 97,
-        "shape": "missile"
+        "shape": "rune-seekers"
       }
     },
     {
@@ -12938,34 +12860,34 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "area",
       "effectType": "recipe-242",
-      "description": "서로 다른 적 최대 4명에게 유도탄",
+      "description": "서로 다른 적 최대 4명에게 220% 유도 화살 · 명중 시 표식 1중첩 · 기존 표식 증폭 적용",
       "actions": [
         {
-          "op": "split-shot",
-          "power": 2.2,
-          "count": 4
+          "op": "archer-kit",
+          "kind": "rune-split",
+          "profile": "bow-rune"
         }
       ],
       "fx": {
         "signature": "seungyoung-4:2",
-        "theme": "element",
+        "theme": "runebow",
         "weapon": "룬 마법궁",
         "palette": "#91c8d9",
         "recipe": 242,
         "choreography": [
           {
-            "op": "split-shot",
-            "power": 2.2,
-            "count": 4
+            "op": "archer-kit",
+            "kind": "rune-split",
+            "profile": "bow-rune"
           }
         ],
         "rays": 7,
         "rotation": 134,
-        "shape": "split-shot"
+        "shape": "rune-split"
       }
     },
     {
@@ -12986,36 +12908,34 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 140,
-      "target": "single",
+      "range": 500,
+      "radius": 0,
+      "target": "area",
       "effectType": "recipe-243",
-      "description": "추적탄 8발 순차 발사",
+      "description": "룬 표식이 많은 적 우선 유도 마탄 8발 · 각 110% · 발사마다 살아 있는 적을 다시 선택",
       "actions": [
         {
-          "op": "homing-volley",
-          "count": 8,
-          "power": 1.1,
-          "gap": 0.15
+          "op": "archer-kit",
+          "kind": "rune-tempest",
+          "profile": "bow-rune"
         }
       ],
       "fx": {
         "signature": "seungyoung-4:3",
-        "theme": "element",
+        "theme": "runebow",
         "weapon": "룬 마법궁",
         "palette": "#91c8d9",
         "recipe": 243,
         "choreography": [
           {
-            "op": "homing-volley",
-            "count": 8,
-            "power": 1.1,
-            "gap": 0.15
+            "op": "archer-kit",
+            "kind": "rune-tempest",
+            "profile": "bow-rune"
           }
         ],
         "rays": 8,
         "rotation": 171,
-        "shape": "homing-volley"
+        "shape": "rune-tempest"
       }
     },
     {
@@ -13024,7 +12944,7 @@
       "heroId": 8,
       "cell": 5,
       "slot": 0,
-      "name": "질주 사격",
+      "name": "질풍 측사",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -13036,42 +12956,34 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 320,
-      "radius": 140,
+      "range": 480,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-244",
-      "description": "뒤로 최대 140 이동 · 경로 충돌 검사 / 직선 투사체 270% · 실제 충돌 시 피해",
+      "description": "충돌 없는 측면으로 최대 100 이동 후 화살 3발 · 각 90% · 마지막 화살 관통",
       "actions": [
         {
-          "op": "dash",
-          "distance": -140
-        },
-        {
-          "op": "missile",
-          "power": 2.7,
-          "speed": 500
+          "op": "archer-kit",
+          "kind": "wind-strafe",
+          "profile": "bow-step"
         }
       ],
       "fx": {
         "signature": "seungyoung-5:0",
-        "theme": "dance",
+        "theme": "windrunner",
         "weapon": "쌍날 단궁",
         "palette": "#91c8d9",
         "recipe": 244,
         "choreography": [
           {
-            "op": "dash",
-            "distance": -140
-          },
-          {
-            "op": "missile",
-            "power": 2.7,
-            "speed": 500
+            "op": "archer-kit",
+            "kind": "wind-strafe",
+            "profile": "bow-step"
           }
         ],
         "rays": 9,
         "rotation": 28,
-        "shape": "dash+missile"
+        "shape": "wind-strafe"
       }
     },
     {
@@ -13080,7 +12992,7 @@
       "heroId": 8,
       "cell": 5,
       "slot": 1,
-      "name": "돌풍 도약",
+      "name": "돌풍 산개",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -13092,44 +13004,34 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 320,
-      "radius": 150,
+      "range": 430,
+      "radius": 430,
       "target": "area",
       "effectType": "recipe-245",
-      "description": "앞으로 최대 180 이동 · 경로 충돌 검사 / 거리 150 전방 부채꼴 250%",
+      "description": "130% 관통 화살 3갈래 발사 후 최대 85 후퇴 · 적에게 돌진하지 않음",
       "actions": [
         {
-          "op": "dash",
-          "distance": 180
-        },
-        {
-          "op": "cone",
-          "power": 2.5,
-          "radius": 150,
-          "angle": 1.25
+          "op": "archer-kit",
+          "kind": "gale-fan",
+          "profile": "bow-step"
         }
       ],
       "fx": {
         "signature": "seungyoung-5:1",
-        "theme": "dance",
+        "theme": "windrunner",
         "weapon": "쌍날 단궁",
         "palette": "#91c8d9",
         "recipe": 245,
         "choreography": [
           {
-            "op": "dash",
-            "distance": 180
-          },
-          {
-            "op": "cone",
-            "power": 2.5,
-            "radius": 150,
-            "angle": 1.25
+            "op": "archer-kit",
+            "kind": "gale-fan",
+            "profile": "bow-step"
           }
         ],
         "rays": 10,
         "rotation": 65,
-        "shape": "dash+cone"
+        "shape": "gale-fan"
       }
     },
     {
@@ -13150,48 +13052,34 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "range": 480,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-246",
-      "description": "6초 회피율 50% 증가 / 6초 공격속도 35% 증가",
+      "description": "7초 공격속도 30%·회피율 25% 증가 · 이동 65마다 바람 1축적, 최대 3 · 기본공격이 1소비해 피해 35% 증가·관통",
       "actions": [
         {
-          "op": "buff",
-          "type": "evasion",
-          "value": 0.5,
-          "duration": 6
-        },
-        {
-          "op": "buff",
-          "type": "haste",
-          "value": 0.35,
-          "duration": 6
+          "op": "archer-kit",
+          "kind": "wind-veil",
+          "profile": "bow-step"
         }
       ],
       "fx": {
         "signature": "seungyoung-5:2",
-        "theme": "dance",
+        "theme": "windrunner",
         "weapon": "쌍날 단궁",
         "palette": "#91c8d9",
         "recipe": 246,
         "choreography": [
           {
-            "op": "buff",
-            "type": "evasion",
-            "value": 0.5,
-            "duration": 6
-          },
-          {
-            "op": "buff",
-            "type": "haste",
-            "value": 0.35,
-            "duration": 6
+            "op": "archer-kit",
+            "kind": "wind-veil",
+            "profile": "bow-step"
           }
         ],
         "rays": 11,
         "rotation": 102,
-        "shape": "buff+buff"
+        "shape": "wind-veil"
       }
     },
     {
@@ -13212,44 +13100,34 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 320,
-      "radius": 140,
-      "target": "single",
+      "range": 500,
+      "radius": 0,
+      "target": "area",
       "effectType": "recipe-247",
-      "description": "앞으로 최대 240 이동 · 경로 충돌 검사 / 추적탄 9발 순차 발사",
+      "description": "측면으로 최대 145 이동 후 135% 관통 화살 6발 · 매 발사마다 대상 순환 · 이동 후에도 사격 지속",
       "actions": [
         {
-          "op": "dash",
-          "distance": 240
-        },
-        {
-          "op": "homing-volley",
-          "count": 9,
-          "power": 0.9,
-          "gap": 0.13
+          "op": "archer-kit",
+          "kind": "storm-run",
+          "profile": "bow-storm"
         }
       ],
       "fx": {
         "signature": "seungyoung-5:3",
-        "theme": "dance",
+        "theme": "windrunner",
         "weapon": "쌍날 단궁",
         "palette": "#91c8d9",
         "recipe": 247,
         "choreography": [
           {
-            "op": "dash",
-            "distance": 240
-          },
-          {
-            "op": "homing-volley",
-            "count": 9,
-            "power": 0.9,
-            "gap": 0.13
+            "op": "archer-kit",
+            "kind": "storm-run",
+            "profile": "bow-storm"
           }
         ],
         "rays": 12,
         "rotation": 139,
-        "shape": "dash+homing-volley"
+        "shape": "storm-run"
       }
     },
     {
@@ -13270,46 +13148,34 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-248",
-      "description": "hunt 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 15% / 소환체 표적 통일·즉시 협공",
+      "description": "180% 화살 · 명중 시 10초 사냥 표식으로 직접 화살·야수 피해 16% 증가 · 동료가 실제 접근해 강화 협공",
       "actions": [
         {
-          "op": "status",
-          "type": "hunt",
-          "power": 0.15,
-          "stacks": 2,
-          "duration": 8
-        },
-        {
-          "op": "command",
-          "power": 0.6
+          "op": "archer-kit",
+          "kind": "hunt-arrow",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-6:0",
-        "theme": "summon",
+        "theme": "beastpack",
         "weapon": "야수 토템궁",
         "palette": "#91c8d9",
         "recipe": 248,
         "choreography": [
           {
-            "op": "status",
-            "type": "hunt",
-            "power": 0.15,
-            "stacks": 2,
-            "duration": 8
-          },
-          {
-            "op": "command",
-            "power": 0.6
+            "op": "archer-kit",
+            "kind": "hunt-arrow",
+            "profile": "bow-command"
           }
         ],
         "rays": 5,
         "rotation": 176,
-        "shape": "status+command"
+        "shape": "hunt-arrow"
       }
     },
     {
@@ -13318,7 +13184,7 @@
       "heroId": 8,
       "cell": 6,
       "slot": 1,
-      "name": "맹수 돌격",
+      "name": "야수 동료",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -13330,46 +13196,34 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-249",
-      "description": "늑대 2마리 실제 소환 · 18초 · 공격력 80% / 소환체 표적 통일·즉시 협공",
+      "description": "26초 늑대·매 각 1마리 · 늑대 근접 65%, 매 깃털 투사체 50% · 재소환은 갱신·회복 · 지휘 시 실제 돌진",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "beast",
-          "count": 2,
-          "power": 0.8,
-          "duration": 18
-        },
-        {
-          "op": "command",
-          "power": 1
+          "op": "archer-kit",
+          "kind": "companions",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-6:1",
-        "theme": "summon",
+        "theme": "beastpack",
         "weapon": "야수 토템궁",
         "palette": "#91c8d9",
         "recipe": 249,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "beast",
-            "count": 2,
-            "power": 0.8,
-            "duration": 18
-          },
-          {
-            "op": "command",
-            "power": 1
+            "op": "archer-kit",
+            "kind": "companions",
+            "profile": "bow-command"
           }
         ],
         "rays": 6,
         "rotation": 33,
-        "shape": "pet+command"
+        "shape": "companions"
       }
     },
     {
@@ -13390,40 +13244,34 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-250",
-      "description": "소환체 회복·설치물 유지 시간 증가 / 최대 체력 10% 실제 회복",
+      "description": "동료 체력 40% 회복·유지 시간 6초 연장, 최대 30초 · 본인 체력 12% 회복",
       "actions": [
         {
-          "op": "repair",
-          "value": 0.5
-        },
-        {
-          "op": "heal",
-          "value": 0.1
+          "op": "archer-kit",
+          "kind": "pack-care",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-6:2",
-        "theme": "summon",
+        "theme": "beastpack",
         "weapon": "야수 토템궁",
         "palette": "#91c8d9",
         "recipe": 250,
         "choreography": [
           {
-            "op": "repair",
-            "value": 0.5
-          },
-          {
-            "op": "heal",
-            "value": 0.1
+            "op": "archer-kit",
+            "kind": "pack-care",
+            "profile": "bow-command"
           }
         ],
         "rays": 7,
         "rotation": 70,
-        "shape": "repair+heal"
+        "shape": "pack-care"
       }
     },
     {
@@ -13444,46 +13292,34 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 140,
+      "range": 500,
+      "radius": 0,
       "target": "self",
       "effectType": "recipe-251",
-      "description": "늑대 4마리 실제 소환 · 20초 · 공격력 111% / 소환체 표적 통일·즉시 협공",
+      "description": "늑대·매를 부르고 18초 곰 추가 · 동료 최대 3마리 · 7초 공격속도 40% 증가 · 곰은 실제 접근 후 130% 범위 강타·강화 협공",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "beast",
-          "count": 4,
-          "power": 1.1,
-          "duration": 20
-        },
-        {
-          "op": "command",
-          "power": 1.5
+          "op": "archer-kit",
+          "kind": "alpha-pack",
+          "profile": "bow-command"
         }
       ],
       "fx": {
         "signature": "seungyoung-6:3",
-        "theme": "summon",
+        "theme": "beastpack",
         "weapon": "야수 토템궁",
         "palette": "#91c8d9",
         "recipe": 251,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "beast",
-            "count": 4,
-            "power": 1.1,
-            "duration": 20
-          },
-          {
-            "op": "command",
-            "power": 1.5
+            "op": "archer-kit",
+            "kind": "alpha-pack",
+            "profile": "bow-command"
           }
         ],
         "rays": 8,
         "rotation": 107,
-        "shape": "pet+command"
+        "shape": "alpha-pack"
       }
     },
     {

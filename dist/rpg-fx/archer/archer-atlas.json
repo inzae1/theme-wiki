@@ -1,0 +1,31 @@
+{
+  "cell": 128,
+  "frames": 8,
+  "rows": {
+    "wood": 0,
+    "steel": 1,
+    "forest": 2,
+    "gold": 3,
+    "breaker": 4,
+    "horizon": 5,
+    "rune": 6,
+    "seeker": 7,
+    "split": 8,
+    "tempest": 9,
+    "wind": 10,
+    "gale": 11,
+    "storm": 12,
+    "fang": 13,
+    "feather": 14,
+    "reticle": 15,
+    "impact": 16,
+    "trap": 17,
+    "gust": 18,
+    "howl": 19,
+    "care": 20,
+    "wolf": 21,
+    "hawk": 22,
+    "bear": 23,
+    "rune-burst": 24
+  }
+}
