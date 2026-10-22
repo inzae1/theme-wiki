@@ -107,3 +107,10 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 - `archer/archer-atlas.png`: 25행·200프레임. 목제 화살, 정밀 강철 화살, 숲 화살, 거궁·파쇄·천리일섬, 룬·쌍성·분열·폭우 마탄, 바람·돌풍·폭풍 화살, 사냥 화살·깃털, 조준·명중·덫·바람·치유 연출은 프로젝트 전용으로 직접 제작.
 - 늑대·매·곰 원화와 네 가지 자세는 내장 image_gen으로 생성. 원본 `archer/beasts-source.png`, 정확한 프롬프트 `archer/beasts-prompt.txt`. 생성된 투명도를 유지한 채 프레임을 잘라 게임용 아틀라스에 배치.
 - 재생성: `scripts/build-rpg-archer-fx.py`. 직업별 GIF 7종도 동일 프레임을 사용하며, GIF의 초록색 배경은 미리보기 전용. 게임은 투명 PNG 아틀라스를 사용해 실제 충돌·접근·속박 시점에 맞춰 재생.
+
+## r80 — 최현석 판정 및 전용 타격 연출
+
+- `warrior/warrior-impact-source.png`: 내장 image_gen으로 제작한 혈액 회수·참수·지면 파괴·철갑 충격 원화. 정확한 프롬프트는 `warrior/warrior-impact-prompt.txt`.
+- `warrior/warrior-impact-atlas.png`: 원화 투명도를 유지해 4단계 애니메이션으로 배치. 재생성은 `scripts/build-rpg-warrior-impact.py`.
+- 직업별 전용 타격 GIF 4종은 게임과 같은 프레임을 사용한다. GIF 배경은 미리보기용이며 게임에는 투명 PNG가 사용된다.
+- 준비 연출·강화 상태는 기존 직업별 SVG를 사용하고, 실제 타격·회수·균열·충격은 명중 이벤트를 기준으로 재생해 중복된 가짜 타격 연출을 줄였다.
