@@ -44,7 +44,7 @@ declare saved public.rpg_cloud_saves; hero jsonb; expected integer;
 begin
  if auth.uid() is null or auth.uid()<>new.user_id then raise exception 'NOT_AUTHENTICATED' using errcode='42501'; end if;
  select * into saved from public.rpg_cloud_saves where user_id=new.user_id;
- if saved.user_id is null or saved.revision<>new.revision then raise exception 'RANKING_SAVE_CONFLICT' using errcode='40001'; end if;
+ if saved.user_id is null or saved.revision<>new.revision then raise exception 'RANKING_SAVE_CONFLICT' using errcode='PT409'; end if;
  hero:=saved.payload->'heroes'->new.hero_id;
  if coalesce((hero->>'recruited')::boolean,false) is not true then raise exception 'HERO_NOT_RECRUITED' using errcode='22023'; end if;
  expected:=coalesce((hero->>'rankProgress')::integer,coalesce((hero->>'cycle')::integer,0)*160+case when coalesce((hero->>'cycle')::integer,0)=0 then greatest(0,(hero->>'best')::integer-1) else greatest(0,(hero->>'stage')::integer-1) end);
@@ -59,7 +59,7 @@ begin
  if uid is null then raise exception 'NOT_AUTHENTICATED' using errcode='42501'; end if;
  if not exists(select 1 from public.rpg_expeditions where user_id=uid) then raise exception 'EXPEDITION_NAME_REQUIRED' using errcode='22023'; end if;
  select * into saved from public.rpg_cloud_saves where user_id=uid;
- if saved.user_id is null or saved.revision<>p_revision then raise exception 'RANKING_SAVE_CONFLICT' using errcode='40001'; end if;
+ if saved.user_id is null or saved.revision<>p_revision then raise exception 'RANKING_SAVE_CONFLICT' using errcode='PT409'; end if;
  if jsonb_typeof(p_powers)<>'array' or jsonb_array_length(p_powers)<>12 then raise exception 'INVALID_POWERS' using errcode='22023'; end if;
  delete from public.rpg_ranking_entries where user_id=uid;
  for i in 0..11 loop

@@ -13,7 +13,7 @@ create policy rpg_save_update_own on public.rpg_cloud_saves for update to authen
 create or replace function public.rpg_save_guard() returns trigger language plpgsql security invoker set search_path = '' as $$
 begin
  if auth.uid() is null or auth.uid() <> new.user_id then raise exception 'NOT_AUTHENTICATED' using errcode='42501'; end if;
- if tg_op = 'UPDATE' and (new.user_id <> old.user_id or new.revision <> old.revision + 1) then raise exception 'SAVE_CONFLICT' using errcode='40001'; end if;
+ if tg_op = 'UPDATE' and (new.user_id <> old.user_id or new.revision <> old.revision + 1) then raise exception 'SAVE_CONFLICT' using errcode='PT409'; end if;
  new.updated_at := clock_timestamp();
  new.payload := jsonb_set(new.payload, '{savedAt}', to_jsonb(floor(extract(epoch from new.updated_at) * 1000)::bigint));
  return new;
@@ -29,7 +29,7 @@ begin
  else
   update public.rpg_cloud_saves as s set payload=p_payload,revision=p_revision+1 where s.user_id=uid and s.revision=p_revision returning s.* into result;
  end if;
- if result.user_id is null then raise exception 'SAVE_CONFLICT' using errcode='40001'; end if;
+ if result.user_id is null then raise exception 'SAVE_CONFLICT' using errcode='PT409'; end if;
  return query select result.revision, result.updated_at;
 end $$;
 revoke all on function public.rpg_save_progress(bigint,jsonb) from public,anon;
