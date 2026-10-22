@@ -15,6 +15,7 @@ def inspect(sheet,cols):
    result.append({'x':x0+l,'y':y0+t,'w':r-l,'h':b-t,'ax':max((r-l)*.2,min((r-l)*.8,(x1-x0)/2-l)),'ay':b-t})
  frames[sheet]=result
 for p in c:inspect(p['sheet'],[4,3])
+frames['characters/keunho-orbs.png']=[{'x':229,'y':87,'w':870,'h':1047,'ax':435,'ay':1047}]
 for r in w:
  inspect('monsters/'+r['id']+'.png',[2,2]);inspect('monsters/'+r['id']+'-bosses.png',[2,2])
 for p in c:inspect('items/'+p['slug']+'.png',[3,3])

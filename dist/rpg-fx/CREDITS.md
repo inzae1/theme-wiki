@@ -81,3 +81,7 @@ Created for this game with OpenAI's built-in image generation tool: `priest-bran
 ## Original gunner effect atlases — 2026-10-22
 
 Created for this game with OpenAI's built-in image generation tool: `gunner-frag-atlas.png` (grenade fragments), `gunner-rocket-atlas.png` (directional rocket flame), `gunner-cluster-atlas.png` (opening cluster-shell payload), `gunner-rune-atlas.png` (arcane cartridge seal), `gunner-artillery-atlas.png` (earth-and-smoke mortar impact). All five are eight-frame 4x2 sheets with preserved alpha. Matching `*-preview.gif` files preview their frames. Prompts: [gunner-art-prompts.txt](gunner-art-prompts.txt). Runtime timing is tied to actual projectile impact and separation events.
+
+
+### Element fusion summoner dual-orb avatar
+`rpg-pixels-v2/characters/keunho-orbs.png` was created using the built-in OpenAI image generation tool, based on the existing project character sheet. Transparent alpha preserved.
