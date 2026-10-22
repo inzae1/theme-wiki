@@ -9943,7 +9943,7 @@
       "style": "basic",
       "resource": "마력",
       "review": "튕기는 음표 — bounce / 힘찬 연주 — simple-power / 잔잔한 연주 — simple-heal / 작은 피날레 — small-finale",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 기초 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-0-skill-0",
@@ -10164,7 +10164,7 @@
       "style": "holy",
       "resource": "마력",
       "review": "교차 화음 — cross-chord / 용기의 노래 — bravery / 안식의 노래 — rest / 화음 피날레 — chord-finale",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-1-skill-0",
@@ -10385,7 +10385,7 @@
       "style": "dance",
       "resource": "마력",
       "review": "교차 스텝 — cross-step / 원무 — moving-dance / 가벼운 발놀림 — light-feet / 무대의 중심 — stage-center",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-2-skill-0",
@@ -10606,7 +10606,7 @@
       "style": "quake",
       "resource": "마력",
       "review": "연속 악절 — phrase / 고조 — crescendo / 잔향 연주 — echo-phrase / 앙코르 — concerto",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-3-skill-0",
@@ -10827,7 +10827,7 @@
       "style": "drain",
       "resource": "마력",
       "review": "망자의 악단 — pet → pet → pet / 묘지의 수호자 — pet / 장송 지휘 — pet-buff / 해골용의 레퀴엠 — pet → pet → pet → pet",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-4-skill-0",
@@ -11130,7 +11130,7 @@
       "style": "dance",
       "resource": "마력",
       "review": "파워 코드 — power-chord / 헤드뱅잉 — headbang / 피드백 — feedback / 지옥의 리프 — hell-riff",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-5-skill-0",
@@ -11352,14 +11352,14 @@
     },
     {
       "hero": "남지훈",
-      "job": "별무희",
+      "job": "아이돌",
       "id": "seunguk-6",
       "tier": 2,
       "parent": "seunguk-2",
-      "style": "echo",
+      "style": "idol",
       "resource": "마력",
-      "review": "별빛 사출 — star-shot / 공전하는 별 — orbit-stars / 별자리 연결 — constellation / 유성 군무 — meteor-dance",
-      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·접촉 공전별과 별자리 연결 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "비트 샷 — beat-shot / 센터 스테이지 — center-stage / 포인트 안무 — point-step / 앙코르 — encore",
+      "intendedIdentity": "노래 전환·합주와 재연·망자 악단과 해골용 지휘·헤비메탈 열광·피드백·기타 리프·인기 축적과 앙코르 무대 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "seunguk-6-skill-0",
@@ -11367,7 +11367,7 @@
           "heroId": 6,
           "cell": 6,
           "slot": 0,
-          "name": "별빛 사출",
+          "name": "비트 샷",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11378,40 +11378,36 @@
             "color": "#73b4ed"
           },
           "cost": 5,
-          "cooldown": 6,
-          "range": 460,
-          "radius": 140,
+          "cooldown": 5.8,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-192",
-          "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
+          "description": "실제 음파 3발 · 발당 95% · 명중당 인기 5 획득, 기술당 최대 15",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "star-shot",
-              "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
-              "target": "single"
+              "op": "idol-kit",
+              "kind": "beat-shot"
             }
           ],
           "fx": {
             "signature": "seunguk-6:0",
-            "theme": "echo",
-            "weapon": "별 고리검",
+            "theme": "idol",
+            "weapon": "무선 마이크",
             "palette": "#82d9c5",
             "recipe": 192,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "star-shot",
-                "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
-                "target": "single"
+                "op": "idol-kit",
+                "kind": "beat-shot"
               }
             ],
             "rays": 5,
             "rotation": 84,
-            "shape": "bard-kit"
+            "shape": "idol-kit"
           },
-          "actualText": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
-          "visual": "전용 연출 seunguk-6:0 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 음파 3발 · 발당 95% · 명중당 인기 5 획득, 기술당 최대 15",
+          "visual": "전용 연출 seunguk-6:0 · idol-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-1",
@@ -11419,7 +11415,7 @@
           "heroId": 6,
           "cell": 6,
           "slot": 1,
-          "name": "공전하는 별",
+          "name": "센터 스테이지",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11430,40 +11426,36 @@
             "color": "#73b4ed"
           },
           "cost": 7,
-          "cooldown": 8.3,
-          "range": 460,
-          "radius": 140,
+          "cooldown": 13.8,
+          "range": 280,
+          "radius": 100,
           "target": "self",
           "effectType": "recipe-193",
-          "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
+          "description": "8초간 따라오는 스포트라이트 · 기본공격 피해 20%, 공격 속도 15%, 사거리 30 증가 · 이동 가능",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "orbit-stars",
-              "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
-              "target": "self"
+              "op": "idol-kit",
+              "kind": "center-stage"
             }
           ],
           "fx": {
             "signature": "seunguk-6:1",
-            "theme": "echo",
-            "weapon": "별 고리검",
+            "theme": "idol",
+            "weapon": "무선 마이크",
             "palette": "#82d9c5",
             "recipe": 193,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "orbit-stars",
-                "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
-                "target": "self"
+                "op": "idol-kit",
+                "kind": "center-stage"
               }
             ],
             "rays": 6,
             "rotation": 121,
-            "shape": "bard-kit"
+            "shape": "idol-kit"
           },
-          "actualText": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
-          "visual": "전용 연출 seunguk-6:1 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초간 따라오는 스포트라이트 · 기본공격 피해 20%, 공격 속도 15%, 사거리 30 증가 · 이동 가능",
+          "visual": "전용 연출 seunguk-6:1 · idol-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-2",
@@ -11471,7 +11463,7 @@
           "heroId": 6,
           "cell": 6,
           "slot": 2,
-          "name": "별자리 연결",
+          "name": "포인트 안무",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11482,40 +11474,36 @@
             "color": "#73b4ed"
           },
           "cost": 8,
-          "cooldown": 13.8,
-          "range": 460,
-          "radius": 140,
+          "cooldown": 8.6,
+          "range": 230,
+          "radius": 230,
           "target": "area",
           "effectType": "recipe-194",
-          "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
+          "description": "벽을 피하는 측면 스텝 후 전방 80도·거리 230에 280% 음파 타격 · 인기 최대 10 획득 · 자동 사용은 적 210 이내",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "constellation",
-              "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
-              "target": "area"
+              "op": "idol-kit",
+              "kind": "point-step"
             }
           ],
           "fx": {
             "signature": "seunguk-6:2",
-            "theme": "echo",
-            "weapon": "별 고리검",
+            "theme": "idol",
+            "weapon": "무선 마이크",
             "palette": "#82d9c5",
             "recipe": 194,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "constellation",
-                "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
-                "target": "area"
+                "op": "idol-kit",
+                "kind": "point-step"
               }
             ],
             "rays": 7,
             "rotation": 158,
-            "shape": "bard-kit"
+            "shape": "idol-kit"
           },
-          "actualText": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
-          "visual": "전용 연출 seunguk-6:2 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "벽을 피하는 측면 스텝 후 전방 80도·거리 230에 280% 음파 타격 · 인기 최대 10 획득 · 자동 사용은 적 210 이내",
+          "visual": "전용 연출 seunguk-6:2 · idol-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "seunguk-6-skill-3",
@@ -11523,7 +11511,7 @@
           "heroId": 6,
           "cell": 6,
           "slot": 3,
-          "name": "유성 군무",
+          "name": "앙코르",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -11535,39 +11523,35 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 460,
-          "radius": 140,
+          "range": 480,
+          "radius": 180,
           "target": "area",
           "effectType": "recipe-195",
-          "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
+          "description": "인기 전부 소비 · 4회 광역 타격, 회당 150% + 소비 인기당 1% · 반경 180 · 이동·기본공격 가능 · 수동 인기 20, 자동 60 이상 필요",
           "actions": [
             {
-              "op": "bard-kit",
-              "kind": "meteor-dance",
-              "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
-              "target": "area"
+              "op": "idol-kit",
+              "kind": "encore"
             }
           ],
           "fx": {
             "signature": "seunguk-6:3",
-            "theme": "echo",
-            "weapon": "별 고리검",
+            "theme": "idol",
+            "weapon": "무선 마이크",
             "palette": "#82d9c5",
             "recipe": 195,
             "choreography": [
               {
-                "op": "bard-kit",
-                "kind": "meteor-dance",
-                "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
-                "target": "area"
+                "op": "idol-kit",
+                "kind": "encore"
               }
             ],
             "rays": 8,
             "rotation": 15,
-            "shape": "bard-kit"
+            "shape": "idol-kit"
           },
-          "actualText": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
-          "visual": "전용 연출 seunguk-6:3 · bard-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "인기 전부 소비 · 4회 광역 타격, 회당 150% + 소비 인기당 1% · 반경 180 · 이동·기본공격 가능 · 수동 인기 20, 자동 60 이상 필요",
+          "visual": "전용 연출 seunguk-6:3 · idol-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },

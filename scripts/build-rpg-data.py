@@ -16,6 +16,7 @@ def inspect(sheet,cols):
  frames[sheet]=result
 for p in c:inspect(p['sheet'],[4,3])
 frames['characters/keunho-orbs.png']=[{'x':229,'y':87,'w':870,'h':1047,'ax':435,'ay':1047}]
+frames['characters/seunguk-idol.png']=[{'x':463,'y':36,'w':631,'h':970,'ax':315.5,'ay':970}]
 for r in w:
  inspect('monsters/'+r['id']+'.png',[2,2]);inspect('monsters/'+r['id']+'-bosses.png',[2,2])
 for p in c:inspect('items/'+p['slug']+'.png',[3,3])

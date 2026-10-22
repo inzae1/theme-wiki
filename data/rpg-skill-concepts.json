@@ -10344,7 +10344,7 @@
       "heroId": 6,
       "cell": 6,
       "slot": 0,
-      "name": "별빛 사출",
+      "name": "비트 샷",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10355,37 +10355,33 @@
         "color": "#73b4ed"
       },
       "cost": 5,
-      "cooldown": 6,
-      "range": 460,
-      "radius": 140,
+      "cooldown": 5.8,
+      "range": 440,
+      "radius": 0,
       "target": "single",
       "effectType": "recipe-192",
-      "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
+      "description": "실제 음파 3발 · 발당 95% · 명중당 인기 5 획득, 기술당 최대 15",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "star-shot",
-          "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
-          "target": "single"
+          "op": "idol-kit",
+          "kind": "beat-shot"
         }
       ],
       "fx": {
         "signature": "seunguk-6:0",
-        "theme": "echo",
-        "weapon": "별 고리검",
+        "theme": "idol",
+        "weapon": "무선 마이크",
         "palette": "#82d9c5",
         "recipe": 192,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "star-shot",
-            "description": "추적 별탄 250% 피해·12초 별 표식. 가까운 적 최대 2명에게도 표식 부여",
-            "target": "single"
+            "op": "idol-kit",
+            "kind": "beat-shot"
           }
         ],
         "rays": 5,
         "rotation": 84,
-        "shape": "bard-kit"
+        "shape": "idol-kit"
       }
     },
     {
@@ -10394,7 +10390,7 @@
       "heroId": 6,
       "cell": 6,
       "slot": 1,
-      "name": "공전하는 별",
+      "name": "센터 스테이지",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10405,37 +10401,33 @@
         "color": "#73b4ed"
       },
       "cost": 7,
-      "cooldown": 8.3,
-      "range": 460,
-      "radius": 140,
+      "cooldown": 13.8,
+      "range": 280,
+      "radius": 100,
       "target": "self",
       "effectType": "recipe-193",
-      "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
+      "description": "8초간 따라오는 스포트라이트 · 기본공격 피해 20%, 공격 속도 15%, 사거리 30 증가 · 이동 가능",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "orbit-stars",
-          "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
-          "target": "self"
+          "op": "idol-kit",
+          "kind": "center-stage"
         }
       ],
       "fx": {
         "signature": "seunguk-6:1",
-        "theme": "echo",
-        "weapon": "별 고리검",
+        "theme": "idol",
+        "weapon": "무선 마이크",
         "palette": "#82d9c5",
         "recipe": 193,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "orbit-stars",
-            "description": "실제 별 3개가 14초 동안 공전. 접촉한 적에게 별마다 0.8초 간격 55% 피해",
-            "target": "self"
+            "op": "idol-kit",
+            "kind": "center-stage"
           }
         ],
         "rays": 6,
         "rotation": 121,
-        "shape": "bard-kit"
+        "shape": "idol-kit"
       }
     },
     {
@@ -10444,7 +10436,7 @@
       "heroId": 6,
       "cell": 6,
       "slot": 2,
-      "name": "별자리 연결",
+      "name": "포인트 안무",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10455,37 +10447,33 @@
         "color": "#73b4ed"
       },
       "cost": 8,
-      "cooldown": 13.8,
-      "range": 460,
-      "radius": 140,
+      "cooldown": 8.6,
+      "range": 230,
+      "radius": 230,
       "target": "area",
       "effectType": "recipe-194",
-      "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
+      "description": "벽을 피하는 측면 스텝 후 전방 80도·거리 230에 280% 음파 타격 · 인기 최대 10 획득 · 자동 사용은 적 210 이내",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "constellation",
-          "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
-          "target": "area"
+          "op": "idol-kit",
+          "kind": "point-step"
         }
       ],
       "fx": {
         "signature": "seunguk-6:2",
-        "theme": "echo",
-        "weapon": "별 고리검",
+        "theme": "idol",
+        "weapon": "무선 마이크",
         "palette": "#82d9c5",
         "recipe": 194,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "constellation",
-            "description": "표식이 있는 적 최대 4명을 8초 연결. 연결선에 닿는 적에게 0.7초마다 65% 피해",
-            "target": "area"
+            "op": "idol-kit",
+            "kind": "point-step"
           }
         ],
         "rays": 7,
         "rotation": 158,
-        "shape": "bard-kit"
+        "shape": "idol-kit"
       }
     },
     {
@@ -10494,7 +10482,7 @@
       "heroId": 6,
       "cell": 6,
       "slot": 3,
-      "name": "유성 군무",
+      "name": "앙코르",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -10506,36 +10494,32 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 140,
+      "range": 480,
+      "radius": 180,
       "target": "area",
       "effectType": "recipe-195",
-      "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
+      "description": "인기 전부 소비 · 4회 광역 타격, 회당 150% + 소비 인기당 1% · 반경 180 · 이동·기본공격 가능 · 수동 인기 20, 자동 60 이상 필요",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "meteor-dance",
-          "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
-          "target": "area"
+          "op": "idol-kit",
+          "kind": "encore"
         }
       ],
       "fx": {
         "signature": "seunguk-6:3",
-        "theme": "echo",
-        "weapon": "별 고리검",
+        "theme": "idol",
+        "weapon": "무선 마이크",
         "palette": "#82d9c5",
         "recipe": 195,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "meteor-dance",
-            "description": "별 표식 위치에 유성 7개 순차 낙하. 각각 반경 65에 150% 피해",
-            "target": "area"
+            "op": "idol-kit",
+            "kind": "encore"
           }
         ],
         "rays": 8,
         "rotation": 15,
-        "shape": "bard-kit"
+        "shape": "idol-kit"
       }
     },
     {

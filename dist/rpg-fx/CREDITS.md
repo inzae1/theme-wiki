@@ -97,3 +97,7 @@ Created for this game with OpenAI's built-in image generation tool: `gunner-frag
 
 ### r76 Harmonist elemental attack animations
 Five original eight-frame transparent image atlases: `element-fire-attack-atlas.png`, `element-water-attack-atlas.png`, `element-wind-attack-atlas.png`, `element-earth-attack-atlas.png`, and `element-fusion-attack-atlas.png`. Created using the built-in OpenAI image generation tool; source alpha preserved. Corresponding GIF previews and individual prompt files are supplied.
+
+
+### r78 K-pop idol
+`rpg-pixels-v2/characters/seunguk-idol.png` was created using the built-in OpenAI image generation tool from the existing bard avatar, with user-approved K-pop styling. Transparent alpha preserved. Prompt: `rpg-pixels-v2/characters/seunguk-idol-prompt.txt`. Four original animated SVG effect strips in `rpg-fx/idol/` are authored by `scripts/build-rpg-idol-fx.py`.

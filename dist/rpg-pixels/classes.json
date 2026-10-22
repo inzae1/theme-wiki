@@ -509,11 +509,11 @@
         },
         {
           "id": "seunguk-6",
-          "name": "별무희",
+          "name": "아이돌",
           "tier": 2,
           "parent": "seunguk-2",
-          "weapon": "별 고리검",
-          "visual": "midnight blue star-pattern robes, two crescent star chakrams",
+          "weapon": "무선 마이크",
+          "visual": "K-pop boy group stage outfit, black silver cropped jacket, charcoal shirt and black trousers, brown side-part hair, wireless microphone and in-ear monitor",
           "cell": 6
         }
       ]
