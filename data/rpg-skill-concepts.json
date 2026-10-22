@@ -5230,14 +5230,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-96",
-      "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1",
+      "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1, 기본공격·이동으로도 축적",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "marching-cut",
           "target": "area",
           "range": 240,
-          "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1"
+          "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1, 기본공격·이동으로도 축적"
         }
       ],
       "fx": {
@@ -5252,7 +5252,7 @@
             "kind": "marching-cut",
             "target": "area",
             "range": 240,
-            "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1"
+            "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1, 기본공격·이동으로도 축적"
           }
         ],
         "rays": 5,
@@ -5282,14 +5282,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-97",
-      "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가",
+      "description": "14초 등에 멘 성전 깃발 · 이동을 따라오는 반경 180 안에서 공격속도 25% 증가",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "war-standard",
           "target": "self",
           "range": 125,
-          "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가"
+          "description": "14초 등에 멘 성전 깃발 · 이동을 따라오는 반경 180 안에서 공격속도 25% 증가"
         }
       ],
       "fx": {
@@ -5304,7 +5304,7 @@
             "kind": "war-standard",
             "target": "self",
             "range": 125,
-            "description": "14초 실제 깃발 설치 · 반경 180 안에서 공격속도 25% 증가"
+            "description": "14초 등에 멘 성전 깃발 · 이동을 따라오는 반경 180 안에서 공격속도 25% 증가"
           }
         ],
         "rays": 6,
@@ -5334,14 +5334,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-98",
-      "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가",
+      "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가 · 자동전투는 3중첩 이상에 발동",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "crusade-charge",
           "target": "area",
           "range": 320,
-          "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가"
+          "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가 · 자동전투는 3중첩 이상에 발동"
         }
       ],
       "fx": {
@@ -5356,7 +5356,7 @@
             "kind": "crusade-charge",
             "target": "area",
             "range": 320,
-            "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가"
+            "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가 · 자동전투는 3중첩 이상에 발동"
           }
         ],
         "rays": 7,
@@ -5386,14 +5386,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-99",
-      "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%",
+      "description": "열의 최소 3 확보 · 8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "holy-march",
           "target": "self",
           "range": 125,
-          "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
+          "description": "열의 최소 3 확보 · 8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
         }
       ],
       "fx": {
@@ -5408,7 +5408,7 @@
             "kind": "holy-march",
             "target": "self",
             "range": 125,
-            "description": "8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
+            "description": "열의 최소 3 확보 · 8초 이동속도 30% 증가 · 이동 경로에 2.4초 성화 발자국, 반경 65에 0.6초마다 90% · 기본공격 시 성전 파동 추가 90%"
           }
         ],
         "rays": 8,
@@ -5490,14 +5490,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-101",
-      "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기",
+      "description": "주변 350% + 축적 최대 공격력 800% 소비 · 막은 피해와 기본공격당 공격력 20% 축적 · 절대 방벽 중 사용 대기",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "stored-reprisal",
           "target": "area",
           "range": 145,
-          "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기"
+          "description": "주변 350% + 축적 최대 공격력 800% 소비 · 막은 피해와 기본공격당 공격력 20% 축적 · 절대 방벽 중 사용 대기"
         }
       ],
       "fx": {
@@ -5512,7 +5512,7 @@
             "kind": "stored-reprisal",
             "target": "area",
             "range": 145,
-            "description": "주변 350% + 막은 피해 최대 공격력 800% 소비 · 절대 방벽 중 사용 대기"
+            "description": "주변 350% + 축적 최대 공격력 800% 소비 · 막은 피해와 기본공격당 공격력 20% 축적 · 절대 방벽 중 사용 대기"
           }
         ],
         "rays": 10,
