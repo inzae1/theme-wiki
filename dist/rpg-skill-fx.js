@@ -100,6 +100,7 @@ function marineFX(p,f,t){
  p.restore();return true;
 }
 function draw(p,f,t,D){
+ if(root.RPG_ROGUE_FX?.draw(p,f,t))return true;
  if(root.RPG_CHEONBIN_FX?.draw(p,f,t,D))return true;
  if(root.RPG_MERCHANT_FX?.draw(p,f,t,D))return true;
  if(root.RPG_GUNNER_FX?.draw(p,f,t,D))return true;

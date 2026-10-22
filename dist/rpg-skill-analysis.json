@@ -6418,10 +6418,10 @@
       "id": "injae-0",
       "tier": 0,
       "parent": "시작",
-      "style": "basic",
+      "style": "rogue",
       "resource": "기력",
-      "review": "급습 — dash → hit / 비수 투척 — missile / 연막 — buff / 허점 찌르기 — volley",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "급습 — 최대 160 접근 후 근접 190% · 연막의 허점 강화가 있으면 1회 60% 증가 / 비수 투척 — 실제 충돌하는 비수 210% / 연막 — 4초 회피율 +30% · 6초 안의 다음 급습 또는 허점 찌르기 60% 강화 / 허점 찌르기 — 0.14초 간격 4회, 각 125% · 연막 강화는 이번 연타 전체에 적용",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-0-skill-0",
@@ -6441,43 +6441,37 @@
           },
           "cost": 12,
           "cooldown": 5.2,
-          "range": 320,
-          "radius": 140,
+          "range": 250,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-112",
-          "description": "앞으로 최대 120 이동 · 경로 충돌 검사 / 근접 단일 190% 타격",
+          "description": "최대 160 접근 후 근접 190% · 연막의 허점 강화가 있으면 1회 60% 증가",
           "actions": [
             {
-              "op": "dash",
-              "distance": 120
-            },
-            {
-              "op": "hit",
-              "power": 1.9
+              "op": "rogue-kit",
+              "kind": "ambush",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-0:0",
-            "theme": "basic",
+            "theme": "rogue",
             "weapon": "쌍단검",
             "palette": "#bc91ed",
             "recipe": 112,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 120
-              },
-              {
-                "op": "hit",
-                "power": 1.9
+                "op": "rogue-kit",
+                "kind": "ambush",
+                "profile": "thrust"
               }
             ],
             "rays": 5,
             "rotation": 4,
-            "shape": "dash+hit"
+            "shape": "ambush"
           },
-          "actualText": "앞으로 최대 120 이동 · 경로 충돌 검사 / 근접 단일 190% 타격",
-          "visual": "전용 연출 injae-0:0 · dash → hit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 160 접근 후 근접 190% · 연막의 허점 강화가 있으면 1회 60% 증가",
+          "visual": "전용 연출 injae-0:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-0-skill-1",
@@ -6497,37 +6491,37 @@
           },
           "cost": 17,
           "cooldown": 7.5,
-          "range": 460,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-113",
-          "description": "직선 투사체 210% · 실제 충돌 시 피해",
+          "description": "실제 충돌하는 비수 210%",
           "actions": [
             {
-              "op": "missile",
-              "power": 2.1,
-              "speed": 500
+              "op": "rogue-kit",
+              "kind": "knife",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-0:1",
-            "theme": "basic",
+            "theme": "rogue",
             "weapon": "쌍단검",
             "palette": "#bc91ed",
             "recipe": 113,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2.1,
-                "speed": 500
+                "op": "rogue-kit",
+                "kind": "knife",
+                "profile": "thrust"
               }
             ],
             "rays": 6,
             "rotation": 41,
-            "shape": "missile"
+            "shape": "knife"
           },
-          "actualText": "직선 투사체 210% · 실제 충돌 시 피해",
-          "visual": "전용 연출 injae-0:1 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 충돌하는 비수 210%",
+          "visual": "전용 연출 injae-0:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-0-skill-2",
@@ -6547,39 +6541,37 @@
           },
           "cost": 19,
           "cooldown": 13,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-114",
-          "description": "4초 회피율 30% 증가",
+          "description": "4초 회피율 +30% · 6초 안의 다음 급습 또는 허점 찌르기 60% 강화",
           "actions": [
             {
-              "op": "buff",
-              "type": "evasion",
-              "value": 0.3,
-              "duration": 4
+              "op": "rogue-kit",
+              "kind": "smoke",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-0:2",
-            "theme": "basic",
+            "theme": "rogue",
             "weapon": "쌍단검",
             "palette": "#bc91ed",
             "recipe": 114,
             "choreography": [
               {
-                "op": "buff",
-                "type": "evasion",
-                "value": 0.3,
-                "duration": 4
+                "op": "rogue-kit",
+                "kind": "smoke",
+                "profile": "guard"
               }
             ],
             "rays": 7,
             "rotation": 78,
-            "shape": "buff"
+            "shape": "smoke"
           },
-          "actualText": "4초 회피율 30% 증가",
-          "visual": "전용 연출 injae-0:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "4초 회피율 +30% · 6초 안의 다음 급습 또는 허점 찌르기 60% 강화",
+          "visual": "전용 연출 injae-0:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-0-skill-3",
@@ -6599,41 +6591,37 @@
           },
           "cost": 38,
           "cooldown": 34,
-          "range": 125,
-          "radius": 140,
+          "range": 130,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-115",
-          "description": "0.16초 간격 4회 · 타격당 120%",
+          "description": "0.14초 간격 4회, 각 125% · 연막 강화는 이번 연타 전체에 적용",
           "actions": [
             {
-              "op": "volley",
-              "count": 4,
-              "power": 1.2,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "rogue-kit",
+              "kind": "weak-stab",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-0:3",
-            "theme": "basic",
+            "theme": "rogue",
             "weapon": "쌍단검",
             "palette": "#bc91ed",
             "recipe": 115,
             "choreography": [
               {
-                "op": "volley",
-                "count": 4,
-                "power": 1.2,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "rogue-kit",
+                "kind": "weak-stab",
+                "profile": "thrust"
               }
             ],
             "rays": 8,
             "rotation": 115,
-            "shape": "volley"
+            "shape": "weak-stab"
           },
-          "actualText": "0.16초 간격 4회 · 타격당 120%",
-          "visual": "전용 연출 injae-0:3 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.14초 간격 4회, 각 125% · 연막 강화는 이번 연타 전체에 적용",
+          "visual": "전용 연출 injae-0:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -6643,10 +6631,10 @@
       "id": "injae-1",
       "tier": 1,
       "parent": "injae-0",
-      "style": "shadow",
+      "style": "assassin",
       "resource": "기력",
-      "review": "그림자 찌르기 — dash → volley / 독 묻히기 — status / 잠행 — stealth → buff / 암살 연격 — volley",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "그림자 찌르기 — 최대 190 접근 후 2회, 각 125% · 명중 시 약점 노출 6초 / 독 묻히기 — 8초 기본공격과 단검 기술 명중 시 독 1중첩 · 중첩당 매초 25%, 최대 5 / 잠행 — 1.2초 무적 · 5초 치명타 확률 +20% · 다음 암살 연격 50% 강화 / 암살 연격 — 0.12초 간격 5회, 각 125% · 약점 노출을 소모하면 이번 연타 30% 강화",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-1-skill-0",
@@ -6666,49 +6654,37 @@
           },
           "cost": 12,
           "cooldown": 5.6,
-          "range": 320,
-          "radius": 140,
+          "range": 280,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-116",
-          "description": "앞으로 최대 160 이동 · 경로 충돌 검사 / 0.16초 간격 2회 · 타격당 115%",
+          "description": "최대 190 접근 후 2회, 각 125% · 명중 시 약점 노출 6초",
           "actions": [
             {
-              "op": "dash",
-              "distance": 160
-            },
-            {
-              "op": "volley",
-              "count": 2,
-              "power": 1.15,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "rogue-kit",
+              "kind": "shadow-stab",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-1:0",
-            "theme": "shadow",
+            "theme": "assassin",
             "weapon": "곡단검",
             "palette": "#bc91ed",
             "recipe": 116,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 160
-              },
-              {
-                "op": "volley",
-                "count": 2,
-                "power": 1.15,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "rogue-kit",
+                "kind": "shadow-stab",
+                "profile": "thrust"
               }
             ],
             "rays": 9,
             "rotation": 152,
-            "shape": "dash+volley"
+            "shape": "shadow-stab"
           },
-          "actualText": "앞으로 최대 160 이동 · 경로 충돌 검사 / 0.16초 간격 2회 · 타격당 115%",
-          "visual": "전용 연출 injae-1:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 190 접근 후 2회, 각 125% · 명중 시 약점 노출 6초",
+          "visual": "전용 연출 injae-1:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-1-skill-1",
@@ -6728,41 +6704,37 @@
           },
           "cost": 17,
           "cooldown": 7.9,
-          "range": 460,
-          "radius": 140,
-          "target": "single",
+          "range": 0,
+          "radius": 0,
+          "target": "self",
           "effectType": "recipe-117",
-          "description": "poison 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30%",
+          "description": "8초 기본공격과 단검 기술 명중 시 독 1중첩 · 중첩당 매초 25%, 최대 5",
           "actions": [
             {
-              "op": "status",
-              "type": "poison",
-              "power": 0.3,
-              "stacks": 2,
-              "duration": 8
+              "op": "rogue-kit",
+              "kind": "coat",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-1:1",
-            "theme": "shadow",
+            "theme": "assassin",
             "weapon": "곡단검",
             "palette": "#bc91ed",
             "recipe": 117,
             "choreography": [
               {
-                "op": "status",
-                "type": "poison",
-                "power": 0.3,
-                "stacks": 2,
-                "duration": 8
+                "op": "rogue-kit",
+                "kind": "coat",
+                "profile": "guard"
               }
             ],
             "rays": 10,
             "rotation": 9,
-            "shape": "status"
+            "shape": "coat"
           },
-          "actualText": "poison 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30%",
-          "visual": "전용 연출 injae-1:1 · status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 기본공격과 단검 기술 명중 시 독 1중첩 · 중첩당 매초 25%, 최대 5",
+          "visual": "전용 연출 injae-1:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-1-skill-2",
@@ -6782,47 +6754,37 @@
           },
           "cost": 19,
           "cooldown": 13.4,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-118",
-          "description": "1.5초 은신·무적 / 5초 치명타 20% 증가",
+          "description": "1.2초 무적 · 5초 치명타 확률 +20% · 다음 암살 연격 50% 강화",
           "actions": [
             {
-              "op": "stealth",
-              "duration": 1.5
-            },
-            {
-              "op": "buff",
-              "type": "crit",
-              "value": 0.2,
-              "duration": 5
+              "op": "rogue-kit",
+              "kind": "stealth",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-1:2",
-            "theme": "shadow",
+            "theme": "assassin",
             "weapon": "곡단검",
             "palette": "#bc91ed",
             "recipe": 118,
             "choreography": [
               {
-                "op": "stealth",
-                "duration": 1.5
-              },
-              {
-                "op": "buff",
-                "type": "crit",
-                "value": 0.2,
-                "duration": 5
+                "op": "rogue-kit",
+                "kind": "stealth",
+                "profile": "guard"
               }
             ],
             "rays": 11,
             "rotation": 46,
-            "shape": "stealth+buff"
+            "shape": "stealth"
           },
-          "actualText": "1.5초 은신·무적 / 5초 치명타 20% 증가",
-          "visual": "전용 연출 injae-1:2 · stealth → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "1.2초 무적 · 5초 치명타 확률 +20% · 다음 암살 연격 50% 강화",
+          "visual": "전용 연출 injae-1:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-1-skill-3",
@@ -6842,41 +6804,37 @@
           },
           "cost": 38,
           "cooldown": 34.4,
-          "range": 125,
-          "radius": 140,
+          "range": 155,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-119",
-          "description": "0.16초 간격 6회 · 타격당 80%",
+          "description": "0.12초 간격 5회, 각 125% · 약점 노출을 소모하면 이번 연타 30% 강화",
           "actions": [
             {
-              "op": "volley",
-              "count": 6,
-              "power": 0.8,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "rogue-kit",
+              "kind": "assassinate",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-1:3",
-            "theme": "shadow",
+            "theme": "assassin",
             "weapon": "곡단검",
             "palette": "#bc91ed",
             "recipe": 119,
             "choreography": [
               {
-                "op": "volley",
-                "count": 6,
-                "power": 0.8,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "rogue-kit",
+                "kind": "assassinate",
+                "profile": "thrust"
               }
             ],
             "rays": 12,
             "rotation": 83,
-            "shape": "volley"
+            "shape": "assassinate"
           },
-          "actualText": "0.16초 간격 6회 · 타격당 80%",
-          "visual": "전용 연출 injae-1:3 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.12초 간격 5회, 각 125% · 약점 노출을 소모하면 이번 연타 30% 강화",
+          "visual": "전용 연출 injae-1:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -6886,10 +6844,10 @@
       "id": "injae-2",
       "tier": 1,
       "parent": "injae-0",
-      "style": "echo",
+      "style": "cards",
       "resource": "기력",
-      "review": "속임수 비수 — missile / 미끼 인형 — decoy / 장난 지뢰 — mine / 깜짝 폭탄 — blast",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "속임수 카드 — 적에게 날아가는 카드 230% · 명중 시 5초 속임수 표식 / 미끼 인형 — 8초·7회 공격을 받는 미끼 설치 · 소멸 시 주변 100에 180% 카드 파편 / 카드 함정 — 대상 주변 카드 덫 3개 · 접근 시 반경 85에 각 170% · 미끼 주변에도 설치 / 깜짝 폭탄 — 0.7초 예고 후 반경 145에 570% · 속임수 표식 대상에게 30% 추가",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-2-skill-0",
@@ -6897,7 +6855,7 @@
           "heroId": 4,
           "cell": 2,
           "slot": 0,
-          "name": "속임수 비수",
+          "name": "속임수 카드",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -6909,35 +6867,37 @@
           },
           "cost": 12,
           "cooldown": 5.6,
-          "range": 460,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-120",
-          "description": "직선 투사체 221% · 실제 충돌 시 피해",
+          "description": "적에게 날아가는 카드 230% · 명중 시 5초 속임수 표식",
           "actions": [
             {
-              "op": "missile",
-              "power": 2.2
+              "op": "rogue-kit",
+              "kind": "trick-card",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-2:0",
-            "theme": "echo",
+            "theme": "cards",
             "weapon": "단검·폭발 카드",
             "palette": "#bc91ed",
             "recipe": 120,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2.2
+                "op": "rogue-kit",
+                "kind": "trick-card",
+                "profile": "thrust"
               }
             ],
             "rays": 5,
             "rotation": 120,
-            "shape": "missile"
+            "shape": "trick-card"
           },
-          "actualText": "직선 투사체 221% · 실제 충돌 시 피해",
-          "visual": "전용 연출 injae-2:0 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "적에게 날아가는 카드 230% · 명중 시 5초 속임수 표식",
+          "visual": "전용 연출 injae-2:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-2-skill-1",
@@ -6957,37 +6917,37 @@
           },
           "cost": 17,
           "cooldown": 7.9,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-121",
-          "description": "8초 적을 유인하는 미끼",
+          "description": "8초·7회 공격을 받는 미끼 설치 · 소멸 시 주변 100에 180% 카드 파편",
           "actions": [
             {
-              "op": "decoy",
-              "duration": 8,
-              "hits": 7
+              "op": "rogue-kit",
+              "kind": "decoy",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-2:1",
-            "theme": "echo",
+            "theme": "cards",
             "weapon": "단검·폭발 카드",
             "palette": "#bc91ed",
             "recipe": 121,
             "choreography": [
               {
-                "op": "decoy",
-                "duration": 8,
-                "hits": 7
+                "op": "rogue-kit",
+                "kind": "decoy",
+                "profile": "guard"
               }
             ],
             "rays": 6,
             "rotation": 157,
             "shape": "decoy"
           },
-          "actualText": "8초 적을 유인하는 미끼",
-          "visual": "전용 연출 injae-2:1 · decoy · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초·7회 공격을 받는 미끼 설치 · 소멸 시 주변 100에 180% 카드 파편",
+          "visual": "전용 연출 injae-2:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-2-skill-2",
@@ -6995,7 +6955,7 @@
           "heroId": 4,
           "cell": 2,
           "slot": 2,
-          "name": "장난 지뢰",
+          "name": "카드 함정",
           "unlock": 30,
           "mechanicsVersion": 3,
           "resource": {
@@ -7007,41 +6967,37 @@
           },
           "cost": 19,
           "cooldown": 13.4,
-          "range": 460,
-          "radius": 140,
-          "target": "self",
+          "range": 400,
+          "radius": 0,
+          "target": "area",
           "effectType": "recipe-122",
-          "description": "실제 지뢰 3개 · 접근 시 반경 95 폭발",
+          "description": "대상 주변 카드 덫 3개 · 접근 시 반경 85에 각 170% · 미끼 주변에도 설치",
           "actions": [
             {
-              "op": "mine",
-              "count": 3,
-              "power": 1.8,
-              "radius": 95,
-              "arm": 0.5
+              "op": "rogue-kit",
+              "kind": "card-trap",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-2:2",
-            "theme": "echo",
+            "theme": "cards",
             "weapon": "단검·폭발 카드",
             "palette": "#bc91ed",
             "recipe": 122,
             "choreography": [
               {
-                "op": "mine",
-                "count": 3,
-                "power": 1.8,
-                "radius": 95,
-                "arm": 0.5
+                "op": "rogue-kit",
+                "kind": "card-trap",
+                "profile": "thrust"
               }
             ],
             "rays": 7,
             "rotation": 14,
-            "shape": "mine"
+            "shape": "card-trap"
           },
-          "actualText": "실제 지뢰 3개 · 접근 시 반경 95 폭발",
-          "visual": "전용 연출 injae-2:2 · mine · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상 주변 카드 덫 3개 · 접근 시 반경 85에 각 170% · 미끼 주변에도 설치",
+          "visual": "전용 연출 injae-2:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-2-skill-3",
@@ -7061,39 +7017,37 @@
           },
           "cost": 38,
           "cooldown": 34.4,
-          "range": 125,
-          "radius": 150,
+          "range": 400,
+          "radius": 0,
           "target": "area",
           "effectType": "recipe-123",
-          "description": "0.6초 뒤 반경 150에 600% 착탄 피해",
+          "description": "0.7초 예고 후 반경 145에 570% · 속임수 표식 대상에게 30% 추가",
           "actions": [
             {
-              "op": "blast",
-              "power": 6,
-              "radius": 150,
-              "delay": 0.6
+              "op": "rogue-kit",
+              "kind": "surprise",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-2:3",
-            "theme": "echo",
+            "theme": "cards",
             "weapon": "단검·폭발 카드",
             "palette": "#bc91ed",
             "recipe": 123,
             "choreography": [
               {
-                "op": "blast",
-                "power": 6,
-                "radius": 150,
-                "delay": 0.6
+                "op": "rogue-kit",
+                "kind": "surprise",
+                "profile": "thrust"
               }
             ],
             "rays": 8,
             "rotation": 51,
-            "shape": "blast"
+            "shape": "surprise"
           },
-          "actualText": "0.6초 뒤 반경 150에 600% 착탄 피해",
-          "visual": "전용 연출 injae-2:3 · blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.7초 예고 후 반경 145에 570% · 속임수 표식 대상에게 30% 추가",
+          "visual": "전용 연출 injae-2:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -7105,8 +7059,8 @@
       "parent": "injae-1",
       "style": "shadow",
       "resource": "기력",
-      "review": "그림자 쇄도 — dash → volley / 잔영 육연무 — volley → pet / 그림자 추격 — stealth → buff / 환영 난무 — pet → volley",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "그림자 쇄도 — 최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응 / 잔영 분신 — 8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초 / 그림자 추격 — 1초 무적 · 8초 공격속도 +25% · 활성 잔영 지속시간 3초 연장, 최대 12초 / 환영 난무 — 10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-3-skill-0",
@@ -7126,22 +7080,16 @@
           },
           "cost": 12,
           "cooldown": 6,
-          "range": 320,
-          "radius": 140,
+          "range": 300,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-124",
-          "description": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 70%",
+          "description": "최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응",
           "actions": [
             {
-              "op": "dash",
-              "distance": 200
-            },
-            {
-              "op": "volley",
-              "count": 3,
-              "power": 0.7,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "rogue-kit",
+              "kind": "shadow-rush",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7152,23 +7100,17 @@
             "recipe": 124,
             "choreography": [
               {
-                "op": "dash",
-                "distance": 200
-              },
-              {
-                "op": "volley",
-                "count": 3,
-                "power": 0.7,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "rogue-kit",
+                "kind": "shadow-rush",
+                "profile": "thrust"
               }
             ],
             "rays": 9,
             "rotation": 88,
-            "shape": "dash+volley"
+            "shape": "shadow-rush"
           },
-          "actualText": "앞으로 최대 200 이동 · 경로 충돌 검사 / 0.16초 간격 3회 · 타격당 70%",
-          "visual": "전용 연출 injae-3:0 · dash → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응",
+          "visual": "전용 연출 injae-3:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-3-skill-1",
@@ -7176,7 +7118,7 @@
           "heroId": 4,
           "cell": 3,
           "slot": 1,
-          "name": "잔영 육연무",
+          "name": "잔영 분신",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7188,25 +7130,16 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 140,
-          "target": "single",
+          "range": 0,
+          "radius": 0,
+          "target": "self",
           "effectType": "recipe-125",
-          "description": "0.16초 간격 6회 · 타격당 65% / 전투 잔영 2마리 실제 소환 · 6초 · 공격력 60%",
+          "description": "8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초",
           "actions": [
             {
-              "op": "volley",
-              "count": 6,
-              "power": 0.65,
-              "gap": 0.16,
-              "shape": "single"
-            },
-            {
-              "op": "pet",
-              "appearance": "shadow",
-              "count": 2,
-              "power": 0.6,
-              "duration": 6
+              "op": "rogue-kit",
+              "kind": "echoes",
+              "profile": "guard"
             }
           ],
           "fx": {
@@ -7217,26 +7150,17 @@
             "recipe": 125,
             "choreography": [
               {
-                "op": "volley",
-                "count": 6,
-                "power": 0.65,
-                "gap": 0.16,
-                "shape": "single"
-              },
-              {
-                "op": "pet",
-                "appearance": "shadow",
-                "count": 2,
-                "power": 0.6,
-                "duration": 6
+                "op": "rogue-kit",
+                "kind": "echoes",
+                "profile": "guard"
               }
             ],
             "rays": 10,
             "rotation": 125,
-            "shape": "volley+pet"
+            "shape": "echoes"
           },
-          "actualText": "0.16초 간격 6회 · 타격당 65% / 전투 잔영 2마리 실제 소환 · 6초 · 공격력 60%",
-          "visual": "전용 연출 injae-3:1 · volley → pet · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초",
+          "visual": "전용 연출 injae-3:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-3-skill-2",
@@ -7256,21 +7180,16 @@
           },
           "cost": 19,
           "cooldown": 13.8,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-126",
-          "description": "1초 은신·무적 / 8초 연격 30% 증가",
+          "description": "1초 무적 · 8초 공격속도 +25% · 활성 잔영 지속시간 3초 연장, 최대 12초",
           "actions": [
             {
-              "op": "stealth",
-              "duration": 1
-            },
-            {
-              "op": "buff",
-              "type": "combo",
-              "value": 0.3,
-              "duration": 8
+              "op": "rogue-kit",
+              "kind": "pursuit",
+              "profile": "guard"
             }
           ],
           "fx": {
@@ -7281,22 +7200,17 @@
             "recipe": 126,
             "choreography": [
               {
-                "op": "stealth",
-                "duration": 1
-              },
-              {
-                "op": "buff",
-                "type": "combo",
-                "value": 0.3,
-                "duration": 8
+                "op": "rogue-kit",
+                "kind": "pursuit",
+                "profile": "guard"
               }
             ],
             "rays": 11,
             "rotation": 162,
-            "shape": "stealth+buff"
+            "shape": "pursuit"
           },
-          "actualText": "1초 은신·무적 / 8초 연격 30% 증가",
-          "visual": "전용 연출 injae-3:2 · stealth → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "1초 무적 · 8초 공격속도 +25% · 활성 잔영 지속시간 3초 연장, 최대 12초",
+          "visual": "전용 연출 injae-3:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-3-skill-3",
@@ -7316,25 +7230,16 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 125,
-          "radius": 140,
+          "range": 250,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-127",
-          "description": "전투 잔영 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
+          "description": "10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능",
           "actions": [
             {
-              "op": "pet",
-              "appearance": "shadow",
-              "count": 3,
-              "power": 0.8,
-              "duration": 8
-            },
-            {
-              "op": "volley",
-              "count": 8,
-              "power": 0.6,
-              "gap": 0.12,
-              "shape": "single"
+              "op": "rogue-kit",
+              "kind": "shadow-finale",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7345,26 +7250,17 @@
             "recipe": 127,
             "choreography": [
               {
-                "op": "pet",
-                "appearance": "shadow",
-                "count": 3,
-                "power": 0.8,
-                "duration": 8
-              },
-              {
-                "op": "volley",
-                "count": 8,
-                "power": 0.6,
-                "gap": 0.12,
-                "shape": "single"
+                "op": "rogue-kit",
+                "kind": "shadow-finale",
+                "profile": "thrust"
               }
             ],
             "rays": 12,
             "rotation": 19,
-            "shape": "pet+volley"
+            "shape": "shadow-finale"
           },
-          "actualText": "전투 잔영 3마리 실제 소환 · 8초 · 공격력 80% / 0.12초 간격 8회 · 타격당 60%",
-          "visual": "전용 연출 injae-3:3 · pet → volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능",
+          "visual": "전용 연출 injae-3:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -7376,8 +7272,8 @@
       "parent": "injae-1",
       "style": "venom",
       "resource": "기력",
-      "review": "맹독 비수 — missile → status / 맹독 전이 — spread / 독 회수 — consume / 독살 — status → consume → execute",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "맹독 비수 — 실제 비수 명중 시 160%와 독 2중첩 · 독은 10초·중첩당 매초 40%, 최대 5 / 맹독 전이 — 중독 대상의 독을 반경 175에 전염 · 독이 없는 적에게는 사용하지 않음 / 독 회수 — 독을 전부 소모해 중첩당 200% · 주변 100에 소모 피해의 35% / 독살 — 0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-4-skill-0",
@@ -7397,22 +7293,16 @@
           },
           "cost": 12,
           "cooldown": 6,
-          "range": 460,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-128",
-          "description": "직선 투사체 150% · 실제 충돌 시 피해 / poison 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45%",
+          "description": "실제 비수 명중 시 160%와 독 2중첩 · 독은 10초·중첩당 매초 40%, 최대 5",
           "actions": [
             {
-              "op": "missile",
-              "power": 1.5
-            },
-            {
-              "op": "status",
-              "type": "poison",
-              "power": 0.45,
-              "stacks": 2,
-              "duration": 8
+              "op": "rogue-kit",
+              "kind": "venom-knife",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7423,23 +7313,17 @@
             "recipe": 128,
             "choreography": [
               {
-                "op": "missile",
-                "power": 1.5
-              },
-              {
-                "op": "status",
-                "type": "poison",
-                "power": 0.45,
-                "stacks": 2,
-                "duration": 8
+                "op": "rogue-kit",
+                "kind": "venom-knife",
+                "profile": "thrust"
               }
             ],
             "rays": 5,
             "rotation": 56,
-            "shape": "missile+status"
+            "shape": "venom-knife"
           },
-          "actualText": "직선 투사체 150% · 실제 충돌 시 피해 / poison 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45%",
-          "visual": "전용 연출 injae-4:0 · missile → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 비수 명중 시 160%와 독 2중첩 · 독은 10초·중첩당 매초 40%, 최대 5",
+          "visual": "전용 연출 injae-4:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-4-skill-1",
@@ -7459,16 +7343,16 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 170,
-          "target": "self",
+          "range": 440,
+          "radius": 0,
+          "target": "single",
           "effectType": "recipe-129",
-          "description": "대상의 poison 상태를 반경 170의 적에게 전염",
+          "description": "중독 대상의 독을 반경 175에 전염 · 독이 없는 적에게는 사용하지 않음",
           "actions": [
             {
-              "op": "spread",
-              "type": "poison",
-              "radius": 170
+              "op": "rogue-kit",
+              "kind": "venom-spread",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7479,17 +7363,17 @@
             "recipe": 129,
             "choreography": [
               {
-                "op": "spread",
-                "type": "poison",
-                "radius": 170
+                "op": "rogue-kit",
+                "kind": "venom-spread",
+                "profile": "thrust"
               }
             ],
             "rays": 6,
             "rotation": 93,
-            "shape": "spread"
+            "shape": "venom-spread"
           },
-          "actualText": "대상의 poison 상태를 반경 170의 적에게 전염",
-          "visual": "전용 연출 injae-4:1 · spread · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "중독 대상의 독을 반경 175에 전염 · 독이 없는 적에게는 사용하지 않음",
+          "visual": "전용 연출 injae-4:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-4-skill-2",
@@ -7509,16 +7393,16 @@
           },
           "cost": 19,
           "cooldown": 13.8,
-          "range": 125,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-130",
-          "description": "poison를 소비해 중첩당 240% 타격",
+          "description": "독을 전부 소모해 중첩당 200% · 주변 100에 소모 피해의 35%",
           "actions": [
             {
-              "op": "consume",
-              "type": "poison",
-              "power": 2.4
+              "op": "rogue-kit",
+              "kind": "venom-burst",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7529,17 +7413,17 @@
             "recipe": 130,
             "choreography": [
               {
-                "op": "consume",
-                "type": "poison",
-                "power": 2.4
+                "op": "rogue-kit",
+                "kind": "venom-burst",
+                "profile": "thrust"
               }
             ],
             "rays": 7,
             "rotation": 130,
-            "shape": "consume"
+            "shape": "venom-burst"
           },
-          "actualText": "poison를 소비해 중첩당 240% 타격",
-          "visual": "전용 연출 injae-4:2 · consume · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "독을 전부 소모해 중첩당 200% · 주변 100에 소모 피해의 35%",
+          "visual": "전용 연출 injae-4:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-4-skill-3",
@@ -7559,28 +7443,16 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 460,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-131",
-          "description": "poison 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 40% / poison를 소비해 중첩당 300% 타격 / 체력 30% 미만 추가 피해 · 보스 즉사 없음",
+          "description": "0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가",
           "actions": [
             {
-              "op": "status",
-              "type": "poison",
-              "power": 0.4,
-              "stacks": 3,
-              "duration": 8
-            },
-            {
-              "op": "consume",
-              "type": "poison",
-              "power": 3
-            },
-            {
-              "op": "execute",
-              "power": 4,
-              "threshold": 0.3
+              "op": "rogue-kit",
+              "kind": "venom-finale",
+              "profile": "thrust"
             }
           ],
           "fx": {
@@ -7591,29 +7463,17 @@
             "recipe": 131,
             "choreography": [
               {
-                "op": "status",
-                "type": "poison",
-                "power": 0.4,
-                "stacks": 3,
-                "duration": 8
-              },
-              {
-                "op": "consume",
-                "type": "poison",
-                "power": 3
-              },
-              {
-                "op": "execute",
-                "power": 4,
-                "threshold": 0.3
+                "op": "rogue-kit",
+                "kind": "venom-finale",
+                "profile": "thrust"
               }
             ],
             "rays": 8,
             "rotation": 167,
-            "shape": "status+consume+execute"
+            "shape": "venom-finale"
           },
-          "actualText": "poison 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 40% / poison를 소비해 중첩당 300% 타격 / 체력 30% 미만 추가 피해 · 보스 즉사 없음",
-          "visual": "전용 연출 injae-4:3 · status → consume → execute · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가",
+          "visual": "전용 연출 injae-4:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -7623,10 +7483,10 @@
       "id": "injae-5",
       "tier": 2,
       "parent": "injae-2",
-      "style": "echo",
+      "style": "phantom",
       "resource": "기력",
-      "review": "유령 비수 — missile → stealth / 대역 인형 — decoy / 환영 교대 — swap → buff / 유령극 — decoy → swap → volley → stealth",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "유령 카드 — 관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가 / 대역 인형 — 10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편 / 환영 교대 — 활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25% / 유령극 — 대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-5-skill-0",
@@ -7634,7 +7494,7 @@
           "heroId": 4,
           "cell": 5,
           "slot": 0,
-          "name": "유령 비수",
+          "name": "유령 카드",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7646,43 +7506,37 @@
           },
           "cost": 12,
           "cooldown": 6,
-          "range": 460,
-          "radius": 140,
+          "range": 440,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-132",
-          "description": "직선 투사체 250% · 실제 충돌 시 피해 / 0.6초 은신·무적",
+          "description": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
           "actions": [
             {
-              "op": "missile",
-              "power": 2.5
-            },
-            {
-              "op": "stealth",
-              "duration": 0.6
+              "op": "rogue-kit",
+              "kind": "phantom-card",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-5:0",
-            "theme": "echo",
+            "theme": "phantom",
             "weapon": "레이피어·환영 카드",
             "palette": "#bc91ed",
             "recipe": 132,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2.5
-              },
-              {
-                "op": "stealth",
-                "duration": 0.6
+                "op": "rogue-kit",
+                "kind": "phantom-card",
+                "profile": "thrust"
               }
             ],
             "rays": 9,
             "rotation": 24,
-            "shape": "missile+stealth"
+            "shape": "phantom-card"
           },
-          "actualText": "직선 투사체 250% · 실제 충돌 시 피해 / 0.6초 은신·무적",
-          "visual": "전용 연출 injae-5:0 · missile → stealth · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
+          "visual": "전용 연출 injae-5:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-5-skill-1",
@@ -7702,37 +7556,37 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-133",
-          "description": "12초 적을 유인하는 미끼",
+          "description": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
           "actions": [
             {
-              "op": "decoy",
-              "duration": 12,
-              "hits": 12
+              "op": "rogue-kit",
+              "kind": "double",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-5:1",
-            "theme": "echo",
+            "theme": "phantom",
             "weapon": "레이피어·환영 카드",
             "palette": "#bc91ed",
             "recipe": 133,
             "choreography": [
               {
-                "op": "decoy",
-                "duration": 12,
-                "hits": 12
+                "op": "rogue-kit",
+                "kind": "double",
+                "profile": "guard"
               }
             ],
             "rays": 10,
             "rotation": 61,
-            "shape": "decoy"
+            "shape": "double"
           },
-          "actualText": "12초 적을 유인하는 미끼",
-          "visual": "전용 연출 injae-5:1 · decoy · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
+          "visual": "전용 연출 injae-5:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-5-skill-2",
@@ -7752,45 +7606,37 @@
           },
           "cost": 19,
           "cooldown": 13.8,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-134",
-          "description": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 치명타 35% 증가",
+          "description": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
           "actions": [
             {
-              "op": "swap"
-            },
-            {
-              "op": "buff",
-              "type": "crit",
-              "value": 0.35,
-              "duration": 5
+              "op": "rogue-kit",
+              "kind": "exchange",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-5:2",
-            "theme": "echo",
+            "theme": "phantom",
             "weapon": "레이피어·환영 카드",
             "palette": "#bc91ed",
             "recipe": 134,
             "choreography": [
               {
-                "op": "swap"
-              },
-              {
-                "op": "buff",
-                "type": "crit",
-                "value": 0.35,
-                "duration": 5
+                "op": "rogue-kit",
+                "kind": "exchange",
+                "profile": "guard"
               }
             ],
             "rays": 11,
             "rotation": 98,
-            "shape": "swap+buff"
+            "shape": "exchange"
           },
-          "actualText": "미끼와 실제 위치 교환 · 짧은 무적 / 5초 치명타 35% 증가",
-          "visual": "전용 연출 injae-5:2 · swap → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
+          "visual": "전용 연출 injae-5:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-5-skill-3",
@@ -7810,65 +7656,37 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 125,
-          "radius": 140,
+          "range": 360,
+          "radius": 0,
           "target": "single",
           "effectType": "recipe-135",
-          "description": "10초 적을 유인하는 미끼 / 미끼와 실제 위치 교환 · 짧은 무적 / 0.16초 간격 7회 · 타격당 90% / 2초 은신·무적",
+          "description": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
           "actions": [
             {
-              "op": "decoy",
-              "duration": 10,
-              "hits": 18
-            },
-            {
-              "op": "swap"
-            },
-            {
-              "op": "volley",
-              "count": 7,
-              "power": 0.9,
-              "gap": 0.16,
-              "shape": "single"
-            },
-            {
-              "op": "stealth",
-              "duration": 2
+              "op": "rogue-kit",
+              "kind": "phantom-finale",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-5:3",
-            "theme": "echo",
+            "theme": "phantom",
             "weapon": "레이피어·환영 카드",
             "palette": "#bc91ed",
             "recipe": 135,
             "choreography": [
               {
-                "op": "decoy",
-                "duration": 10,
-                "hits": 18
-              },
-              {
-                "op": "swap"
-              },
-              {
-                "op": "volley",
-                "count": 7,
-                "power": 0.9,
-                "gap": 0.16,
-                "shape": "single"
-              },
-              {
-                "op": "stealth",
-                "duration": 2
+                "op": "rogue-kit",
+                "kind": "phantom-finale",
+                "profile": "thrust"
               }
             ],
             "rays": 12,
             "rotation": 135,
-            "shape": "decoy+swap+volley+stealth"
+            "shape": "phantom-finale"
           },
-          "actualText": "10초 적을 유인하는 미끼 / 미끼와 실제 위치 교환 · 짧은 무적 / 0.16초 간격 7회 · 타격당 90% / 2초 은신·무적",
-          "visual": "전용 연출 injae-5:3 · decoy → swap → volley → stealth · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
+          "visual": "전용 연출 injae-5:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -7878,10 +7696,10 @@
       "id": "injae-6",
       "tier": 2,
       "parent": "injae-2",
-      "style": "quake",
+      "style": "sabotage",
       "resource": "기력",
-      "review": "감지 폭탄 — mine / 시한폭탄 — blast / 원격 기폭 — detonate / 연쇄 폭파 — mine → detonate",
-      "intendedIdentity": "잔영·독·미끼 교환·폭파 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "감지 폭탄 — 대상 주변 감지 지뢰 3개 · 0.8초 후 무장·접근 시 반경 100에 각 190% / 시한폭탄 — 실제 투척·명중 위치에 부착 · 1.5초 뒤 반경 135에 460% 폭발 / 원격 기폭 — 설치된 감지 지뢰를 순서대로 0.12초 간격 기폭 · 지뢰 기본 피해에 100% 추가 / 연쇄 폭파 — 적 무리 사이 폭탄 6개 설치 · 0.9초 후 0.18초 간격 반경 100에 각 210% 폭발 · 기존 설치물 없이 사용 가능",
+      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "injae-6-skill-0",
@@ -7901,41 +7719,37 @@
           },
           "cost": 12,
           "cooldown": 6,
-          "range": 460,
-          "radius": 140,
-          "target": "self",
+          "range": 420,
+          "radius": 0,
+          "target": "area",
           "effectType": "recipe-136",
-          "description": "실제 지뢰 3개 · 접근 시 반경 110 폭발",
+          "description": "대상 주변 감지 지뢰 3개 · 0.8초 후 무장·접근 시 반경 100에 각 190%",
           "actions": [
             {
-              "op": "mine",
-              "count": 3,
-              "power": 2.1,
-              "radius": 110,
-              "arm": 0.7
+              "op": "rogue-kit",
+              "kind": "sensor",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-6:0",
-            "theme": "quake",
+            "theme": "sabotage",
             "weapon": "쇠뇌·폭발 덫",
             "palette": "#bc91ed",
             "recipe": 136,
             "choreography": [
               {
-                "op": "mine",
-                "count": 3,
-                "power": 2.1,
-                "radius": 110,
-                "arm": 0.7
+                "op": "rogue-kit",
+                "kind": "sensor",
+                "profile": "thrust"
               }
             ],
             "rays": 5,
             "rotation": 172,
-            "shape": "mine"
+            "shape": "sensor"
           },
-          "actualText": "실제 지뢰 3개 · 접근 시 반경 110 폭발",
-          "visual": "전용 연출 injae-6:0 · mine · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "대상 주변 감지 지뢰 3개 · 0.8초 후 무장·접근 시 반경 100에 각 190%",
+          "visual": "전용 연출 injae-6:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-6-skill-1",
@@ -7955,39 +7769,37 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 125,
-          "radius": 150,
-          "target": "area",
+          "range": 420,
+          "radius": 0,
+          "target": "single",
           "effectType": "recipe-137",
-          "description": "1.5초 뒤 반경 150에 500% 착탄 피해",
+          "description": "실제 투척·명중 위치에 부착 · 1.5초 뒤 반경 135에 460% 폭발",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 150,
-              "delay": 1.5
+              "op": "rogue-kit",
+              "kind": "sticky",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-6:1",
-            "theme": "quake",
+            "theme": "sabotage",
             "weapon": "쇠뇌·폭발 덫",
             "palette": "#bc91ed",
             "recipe": 137,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 150,
-                "delay": 1.5
+                "op": "rogue-kit",
+                "kind": "sticky",
+                "profile": "thrust"
               }
             ],
             "rays": 6,
             "rotation": 29,
-            "shape": "blast"
+            "shape": "sticky"
           },
-          "actualText": "1.5초 뒤 반경 150에 500% 착탄 피해",
-          "visual": "전용 연출 injae-6:1 · blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 투척·명중 위치에 부착 · 1.5초 뒤 반경 135에 460% 폭발",
+          "visual": "전용 연출 injae-6:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-6-skill-2",
@@ -8007,39 +7819,37 @@
           },
           "cost": 19,
           "cooldown": 13.8,
-          "range": 125,
-          "radius": 140,
+          "range": 0,
+          "radius": 0,
           "target": "self",
           "effectType": "recipe-138",
-          "description": "mine 설치물 소비·위치별 폭발",
+          "description": "설치된 감지 지뢰를 순서대로 0.12초 간격 기폭 · 지뢰 기본 피해에 100% 추가",
           "actions": [
             {
-              "op": "detonate",
-              "type": "mine",
-              "power": 1.5,
-              "radius": 130
+              "op": "rogue-kit",
+              "kind": "remote",
+              "profile": "guard"
             }
           ],
           "fx": {
             "signature": "injae-6:2",
-            "theme": "quake",
+            "theme": "sabotage",
             "weapon": "쇠뇌·폭발 덫",
             "palette": "#bc91ed",
             "recipe": 138,
             "choreography": [
               {
-                "op": "detonate",
-                "type": "mine",
-                "power": 1.5,
-                "radius": 130
+                "op": "rogue-kit",
+                "kind": "remote",
+                "profile": "guard"
               }
             ],
             "rays": 7,
             "rotation": 66,
-            "shape": "detonate"
+            "shape": "remote"
           },
-          "actualText": "mine 설치물 소비·위치별 폭발",
-          "visual": "전용 연출 injae-6:2 · detonate · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "설치된 감지 지뢰를 순서대로 0.12초 간격 기폭 · 지뢰 기본 피해에 100% 추가",
+          "visual": "전용 연출 injae-6:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "injae-6-skill-3",
@@ -8060,54 +7870,36 @@
           "cost": 38,
           "cooldown": 34.8,
           "range": 460,
-          "radius": 150,
-          "target": "self",
+          "radius": 0,
+          "target": "area",
           "effectType": "recipe-139",
-          "description": "실제 지뢰 8개 · 접근 시 반경 125 폭발 / mine 설치물 소비·위치별 폭발",
+          "description": "적 무리 사이 폭탄 6개 설치 · 0.9초 후 0.18초 간격 반경 100에 각 210% 폭발 · 기존 설치물 없이 사용 가능",
           "actions": [
             {
-              "op": "mine",
-              "count": 8,
-              "power": 2.5,
-              "radius": 125,
-              "arm": 0.3
-            },
-            {
-              "op": "detonate",
-              "type": "mine",
-              "power": 2,
-              "radius": 150,
-              "delay": 1
+              "op": "rogue-kit",
+              "kind": "chain-bombs",
+              "profile": "thrust"
             }
           ],
           "fx": {
             "signature": "injae-6:3",
-            "theme": "quake",
+            "theme": "sabotage",
             "weapon": "쇠뇌·폭발 덫",
             "palette": "#bc91ed",
             "recipe": 139,
             "choreography": [
               {
-                "op": "mine",
-                "count": 8,
-                "power": 2.5,
-                "radius": 125,
-                "arm": 0.3
-              },
-              {
-                "op": "detonate",
-                "type": "mine",
-                "power": 2,
-                "radius": 150,
-                "delay": 1
+                "op": "rogue-kit",
+                "kind": "chain-bombs",
+                "profile": "thrust"
               }
             ],
             "rays": 8,
             "rotation": 103,
-            "shape": "mine+detonate"
+            "shape": "chain-bombs"
           },
-          "actualText": "실제 지뢰 8개 · 접근 시 반경 125 폭발 / mine 설치물 소비·위치별 폭발",
-          "visual": "전용 연출 injae-6:3 · mine → detonate · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "적 무리 사이 폭탄 6개 설치 · 0.9초 후 0.18초 간격 반경 100에 각 210% 폭발 · 기존 설치물 없이 사용 가능",
+          "visual": "전용 연출 injae-6:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
