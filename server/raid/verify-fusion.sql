@@ -1,0 +1,52 @@
+begin;
+do $test$
+declare uid uuid:=gen_random_uuid();other_uid uuid:=gen_random_uuid();run uuid:=gen_random_uuid();rid uuid:=gen_random_uuid();test_code text;payload jsonb;result jsonb;before_rev bigint;old_coins integer;i integer;rec jsonb;
+begin
+insert into auth.users(id) values(uid);
+perform set_config('request.jwt.claim.sub',uid::text,true);
+perform set_config('request.jwt.claims',jsonb_build_object('sub',uid,'role','authenticated')::text,true);
+payload:=jsonb_build_object('version',1,'heroes',(select jsonb_agg(jsonb_build_object('recruited',true,'level',60,'cell',3,'slotUpgrades',jsonb_build_object('weapon',10)))from generate_series(0,11)));
+insert into public.rpg_cloud_saves(user_id,payload) values(uid,payload);
+insert into rpg_raid.wallet(user_id,crystals) values(uid,90);
+result:=public.rpg_fusion_command('craft',0,'weapon',0);
+assert (result->>'crystals')::integer=0,'craft charges exactly once';
+assert (result->'collection'->'weapon'->>'level')::integer=1,'craft unlocks level one';
+assert (result->'loadouts'->'0'->>'weapon')::boolean,'craft also equips atomically';
+begin perform public.rpg_fusion_command('craft',0,'armor',0);raise exception 'FAIL stale revision accepted';exception when sqlstate 'PT409' then null;end;
+begin perform public.rpg_fusion_command('craft',0,'armor',1);raise exception 'FAIL insufficient balance accepted';exception when raise_exception then if sqlerrm like 'FAIL%' then raise;end if;end;
+begin perform rpg_raid.fusion_snapshot(other_uid);raise exception 'FAIL cross-account read accepted';exception when insufficient_privilege then null;end;
+update public.rpg_cloud_saves cs set payload=jsonb_set(cs.payload,'{raidFusion}','{"owner":"forged","collection":{"weapon":{"level":10}}}'::jsonb),revision=revision+1 where user_id=uid;
+select cs.payload->'raidFusion' into result from public.rpg_cloud_saves cs where user_id=uid;
+assert result->>'owner'=uid::text and (result->'collection'->'weapon'->>'level')::integer=1,'cloud rejects invented ownership and levels';
+update rpg_raid.wallet set fusion_collection=jsonb_set(fusion_collection,'{weapon,copies}','1'::jsonb) where user_id=uid;
+result:=public.rpg_fusion_command('grow',0,'weapon',1);assert (result->'collection'->'weapon'->>'level')::integer=2 and (result->>'crystals')::integer=0 and (result->'collection'->'weapon'->>'copies')::integer=0,'duplicate grows without charging fragments';
+assert abs((rpg_raid.fusion_bonus(uid,0)->>'attack')::numeric-.08)<.000001,'server and browser bonus parity';
+-- Exercise the actual raid command and daily quota, not a fake client reward path.
+for i in 1..100 loop test_code:=lpad(floor(random()*10000)::integer::text,4,'0');exit when not exists(select 1 from rpg_raid.rooms where rooms.code=test_code);end loop;
+rec:=jsonb_build_object('id',uid,'hero',0,'level',60,'active',5,'seen',extract(epoch from now()),'hp',100,'maxHP',100,'ready',false);
+insert into rpg_raid.rooms(id,code,host,state,status)values(rid,test_code,uid,jsonb_build_object('status','clear','t',10,'runId',run,'players',jsonb_build_array(rec),'boss','{}'::jsonb),'clear');
+insert into rpg_raid.members(user_id,room_id)values(uid,rid);
+result:=public.rpg_raid_command('poll',rid,null,null,'{}');assert (result->>'reward')::integer=30 and (result->>'wallet')::integer=30,'actual clear pays 30 fragments';
+assert result->'fusion'->>'owner'=uid::text,'actual response carries owned fusion snapshot';
+before_rev:=(result->'fusion'->>'revision')::bigint;
+perform public.rpg_raid_command('poll',rid,null,null,'{}');assert (rpg_raid.fusion_snapshot(uid)->>'revision')::bigint=before_rev,'repeated poll cannot roll or grant twice';
+insert into rpg_raid.rewards(room_id,user_id,day,crystals)values(run,uid,(now() at time zone 'Asia/Seoul')::date,30)on conflict do nothing;
+assert (rpg_raid.fusion_snapshot(uid)->>'revision')::bigint=before_rev,'duplicate ledger insert cannot reroll';
+for i in 2..4 loop
+update rpg_raid.rooms set state=state||jsonb_build_object('runId',gen_random_uuid(),'rewardsDone',false) where id=rid;
+result:=public.rpg_raid_command('poll',rid,null,null,'{}');
+assert (result->>'reward')::integer=case when i<=3 then 30 else 0 end,'daily reward cap';
+end loop;
+assert (result->>'wallet')::integer=90,'exactly three paid clears';
+assert (result->'fusion'->>'revision')::bigint=before_rev+2,'unpaid help clears do not roll fusion drops';
+assert not has_function_privilege('anon','public.rpg_fusion_command(text,integer,text,bigint)','execute'),'anonymous mutation denied';
+assert not has_table_privilege('authenticated','rpg_raid.wallet','update'),'client cannot edit wallet';
+perform public.rpg_fusion_command('unequip',0,'weapon',(result->'fusion'->>'revision')::bigint);assert (rpg_raid.fusion_bonus(uid,0)->>'attack')::numeric=0,'unequip removes server combat bonus';
+raise notice 'PASS fusion: atomic craft/equip, revisions, balances, own-account access, canonical cloud save, duplicate growth, real raid payout, replay protection and daily cap.';
+end $test$;
+set local role authenticated;
+select public.rpg_fusion_command('view',null,null,null) is not null as authenticated_read;
+select public.rpg_save_progress((select revision from public.rpg_cloud_saves where user_id=auth.uid()),(select payload from public.rpg_cloud_saves where user_id=auth.uid()));
+reset role;
+rollback;
+select 'PASS: all fusion server assertions; fixtures rolled back' as result;
