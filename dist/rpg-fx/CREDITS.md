@@ -73,3 +73,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 ## Merchant workshop units (2026-10-22)
 
 `merchant-units.png`: original artwork generated for this project with the built-in image generation tool. Six sprites: attack turret, protective core, siege turret, larva, chimera, perfected chimera. Original alpha preserved; source crops and animations implemented in `rpg-merchant-fx.js`. Prompt: see `merchant-art-prompt.txt`. Existing credited impact sheets remain in use for contact sparks and dust.
+
+## Original priest marks and barriers — 2026-10-22
+
+Created for this game with OpenAI's built-in image generation tool: `priest-brand-atlas.png` (inquisitor judgement crest), `priest-seal-atlas.png` (four-talisman exorcist binding barrier), `priest-chapel-atlas.png` (high priest cathedral sanctuary). Each sheet contains eight frames; runtime preserves source alpha and uses explicit frame timing. The corresponding `*-preview.gif` files preview those eight frames. Final prompts: [priest-art-prompts.txt](priest-art-prompts.txt). These are original generated assets, not downloaded third-party game sprites.

@@ -16358,8 +16358,8 @@
       "parent": "시작",
       "style": "basic",
       "resource": "마력",
-      "review": "신성한 빛 — missile / 작은 치유 — heal / 신앙의 보호 — shield / 빛의 심판 — blast → heal",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 기초 · 실제 실행되는 기술 구성",
+      "review": "신성한 빛 — 빛 탄환 명중 시 190% 신성 피해 / 작은 치유 — 자신 최대 체력 18% 회복 · 부상일 때 자동 사용 / 신앙의 보호 — 8초 최대 체력 16% 보호막 · 중복 누적 없음 / 빛의 심판 — 0.45초 뒤 반경 130에 480% · 적중 시 최대 체력 8% 회복",
+      "intendedIdentity": "빛 탄환·회복·보호막으로 버티는 기초 사제 계열 · 기초 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-0-skill-0",
@@ -16379,15 +16379,18 @@
           },
           "cost": 5,
           "cooldown": 5.2,
-          "range": 460,
+          "range": 440,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-280",
-          "description": "직선 투사체 180% · 실제 충돌 시 피해",
+          "description": "빛 탄환 명중 시 190% 신성 피해",
           "actions": [
             {
-              "op": "missile",
-              "power": 1.8
+              "op": "priest-kit",
+              "kind": "novice-light",
+              "target": "single",
+              "range": 440,
+              "description": "빛 탄환 명중 시 190% 신성 피해"
             }
           ],
           "fx": {
@@ -16398,16 +16401,19 @@
             "recipe": 280,
             "choreography": [
               {
-                "op": "missile",
-                "power": 1.8
+                "op": "priest-kit",
+                "kind": "novice-light",
+                "target": "single",
+                "range": 440,
+                "description": "빛 탄환 명중 시 190% 신성 피해"
               }
             ],
             "rays": 5,
             "rotation": 100,
-            "shape": "missile"
+            "shape": "priest-kit"
           },
-          "actualText": "직선 투사체 180% · 실제 충돌 시 피해",
-          "visual": "전용 연출 sangmin-0:0 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "빛 탄환 명중 시 190% 신성 피해",
+          "visual": "전용 연출 sangmin-0:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-0-skill-1",
@@ -16431,11 +16437,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-281",
-          "description": "최대 체력 20% 실제 회복",
+          "description": "자신 최대 체력 18% 회복 · 부상일 때 자동 사용",
           "actions": [
             {
-              "op": "heal",
-              "value": 0.2
+              "op": "priest-kit",
+              "kind": "novice-mend",
+              "target": "self",
+              "range": 125,
+              "description": "자신 최대 체력 18% 회복 · 부상일 때 자동 사용"
             }
           ],
           "fx": {
@@ -16446,16 +16455,19 @@
             "recipe": 281,
             "choreography": [
               {
-                "op": "heal",
-                "value": 0.2
+                "op": "priest-kit",
+                "kind": "novice-mend",
+                "target": "self",
+                "range": 125,
+                "description": "자신 최대 체력 18% 회복 · 부상일 때 자동 사용"
               }
             ],
             "rays": 6,
             "rotation": 137,
-            "shape": "heal"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 20% 실제 회복",
-          "visual": "전용 연출 sangmin-0:1 · heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "자신 최대 체력 18% 회복 · 부상일 때 자동 사용",
+          "visual": "전용 연출 sangmin-0:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-0-skill-2",
@@ -16479,11 +16491,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-282",
-          "description": "최대 체력 15% 보호막",
+          "description": "8초 최대 체력 16% 보호막 · 중복 누적 없음",
           "actions": [
             {
-              "op": "shield",
-              "value": 0.15
+              "op": "priest-kit",
+              "kind": "faith-ward",
+              "target": "self",
+              "range": 125,
+              "description": "8초 최대 체력 16% 보호막 · 중복 누적 없음"
             }
           ],
           "fx": {
@@ -16494,16 +16509,19 @@
             "recipe": 282,
             "choreography": [
               {
-                "op": "shield",
-                "value": 0.15
+                "op": "priest-kit",
+                "kind": "faith-ward",
+                "target": "self",
+                "range": 125,
+                "description": "8초 최대 체력 16% 보호막 · 중복 누적 없음"
               }
             ],
             "rays": 7,
             "rotation": 174,
-            "shape": "shield"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 15% 보호막",
-          "visual": "전용 연출 sangmin-0:2 · shield · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 최대 체력 16% 보호막 · 중복 누적 없음",
+          "visual": "전용 연출 sangmin-0:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-0-skill-3",
@@ -16523,21 +16541,18 @@
           },
           "cost": 16,
           "cooldown": 34,
-          "range": 125,
-          "radius": 150,
+          "range": 440,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-283",
-          "description": "0.4초 뒤 반경 150에 500% 착탄 피해 / 최대 체력 8% 실제 회복",
+          "description": "0.45초 뒤 반경 130에 480% · 적중 시 최대 체력 8% 회복",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 150,
-              "delay": 0.4
-            },
-            {
-              "op": "heal",
-              "value": 0.08
+              "op": "priest-kit",
+              "kind": "dawn-verdict",
+              "target": "area",
+              "range": 440,
+              "description": "0.45초 뒤 반경 130에 480% · 적중 시 최대 체력 8% 회복"
             }
           ],
           "fx": {
@@ -16548,22 +16563,19 @@
             "recipe": 283,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 150,
-                "delay": 0.4
-              },
-              {
-                "op": "heal",
-                "value": 0.08
+                "op": "priest-kit",
+                "kind": "dawn-verdict",
+                "target": "area",
+                "range": 440,
+                "description": "0.45초 뒤 반경 130에 480% · 적중 시 최대 체력 8% 회복"
               }
             ],
             "rays": 8,
             "rotation": 31,
-            "shape": "blast+heal"
+            "shape": "priest-kit"
           },
-          "actualText": "0.4초 뒤 반경 150에 500% 착탄 피해 / 최대 체력 8% 실제 회복",
-          "visual": "전용 연출 sangmin-0:3 · blast → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.45초 뒤 반경 130에 480% · 적중 시 최대 체력 8% 회복",
+          "visual": "전용 연출 sangmin-0:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -16575,8 +16587,8 @@
       "parent": "sangmin-0",
       "style": "strike",
       "resource": "분노",
-      "review": "연환 정권 — volley / 회복 타격 — hit → heal / 수행의 호흡 — buff / 권사의 일격 — combo-finish",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "연환 정권 — 좌우 정권 3회 · 각 75% · 실제 명중마다 연계 축적 / 회복 타격 — 장타 240% · 실제 명중 시 최대 체력 9% 회복 / 수행의 호흡 — 7초 받는 피해 15% 감소 · 기본 공격 적중마다 분노 4 추가 / 권사의 일격 — 0.35초 준비 후 600% + 연계당 25% · 최대 8연계 소비",
+      "intendedIdentity": "명중 연계와 회복 장타·호흡으로 싸우는 근접 수행자 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-1-skill-0",
@@ -16596,18 +16608,18 @@
           },
           "cost": 0,
           "cooldown": 5.6,
-          "range": 125,
+          "range": 130,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-284",
-          "description": "0.16초 간격 3회 · 타격당 70%",
+          "description": "좌우 정권 3회 · 각 75% · 실제 명중마다 연계 축적",
           "actions": [
             {
-              "op": "volley",
-              "count": 3,
-              "power": 0.7,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "priest-kit",
+              "kind": "flowing-fists",
+              "target": "single",
+              "range": 130,
+              "description": "좌우 정권 3회 · 각 75% · 실제 명중마다 연계 축적"
             }
           ],
           "fx": {
@@ -16618,19 +16630,19 @@
             "recipe": 284,
             "choreography": [
               {
-                "op": "volley",
-                "count": 3,
-                "power": 0.7,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "priest-kit",
+                "kind": "flowing-fists",
+                "target": "single",
+                "range": 130,
+                "description": "좌우 정권 3회 · 각 75% · 실제 명중마다 연계 축적"
               }
             ],
             "rays": 9,
             "rotation": 68,
-            "shape": "volley"
+            "shape": "priest-kit"
           },
-          "actualText": "0.16초 간격 3회 · 타격당 70%",
-          "visual": "전용 연출 sangmin-1:0 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "좌우 정권 3회 · 각 75% · 실제 명중마다 연계 축적",
+          "visual": "전용 연출 sangmin-1:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-1-skill-1",
@@ -16650,19 +16662,18 @@
           },
           "cost": 0,
           "cooldown": 7.9,
-          "range": 125,
+          "range": 130,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-285",
-          "description": "근접 단일 221% 타격 / 최대 체력 8% 실제 회복",
+          "description": "장타 240% · 실제 명중 시 최대 체력 9% 회복",
           "actions": [
             {
-              "op": "hit",
-              "power": 2.2
-            },
-            {
-              "op": "heal",
-              "value": 0.08
+              "op": "priest-kit",
+              "kind": "restoring-palm",
+              "target": "single",
+              "range": 130,
+              "description": "장타 240% · 실제 명중 시 최대 체력 9% 회복"
             }
           ],
           "fx": {
@@ -16673,20 +16684,19 @@
             "recipe": 285,
             "choreography": [
               {
-                "op": "hit",
-                "power": 2.2
-              },
-              {
-                "op": "heal",
-                "value": 0.08
+                "op": "priest-kit",
+                "kind": "restoring-palm",
+                "target": "single",
+                "range": 130,
+                "description": "장타 240% · 실제 명중 시 최대 체력 9% 회복"
               }
             ],
             "rays": 10,
             "rotation": 105,
-            "shape": "hit+heal"
+            "shape": "priest-kit"
           },
-          "actualText": "근접 단일 221% 타격 / 최대 체력 8% 실제 회복",
-          "visual": "전용 연출 sangmin-1:1 · hit → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "장타 240% · 실제 명중 시 최대 체력 9% 회복",
+          "visual": "전용 연출 sangmin-1:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-1-skill-2",
@@ -16710,13 +16720,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-286",
-          "description": "9초 연격 30% 증가",
+          "description": "7초 받는 피해 15% 감소 · 기본 공격 적중마다 분노 4 추가",
           "actions": [
             {
-              "op": "buff",
-              "type": "combo",
-              "value": 0.3,
-              "duration": 9
+              "op": "priest-kit",
+              "kind": "monk-breath",
+              "target": "self",
+              "range": 125,
+              "description": "7초 받는 피해 15% 감소 · 기본 공격 적중마다 분노 4 추가"
             }
           ],
           "fx": {
@@ -16727,18 +16738,19 @@
             "recipe": 286,
             "choreography": [
               {
-                "op": "buff",
-                "type": "combo",
-                "value": 0.3,
-                "duration": 9
+                "op": "priest-kit",
+                "kind": "monk-breath",
+                "target": "self",
+                "range": 125,
+                "description": "7초 받는 피해 15% 감소 · 기본 공격 적중마다 분노 4 추가"
               }
             ],
             "rays": 11,
             "rotation": 142,
-            "shape": "buff"
+            "shape": "priest-kit"
           },
-          "actualText": "9초 연격 30% 증가",
-          "visual": "전용 연출 sangmin-1:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "7초 받는 피해 15% 감소 · 기본 공격 적중마다 분노 4 추가",
+          "visual": "전용 연출 sangmin-1:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-1-skill-3",
@@ -16758,15 +16770,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
+          "range": 150,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-287",
-          "description": "연격을 전부 소모해 단일 마무리 피해 증폭",
+          "description": "0.35초 준비 후 600% + 연계당 25% · 최대 8연계 소비",
           "actions": [
             {
-              "op": "combo-finish",
-              "power": 6
+              "op": "priest-kit",
+              "kind": "monk-finisher",
+              "target": "single",
+              "range": 150,
+              "description": "0.35초 준비 후 600% + 연계당 25% · 최대 8연계 소비"
             }
           ],
           "fx": {
@@ -16777,16 +16792,19 @@
             "recipe": 287,
             "choreography": [
               {
-                "op": "combo-finish",
-                "power": 6
+                "op": "priest-kit",
+                "kind": "monk-finisher",
+                "target": "single",
+                "range": 150,
+                "description": "0.35초 준비 후 600% + 연계당 25% · 최대 8연계 소비"
               }
             ],
             "rays": 12,
             "rotation": 179,
-            "shape": "combo-finish"
+            "shape": "priest-kit"
           },
-          "actualText": "연격을 전부 소모해 단일 마무리 피해 증폭",
-          "visual": "전용 연출 sangmin-1:3 · combo-finish · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.35초 준비 후 600% + 연계당 25% · 최대 8연계 소비",
+          "visual": "전용 연출 sangmin-1:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -16798,8 +16816,8 @@
       "parent": "sangmin-0",
       "style": "holy",
       "resource": "마력",
-      "review": "성스러운 화살 — missile / 치유 기도 — heal / 작은 성역 — zone / 신성한 파동 — blast → heal",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
+      "review": "성스러운 화살 — 길게 뻗는 성광 화살 · 실제 명중 시 240% / 치유 기도 — 0.35초 기도 후 최대 체력 26% 회복 / 작은 성역 — 고정 반경 165 성역 · 9초 · 매초 55% 피해와 최대 체력 2% 자가 회복 / 신성한 파동 — 자신 중심 반경 230으로 퍼지는 신성 파동 · 520% · 최대 체력 12% 회복",
+      "intendedIdentity": "고정 성역과 자신 중심 신성 파동으로 지역을 지키는 성직자 계열 · 분기 전투 방식 습득 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-2-skill-0",
@@ -16819,15 +16837,18 @@
           },
           "cost": 5,
           "cooldown": 5.6,
-          "range": 460,
+          "range": 480,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-288",
-          "description": "직선 투사체 200% · 실제 충돌 시 피해",
+          "description": "길게 뻗는 성광 화살 · 실제 명중 시 240%",
           "actions": [
             {
-              "op": "missile",
-              "power": 2
+              "op": "priest-kit",
+              "kind": "priest-arrow",
+              "target": "single",
+              "range": 480,
+              "description": "길게 뻗는 성광 화살 · 실제 명중 시 240%"
             }
           ],
           "fx": {
@@ -16838,16 +16859,19 @@
             "recipe": 288,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2
+                "op": "priest-kit",
+                "kind": "priest-arrow",
+                "target": "single",
+                "range": 480,
+                "description": "길게 뻗는 성광 화살 · 실제 명중 시 240%"
               }
             ],
             "rays": 5,
             "rotation": 36,
-            "shape": "missile"
+            "shape": "priest-kit"
           },
-          "actualText": "직선 투사체 200% · 실제 충돌 시 피해",
-          "visual": "전용 연출 sangmin-2:0 · missile · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "길게 뻗는 성광 화살 · 실제 명중 시 240%",
+          "visual": "전용 연출 sangmin-2:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-2-skill-1",
@@ -16871,11 +16895,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-289",
-          "description": "최대 체력 24% 실제 회복",
+          "description": "0.35초 기도 후 최대 체력 26% 회복",
           "actions": [
             {
-              "op": "heal",
-              "value": 0.24
+              "op": "priest-kit",
+              "kind": "priest-prayer",
+              "target": "self",
+              "range": 125,
+              "description": "0.35초 기도 후 최대 체력 26% 회복"
             }
           ],
           "fx": {
@@ -16886,16 +16913,19 @@
             "recipe": 289,
             "choreography": [
               {
-                "op": "heal",
-                "value": 0.24
+                "op": "priest-kit",
+                "kind": "priest-prayer",
+                "target": "self",
+                "range": 125,
+                "description": "0.35초 기도 후 최대 체력 26% 회복"
               }
             ],
             "rays": 6,
             "rotation": 73,
-            "shape": "heal"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 24% 실제 회복",
-          "visual": "전용 연출 sangmin-2:1 · heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.35초 기도 후 최대 체력 26% 회복",
+          "visual": "전용 연출 sangmin-2:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-2-skill-2",
@@ -16914,21 +16944,20 @@
             "color": "#73b4ed"
           },
           "cost": 8,
-          "cooldown": 13.4,
-          "range": 460,
-          "radius": 190,
+          "cooldown": 15,
+          "range": 125,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-290",
-          "description": "성역 지대 10초 · 반경 190 · 0.8초마다 공격력 65% 피해 및 지대 내 자가 회복",
+          "description": "고정 반경 165 성역 · 9초 · 매초 55% 피해와 최대 체력 2% 자가 회복",
           "actions": [
             {
-              "op": "zone",
-              "type": "sanctuary",
-              "power": 0.65,
-              "radius": 190,
-              "duration": 10,
-              "interval": 0.8,
-              "holyAura": true
+              "op": "priest-kit",
+              "kind": "anchored-chapel",
+              "target": "self",
+              "range": 125,
+              "description": "고정 반경 165 성역 · 9초 · 매초 55% 피해와 최대 체력 2% 자가 회복",
+              "cooldown": 15
             }
           ],
           "fx": {
@@ -16939,21 +16968,20 @@
             "recipe": 290,
             "choreography": [
               {
-                "op": "zone",
-                "type": "sanctuary",
-                "power": 0.65,
-                "radius": 190,
-                "duration": 10,
-                "interval": 0.8,
-                "holyAura": true
+                "op": "priest-kit",
+                "kind": "anchored-chapel",
+                "target": "self",
+                "range": 125,
+                "description": "고정 반경 165 성역 · 9초 · 매초 55% 피해와 최대 체력 2% 자가 회복",
+                "cooldown": 15
               }
             ],
             "rays": 7,
             "rotation": 110,
-            "shape": "zone"
+            "shape": "priest-kit"
           },
-          "actualText": "성역 지대 10초 · 반경 190 · 0.8초마다 공격력 65% 피해 및 지대 내 자가 회복",
-          "visual": "전용 연출 sangmin-2:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "고정 반경 165 성역 · 9초 · 매초 55% 피해와 최대 체력 2% 자가 회복",
+          "visual": "전용 연출 sangmin-2:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-2-skill-3",
@@ -16973,21 +17001,18 @@
           },
           "cost": 16,
           "cooldown": 34.4,
-          "range": 125,
-          "radius": 160,
+          "range": 460,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-291",
-          "description": "0초 뒤 반경 160에 500% 착탄 피해 / 최대 체력 15% 실제 회복",
+          "description": "자신 중심 반경 230으로 퍼지는 신성 파동 · 520% · 최대 체력 12% 회복",
           "actions": [
             {
-              "op": "blast",
-              "power": 5,
-              "radius": 160,
-              "delay": 0
-            },
-            {
-              "op": "heal",
-              "value": 0.15
+              "op": "priest-kit",
+              "kind": "priest-wave",
+              "target": "area",
+              "range": 460,
+              "description": "자신 중심 반경 230으로 퍼지는 신성 파동 · 520% · 최대 체력 12% 회복"
             }
           ],
           "fx": {
@@ -16998,22 +17023,19 @@
             "recipe": 291,
             "choreography": [
               {
-                "op": "blast",
-                "power": 5,
-                "radius": 160,
-                "delay": 0
-              },
-              {
-                "op": "heal",
-                "value": 0.15
+                "op": "priest-kit",
+                "kind": "priest-wave",
+                "target": "area",
+                "range": 460,
+                "description": "자신 중심 반경 230으로 퍼지는 신성 파동 · 520% · 최대 체력 12% 회복"
               }
             ],
             "rays": 8,
             "rotation": 147,
-            "shape": "blast+heal"
+            "shape": "priest-kit"
           },
-          "actualText": "0초 뒤 반경 160에 500% 착탄 피해 / 최대 체력 15% 실제 회복",
-          "visual": "전용 연출 sangmin-2:3 · blast → heal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "자신 중심 반경 230으로 퍼지는 신성 파동 · 520% · 최대 체력 12% 회복",
+          "visual": "전용 연출 sangmin-2:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -17025,8 +17047,8 @@
       "parent": "sangmin-1",
       "style": "strike",
       "resource": "분노",
-      "review": "연환권 — volley / 타격 치유 — volley → buff / 연계 집중 — buff / 최종 정권 — combo-finish",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "질풍 연환권 — 3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40% / 승천 연각 — 상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역 / 무아의 경지 — 8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복 / 백열백련권 — 0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화",
+      "intendedIdentity": "연타 축적·상승 발차기·백열 연격으로 연결하는 권투 전문가 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-3-skill-0",
@@ -17034,7 +17056,7 @@
           "heroId": 10,
           "cell": 3,
           "slot": 0,
-          "name": "연환권",
+          "name": "질풍 연환권",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17046,18 +17068,18 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 125,
+          "range": 140,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-292",
-          "description": "0.16초 간격 4회 · 타격당 65%",
+          "description": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%",
           "actions": [
             {
-              "op": "volley",
-              "count": 4,
-              "power": 0.65,
-              "gap": 0.16,
-              "shape": "single"
+              "op": "priest-kit",
+              "kind": "champion-jabs",
+              "target": "single",
+              "range": 140,
+              "description": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%"
             }
           ],
           "fx": {
@@ -17068,19 +17090,19 @@
             "recipe": 292,
             "choreography": [
               {
-                "op": "volley",
-                "count": 4,
-                "power": 0.65,
-                "gap": 0.16,
-                "shape": "single"
+                "op": "priest-kit",
+                "kind": "champion-jabs",
+                "target": "single",
+                "range": 140,
+                "description": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%"
               }
             ],
             "rays": 9,
             "rotation": 4,
-            "shape": "volley"
+            "shape": "priest-kit"
           },
-          "actualText": "0.16초 간격 4회 · 타격당 65%",
-          "visual": "전용 연출 sangmin-3:0 · volley · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%",
+          "visual": "전용 연출 sangmin-3:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-3-skill-1",
@@ -17088,7 +17110,7 @@
           "heroId": 10,
           "cell": 3,
           "slot": 1,
-          "name": "타격 치유",
+          "name": "승천 연각",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17100,24 +17122,18 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 125,
+          "range": 155,
           "radius": 140,
-          "target": "single",
+          "target": "area",
           "effectType": "recipe-293",
-          "description": "0.16초 간격 3회 · 타격당 80% / 6초 흡혈 20% 증가",
+          "description": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역",
           "actions": [
             {
-              "op": "volley",
-              "count": 3,
-              "power": 0.8,
-              "gap": 0.16,
-              "shape": "single"
-            },
-            {
-              "op": "buff",
-              "type": "lifesteal",
-              "value": 0.2,
-              "duration": 6
+              "op": "priest-kit",
+              "kind": "rising-kick",
+              "target": "area",
+              "range": 155,
+              "description": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역"
             }
           ],
           "fx": {
@@ -17128,25 +17144,19 @@
             "recipe": 293,
             "choreography": [
               {
-                "op": "volley",
-                "count": 3,
-                "power": 0.8,
-                "gap": 0.16,
-                "shape": "single"
-              },
-              {
-                "op": "buff",
-                "type": "lifesteal",
-                "value": 0.2,
-                "duration": 6
+                "op": "priest-kit",
+                "kind": "rising-kick",
+                "target": "area",
+                "range": 155,
+                "description": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역"
               }
             ],
             "rays": 10,
             "rotation": 41,
-            "shape": "volley+buff"
+            "shape": "priest-kit"
           },
-          "actualText": "0.16초 간격 3회 · 타격당 80% / 6초 흡혈 20% 증가",
-          "visual": "전용 연출 sangmin-3:1 · volley → buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역",
+          "visual": "전용 연출 sangmin-3:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-3-skill-2",
@@ -17154,7 +17164,7 @@
           "heroId": 10,
           "cell": 3,
           "slot": 2,
-          "name": "연계 집중",
+          "name": "무아의 경지",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17170,13 +17180,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-294",
-          "description": "10초 연격 45% 증가",
+          "description": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복",
           "actions": [
             {
-              "op": "buff",
-              "type": "combo",
-              "value": 0.45,
-              "duration": 10
+              "op": "priest-kit",
+              "kind": "perfect-rhythm",
+              "target": "self",
+              "range": 125,
+              "description": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복"
             }
           ],
           "fx": {
@@ -17187,18 +17198,19 @@
             "recipe": 294,
             "choreography": [
               {
-                "op": "buff",
-                "type": "combo",
-                "value": 0.45,
-                "duration": 10
+                "op": "priest-kit",
+                "kind": "perfect-rhythm",
+                "target": "self",
+                "range": 125,
+                "description": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복"
               }
             ],
             "rays": 11,
             "rotation": 78,
-            "shape": "buff"
+            "shape": "priest-kit"
           },
-          "actualText": "10초 연격 45% 증가",
-          "visual": "전용 연출 sangmin-3:2 · buff · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복",
+          "visual": "전용 연출 sangmin-3:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-3-skill-3",
@@ -17206,7 +17218,7 @@
           "heroId": 10,
           "cell": 3,
           "slot": 3,
-          "name": "최종 정권",
+          "name": "백열백련권",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17218,15 +17230,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
+          "range": 160,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-295",
-          "description": "연격을 전부 소모해 단일 마무리 피해 증폭",
+          "description": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화",
           "actions": [
             {
-              "op": "combo-finish",
-              "power": 8
+              "op": "priest-kit",
+              "kind": "hundred-fists",
+              "target": "single",
+              "range": 160,
+              "description": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화"
             }
           ],
           "fx": {
@@ -17237,16 +17252,19 @@
             "recipe": 295,
             "choreography": [
               {
-                "op": "combo-finish",
-                "power": 8
+                "op": "priest-kit",
+                "kind": "hundred-fists",
+                "target": "single",
+                "range": 160,
+                "description": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화"
               }
             ],
             "rays": 12,
             "rotation": 115,
-            "shape": "combo-finish"
+            "shape": "priest-kit"
           },
-          "actualText": "연격을 전부 소모해 단일 마무리 피해 증폭",
-          "visual": "전용 연출 sangmin-3:3 · combo-finish · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화",
+          "visual": "전용 연출 sangmin-3:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -17258,8 +17276,8 @@
       "parent": "sangmin-1",
       "style": "venom",
       "resource": "분노",
-      "review": "심판 낙인 — hit → status / 성화 점화 — status → blast / 낙인 전이 — spread / 최후의 심판 — consume → blast",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "심판 낙인 — 실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3 / 성화 점화 — 반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화 / 판결의 전도 — 10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발 / 최후의 심판 — 0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비",
+      "intendedIdentity": "낙인→성화→처치 전파→판결로 이어지는 신성 공격수 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-4-skill-0",
@@ -17279,22 +17297,18 @@
           },
           "cost": 0,
           "cooldown": 6,
-          "range": 460,
+          "range": 170,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-296",
-          "description": "근접 단일 200% 타격 / brand 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30%",
+          "description": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3",
           "actions": [
             {
-              "op": "hit",
-              "power": 2
-            },
-            {
-              "op": "status",
-              "type": "brand",
-              "power": 0.3,
-              "stacks": 2,
-              "duration": 8
+              "op": "priest-kit",
+              "kind": "brand-strike",
+              "target": "single",
+              "range": 170,
+              "description": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3"
             }
           ],
           "fx": {
@@ -17305,23 +17319,19 @@
             "recipe": 296,
             "choreography": [
               {
-                "op": "hit",
-                "power": 2
-              },
-              {
-                "op": "status",
-                "type": "brand",
-                "power": 0.3,
-                "stacks": 2,
-                "duration": 8
+                "op": "priest-kit",
+                "kind": "brand-strike",
+                "target": "single",
+                "range": 170,
+                "description": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3"
               }
             ],
             "rays": 5,
             "rotation": 152,
-            "shape": "hit+status"
+            "shape": "priest-kit"
           },
-          "actualText": "근접 단일 200% 타격 / brand 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30%",
-          "visual": "전용 연출 sangmin-4:0 · hit → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3",
+          "visual": "전용 연출 sangmin-4:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-4-skill-1",
@@ -17341,24 +17351,18 @@
           },
           "cost": 0,
           "cooldown": 8.3,
-          "range": 460,
+          "range": 440,
           "radius": 140,
           "target": "area",
           "effectType": "recipe-297",
-          "description": "brand 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45% / 0초 뒤 반경 115에 200% 착탄 피해",
+          "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화",
           "actions": [
             {
-              "op": "status",
-              "type": "brand",
-              "power": 0.45,
-              "stacks": 2,
-              "duration": 8
-            },
-            {
-              "op": "blast",
-              "power": 2,
-              "radius": 115,
-              "delay": 0
+              "op": "priest-kit",
+              "kind": "holy-ignition",
+              "target": "area",
+              "range": 440,
+              "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화"
             }
           ],
           "fx": {
@@ -17369,25 +17373,19 @@
             "recipe": 297,
             "choreography": [
               {
-                "op": "status",
-                "type": "brand",
-                "power": 0.45,
-                "stacks": 2,
-                "duration": 8
-              },
-              {
-                "op": "blast",
-                "power": 2,
-                "radius": 115,
-                "delay": 0
+                "op": "priest-kit",
+                "kind": "holy-ignition",
+                "target": "area",
+                "range": 440,
+                "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화"
               }
             ],
             "rays": 6,
             "rotation": 9,
-            "shape": "status+blast"
+            "shape": "priest-kit"
           },
-          "actualText": "brand 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 45% / 0초 뒤 반경 115에 200% 착탄 피해",
-          "visual": "전용 연출 sangmin-4:1 · status → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화",
+          "visual": "전용 연출 sangmin-4:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-4-skill-2",
@@ -17395,7 +17393,7 @@
           "heroId": 10,
           "cell": 4,
           "slot": 2,
-          "name": "낙인 전이",
+          "name": "판결의 전도",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17408,15 +17406,17 @@
           "cost": 0,
           "cooldown": 13.8,
           "range": 125,
-          "radius": 170,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-298",
-          "description": "대상의 brand 상태를 반경 170의 적에게 전염",
+          "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발",
           "actions": [
             {
-              "op": "spread",
-              "type": "brand",
-              "radius": 170
+              "op": "priest-kit",
+              "kind": "verdict-propagation",
+              "target": "self",
+              "range": 125,
+              "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발"
             }
           ],
           "fx": {
@@ -17427,17 +17427,19 @@
             "recipe": 298,
             "choreography": [
               {
-                "op": "spread",
-                "type": "brand",
-                "radius": 170
+                "op": "priest-kit",
+                "kind": "verdict-propagation",
+                "target": "self",
+                "range": 125,
+                "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발"
               }
             ],
             "rays": 7,
             "rotation": 46,
-            "shape": "spread"
+            "shape": "priest-kit"
           },
-          "actualText": "대상의 brand 상태를 반경 170의 적에게 전염",
-          "visual": "전용 연출 sangmin-4:2 · spread · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발",
+          "visual": "전용 연출 sangmin-4:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-4-skill-3",
@@ -17457,22 +17459,18 @@
           },
           "cost": 100,
           "cooldown": 0,
-          "range": 125,
-          "radius": 170,
+          "range": 440,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-299",
-          "description": "brand를 소비해 중첩당 350% 타격 / 0.5초 뒤 반경 170에 400% 착탄 피해",
+          "description": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비",
           "actions": [
             {
-              "op": "consume",
-              "type": "brand",
-              "power": 3.5
-            },
-            {
-              "op": "blast",
-              "power": 4,
-              "radius": 170,
-              "delay": 0.5
+              "op": "priest-kit",
+              "kind": "inquisitor-verdict",
+              "target": "area",
+              "range": 440,
+              "description": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비"
             }
           ],
           "fx": {
@@ -17483,23 +17481,19 @@
             "recipe": 299,
             "choreography": [
               {
-                "op": "consume",
-                "type": "brand",
-                "power": 3.5
-              },
-              {
-                "op": "blast",
-                "power": 4,
-                "radius": 170,
-                "delay": 0.5
+                "op": "priest-kit",
+                "kind": "inquisitor-verdict",
+                "target": "area",
+                "range": 440,
+                "description": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비"
               }
             ],
             "rays": 8,
             "rotation": 83,
-            "shape": "consume+blast"
+            "shape": "priest-kit"
           },
-          "actualText": "brand를 소비해 중첩당 350% 타격 / 0.5초 뒤 반경 170에 400% 착탄 피해",
-          "visual": "전용 연출 sangmin-4:3 · consume → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비",
+          "visual": "전용 연출 sangmin-4:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -17511,8 +17505,8 @@
       "parent": "sangmin-2",
       "style": "holy",
       "resource": "마력",
-      "review": "하이프리스트 · 치유 기도 — heal → overheal / 대보호막 — shield / 성역 — zone / 기적의 빛 — heal → overheal → blast",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "은총의 기도 — 최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사 / 성당의 방벽 — 9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가 / 순례자의 성소 — 추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95% / 기적의 빛 — 은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복",
+      "intendedIdentity": "초과 치유를 은총으로 모아 방벽·이동 성소·기적에 사용하는 성직자 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-5-skill-0",
@@ -17520,7 +17514,7 @@
           "heroId": 10,
           "cell": 5,
           "slot": 0,
-          "name": "하이프리스트 · 치유 기도",
+          "name": "은총의 기도",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17534,17 +17528,16 @@
           "cooldown": 6,
           "range": 125,
           "radius": 140,
-          "target": "single",
+          "target": "self",
           "effectType": "recipe-300",
-          "description": "최대 체력 30% 실제 회복 / 넘친 회복량을 신성 공격으로 전환",
+          "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사",
           "actions": [
             {
-              "op": "heal",
-              "value": 0.3
-            },
-            {
-              "op": "overheal",
-              "power": 1.8
+              "op": "priest-kit",
+              "kind": "grace-prayer",
+              "target": "self",
+              "range": 125,
+              "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사"
             }
           ],
           "fx": {
@@ -17555,20 +17548,19 @@
             "recipe": 300,
             "choreography": [
               {
-                "op": "heal",
-                "value": 0.3
-              },
-              {
-                "op": "overheal",
-                "power": 1.8
+                "op": "priest-kit",
+                "kind": "grace-prayer",
+                "target": "self",
+                "range": 125,
+                "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사"
               }
             ],
             "rays": 9,
             "rotation": 120,
-            "shape": "heal+overheal"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 30% 실제 회복 / 넘친 회복량을 신성 공격으로 전환",
-          "visual": "전용 연출 sangmin-5:0 · heal → overheal · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사",
+          "visual": "전용 연출 sangmin-5:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-5-skill-1",
@@ -17576,7 +17568,7 @@
           "heroId": 10,
           "cell": 5,
           "slot": 1,
-          "name": "대보호막",
+          "name": "성당의 방벽",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17592,11 +17584,14 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-301",
-          "description": "최대 체력 29% 보호막",
+          "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가",
           "actions": [
             {
-              "op": "shield",
-              "value": 0.28
+              "op": "priest-kit",
+              "kind": "cathedral-ward",
+              "target": "self",
+              "range": 125,
+              "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가"
             }
           ],
           "fx": {
@@ -17607,16 +17602,19 @@
             "recipe": 301,
             "choreography": [
               {
-                "op": "shield",
-                "value": 0.28
+                "op": "priest-kit",
+                "kind": "cathedral-ward",
+                "target": "self",
+                "range": 125,
+                "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가"
               }
             ],
             "rays": 10,
             "rotation": 157,
-            "shape": "shield"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 29% 보호막",
-          "visual": "전용 연출 sangmin-5:1 · shield · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가",
+          "visual": "전용 연출 sangmin-5:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-5-skill-2",
@@ -17624,7 +17622,7 @@
           "heroId": 10,
           "cell": 5,
           "slot": 2,
-          "name": "성역",
+          "name": "순례자의 성소",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17635,22 +17633,20 @@
             "color": "#73b4ed"
           },
           "cost": 8,
-          "cooldown": 13.8,
-          "range": 460,
-          "radius": 230,
+          "cooldown": 16,
+          "range": 125,
+          "radius": 140,
           "target": "self",
           "effectType": "recipe-302",
-          "description": "성역 추종 오라 16초 · 반경 230 · 0.65초마다 공격력 95% 피해 및 지대 내 자가 회복",
+          "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
           "actions": [
             {
-              "op": "zone",
-              "type": "sanctuary",
-              "power": 0.95,
-              "radius": 230,
-              "duration": 16,
-              "interval": 0.65,
-              "holyAura": true,
-              "follow": true
+              "op": "priest-kit",
+              "kind": "pilgrim-chapel",
+              "target": "self",
+              "range": 125,
+              "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+              "cooldown": 16
             }
           ],
           "fx": {
@@ -17661,22 +17657,20 @@
             "recipe": 302,
             "choreography": [
               {
-                "op": "zone",
-                "type": "sanctuary",
-                "power": 0.95,
-                "radius": 230,
-                "duration": 16,
-                "interval": 0.65,
-                "holyAura": true,
-                "follow": true
+                "op": "priest-kit",
+                "kind": "pilgrim-chapel",
+                "target": "self",
+                "range": 125,
+                "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+                "cooldown": 16
               }
             ],
             "rays": 11,
             "rotation": 14,
-            "shape": "zone"
+            "shape": "priest-kit"
           },
-          "actualText": "성역 추종 오라 16초 · 반경 230 · 0.65초마다 공격력 95% 피해 및 지대 내 자가 회복",
-          "visual": "전용 연출 sangmin-5:2 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+          "visual": "전용 연출 sangmin-5:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-5-skill-3",
@@ -17696,25 +17690,18 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 125,
-          "radius": 170,
+          "range": 460,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-303",
-          "description": "최대 체력 56% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
+          "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복",
           "actions": [
             {
-              "op": "heal",
-              "value": 0.55
-            },
-            {
-              "op": "overheal",
-              "power": 4
-            },
-            {
-              "op": "blast",
-              "power": 4,
-              "radius": 170,
-              "delay": 0.6
+              "op": "priest-kit",
+              "kind": "miracle-release",
+              "target": "area",
+              "range": 460,
+              "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복"
             }
           ],
           "fx": {
@@ -17725,26 +17712,19 @@
             "recipe": 303,
             "choreography": [
               {
-                "op": "heal",
-                "value": 0.55
-              },
-              {
-                "op": "overheal",
-                "power": 4
-              },
-              {
-                "op": "blast",
-                "power": 4,
-                "radius": 170,
-                "delay": 0.6
+                "op": "priest-kit",
+                "kind": "miracle-release",
+                "target": "area",
+                "range": 460,
+                "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복"
               }
             ],
             "rays": 12,
             "rotation": 51,
-            "shape": "heal+overheal+blast"
+            "shape": "priest-kit"
           },
-          "actualText": "최대 체력 56% 실제 회복 / 넘친 회복량을 신성 공격으로 전환 / 0.6초 뒤 반경 170에 400% 착탄 피해",
-          "visual": "전용 연출 sangmin-5:3 · heal → overheal → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복",
+          "visual": "전용 연출 sangmin-5:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },
@@ -17756,8 +17736,8 @@
       "parent": "sangmin-2",
       "style": "root",
       "resource": "마력",
-      "review": "봉인 부적 — missile → status / 봉인 결계 — zone / 주문 차단 — interrupt → consume / 퇴마 의식 — status → consume → interrupt → blast",
-      "intendedIdentity": "연권·낙인·초과 회복·퇴마 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "봉인 부적 — 종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음 / 사방 결계 — 적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1 / 주문 차단 — 시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기 / 퇴마 의식 — 0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
+      "intendedIdentity": "실제 명중한 부적과 사방 결계로 봉인을 쌓고 주문을 차단하는 퇴마사 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
           "id": "sangmin-6-skill-0",
@@ -17777,22 +17757,18 @@
           },
           "cost": 5,
           "cooldown": 6,
-          "range": 460,
+          "range": 480,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-304",
-          "description": "직선 투사체 240% · 실제 충돌 시 피해 / seal 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
+          "description": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음",
           "actions": [
             {
-              "op": "missile",
-              "power": 2.4
-            },
-            {
-              "op": "status",
-              "type": "seal",
-              "power": 0.1,
-              "stacks": 1,
-              "duration": 8
+              "op": "priest-kit",
+              "kind": "binding-talisman",
+              "target": "single",
+              "range": 480,
+              "description": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음"
             }
           ],
           "fx": {
@@ -17803,23 +17779,19 @@
             "recipe": 304,
             "choreography": [
               {
-                "op": "missile",
-                "power": 2.4
-              },
-              {
-                "op": "status",
-                "type": "seal",
-                "power": 0.1,
-                "stacks": 1,
-                "duration": 8
+                "op": "priest-kit",
+                "kind": "binding-talisman",
+                "target": "single",
+                "range": 480,
+                "description": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음"
               }
             ],
             "rays": 5,
             "rotation": 88,
-            "shape": "missile+status"
+            "shape": "priest-kit"
           },
-          "actualText": "직선 투사체 240% · 실제 충돌 시 피해 / seal 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 10%",
-          "visual": "전용 연출 sangmin-6:0 · missile → status · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음",
+          "visual": "전용 연출 sangmin-6:0 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-6-skill-1",
@@ -17827,7 +17799,7 @@
           "heroId": 10,
           "cell": 6,
           "slot": 1,
-          "name": "봉인 결계",
+          "name": "사방 결계",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -17840,17 +17812,17 @@
           "cost": 7,
           "cooldown": 8.3,
           "range": 460,
-          "radius": 150,
-          "target": "self",
+          "radius": 140,
+          "target": "area",
           "effectType": "recipe-305",
-          "description": "봉인 지대 9초 · 반경 150 · 0.8초마다 공격력 40% 피해",
+          "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1",
           "actions": [
             {
-              "op": "zone",
-              "type": "seal",
-              "power": 0.4,
-              "radius": 150,
-              "duration": 9
+              "op": "priest-kit",
+              "kind": "fourfold-barrier",
+              "target": "area",
+              "range": 460,
+              "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1"
             }
           ],
           "fx": {
@@ -17861,19 +17833,19 @@
             "recipe": 305,
             "choreography": [
               {
-                "op": "zone",
-                "type": "seal",
-                "power": 0.4,
-                "radius": 150,
-                "duration": 9
+                "op": "priest-kit",
+                "kind": "fourfold-barrier",
+                "target": "area",
+                "range": 460,
+                "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1"
               }
             ],
             "rays": 6,
             "rotation": 125,
-            "shape": "zone"
+            "shape": "priest-kit"
           },
-          "actualText": "봉인 지대 9초 · 반경 150 · 0.8초마다 공격력 40% 피해",
-          "visual": "전용 연출 sangmin-6:1 · zone · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1",
+          "visual": "전용 연출 sangmin-6:1 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-6-skill-2",
@@ -17893,20 +17865,18 @@
           },
           "cost": 8,
           "cooldown": 13.8,
-          "range": 125,
+          "range": 460,
           "radius": 140,
           "target": "single",
           "effectType": "recipe-306",
-          "description": "일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가 / seal를 소비해 중첩당 200% 타격",
+          "description": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기",
           "actions": [
             {
-              "op": "interrupt",
-              "duration": 2.5
-            },
-            {
-              "op": "consume",
-              "type": "seal",
-              "power": 2
+              "op": "priest-kit",
+              "kind": "ritual-interrupt",
+              "target": "single",
+              "range": 460,
+              "description": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기"
             }
           ],
           "fx": {
@@ -17917,21 +17887,19 @@
             "recipe": 306,
             "choreography": [
               {
-                "op": "interrupt",
-                "duration": 2.5
-              },
-              {
-                "op": "consume",
-                "type": "seal",
-                "power": 2
+                "op": "priest-kit",
+                "kind": "ritual-interrupt",
+                "target": "single",
+                "range": 460,
+                "description": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기"
               }
             ],
             "rays": 7,
             "rotation": 162,
-            "shape": "interrupt+consume"
+            "shape": "priest-kit"
           },
-          "actualText": "일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가 / seal를 소비해 중첩당 200% 타격",
-          "visual": "전용 연출 sangmin-6:2 · interrupt → consume · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기",
+          "visual": "전용 연출 sangmin-6:2 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
           "id": "sangmin-6-skill-3",
@@ -17951,33 +17919,18 @@
           },
           "cost": 16,
           "cooldown": 34.8,
-          "range": 460,
-          "radius": 180,
+          "range": 480,
+          "radius": 140,
           "target": "area",
           "effectType": "recipe-307",
-          "description": "seal 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 20% / seal를 소비해 중첩당 300% 타격 / 일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가 / 0.6초 뒤 반경 180에 500% 착탄 피해",
+          "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
           "actions": [
             {
-              "op": "status",
-              "type": "seal",
-              "power": 0.2,
-              "stacks": 3,
-              "duration": 8
-            },
-            {
-              "op": "consume",
-              "type": "seal",
-              "power": 3
-            },
-            {
-              "op": "interrupt",
-              "duration": 4
-            },
-            {
-              "op": "blast",
-              "power": 5,
-              "radius": 180,
-              "delay": 0.6
+              "op": "priest-kit",
+              "kind": "exorcist-rite",
+              "target": "area",
+              "range": 480,
+              "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단"
             }
           ],
           "fx": {
@@ -17988,34 +17941,19 @@
             "recipe": 307,
             "choreography": [
               {
-                "op": "status",
-                "type": "seal",
-                "power": 0.2,
-                "stacks": 3,
-                "duration": 8
-              },
-              {
-                "op": "consume",
-                "type": "seal",
-                "power": 3
-              },
-              {
-                "op": "interrupt",
-                "duration": 4
-              },
-              {
-                "op": "blast",
-                "power": 5,
-                "radius": 180,
-                "delay": 0.6
+                "op": "priest-kit",
+                "kind": "exorcist-rite",
+                "target": "area",
+                "range": 480,
+                "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단"
               }
             ],
             "rays": 8,
             "rotation": 19,
-            "shape": "status+consume+interrupt+blast"
+            "shape": "priest-kit"
           },
-          "actualText": "seal 3중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 20% / seal를 소비해 중첩당 300% 타격 / 일반 적 주문 차단·보스 기술 주기 지연, 완전 봉쇄 불가 / 0.6초 뒤 반경 180에 500% 착탄 피해",
-          "visual": "전용 연출 sangmin-6:3 · status → consume → interrupt → blast · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
+          "visual": "전용 연출 sangmin-6:3 · priest-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         }
       ]
     },

@@ -109,7 +109,7 @@ function draw(p,f,t,D){
  if(root.RPG_WARRIOR_FX?.draw(p,f,t))return true;
  if(root.RPG_BARD_FX?.draw(p,f,t))return true;
  if(t<0||t>4.2)return true;
- if(f.effectType==='sanctuary-pulse'){const fade=Math.max(0,1-t/.65);if(t<.65){authored(p,'sanctuary-authored',f.x,f.y,(f.radius||190)*2,(f.radius||190)*.96,0,fade*.55);for(const target of f.targets||[])recovery(p,target.x,target.y-20,t,.65,45);}return true;}if(f.effectType==='trap-explosion'){sheet(p,'heavy',t,.9,f.x,f.y,(f.radius||110)*2,(f.radius||110)*1.6);return true;}
+ if(root.RPG_PRIEST_FX?.draw(p,f,t,D))return true;if(f.effectType==='sanctuary-pulse'){const fade=Math.max(0,1-t/.65);if(t<.65){authored(p,'sanctuary-authored',f.x,f.y,(f.radius||190)*2,(f.radius||190)*.96,0,fade*.55);for(const target of f.targets||[])recovery(p,target.x,target.y-20,t,.65,45);}return true;}if(f.effectType==='trap-explosion'){sheet(p,'heavy',t,.9,f.x,f.y,(f.radius||110)*2,(f.radius||110)*1.6);return true;}
  if(f.heroId===10&&f.slot===3&&[2,5,6].includes(f.cell)){if(!f.phase)priestUltimate(p,f,t);return true;}
  if(f.phase){sheet(p,'spark',t,.35,f.x,f.y-20,45);return true;}
  const s=D.skills.find(s=>s.heroId===(f.heroId??0)&&s.cell===(f.cell??0)&&s.slot===(f.slot??0));if(!s?.mechanicsVersion)return false;

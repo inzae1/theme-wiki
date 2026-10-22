@@ -119,6 +119,7 @@ if(typeof module!=='undefined')require('./rpg-fusion-runtime.js')(E);else root.R
 if(typeof module!=='undefined')require('./rpg-knight-runtime.js')(E);else root.RPG_KNIGHT_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-gunner-runtime.js')(E);else root.RPG_GUNNER_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-merchant-runtime.js')(E);else root.RPG_MERCHANT_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-priest-runtime.js')(E);else root.RPG_PRIEST_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);

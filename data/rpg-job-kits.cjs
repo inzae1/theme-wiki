@@ -111,3 +111,5 @@ module.exports=[
 [K('사신 소환',P('reaper',1,1.7,22,{exclusive:true})),K('죽음 표식',S('death',.2,2),A('command',{power:1.2})),K('영혼 수확',X('death',2.2),A('meter',{key:'soul',value:2})),K('사형 선고',A('spend',{key:'soul',power:2}),A('execute',{power:7,threshold:.4}),P('reaper',1,2.5,20,{exclusive:true}))]
 ]
 ];
+
+module.exports[10]=require("./rpg-priest-kits.cjs");
