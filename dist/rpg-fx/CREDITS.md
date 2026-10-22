@@ -69,3 +69,7 @@ The elemental spirit and elemental king (summon-spirit.png / summon-king.png) ar
 - gunner-siege-cannon.png and templar-greatshield.png: original transparent sprites generated with imagegen, originals preserved with runtime alpha-occupancy source crops.
 - rpg-gunner-fx.js draws engine-owned bullets, rune ammunition, arcing shells, blast events and emplacement state. Existing credited impact animation sheets provide contact frames.
 - First-tier paladin aura is radius 180 with 35% damage and 1% HP per second; second-tier crusader gets mobile holy assault waves and templar gets an ornate sustained greatshield wall.
+
+## Merchant workshop units (2026-10-22)
+
+`merchant-units.png`: original artwork generated for this project with the built-in image generation tool. Six sprites: attack turret, protective core, siege turret, larva, chimera, perfected chimera. Original alpha preserved; source crops and animations implemented in `rpg-merchant-fx.js`. Prompt: see `merchant-art-prompt.txt`. Existing credited impact sheets remain in use for contact sparks and dust.

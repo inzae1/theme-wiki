@@ -7598,7 +7598,7 @@
       "heroId": 5,
       "cell": 0,
       "slot": 0,
-      "name": "가방 강타",
+      "name": "가방 휘두르기",
       "unlock": 1,
       "mechanicsVersion": 3,
       "resource": {
@@ -7610,15 +7610,18 @@
       },
       "cost": 12,
       "cooldown": 5.2,
-      "range": 125,
+      "range": 135,
       "radius": 140,
       "target": "single",
       "effectType": "recipe-140",
-      "description": "근접 단일 180% 타격",
+      "description": "근접 190% · 가방 접촉 시 동전·고철 흩날림",
       "actions": [
         {
-          "op": "hit",
-          "power": 1.8
+          "op": "merchant-kit",
+          "kind": "satchel-swing",
+          "target": "single",
+          "range": 135,
+          "description": "근접 190% · 가방 접촉 시 동전·고철 흩날림"
         }
       ],
       "fx": {
@@ -7629,13 +7632,16 @@
         "recipe": 140,
         "choreography": [
           {
-            "op": "hit",
-            "power": 1.8
+            "op": "merchant-kit",
+            "kind": "satchel-swing",
+            "target": "single",
+            "range": 135,
+            "description": "근접 190% · 가방 접촉 시 동전·고철 흩날림"
           }
         ],
         "rays": 9,
         "rotation": 140,
-        "shape": "hit"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7644,7 +7650,7 @@
       "heroId": 5,
       "cell": 0,
       "slot": 1,
-      "name": "시제품 폭탄",
+      "name": "고철 수류탄",
       "unlock": 10,
       "mechanicsVersion": 3,
       "resource": {
@@ -7656,17 +7662,18 @@
       },
       "cost": 17,
       "cooldown": 7.5,
-      "range": 125,
+      "range": 460,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-141",
-      "description": "0.7초 뒤 반경 110에 250% 착탄 피해",
+      "description": "0.65초 포물선 투척 · 고정 착탄 반경 100에 300%",
       "actions": [
         {
-          "op": "blast",
-          "power": 2.5,
-          "radius": 110,
-          "delay": 0.7
+          "op": "merchant-kit",
+          "kind": "scrap-grenade",
+          "target": "area",
+          "range": 460,
+          "description": "0.65초 포물선 투척 · 고정 착탄 반경 100에 300%"
         }
       ],
       "fx": {
@@ -7677,15 +7684,16 @@
         "recipe": 141,
         "choreography": [
           {
-            "op": "blast",
-            "power": 2.5,
-            "radius": 110,
-            "delay": 0.7
+            "op": "merchant-kit",
+            "kind": "scrap-grenade",
+            "target": "area",
+            "range": 460,
+            "description": "0.65초 포물선 투척 · 고정 착탄 반경 100에 300%"
           }
         ],
         "rays": 10,
         "rotation": 177,
-        "shape": "blast"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7694,7 +7702,7 @@
       "heroId": 5,
       "cell": 0,
       "slot": 2,
-      "name": "응급 정비",
+      "name": "응급 구급함",
       "unlock": 20,
       "mechanicsVersion": 3,
       "resource": {
@@ -7710,11 +7718,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-142",
-      "description": "최대 체력 12% 실제 회복",
+      "description": "최대 체력 14% 회복 · 붕대와 구급함 사용",
       "actions": [
         {
-          "op": "heal",
-          "value": 0.12
+          "op": "merchant-kit",
+          "kind": "emergency-kit",
+          "target": "self",
+          "range": 125,
+          "description": "최대 체력 14% 회복 · 붕대와 구급함 사용"
         }
       ],
       "fx": {
@@ -7725,13 +7736,16 @@
         "recipe": 142,
         "choreography": [
           {
-            "op": "heal",
-            "value": 0.12
+            "op": "merchant-kit",
+            "kind": "emergency-kit",
+            "target": "self",
+            "range": 125,
+            "description": "최대 체력 14% 회복 · 붕대와 구급함 사용"
           }
         ],
         "rays": 11,
         "rotation": 34,
-        "shape": "heal"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7752,17 +7766,18 @@
       },
       "cost": 38,
       "cooldown": 34,
-      "range": 125,
-      "radius": 170,
+      "range": 460,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-143",
-      "description": "0.8초 뒤 반경 170에 500% 착탄 피해",
+      "description": "재고 상자 3개를 시간차 투척 · 각 반경 90에 260%",
       "actions": [
         {
-          "op": "blast",
-          "power": 5,
-          "radius": 170,
-          "delay": 0.8
+          "op": "merchant-kit",
+          "kind": "stock-release",
+          "target": "area",
+          "range": 460,
+          "description": "재고 상자 3개를 시간차 투척 · 각 반경 90에 260%"
         }
       ],
       "fx": {
@@ -7773,15 +7788,16 @@
         "recipe": 143,
         "choreography": [
           {
-            "op": "blast",
-            "power": 5,
-            "radius": 170,
-            "delay": 0.8
+            "op": "merchant-kit",
+            "kind": "stock-release",
+            "target": "area",
+            "range": 460,
+            "description": "재고 상자 3개를 시간차 투척 · 각 반경 90에 260%"
           }
         ],
         "rays": 12,
         "rotation": 71,
-        "shape": "blast"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7790,7 +7806,7 @@
       "heroId": 5,
       "cell": 1,
       "slot": 0,
-      "name": "강철 망치",
+      "name": "단조 망치",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -7802,17 +7818,18 @@
       },
       "cost": 12,
       "cooldown": 5.6,
-      "range": 110,
+      "range": 135,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-144",
-      "description": "거리 110 전방 부채꼴 270%",
+      "description": "0.35초 후 반경 80에 280% + 방어력 비례 타격",
       "actions": [
         {
-          "op": "cone",
-          "power": 2.7,
-          "radius": 110,
-          "angle": 1.25
+          "op": "merchant-kit",
+          "kind": "forge-hammer",
+          "target": "area",
+          "range": 135,
+          "description": "0.35초 후 반경 80에 280% + 방어력 비례 타격"
         }
       ],
       "fx": {
@@ -7823,15 +7840,16 @@
         "recipe": 144,
         "choreography": [
           {
-            "op": "cone",
-            "power": 2.7,
-            "radius": 110,
-            "angle": 1.25
+            "op": "merchant-kit",
+            "kind": "forge-hammer",
+            "target": "area",
+            "range": 135,
+            "description": "0.35초 후 반경 80에 280% + 방어력 비례 타격"
           }
         ],
         "rays": 5,
         "rotation": 108,
-        "shape": "cone"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7856,13 +7874,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-145",
-      "description": "실제 공격 포탑 1개 · 10초",
+      "description": "시험 포탑 최대 1기 · 22초 유지 · 탄환 명중 시 55%",
       "actions": [
         {
-          "op": "turret",
-          "count": 1,
-          "power": 0.55,
-          "duration": 10
+          "op": "merchant-kit",
+          "kind": "prototype-turret",
+          "target": "self",
+          "range": 125,
+          "description": "시험 포탑 최대 1기 · 22초 유지 · 탄환 명중 시 55%"
         }
       ],
       "fx": {
@@ -7873,15 +7892,16 @@
         "recipe": 145,
         "choreography": [
           {
-            "op": "turret",
-            "count": 1,
-            "power": 0.55,
-            "duration": 10
+            "op": "merchant-kit",
+            "kind": "prototype-turret",
+            "target": "self",
+            "range": 125,
+            "description": "시험 포탑 최대 1기 · 22초 유지 · 탄환 명중 시 55%"
           }
         ],
         "rays": 6,
         "rotation": 145,
-        "shape": "turret"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7890,7 +7910,7 @@
       "heroId": 5,
       "cell": 1,
       "slot": 2,
-      "name": "무기 정비",
+      "name": "무기 담금질",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -7906,13 +7926,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-146",
-      "description": "9초 공격력 25% 증가",
+      "description": "9초 공격력 20% 증가 · 숫돌·담금질 불꽃",
       "actions": [
         {
-          "op": "buff",
-          "type": "power",
-          "value": 0.25,
-          "duration": 9
+          "op": "merchant-kit",
+          "kind": "weapon-temper",
+          "target": "self",
+          "range": 125,
+          "description": "9초 공격력 20% 증가 · 숫돌·담금질 불꽃"
         }
       ],
       "fx": {
@@ -7923,15 +7944,16 @@
         "recipe": 146,
         "choreography": [
           {
-            "op": "buff",
-            "type": "power",
-            "value": 0.25,
-            "duration": 9
+            "op": "merchant-kit",
+            "kind": "weapon-temper",
+            "target": "self",
+            "range": 125,
+            "description": "9초 공격력 20% 증가 · 숫돌·담금질 불꽃"
           }
         ],
         "rays": 7,
         "rotation": 2,
-        "shape": "buff"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7940,7 +7962,7 @@
       "heroId": 5,
       "cell": 1,
       "slot": 3,
-      "name": "기계 충격",
+      "name": "모루 지진",
       "unlock": 40,
       "mechanicsVersion": 3,
       "resource": {
@@ -7952,18 +7974,18 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 460,
+      "range": 300,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-147",
-      "description": "0.5초 준비 후 길이 480, 폭 120 직선 500% 관통",
+      "description": "망치 강타 후 전방으로 지면 충격 4회 · 각 반경 65에 220%",
       "actions": [
         {
-          "op": "beam",
-          "power": 5,
-          "width": 60,
-          "range": 480,
-          "delay": 0.5
+          "op": "merchant-kit",
+          "kind": "anvil-quake",
+          "target": "area",
+          "range": 300,
+          "description": "망치 강타 후 전방으로 지면 충격 4회 · 각 반경 65에 220%"
         }
       ],
       "fx": {
@@ -7974,16 +7996,16 @@
         "recipe": 147,
         "choreography": [
           {
-            "op": "beam",
-            "power": 5,
-            "width": 60,
-            "range": 480,
-            "delay": 0.5
+            "op": "merchant-kit",
+            "kind": "anvil-quake",
+            "target": "area",
+            "range": 300,
+            "description": "망치 강타 후 전방으로 지면 충격 4회 · 각 반경 65에 220%"
           }
         ],
         "rays": 8,
         "rotation": 39,
-        "shape": "beam"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -7992,7 +8014,7 @@
       "heroId": 5,
       "cell": 2,
       "slot": 0,
-      "name": "산성 플라스크",
+      "name": "부식 플라스크",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -8008,20 +8030,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-148",
-      "description": "acid 1중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 30% / 0초 뒤 반경 100에 170% 착탄 피해",
+      "description": "포물선 착탄 170% · 실제 접촉 시 산성 2중첩 부여",
       "actions": [
         {
-          "op": "status",
-          "type": "acid",
-          "power": 0.3,
-          "stacks": 1,
-          "duration": 8
-        },
-        {
-          "op": "blast",
-          "power": 1.7,
-          "radius": 100,
-          "delay": 0
+          "op": "merchant-kit",
+          "kind": "corrosion-flask",
+          "target": "area",
+          "range": 460,
+          "description": "포물선 착탄 170% · 실제 접촉 시 산성 2중첩 부여"
         }
       ],
       "fx": {
@@ -8032,22 +8048,16 @@
         "recipe": 148,
         "choreography": [
           {
-            "op": "status",
-            "type": "acid",
-            "power": 0.3,
-            "stacks": 1,
-            "duration": 8
-          },
-          {
-            "op": "blast",
-            "power": 1.7,
-            "radius": 100,
-            "delay": 0
+            "op": "merchant-kit",
+            "kind": "corrosion-flask",
+            "target": "area",
+            "range": 460,
+            "description": "포물선 착탄 170% · 실제 접촉 시 산성 2중첩 부여"
           }
         ],
         "rays": 9,
         "rotation": 76,
-        "shape": "status+blast"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8056,7 +8066,7 @@
       "heroId": 5,
       "cell": 2,
       "slot": 1,
-      "name": "독성 웅덩이",
+      "name": "부식 실험장",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -8070,16 +8080,16 @@
       "cooldown": 7.9,
       "range": 460,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-149",
-      "description": "산성 지대 8초 · 반경 110 · 0.8초마다 공격력 35% 피해",
+      "description": "착탄 뒤 반경 110 부식 지대 9초 · 0.9초마다 30%와 산성 축적",
       "actions": [
         {
-          "op": "zone",
-          "type": "acid",
-          "power": 0.35,
-          "radius": 110,
-          "duration": 8
+          "op": "merchant-kit",
+          "kind": "neutralizing-pool",
+          "target": "area",
+          "range": 460,
+          "description": "착탄 뒤 반경 110 부식 지대 9초 · 0.9초마다 30%와 산성 축적"
         }
       ],
       "fx": {
@@ -8090,16 +8100,16 @@
         "recipe": 149,
         "choreography": [
           {
-            "op": "zone",
-            "type": "acid",
-            "power": 0.35,
-            "radius": 110,
-            "duration": 8
+            "op": "merchant-kit",
+            "kind": "neutralizing-pool",
+            "target": "area",
+            "range": 460,
+            "description": "착탄 뒤 반경 110 부식 지대 9초 · 0.9초마다 30%와 산성 축적"
           }
         ],
         "rays": 10,
         "rotation": 113,
-        "shape": "zone"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8108,7 +8118,7 @@
       "heroId": 5,
       "cell": 2,
       "slot": 2,
-      "name": "생체 시제품",
+      "name": "시험관 생물",
       "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
@@ -8124,14 +8134,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-150",
-      "description": "호문쿨루스 1마리 실제 소환 · 14초 · 공격력 45%",
+      "description": "소형 배양체 최대 1기 · 24초 · 45% 생체액 발사",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "homunculus",
-          "count": 1,
-          "power": 0.45,
-          "duration": 14
+          "op": "merchant-kit",
+          "kind": "flask-familiar",
+          "target": "self",
+          "range": 125,
+          "description": "소형 배양체 최대 1기 · 24초 · 45% 생체액 발사"
         }
       ],
       "fx": {
@@ -8142,16 +8152,16 @@
         "recipe": 150,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "homunculus",
-            "count": 1,
-            "power": 0.45,
-            "duration": 14
+            "op": "merchant-kit",
+            "kind": "flask-familiar",
+            "target": "self",
+            "range": 125,
+            "description": "소형 배양체 최대 1기 · 24초 · 45% 생체액 발사"
           }
         ],
         "rays": 11,
         "rotation": 150,
-        "shape": "pet"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8160,7 +8170,7 @@
       "heroId": 5,
       "cell": 2,
       "slot": 3,
-      "name": "화학 반응",
+      "name": "중화 폭발",
       "unlock": 40,
       "mechanicsVersion": 3,
       "resource": {
@@ -8172,22 +8182,18 @@
       },
       "cost": 38,
       "cooldown": 34.4,
-      "range": 125,
-      "radius": 155,
+      "range": 460,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-151",
-      "description": "acid를 소비해 중첩당 200% 타격 / 0.5초 뒤 반경 155에 400% 착탄 피해",
+      "description": "반경 150에 350% + 산성 중첩당 80% · 산성 전부 소비",
       "actions": [
         {
-          "op": "consume",
-          "type": "acid",
-          "power": 2
-        },
-        {
-          "op": "blast",
-          "power": 4,
-          "radius": 155,
-          "delay": 0.5
+          "op": "merchant-kit",
+          "kind": "neutralization",
+          "target": "area",
+          "range": 460,
+          "description": "반경 150에 350% + 산성 중첩당 80% · 산성 전부 소비"
         }
       ],
       "fx": {
@@ -8198,20 +8204,16 @@
         "recipe": 151,
         "choreography": [
           {
-            "op": "consume",
-            "type": "acid",
-            "power": 2
-          },
-          {
-            "op": "blast",
-            "power": 4,
-            "radius": 155,
-            "delay": 0.5
+            "op": "merchant-kit",
+            "kind": "neutralization",
+            "target": "area",
+            "range": 460,
+            "description": "반경 150에 350% + 산성 중첩당 80% · 산성 전부 소비"
           }
         ],
         "rays": 12,
         "rotation": 7,
-        "shape": "consume+blast"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8220,7 +8222,7 @@
       "heroId": 5,
       "cell": 3,
       "slot": 0,
-      "name": "기계 망치",
+      "name": "피스톤 강타",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8232,21 +8234,18 @@
       },
       "cost": 12,
       "cooldown": 6,
-      "range": 120,
+      "range": 135,
       "radius": 140,
       "target": "area",
       "effectType": "recipe-152",
-      "description": "열기 20 축적 / 거리 120 전방 부채꼴 320%",
+      "description": "망치 모드 380% 범위 / 주먹 모드 300% 집중 타격 · 열기 20",
       "actions": [
         {
-          "op": "heat",
-          "value": 20
-        },
-        {
-          "op": "cone",
-          "power": 3.2,
-          "radius": 120,
-          "angle": 1.25
+          "op": "merchant-kit",
+          "kind": "piston-hammer",
+          "target": "area",
+          "range": 135,
+          "description": "망치 모드 380% 범위 / 주먹 모드 300% 집중 타격 · 열기 20"
         }
       ],
       "fx": {
@@ -8257,19 +8256,16 @@
         "recipe": 152,
         "choreography": [
           {
-            "op": "heat",
-            "value": 20
-          },
-          {
-            "op": "cone",
-            "power": 3.2,
-            "radius": 120,
-            "angle": 1.25
+            "op": "merchant-kit",
+            "kind": "piston-hammer",
+            "target": "area",
+            "range": 135,
+            "description": "망치 모드 380% 범위 / 주먹 모드 300% 집중 타격 · 열기 20"
           }
         ],
         "rays": 5,
         "rotation": 44,
-        "shape": "heat+cone"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8278,7 +8274,7 @@
       "heroId": 5,
       "cell": 3,
       "slot": 1,
-      "name": "무기 전환",
+      "name": "기어 변환",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8290,21 +8286,18 @@
       },
       "cost": 17,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 125,
       "radius": 140,
-      "target": "area",
+      "target": "self",
       "effectType": "recipe-153",
-      "description": "망치/기계 주먹 전환 · 기본공격 방식 변화 / 0.25초 준비 후 길이 480, 폭 70 직선 221% 관통",
+      "description": "망치: 사거리 125·주변 추가 타격 / 주먹: 사거리 85·공속 50% 증가·공격력 20% 감소",
       "actions": [
         {
-          "op": "weapon-mode"
-        },
-        {
-          "op": "beam",
-          "power": 2.2,
-          "width": 35,
-          "range": 480,
-          "delay": 0.25
+          "op": "merchant-kit",
+          "kind": "gear-shift",
+          "target": "self",
+          "range": 125,
+          "description": "망치: 사거리 125·주변 추가 타격 / 주먹: 사거리 85·공속 50% 증가·공격력 20% 감소"
         }
       ],
       "fx": {
@@ -8315,19 +8308,16 @@
         "recipe": 153,
         "choreography": [
           {
-            "op": "weapon-mode"
-          },
-          {
-            "op": "beam",
-            "power": 2.2,
-            "width": 35,
-            "range": 480,
-            "delay": 0.25
+            "op": "merchant-kit",
+            "kind": "gear-shift",
+            "target": "self",
+            "range": 125,
+            "description": "망치: 사거리 125·주변 추가 타격 / 주먹: 사거리 85·공속 50% 증가·공격력 20% 감소"
           }
         ],
         "rays": 6,
         "rotation": 81,
-        "shape": "weapon-mode+beam"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8336,7 +8326,7 @@
       "heroId": 5,
       "cell": 3,
       "slot": 2,
-      "name": "냉각 분출",
+      "name": "증기 방출",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8348,16 +8338,18 @@
       },
       "cost": 19,
       "cooldown": 13.8,
-      "range": 125,
+      "range": 140,
       "radius": 140,
-      "target": "self",
+      "target": "area",
       "effectType": "recipe-154",
-      "description": "열기를 소비해 냉각 폭발",
+      "description": "열기 30 이상 소비 · 반경 140에 200% + 열기당 4% · 일반 적 0.7초 경직",
       "actions": [
         {
-          "op": "cool",
-          "power": 2,
-          "radius": 140
+          "op": "merchant-kit",
+          "kind": "steam-release",
+          "target": "area",
+          "range": 140,
+          "description": "열기 30 이상 소비 · 반경 140에 200% + 열기당 3.5% · 일반 적 0.7초 경직"
         }
       ],
       "fx": {
@@ -8368,14 +8360,16 @@
         "recipe": 154,
         "choreography": [
           {
-            "op": "cool",
-            "power": 2,
-            "radius": 140
+            "op": "merchant-kit",
+            "kind": "steam-release",
+            "target": "area",
+            "range": 140,
+            "description": "열기 30 이상 소비 · 반경 140에 200% + 열기당 3.5% · 일반 적 0.7초 경직"
           }
         ],
         "rays": 7,
         "rotation": 118,
-        "shape": "cool"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8384,7 +8378,7 @@
       "heroId": 5,
       "cell": 3,
       "slot": 3,
-      "name": "과열 해방",
+      "name": "기관 폭주",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -8398,20 +8392,16 @@
       "cooldown": 34.8,
       "range": 125,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-155",
-      "description": "열기에 비례한 방출 후 5초 과열 / 0.16초 간격 6회 · 타격당 70%",
+      "description": "8초 망치 공격력 30% / 주먹 공속 75% 증가 · 기본공격 3회마다 추가 범위 120% · 폭주 중 자동 냉각 대기",
       "actions": [
         {
-          "op": "overheat",
-          "power": 5
-        },
-        {
-          "op": "volley",
-          "count": 6,
-          "power": 0.7,
-          "gap": 0.16,
-          "shape": "single"
+          "op": "merchant-kit",
+          "kind": "forge-overdrive",
+          "target": "self",
+          "range": 125,
+          "description": "8초 망치 공격력 30% / 주먹 공속 75% 증가 · 기본공격 3회마다 추가 범위 120% · 폭주 중 자동 냉각 대기"
         }
       ],
       "fx": {
@@ -8422,20 +8412,16 @@
         "recipe": 155,
         "choreography": [
           {
-            "op": "overheat",
-            "power": 5
-          },
-          {
-            "op": "volley",
-            "count": 6,
-            "power": 0.7,
-            "gap": 0.16,
-            "shape": "single"
+            "op": "merchant-kit",
+            "kind": "forge-overdrive",
+            "target": "self",
+            "range": 125,
+            "description": "8초 망치 공격력 30% / 주먹 공속 75% 증가 · 기본공격 3회마다 추가 범위 120% · 폭주 중 자동 냉각 대기"
           }
         ],
         "rays": 8,
         "rotation": 155,
-        "shape": "overheat+volley"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8444,7 +8430,7 @@
       "heroId": 5,
       "cell": 4,
       "slot": 0,
-      "name": "사격 포탑",
+      "name": "쌍열 진지",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8460,13 +8446,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-156",
-      "description": "실제 공격 포탑 2개 · 16초",
+      "description": "사격 포탑 최대 2기 · 22초 · 명중 시 75% · 재사용은 수명 갱신",
       "actions": [
         {
-          "op": "turret",
-          "count": 2,
-          "power": 0.75,
-          "duration": 16
+          "op": "merchant-kit",
+          "kind": "twin-sentries",
+          "target": "self",
+          "range": 125,
+          "description": "사격 포탑 최대 2기 · 22초 · 명중 시 75% · 재사용은 수명 갱신"
         }
       ],
       "fx": {
@@ -8477,15 +8464,16 @@
         "recipe": 156,
         "choreography": [
           {
-            "op": "turret",
-            "count": 2,
-            "power": 0.75,
-            "duration": 16
+            "op": "merchant-kit",
+            "kind": "twin-sentries",
+            "target": "self",
+            "range": 125,
+            "description": "사격 포탑 최대 2기 · 22초 · 명중 시 75% · 재사용은 수명 갱신"
           }
         ],
         "rays": 9,
         "rotation": 12,
-        "shape": "turret"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8494,7 +8482,7 @@
       "heroId": 5,
       "cell": 4,
       "slot": 1,
-      "name": "수호포탑",
+      "name": "이지스 코어",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8510,14 +8498,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-157",
-      "description": "실제 수호 포탑 1개 · 18초",
+      "description": "보호 코어 최대 1기 · 22초 · 거리 180 이내에서 매초 최대 체력 2% 보호막, 최대 30%",
       "actions": [
         {
-          "op": "turret",
-          "count": 1,
-          "power": 0.5,
-          "duration": 18,
-          "guard": true
+          "op": "merchant-kit",
+          "kind": "aegis-core",
+          "target": "self",
+          "range": 125,
+          "description": "보호 코어 최대 1기 · 22초 · 거리 180 이내에서 매초 최대 체력 2% 보호막, 최대 30%"
         }
       ],
       "fx": {
@@ -8528,16 +8516,16 @@
         "recipe": 157,
         "choreography": [
           {
-            "op": "turret",
-            "count": 1,
-            "power": 0.5,
-            "duration": 18,
-            "guard": true
+            "op": "merchant-kit",
+            "kind": "aegis-core",
+            "target": "self",
+            "range": 125,
+            "description": "보호 코어 최대 1기 · 22초 · 거리 180 이내에서 매초 최대 체력 2% 보호막, 최대 30%"
           }
         ],
         "rays": 10,
         "rotation": 49,
-        "shape": "turret"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8562,15 +8550,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-158",
-      "description": "소환체 회복·설치물 유지 시간 증가 / 최대 체력 8% 실제 회복",
+      "description": "기계 장치 체력 35%·수명 6초 회복, 수명 최대 28초 · 자가 체력 6% 회복",
       "actions": [
         {
-          "op": "repair",
-          "value": 0.5
-        },
-        {
-          "op": "heal",
-          "value": 0.08
+          "op": "merchant-kit",
+          "kind": "field-repair",
+          "target": "self",
+          "range": 125,
+          "description": "기계 장치 체력 35%·수명 6초 회복, 수명 최대 28초 · 자가 체력 6% 회복"
         }
       ],
       "fx": {
@@ -8581,17 +8568,16 @@
         "recipe": 158,
         "choreography": [
           {
-            "op": "repair",
-            "value": 0.5
-          },
-          {
-            "op": "heal",
-            "value": 0.08
+            "op": "merchant-kit",
+            "kind": "field-repair",
+            "target": "self",
+            "range": 125,
+            "description": "기계 장치 체력 35%·수명 6초 회복, 수명 최대 28초 · 자가 체력 6% 회복"
           }
         ],
         "rays": 11,
         "rotation": 86,
-        "shape": "repair+heal"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8600,7 +8586,7 @@
       "heroId": 5,
       "cell": 4,
       "slot": 3,
-      "name": "요새 전개",
+      "name": "요새 프로토콜",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -8612,24 +8598,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 460,
-      "radius": 160,
+      "range": 125,
+      "radius": 140,
       "target": "self",
       "effectType": "recipe-159",
-      "description": "실제 공격 포탑 3개 · 20초 / 수호 지대 14초 · 반경 160 · 0.8초마다 공격력 35% 피해 및 지대 내 자가 회복",
+      "description": "12초 기존 포탑을 쌍열 공성포로 변환 · 공속 증가·반경 65 폭발탄 · 보호 코어 강화 · 장치 최대 3기",
       "actions": [
         {
-          "op": "turret",
-          "count": 3,
-          "power": 1,
-          "duration": 20
-        },
-        {
-          "op": "zone",
-          "type": "banner",
-          "power": 0.35,
-          "radius": 160,
-          "duration": 14
+          "op": "merchant-kit",
+          "kind": "bastion-protocol",
+          "target": "self",
+          "range": 125,
+          "description": "12초 기존 포탑을 쌍열 공성포로 변환 · 공속 증가·반경 65 폭발탄 · 보호 코어 강화 · 장치 최대 3기"
         }
       ],
       "fx": {
@@ -8640,22 +8620,16 @@
         "recipe": 159,
         "choreography": [
           {
-            "op": "turret",
-            "count": 3,
-            "power": 1,
-            "duration": 20
-          },
-          {
-            "op": "zone",
-            "type": "banner",
-            "power": 0.35,
-            "radius": 160,
-            "duration": 14
+            "op": "merchant-kit",
+            "kind": "bastion-protocol",
+            "target": "self",
+            "range": 125,
+            "description": "12초 기존 포탑을 쌍열 공성포로 변환 · 공속 증가·반경 65 폭발탄 · 보호 코어 강화 · 장치 최대 3기"
           }
         ],
         "rays": 12,
         "rotation": 123,
-        "shape": "turret+zone"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8664,7 +8638,7 @@
       "heroId": 5,
       "cell": 5,
       "slot": 0,
-      "name": "산성 시약",
+      "name": "역병 시약탄",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8678,20 +8652,16 @@
       "cooldown": 6,
       "range": 460,
       "radius": 140,
-      "target": "single",
+      "target": "area",
       "effectType": "recipe-160",
-      "description": "직선 투사체 150% · 실제 충돌 시 피해 / acid 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 40%",
+      "description": "실제 착탄 190% · 명중한 적만 산성 2중첩·매초 중첩당 30%",
       "actions": [
         {
-          "op": "missile",
-          "power": 1.5
-        },
-        {
-          "op": "status",
-          "type": "acid",
-          "power": 0.4,
-          "stacks": 2,
-          "duration": 8
+          "op": "merchant-kit",
+          "kind": "plague-vial",
+          "target": "area",
+          "range": 460,
+          "description": "실제 착탄 190% · 명중한 적만 산성 2중첩·매초 중첩당 30%"
         }
       ],
       "fx": {
@@ -8702,20 +8672,16 @@
         "recipe": 160,
         "choreography": [
           {
-            "op": "missile",
-            "power": 1.5
-          },
-          {
-            "op": "status",
-            "type": "acid",
-            "power": 0.4,
-            "stacks": 2,
-            "duration": 8
+            "op": "merchant-kit",
+            "kind": "plague-vial",
+            "target": "area",
+            "range": 460,
+            "description": "실제 착탄 190% · 명중한 적만 산성 2중첩·매초 중첩당 30%"
           }
         ],
         "rays": 5,
         "rotation": 160,
-        "shape": "missile+status"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8724,7 +8690,7 @@
       "heroId": 5,
       "cell": 5,
       "slot": 1,
-      "name": "독성 장판",
+      "name": "독성 늪",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8737,17 +8703,17 @@
       "cost": 17,
       "cooldown": 8.3,
       "range": 460,
-      "radius": 165,
-      "target": "self",
+      "radius": 140,
+      "target": "area",
       "effectType": "recipe-161",
-      "description": "산성 지대 10초 · 반경 165 · 0.8초마다 공격력 60% 피해",
+      "description": "반경 145 독성 지대 9초 · 0.9초마다 50%와 산성 축적",
       "actions": [
         {
-          "op": "zone",
-          "type": "acid",
-          "power": 0.6,
-          "radius": 165,
-          "duration": 10
+          "op": "merchant-kit",
+          "kind": "toxic-mire",
+          "target": "area",
+          "range": 460,
+          "description": "반경 145 독성 지대 9초 · 0.9초마다 50%와 산성 축적"
         }
       ],
       "fx": {
@@ -8758,16 +8724,16 @@
         "recipe": 161,
         "choreography": [
           {
-            "op": "zone",
-            "type": "acid",
-            "power": 0.6,
-            "radius": 165,
-            "duration": 10
+            "op": "merchant-kit",
+            "kind": "toxic-mire",
+            "target": "area",
+            "range": 460,
+            "description": "반경 145 독성 지대 9초 · 0.9초마다 50%와 산성 축적"
           }
         ],
         "rays": 6,
         "rotation": 17,
-        "shape": "zone"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8776,7 +8742,7 @@
       "heroId": 5,
       "cell": 5,
       "slot": 2,
-      "name": "시약 혼합",
+      "name": "촉매 주입",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8792,18 +8758,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-162",
-      "description": "reagent 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 15% / 산성·시약 중첩 조합에 비례한 반응 폭발",
+      "description": "촉매 병 착탄 120% · 8초 촉매 표식 · 독성 지대가 닿으면 280% 추가 반응",
       "actions": [
         {
-          "op": "status",
-          "type": "reagent",
-          "power": 0.15,
-          "stacks": 2,
-          "duration": 8
-        },
-        {
-          "op": "reaction",
-          "power": 3
+          "op": "merchant-kit",
+          "kind": "catalyst-primer",
+          "target": "area",
+          "range": 460,
+          "description": "촉매 병 착탄 120% · 8초 촉매 표식 · 독성 지대가 닿으면 280% 추가 반응"
         }
       ],
       "fx": {
@@ -8814,20 +8776,16 @@
         "recipe": 162,
         "choreography": [
           {
-            "op": "status",
-            "type": "reagent",
-            "power": 0.15,
-            "stacks": 2,
-            "duration": 8
-          },
-          {
-            "op": "reaction",
-            "power": 3
+            "op": "merchant-kit",
+            "kind": "catalyst-primer",
+            "target": "area",
+            "range": 460,
+            "description": "촉매 병 착탄 120% · 8초 촉매 표식 · 독성 지대가 닿으면 280% 추가 반응"
           }
         ],
         "rays": 7,
         "rotation": 54,
-        "shape": "status+reaction"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8836,7 +8794,7 @@
       "heroId": 5,
       "cell": 5,
       "slot": 3,
-      "name": "연쇄 반응",
+      "name": "역병 연쇄",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -8848,26 +8806,18 @@
       },
       "cost": 38,
       "cooldown": 34.8,
-      "range": 125,
-      "radius": 220,
+      "range": 460,
+      "radius": 140,
       "target": "area",
       "effectType": "recipe-163",
-      "description": "대상의 acid 상태를 반경 220의 적에게 전염 / 산성·시약 중첩 조합에 비례한 반응 폭발 / 0.6초 뒤 반경 180에 300% 착탄 피해",
+      "description": "최대 8명에게 0.18초 간격으로 전달 · 350% + 산성 중첩당 80%, 산성 재부여",
       "actions": [
         {
-          "op": "spread",
-          "type": "acid",
-          "radius": 220
-        },
-        {
-          "op": "reaction",
-          "power": 6
-        },
-        {
-          "op": "blast",
-          "power": 3,
-          "radius": 180,
-          "delay": 0.6
+          "op": "merchant-kit",
+          "kind": "epidemic-chain",
+          "target": "area",
+          "range": 460,
+          "description": "최대 8명에게 0.18초 간격으로 전달 · 350% + 산성 중첩당 80%, 산성 재부여"
         }
       ],
       "fx": {
@@ -8878,24 +8828,16 @@
         "recipe": 163,
         "choreography": [
           {
-            "op": "spread",
-            "type": "acid",
-            "radius": 220
-          },
-          {
-            "op": "reaction",
-            "power": 6
-          },
-          {
-            "op": "blast",
-            "power": 3,
-            "radius": 180,
-            "delay": 0.6
+            "op": "merchant-kit",
+            "kind": "epidemic-chain",
+            "target": "area",
+            "range": 460,
+            "description": "최대 8명에게 0.18초 간격으로 전달 · 350% + 산성 중첩당 80%, 산성 재부여"
           }
         ],
         "rays": 8,
         "rotation": 91,
-        "shape": "spread+reaction+blast"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8904,7 +8846,7 @@
       "heroId": 5,
       "cell": 6,
       "slot": 0,
-      "name": "생체 배양",
+      "name": "배양체 한 쌍",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8920,14 +8862,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-164",
-      "description": "호문쿨루스 2마리 실제 소환 · 20초 · 공격력 45%",
+      "description": "배양체 최대 2기 · 진화체가 있으면 새 소환 대신 체력 20%·수명 보충",
       "actions": [
         {
-          "op": "pet",
-          "appearance": "homunculus",
-          "count": 2,
-          "power": 0.45,
-          "duration": 20
+          "op": "merchant-kit",
+          "kind": "culture-pair",
+          "target": "self",
+          "range": 125,
+          "description": "배양체 최대 2기 · 진화체가 있으면 새 소환 대신 체력 20%·수명 보충"
         }
       ],
       "fx": {
@@ -8938,16 +8880,16 @@
         "recipe": 164,
         "choreography": [
           {
-            "op": "pet",
-            "appearance": "homunculus",
-            "count": 2,
-            "power": 0.45,
-            "duration": 20
+            "op": "merchant-kit",
+            "kind": "culture-pair",
+            "target": "self",
+            "range": 125,
+            "description": "배양체 최대 2기 · 진화체가 있으면 새 소환 대신 체력 20%·수명 보충"
           }
         ],
         "rays": 9,
         "rotation": 128,
-        "shape": "pet"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -8956,7 +8898,7 @@
       "heroId": 5,
       "cell": 6,
       "slot": 1,
-      "name": "성장 명령",
+      "name": "성장 혈청",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8972,11 +8914,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-165",
-      "description": "생체 소환체 공격력·유지 시간·성장 단계 증가",
+      "description": "생체 소환수 최대 3단계 · 단계당 공격력 20% 증가 · 체력 회복·수명 5초 연장",
       "actions": [
         {
-          "op": "grow",
-          "value": 0.4
+          "op": "merchant-kit",
+          "kind": "growth-serum",
+          "target": "self",
+          "range": 125,
+          "description": "생체 소환수 최대 3단계 · 단계당 공격력 20% 증가 · 체력 회복·수명 5초 연장"
         }
       ],
       "fx": {
@@ -8987,13 +8932,16 @@
         "recipe": 165,
         "choreography": [
           {
-            "op": "grow",
-            "value": 0.4
+            "op": "merchant-kit",
+            "kind": "growth-serum",
+            "target": "self",
+            "range": 125,
+            "description": "생체 소환수 최대 3단계 · 단계당 공격력 20% 증가 · 체력 회복·수명 5초 연장"
           }
         ],
         "rays": 10,
         "rotation": 165,
-        "shape": "grow"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -9018,18 +8966,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-166",
-      "description": "호문쿨루스 2마리 이상 소비 → chimera 실제 합성 · 재료 수에 비례 강화 / 최대 체력 16% 보호막",
+      "description": "배양체 2기를 소비해 키메라 1기로 실제 합성 · 공격력 145% 근접 물기 · 높은 재료 성장 단계 계승",
       "actions": [
         {
-          "op": "fusion",
-          "appearance": "chimera",
-          "count": 1,
-          "power": 1.6,
-          "duration": 20
-        },
-        {
-          "op": "shield",
-          "value": 0.16
+          "op": "merchant-kit",
+          "kind": "chimera-synthesis",
+          "target": "self",
+          "range": 125,
+          "description": "배양체 2기를 소비해 키메라 1기로 실제 합성 · 공격력 145% 근접 물기 · 높은 재료 성장 단계 계승"
         }
       ],
       "fx": {
@@ -9040,20 +8984,16 @@
         "recipe": 166,
         "choreography": [
           {
-            "op": "fusion",
-            "appearance": "chimera",
-            "count": 1,
-            "power": 1.6,
-            "duration": 20
-          },
-          {
-            "op": "shield",
-            "value": 0.16
+            "op": "merchant-kit",
+            "kind": "chimera-synthesis",
+            "target": "self",
+            "range": 125,
+            "description": "배양체 2기를 소비해 키메라 1기로 실제 합성 · 공격력 145% 근접 물기 · 높은 재료 성장 단계 계승"
           }
         ],
         "rays": 11,
         "rotation": 22,
-        "shape": "fusion+shield"
+        "shape": "merchant-kit"
       }
     },
     {
@@ -9062,7 +9002,7 @@
       "heroId": 5,
       "cell": 6,
       "slot": 3,
-      "name": "완전체 해방",
+      "name": "완전체 진화",
       "unlock": 70,
       "mechanicsVersion": 3,
       "resource": {
@@ -9075,24 +9015,17 @@
       "cost": 38,
       "cooldown": 34.8,
       "range": 125,
-      "radius": 180,
-      "target": "area",
+      "radius": 140,
+      "target": "self",
       "effectType": "recipe-167",
-      "description": "호문쿨루스 2마리 이상 소비 → chimera 실제 합성 · 재료 수에 비례 강화 / 0.5초 뒤 반경 180에 400% 착탄 피해",
+      "description": "기존 키메라 1기를 완전체로 실제 진화 · 26초 · 240% 범위 발톱 · 탄생 충격 450% · 추가 개체 중첩 없음",
       "actions": [
         {
-          "op": "fusion",
-          "appearance": "chimera",
-          "count": 1,
-          "power": 2.5,
-          "duration": 22,
-          "large": true
-        },
-        {
-          "op": "blast",
-          "power": 4,
-          "radius": 180,
-          "delay": 0.5
+          "op": "merchant-kit",
+          "kind": "perfect-evolution",
+          "target": "self",
+          "range": 125,
+          "description": "기존 키메라 1기를 완전체로 실제 진화 · 26초 · 240% 범위 발톱 · 탄생 충격 450% · 추가 개체 중첩 없음"
         }
       ],
       "fx": {
@@ -9103,23 +9036,16 @@
         "recipe": 167,
         "choreography": [
           {
-            "op": "fusion",
-            "appearance": "chimera",
-            "count": 1,
-            "power": 2.5,
-            "duration": 22,
-            "large": true
-          },
-          {
-            "op": "blast",
-            "power": 4,
-            "radius": 180,
-            "delay": 0.5
+            "op": "merchant-kit",
+            "kind": "perfect-evolution",
+            "target": "self",
+            "range": 125,
+            "description": "기존 키메라 1기를 완전체로 실제 진화 · 26초 · 240% 범위 발톱 · 탄생 충격 450% · 추가 개체 중첩 없음"
           }
         ],
         "rays": 12,
         "rotation": 59,
-        "shape": "fusion+blast"
+        "shape": "merchant-kit"
       }
     },
     {

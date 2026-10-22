@@ -1,6 +1,6 @@
 'use strict';
 (()=>{
-  const build='20261022-r67';
+  const build='20261022-r68-final';
   let checking=false,reloading=false;
   async function check(){
     if(checking||reloading||document.hidden||build.startsWith('__'))return;
