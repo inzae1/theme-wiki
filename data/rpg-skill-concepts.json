@@ -375,7 +375,7 @@
       "cell": 1,
       "slot": 3,
       "name": "십자 발도",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -603,7 +603,7 @@
       "cell": 2,
       "slot": 3,
       "name": "마검 해방",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -825,7 +825,7 @@
       "cell": 3,
       "slot": 3,
       "name": "백귀난무",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -1039,7 +1039,7 @@
       "cell": 4,
       "slot": 3,
       "name": "만격반환",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -1261,7 +1261,7 @@
       "cell": 5,
       "slot": 3,
       "name": "룬 대붕괴",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -1497,7 +1497,7 @@
       "cell": 6,
       "slot": 3,
       "name": "황천 개방",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -1923,7 +1923,7 @@
       "cell": 1,
       "slot": 3,
       "name": "광란의 추격",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -2123,7 +2123,7 @@
       "cell": 2,
       "slot": 3,
       "name": "파쇄 충격파",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -2323,7 +2323,7 @@
       "cell": 3,
       "slot": 3,
       "name": "선혈 수확",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -2523,7 +2523,7 @@
       "cell": 4,
       "slot": 3,
       "name": "연쇄 참수",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -2723,7 +2723,7 @@
       "cell": 5,
       "slot": 3,
       "name": "대지 붕괴",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -2923,7 +2923,7 @@
       "cell": 6,
       "slot": 3,
       "name": "전선 분쇄",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -3357,7 +3357,7 @@
       "cell": 1,
       "slot": 3,
       "name": "원소 폭풍",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -3591,7 +3591,7 @@
       "cell": 2,
       "slot": 3,
       "name": "저주 범람",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -3823,7 +3823,7 @@
       "cell": 3,
       "slot": 3,
       "name": "삼원소 운석",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -4047,7 +4047,7 @@
       "cell": 4,
       "slot": 3,
       "name": "절대영도",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -4277,7 +4277,7 @@
       "cell": 5,
       "slot": 3,
       "name": "재앙 강림",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -4521,7 +4521,7 @@
       "cell": 6,
       "slot": 3,
       "name": "붉은 심장",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -4955,7 +4955,7 @@
       "cell": 1,
       "slot": 3,
       "name": "성역 심판",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -5163,7 +5163,7 @@
       "cell": 2,
       "slot": 3,
       "name": "용의 숨결",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -5371,7 +5371,7 @@
       "cell": 3,
       "slot": 3,
       "name": "성전 개시",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -5579,7 +5579,7 @@
       "cell": 4,
       "slot": 3,
       "name": "절대 방벽",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -5787,7 +5787,7 @@
       "cell": 5,
       "slot": 3,
       "name": "천공 낙하",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -5995,7 +5995,7 @@
       "cell": 6,
       "slot": 3,
       "name": "용혈 해방",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -6421,7 +6421,7 @@
       "cell": 1,
       "slot": 3,
       "name": "암살 연격",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -6619,7 +6619,7 @@
       "cell": 2,
       "slot": 3,
       "name": "깜짝 폭탄",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -6853,7 +6853,7 @@
       "cell": 3,
       "slot": 3,
       "name": "환영 난무",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -7075,7 +7075,7 @@
       "cell": 4,
       "slot": 3,
       "name": "독살",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -7305,7 +7305,7 @@
       "cell": 5,
       "slot": 3,
       "name": "유령극",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -7533,7 +7533,7 @@
       "cell": 6,
       "slot": 3,
       "name": "연쇄 폭파",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -7963,7 +7963,7 @@
       "cell": 1,
       "slot": 3,
       "name": "모루 지진",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -8171,7 +8171,7 @@
       "cell": 2,
       "slot": 3,
       "name": "중화 폭발",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -8379,7 +8379,7 @@
       "cell": 3,
       "slot": 3,
       "name": "기관 폭주",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -8587,7 +8587,7 @@
       "cell": 4,
       "slot": 3,
       "name": "요새 프로토콜",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -8795,7 +8795,7 @@
       "cell": 5,
       "slot": 3,
       "name": "역병 연쇄",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -9003,7 +9003,7 @@
       "cell": 6,
       "slot": 3,
       "name": "완전체 진화",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -9405,7 +9405,7 @@
       "cell": 1,
       "slot": 3,
       "name": "화음 피날레",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -9605,7 +9605,7 @@
       "cell": 2,
       "slot": 3,
       "name": "무대의 중심",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -9805,7 +9805,7 @@
       "cell": 3,
       "slot": 3,
       "name": "앙코르",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -10005,7 +10005,7 @@
       "cell": 4,
       "slot": 3,
       "name": "망자의 합창",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -10211,7 +10211,7 @@
       "cell": 5,
       "slot": 3,
       "name": "지옥의 리프",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -10413,7 +10413,7 @@
       "cell": 6,
       "slot": 3,
       "name": "유성 군무",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -10827,7 +10827,7 @@
       "cell": 1,
       "slot": 3,
       "name": "기공 폭발",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -11035,7 +11035,7 @@
       "cell": 2,
       "slot": 3,
       "name": "야생의 부름",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -11243,7 +11243,7 @@
       "cell": 3,
       "slot": 3,
       "name": "천공포",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -11451,7 +11451,7 @@
       "cell": 4,
       "slot": 3,
       "name": "상륙 돌파",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -11659,7 +11659,7 @@
       "cell": 5,
       "slot": 3,
       "name": "태고의 분노",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -11867,7 +11867,7 @@
       "cell": 6,
       "slot": 3,
       "name": "고대 수림",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -12269,7 +12269,7 @@
       "cell": 1,
       "slot": 3,
       "name": "치명 조준",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -12489,7 +12489,7 @@
       "cell": 2,
       "slot": 3,
       "name": "숲의 협공",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -12707,7 +12707,7 @@
       "cell": 3,
       "slot": 3,
       "name": "천리일섬",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -12909,7 +12909,7 @@
       "cell": 4,
       "slot": 3,
       "name": "마탄 폭우",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -13135,7 +13135,7 @@
       "cell": 5,
       "slot": 3,
       "name": "폭풍 질주",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -13367,7 +13367,7 @@
       "cell": 6,
       "slot": 3,
       "name": "야성의 무리",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -13791,7 +13791,7 @@
       "cell": 1,
       "slot": 3,
       "name": "데드아이",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -13999,7 +13999,7 @@
       "cell": 2,
       "slot": 3,
       "name": "파쇄 로켓",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -14207,7 +14207,7 @@
       "cell": 3,
       "slot": 3,
       "name": "탄환 춤",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -14415,7 +14415,7 @@
       "cell": 4,
       "slot": 3,
       "name": "룬 파괴탄",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -14623,7 +14623,7 @@
       "cell": 5,
       "slot": 3,
       "name": "융단 폭격",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -14831,7 +14831,7 @@
       "cell": 6,
       "slot": 3,
       "name": "초중량 포격",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "energy",
@@ -15235,7 +15235,7 @@
       "cell": 1,
       "slot": 3,
       "name": "권사의 일격",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -15429,7 +15429,7 @@
       "cell": 2,
       "slot": 3,
       "name": "신성한 파동",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -15653,7 +15653,7 @@
       "cell": 3,
       "slot": 3,
       "name": "최종 정권",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -15871,7 +15871,7 @@
       "cell": 4,
       "slot": 3,
       "name": "최후의 심판",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "rage",
@@ -16089,7 +16089,7 @@
       "cell": 5,
       "slot": 3,
       "name": "기적의 빛",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -16323,7 +16323,7 @@
       "cell": 6,
       "slot": 3,
       "name": "퇴마 의식",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -16757,7 +16757,7 @@
       "cell": 1,
       "slot": 3,
       "name": "대정령 소환",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -16977,7 +16977,7 @@
       "cell": 2,
       "slot": 3,
       "name": "네크로맨서 · 망령 소환",
-      "unlock": 40,
+      "unlock": 30,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -17193,7 +17193,7 @@
       "cell": 3,
       "slot": 3,
       "name": "왕의 강림",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -17417,7 +17417,7 @@
       "cell": 4,
       "slot": 3,
       "name": "원소 대해방",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -17653,7 +17653,7 @@
       "cell": 5,
       "slot": 3,
       "name": "해골용 강림",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
@@ -17923,7 +17923,7 @@
       "cell": 6,
       "slot": 3,
       "name": "사형 선고",
-      "unlock": 70,
+      "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
         "kind": "mana",
