@@ -1,0 +1,29 @@
+{
+  "status": "design",
+  "hero": 0,
+  "changes": [
+    {
+      "cell": 2,
+      "previousName": "마검사",
+      "name": "워리어",
+      "weapon": "양손 대검"
+    },
+    {
+      "cell": 5,
+      "previousName": "룬나이트",
+      "name": "뱅가드",
+      "primary": "탱커",
+      "secondary": "제어형",
+      "weapon": "양손 대검"
+    },
+    {
+      "cell": 6,
+      "previousName": "소울브링어",
+      "name": "다크나이트",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "weapon": "양손 대검"
+    }
+  ],
+  "preserveIds": true
+}

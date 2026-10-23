@@ -120,3 +120,7 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 - `sword/sword-source.png`: 내장 image_gen으로 제작한 검사·검성·마검사·검귀·수라·룬나이트·소울브링어 전용 원화. 정확한 생성 프롬프트: `sword/sword-prompt.txt`.
 - `sword/sword-atlas.png`, `sword/rune-glyph.png`: 생성 원화의 투명도를 유지해 분리한 게임용 프레임. 재생성: `scripts/build-rpg-sword-fx.py`.
 - 직업별 GIF 7종은 같은 프레임을 사용한다. GIF의 초록 배경은 미리보기용이며 게임은 투명 PNG를 사용한다.
+
+## Greatsword branch (2026-10-23)
+
+Warrior / Vanguard / Dark Knight avatars were created specifically for this project with the built-in ImageGen tool. Original transparent PNGs and prompts: `greatsword-design/`. Gameplay sprite atlas: `../rpg-pixels-v2/characters/jongchan-greatsword-avatars.png`. Physical sword trails, segmented barricade and dark shockwaves are original Canvas animations in `rpg-greatsword-fx.js`; no third-party effect asset was added.

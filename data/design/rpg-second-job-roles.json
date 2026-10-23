@@ -1,5 +1,5 @@
 {
-  "status": "proposal",
+  "status": "skillset-design",
   "roles": [
     "탱커",
     "힐러",
@@ -31,19 +31,21 @@
       "hero": 0,
       "cell": 5,
       "character": "박종찬",
-      "job": "룬나이트",
-      "primary": "서포터",
+      "job": "뱅가드",
+      "primary": "탱커",
       "secondary": "제어형",
-      "identity": "룬 보호막과 적 진입을 막는 룬 지대"
+      "identity": "양손 대검과 심연 장벽으로 전선 방어·적 제어",
+      "previousClassName": "룬나이트"
     },
     {
       "hero": 0,
       "cell": 6,
       "character": "박종찬",
-      "job": "소울브링어",
+      "job": "다크나이트",
       "primary": "딜러",
-      "secondary": "서포터",
-      "identity": "귀신 부착과 영혼 피해로 적 공격·방어 약화"
+      "secondary": "브레이커",
+      "identity": "양손 대검으로 어둠을 축적·소비하는 집중 공격과 장갑 파괴",
+      "previousClassName": "소울브링어"
     },
     {
       "hero": 1,
@@ -230,9 +232,9 @@
       "cell": 3,
       "character": "남지훈",
       "job": "민스트럴",
-      "primary": "서포터",
-      "secondary": "힐러",
-      "identity": "지속 선율로 공격·자원 순환과 꾸준한 회복 지원"
+      "primary": "힐러",
+      "secondary": "서포터",
+      "identity": "공격 음표·이동 회복 선율·보호막·앙코르 치유로 파티를 유지"
     },
     {
       "hero": 6,
@@ -441,5 +443,6 @@
       "secondary": "브레이커",
       "identity": "사신의 죽음 표식과 영혼 소비로 보스 마무리"
     }
-  ]
+  ],
+  "healerRule": "주 힐러: 하이프리스트·자연 드루이드·민스트럴. 아이돌은 보조 힐러. 혈마법사는 딜러·브레이커."
 }

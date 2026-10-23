@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "dist/rpg-pixels-v2/characters/jongchan.png",
+  "common": "Use case: stylized-concept. Asset type: production transparent pixel-art RPG avatar. Reference image is STYLE AND FACE REFERENCE ONLY: keep the same Korean young adult male with short black buzz cut, thick angled eyebrows, square face, chibi 2.5-head proportions, top-down front three-quarter RPG sprite, chunky crisp outlined pixels and limited colors. Create ONE full-body character standing with a clearly TWO-HANDED GREATSWORD, BOTH HANDS gripping the same long hilt. Head uncovered, recognizable face. Entire sword, boots, hair visible with generous transparent padding. No text, labels, ground, backdrop, pedestal, wings, summoned spirits, shield, extra weapons, glow clouds, or tiny ornamental clutter. Character should read at 64px high. Genuine transparent background. ",
+  "avatars": [
+    [
+      "warrior",
+      "WARRIOR first promotion: practical dark steel half plate with worn rust-red leather cloth, medium broad shoulders and a brown belt, open face. Large simple straight steel greatsword held diagonally across the body in both hands, point to upper right. Steel blade is broad and physically solid, not magical. Grounded ready stance. Apprentice heavy swordsman, less armored than advanced tank, no purple magic."
+    ],
+    [
+      "abyss-knight",
+      "ABYSS KNIGHT tank second promotion: very heavy blue-black plate armor, broad squared pauldrons, thick boots, restrained deep blue/cyan metal accents, dark navy short mantle. Huge thick slab-like dark steel greatsword held in BOTH hands vertically planted just off center as a defensive barricade, hilt in front of chest, point near boots. Sturdy wide immovable stance; face visible above chest armor. Most broad and heavy silhouette of the three; weapon physically shields body, no separate shield, no excessive spike clutter."
+    ],
+    [
+      "dark-knight",
+      "DARK KNIGHT damage-dealer second promotion: angular black steel armor with restrained burgundy cloth and one small violet emissive seam in the greatsword, no purple fog. Lean aggressive silhouette with narrower shoulders than the tank, short split coat. Long broad sharp greatsword gripped in BOTH hands and angled from lower left to upper right, preparing a sweeping attack. Face uncovered with same buzz cut. Mobile forward stance. Clearly offensive heavy swordsman, not a mage, no staff, no floating familiar."
+    ]
+  ],
+  "note": "Tank rendered under the accepted Abyss Knight working name; Vanguard is a later naming recommendation, not yet accepted."
+}

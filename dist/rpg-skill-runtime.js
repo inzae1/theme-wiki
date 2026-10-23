@@ -126,6 +126,7 @@ if(typeof module!=='undefined')require('./rpg-archer-runtime.js')(E);else root.R
 if(typeof module!=='undefined')require('./rpg-sword-runtime.js')(E);else root.RPG_SWORD_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-rogue-runtime.js')(E);else root.RPG_ROGUE_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-mage-runtime.js')(E);else root.RPG_MAGE_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-greatsword-runtime.js')(E);else root.RPG_GREATSWORD_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-balance-runtime.js')(E);else root.RPG_BALANCE_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);

@@ -41,11 +41,11 @@
         },
         {
           "id": "jongchan-2",
-          "name": "마검사",
+          "name": "워리어",
           "tier": 1,
           "parent": "jongchan-0",
-          "weapon": "룬 대검",
-          "visual": "indigo half armor, violet rune broadsword",
+          "weapon": "양손 대검",
+          "visual": "steel leather armor, rust red cloth, two hands holding a broad steel greatsword",
           "cell": 2
         },
         {
@@ -68,20 +68,20 @@
         },
         {
           "id": "jongchan-5",
-          "name": "룬나이트",
+          "name": "뱅가드",
           "tier": 2,
           "parent": "jongchan-2",
-          "weapon": "룬 장검·룬 방패",
-          "visual": "blue silver plate, cyan runic longsword and small shield",
+          "weapon": "양손 대검",
+          "visual": "broad blue black heavy plate, two hands bracing a vertical slab greatsword, no shield",
           "cell": 5
         },
         {
           "id": "jongchan-6",
-          "name": "소울브링어",
+          "name": "다크나이트",
           "tier": 2,
           "parent": "jongchan-2",
-          "weapon": "영혼 대검",
-          "visual": "tattered purple cloak, emerald spirit greatsword with one bound jade wisp, no summoned army",
+          "weapon": "양손 대검",
+          "visual": "angular black armor, burgundy cloth, violet seams, two hands wielding a dark greatsword in forward stance",
           "cell": 6
         }
       ],

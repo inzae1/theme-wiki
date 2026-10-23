@@ -1,0 +1,147 @@
+{
+  "conditions": "3 seeds, 90s actual automatic simulation, equal class-correct gear at Lv60/+10 and Lv90/+20, one boss or twelve melee enemies, damage probe survives at 1 HP; single-player calibration, not natural clear guarantee",
+  "rows": [
+    {
+      "level": 60,
+      "kind": "boss",
+      "cell": 0,
+      "name": "검사",
+      "dps": 1394.8296296296296,
+      "calibratedDPS": 1394.8296296296296
+    },
+    {
+      "level": 60,
+      "kind": "boss",
+      "cell": 2,
+      "name": "워리어",
+      "dps": 2246.885185185185,
+      "calibratedDPS": 2246.885185185185
+    },
+    {
+      "level": 60,
+      "kind": "boss",
+      "cell": 5,
+      "name": "뱅가드",
+      "dps": 2463.648148148148,
+      "calibratedDPS": 2860.7882296296293
+    },
+    {
+      "level": 60,
+      "kind": "boss",
+      "cell": 6,
+      "name": "다크나이트",
+      "dps": 4215.474074074074,
+      "calibratedDPS": 4215.474074074074
+    },
+    {
+      "level": 60,
+      "kind": "pack",
+      "cell": 0,
+      "name": "검사",
+      "dps": 2017.637037037037,
+      "calibratedDPS": 2017.637037037037
+    },
+    {
+      "level": 60,
+      "kind": "pack",
+      "cell": 2,
+      "name": "워리어",
+      "dps": 10607.551851851851,
+      "calibratedDPS": 10607.551851851851
+    },
+    {
+      "level": 60,
+      "kind": "pack",
+      "cell": 5,
+      "name": "뱅가드",
+      "dps": 10012.003703703704,
+      "calibratedDPS": 13259.897705185185
+    },
+    {
+      "level": 60,
+      "kind": "pack",
+      "cell": 6,
+      "name": "다크나이트",
+      "dps": 28256.674074074075,
+      "calibratedDPS": 28256.674074074075
+    },
+    {
+      "level": 90,
+      "kind": "boss",
+      "cell": 0,
+      "name": "검사",
+      "dps": 2720.0296296296297,
+      "calibratedDPS": 2720.0296296296297
+    },
+    {
+      "level": 90,
+      "kind": "boss",
+      "cell": 2,
+      "name": "워리어",
+      "dps": 4439.562962962963,
+      "calibratedDPS": 4439.562962962963
+    },
+    {
+      "level": 90,
+      "kind": "boss",
+      "cell": 5,
+      "name": "뱅가드",
+      "dps": 4779.2444444444445,
+      "calibratedDPS": 5549.658648888889
+    },
+    {
+      "level": 90,
+      "kind": "boss",
+      "cell": 6,
+      "name": "다크나이트",
+      "dps": 8303.04074074074,
+      "calibratedDPS": 8303.04074074074
+    },
+    {
+      "level": 90,
+      "kind": "pack",
+      "cell": 0,
+      "name": "검사",
+      "dps": 3810.951851851852,
+      "calibratedDPS": 3810.951851851852
+    },
+    {
+      "level": 90,
+      "kind": "pack",
+      "cell": 2,
+      "name": "워리어",
+      "dps": 19698.248148148148,
+      "calibratedDPS": 19698.248148148148
+    },
+    {
+      "level": 90,
+      "kind": "pack",
+      "cell": 5,
+      "name": "뱅가드",
+      "dps": 19718.966666666667,
+      "calibratedDPS": 26115.799453333333
+    },
+    {
+      "level": 90,
+      "kind": "pack",
+      "cell": 6,
+      "name": "다크나이트",
+      "dps": 56739.781481481485,
+      "calibratedDPS": 56739.781481481485
+    }
+  ],
+  "factors": {
+    "0:2": {
+      "boss": 1,
+      "pack": 1
+    },
+    "0:5": {
+      "boss": 1.1612,
+      "pack": 1.3244
+    },
+    "0:6": {
+      "boss": 1,
+      "pack": 1
+    }
+  }
+}
