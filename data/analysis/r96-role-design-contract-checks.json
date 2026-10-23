@@ -1,0 +1,122 @@
+{
+  "status": "design-reference-only",
+  "checks": 31,
+  "allPassed": true,
+  "warning": "These checks validate an isolated mathematical interpretation of proposed rules; the new role runtime and raid behavior are NOT implemented or tested by this reference model.",
+  "healRows": [
+    {
+      "level": 60,
+      "type": "minstrel",
+      "attack": 757.8991999999998,
+      "maxHP": 1440.4,
+      "oldZero": 432.12,
+      "oldFull": 432.12,
+      "fixedZero": 259.272,
+      "fixedFull": 432.12
+    },
+    {
+      "level": 60,
+      "type": "idol",
+      "attack": 757.8991999999998,
+      "maxHP": 1440.4,
+      "oldZero": 230.46400000000003,
+      "oldFull": 230.46400000000003,
+      "fixedZero": 115.23200000000001,
+      "fixedFull": 230.46400000000003
+    },
+    {
+      "level": 90,
+      "type": "minstrel",
+      "attack": 1479.4623999999997,
+      "maxHP": 2169.6,
+      "oldZero": 650.88,
+      "oldFull": 650.88,
+      "fixedZero": 390.52799999999996,
+      "fixedFull": 650.88
+    },
+    {
+      "level": 90,
+      "type": "idol",
+      "attack": 1479.4623999999997,
+      "maxHP": 2169.6,
+      "oldZero": 347.13599999999997,
+      "oldFull": 347.13599999999997,
+      "fixedZero": 173.56799999999998,
+      "fixedFull": 347.13599999999997
+    }
+  ],
+  "budgets": [
+    {
+      "job": "타이탄",
+      "before": 546,
+      "after": 414
+    },
+    {
+      "job": "크루세이더",
+      "before": 341,
+      "after": 341
+    },
+    {
+      "job": "사보추어",
+      "before": 432,
+      "after": 432
+    },
+    {
+      "job": "마이스터",
+      "before": 336,
+      "after": 336
+    },
+    {
+      "job": "메탈리스트",
+      "before": 369,
+      "after": 369
+    },
+    {
+      "job": "포병장",
+      "before": 352,
+      "after": 352
+    },
+    {
+      "job": "인퀴지터",
+      "before": 315,
+      "after": 315
+    }
+  ],
+  "supportMargins": [
+    {
+      "job": "워록",
+      "minimumCurrentRatioToParent": 1.6065354439353499,
+      "maximumUniformDamageCutToKeep115Percent": 0.2841739008365892,
+      "warning": "Only a whole-DPS algebraic sensitivity bound, not authorization to nerf any skill. New self buffs, summon AI, healing and movement change actual performance."
+    },
+    {
+      "job": "민스트럴",
+      "minimumCurrentRatioToParent": 1.3419243740565143,
+      "maximumUniformDamageCutToKeep115Percent": 0.14302175127525607,
+      "warning": "Only a whole-DPS algebraic sensitivity bound, not authorization to nerf any skill. New self buffs, summon AI, healing and movement change actual performance."
+    },
+    {
+      "job": "아이돌",
+      "minimumCurrentRatioToParent": 1.4823931958603296,
+      "maximumUniformDamageCutToKeep115Percent": 0.2242274160381721,
+      "warning": "Only a whole-DPS algebraic sensitivity bound, not authorization to nerf any skill. New self buffs, summon AI, healing and movement change actual performance."
+    },
+    {
+      "job": "엘리멘탈로드",
+      "minimumCurrentRatioToParent": 1.2401044571905238,
+      "maximumUniformDamageCutToKeep115Percent": 0.07265876408077498,
+      "warning": "Only a whole-DPS algebraic sensitivity bound, not authorization to nerf any skill. New self buffs, summon AI, healing and movement change actual performance."
+    }
+  ],
+  "baseline": {
+    "runs": 408,
+    "allFinite": true,
+    "comparisons": 52,
+    "promotionRegressions": 0
+  },
+  "blockers": [
+    "공용 역할 런타임과 레이드 다중 효과·대상 처리가 아직 미구현",
+    "52개 스킬의 공격 예산 재배분·회복 범위·치유 우선순위 수치 미확정",
+    "새 스킬로 자연 스테이지·4인 레이드·실제 생존/치유/무력화 실측 필요"
+  ]
+}
