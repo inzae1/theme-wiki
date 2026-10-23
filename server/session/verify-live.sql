@@ -1,0 +1,31 @@
+begin;
+create or replace function pg_temp.verify_single_session() returns jsonb language plpgsql as $$
+declare uid uuid:=gen_random_uuid();a uuid:=gen_random_uuid();b uuid:=gen_random_uuid();pl jsonb;reply jsonb;rev bigint;denied integer:=0;
+begin begin
+ select payload into pl from public.rpg_cloud_saves order by updated_at desc limit 1;
+ if pl is null then raise exception 'NO_VALID_FIXTURE_PAYLOAD';end if;
+ insert into auth.users(id,aud,role) values(uid,'authenticated','authenticated');
+ perform set_config('request.jwt.claim.sub',uid::text,true);
+ insert into public.rpg_cloud_saves(user_id,payload) values(uid,pl);
+ insert into public.rpg_expeditions(user_id,name) values(uid,'Z_'||left(replace(uid::text,'-',''),12));
+ update rpg_sessions.settings set enforced=true;
+ perform set_config('role','authenticated',true);
+ perform set_config('request.headers',jsonb_build_object('x-rpg-session',a)::text,true);
+ reply:=public.rpg_play_session('claim',a,false);if not (reply->>'active')::boolean then raise exception 'CLAIM_FAILED';end if;
+ select revision into rev from public.rpg_cloud_saves where user_id=uid;
+ perform public.rpg_save_progress(rev,pl);rev:=rev+1;
+ reply:=public.rpg_play_session('claim',b,false);if reply->>'reason'<>'OTHER_SESSION' then raise exception 'SECOND_CLIENT_NOT_BLOCKED';end if;
+ reply:=public.rpg_play_session('claim',b,true);if not (reply->>'active')::boolean then raise exception 'TAKEOVER_FAILED';end if;
+ begin perform public.rpg_save_progress(rev,pl);exception when sqlstate 'PT423' then denied:=denied+1;end;
+ begin perform public.rpg_raid_command('resume');exception when sqlstate 'PT423' then denied:=denied+1;end;
+ perform set_config('request.headers','{}',true);
+ begin perform public.rpg_save_progress(rev,pl);exception when sqlstate 'PT423' then denied:=denied+1;end;
+ perform set_config('request.headers',jsonb_build_object('x-rpg-session',b)::text,true);
+ perform public.rpg_save_progress(rev,pl);reply:=public.rpg_raid_command('resume');
+ if denied<>3 then raise exception 'STALE_OR_LEGACY_WRITE_NOT_DENIED';end if;
+ if has_table_privilege('authenticated','public.rpg_cloud_saves','UPDATE') or has_table_privilege('authenticated','rpg_sessions.leases','SELECT') or has_table_privilege('anon','rpg_sessions.merge_backups','SELECT') then raise exception 'DIRECT_ACCESS_NOT_BLOCKED';end if;
+ raise exception using errcode='ZX001',message='verified';
+ exception when sqlstate 'ZX001' then return jsonb_build_object('result','PASS','checks','authenticated claim/save; second client denied; takeover; old token and legacy save denied; new token save and raid resume; private tables protected','cleanup','fixture user, save, lease and enforcement flag all rolled back');end;
+end $$;
+select pg_temp.verify_single_session();
+rollback;

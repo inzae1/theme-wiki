@@ -17,4 +17,4 @@ create or replace function rpg_raid.hurt(s jsonb,idx integer,amount numeric) ret
 `;
 const source=fs.readFileSync('server/raid/role-core.sql','utf8')+fs.readFileSync('server/raid/support.sql','utf8')+abilities+wrappers+advance+command+fs.readFileSync('server/raid/support-profiles.sql','utf8');
 const names=[...source.matchAll(/create or replace function rpg_raid\.(\w+)\(([^)]*)\)/g)].map(m=>{const args=m[2].split(',').filter(Boolean).map(x=>x.trim().split(/\s+/)[1]).join(',');return`rpg_raid.${m[1]}(${args})`;});
-fs.writeFileSync('server/raid/support-integration.sql','begin;\n'+source+'\nrevoke all on function '+[...new Set(names)].join(',')+' from public,anon,authenticated;\ncommit;\n');console.log('Built private server support integration patch');
+fs.writeFileSync('server/raid/support-integration.sql','begin;\n'+source+'\nrevoke all on function '+[...new Set(names)].join(',')+' from public,anon,authenticated;\ngrant execute on function rpg_raid.command(text,uuid,text,integer,jsonb) to authenticated;\ncommit;\n');console.log('Built private server support integration patch');

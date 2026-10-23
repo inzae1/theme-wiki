@@ -150,7 +150,7 @@ if cmd='kick' then
 if uid<>r.host or s->>'status'<>'lobby' then raise exception '방장이 대기실에서만 내보낼 수 있어요.';end if;
 j:=(arg->>'target')::integer;if j is null or j<0 or j>=jsonb_array_length(s->'players') or j=idx then raise exception '참가자를 확인해 주세요.';end if;
 q:=s->'players'->j;delete from rpg_raid.members where user_id=(q->>'id')::uuid and room_id=r.id;
-select coalesce(jsonb_agg(value),'[]'::jsonb) into q from jsonb_array_elements(s->'players') with ordinality as x(value,n) where n<>j+1;s:=jsonb_set(s,'{players}',q);
+select coalesce(jsonb_agg(value),'[]'::jsonb) into q from jsonb_array_elements(s->'players') with ordinality as x(value,n) where x.n<>j+1;s:=jsonb_set(s,'{players}',q);
 end if;
 if cmd='ready' and s->>'status'='lobby' then p:=jsonb_set(p,'{ready}',to_jsonb(not (p->>'ready')::boolean));s:=jsonb_set(s,array['players',idx::text],p);end if;
 if cmd='retry' and s->>'status' in ('clear','failed') then
