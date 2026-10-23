@@ -1,0 +1,453 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-23",
+  "animations": [
+    {
+      "cell": 0,
+      "slot": 0,
+      "name": "빠른 베기",
+      "job": "검사",
+      "file": "0-0.png",
+      "gif": "0-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "0-four-skills.png"
+    },
+    {
+      "cell": 0,
+      "slot": 1,
+      "name": "연속 베기",
+      "job": "검사",
+      "file": "0-1.png",
+      "gif": "0-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "0-four-skills.png"
+    },
+    {
+      "cell": 0,
+      "slot": 2,
+      "name": "칼등 방어",
+      "job": "검사",
+      "file": "0-2.png",
+      "gif": "0-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "0-four-skills.png"
+    },
+    {
+      "cell": 0,
+      "slot": 3,
+      "name": "결의의 일섬",
+      "job": "검사",
+      "file": "0-3.png",
+      "gif": "0-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "0-four-skills.png"
+    },
+    {
+      "cell": 1,
+      "slot": 0,
+      "name": "발도 연격",
+      "job": "검성",
+      "file": "1-0.png",
+      "gif": "1-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "1-four-skills.png"
+    },
+    {
+      "cell": 1,
+      "slot": 1,
+      "name": "받아치기",
+      "job": "검성",
+      "file": "1-1.png",
+      "gif": "1-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "1-four-skills.png"
+    },
+    {
+      "cell": 1,
+      "slot": 2,
+      "name": "검술 집중",
+      "job": "검성",
+      "file": "1-2.png",
+      "gif": "1-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "1-four-skills.png"
+    },
+    {
+      "cell": 1,
+      "slot": 3,
+      "name": "십자 발도",
+      "job": "검성",
+      "file": "1-3.png",
+      "gif": "1-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "1-four-skills.png"
+    },
+    {
+      "cell": 2,
+      "slot": 0,
+      "name": "중검 내려치기",
+      "job": "워리어",
+      "file": "2-0.png",
+      "gif": "2-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "2-four-skills.png"
+    },
+    {
+      "cell": 2,
+      "slot": 1,
+      "name": "휠윈드",
+      "job": "워리어",
+      "file": "2-1.png",
+      "gif": "2-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.5,
+      "loop": true,
+      "source": "2-four-skills.png"
+    },
+    {
+      "cell": 2,
+      "slot": 2,
+      "name": "대검 받아내기",
+      "job": "워리어",
+      "file": "2-2.png",
+      "gif": "2-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "2-four-skills.png"
+    },
+    {
+      "cell": 2,
+      "slot": 3,
+      "name": "분쇄 일격",
+      "job": "워리어",
+      "file": "2-3.png",
+      "gif": "2-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "2-four-skills.png"
+    },
+    {
+      "cell": 3,
+      "slot": 0,
+      "name": "귀영 추격",
+      "job": "검귀",
+      "file": "3-0.png",
+      "gif": "3-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "3-four-skills.png"
+    },
+    {
+      "cell": 3,
+      "slot": 1,
+      "name": "잔영 육연참",
+      "job": "검귀",
+      "file": "3-1.png",
+      "gif": "3-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "3-four-skills.png"
+    },
+    {
+      "cell": 3,
+      "slot": 2,
+      "name": "검귀의 호흡",
+      "job": "검귀",
+      "file": "3-2.png",
+      "gif": "3-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "3-four-skills.png"
+    },
+    {
+      "cell": 3,
+      "slot": 3,
+      "name": "백귀난무",
+      "job": "검귀",
+      "file": "3-3.png",
+      "gif": "3-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "3-four-skills.png"
+    },
+    {
+      "cell": 4,
+      "slot": 0,
+      "name": "수라 반격",
+      "job": "수라",
+      "file": "4-0.png",
+      "gif": "4-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "4-four-skills.png"
+    },
+    {
+      "cell": 4,
+      "slot": 1,
+      "name": "축적 방출",
+      "job": "수라",
+      "file": "4-1.png",
+      "gif": "4-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "4-four-skills.png"
+    },
+    {
+      "cell": 4,
+      "slot": 2,
+      "name": "불동 자세",
+      "job": "수라",
+      "file": "4-2.png",
+      "gif": "4-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "4-four-skills.png"
+    },
+    {
+      "cell": 4,
+      "slot": 3,
+      "name": "만격반환",
+      "job": "수라",
+      "file": "4-3.png",
+      "gif": "4-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "4-four-skills.png"
+    },
+    {
+      "cell": 5,
+      "slot": 0,
+      "name": "전선 강타",
+      "job": "뱅가드",
+      "file": "5-0.png",
+      "gif": "5-0.gif",
+      "frames": 8,
+      "frameSize": 256,
+      "duration": 0.72,
+      "loop": false,
+      "source": "5-cleave.png"
+    },
+    {
+      "cell": 5,
+      "slot": 1,
+      "name": "수호 휠윈드",
+      "job": "뱅가드",
+      "file": "5-1.png",
+      "gif": "5-1.gif",
+      "frames": 8,
+      "frameSize": 256,
+      "duration": 0.5,
+      "loop": true,
+      "source": "5-whirl.png"
+    },
+    {
+      "cell": 5,
+      "slot": 2,
+      "name": "선봉 수호",
+      "job": "뱅가드",
+      "file": "5-2.png",
+      "gif": "5-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "5-guard-ultimate.png"
+    },
+    {
+      "cell": 5,
+      "slot": 3,
+      "name": "불락의 전선",
+      "job": "뱅가드",
+      "file": "5-3.png",
+      "gif": "5-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "5-guard-ultimate.png"
+    },
+    {
+      "cell": 6,
+      "slot": 0,
+      "name": "암흑 검기",
+      "job": "다크나이트",
+      "file": "6-0.png",
+      "gif": "6-0.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "6-four-skills.png"
+    },
+    {
+      "cell": 6,
+      "slot": 1,
+      "name": "흑풍회전",
+      "job": "다크나이트",
+      "file": "6-1.png",
+      "gif": "6-1.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.5,
+      "loop": true,
+      "source": "6-four-skills.png"
+    },
+    {
+      "cell": 6,
+      "slot": 2,
+      "name": "암흑 각성",
+      "job": "다크나이트",
+      "file": "6-2.png",
+      "gif": "6-2.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "6-four-skills.png"
+    },
+    {
+      "cell": 6,
+      "slot": 3,
+      "name": "종언의 대검",
+      "job": "다크나이트",
+      "file": "6-3.png",
+      "gif": "6-3.gif",
+      "frames": 4,
+      "frameSize": 256,
+      "duration": 0.36,
+      "loop": false,
+      "source": "6-four-skills.png"
+    }
+  ],
+  "sources": [
+    {
+      "file": "0-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 검사. Palette and personality: steel silver and restrained warm ivory, plain practical steel sword. ROW 1: single clean diagonal quick slash with a sharp contact glint. ROW 2: three rapid overlapping thin sword cuts, visibly different diagonal directions. ROW 3: compact hard-metal parry collision flash, tiny gold sparks and steel chips, NOT a shield icon. ROW 4: broad horizontal silver blade shockwave launching right, long tapered white wake.",
+      "sha256": "44419f34ffb63b9a9af74a9bb7ef2b1cfd8a146214c423b07f1f3c4ef2315708",
+      "size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "file": "1-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 검성. Palette and personality: precise ivory-white katana edges with very restrained pale gold. ROW 1: a fast low horizontal iaijutsu draw line followed by three razor slashes. ROW 2: compact angular riposte collision burst, sharp opposing steel streaks. ROW 3: small concentrated ascending sword-focus glints and disciplined wisps, no circle or emblem. ROW 4: two large crossing diagonal katana cuts forming a decisive X, jagged luminous razor edges.",
+      "sha256": "ce5f7800e8b68ecce54f283897b45afb14dbf4ec21150c419794c70ce62ea9db",
+      "size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "file": "2-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 워리어. Palette and personality: weighty neutral steel silver, muted dusty rust-orange ground chips. ROW 1: heavy overhead greatsword cleave landing with rock chips. ROW 2: looping mobile sword whirlwind, highlight travels around one FIXED HORIZONTAL shallow elliptical trail; four successive quarter-turn positions; same horizontal plane in every frame, NO rotation of the whole ellipse. ROW 3: a heavy blade parry flash, iron chips and compact warm sparks, no shield symbol. ROW 4: massive downward ground-crusher strike with a tall narrow white slash and spreading cracked-earth debris impact.",
+      "sha256": "0d21297373d076ecd087107b3622ff1f553f89a8cfbde345225cb6f7f8ba8501",
+      "size": [
+        1284,
+        1225
+      ]
+    },
+    {
+      "file": "3-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 검귀. Palette and personality: inky black trails and crimson scarlet razor highlights, aggressive demonic melee swordplay. ROW 1: forward piercing black-red sword pursuit streak with a ghosted narrow slash wake. ROW 2: six short jagged crimson cutting strokes stacked in a furious close-range flurry. ROW 3: dark crimson breath ribbons rising close to an empty character-sized center, no monster or face. ROW 4: hundred-cut finisher: dense thin black-red slashes converge then one decisive enormous diagonal scarlet cut fractures the air.",
+      "sha256": "f4148e55ec4d3f02965a4d827073f89cd9f02d3f92705a8a3fd105897ae78239",
+      "size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "file": "4-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 수라. Palette and personality: tempered bronze steel, pale gold contact sparks and dark red force accents; defensive sword counter master. ROW 1: parry and immediate counter collision, crossed angular bronze razor streaks, no shield icon. ROW 2: stored force released as a jagged low ground-splitting outward shock front with iron fragments. ROW 3: immovable stance: compact planted steel brace glints at feet, heavy dust settles, clear empty center, no circle, no emblem. ROW 4: ultimate returned impact: multiple sharp converging bronze counter-slashes and powerful outward white-gold rupture with chunky ground chips.",
+      "sha256": "8fa15962712c269fefc690ec0ca2df0868c97f1e6d1f8cea4c1e468a091ca648",
+      "size": [
+        1295,
+        1214
+      ]
+    },
+    {
+      "file": "6-four-skills.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and FOUR rows, sixteen evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show FOUR DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class: 다크나이트. Palette and personality: obsidian violet greatsword energy with cold lilac silver edges, dark aggressive physical magic. ROW 1: pointed narrow piercing dark blade projectile with sharp lavender cutting edge and torn black wake. ROW 2: looping black-violet sword whirlwind; four successive quarter turns of bright leading edges around the SAME FIXED HORIZONTAL elliptical sweep; center empty, never rotate entire ellipse. ROW 3: dark awakening: thin vertical violet flame-like soul wisps and chipped obsidian glints ascending around an empty center, no creature. ROW 4: apocalypse greatsword: immense vertical violet-white cleave falling into a jagged black-violet ground eruption, strong distinct centered final impact.",
+      "sha256": "e93dcf65eb78b5edbcc5855a1d1aa0aa0a3f890ad5f14d80484567aacf7f9cc7",
+      "size": [
+        1308,
+        1202
+      ]
+    },
+    {
+      "file": "5-guard-ultimate.png",
+      "prompt": "Use case: stylized-concept. Asset: ORIGINAL production pixel-art RPG VFX ANIMATION SPRITE SHEET on TRUE ALPHA TRANSPARENCY. Exactly FOUR columns and TWO rows, eight evenly aligned equal square cells, no gutters or frame lines. Each ROW is a DIFFERENT skill, each column its chronological animation phase (anticipation, strike, peak impact, dissipating recovery); a looping row instead has 4 successive continuous movement frames. Keep identical anchors and scale within each row and 12 percent transparent padding INSIDE every cell. It is essential to show TWO DISTINCT VFX designs, not recolors or copies. High quality hand-painted 32-bit pixel-art action game effects: crisp purposeful square pixel clusters, sharp stepped silhouettes, controlled highlights, no smooth vector geometry, no blurry gradients. No characters, bodies, faces, full actual weapon objects, shield symbols, wings, text, grid lines, UI, backgrounds, black/white matte rectangles or drawn checkerboards. True alpha around every effect. Class VANGUARD, blue-black tempered steel, silver-blue and restrained warm gold sparks. ROW 1: defensive vanguard guard activation: powerful compact interlocking steel streaks and metallic parry sparks around a transparent character-sized center, braced ground dust at base, NO shield icon or full ring. ROW 2: unbroken battlefront ultimate: four low angular silver-blue impact fronts pulse forward in a widening wedge, ground chips and a final enormous jagged metallic counter-strike erupt from the center. No wall prop, no shield emblem. Two distinct effects.",
+      "sha256": "265d6221be39d8c4ea4a7d51efb35bb206ed4bc7ce80d181f5128168180eed5e",
+      "size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "file": "5-cleave.png",
+      "prompt": "Use case: stylized-concept. Asset type: production pixel-art RPG VFX animation SPRITE SHEET, genuinely transparent background. Create an ORIGINAL heavy greatsword frontal CLEAVE impact for a steel-armored VANGUARD, not magic. Exactly FOUR columns by TWO rows of EIGHT equal square frames, read left to right then next row. Canvas aspect 2:1. Each frame has same center and scale and 12 percent empty transparent padding, absolutely no frame dividers, labels, text, characters, weapons, UI or scenery. Frames 1-2: sharp silver-blue weighty diagonal slash gathering from upper left, small steel glints. Frames 3-4: broad pointed hand-painted silver-white crescent descending right with layered pale blue edge, a compact brilliant metallic contact flash at center-bottom and a few chunky stone chips. Frames 5-6: slash breaks into sharply tapered streaks and small sparks, stone chips fall. Frames 7-8: dissipating sparse particles then nearly empty. Strong time progression, not eight copies. Polished 32-bit SNES/modern pixel-art action game effect, visible intentional square pixel clusters, crisp stepped silhouettes, limited slate blue / ice silver / warm tiny sparks palette, strong readable silhouette at 100 pixels tall. No full circular ring, no electrical beam, no shield emblem, no rune, no ghost, no giant solid blade object. True alpha transparency everywhere outside the VFX; no white rectangles, no black background, no checkerboard drawn into image. Keep effect entirely inside every cell.",
+      "sha256": "8ca807676f70681d67c2e95c844df73e92067293f21663816f3448bd4e7f7c4b",
+      "size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "file": "5-whirl.png",
+      "prompt": "Use case: stylized-concept. Asset type: production pixel-art RPG VFX LOOP animation SPRITE SHEET, genuinely transparent background. Original VANGUARD GUARDING WHIRLWIND made of painted heavy steel-blue silver greatsword motion, exactly FOUR columns by TWO rows, EIGHT equal square frames in chronological order left to right then second row. Canvas aspect 2:1. All 8 frame cells share fixed center and identical scale with 12 percent transparent padding; no grid lines or labels. One sweeping pointed blade trail rotates a full 360 degrees across eight frames, angles 0,45,90,135,180,225,270,315 degrees. Three-quarter top-down perspective, shallow elliptical swept path, LARGE transparent hollow center for a character. Each frame has a short thick silver-white leading crescent, a longer broken slate-blue trailing crescent, two or three tiny warm sparks near the leading edge, a few chunky wispy blue steel speed streaks, and visibly tapered fading tails. It must feel like a weighty spinning melee sword slash, NOT a glowing circular aura or blue ribbon logo. Seamless loop from frame 8 to frame 1; retain constant energy and size. Polished highly detailed yet crisp 32-bit pixel art, purposeful square pixel clusters, hand-authored irregular jagged edges. No characters, no actual sword, no shield icon, no snowflakes, no lightning, no magic runes, no solid full ring, no scenery, no text, no UI. True transparent alpha background with no checkerboard or matte rectangle. Keep every crescent fully inside its individual frame.",
+      "sha256": "ecbd00d04e112d2b50737244950fe7fbaa3566e765e1771a05a10df45d8c76eb",
+      "size": [
+        1774,
+        887
+      ]
+    }
+  ]
+}

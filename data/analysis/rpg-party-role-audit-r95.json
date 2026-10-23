@@ -1,0 +1,6531 @@
+{
+  "date": "2026-10-23",
+  "baseline": "r94",
+  "scope": "Static source audit of 48 current second jobs / 192 skills plus authoritative raid profiles and helpers; not a new 48-job DPS benchmark. Qualitative statuses are engineering judgments.",
+  "counts": {
+    "보완 필요": 26,
+    "현재 이름·역할 교체": 2,
+    "주역할 불일치": 13,
+    "기본 적합": 7
+  },
+  "findings": [
+    "공용 보스 무력화 게이지·장갑 파괴 누적이 없고 exposedUntil은 패턴 성공 보상이다. 경직/밀치기와 구분해야 한다.",
+    "자기 강화·자기 치유·소환수 강화가 파티 지원인 것처럼 분류된 경우가 많다.",
+    "레이드는 seven effect profile(strike/heal/shield/guard/buff/dot/summon)로 재해석하며 보조 역할·고유 자원·제어를 동일하게 실행하지 않는다.",
+    "민스트럴은 raid role=heal이나 kit에 heal이 없다. 아이돌도 heal이 없다.",
+    "워록 저주 수확·혈마법사 생명 회수·비스트마스터 돌보기는 솔로 자기 회복/동료 관리지만 raid profile에서는 파티 heal이다.",
+    "크루세이더 raid role=guard이나 현재 kit는 strike/buff 중심이고, 기공장·자연 드루이드·저거너트 등은 역할 목표와 다른 range/position role을 사용한다.",
+    "룬나이트/소울브링어는 현재 뱅가드/다크나이트이며, 민스트럴 힐러/서포터 후속 설계는 아직 실제 스킬에 반영되지 않았다."
+  ],
+  "rows": [
+    {
+      "hero": 0,
+      "cell": 3,
+      "character": "박종찬",
+      "job": "검귀",
+      "userTableName": "검귀",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "추격·6연참·연격 소비 결정타는 딜러에 맞지만 보스 무력화나 장갑 파괴 수치가 없다.",
+      "proposal": "연격 소비 결정타에 제한된 무력화 기여를 부여. 일반 연타마다 무제한 경직을 주지 않기.",
+      "skills": [
+        {
+          "id": "jongchan-3-skill-0",
+          "name": "귀영 추격",
+          "description": "지형을 확인하며 최대 190 접근 후 4회 근접 잔영 베기 · 각 55% · 실제 명중 시 연격 축적",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "shadow-chase",
+              "profile": "shadow-rush"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-3-skill-1",
+          "name": "잔영 육연참",
+          "description": "0.12초 간격 근접 6회 · 타격당 65% · 실제 명중 시 연격 1 획득",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "six-cuts",
+              "profile": "shadow-flurry"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-3-skill-2",
+          "name": "검귀의 호흡",
+          "description": "10초 연격 비례 공격력 증가 · 12연격에서 최대 35% · 기본공격과 직접 기술에 적용",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "demon-breath",
+              "profile": "sword-focus"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-3-skill-3",
+          "name": "백귀난무",
+          "description": "근접 8연타로 타격당 50%·연격 축적 후 마지막 500%+소모 연격당 75% 결정타 · 마지막 명중에 연격 전부 소모",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "hundred-cuts",
+              "profile": "shadow-finish"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "귀영 추격",
+            "signature": "shadow-chase",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "잔영 육연참",
+            "signature": "six-cuts",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "검귀의 호흡",
+            "signature": "demon-breath",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "백귀난무",
+            "signature": "hundred-cuts",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 0,
+      "cell": 4,
+      "character": "박종찬",
+      "job": "수라",
+      "userTableName": "수라",
+      "target": "탱커/브레이커",
+      "status": "보완 필요",
+      "reason": "70·80·90% 자기 경감과 실제 피해 저장 반격은 탱커 기반이 강하다. 브레이커는 아직 반격 피해에 붙인 기획 역할이다.",
+      "proposal": "막기 성공으로 충격을 모아 방출할 때 무력화. 파티 보호·위협 대상 제어도 별도 연결.",
+      "skills": [
+        {
+          "id": "jongchan-4-skill-0",
+          "name": "수라 반격",
+          "description": "2.5초 피해 70% 감소 · 실제 방어 성공 시 165 이내 공격자에게 240% 반격 · 반격 간격 0.45초",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "asura-parry",
+              "profile": "blade-guard"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-4-skill-1",
+          "name": "축적 방출",
+          "description": "반경 100에 300%+저장 충격량 피해 · 충격량 전부 소모 · 저장 상한은 공격력 8배",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "stored-cut",
+              "profile": "sword-riposte"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-4-skill-2",
+          "name": "불동 자세",
+          "description": "5초 피해 80% 감소 · 약한 방어를 겹쳐도 유지 시간 동안 가장 강한 방어율 적용 · 실제 감소량만 저장",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "immovable",
+              "profile": "blade-guard"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-4-skill-3",
+          "name": "만격반환",
+          "description": "반경 180에 700%+저장 충격량 방출 후 2초 피해 90% 감소 · 저장량 전부 소모",
+          "actions": [
+            {
+              "op": "sword-kit",
+              "kind": "thousand-return",
+              "profile": "sword-riposte"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "guard",
+        "kit": [
+          {
+            "name": "수라 반격",
+            "signature": "asura-parry",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "축적 방출",
+            "signature": "stored-cut",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "불동 자세",
+            "signature": "immovable",
+            "effect": "guard",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "만격반환",
+            "signature": "thousand-return",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 0,
+      "cell": 5,
+      "character": "박종찬",
+      "job": "뱅가드",
+      "userTableName": "룬나이트",
+      "target": "서포터/제어형",
+      "status": "현재 이름·역할 교체",
+      "reason": "룬나이트는 뱅가드로 변경됐다. 전선 강타·수호 휠윈드의 도발과 경감으로 현재 목표는 탱커/제어형이다.",
+      "proposal": "뱅가드 탱커/제어형 유지. 레이드에서 실제 도발 대상과 위협 처리를 지원해야 한다.",
+      "skills": [
+        {
+          "id": "jongchan-5-skill-0",
+          "name": "전선 강타",
+          "description": "전방 강타 330% 피해 · 명중 적 4초 도발 · 일반 적 0.6초 경직, 보스 0.15초",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "vanguard-strike",
+              "profile": "blade-guard"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-5-skill-1",
+          "name": "수호 휠윈드",
+          "description": "이동 가능한 2초 대검 회전 · 반경 125, 8회 총 560% 피해 · 회전 중 모든 방향 피해 30% 감소 · 명중 적 2초 도발 · 이동속도 75%, 같은 버튼으로 중단 · 수호 자세와 피해 감소 중첩 안 됨",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "vanguard-whirl",
+              "profile": "sword-chain"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-5-skill-2",
+          "name": "선봉 수호",
+          "description": "5초간 전방 공격 60%, 후방 공격 20% 경감 · 실제 경감량을 공격력 5배까지 저장 · 레이드에서는 파티 방어 효과",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "vanguard-guard",
+              "profile": "blade-guard"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-5-skill-3",
+          "name": "불락의 전선",
+          "description": "6초간 전방 70%, 후방 30% 경감 · 반경 175 적 도발 · 4회 총 840% 피해 후 저장 방어량으로 최대 500% 반격 · 보스 무한 경직 불가",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "unbroken-front",
+              "profile": "sword-cut"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "guard",
+        "kit": [
+          {
+            "name": "전선 강타",
+            "signature": "vanguard-strike",
+            "effect": "strike",
+            "cd": 5,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "수호 휠윈드",
+            "signature": "vanguard-whirl",
+            "effect": "dot",
+            "cd": 10,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 2.976,
+            "duration": 2,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.3,
+            "guardSelf": true,
+            "guardDuration": 2,
+            "buff": 0
+          },
+          {
+            "name": "선봉 수호",
+            "signature": "vanguard-guard",
+            "effect": "guard",
+            "cd": 14,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "불락의 전선",
+            "signature": "unbroken-front",
+            "effect": "guard",
+            "cd": 34,
+            "range": 160,
+            "power": 3.571,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 0,
+      "cell": 6,
+      "character": "박종찬",
+      "job": "다크나이트",
+      "userTableName": "소울브링어",
+      "target": "딜러/서포터",
+      "status": "현재 이름·역할 교체",
+      "reason": "소울브링어는 다크나이트로 변경됐다. 어둠 소비·회전·대검 폭발·제한 흡혈이며 아군 지원은 없다.",
+      "proposal": "다크나이트 딜러/브레이커 목표. 어둠 소비 강타에 공용 무력화 또는 노출 기여를 추가.",
+      "skills": [
+        {
+          "id": "jongchan-6-skill-0",
+          "name": "암흑 검기",
+          "description": "실제 충돌하는 관통 검기 330% 피해 · 명중 시 어둠 +20, 발사당 최대 +30",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "dark-edge",
+              "profile": "sword-cut"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-6-skill-1",
+          "name": "흑풍회전",
+          "description": "2초 이동 회전 · 8회 총 640% 피해 · 어둠 최대 30 소비 시 총 피해 최대 +50% · 이동속도 75% · 같은 버튼으로 중단",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "dark-whirl",
+              "profile": "sword-chain"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-6-skill-2",
+          "name": "암흑 각성",
+          "description": "10초간 공격력 +22%, 일반공격 어둠 획득 +4 · 실제 명중 피해 6% 흡수, 초당 최대 체력 2% 한도 · 어둠 보존",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "dark-awakening",
+              "profile": "sword-cut"
+            }
+          ]
+        },
+        {
+          "id": "jongchan-6-skill-3",
+          "name": "종언의 대검",
+          "description": "0.55초 준비 후 대검 낙하 · 주 대상 1050% + 어둠당 6% · 주변 피해 65% · 어둠 전부 소모 · 일반 적 1초, 보스 0.3초 경직",
+          "actions": [
+            {
+              "op": "greatsword-kit",
+              "kind": "dark-apocalypse",
+              "profile": "sword-cut"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "암흑 검기",
+            "signature": "dark-edge",
+            "effect": "strike",
+            "cd": 5,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "흑풍회전",
+            "signature": "dark-whirl",
+            "effect": "dot",
+            "cd": 9,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 2.976,
+            "duration": 2,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "암흑 각성",
+            "signature": "dark-awakening",
+            "effect": "buff",
+            "cd": 15,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "종언의 대검",
+            "signature": "dark-apocalypse",
+            "effect": "strike",
+            "cd": 34,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 1,
+      "cell": 3,
+      "character": "최현석",
+      "job": "블러드로드",
+      "userTableName": "블러드로드",
+      "target": "딜러/탱커",
+      "status": "보완 필요",
+      "reason": "체력 지불·출혈·흡혈로 오래 싸우는 딜러다. 자기 회복만으로 파티 탱커가 되지는 않는다.",
+      "proposal": "흡혈 딜러로 유지하되 보조 탱커라면 짧은 도발/피해 전가 수단이 필요.",
+      "skills": [
+        {
+          "id": "hyunseok-3-skill-0",
+          "name": "혈풍 회전",
+          "description": "체력 6% 지불 후 주변 반경 110을 4회 베어 타격당 70%·출혈 1중첩 · 자동 연계는 회전 종료를 기다림",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "blood-wheel",
+              "target": "area",
+              "description": "체력 6% 지불 후 주변 반경 110을 4회 베어 타격당 70%·출혈 1중첩 · 자동 연계는 회전 종료를 기다림"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-3-skill-1",
+          "name": "상처 찢기",
+          "description": "출혈을 소모해 180%+중첩당 90% 피해·중첩당 체력 1% 회복 · 자동 사용은 3중첩 이상, 만료 직전 또는 체력이 낮을 때 · 궁극기 준비 시 출혈 보존",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "rupture",
+              "target": "single",
+              "description": "출혈을 소모해 180%+중첩당 90% 피해·중첩당 체력 1% 회복 · 자동 사용은 3중첩 이상, 만료 직전 또는 체력이 낮을 때 · 궁극기 준비 시 출혈 보존"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-3-skill-2",
+          "name": "피의 계약",
+          "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "blood-pact",
+              "target": "self",
+              "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-3-skill-3",
+          "name": "선혈 수확",
+          "description": "반경 240의 출혈을 소모해 중첩당 150% 피해·피 회수 · 0.65초 뒤 반경 210에 450% 파동 · 소모 중첩당 체력 1% 회복, 최대 20%",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "blood-harvest",
+              "target": "area",
+              "description": "반경 240의 출혈을 소모해 중첩당 150% 피해·피 회수 · 0.65초 뒤 반경 210에 450% 파동 · 소모 중첩당 체력 1% 회복, 최대 20%"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "혈풍 회전",
+            "signature": "blood-wheel",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "상처 찢기",
+            "signature": "rupture",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "피의 계약",
+            "signature": "blood-pact",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "선혈 수확",
+            "signature": "blood-harvest",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 1,
+      "cell": 4,
+      "character": "최현석",
+      "job": "슬레이어",
+      "userTableName": "슬레이어",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "약점 표식은 자신의 후속 피해를 키우고 처형·연쇄 접근은 마무리 공격이다. 방어 파괴·공용 무력화는 없다.",
+      "proposal": "약점 소비 처형에 제한적 무력화. 즉사·처형 피해 증가와 무력화 역할을 구분.",
+      "skills": [
+        {
+          "id": "hyunseok-4-skill-0",
+          "name": "약점 가르기",
+          "description": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "weak-cleave",
+              "target": "single",
+              "description": "근접 대상에게 220% 피해·8초 약점 표식. 자신의 후속 직접 피해 20% 증가"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-4-skill-1",
+          "name": "사냥감 처형",
+          "description": "사거리 내 체력이 낮은 적 우선 · 체력 35% 미만이면 750%, 그 외 180% · 처치 시 이 기술만 초기화 · 보스 처형 피해 480%",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "prey-execute",
+              "target": "single",
+              "description": "사거리 내 체력이 낮은 적 우선 · 체력 35% 미만이면 750%, 그 외 180% · 처치 시 이 기술만 초기화 · 보스 처형 피해 480%"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-4-skill-2",
+          "name": "살육의 추격",
+          "description": "460 이내의 약해진 적에게 경로를 확인하며 접근 · 도착 시 6초 약점 표식 · 6초 치명타 25% 증가 · 벽에 막히면 정지",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "prey-hunt",
+              "target": "self",
+              "description": "460 이내의 약해진 적에게 경로를 확인하며 접근 · 도착 시 6초 약점 표식 · 6초 치명타 25% 증가 · 벽에 막히면 정지"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-4-skill-3",
+          "name": "연쇄 참수",
+          "description": "460 이내에서 약한 적을 골라 실제 접근 후 최대 4회 참수 · 기본 450%, 체력 40% 미만 일반 적 720%·보스 540% · 단일 보스 후속 타격은 기본 180% · 총 이동 최대 650",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "execution-route",
+              "target": "area",
+              "description": "460 이내에서 약한 적을 골라 실제 접근 후 최대 4회 참수 · 기본 450%, 체력 40% 미만 일반 적 720%·보스 540% · 단일 보스 후속 타격은 기본 180% · 총 이동 최대 650"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "약점 가르기",
+            "signature": "weak-cleave",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "사냥감 처형",
+            "signature": "prey-execute",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "살육의 추격",
+            "signature": "prey-hunt",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "연쇄 참수",
+            "signature": "execution-route",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 1,
+      "cell": 5,
+      "character": "최현석",
+      "job": "타이탄",
+      "userTableName": "타이탄",
+      "target": "브레이커/딜러",
+      "status": "주역할 불일치",
+      "reason": "축력 강타·균열·대지 붕괴는 강한 광역 피해와 밀치기다. 주 역할 브레이커를 판정할 공용 기반이 없다.",
+      "proposal": "주력 강타·중심 낙하에 큰 무력화, 균열 후속타 기여는 낮게 분리.",
+      "skills": [
+        {
+          "id": "hyunseok-5-skill-0",
+          "name": "충격 강타",
+          "description": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "titan-smash",
+              "target": "area",
+              "description": "0.8초 무기를 들어 모은 뒤 반경 130에 450% 피해. 적중 후 밀쳐냄"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-5-skill-1",
+          "name": "지면 균열",
+          "description": "0.7초 뒤 전방 지면이 6구간 순차 파열 · 구간당 170%, 같은 적 최대 2회 · 축력은 적마다 첫 타격만 강화",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "fault-line",
+              "target": "area",
+              "description": "0.7초 뒤 전방 지면이 6구간 순차 파열 · 구간당 170%, 같은 적 최대 2회 · 축력은 적마다 첫 타격만 강화"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-5-skill-2",
+          "name": "거인의 축력",
+          "description": "최대 8초 유지 · 다음 강타 또는 궁극기 중심 타격 65% 강화 · 균열은 적마다 첫 적중만 강화 · 준비 중 피해 25% 감소",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "titan-charge",
+              "target": "self",
+              "description": "최대 8초 유지 · 다음 강타 또는 궁극기 중심 타격 65% 강화 · 균열은 적마다 첫 적중만 강화 · 준비 중 피해 25% 감소"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-5-skill-3",
+          "name": "대지 붕괴",
+          "description": "1.3초 준비 후 중심 반경 135에 750% 강타 · 바깥으로 180% 균열파 2회 · 축력은 중심 강타에만 적용 · 적중 후 밀쳐냄",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "earth-collapse",
+              "target": "area",
+              "description": "1.3초 준비 후 중심 반경 135에 750% 강타 · 바깥으로 180% 균열파 2회 · 축력은 중심 강타에만 적용 · 적중 후 밀쳐냄"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "충격 강타",
+            "signature": "titan-smash",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "지면 균열",
+            "signature": "fault-line",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "거인의 축력",
+            "signature": "titan-charge",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "대지 붕괴",
+            "signature": "earth-collapse",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 1,
+      "cell": 6,
+      "character": "최현석",
+      "job": "저거너트",
+      "userTableName": "저거너트",
+      "target": "탱커/제어형",
+      "status": "기본 적합",
+      "reason": "55% 경감·밀림 방지·저장 충격과 돌진·밀치기로 방어 및 전선 제어 방향이 맞는다.",
+      "proposal": "레이드 역할값이 melee인 점과 실제 파티 위협·진로 차단 연결을 보완.",
+      "skills": [
+        {
+          "id": "hyunseok-6-skill-0",
+          "name": "철갑 돌진",
+          "description": "230을 시간에 따라 철갑 돌진 · 실제 경로 적에게 230%+방어력 피해·밀쳐냄 · 지형에 막히면 정지",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "iron-rush",
+              "target": "area",
+              "description": "230을 시간에 따라 철갑 돌진 · 실제 경로 적에게 230%+방어력 피해·밀쳐냄 · 지형에 막히면 정지"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-6-skill-1",
+          "name": "전선 밀치기",
+          "description": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "front-shove",
+              "target": "area",
+              "description": "근접 전방 적에게 250%+방어력 피해 후 밀쳐내고 짧게 경직"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-6-skill-2",
+          "name": "불굴 전진",
+          "description": "7초 피해 55% 감소·밀림 방지 · 방어력 적용 후 실제로 줄인 피해만 충격량 저장",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "unstoppable-march",
+              "target": "self",
+              "description": "7초 피해 55% 감소·밀림 방지 · 방어력 적용 후 실제로 줄인 피해만 충격량 저장"
+            }
+          ]
+        },
+        {
+          "id": "hyunseok-6-skill-3",
+          "name": "전선 분쇄",
+          "description": "3초간 지형을 확인하며 전진 · 접촉한 적에게 0.8초 간격 방어력 비례 피해 · 종료 시 전방에 저장 충격량 방출",
+          "actions": [
+            {
+              "op": "warrior-kit",
+              "kind": "line-breaker",
+              "target": "area",
+              "description": "3초간 지형을 확인하며 전진 · 접촉한 적에게 0.8초 간격 방어력 비례 피해 · 종료 시 전방에 저장 충격량 방출"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "철갑 돌진",
+            "signature": "iron-rush",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "전선 밀치기",
+            "signature": "front-shove",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "불굴 전진",
+            "signature": "unstoppable-march",
+            "effect": "guard",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "전선 분쇄",
+            "signature": "line-breaker",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 2,
+      "cell": 3,
+      "character": "이근호",
+      "job": "아크메이지",
+      "userTableName": "아크메이지",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "삼원소를 모아 운석으로 소비하는 딜러다. 냉기 제어는 있으나 브레이크·장갑 파괴는 없다.",
+      "proposal": "삼원소가 모두 모인 운석에 무력화 보너스. 평상시 세 원소는 피해·빙결로 구분.",
+      "skills": [
+        {
+          "id": "jihoon-3-skill-0",
+          "name": "화염 낙인",
+          "description": "0.2초 후 300% · 화상 1중첩, 중첩당 매초 30%·8초 · 화염 공명 축적",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "fire-brand",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-3-skill-1",
+          "name": "서리 전환",
+          "description": "0.25초 후 반경 110에 250% · 냉기 2중첩 · 냉기 공명 축적",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "ice-shift",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-3-skill-2",
+          "name": "번개 공명",
+          "description": "0.3초 후 길이 460·폭 48의 번개 관통 500% · 명중한 적 주변 110에 최대 2명에게 150% 연쇄 번개 · 번개 공명 축적",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "lightning-link",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-3-skill-3",
+          "name": "삼원소 운석",
+          "description": "1.2초 후 반경 190에 1000% · 모은 원소 종류마다 위력 25% 증가 후 소비 · 화상·냉기 1중첩 · 자동 시전은 2종 이상 공명 시 사용",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "tri-meteor",
+              "profile": "charge"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "화염 낙인",
+            "signature": "fire-brand",
+            "effect": "dot",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "서리 전환",
+            "signature": "ice-shift",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "번개 공명",
+            "signature": "lightning-link",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "삼원소 운석",
+            "signature": "tri-meteor",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 2,
+      "cell": 4,
+      "character": "이근호",
+      "job": "빙결술사",
+      "userTableName": "빙결술사",
+      "target": "제어형/딜러",
+      "status": "기본 적합",
+      "reason": "냉기 축적·영구동토·동결·파쇄와 보스 재동결 제한이 있어 두 역할의 순환이 분명하다.",
+      "proposal": "레이드에서도 냉기·동결 면역·제한 차단을 구현. 현재 프로필은 피해/지속피해로 축약된다.",
+      "skills": [
+        {
+          "id": "jihoon-4-skill-0",
+          "name": "얼음창",
+          "description": "0.3초 후 길이 460·폭 48에 270% 관통 얼음창 · 실제 적중한 적에게 냉기 2중첩",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "ice-lance",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-4-skill-1",
+          "name": "영구동토",
+          "description": "반경 160에 9초 냉기 지대 · 0.8초마다 40% 피해와 냉기 1중첩 · 자동 시전은 지대 종료 후 갱신",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "permafrost",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-4-skill-2",
+          "name": "동결 파쇄",
+          "description": "냉기 표적 주변 반경 130의 냉기를 소비 · 중첩당 250% · 냉기가 없으면 자원 소모 없음",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "ice-shatter",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-4-skill-3",
+          "name": "절대영도",
+          "description": "0.8초 후 반경 220에 500%와 냉기 5중첩 · 1.2초에 냉기를 소비해 중첩당 200% 파쇄 · 보스 동결 0.35초, 재동결 간격 3초",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "absolute-zero",
+              "profile": "charge"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "얼음창",
+            "signature": "ice-lance",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "영구동토",
+            "signature": "permafrost",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "동결 파쇄",
+            "signature": "ice-shatter",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "절대영도",
+            "signature": "absolute-zero",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "character": "이근호",
+      "job": "워록",
+      "userTableName": "워록",
+      "target": "서포터/딜러",
+      "status": "주역할 불일치",
+      "reason": "저주 부여·전이·소비 피해와 자기 회복이다. 아군 강화나 적 공격 약화가 없어서 실질은 지속 피해 딜러다.",
+      "proposal": "저주에 적 공격 감소/파티 공유 취약을 추가하고 수확은 자기 회복으로 유지.",
+      "skills": [
+        {
+          "id": "jihoon-5-skill-0",
+          "name": "고통의 인장",
+          "description": "100% 직접 피해 · 저주 2중첩, 중첩당 매초 45%·8초 · 독과 구별되는 주술 인장",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "pain-sigil",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-5-skill-1",
+          "name": "저주 전이",
+          "description": "150% 직접 피해와 저주 1중첩 후 반경 190에 저주 전이 · 보스 단독 전투에서도 사용 가능",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "curse-transfer",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-5-skill-2",
+          "name": "저주 수확",
+          "description": "저주 표적 주변 반경 160의 저주를 소비 · 중첩당 230% · 소비한 총 중첩당 체력 2%, 최대 12% 회복",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "curse-harvest",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-5-skill-3",
+          "name": "재앙 강림",
+          "description": "0.65초 후 반경 220에 저주 3중첩 · 1초 후 각 적의 저주를 소비해 중첩당 300% · 사전 저주 없이도 사용 가능",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "calamity",
+              "profile": "charge"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "고통의 인장",
+            "signature": "pain-sigil",
+            "effect": "dot",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "저주 전이",
+            "signature": "curse-transfer",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "저주 수확",
+            "signature": "curse-harvest",
+            "effect": "heal",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.16,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "재앙 강림",
+            "signature": "calamity",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 2,
+      "cell": 6,
+      "character": "이근호",
+      "job": "혈마법사",
+      "userTableName": "혈마법사",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "혈석 생성·관통 혈창·심장 폭발과 자기 생명 회수다. 힐러가 아니며 장갑 파괴도 아직 없다.",
+      "proposal": "혈석 소비 혈창에 방어 노출. 레이드 생명 회수를 아군 전체 회복으로 바꾸는 현재 매핑은 수정 필요.",
+      "skills": [
+        {
+          "id": "jihoon-6-skill-0",
+          "name": "혈석 생성",
+          "description": "최대 체력 6% 소비 · 혈탄 220% 실제 명중 시 혈석 2개 생성, 최대 8개 · 기본공격 3회 적중마다 혈석 1개 추가",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "blood-gem",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-6-skill-1",
+          "name": "관통 혈창",
+          "description": "0.3초 후 길이 460·폭 60에 기본 350% + 혈석당 100% 관통 · 실제 명중하면 혈석 전부 소비 · 빗나가면 혈석 유지",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "blood-lance",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-6-skill-2",
+          "name": "생명 회수",
+          "description": "혈석 전부 소비 · 혈석당 최대 체력 4% 회복 · 혈석이 2개 미만이거나 체력이 가득 차면 자원 소모 없음",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "blood-return",
+              "profile": "prayer"
+            }
+          ]
+        },
+        {
+          "id": "jihoon-6-skill-3",
+          "name": "붉은 심장",
+          "description": "최대 체력 10% 소비 후 0.4초부터 0.22초 간격으로 4회 · 각 150% + 혈석 비례 피해, 4회 합계 혈석당 350% · 첫 적중 시 혈석 소비",
+          "actions": [
+            {
+              "op": "mage-kit",
+              "kind": "crimson-heart",
+              "profile": "charge"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "혈석 생성",
+            "signature": "blood-gem",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "관통 혈창",
+            "signature": "blood-lance",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "생명 회수",
+            "signature": "blood-return",
+            "effect": "heal",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.16,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "붉은 심장",
+            "signature": "crimson-heart",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 3,
+      "cell": 3,
+      "character": "양영준",
+      "job": "크루세이더",
+      "userTableName": "크루세이더",
+      "target": "브레이커/서포터",
+      "status": "주역할 불일치",
+      "reason": "실제는 이동·열의 소비·성화 흔적 딜러다. 깃발은 솔로 자기 공속, 레이드는 자기 공격 버프로 축약된다.",
+      "proposal": "망치·돌격은 무력화, 깃발은 범위 아군 공속. 본인 강화와 파티 지원을 분리.",
+      "skills": [
+        {
+          "id": "youngjun-3-skill-0",
+          "name": "진군 망치",
+          "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1, 기본공격·이동으로도 축적",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "marching-cut",
+              "target": "area",
+              "range": 240,
+              "description": "최대 100 전진 후 근접 300% 망치 휘두르기 · 열의 +1, 기본공격·이동으로도 축적"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-3-skill-1",
+          "name": "성전 깃발",
+          "description": "14초 등에 멘 성전 깃발 · 이동을 따라오는 반경 180 안에서 공격속도 25% 증가",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "war-standard",
+              "target": "self",
+              "range": 125,
+              "description": "14초 등에 멘 성전 깃발 · 이동을 따라오는 반경 180 안에서 공격속도 25% 증가"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-3-skill-2",
+          "name": "성전 돌격",
+          "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가 · 자동전투는 3중첩 이상에 발동",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "crusade-charge",
+              "target": "area",
+              "range": 320,
+              "description": "최대 240 돌진 · 실제 경로 400% + 열의 최대 5 소모, 중첩당 55% 추가 · 자동전투는 3중첩 이상에 발동"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-3-skill-3",
+          "name": "성전 개시",
+          "description": "열의 최소 3 확보 · 8초 이동속도 30% 증가 · 이동과 기본공격으로 성화 흔적 설치, 2.4초 지속·0.6초마다 90% · 겹친 불길은 중복 피해 없음 · 기본공격에 성전 파동 90% 추가",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "holy-march",
+              "target": "self",
+              "range": 125,
+              "description": "열의 최소 3 확보 · 8초 이동속도 30% 증가 · 이동과 기본공격으로 성화 흔적 설치, 2.4초 지속·0.6초마다 90% · 겹친 불길은 중복 피해 없음 · 기본공격에 성전 파동 90% 추가"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "guard",
+        "kit": [
+          {
+            "name": "진군 망치",
+            "signature": "marching-cut",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성전 깃발",
+            "signature": "war-standard",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "성전 돌격",
+            "signature": "crusade-charge",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성전 개시",
+            "signature": "holy-march",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 3,
+      "cell": 4,
+      "character": "양영준",
+      "job": "템플러",
+      "userTableName": "템플러",
+      "target": "탱커/서포터",
+      "status": "기본 적합",
+      "reason": "높은 경감·막기 반격·축적 방출이 뚜렷하다. 레이드에서는 파티 guard도 존재한다.",
+      "proposal": "아군 보호 범위·피해 전가·도발을 연결해 다른 자기 경감 탱커와 차별화.",
+      "skills": [
+        {
+          "id": "youngjun-4-skill-0",
+          "name": "강철 방패",
+          "description": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "iron-bulwark",
+              "target": "self",
+              "range": 125,
+              "description": "3초 피해 80% 감소 · 다른 방어 기술이 더 강한 방어를 덮어쓰지 않음"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-4-skill-1",
+          "name": "축적 반격",
+          "description": "주변 350% + 축적 최대 공격력 800% 소비 · 막은 피해와 기본공격당 공격력 20% 축적 · 절대 방벽 중 사용 대기",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "stored-reprisal",
+              "target": "area",
+              "range": 145,
+              "description": "주변 350% + 축적 최대 공격력 800% 소비 · 막은 피해와 기본공격당 공격력 20% 축적 · 절대 방벽 중 사용 대기"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-4-skill-2",
+          "name": "응징 태세",
+          "description": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "punishment-stance",
+              "target": "self",
+              "range": 125,
+              "description": "8초 막기 성공 시 가까운 공격자에게 120% + 막은 피해 일부 반격 · 발동 간격 0.5초"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-4-skill-3",
+          "name": "절대 방벽",
+          "description": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "absolute-bastion",
+              "target": "self",
+              "range": 125,
+              "description": "6초 피해 95% 감소 · 종료 시 반경 210에 600% + 축적 피해 최대 공격력 800% 방출"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "guard",
+        "kit": [
+          {
+            "name": "강철 방패",
+            "signature": "iron-bulwark",
+            "effect": "guard",
+            "cd": 6,
+            "range": 160,
+            "power": 0.952,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "축적 반격",
+            "signature": "stored-reprisal",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "응징 태세",
+            "signature": "punishment-stance",
+            "effect": "guard",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "절대 방벽",
+            "signature": "absolute-bastion",
+            "effect": "guard",
+            "cd": 34.8,
+            "range": 160,
+            "power": 3.571,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 3,
+      "cell": 5,
+      "character": "양영준",
+      "job": "드래곤랜서",
+      "userTableName": "드래곤랜서",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "도약 표식·관통·집중 조준·낙하로 딜러 순환은 명확하나 표식은 자기 피해 증가다.",
+      "proposal": "표식 소비 낙하를 무력화 결정타로 연결. 표식을 곧 장갑 파괴라고 부르지 않기.",
+      "skills": [
+        {
+          "id": "youngjun-5-skill-0",
+          "name": "용창 비상",
+          "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "lancer-ascent",
+              "target": "area",
+              "range": 340,
+              "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-5-skill-1",
+          "name": "창끝 관통",
+          "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "weakpoint-lance",
+              "target": "area",
+              "range": 420,
+              "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-5-skill-2",
+          "name": "공중 조준",
+          "description": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "sky-aim",
+              "target": "self",
+              "range": 125,
+              "description": "8초 내 다음 도약·관통·낙하 기술 1회 위력 60% 증가 · 적중 시에만 소비"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-5-skill-3",
+          "name": "천공 낙하",
+          "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "heaven-fall",
+              "target": "area",
+              "range": 420,
+              "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "용창 비상",
+            "signature": "lancer-ascent",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "창끝 관통",
+            "signature": "weakpoint-lance",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "공중 조준",
+            "signature": "sky-aim",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "천공 낙하",
+            "signature": "heaven-fall",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 3,
+      "cell": 6,
+      "character": "양영준",
+      "job": "용혈기사",
+      "userTableName": "용혈기사",
+      "target": "탱커/딜러",
+      "status": "기본 적합",
+      "reason": "용린 소비 보호막·40% 경감·반룡 방어 및 공격 강화가 있어 방어/공격 혼합 방향은 맞는다.",
+      "proposal": "레이드 역할값 melee와 주 탱커 설계의 차이를 수정하고 실제 위협 제어를 보완.",
+      "skills": [
+        {
+          "id": "youngjun-6-skill-0",
+          "name": "용혈 참격",
+          "description": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "blood-claw",
+              "target": "area",
+              "range": 145,
+              "description": "근접 전방 310% 발톱 참격 · 명중 시 용린 +1"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-6-skill-1",
+          "name": "용린 수호",
+          "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "scale-ward",
+              "target": "self",
+              "range": 125,
+              "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-6-skill-2",
+          "name": "혈통 각성",
+          "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "blood-awakening",
+              "target": "self",
+              "range": 125,
+              "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복"
+            }
+          ]
+        },
+        {
+          "id": "youngjun-6-skill-3",
+          "name": "용혈 해방",
+          "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복",
+          "actions": [
+            {
+              "op": "knight-kit",
+              "kind": "half-dragon",
+              "target": "area",
+              "range": 180,
+              "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "용혈 참격",
+            "signature": "blood-claw",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "용린 수호",
+            "signature": "scale-ward",
+            "effect": "shield",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0.22,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "혈통 각성",
+            "signature": "blood-awakening",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "용혈 해방",
+            "signature": "half-dragon",
+            "effect": "buff",
+            "cd": 32,
+            "range": 160,
+            "power": 3.571,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          }
+        ]
+      }
+    },
+    {
+      "hero": 4,
+      "cell": 3,
+      "character": "윤인재",
+      "job": "섀도우댄서",
+      "userTableName": "섀도우댄서",
+      "target": "딜러/제어형",
+      "status": "보완 필요",
+      "reason": "잔영 협공·추격·무적·공속 강화다. 자기 기동과 무적은 적 행동을 제어하는 능력이 아니다.",
+      "proposal": "짧은 그림자 둔화/행동 봉쇄를 명확히 추가하거나 보조 제어를 다른 역할로 재검토.",
+      "skills": [
+        {
+          "id": "injae-3-skill-0",
+          "name": "그림자 쇄도",
+          "description": "최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "shadow-rush",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-3-skill-1",
+          "name": "잔영 분신",
+          "description": "8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "echoes",
+              "profile": "guard"
+            }
+          ]
+        },
+        {
+          "id": "injae-3-skill-2",
+          "name": "그림자 추격",
+          "description": "1초 무적 · 8초 공격속도 +25% · 활성 잔영 지속시간 3초 연장, 최대 12초",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "pursuit",
+              "profile": "guard"
+            }
+          ]
+        },
+        {
+          "id": "injae-3-skill-3",
+          "name": "환영 난무",
+          "description": "10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "shadow-finale",
+              "profile": "thrust"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "그림자 쇄도",
+            "signature": "shadow-rush",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "잔영 분신",
+            "signature": "echoes",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "그림자 추격",
+            "signature": "pursuit",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "환영 난무",
+            "signature": "shadow-finale",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 4,
+      "cell": 4,
+      "character": "윤인재",
+      "job": "독살자",
+      "userTableName": "독살자",
+      "target": "딜러/서포터",
+      "status": "보완 필요",
+      "reason": "독 부여·전이·소모 폭발로 완결된 독 딜러다. 독이 아군 피해를 돕거나 적 공격을 줄이지 않는다.",
+      "proposal": "독 종류 하나에 파티 공유 취약 또는 공격 약화. 중독 피해 자체와 지원을 구분.",
+      "skills": [
+        {
+          "id": "injae-4-skill-0",
+          "name": "맹독 비수",
+          "description": "실제 비수 명중 시 160%와 독 2중첩 · 독은 10초·중첩당 매초 40%, 최대 5",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "venom-knife",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-4-skill-1",
+          "name": "맹독 전이",
+          "description": "중독 대상의 독을 반경 175에 전염 · 독이 없는 적에게는 사용하지 않음",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "venom-spread",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-4-skill-2",
+          "name": "독 회수",
+          "description": "독을 전부 소모해 중첩당 200% · 주변 100에 소모 피해의 35%",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "venom-burst",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-4-skill-3",
+          "name": "독살",
+          "description": "0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "venom-finale",
+              "profile": "thrust"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "맹독 비수",
+            "signature": "venom-knife",
+            "effect": "dot",
+            "cd": 6,
+            "range": 160,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "맹독 전이",
+            "signature": "venom-spread",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "독 회수",
+            "signature": "venom-burst",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "독살",
+            "signature": "venom-finale",
+            "effect": "dot",
+            "cd": 34.8,
+            "range": 160,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 4,
+      "cell": 5,
+      "character": "윤인재",
+      "job": "팬텀",
+      "userTableName": "팬텀",
+      "target": "제어형/딜러",
+      "status": "보완 필요",
+      "reason": "대역 미끼로 적의 목표를 바꾸고 교대로 생존하는 소프트 제어는 있다. 군중 행동 제한은 약하다.",
+      "proposal": "대역이 레이드에서도 실제 표적을 유도하도록 연결. 현재는 파티 보호막으로 대체된다.",
+      "skills": [
+        {
+          "id": "injae-5-skill-0",
+          "name": "유령 카드",
+          "description": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "phantom-card",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-5-skill-1",
+          "name": "대역 인형",
+          "description": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "double",
+              "profile": "guard"
+            }
+          ]
+        },
+        {
+          "id": "injae-5-skill-2",
+          "name": "환영 교대",
+          "description": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "exchange",
+              "profile": "guard"
+            }
+          ]
+        },
+        {
+          "id": "injae-5-skill-3",
+          "name": "유령극",
+          "description": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "phantom-finale",
+              "profile": "thrust"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "유령 카드",
+            "signature": "phantom-card",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "대역 인형",
+            "signature": "double",
+            "effect": "shield",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0.22,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "환영 교대",
+            "signature": "exchange",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "유령극",
+            "signature": "phantom-finale",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 4,
+      "cell": 6,
+      "character": "윤인재",
+      "job": "사보추어",
+      "userTableName": "사보추어",
+      "target": "브레이커/제어형",
+      "status": "주역할 불일치",
+      "reason": "감지·부착·기폭·연쇄 폭발이 전부 설치 폭발 피해 중심이다. 폭발만으로 무력화·행동 제한이 되지는 않는다.",
+      "proposal": "기폭은 무력화, 감지 지뢰는 속박/감속으로 역할을 분리하고 중복 경직 상한 설정.",
+      "skills": [
+        {
+          "id": "injae-6-skill-0",
+          "name": "감지 폭탄",
+          "description": "대상 주변 감지 지뢰 3개 · 0.8초 후 무장·접근 시 반경 100에 각 190%",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "sensor",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-6-skill-1",
+          "name": "시한폭탄",
+          "description": "실제 투척·명중 위치에 부착 · 1.5초 뒤 반경 135에 460% 폭발",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "sticky",
+              "profile": "thrust"
+            }
+          ]
+        },
+        {
+          "id": "injae-6-skill-2",
+          "name": "원격 기폭",
+          "description": "설치된 감지 지뢰를 순서대로 0.12초 간격 기폭 · 지뢰 기본 피해에 100% 추가",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "remote",
+              "profile": "guard"
+            }
+          ]
+        },
+        {
+          "id": "injae-6-skill-3",
+          "name": "연쇄 폭파",
+          "description": "적 무리 사이 폭탄 6개 설치 · 0.9초 후 0.18초 간격 반경 100에 각 210% 폭발 · 기존 설치물 없이 사용 가능",
+          "actions": [
+            {
+              "op": "rogue-kit",
+              "kind": "chain-bombs",
+              "profile": "thrust"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "감지 폭탄",
+            "signature": "sensor",
+            "effect": "dot",
+            "cd": 6,
+            "range": 160,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "시한폭탄",
+            "signature": "sticky",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "원격 기폭",
+            "signature": "remote",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "연쇄 폭파",
+            "signature": "chain-bombs",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 5,
+      "cell": 3,
+      "character": "임창기",
+      "job": "마이스터",
+      "userTableName": "마이스터",
+      "target": "브레이커/딜러",
+      "status": "주역할 불일치",
+      "reason": "모드 전환·열기 소비·폭주 딜러다. 증기 방출의 짧은 경직은 있으나 전용 브레이크 역할은 없다.",
+      "proposal": "망치 모드는 무력화, 주먹 모드는 지속 피해로 수치·순환을 분리.",
+      "skills": [
+        {
+          "id": "changki-3-skill-0",
+          "name": "피스톤 강타",
+          "description": "망치 모드 380% 범위 / 주먹 모드 300% 집중 타격 · 열기 20",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "piston-hammer",
+              "target": "area",
+              "range": 135,
+              "description": "망치 모드 380% 범위 / 주먹 모드 300% 집중 타격 · 열기 20"
+            }
+          ]
+        },
+        {
+          "id": "changki-3-skill-1",
+          "name": "기어 변환",
+          "description": "망치: 사거리 125·주변 추가 타격 / 주먹: 사거리 85·공속 50% 증가·공격력 20% 감소",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "gear-shift",
+              "target": "self",
+              "range": 125,
+              "description": "망치: 사거리 125·주변 추가 타격 / 주먹: 사거리 85·공속 50% 증가·공격력 20% 감소"
+            }
+          ]
+        },
+        {
+          "id": "changki-3-skill-2",
+          "name": "증기 방출",
+          "description": "열기 30 이상 소비 · 반경 140에 200% + 열기당 4% · 일반 적 0.7초 경직",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "steam-release",
+              "target": "area",
+              "range": 140,
+              "description": "열기 30 이상 소비 · 반경 140에 200% + 열기당 3.5% · 일반 적 0.7초 경직"
+            }
+          ]
+        },
+        {
+          "id": "changki-3-skill-3",
+          "name": "기관 폭주",
+          "description": "8초 망치 공격력 30% / 주먹 공속 75% 증가 · 기본공격 3회마다 추가 범위 120% · 폭주 중 자동 냉각 대기",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "forge-overdrive",
+              "target": "self",
+              "range": 125,
+              "description": "8초 망치 공격력 30% / 주먹 공속 75% 증가 · 기본공격 3회마다 추가 범위 120% · 폭주 중 자동 냉각 대기"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "피스톤 강타",
+            "signature": "piston-hammer",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "기어 변환",
+            "signature": "gear-shift",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "증기 방출",
+            "signature": "steam-release",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "기관 폭주",
+            "signature": "forge-overdrive",
+            "effect": "buff",
+            "cd": 34.8,
+            "range": 160,
+            "power": 3.571,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          }
+        ]
+      }
+    },
+    {
+      "hero": 5,
+      "cell": 4,
+      "character": "임창기",
+      "job": "메카닉",
+      "userTableName": "메카닉",
+      "target": "서포터/탱커",
+      "status": "보완 필요",
+      "reason": "포탑·보호 코어·장치 수리다. 솔로 코어 보호와 레이드 파티 보호막은 있지만, 장치 체력이 곧 파티 탱킹은 아니다.",
+      "proposal": "코어의 아군 범위 보호·장치의 실제 가로막기 또는 위협 기능을 구현.",
+      "skills": [
+        {
+          "id": "changki-4-skill-0",
+          "name": "쌍열 진지",
+          "description": "사격 포탑 최대 2기 · 22초 · 명중 시 75% · 재사용은 수명 갱신",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "twin-sentries",
+              "target": "self",
+              "range": 125,
+              "description": "사격 포탑 최대 2기 · 22초 · 명중 시 75% · 재사용은 수명 갱신"
+            }
+          ]
+        },
+        {
+          "id": "changki-4-skill-1",
+          "name": "이지스 코어",
+          "description": "보호 코어 최대 1기 · 22초 · 거리 180 이내에서 매초 최대 체력 2% 보호막, 최대 30%",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "aegis-core",
+              "target": "self",
+              "range": 125,
+              "description": "보호 코어 최대 1기 · 22초 · 거리 180 이내에서 매초 최대 체력 2% 보호막, 최대 30%"
+            }
+          ]
+        },
+        {
+          "id": "changki-4-skill-2",
+          "name": "현장 수리",
+          "description": "기계 장치 체력 35%·수명 6초 회복, 수명 최대 28초 · 자가 체력 6% 회복",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "field-repair",
+              "target": "self",
+              "range": 125,
+              "description": "기계 장치 체력 35%·수명 6초 회복, 수명 최대 28초 · 자가 체력 6% 회복"
+            }
+          ]
+        },
+        {
+          "id": "changki-4-skill-3",
+          "name": "요새 프로토콜",
+          "description": "12초 기존 포탑을 쌍열 공성포로 변환 · 공속 증가·반경 65 폭발탄 · 보호 코어 강화 · 장치 최대 3기",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "bastion-protocol",
+              "target": "self",
+              "range": 125,
+              "description": "12초 기존 포탑을 쌍열 공성포로 변환 · 공속 증가·반경 65 폭발탄 · 보호 코어 강화 · 장치 최대 3기"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "쌍열 진지",
+            "signature": "twin-sentries",
+            "effect": "summon",
+            "cd": 6,
+            "range": 160,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "이지스 코어",
+            "signature": "aegis-core",
+            "effect": "shield",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0.22,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "현장 수리",
+            "signature": "field-repair",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "요새 프로토콜",
+            "signature": "bastion-protocol",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 5,
+      "cell": 5,
+      "character": "임창기",
+      "job": "독 연금술사",
+      "userTableName": "독 연금술사",
+      "target": "제어형/딜러",
+      "status": "주역할 불일치",
+      "reason": "독성 늪도 실제로는 산성 누적 피해다. 전용 런타임에 둔화·속박 처리가 없어 제어형 주 역할이 약하다.",
+      "proposal": "늪에 이동 둔화, 촉매 반응에 제한 속박. 지속 피해 위주의 독살자와 구분.",
+      "skills": [
+        {
+          "id": "changki-5-skill-0",
+          "name": "역병 시약탄",
+          "description": "실제 착탄 190% · 명중한 적만 산성 2중첩·매초 중첩당 30%",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "plague-vial",
+              "target": "area",
+              "range": 460,
+              "description": "실제 착탄 190% · 명중한 적만 산성 2중첩·매초 중첩당 30%"
+            }
+          ]
+        },
+        {
+          "id": "changki-5-skill-1",
+          "name": "독성 늪",
+          "description": "반경 145 독성 지대 9초 · 0.9초마다 50%와 산성 축적",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "toxic-mire",
+              "target": "area",
+              "range": 460,
+              "description": "반경 145 독성 지대 9초 · 0.9초마다 50%와 산성 축적"
+            }
+          ]
+        },
+        {
+          "id": "changki-5-skill-2",
+          "name": "촉매 주입",
+          "description": "촉매 병 착탄 120% · 8초 촉매 표식 · 독성 지대가 닿으면 280% 추가 반응",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "catalyst-primer",
+              "target": "area",
+              "range": 460,
+              "description": "촉매 병 착탄 120% · 8초 촉매 표식 · 독성 지대가 닿으면 280% 추가 반응"
+            }
+          ]
+        },
+        {
+          "id": "changki-5-skill-3",
+          "name": "역병 연쇄",
+          "description": "최대 8명에게 0.18초 간격으로 전달 · 350% + 산성 중첩당 80%, 산성 재부여",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "epidemic-chain",
+              "target": "area",
+              "range": 460,
+              "description": "최대 8명에게 0.18초 간격으로 전달 · 350% + 산성 중첩당 80%, 산성 재부여"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "역병 시약탄",
+            "signature": "plague-vial",
+            "effect": "dot",
+            "cd": 6,
+            "range": 160,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "독성 늪",
+            "signature": "toxic-mire",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "촉매 주입",
+            "signature": "catalyst-primer",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "역병 연쇄",
+            "signature": "epidemic-chain",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 5,
+      "cell": 6,
+      "character": "임창기",
+      "job": "호문쿨루스 마스터",
+      "userTableName": "호문쿨루스 마스터",
+      "target": "딜러/탱커",
+      "status": "보완 필요",
+      "reason": "배양·성장·합성·진화가 소환 딜러로 잘 연결된다. 소환수 체력만으로 본체·아군을 보호하지는 않는다.",
+      "proposal": "키메라 도발·일부 피해 가로막기 중 하나를 넣어 보조 탱커를 성립시킬 것.",
+      "skills": [
+        {
+          "id": "changki-6-skill-0",
+          "name": "배양체 한 쌍",
+          "description": "배양체 최대 2기 · 진화체가 있으면 새 소환 대신 체력 20%·수명 보충",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "culture-pair",
+              "target": "self",
+              "range": 125,
+              "description": "배양체 최대 2기 · 진화체가 있으면 새 소환 대신 체력 20%·수명 보충"
+            }
+          ]
+        },
+        {
+          "id": "changki-6-skill-1",
+          "name": "성장 혈청",
+          "description": "생체 소환수 최대 3단계 · 단계당 공격력 20% 증가 · 체력 회복·수명 5초 연장",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "growth-serum",
+              "target": "self",
+              "range": 125,
+              "description": "생체 소환수 최대 3단계 · 단계당 공격력 20% 증가 · 체력 회복·수명 5초 연장"
+            }
+          ]
+        },
+        {
+          "id": "changki-6-skill-2",
+          "name": "키메라 합성",
+          "description": "배양체 2기를 소비해 키메라 1기로 실제 합성 · 공격력 145% 근접 물기 · 높은 재료 성장 단계 계승",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "chimera-synthesis",
+              "target": "self",
+              "range": 125,
+              "description": "배양체 2기를 소비해 키메라 1기로 실제 합성 · 공격력 145% 근접 물기 · 높은 재료 성장 단계 계승"
+            }
+          ]
+        },
+        {
+          "id": "changki-6-skill-3",
+          "name": "완전체 진화",
+          "description": "기존 키메라 1기를 완전체로 실제 진화 · 26초 · 240% 범위 발톱 · 탄생 충격 450% · 추가 개체 중첩 없음",
+          "actions": [
+            {
+              "op": "merchant-kit",
+              "kind": "perfect-evolution",
+              "target": "self",
+              "range": 125,
+              "description": "기존 키메라 1기를 완전체로 실제 진화 · 26초 · 240% 범위 발톱 · 탄생 충격 450% · 추가 개체 중첩 없음"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "배양체 한 쌍",
+            "signature": "culture-pair",
+            "effect": "summon",
+            "cd": 6,
+            "range": 160,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성장 혈청",
+            "signature": "growth-serum",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 160,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "키메라 합성",
+            "signature": "chimera-synthesis",
+            "effect": "summon",
+            "cd": 13.8,
+            "range": 160,
+            "power": 0.868,
+            "tickPower": 0.651,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "완전체 진화",
+            "signature": "perfect-evolution",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 160,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "character": "남지훈",
+      "job": "민스트럴",
+      "userTableName": "민스트럴",
+      "target": "서포터/힐러",
+      "status": "주역할 불일치",
+      "reason": "연속 악절·자기 공속·재연·집중 협주이며 회복 스킬이 없다. 후속 합의의 힐러/서포터 방향도 아직 구현되지 않았다.",
+      "proposal": "최우선 개편. 직접 치유·유지 회복·방어 악절·치유 연계 궁극기로 역할 재구성.",
+      "skills": [
+        {
+          "id": "seunguk-3-skill-0",
+          "name": "연속 악절",
+          "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+          "actions": [
+            {
+              "op": "bard-kit",
+              "kind": "phrase",
+              "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+              "target": "single"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-3-skill-1",
+          "name": "고조",
+          "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+          "actions": [
+            {
+              "op": "bard-kit",
+              "kind": "crescendo",
+              "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-3-skill-2",
+          "name": "잔향 연주",
+          "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+          "actions": [
+            {
+              "op": "bard-kit",
+              "kind": "echo-phrase",
+              "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+              "target": "self"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-3-skill-3",
+          "name": "앙코르",
+          "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+          "actions": [
+            {
+              "op": "bard-kit",
+              "kind": "concerto",
+              "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+              "target": "single"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "heal",
+        "kit": [
+          {
+            "name": "연속 악절",
+            "signature": "phrase",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "고조",
+            "signature": "crescendo",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 320,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "잔향 연주",
+            "signature": "echo-phrase",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "앙코르",
+            "signature": "concerto",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 6,
+      "cell": 4,
+      "character": "남지훈",
+      "job": "진혼악사",
+      "userTableName": "진혼악사",
+      "target": "딜러/제어형",
+      "status": "기본 적합",
+      "reason": "해골 군단·골렘·해골용이 공격하고 골렘 강타의 제한 속박이 있어 방향이 맞는다.",
+      "proposal": "소환수 수·역할 구분 유지. 레이드에서도 골렘의 제어를 단순 지속 피해와 구분.",
+      "skills": [
+        {
+          "id": "seunguk-4-skill-0",
+          "name": "망자의 악단",
+          "description": "해골 병사 3마리 실제 소환 · 24초 · 공격력 40% / 해골 궁수 3마리 실제 소환 · 24초 · 공격력 50% / 좀비 2마리 실제 소환 · 24초 · 공격력 70%",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "skeleton",
+              "count": 3,
+              "power": 0.4,
+              "duration": 24
+            },
+            {
+              "op": "pet",
+              "appearance": "skeleton-archer",
+              "count": 3,
+              "power": 0.5,
+              "duration": 24
+            },
+            {
+              "op": "pet",
+              "appearance": "zombie",
+              "count": 2,
+              "power": 0.7,
+              "duration": 24
+            }
+          ]
+        },
+        {
+          "id": "seunguk-4-skill-1",
+          "name": "묘지의 수호자",
+          "description": "묘지 골렘 1마리 실제 소환 · 26초 · 공격력 180% · 동일 소환체 교체",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "grave-golem",
+              "count": 1,
+              "power": 1.8,
+              "duration": 26,
+              "large": true,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "id": "seunguk-4-skill-2",
+          "name": "장송 지휘",
+          "description": "소환체 공격력 일시 강화 · 중복 증폭 방지",
+          "actions": [
+            {
+              "op": "pet-buff",
+              "value": 0.5,
+              "duration": 12
+            }
+          ]
+        },
+        {
+          "id": "seunguk-4-skill-3",
+          "name": "해골용의 레퀴엠",
+          "description": "해골 궁수 3마리 실제 소환 · 28초 · 공격력 60% / 좀비 3마리 실제 소환 · 28초 · 공격력 80% / 해골 마법사 2마리 실제 소환 · 28초 · 공격력 65% / 해골용 1마리 실제 소환 · 28초 · 공격력 280% · 동일 소환체 교체",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "skeleton-archer",
+              "count": 3,
+              "power": 0.6,
+              "duration": 28
+            },
+            {
+              "op": "pet",
+              "appearance": "zombie",
+              "count": 3,
+              "power": 0.8,
+              "duration": 28
+            },
+            {
+              "op": "pet",
+              "appearance": "skeleton-mage",
+              "count": 2,
+              "power": 0.65,
+              "duration": 28
+            },
+            {
+              "op": "pet",
+              "appearance": "bone-dragon",
+              "count": 1,
+              "power": 2.8,
+              "duration": 28,
+              "large": true,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "망자의 악단",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "묘지의 수호자",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "장송 지휘",
+            "signature": "pet-buff",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "해골용의 레퀴엠",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 320,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 6,
+      "cell": 5,
+      "character": "남지훈",
+      "job": "메탈리스트",
+      "userTableName": "메탈리스트",
+      "target": "브레이커/서포터",
+      "status": "주역할 불일치",
+      "reason": "파워 코드·헤드뱅잉·피격 피드백·집중 리프는 근접 생존 딜러다. 실제 파티 버프나 공용 무력화는 없다.",
+      "proposal": "파워 코드/리프는 무력화, 공연 효과는 아군 강화, 피드백은 반격 자원으로 분담.",
+      "skills": [
+        {
+          "id": "seunguk-5-skill-0",
+          "name": "파워 코드",
+          "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모",
+          "actions": [
+            {
+              "op": "metal-kit",
+              "kind": "power-chord",
+              "target": "area",
+              "range": 150,
+              "description": "전방 160에 300% 음압 타격 · 적중 시 열광 +1, 저장된 피드백 소음 소모"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-5-skill-1",
+          "name": "헤드뱅잉",
+          "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적",
+          "actions": [
+            {
+              "op": "metal-kit",
+              "kind": "headbang",
+              "target": "self",
+              "range": 125,
+              "description": "6초 이동속도 35% 감소·피해 30% 감소 · 주변 110에 0.6초마다 65% 피해·열광 축적"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-5-skill-2",
+          "name": "피드백",
+          "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가",
+          "actions": [
+            {
+              "op": "metal-kit",
+              "kind": "feedback",
+              "target": "self",
+              "range": 125,
+              "description": "8초 피격으로 소음 축적 · 다음 파워 코드에 최대 공격력 400% 추가"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-5-skill-3",
+          "name": "지옥의 리프",
+          "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화",
+          "actions": [
+            {
+              "op": "metal-kit",
+              "kind": "hell-riff",
+              "target": "single",
+              "range": 150,
+              "description": "열광 최대 10 소모 · 전방 집중 6연타 후 강타, 동일 대상 연속 적중 시 강화"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "파워 코드",
+            "signature": "power-chord",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "헤드뱅잉",
+            "signature": "headbang",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "피드백",
+            "signature": "feedback",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "지옥의 리프",
+            "signature": "hell-riff",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "character": "남지훈",
+      "job": "아이돌",
+      "userTableName": "아이돌",
+      "target": "서포터/힐러",
+      "status": "주역할 불일치",
+      "reason": "인기 축적·음파·자기 스테이지 강화·이동 공격·광역 앙코르다. 아군 치유도 파티 강화도 없다.",
+      "proposal": "센터 스테이지를 실제 파티 버프로, 인기 소비 앙코르에 보조 치유. 민스트럴보다 낮은 치유 예산.",
+      "skills": [
+        {
+          "id": "seunguk-6-skill-0",
+          "name": "비트 샷",
+          "description": "실제 음파 3발 · 발당 95% · 명중당 인기 5 획득, 기술당 최대 15",
+          "actions": [
+            {
+              "op": "idol-kit",
+              "kind": "beat-shot"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-6-skill-1",
+          "name": "센터 스테이지",
+          "description": "8초간 따라오는 스포트라이트 · 기본공격 피해 20%, 공격 속도 15%, 사거리 30 증가 · 이동 가능",
+          "actions": [
+            {
+              "op": "idol-kit",
+              "kind": "center-stage"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-6-skill-2",
+          "name": "포인트 안무",
+          "description": "벽을 피하는 측면 스텝 후 전방 80도·거리 230에 280% 음파 타격 · 인기 최대 10 획득 · 자동 사용은 적 210 이내",
+          "actions": [
+            {
+              "op": "idol-kit",
+              "kind": "point-step"
+            }
+          ]
+        },
+        {
+          "id": "seunguk-6-skill-3",
+          "name": "앙코르",
+          "description": "인기 전부 소비 · 4회 광역 타격, 회당 150% + 소비 인기당 1% · 반경 180 · 이동·기본공격 가능 · 수동 인기 20, 자동 60 이상 필요",
+          "actions": [
+            {
+              "op": "idol-kit",
+              "kind": "encore"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "비트 샷",
+            "signature": "beat-shot",
+            "effect": "strike",
+            "cd": 5.8,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "센터 스테이지",
+            "signature": "center-stage",
+            "effect": "dot",
+            "cd": 13.8,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "포인트 안무",
+            "signature": "point-step",
+            "effect": "buff",
+            "cd": 8.6,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "앙코르",
+            "signature": "encore",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 7,
+      "cell": 3,
+      "character": "박천빈",
+      "job": "기공장",
+      "userTableName": "기공장",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "충전·관통포·추적탄·지속포로 원거리 포격 딜러다. 굵은 빔이 곧 무력화는 아니다.",
+      "proposal": "충전 완료 포격에 제한 무력화. 레이드 melee 범위 처리도 원거리 정체성과 불일치.",
+      "skills": [
+        {
+          "id": "cheonbin-3-skill-0",
+          "name": "기공 충전",
+          "description": "최대 10초 유지 · 다음 기공포·기공탄·천공포 피해 70% 증가, 사용 후 소모",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "cannon-charge",
+              "target": "self",
+              "range": 125,
+              "description": "최대 10초 유지 · 다음 기공포·기공탄·천공포 피해 70% 증가, 사용 후 소모"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-3-skill-1",
+          "name": "관통 기공포",
+          "description": "0.45초 조준 후 폭 28의 가느다란 관통 광선 · 500%",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "needle-ray",
+              "target": "area",
+              "range": 460,
+              "description": "0.45초 조준 후 폭 28의 가느다란 관통 광선 · 500%"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-3-skill-2",
+          "name": "응축 기공탄",
+          "description": "느린 추적 기공탄 · 적중 시 450% 및 주변 반경 75에 150%",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "compressed-orb",
+              "target": "single",
+              "range": 420,
+              "description": "느린 추적 기공탄 · 적중 시 450% 및 주변 반경 75에 150%"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-3-skill-3",
+          "name": "천공포",
+          "description": "1초 충전 후 1.2초간 전방 굵은 지속포 · 6회 각 230%",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "sky-cannon",
+              "target": "area",
+              "range": 460,
+              "description": "1초 충전 후 1.2초간 전방 굵은 지속포 · 6회 각 230%"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "기공 충전",
+            "signature": "cannon-charge",
+            "effect": "buff",
+            "cd": 6,
+            "range": 160,
+            "power": 0.952,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "관통 기공포",
+            "signature": "needle-ray",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "응축 기공탄",
+            "signature": "compressed-orb",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "천공포",
+            "signature": "sky-cannon",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 7,
+      "cell": 4,
+      "character": "박천빈",
+      "job": "해병",
+      "userTableName": "해병",
+      "target": "탱커/브레이커",
+      "status": "보완 필요",
+      "reason": "55% 경감·저장 반격·돌파·보스 기술 지연이 있다. 차단은 있으나 지속적인 무력화 역할은 별개다.",
+      "proposal": "실제 도발/피해 가로막기와 제압의 무력화 기여를 연결.",
+      "skills": [
+        {
+          "id": "cheonbin-4-skill-0",
+          "name": "돌격 정권",
+          "description": "최대 180 접근 후 가까운 대상에게 340% 주먹",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "marine-rush",
+              "target": "single",
+              "range": 300,
+              "description": "최대 180 접근 후 가까운 대상에게 340% 주먹"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-4-skill-1",
+          "name": "대검 제압",
+          "description": "대검 300% 찌르기 · 일반 적 1.2초 경직, 보스 기술 0.35초 지연",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "knife-suppress",
+              "target": "single",
+              "range": 125,
+              "description": "대검 300% 찌르기 · 일반 적 1.2초 경직, 보스 기술 0.35초 지연"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-4-skill-2",
+          "name": "불굴의 해병",
+          "description": "6초 피해 55% 감소 · 막은 피해를 다음 공격 스킬에 추가, 최대 공격력 500%",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "marine-resolve",
+              "target": "self",
+              "range": 125,
+              "description": "6초 피해 55% 감소 · 막은 피해를 다음 공격 스킬에 추가, 최대 공격력 500%"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-4-skill-3",
+          "name": "상륙 돌파",
+          "description": "전방 220을 돌파하며 충돌한 적에게 300% · 끝 지점 550% 내려찍기·밀쳐내기",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "landing-break",
+              "target": "area",
+              "range": 240,
+              "description": "전방 220을 돌파하며 충돌한 적에게 300% · 끝 지점 550% 내려찍기·밀쳐내기"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "돌격 정권",
+            "signature": "marine-rush",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "대검 제압",
+            "signature": "knife-suppress",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "불굴의 해병",
+            "signature": "marine-resolve",
+            "effect": "guard",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "상륙 돌파",
+            "signature": "landing-break",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 7,
+      "cell": 5,
+      "character": "박천빈",
+      "job": "야성 드루이드",
+      "userTableName": "야성 드루이드",
+      "target": "딜러/탱커",
+      "status": "기본 적합",
+      "reason": "늑대의 공격형과 곰의 방어/보호막형을 전환해 두 역할의 구분이 명확하다.",
+      "proposal": "곰 형태의 실제 위협·아군 보호를 레이드와 연결하고 변신 중 잠금 체감을 검토.",
+      "skills": [
+        {
+          "id": "cheonbin-5-skill-0",
+          "name": "늑대의 쇄도",
+          "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "wolf-form",
+              "target": "single",
+              "range": 240,
+              "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-5-skill-1",
+          "name": "야수의 포효",
+          "description": "전방 160에 300% · 일반 적 1.5초 공포, 자신은 8초 공격속도 25% 증가",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "beast-roar",
+              "target": "area",
+              "range": 160,
+              "description": "전방 160에 300% · 일반 적 1.5초 공포, 자신은 8초 공격속도 25% 증가"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-5-skill-2",
+          "name": "곰의 변신",
+          "description": "10초 곰 변신 · 체력 20% 보호막 · 변신 중 기본공격만 가능",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "bear-form",
+              "target": "self",
+              "range": 125,
+              "description": "10초 곰 변신 · 체력 20% 보호막 · 변신 중 기본공격만 가능"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-5-skill-3",
+          "name": "태고의 분노",
+          "description": "자신 주변 반경 150에 750% 강타 후 14초 태고의 곰 변신 · 강화 기본공격만 가능",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "primal-form",
+              "target": "area",
+              "range": 140,
+              "description": "자신 주변 반경 150에 750% 강타 후 14초 태고의 곰 변신 · 강화 기본공격만 가능"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "늑대의 쇄도",
+            "signature": "wolf-form",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "야수의 포효",
+            "signature": "beast-roar",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "곰의 변신",
+            "signature": "bear-form",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 160,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "태고의 분노",
+            "signature": "primal-form",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 7,
+      "cell": 6,
+      "character": "박천빈",
+      "job": "자연 드루이드",
+      "userTableName": "자연 드루이드",
+      "target": "힐러/제어형",
+      "status": "보완 필요",
+      "reason": "덩굴 구속과 재생 지대는 맞지만 회복은 한 스킬이며 솔로에서는 자기 위치 회복이다. 나머지는 식물·고목 피해다.",
+      "proposal": "두 번째 아군 치유/보호 수단을 추가하고 기존 뿌리 제어·식물은 유지.",
+      "skills": [
+        {
+          "id": "cheonbin-6-skill-0",
+          "name": "덩굴 구속",
+          "description": "반경 145의 적을 실제 구속 · 일반 적 3초, 보스 0.6초 · 200%",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "vine-prison",
+              "target": "area",
+              "range": 380,
+              "description": "반경 145의 적을 실제 구속 · 일반 적 3초, 보스 0.6초 · 200%"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-6-skill-1",
+          "name": "가시 식물",
+          "description": "18초 가시 식물 3개 설치 · 움직이지 않고 가시탄 발사, 사거리 340",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "thorn-sentries",
+              "target": "self",
+              "range": 125,
+              "description": "18초 가시 식물 3개 설치 · 움직이지 않고 가시탄 발사, 사거리 340"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-6-skill-2",
+          "name": "재생 지대",
+          "description": "자신 위치 꽃밭 12초 · 범위 안에서 매초 최대 체력 2% 회복 · 적 피해 없음",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "flower-garden",
+              "target": "self",
+              "range": 125,
+              "description": "자신 위치 꽃밭 12초 · 범위 안에서 매초 최대 체력 2% 회복 · 적 피해 없음"
+            }
+          ]
+        },
+        {
+          "id": "cheonbin-6-skill-3",
+          "name": "고대 수림",
+          "description": "대상 위치에 거대 고목 1그루 · 16초간 2초마다 주변 210에 220% 뿌리 강타",
+          "actions": [
+            {
+              "op": "cheonbin-kit",
+              "kind": "ancient-tree",
+              "target": "area",
+              "range": 350,
+              "description": "대상 위치에 거대 고목 1그루 · 16초간 2초마다 주변 210에 220% 뿌리 강타"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "덩굴 구속",
+            "signature": "vine-prison",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "가시 식물",
+            "signature": "thorn-sentries",
+            "effect": "summon",
+            "cd": 8.3,
+            "range": 160,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "재생 지대",
+            "signature": "flower-garden",
+            "effect": "heal",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.16,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "고대 수림",
+            "signature": "ancient-tree",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 160,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 8,
+      "cell": 3,
+      "character": "최승영",
+      "job": "신궁",
+      "userTableName": "신궁",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "정지 조준·관통과 약점으로 딜러는 맞다. 장갑 파쇄도 실제는 자기 직접 피해용 약점 중첩이다.",
+      "proposal": "장갑 파쇄를 파티 공유 방어 노출로 구현하고 무력화 기여를 별도 표기.",
+      "skills": [
+        {
+          "id": "seungyoung-3-skill-0",
+          "name": "거궁 관통",
+          "description": "0.55초 당긴 뒤 400% 대형 관통 화살 · 약점 1중첩 · 최대 3중첩, 8초간 중첩당 직접 피해 8% 증가",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "great-arrow",
+              "profile": "bow-heavy"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-3-skill-1",
+          "name": "장갑 파쇄",
+          "description": "0.8초 준비 후 500% 넓은 관통 화살 · 약점 1중첩 · 기존 약점 피해 증폭 적용",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "armor-break",
+              "profile": "bow-heavy"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-3-skill-2",
+          "name": "부동 조준",
+          "description": "10초 동안 제자리 조준 · 정지 1초에 걸쳐 기본공격·직접 스킬 공격력 최대 60% 증가",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "absolute-aim",
+              "profile": "bow-focus"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-3-skill-3",
+          "name": "천리일섬",
+          "description": "1.2초 최대 장력 후 1300% 초대형 관통 화살 · 사거리 650 · 약점 1중첩",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "horizon",
+              "profile": "bow-heavy"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "거궁 관통",
+            "signature": "great-arrow",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "장갑 파쇄",
+            "signature": "armor-break",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "부동 조준",
+            "signature": "absolute-aim",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "천리일섬",
+            "signature": "horizon",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 8,
+      "cell": 4,
+      "character": "최승영",
+      "job": "마탄사수",
+      "userTableName": "마탄사수",
+      "target": "딜러/서포터",
+      "status": "보완 필요",
+      "reason": "유도 화살·룬 표식·분열·탄막 모두 자신의 화살 피해를 위한 구조다.",
+      "proposal": "룬 표식에 아군 연계 효과를 추가하거나 지원 보조 역할을 재검토.",
+      "skills": [
+        {
+          "id": "seungyoung-4-skill-0",
+          "name": "룬 추적 화살",
+          "description": "160% 유도 화살 · 명중 시 룬 표식 2중첩, 최대 3 · 10초간 중첩당 직접 화살 피해 12% 증가",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "rune-tag",
+              "profile": "bow-rune"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-4-skill-1",
+          "name": "쌍성 마탄",
+          "description": "유도 마탄 2발 · 각 165% · 각각 명중 시 표식 1중첩 · 표식 증폭 적용",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "rune-seekers",
+              "profile": "bow-rune"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-4-skill-2",
+          "name": "분열 화살",
+          "description": "서로 다른 적 최대 4명에게 220% 유도 화살 · 명중 시 표식 1중첩 · 기존 표식 증폭 적용",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "rune-split",
+              "profile": "bow-rune"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-4-skill-3",
+          "name": "마탄 폭우",
+          "description": "룬 표식이 많은 적 우선 유도 마탄 8발 · 각 110% · 발사마다 살아 있는 적을 다시 선택",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "rune-tempest",
+              "profile": "bow-rune"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "룬 추적 화살",
+            "signature": "rune-tag",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "쌍성 마탄",
+            "signature": "rune-seekers",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "분열 화살",
+            "signature": "rune-split",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "마탄 폭우",
+            "signature": "rune-tempest",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 8,
+      "cell": 5,
+      "character": "최승영",
+      "job": "윈드러너",
+      "userTableName": "윈드러너",
+      "target": "딜러/제어형",
+      "status": "보완 필요",
+      "reason": "측면 이동·후퇴·자기 회피·관통 사격이다. 자신의 이동은 적 둔화·속박과 다르다.",
+      "proposal": "돌풍에 짧은 밀침/둔화. 레이드 바람 회피가 파티 guard로 변환되는 매핑도 정정.",
+      "skills": [
+        {
+          "id": "seungyoung-5-skill-0",
+          "name": "질풍 측사",
+          "description": "충돌 없는 측면으로 최대 100 이동 후 화살 3발 · 각 90% · 마지막 화살 관통",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "wind-strafe",
+              "profile": "bow-step"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-5-skill-1",
+          "name": "돌풍 산개",
+          "description": "130% 관통 화살 3갈래 발사 후 최대 85 후퇴 · 적에게 돌진하지 않음",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "gale-fan",
+              "profile": "bow-step"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-5-skill-2",
+          "name": "바람 회피",
+          "description": "7초 공격속도 30%·회피율 25% 증가 · 이동 65마다 바람 1축적, 최대 3 · 기본공격이 1소비해 피해 35% 증가·관통",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "wind-veil",
+              "profile": "bow-step"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-5-skill-3",
+          "name": "폭풍 질주",
+          "description": "측면으로 최대 145 이동 후 135% 관통 화살 6발 · 매 발사마다 대상 순환 · 이동 후에도 사격 지속",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "storm-run",
+              "profile": "bow-storm"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "질풍 측사",
+            "signature": "wind-strafe",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "돌풍 산개",
+            "signature": "gale-fan",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "바람 회피",
+            "signature": "wind-veil",
+            "effect": "guard",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0.4,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "폭풍 질주",
+            "signature": "storm-run",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 8,
+      "cell": 6,
+      "character": "최승영",
+      "job": "비스트마스터",
+      "userTableName": "비스트마스터",
+      "target": "딜러/서포터",
+      "status": "보완 필요",
+      "reason": "동료 협공과 자기·동료 회복은 있지만 아군 전체 지원은 없다. 곰의 짧은 제어는 실제 있다.",
+      "proposal": "사냥 표식의 파티 공유 또는 동료 구조/보호 능력 중 하나로 보조 역할을 구체화.",
+      "skills": [
+        {
+          "id": "seungyoung-6-skill-0",
+          "name": "사냥 표식",
+          "description": "180% 화살 · 명중 시 10초 사냥 표식으로 직접 화살·야수 피해 16% 증가 · 동료가 실제 접근해 강화 협공",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "hunt-arrow",
+              "profile": "bow-command"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-6-skill-1",
+          "name": "야수 동료",
+          "description": "26초 늑대·매 각 1마리 · 늑대 근접 65%, 매 깃털 투사체 50% · 재소환은 갱신·회복 · 지휘 시 실제 돌진",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "companions",
+              "profile": "bow-command"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-6-skill-2",
+          "name": "야수 돌보기",
+          "description": "동료 체력 40% 회복·유지 시간 6초 연장, 최대 30초 · 본인 체력 12% 회복",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "pack-care",
+              "profile": "bow-command"
+            }
+          ]
+        },
+        {
+          "id": "seungyoung-6-skill-3",
+          "name": "야성의 무리",
+          "description": "늑대·매를 부르고 18초 곰 추가 · 동료 최대 3마리 · 7초 공격속도 40% 증가 · 곰은 실제 접근 후 130% 범위 강타·강화 협공",
+          "actions": [
+            {
+              "op": "archer-kit",
+              "kind": "alpha-pack",
+              "profile": "bow-command"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "사냥 표식",
+            "signature": "hunt-arrow",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "야수 동료",
+            "signature": "companions",
+            "effect": "summon",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "야수 돌보기",
+            "signature": "pack-care",
+            "effect": "heal",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.16,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "야성의 무리",
+            "signature": "alpha-pack",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 320,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 9,
+      "cell": 3,
+      "character": "김규태",
+      "job": "데스페라도",
+      "userTableName": "데스페라도",
+      "target": "딜러/제어형",
+      "status": "보완 필요",
+      "reason": "근중거리 연사·사방 탄환·재장전 회피·이동 사격이다. 적 행동 제한은 거의 없다.",
+      "proposal": "제압 사격의 감속/짧은 차단을 넣거나 보조 제어 역할을 재검토.",
+      "skills": [
+        {
+          "id": "gyutae-3-skill-0",
+          "name": "거친 삼연사",
+          "description": "탄창 3발 · 근중거리 105% 3연사",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "rough-triple",
+              "target": "single",
+              "range": 320,
+              "description": "탄창 3발 · 근중거리 105% 3연사"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-3-skill-1",
+          "name": "데스 서클",
+          "description": "탄창 8발 · 실제 8방향 탄환, 각 130% · 사방의 적 타격",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "death-circle",
+              "target": "area",
+              "range": 250,
+              "description": "탄창 8발 · 실제 8방향 탄환, 각 130% · 사방의 적 타격"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-3-skill-2",
+          "name": "전투 재장전",
+          "description": "뒤로 물러나며 0.65초 후 12발 장전 · 2.5초 회피율 25% 증가",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "combat-loader",
+              "target": "self",
+              "range": 125,
+              "description": "뒤로 물러나며 0.65초 후 12발 장전 · 2.5초 회피율 25% 증가"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-3-skill-3",
+          "name": "탄환 춤",
+          "description": "탄창 0에서도 0.25초 장전 후 실제 12발 · 이동하며 주변 표적에 각 140%",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "bullet-dance",
+              "target": "area",
+              "range": 280,
+              "description": "탄창 0에서도 0.25초 장전 후 실제 12발 · 이동하며 주변 표적에 각 140%"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "거친 삼연사",
+            "signature": "rough-triple",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "데스 서클",
+            "signature": "death-circle",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "전투 재장전",
+            "signature": "combat-loader",
+            "effect": "buff",
+            "cd": 3,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "탄환 춤",
+            "signature": "bullet-dance",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 9,
+      "cell": 4,
+      "character": "김규태",
+      "job": "마탄총사",
+      "userTableName": "마탄총사",
+      "target": "딜러/서포터",
+      "status": "보완 필요",
+      "reason": "원소탄과 개인 룬 표식 소비가 핵심이다. 속성 효과는 있지만 아군 지원은 없다.",
+      "proposal": "룬 표식을 공유 취약으로 바꾸거나 보조를 제어형으로 변경하는 편이 현재 구조에 가깝다.",
+      "skills": [
+        {
+          "id": "gyutae-4-skill-0",
+          "name": "각인 탄환",
+          "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "inscribed-round",
+              "target": "single",
+              "range": 460,
+              "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-4-skill-1",
+          "name": "원소 탄창",
+          "description": "다음 3발에 불꽃·빙결·연쇄 번개 순서로 장전 · 명중 시에만 속성 효과",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "element-magazine",
+              "target": "self",
+              "range": 125,
+              "description": "다음 3발에 불꽃·빙결·연쇄 번개 순서로 장전 · 명중 시에만 속성 효과"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-4-skill-2",
+          "name": "룬 공명탄",
+          "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "rune-resonance",
+              "target": "area",
+              "range": 460,
+              "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-4-skill-3",
+          "name": "룬 파괴탄",
+          "description": "0.65초 충전 후 관통 마탄 600% + 남은 속성탄당 60% · 적중 시 표식 소비 추가 피해",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "rune-breaker",
+              "target": "area",
+              "range": 550,
+              "description": "0.65초 충전 후 관통 마탄 600% + 남은 속성탄당 60% · 적중 시 표식 소비 추가 피해"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "각인 탄환",
+            "signature": "inscribed-round",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "원소 탄창",
+            "signature": "element-magazine",
+            "effect": "buff",
+            "cd": 8.3,
+            "range": 320,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "룬 공명탄",
+            "signature": "rune-resonance",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "룬 파괴탄",
+            "signature": "rune-breaker",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 9,
+      "cell": 5,
+      "character": "김규태",
+      "job": "포병장",
+      "userTableName": "포병장",
+      "target": "브레이커/딜러",
+      "status": "주역할 불일치",
+      "reason": "곡사·집속·좌표 증폭·융단 폭격은 광역 딜러다. 파괴할 장갑이나 누적 무력화 수치가 없다.",
+      "proposal": "집속 자탄은 광역, 본 포탄은 장갑 파괴·무력화로 분리. 좌표도 파티 연계 여부 결정.",
+      "skills": [
+        {
+          "id": "gyutae-5-skill-0",
+          "name": "곡사 포격",
+          "description": "고정 좌표로 실제 곡사탄 · 1.05초 후 반경 115에 400%",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "howitzer",
+              "target": "area",
+              "range": 500,
+              "description": "고정 좌표로 실제 곡사탄 · 1.05초 후 반경 115에 400%"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-5-skill-1",
+          "name": "집속 포탄",
+          "description": "주포탄 180% 착탄 후 자탄 4개 분리 · 자탄마다 반경 65에 130%",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "cluster-shell",
+              "target": "area",
+              "range": 500,
+              "description": "주포탄 180% 착탄 후 자탄 4개 분리 · 자탄마다 반경 65에 130%"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-5-skill-2",
+          "name": "포격 좌표",
+          "description": "9초 반경 160 좌표 지정 · 좌표 안의 적에게 곡사탄 피해 30% 증가",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "fire-coordinates",
+              "target": "self",
+              "range": 500,
+              "description": "9초 반경 160 좌표 지정 · 좌표 안의 적에게 곡사탄 피해 30% 증가"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-5-skill-3",
+          "name": "융단 폭격",
+          "description": "3×3 좌표에 시간차 곡사탄 9발 · 각 반경 80에 240% · 실제 착탄 위치 판정",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "carpet-bombing",
+              "target": "area",
+              "range": 550,
+              "description": "3×3 좌표에 시간차 곡사탄 9발 · 각 반경 80에 240% · 실제 착탄 위치 판정"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "곡사 포격",
+            "signature": "howitzer",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "집속 포탄",
+            "signature": "cluster-shell",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "포격 좌표",
+            "signature": "fire-coordinates",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "융단 폭격",
+            "signature": "carpet-bombing",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 9,
+      "cell": 6,
+      "character": "김규태",
+      "job": "중장포병",
+      "userTableName": "중장포병",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "자리 고정·열기·고위력 주포는 딜러의 대가와 보상이 분명하다. 브레이커는 아직 피해량에 붙은 이름이다.",
+      "proposal": "초중량 포격에 큰 무력화/장갑 노출을 주고 긴 준비 시간으로 예산 제한.",
+      "skills": [
+        {
+          "id": "gyutae-6-skill-0",
+          "name": "공성 전개",
+          "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "deploy-cannon",
+              "target": "self",
+              "range": 125,
+              "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-6-skill-1",
+          "name": "관통 주포",
+          "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "piercing-cannon",
+              "target": "area",
+              "range": 560,
+              "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-6-skill-2",
+          "name": "긴급 냉각",
+          "description": "열기 65 감소 및 과열 해제 · 열기가 없으면 사용하지 않음",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "emergency-vent",
+              "target": "self",
+              "range": 125,
+              "description": "열기 65 감소 및 과열 해제 · 열기가 없으면 사용하지 않음"
+            }
+          ]
+        },
+        {
+          "id": "gyutae-6-skill-3",
+          "name": "초중량 포격",
+          "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단",
+          "actions": [
+            {
+              "op": "gunner-kit",
+              "kind": "superheavy-shot",
+              "target": "area",
+              "range": 650,
+              "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "공성 전개",
+            "signature": "deploy-cannon",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "관통 주포",
+            "signature": "piercing-cannon",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "긴급 냉각",
+            "signature": "emergency-vent",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "초중량 포격",
+            "signature": "superheavy-shot",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 10,
+      "cell": 3,
+      "character": "유상민",
+      "job": "챔피언",
+      "userTableName": "챔피언",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "연권·연계 소비 발차기·집중·마무리로 딜러 순환은 좋다. 공용 무력화와의 연결은 없다.",
+      "proposal": "연타는 자원 축적, 소비 발차기·마무리는 무력화로 역할을 나눌 것.",
+      "skills": [
+        {
+          "id": "sangmin-3-skill-0",
+          "name": "질풍 연환권",
+          "description": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "champion-jabs",
+              "target": "single",
+              "range": 140,
+              "description": "3회 연타 각 90% · 명중마다 연계 축적 · 집중 중 추가 40%"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-3-skill-1",
+          "name": "승천 연각",
+          "description": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "rising-kick",
+              "target": "area",
+              "range": 155,
+              "description": "상승 발차기 300% · 연계 3 이상이면 소비해 착지 220% 광역"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-3-skill-2",
+          "name": "무아의 경지",
+          "description": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "perfect-rhythm",
+              "target": "self",
+              "range": 125,
+              "description": "8초 공격속도 25% · 실제 연타 적중으로 체력 1% 회복"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-3-skill-3",
+          "name": "백열백련권",
+          "description": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "hundred-fists",
+              "target": "single",
+              "range": 160,
+              "description": "0.1초 간격 6연타 각 90% 후 420% 마무리 · 연계당 마무리 30% 강화"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "melee",
+        "kit": [
+          {
+            "name": "질풍 연환권",
+            "signature": "champion-jabs",
+            "effect": "strike",
+            "cd": 6,
+            "range": 160,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "승천 연각",
+            "signature": "rising-kick",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 160,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "무아의 경지",
+            "signature": "perfect-rhythm",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 160,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "백열백련권",
+            "signature": "hundred-fists",
+            "effect": "strike",
+            "cd": 32,
+            "range": 160,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 10,
+      "cell": 4,
+      "character": "유상민",
+      "job": "인퀴지터",
+      "userTableName": "인퀴지터",
+      "target": "브레이커/딜러",
+      "status": "주역할 불일치",
+      "reason": "낙인·성화·처치 전파·소비 심판으로 사실상 표식 폭발 딜러다.",
+      "proposal": "낙인 소비 심판에 무력화/방어 파괴를 연결. 낙인=피해 중첩만으로 끝내지 않기.",
+      "skills": [
+        {
+          "id": "sangmin-4-skill-0",
+          "name": "심판 낙인",
+          "description": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "brand-strike",
+              "target": "single",
+              "range": 170,
+              "description": "실제 성인장 타격 250% 후 낙인 1중첩 · 최대 3"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-4-skill-1",
+          "name": "성화 점화",
+          "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "holy-ignition",
+              "target": "area",
+              "range": 440,
+              "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-4-skill-2",
+          "name": "판결의 전도",
+          "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "verdict-propagation",
+              "target": "self",
+              "range": 125,
+              "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-4-skill-3",
+          "name": "최후의 심판",
+          "description": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "inquisitor-verdict",
+              "target": "area",
+              "range": 440,
+              "description": "0.6초 뒤 반경 185에 500% + 낙인당 130% · 명중 시 낙인 소비"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "심판 낙인",
+            "signature": "brand-strike",
+            "effect": "strike",
+            "cd": 6,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성화 점화",
+            "signature": "holy-ignition",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "판결의 전도",
+            "signature": "verdict-propagation",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "최후의 심판",
+            "signature": "inquisitor-verdict",
+            "effect": "strike",
+            "cd": 32,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 10,
+      "cell": 5,
+      "character": "유상민",
+      "job": "하이프리스트",
+      "userTableName": "하이프리스트",
+      "target": "힐러/서포터",
+      "status": "기본 적합",
+      "reason": "직접 치유·초과 치유 은총·보호막·회복 성소·회복 궁극기가 있어 가장 완성된 힐러 구조다.",
+      "proposal": "실제 파티 범위·초과 치유와 은총의 레이드 연결을 보완. 단순 글로벌 heal/shield와 구분.",
+      "skills": [
+        {
+          "id": "sangmin-5-skill-0",
+          "name": "은총의 기도",
+          "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "grace-prayer",
+              "target": "self",
+              "range": 125,
+              "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-5-skill-1",
+          "name": "성당의 방벽",
+          "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "cathedral-ward",
+              "target": "self",
+              "range": 125,
+              "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-5-skill-2",
+          "name": "순례자의 성소",
+          "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "pilgrim-chapel",
+              "target": "self",
+              "range": 125,
+              "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+              "cooldown": 16
+            }
+          ]
+        },
+        {
+          "id": "sangmin-5-skill-3",
+          "name": "기적의 빛",
+          "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "miracle-release",
+              "target": "area",
+              "range": 460,
+              "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "heal",
+        "kit": [
+          {
+            "name": "은총의 기도",
+            "signature": "grace-prayer",
+            "effect": "heal",
+            "cd": 6,
+            "range": 320,
+            "power": 0.952,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.16,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성당의 방벽",
+            "signature": "cathedral-ward",
+            "effect": "shield",
+            "cd": 8.3,
+            "range": 320,
+            "power": 1.27,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0.22,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "순례자의 성소",
+            "signature": "pilgrim-chapel",
+            "effect": "dot",
+            "cd": 16,
+            "range": 320,
+            "power": 0.868,
+            "tickPower": 0.651,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "기적의 빛",
+            "signature": "miracle-release",
+            "effect": "heal",
+            "cd": 34.8,
+            "range": 320,
+            "power": 3.571,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0.28,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 10,
+      "cell": 6,
+      "character": "유상민",
+      "job": "엑소시스트",
+      "userTableName": "엑소시스트",
+      "target": "제어형/서포터",
+      "status": "보완 필요",
+      "reason": "봉인 축적·결계·주문 차단과 보스 내부 대기로 제어 방향은 맞다. 아군 지원은 간접적이다.",
+      "proposal": "아군 약화 해제/시전 보호를 추가하면 서포터 보조가 선명해진다.",
+      "skills": [
+        {
+          "id": "sangmin-6-skill-0",
+          "name": "봉인 부적",
+          "description": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "binding-talisman",
+              "target": "single",
+              "range": 480,
+              "description": "종이 부적 실제 명중 시 240%와 봉인 1 · 최대 3 · 봉인 자체 피해 없음"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-6-skill-1",
+          "name": "사방 결계",
+          "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "fourfold-barrier",
+              "target": "area",
+              "range": 460,
+              "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-6-skill-2",
+          "name": "주문 차단",
+          "description": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "ritual-interrupt",
+              "target": "single",
+              "range": 460,
+              "description": "시전 중인 적 우선 · 봉인 소비, 220% + 중첩당 80% · 보스 차단은 8초 내부 대기"
+            }
+          ]
+        },
+        {
+          "id": "sangmin-6-skill-3",
+          "name": "퇴마 의식",
+          "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
+          "actions": [
+            {
+              "op": "priest-kit",
+              "kind": "exorcist-rite",
+              "target": "area",
+              "range": 480,
+              "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "봉인 부적",
+            "signature": "binding-talisman",
+            "effect": "dot",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "사방 결계",
+            "signature": "fourfold-barrier",
+            "effect": "dot",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 8,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "주문 차단",
+            "signature": "ritual-interrupt",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "퇴마 의식",
+            "signature": "exorcist-rite",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 11,
+      "cell": 3,
+      "character": "정승욱",
+      "job": "엘리멘탈로드",
+      "userTableName": "엘리멘탈로드",
+      "target": "서포터/딜러",
+      "status": "주역할 불일치",
+      "reason": "정령왕 소환·역할 명령·소환수 강화·자기 보호막이다. 실질은 소환 딜러이며 파티 지원이 약하다.",
+      "proposal": "대지는 아군 보호막, 바람/번개는 공격 지원 등 실제 파티 명령으로 분리.",
+      "skills": [
+        {
+          "id": "keunho-3-skill-0",
+          "name": "정령왕 소환",
+          "description": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "king",
+              "count": 1,
+              "power": 1.8,
+              "duration": 22,
+              "large": true,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "id": "keunho-3-skill-1",
+          "name": "속성 명령",
+          "description": "정령왕 화염/대지/번개 역할 전환 / 소환체 표적 통일·즉시 협공",
+          "actions": [
+            {
+              "op": "king-element"
+            },
+            {
+              "op": "command",
+              "power": 1.4
+            }
+          ]
+        },
+        {
+          "id": "keunho-3-skill-2",
+          "name": "왕의 수호",
+          "description": "소환체 공격력 일시 강화 · 중복 증폭 방지 / 최대 체력 20% 보호막",
+          "actions": [
+            {
+              "op": "pet-buff",
+              "value": 0.4,
+              "duration": 12
+            },
+            {
+              "op": "shield",
+              "value": 0.2
+            }
+          ]
+        },
+        {
+          "id": "keunho-3-skill-3",
+          "name": "왕의 강림",
+          "description": "정령왕 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "king",
+              "count": 1,
+              "power": 2.8,
+              "duration": 24,
+              "large": true,
+              "exclusive": true
+            },
+            {
+              "op": "blast",
+              "power": 6,
+              "radius": 190,
+              "delay": 0.8
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "정령왕 소환",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "속성 명령",
+            "signature": "king-element",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "왕의 수호",
+            "signature": "pet-buff",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "왕의 강림",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 320,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 11,
+      "cell": 4,
+      "character": "정승욱",
+      "job": "하모니스트",
+      "userTableName": "하모니스트",
+      "target": "딜러/서포터",
+      "status": "보완 필요",
+      "reason": "사원소 공격·물 둔화·대지 속박과 융합은 딜러/제어에 더 가깝다. 공명은 정령 강화다.",
+      "proposal": "현재 유지라면 딜러/제어형이 자연스럽다. 지원을 유지하려면 공명 아군 효과가 필요.",
+      "skills": [
+        {
+          "id": "keunho-4-skill-0",
+          "name": "사원소 소환",
+          "description": "불·물·바람·대지 각 1마리 · 24초 · 폭발/둔화/관통/근접 제어 · 자동사냥 중 유지",
+          "actions": [
+            {
+              "op": "fusion-kit",
+              "kind": "four-call"
+            }
+          ]
+        },
+        {
+          "id": "keunho-4-skill-1",
+          "name": "사원소 협공",
+          "description": "네 정령이 각자 고유 속성으로 140% 위력 협공 · 융합 중에는 사원소 연속 공격",
+          "actions": [
+            {
+              "op": "fusion-kit",
+              "kind": "convergence"
+            }
+          ]
+        },
+        {
+          "id": "keunho-4-skill-2",
+          "name": "원소 공명",
+          "description": "8초간 사원소 공격 위력·공격 속도 25% 증가 · 정령을 합치지 않음",
+          "actions": [
+            {
+              "op": "fusion-kit",
+              "kind": "resonance"
+            }
+          ]
+        },
+        {
+          "id": "keunho-4-skill-3",
+          "name": "사원소 융합 · 대해방",
+          "description": "사원소 4마리를 8초간 융합 · 0.5초마다 속성 순환 공격 · 400% 강타 후 종료 시 네 정령으로 복귀 · 자동 사용은 소환 후 6초 및 보스/다수 적 조건",
+          "actions": [
+            {
+              "op": "fusion-kit",
+              "kind": "overdrive"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "사원소 소환",
+            "signature": "four-call",
+            "effect": "summon",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "사원소 협공",
+            "signature": "convergence",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "원소 공명",
+            "signature": "resonance",
+            "effect": "buff",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0.16
+          },
+          {
+            "name": "사원소 융합 · 대해방",
+            "signature": "overdrive",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 320,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 11,
+      "cell": 5,
+      "character": "정승욱",
+      "job": "리치",
+      "userTableName": "리치",
+      "target": "제어형/딜러",
+      "status": "주역할 불일치",
+      "reason": "영혼탄·성물함·자기 방벽·영혼 소비 폭발이며 실제 런타임에 둔화·속박·동결이 없다.",
+      "proposal": "성물함의 지역 제어를 추가하거나 주 역할을 딜러로 변경. 단순히 냉기 테마만 붙이지 않기.",
+      "skills": [
+        {
+          "id": "keunho-5-skill-0",
+          "name": "영혼 수확",
+          "description": "실제 영혼탄 명중 시 260% 피해·영혼 1개 수확 · 낙인 대상 처치 시 추가 수확 · 최대 6개",
+          "actions": [
+            {
+              "op": "lich-kit",
+              "kind": "harvest"
+            }
+          ]
+        },
+        {
+          "id": "keunho-5-skill-1",
+          "name": "성물함 개방",
+          "description": "24초간 성물함 설치 · 사거리 330 내 적에게 1.2초마다 50% 피해 · 주변 적 처치 시 영혼 수확",
+          "actions": [
+            {
+              "op": "lich-kit",
+              "kind": "phylactery"
+            }
+          ]
+        },
+        {
+          "id": "keunho-5-skill-2",
+          "name": "혼령 방벽",
+          "description": "영혼 최대 3개 소비 · 개당 최대 체력 4% 회복·5% 보호막 · 자동 사용은 체력 80% 미만 또는 적 근접 시",
+          "actions": [
+            {
+              "op": "lich-kit",
+              "kind": "soul-ward"
+            }
+          ]
+        },
+        {
+          "id": "keunho-5-skill-3",
+          "name": "사멸 의식",
+          "description": "성물함 필요 · 보유 영혼 전부 소비 · 0.8초 준비 후 반경 180에 450% + 영혼당 80% 피해 · 자동 사용은 영혼 3개 이상",
+          "actions": [
+            {
+              "op": "lich-kit",
+              "kind": "annihilation"
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "영혼 수확",
+            "signature": "harvest",
+            "effect": "strike",
+            "cd": 5.8,
+            "range": 320,
+            "power": 2.976,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "성물함 개방",
+            "signature": "phylactery",
+            "effect": "summon",
+            "cd": 8.3,
+            "range": 320,
+            "power": 0.992,
+            "tickPower": 0.744,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "혼령 방벽",
+            "signature": "soul-ward",
+            "effect": "shield",
+            "cd": 13.8,
+            "range": 320,
+            "power": 1.111,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0.22,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "사멸 의식",
+            "signature": "annihilation",
+            "effect": "strike",
+            "cd": 34.8,
+            "range": 320,
+            "power": 11.16,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    },
+    {
+      "hero": 11,
+      "cell": 6,
+      "character": "정승욱",
+      "job": "데스마스터",
+      "userTableName": "데스마스터",
+      "target": "딜러/브레이커",
+      "status": "보완 필요",
+      "reason": "사신 소환·죽음 표식·자원 수확·체력 조건 처형으로 딜러는 맞다. 사형 선고가 무력화는 아니다.",
+      "proposal": "죽음 표식 소비/사신 결정타를 제한적인 무력화 역할로 연결.",
+      "skills": [
+        {
+          "id": "keunho-6-skill-0",
+          "name": "사신 소환",
+          "description": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
+          "actions": [
+            {
+              "op": "pet",
+              "appearance": "reaper",
+              "count": 1,
+              "power": 1.7,
+              "duration": 22,
+              "exclusive": true
+            }
+          ]
+        },
+        {
+          "id": "keunho-6-skill-1",
+          "name": "죽음 표식",
+          "description": "death 2중첩 부여 · 최대 5중첩, 8초, 중첩당 매초 20% / 소환체 표적 통일·즉시 협공",
+          "actions": [
+            {
+              "op": "status",
+              "type": "death",
+              "power": 0.2,
+              "stacks": 2,
+              "duration": 8
+            },
+            {
+              "op": "command",
+              "power": 1.2
+            }
+          ]
+        },
+        {
+          "id": "keunho-6-skill-2",
+          "name": "영혼 수확",
+          "description": "death를 소비해 중첩당 221% 타격 / soul 자원 2 축적",
+          "actions": [
+            {
+              "op": "consume",
+              "type": "death",
+              "power": 2.2
+            },
+            {
+              "op": "meter",
+              "key": "soul",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "keunho-6-skill-3",
+          "name": "사형 선고",
+          "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
+          "actions": [
+            {
+              "op": "spend",
+              "key": "soul",
+              "power": 2
+            },
+            {
+              "op": "execute",
+              "power": 7,
+              "threshold": 0.4
+            },
+            {
+              "op": "pet",
+              "appearance": "reaper",
+              "count": 1,
+              "power": 2.5,
+              "duration": 20,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "raid": {
+        "role": "ranged",
+        "kit": [
+          {
+            "name": "사신 소환",
+            "signature": "pet",
+            "effect": "summon",
+            "cd": 6,
+            "range": 320,
+            "power": 0.744,
+            "tickPower": 0.558,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "죽음 표식",
+            "signature": "status",
+            "effect": "strike",
+            "cd": 8.3,
+            "range": 320,
+            "power": 3.968,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "영혼 수확",
+            "signature": "consume",
+            "effect": "strike",
+            "cd": 13.8,
+            "range": 320,
+            "power": 3.472,
+            "tickPower": 0,
+            "duration": 6,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          },
+          {
+            "name": "사형 선고",
+            "signature": "spend",
+            "effect": "summon",
+            "cd": 34.8,
+            "range": 320,
+            "power": 2.79,
+            "tickPower": 2.093,
+            "duration": 16,
+            "heal": 0,
+            "shield": 0,
+            "guard": 0,
+            "guardSelf": false,
+            "guardDuration": 5,
+            "buff": 0
+          }
+        ]
+      }
+    }
+  ]
+}

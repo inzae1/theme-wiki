@@ -124,3 +124,10 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 ## Greatsword branch (2026-10-23)
 
 Warrior / Vanguard / Dark Knight avatars were created specifically for this project with the built-in ImageGen tool. Original transparent PNGs and prompts: `greatsword-design/`. Gameplay sprite atlas: `../rpg-pixels-v2/characters/jongchan-greatsword-avatars.png`. Physical sword trails, segmented barricade and dark shockwaves are original Canvas animations in `rpg-greatsword-fx.js`; no third-party effect asset was added.
+
+## r95 — 박종찬 전체 28개 스킬 원화 애니메이션
+
+- 검사·검성·워리어·검귀·수라·뱅가드·다크나이트의 28개 기술에 프로젝트 전용 원화를 내장 ImageGen으로 생성했다. 외부 게임 리소스를 가져오지 않았다.
+- 투명 원본 9장: `jongchan-painted/sources/`. 전체 생성 프롬프트와 원본 해시: `jongchan-painted/manifest.json`, `data/design/r95-jongchan-painted-sources.json`.
+- `scripts/build-rpg-jongchan-painted.py`로 28개 투명 GIF와 같은 프레임의 PNG 아틀라스를 만든다. 게임은 실제 시전·명중·회전·방어 시점에 맞춰 PNG 프레임을 재생한다. GIF는 같은 그림의 반복 감상용 내보내기다.
+- 전체 감상 페이지: `../rpg-jongchan-gif-gallery.html`. 피해 계수·스킬 판정은 이 연출 변경으로 수정하지 않았다.

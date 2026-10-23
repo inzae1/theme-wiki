@@ -62,7 +62,9 @@
             ],
             "rays": 5,
             "rotation": 0,
-            "shape": "quick-cut"
+            "shape": "quick-cut",
+            "paintedGif": "rpg-fx/jongchan-painted/0-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/0-0.png"
           },
           "actualText": "근접 110 이내 단일 180% · 실제 명중 시 연격 1 획득",
           "visual": "전용 연출 jongchan-0:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -112,7 +114,9 @@
             ],
             "rays": 6,
             "rotation": 37,
-            "shape": "three-cuts"
+            "shape": "three-cuts",
+            "paintedGif": "rpg-fx/jongchan-painted/0-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/0-1.png"
           },
           "actualText": "0.16초 간격 근접 3회 · 타격당 80% · 각 명중마다 연격 1 획득",
           "visual": "전용 연출 jongchan-0:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -162,7 +166,9 @@
             ],
             "rays": 7,
             "rotation": 74,
-            "shape": "blade-guard"
+            "shape": "blade-guard",
+            "paintedGif": "rpg-fx/jongchan-painted/0-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/0-2.png"
           },
           "actualText": "2초 피해 40% 감소 · 실제로 줄인 피해만 저장 · 다음 기본공격에 최대 공격력 60% 추가 후 저장량 소모",
           "visual": "전용 연출 jongchan-0:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -212,7 +218,9 @@
             ],
             "rays": 8,
             "rotation": 111,
-            "shape": "resolve-wave"
+            "shape": "resolve-wave",
+            "paintedGif": "rpg-fx/jongchan-painted/0-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/0-3.png"
           },
           "actualText": "0.5초 준비 후 사거리 480의 600% 관통 검광 · 실제 지나간 적에게 명중",
           "visual": "전용 연출 jongchan-0:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -275,7 +283,9 @@
             ],
             "rays": 9,
             "rotation": 148,
-            "shape": "iai-chain"
+            "shape": "iai-chain",
+            "paintedGif": "rpg-fx/jongchan-painted/1-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/1-0.png"
           },
           "actualText": "지형을 확인하며 최대 150 접근 후 근접 3연격 · 각 80% · 접근 실패 시 원거리 타격 없음",
           "visual": "전용 연출 jongchan-1:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -325,7 +335,9 @@
             ],
             "rays": 10,
             "rotation": 5,
-            "shape": "riposte"
+            "shape": "riposte",
+            "paintedGif": "rpg-fx/jongchan-painted/1-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/1-1.png"
           },
           "actualText": "2초 피해 60% 감소 · 실제 방어 성공 시 165 이내 공격자에게 140% 반격 · 반격 간격 0.45초",
           "visual": "전용 연출 jongchan-1:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -375,7 +387,9 @@
             ],
             "rays": 11,
             "rotation": 42,
-            "shape": "sword-focus"
+            "shape": "sword-focus",
+            "paintedGif": "rpg-fx/jongchan-painted/1-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/1-2.png"
           },
           "actualText": "9초 연격 1당 공격력 증가 · 12연격에서 최대 22% · 기본공격과 직접 기술에 적용",
           "visual": "전용 연출 jongchan-1:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -425,7 +439,9 @@
             ],
             "rays": 12,
             "rotation": 79,
-            "shape": "cross-draw"
+            "shape": "cross-draw",
+            "paintedGif": "rpg-fx/jongchan-painted/1-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/1-3.png"
           },
           "actualText": "지형을 확인하며 최대 220 접근 후 400% 발도 · 0.2초 뒤 적중 지점 반경 80에 300% 교차 베기",
           "visual": "전용 연출 jongchan-1:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -488,7 +504,9 @@
             ],
             "rays": 5,
             "rotation": 116,
-            "shape": "heavy-slam"
+            "shape": "heavy-slam",
+            "paintedGif": "rpg-fx/jongchan-painted/2-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/2-0.png"
           },
           "actualText": "대검으로 280% 단일 피해 · 기세 +20, 최대 100 · 받아내기 성공 후 다음 내려치기/회전 피해 +30%",
           "visual": "전용 연출 jongchan-2:0 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -538,7 +556,9 @@
             ],
             "rays": 6,
             "rotation": 153,
-            "shape": "steel-whirl"
+            "shape": "steel-whirl",
+            "paintedGif": "rpg-fx/jongchan-painted/2-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/2-1.png"
           },
           "actualText": "이동 가능한 2초 회전 · 반경 120, 0.25초 간격 8회 총 480% 피해 · 이동속도 75% · 명중 시 기세 총 +24 · 같은 버튼으로 중단",
           "visual": "전용 연출 jongchan-2:1 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -588,7 +608,9 @@
             ],
             "rays": 7,
             "rotation": 10,
-            "shape": "great-parry"
+            "shape": "great-parry",
+            "paintedGif": "rpg-fx/jongchan-painted/2-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/2-2.png"
           },
           "actualText": "전방 140도 공격을 2.5초간 45% 경감 · 실제 방어 성공 시 준비 강화 1회 · 기세 +15, 회당 1회",
           "visual": "전용 연출 jongchan-2:2 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -638,7 +660,9 @@
             ],
             "rays": 8,
             "rotation": 47,
-            "shape": "crushing-finish"
+            "shape": "crushing-finish",
+            "paintedGif": "rpg-fx/jongchan-painted/2-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/2-3.png"
           },
           "actualText": "0.45초 준비 후 전방 대검 강타 · 750% + 기세당 4% 피해 · 기세 전부 소모 · 일반 적 1초 경직, 보스 0.25초",
           "visual": "전용 연출 jongchan-2:3 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -701,7 +725,9 @@
             ],
             "rays": 9,
             "rotation": 84,
-            "shape": "shadow-chase"
+            "shape": "shadow-chase",
+            "paintedGif": "rpg-fx/jongchan-painted/3-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/3-0.png"
           },
           "actualText": "지형을 확인하며 최대 190 접근 후 4회 근접 잔영 베기 · 각 55% · 실제 명중 시 연격 축적",
           "visual": "전용 연출 jongchan-3:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -751,7 +777,9 @@
             ],
             "rays": 10,
             "rotation": 121,
-            "shape": "six-cuts"
+            "shape": "six-cuts",
+            "paintedGif": "rpg-fx/jongchan-painted/3-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/3-1.png"
           },
           "actualText": "0.12초 간격 근접 6회 · 타격당 65% · 실제 명중 시 연격 1 획득",
           "visual": "전용 연출 jongchan-3:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -801,7 +829,9 @@
             ],
             "rays": 11,
             "rotation": 158,
-            "shape": "demon-breath"
+            "shape": "demon-breath",
+            "paintedGif": "rpg-fx/jongchan-painted/3-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/3-2.png"
           },
           "actualText": "10초 연격 비례 공격력 증가 · 12연격에서 최대 35% · 기본공격과 직접 기술에 적용",
           "visual": "전용 연출 jongchan-3:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -851,7 +881,9 @@
             ],
             "rays": 12,
             "rotation": 15,
-            "shape": "hundred-cuts"
+            "shape": "hundred-cuts",
+            "paintedGif": "rpg-fx/jongchan-painted/3-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/3-3.png"
           },
           "actualText": "근접 8연타로 타격당 50%·연격 축적 후 마지막 500%+소모 연격당 75% 결정타 · 마지막 명중에 연격 전부 소모",
           "visual": "전용 연출 jongchan-3:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -914,7 +946,9 @@
             ],
             "rays": 5,
             "rotation": 52,
-            "shape": "asura-parry"
+            "shape": "asura-parry",
+            "paintedGif": "rpg-fx/jongchan-painted/4-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/4-0.png"
           },
           "actualText": "2.5초 피해 70% 감소 · 실제 방어 성공 시 165 이내 공격자에게 240% 반격 · 반격 간격 0.45초",
           "visual": "전용 연출 jongchan-4:0 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -964,7 +998,9 @@
             ],
             "rays": 6,
             "rotation": 89,
-            "shape": "stored-cut"
+            "shape": "stored-cut",
+            "paintedGif": "rpg-fx/jongchan-painted/4-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/4-1.png"
           },
           "actualText": "반경 100에 300%+저장 충격량 피해 · 충격량 전부 소모 · 저장 상한은 공격력 8배",
           "visual": "전용 연출 jongchan-4:1 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1014,7 +1050,9 @@
             ],
             "rays": 7,
             "rotation": 126,
-            "shape": "immovable"
+            "shape": "immovable",
+            "paintedGif": "rpg-fx/jongchan-painted/4-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/4-2.png"
           },
           "actualText": "5초 피해 80% 감소 · 약한 방어를 겹쳐도 유지 시간 동안 가장 강한 방어율 적용 · 실제 감소량만 저장",
           "visual": "전용 연출 jongchan-4:2 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1064,7 +1102,9 @@
             ],
             "rays": 8,
             "rotation": 163,
-            "shape": "thousand-return"
+            "shape": "thousand-return",
+            "paintedGif": "rpg-fx/jongchan-painted/4-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/4-3.png"
           },
           "actualText": "반경 180에 700%+저장 충격량 방출 후 2초 피해 90% 감소 · 저장량 전부 소모",
           "visual": "전용 연출 jongchan-4:3 · sword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1127,7 +1167,9 @@
             ],
             "rays": 9,
             "rotation": 20,
-            "shape": "vanguard-strike"
+            "shape": "vanguard-strike",
+            "paintedGif": "rpg-fx/jongchan-painted/5-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/5-0.png"
           },
           "actualText": "전방 강타 330% 피해 · 명중 적 4초 도발 · 일반 적 0.6초 경직, 보스 0.15초",
           "visual": "전용 연출 jongchan-5:0 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1177,7 +1219,9 @@
             ],
             "rays": 10,
             "rotation": 57,
-            "shape": "vanguard-whirl"
+            "shape": "vanguard-whirl",
+            "paintedGif": "rpg-fx/jongchan-painted/5-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/5-1.png"
           },
           "actualText": "이동 가능한 2초 대검 회전 · 반경 125, 8회 총 560% 피해 · 회전 중 모든 방향 피해 30% 감소 · 명중 적 2초 도발 · 이동속도 75%, 같은 버튼으로 중단 · 수호 자세와 피해 감소 중첩 안 됨",
           "visual": "전용 연출 jongchan-5:1 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1227,7 +1271,9 @@
             ],
             "rays": 11,
             "rotation": 94,
-            "shape": "vanguard-guard"
+            "shape": "vanguard-guard",
+            "paintedGif": "rpg-fx/jongchan-painted/5-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/5-2.png"
           },
           "actualText": "5초간 전방 공격 60%, 후방 공격 20% 경감 · 실제 경감량을 공격력 5배까지 저장 · 레이드에서는 파티 방어 효과",
           "visual": "전용 연출 jongchan-5:2 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1277,7 +1323,9 @@
             ],
             "rays": 12,
             "rotation": 131,
-            "shape": "unbroken-front"
+            "shape": "unbroken-front",
+            "paintedGif": "rpg-fx/jongchan-painted/5-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/5-3.png"
           },
           "actualText": "6초간 전방 70%, 후방 30% 경감 · 반경 175 적 도발 · 4회 총 840% 피해 후 저장 방어량으로 최대 500% 반격 · 보스 무한 경직 불가",
           "visual": "전용 연출 jongchan-5:3 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1340,7 +1388,9 @@
             ],
             "rays": 5,
             "rotation": 168,
-            "shape": "dark-edge"
+            "shape": "dark-edge",
+            "paintedGif": "rpg-fx/jongchan-painted/6-0.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/6-0.png"
           },
           "actualText": "실제 충돌하는 관통 검기 330% 피해 · 명중 시 어둠 +20, 발사당 최대 +30",
           "visual": "전용 연출 jongchan-6:0 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1390,7 +1440,9 @@
             ],
             "rays": 6,
             "rotation": 25,
-            "shape": "dark-whirl"
+            "shape": "dark-whirl",
+            "paintedGif": "rpg-fx/jongchan-painted/6-1.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/6-1.png"
           },
           "actualText": "2초 이동 회전 · 8회 총 640% 피해 · 어둠 최대 30 소비 시 총 피해 최대 +50% · 이동속도 75% · 같은 버튼으로 중단",
           "visual": "전용 연출 jongchan-6:1 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1440,7 +1492,9 @@
             ],
             "rays": 7,
             "rotation": 62,
-            "shape": "dark-awakening"
+            "shape": "dark-awakening",
+            "paintedGif": "rpg-fx/jongchan-painted/6-2.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/6-2.png"
           },
           "actualText": "10초간 공격력 +22%, 일반공격 어둠 획득 +4 · 실제 명중 피해 6% 흡수, 초당 최대 체력 2% 한도 · 어둠 보존",
           "visual": "전용 연출 jongchan-6:2 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
@@ -1490,7 +1544,9 @@
             ],
             "rays": 8,
             "rotation": 99,
-            "shape": "dark-apocalypse"
+            "shape": "dark-apocalypse",
+            "paintedGif": "rpg-fx/jongchan-painted/6-3.gif",
+            "paintedAtlas": "rpg-fx/jongchan-painted/6-3.png"
           },
           "actualText": "0.55초 준비 후 대검 낙하 · 주 대상 1050% + 어둠당 6% · 주변 피해 65% · 어둠 전부 소모 · 일반 적 1초, 보스 0.3초 경직",
           "visual": "전용 연출 jongchan-6:3 · greatsword-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
