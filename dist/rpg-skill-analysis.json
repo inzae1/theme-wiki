@@ -18173,7 +18173,7 @@
       "parent": "keunho-1",
       "style": "morph",
       "resource": "마력",
-      "review": "사원소 소환 — four-call / 사원소 협공 — convergence / 원소 공명 — resonance / 사원소 융합 · 대해방 — overdrive",
+      "review": "사원소 소환 — four-call / 원소 교차 — convergence / 원소 공명 — resonance / 사원소 융합 · 대해방 — overdrive",
       "intendedIdentity": "정령왕 지휘·사원소 유지와 일시 융합·성물함과 영혼 수확·사신 계열 · 최종 특화 · 실제 실행되는 기술 구성",
       "skills": [
         {
@@ -18230,7 +18230,7 @@
           "heroId": 11,
           "cell": 4,
           "slot": 1,
-          "name": "사원소 협공",
+          "name": "원소 교차",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -18246,7 +18246,7 @@
           "radius": 140,
           "target": "self",
           "effectType": "recipe-325",
-          "description": "네 정령이 각자 고유 속성으로 140% 위력 협공 · 융합 중에는 사원소 연속 공격",
+          "description": "4초 원소 지대 · 불+바람: 초당 100% 피해와 몰이 / 물+대지: 초당 80% 피해·둔화·받는 스킬 피해 8% 증가 · 번갈아 발동, 융합 중 두 조합 동시 발동",
           "actions": [
             {
               "op": "fusion-kit",
@@ -18269,7 +18269,7 @@
             "rotation": 145,
             "shape": "fusion-kit"
           },
-          "actualText": "네 정령이 각자 고유 속성으로 140% 위력 협공 · 융합 중에는 사원소 연속 공격",
+          "actualText": "4초 원소 지대 · 불+바람: 초당 100% 피해와 몰이 / 물+대지: 초당 80% 피해·둔화·받는 스킬 피해 8% 증가 · 번갈아 발동, 융합 중 두 조합 동시 발동",
           "visual": "전용 연출 keunho-4:1 · fusion-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
         },
         {
