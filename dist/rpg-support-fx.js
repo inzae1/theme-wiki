@@ -1,7 +1,8 @@
 'use strict';(function(root){
 function sigil(p,x,y,t,color,scale=1){p.save();p.translate(Math.round(x),Math.round(y));p.strokeStyle=color;p.lineWidth=2;p.globalAlpha*=.7+.2*Math.sin(t*5);p.beginPath();for(let i=0;i<4;i++){const a=i*Math.PI/2,r=13*scale;p.moveTo(Math.cos(a)*r,Math.sin(a)*r);p.lineTo(Math.cos(a+.42)*r*.66,Math.sin(a+.42)*r*.66);p.lineTo(Math.cos(a+.8)*r,Math.sin(a+.8)*r);}p.stroke();p.fillStyle=color;p.fillRect(-2,-2,4,4);p.restore();}
-function draw(p,f,t){if(!f.supportKind)return false;const a=root.RPG_SKILL_FX,k=f.supportKind,heal=/mend|heal|concerto/.test(k),color=k.includes('idol')||k==='center-stage'||k==='point-ward'?'#ffa9da':'#a8f6e4',fade=Math.max(0,Math.min(1,t*8,(1.1-t)*4));if(t>1.1)return true;p.save();p.globalAlpha*=fade;
+function draw(p,f,t){if(!f.supportKind)return false;const a=root.RPG_SKILL_FX,k=f.supportKind,heal=/mend|heal/.test(k)||k==='life-concerto',color=k.includes('idol')||k==='center-stage'||k==='point-ward'?'#ffa9da':'#a8f6e4',fade=Math.max(0,Math.min(1,t*8,(1.1-t)*4));if(t>1.1)return true;p.save();p.globalAlpha*=fade;
 if(heal){a.recovery(p,f.x,f.y-22,t,1.1,k==='life-concerto'?80:52);for(let i=0;i<3;i++)a.music(p,t,1.1,f.x+(i-1)*24,f.y-20-t*30,26,i%2,color==='#ffa9da'?'purple':'gold');}
+else if(k==='concerto-strike'){a.music(p,t,1.1,f.x,f.y-28,95,2,'gold');}
 else if(k==='calamity-seal'||k==='idol-mark')sigil(p,f.x,f.y-52,t,k==='idol-mark'?'#ff9bdd':'#cf8aff',k==='calamity-seal'?1.2:.7);
 else{a.music(p,t,1.1,f.x,f.y-30,k==='guard-song'?110:86,k==='guard-song'?1:3,k==='guard-song'?'blue':'purple');for(let i=0;i<4;i++){const x=f.x-45+i*30,y=f.y-8-Math.sin(i+t*5)*7;p.fillStyle=color;p.fillRect(Math.round(x),Math.round(y),3,7);p.fillRect(Math.round(x-3),Math.round(y+5),5,3);}}
 p.restore();return true;}
