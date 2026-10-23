@@ -131,3 +131,7 @@ Warrior / Vanguard / Dark Knight avatars were created specifically for this proj
 - 투명 원본 9장: `jongchan-painted/sources/`. 전체 생성 프롬프트와 원본 해시: `jongchan-painted/manifest.json`, `data/design/r95-jongchan-painted-sources.json`.
 - `scripts/build-rpg-jongchan-painted.py`로 28개 투명 GIF와 같은 프레임의 PNG 아틀라스를 만든다. 게임은 실제 시전·명중·회전·방어 시점에 맞춰 PNG 프레임을 재생한다. GIF는 같은 그림의 반복 감상용 내보내기다.
 - 전체 감상 페이지: `../rpg-jongchan-gif-gallery.html`. 피해 계수·스킬 판정은 이 연출 변경으로 수정하지 않았다.
+
+## r96 — 박종찬 대검 3직업 SD 아바타
+
+워리어·뱅가드·다크나이트는 기존 `characters/jongchan.png`를 얼굴·체형·도트 스타일 참조로 삼아 내장 ImageGen으로 재제작했다. 원본 3장·프롬프트·프레임 메타데이터는 `greatsword-design/sd-r96/`. 게임용 아틀라스는 `../rpg-pixels-v2/characters/jongchan-greatsword-sd.png`, 재생성은 `scripts/build-rpg-jongchan-sd-avatars.py`. 몸 높이·발 기준으로 렌더 크기와 앵커를 맞췄고 기존 검사·검성·검귀·수라는 유지했다.
