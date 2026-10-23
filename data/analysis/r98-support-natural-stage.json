@@ -1,0 +1,149 @@
+{
+  "conditions": "Natural stage run: Lv60 stage81/+10, Lv90 stage141/+20; rare automatic potions; no HP clamp; one seed1729; no XP or item drops; stops on first clear/death or240s. A controlled sample, not all stages.",
+  "rows": [
+    {
+      "hero": 6,
+      "cell": 1,
+      "level": 60,
+      "job": "바드",
+      "stage": 81,
+      "clear": false,
+      "death": true,
+      "seconds": 40.7,
+      "kills": 10,
+      "hpRatio": 0
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "level": 90,
+      "job": "바드",
+      "stage": 141,
+      "clear": false,
+      "death": true,
+      "seconds": 37.3,
+      "kills": 4,
+      "hpRatio": 0
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "level": 60,
+      "job": "댄서",
+      "stage": 81,
+      "clear": false,
+      "death": true,
+      "seconds": 50.9,
+      "kills": 30,
+      "hpRatio": 0
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "level": 90,
+      "job": "댄서",
+      "stage": 141,
+      "clear": false,
+      "death": true,
+      "seconds": 41,
+      "kills": 3,
+      "hpRatio": 0
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "level": 60,
+      "job": "민스트럴",
+      "stage": 81,
+      "clear": true,
+      "death": false,
+      "seconds": 92.9,
+      "kills": 108,
+      "hpRatio": 1
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "level": 90,
+      "job": "민스트럴",
+      "stage": 141,
+      "clear": true,
+      "death": false,
+      "seconds": 155.1,
+      "kills": 108,
+      "hpRatio": 0.9823474246066891
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "level": 60,
+      "job": "아이돌",
+      "stage": 81,
+      "clear": true,
+      "death": false,
+      "seconds": 86.3,
+      "kills": 108,
+      "hpRatio": 0.8414926708965492
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "level": 90,
+      "job": "아이돌",
+      "stage": 141,
+      "clear": false,
+      "death": true,
+      "seconds": 61.5,
+      "kills": 67,
+      "hpRatio": 0
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "level": 60,
+      "job": "흑마법사",
+      "stage": 81,
+      "clear": false,
+      "death": true,
+      "seconds": 65.7,
+      "kills": 64,
+      "hpRatio": 0
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "level": 90,
+      "job": "흑마법사",
+      "stage": 141,
+      "clear": false,
+      "death": true,
+      "seconds": 56.7,
+      "kills": 19,
+      "hpRatio": 0
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "level": 60,
+      "job": "워록",
+      "stage": 81,
+      "clear": true,
+      "death": false,
+      "seconds": 89.6,
+      "kills": 108,
+      "hpRatio": 0.6810551997287256
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "level": 90,
+      "job": "워록",
+      "stage": 141,
+      "clear": true,
+      "death": false,
+      "seconds": 104.8,
+      "kills": 108,
+      "hpRatio": 0.9420518123557804
+    }
+  ]
+}

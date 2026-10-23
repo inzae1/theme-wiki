@@ -1,0 +1,2086 @@
+{
+  "date": "2026-10-23",
+  "status": "three-kits-installed",
+  "conditions": "Actual r98 three support kits, 90 simulation seconds, Lv60/+10 or Lv90/+20 basic class-correct gear, rare potions, 3 deterministic seeds, 1 boss or 12 enemies at shared HP/attack, player HP clamped to 1 for sustained DPS. Not a survival/clear test and not a test of proposed skills.",
+  "runs": 96,
+  "rows": [
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 90982,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1010.9111111111112
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 94727,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1052.5222222222221
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 93082,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1034.2444444444445
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 400046,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4444.955555555555
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 435114,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4834.6
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 409589,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4550.988888888889
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 160054,
+      "casts": [
+        16,
+        11,
+        3,
+        3
+      ],
+      "mpMin": 44.89999999999927,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1778.3777777777777
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 150516,
+      "casts": [
+        16,
+        11,
+        3,
+        3
+      ],
+      "mpMin": 44.89999999999927,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1672.4
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 168462,
+      "casts": [
+        16,
+        11,
+        4,
+        3
+      ],
+      "mpMin": 45.69999999999922,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1871.8
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 508095,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 45.19999999999934,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 5645.5
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 521539,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 44.699999999999335,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 5794.877777777778
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 445641,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 44.699999999999335,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4951.566666666667
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 297245,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 44.19999999999748,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3302.722222222222
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 303464,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 44.19999999999748,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3371.822222222222
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 305995,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 44.19999999999748,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3399.9444444444443
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 1177259,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 44.19999999999748,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 13080.655555555555
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 1110458,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 44.19999999999748,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 12338.422222222222
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 1161536,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 46.99999999999957,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 12905.955555555556
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 106325,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1181.388888888889
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 103052,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1145.0222222222221
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 104575,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1161.9444444444443
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 172854,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1920.6
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 173009,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1922.3222222222223
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 169632,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1884.8
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 159885,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1776.5
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 165877,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1843.0777777777778
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 163779,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1819.7666666666667
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 269640,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2996
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 263902,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2932.2444444444445
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 263484,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2927.6
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 199551,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 48.69999999999878,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2217.233333333333
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 193841,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 48.69999999999878,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2153.788888888889
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 200061,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 46.399999999998805,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2222.9
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 668552,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 45.99999999999931,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 7428.355555555556
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 654324,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 46.599999999999405,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 7270.266666666666
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 634965,
+      "casts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "mpMin": 47.99999999999932,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 7055.166666666667
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 145319,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1614.6555555555556
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 147306,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1636.7333333333333
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 146637,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1629.3
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 286446,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3182.733333333333
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 295373,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3281.9222222222224
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 285510,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3172.3333333333335
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 223092,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2478.8
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 223253,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2480.588888888889
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 225809,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2508.988888888889
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 818794,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 9097.711111111112
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 794759,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 8830.655555555555
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 799943,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 8888.255555555555
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 178523,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 1983.588888888889
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 184517,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2050.188888888889
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 183900,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2043.3333333333333
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 792530,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 8805.888888888889
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 867705,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 9641.166666666666
+    },
+    {
+      "hero": 2,
+      "cell": 0,
+      "job": "마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 803984,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.99999999999847,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 8933.155555555555
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 346283,
+      "casts": [
+        16,
+        6,
+        7,
+        3
+      ],
+      "mpMin": 44.89999999999975,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3847.588888888889
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 338674,
+      "casts": [
+        16,
+        6,
+        7,
+        3
+      ],
+      "mpMin": 44.89999999999975,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3763.0444444444443
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 365928,
+      "casts": [
+        16,
+        6,
+        7,
+        3
+      ],
+      "mpMin": 44.89999999999975,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4065.866666666667
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 997179,
+      "casts": [
+        16,
+        10,
+        7,
+        3
+      ],
+      "mpMin": 45.29999999999932,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 11079.766666666666
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 1039324,
+      "casts": [
+        16,
+        10,
+        7,
+        3
+      ],
+      "mpMin": 45.29999999999932,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 11548.044444444444
+    },
+    {
+      "hero": 2,
+      "cell": 2,
+      "job": "흑마법사",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 867451,
+      "casts": [
+        16,
+        10,
+        7,
+        3
+      ],
+      "mpMin": 45.29999999999932,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 9638.344444444445
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 590759,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 41.89999999999908,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6563.988888888889
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 598955,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 41.89999999999908,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6655.055555555556
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 620779,
+      "casts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "mpMin": 41.89999999999908,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6897.544444444445
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 2500263,
+      "casts": [
+        15,
+        11,
+        4,
+        3
+      ],
+      "mpMin": 41.09999999999965,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 27780.7
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 2358633,
+      "casts": [
+        15,
+        11,
+        4,
+        3
+      ],
+      "mpMin": 41.09999999999965,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 26207.033333333333
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 2376949,
+      "casts": [
+        15,
+        11,
+        4,
+        3
+      ],
+      "mpMin": 41.09999999999965,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 26410.544444444444
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 206916,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2299.0666666666666
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 202097,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2245.5222222222224
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 205062,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 2278.4666666666667
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 340437,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3782.633333333333
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 338290,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3758.777777777778
+    },
+    {
+      "hero": 6,
+      "cell": 0,
+      "job": "음유시인",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 334701,
+      "casts": [
+        17,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 43.099999999999625,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3718.9
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 314057,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3489.5222222222224
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 324682,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3607.5777777777776
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 322223,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3580.2555555555555
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 535660,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 5951.777777777777
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 519987,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 5777.633333333333
+    },
+    {
+      "hero": 6,
+      "cell": 1,
+      "job": "바드",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 518766,
+      "casts": [
+        16,
+        11,
+        7,
+        3
+      ],
+      "mpMin": 46.699999999998845,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 5764.066666666667
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 388257,
+      "casts": [
+        15,
+        8,
+        5,
+        3
+      ],
+      "mpMin": 46.899999999999444,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4313.966666666666
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 378045,
+      "casts": [
+        15,
+        7,
+        5,
+        3
+      ],
+      "mpMin": 47.99999999999922,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4200.5
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 388844,
+      "casts": [
+        15,
+        8,
+        5,
+        3
+      ],
+      "mpMin": 47.99999999999911,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4320.488888888889
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 1305343,
+      "casts": [
+        15,
+        4,
+        3,
+        3
+      ],
+      "mpMin": 37.399999999998826,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 14503.81111111111
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 1273876,
+      "casts": [
+        15,
+        4,
+        2,
+        3
+      ],
+      "mpMin": 37.89999999999876,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 14154.177777777777
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 1274339,
+      "casts": [
+        15,
+        3,
+        2,
+        3
+      ],
+      "mpMin": 47.59999999999822,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 14159.322222222223
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 285792,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3175.4666666666667
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 288845,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3209.3888888888887
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 287541,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 3194.9
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 582242,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6469.355555555556
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 578150,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6423.888888888889
+    },
+    {
+      "hero": 6,
+      "cell": 2,
+      "job": "댄서",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 562066,
+      "casts": [
+        16,
+        12,
+        7,
+        3
+      ],
+      "mpMin": 39.79999999999672,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 6245.177777777778
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "boss",
+      "seed": 1729,
+      "damage": 439238,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4880.422222222222
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "boss",
+      "seed": 8731,
+      "damage": 437019,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4855.766666666666
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "boss",
+      "seed": 31415,
+      "damage": 445076,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 4945.288888888889
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "pack",
+      "seed": 1729,
+      "damage": 1621710,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 18019
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "pack",
+      "seed": 8731,
+      "damage": 1571947,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 17466.077777777777
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "pack",
+      "seed": 31415,
+      "damage": 1573827,
+      "casts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "mpMin": 46.299999999999464,
+      "mpLowSeconds": 0,
+      "finite": true,
+      "dps": 17486.966666666667
+    }
+  ],
+  "comparisons": [
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "boss",
+      "dps": 3358.162962962963,
+      "parentDPS": 1774.1925925925925,
+      "starterDPS": 1032.5592592592593,
+      "ratioToParent": 1.892783780624259,
+      "ratioToStarter": 3.252271414787421,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 99,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 60,
+      "kind": "pack",
+      "dps": 12775.011111111111,
+      "parentDPS": 5463.981481481482,
+      "starterDPS": 4610.181481481482,
+      "ratioToParent": 2.338040704275474,
+      "ratioToStarter": 2.771042997423577,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 99,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "boss",
+      "dps": 6705.529629629629,
+      "parentDPS": 3892.1666666666665,
+      "starterDPS": 2025.7037037037037,
+      "ratioToParent": 1.7228269506178127,
+      "ratioToStarter": 3.3102223278604597,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        11,
+        6,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 99,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "level": 90,
+      "kind": "pack",
+      "dps": 26799.425925925927,
+      "parentDPS": 10755.385185185185,
+      "starterDPS": 9126.737037037035,
+      "ratioToParent": 2.4917216319542255,
+      "ratioToStarter": 2.9363644221556613,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        11,
+        4,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 93,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "boss",
+      "dps": 2197.974074074074,
+      "parentDPS": 1813.1148148148147,
+      "starterDPS": 1162.7851851851851,
+      "ratioToParent": 1.2122641413078783,
+      "ratioToStarter": 1.8902666649678932,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 45,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 60,
+      "kind": "pack",
+      "dps": 7251.262962962963,
+      "parentDPS": 2951.9481481481484,
+      "starterDPS": 1909.2407407407409,
+      "ratioToParent": 2.4564330398255514,
+      "ratioToStarter": 3.797982521653944,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        10,
+        6,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 45,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "boss",
+      "dps": 4278.318518518518,
+      "parentDPS": 3559.1185185185186,
+      "starterDPS": 2274.351851851852,
+      "ratioToParent": 1.2020725065091022,
+      "ratioToStarter": 1.8811154989211412,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        7.666666666666667,
+        5,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 45,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "level": 90,
+      "kind": "pack",
+      "dps": 14272.437037037038,
+      "parentDPS": 5831.15925925926,
+      "starterDPS": 3753.4370370370366,
+      "ratioToParent": 2.4476157145552024,
+      "ratioToStarter": 3.8024980561026545,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        15,
+        3.6666666666666665,
+        2.3333333333333335,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 45,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "boss",
+      "dps": 2489.4592592592594,
+      "parentDPS": 1626.8962962962962,
+      "starterDPS": 1162.7851851851851,
+      "ratioToParent": 1.530189272006229,
+      "ratioToStarter": 2.1409451126286823,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 77,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 60,
+      "kind": "pack",
+      "dps": 8938.874074074074,
+      "parentDPS": 3212.32962962963,
+      "starterDPS": 1909.2407407407409,
+      "ratioToParent": 2.7826764699439313,
+      "ratioToStarter": 4.681899921434737,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 77,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "boss",
+      "dps": 4893.825925925926,
+      "parentDPS": 3193.251851851852,
+      "starterDPS": 2274.351851851852,
+      "ratioToParent": 1.5325524427670387,
+      "ratioToStarter": 2.151745307983552,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 77,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "level": 90,
+      "kind": "pack",
+      "dps": 17657.348148148147,
+      "parentDPS": 6379.474074074074,
+      "starterDPS": 3753.4370370370366,
+      "ratioToParent": 2.7678375902344206,
+      "ratioToStarter": 4.7043144653591575,
+      "mpLowSeconds": 0,
+      "meanCasts": [
+        16,
+        7,
+        10,
+        3
+      ],
+      "proposedBreakUpperBoundPer90s": 77,
+      "note": "Break number is a cast-count ceiling only: assumes all maximum prepared hits, ignores misses/resistance/gauge lock. Upper bound only; not measured break performance."
+    }
+  ]
+}

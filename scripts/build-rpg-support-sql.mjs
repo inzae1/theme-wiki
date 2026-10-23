@@ -1,0 +1,20 @@
+import fs from'node:fs';
+let abilities=fs.readFileSync('server/raid/abilities.sql','utf8');abilities=abilities.replaceAll('rpg_raid.ability_cast(', 'rpg_raid.ability_cast_legacy(').replaceAll('rpg_raid.abilities_tick(', 'rpg_raid.abilities_tick_legacy(');
+abilities=abilities.replace("buff:=case when coalesce((p->>'powerUntil')::numeric,0)>t then coalesce((p->>'powerBonus')::numeric,0) else 0 end;",'buff:=rpg_raid.support_bonus(p,t);').replace("*(1+buff)*", "*(1+buff)*(1+rpg_raid.role_value(coalesce(s->'boss'->'roleUnit','{}'),'vulnerable',t))*").replace("*(case when coalesce((p->>'powerUntil')::numeric,0)>t then 1+coalesce((p->>'powerBonus')::numeric,0) else 1 end)","*(1+rpg_raid.support_bonus(p,t))*(1+rpg_raid.role_value(coalesce(s->'boss'->'roleUnit','{}'),'vulnerable',t))");
+const balance=fs.readFileSync('server/raid/balance.sql','utf8');let advance=balance.slice(balance.indexOf('create or replace function rpg_raid.advance('),balance.indexOf('create or replace function rpg_raid.command('));
+advance=advance.replace('step:=least(d,105*dt)',"step:=least(d,105*dt*(1+rpg_raid.role_value(coalesce(p->'roleUnit','{}'),'speed',t)))").replace("*(case when coalesce((p->>'powerUntil')::numeric,0)>t then 1+coalesce((p->>'powerBonus')::numeric,0) else 1 end)","*(1+rpg_raid.support_bonus(p,t))").replace("else\nif (boss->>'exposedUntil')", "else\nif (boss->>'exposedUntil')");
+// Vulnerability affects only boss damage, never crystal rescue damage.
+advance=advance.replace("else if (boss->>'exposedUntil')", "else damage:=damage*(1+rpg_raid.role_value(coalesce(boss->'roleUnit','{}'),'vulnerable',t));if (boss->>'exposedUntil')");
+advance=advance.replace("'attackAt',t+1,", "'attackAt',t+1/(1+rpg_raid.role_value(coalesce(p->'roleUnit','{}'),'haste',t)),");
+const commandStart=balance.indexOf('create or replace function rpg_raid.command(');let command=balance.slice(commandStart,balance.indexOf('\nend $$;',commandStart)+'\nend $$;'.length);
+command=command.replaceAll("'powerBonus',0)","'powerBonus',0,'support','{}'::jsonb,'roleUnit','{}'::jsonb)");
+command=command.replace("q:=s->'players'->i;select cs.payload","q:=s->'players'->i;select jobrow.info into job from rpg_raid.jobs jobrow where jobrow.hero=(q->>'hero')::integer and jobrow.cell=(q->>'cell')::integer;q:=q||jsonb_build_object('kit',job->'kit','skills',job->'skills','role',job->'role','job',job->'name');select cs.payload");
+command=command.replaceAll("'t',0,'effects','[]'::jsonb","'t',0,'roleSeen','[]'::jsonb,'roleSerial',0,'effects','[]'::jsonb");
+const wrappers=`
+create or replace function rpg_raid.ability_cast(s jsonb,idx integer,slot integer) returns jsonb language plpgsql set search_path=pg_catalog as $$begin if rpg_raid.support_kind(s->'players'->idx) is not null then return rpg_raid.support_cast(s,idx,slot);end if;return rpg_raid.ability_cast_legacy(s,idx,slot);end$$;
+create or replace function rpg_raid.abilities_tick(s jsonb,dt numeric) returns jsonb language sql set search_path=pg_catalog as $$select rpg_raid.abilities_tick_legacy(rpg_raid.support_tick(s),dt)$$;
+create or replace function rpg_raid.hurt(s jsonb,idx integer,amount numeric) returns jsonb language sql set search_path=pg_catalog as $$select jsonb_set(rpg_raid.support_apply(s,-1,'hurt:'||(s->>'t')||':'||(s->'players'->idx->>'id'),'damage',jsonb_build_object('scope','target','target',s->'players'->idx->>'id','value',amount,'validHit',true)),array['players',idx::text,'hurtAt'],s->'t')$$;
+`;
+const source=fs.readFileSync('server/raid/role-core.sql','utf8')+fs.readFileSync('server/raid/support.sql','utf8')+abilities+wrappers+advance+command+fs.readFileSync('server/raid/support-profiles.sql','utf8');
+const names=[...source.matchAll(/create or replace function rpg_raid\.(\w+)\(([^)]*)\)/g)].map(m=>{const args=m[2].split(',').filter(Boolean).map(x=>x.trim().split(/\s+/)[1]).join(',');return`rpg_raid.${m[1]}(${args})`;});
+fs.writeFileSync('server/raid/support-integration.sql','begin;\n'+source+'\nrevoke all on function '+[...new Set(names)].join(',')+' from public,anon,authenticated;\ncommit;\n');console.log('Built private server support integration patch');

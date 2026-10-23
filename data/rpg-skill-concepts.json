@@ -3728,12 +3728,12 @@
       "radius": 95,
       "target": "single",
       "effectType": "recipe-76",
-      "description": "100% 직접 피해 · 저주 2중첩, 중첩당 매초 45%·8초 · 독과 구별되는 주술 인장",
+      "description": "100% 직접 피해·저주 2중첩, 중첩당 매초 45%·8초 · 실제 명중 적이 8초간 주는 피해 8% 감소",
       "actions": [
         {
-          "op": "mage-kit",
+          "op": "role-support",
           "kind": "pain-sigil",
-          "profile": "prayer"
+          "kit": "warlock"
         }
       ],
       "fx": {
@@ -3744,14 +3744,15 @@
         "recipe": 76,
         "choreography": [
           {
-            "op": "mage-kit",
+            "op": "role-support",
             "kind": "pain-sigil",
-            "profile": "prayer"
+            "kit": "warlock"
           }
         ],
         "rays": 9,
         "rotation": 112,
-        "shape": "pain-sigil"
+        "shape": "pain-sigil",
+        "support": true
       }
     },
     {
@@ -3776,12 +3777,12 @@
       "radius": 95,
       "target": "single",
       "effectType": "recipe-77",
-      "description": "150% 직접 피해와 저주 1중첩 후 반경 190에 저주 전이 · 보스 단독 전투에서도 사용 가능",
+      "description": "150% 직접 피해·저주 1중첩 후 반경 190 전이 · 저주가 전이된 적은 8초 받는 피해 6% 증가 · 파티 공유 취약",
       "actions": [
         {
-          "op": "mage-kit",
+          "op": "role-support",
           "kind": "curse-transfer",
-          "profile": "prayer"
+          "kit": "warlock"
         }
       ],
       "fx": {
@@ -3792,14 +3793,15 @@
         "recipe": 77,
         "choreography": [
           {
-            "op": "mage-kit",
+            "op": "role-support",
             "kind": "curse-transfer",
-            "profile": "prayer"
+            "kit": "warlock"
           }
         ],
         "rays": 10,
         "rotation": 149,
-        "shape": "curse-transfer"
+        "shape": "curse-transfer",
+        "support": true
       }
     },
     {
@@ -3822,14 +3824,14 @@
       "cooldown": 13.8,
       "range": 460,
       "radius": 95,
-      "target": "area",
+      "target": "single",
       "effectType": "recipe-78",
-      "description": "저주 표적 주변 반경 160의 저주를 소비 · 중첩당 230% · 소비한 총 중첩당 체력 2%, 최대 12% 회복",
+      "description": "표적 주변 반경 160 저주 소비·중첩당 230% · 자신만 총 소비 중첩당 체력 2%, 최대 12% 회복 · 지원 인장은 소비되지 않음",
       "actions": [
         {
-          "op": "mage-kit",
+          "op": "role-support",
           "kind": "curse-harvest",
-          "profile": "prayer"
+          "kit": "warlock"
         }
       ],
       "fx": {
@@ -3840,14 +3842,15 @@
         "recipe": 78,
         "choreography": [
           {
-            "op": "mage-kit",
+            "op": "role-support",
             "kind": "curse-harvest",
-            "profile": "prayer"
+            "kit": "warlock"
           }
         ],
         "rays": 11,
         "rotation": 6,
-        "shape": "curse-harvest"
+        "shape": "curse-harvest",
+        "support": true
       }
     },
     {
@@ -3872,12 +3875,12 @@
       "radius": 95,
       "target": "area",
       "effectType": "recipe-79",
-      "description": "0.65초 후 반경 220에 저주 3중첩 · 1초 후 각 적의 저주를 소비해 중첩당 300% · 사전 저주 없이도 사용 가능",
+      "description": "0.65초 후 반경 220 저주 3중첩·8초 재앙 인장: 적 피해 12% 감소·받는 피해 8% 증가 · 1초 후 저주 소비 폭발·중첩당 300%",
       "actions": [
         {
-          "op": "mage-kit",
+          "op": "role-support",
           "kind": "calamity",
-          "profile": "charge"
+          "kit": "warlock"
         }
       ],
       "fx": {
@@ -3888,14 +3891,15 @@
         "recipe": 79,
         "choreography": [
           {
-            "op": "mage-kit",
+            "op": "role-support",
             "kind": "calamity",
-            "profile": "charge"
+            "kit": "warlock"
           }
         ],
         "rays": 12,
         "rotation": 43,
-        "shape": "calamity"
+        "shape": "calamity",
+        "support": true
       }
     },
     {
@@ -8952,7 +8956,7 @@
       "heroId": 6,
       "cell": 3,
       "slot": 0,
-      "name": "연속 악절",
+      "name": "치유 악절",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -8964,17 +8968,16 @@
       },
       "cost": 5,
       "cooldown": 6,
-      "range": 460,
+      "range": 330,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-180",
-      "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
+      "description": "0.17초 간격 음표 3연주·악절 연계 공격 · 첫 명중 또는 적이 없을 때 가장 체력이 낮은 아군 1명 회복: 공격력 280%, 대상 최대 체력 14% 한도 · 반경 240",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "phrase",
-          "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
-          "target": "single"
+          "op": "role-support",
+          "kind": "mend-phrase",
+          "kit": "minstrel"
         }
       ],
       "fx": {
@@ -8985,15 +8988,15 @@
         "recipe": 180,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "phrase",
-            "description": "동일 대상에게 3회 연주, 타격당 80%. 대상에 악절을 쌓아 4중첩마다 160% 추가 타격",
-            "target": "single"
+            "op": "role-support",
+            "kind": "mend-phrase",
+            "kit": "minstrel"
           }
         ],
         "rays": 9,
         "rotation": 0,
-        "shape": "bard-kit"
+        "shape": "mend-phrase",
+        "support": true
       }
     },
     {
@@ -9002,7 +9005,7 @@
       "heroId": 6,
       "cell": 3,
       "slot": 1,
-      "name": "고조",
+      "name": "수호의 고조",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -9014,17 +9017,16 @@
       },
       "cost": 7,
       "cooldown": 8.3,
-      "range": 460,
+      "range": 240,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-181",
-      "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
+      "description": "따라오는 8초 연주 · 반경 240 아군 피해 10% 감소 · 2초마다 공격력 55% 회복, 틱당 체력 3% 한도",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "crescendo",
-          "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
-          "target": "self"
+          "op": "role-support",
+          "kind": "guard-song",
+          "kit": "minstrel"
         }
       ],
       "fx": {
@@ -9035,15 +9037,15 @@
         "recipe": 181,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "crescendo",
-            "description": "12초 동안 공격 속도 30% 증가. 기본 공격과 악절 타격으로 합주 게이지 축적",
-            "target": "self"
+            "op": "role-support",
+            "kind": "guard-song",
+            "kit": "minstrel"
           }
         ],
         "rays": 10,
         "rotation": 37,
-        "shape": "bard-kit"
+        "shape": "guard-song",
+        "support": true
       }
     },
     {
@@ -9064,17 +9066,16 @@
       },
       "cost": 8,
       "cooldown": 13.8,
-      "range": 460,
+      "range": 240,
       "radius": 140,
       "target": "self",
       "effectType": "recipe-182",
-      "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
+      "description": "최근 8초 유효 치유 악절을 우선해 회복만 50% 위력으로 재연 · 악절이 없으면 고조 한 틱 재연 · 궁극기·마력 지원·재연 복제 불가",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "echo-phrase",
-          "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
-          "target": "self"
+          "op": "role-support",
+          "kind": "healing-echo",
+          "kit": "minstrel"
         }
       ],
       "fx": {
@@ -9085,15 +9086,15 @@
         "recipe": 182,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "echo-phrase",
-            "description": "최근 8초 내 사용한 연속 악절을 0.8초 뒤 55% 위력으로 한 번 재연. 궁극기·재연·소환 복제 불가",
-            "target": "self"
+            "op": "role-support",
+            "kind": "healing-echo",
+            "kit": "minstrel"
           }
         ],
         "rays": 11,
         "rotation": 74,
-        "shape": "bard-kit"
+        "shape": "healing-echo",
+        "support": true
       }
     },
     {
@@ -9102,7 +9103,7 @@
       "heroId": 6,
       "cell": 3,
       "slot": 3,
-      "name": "앙코르",
+      "name": "생명의 협주곡",
       "unlock": 60,
       "mechanicsVersion": 3,
       "resource": {
@@ -9114,17 +9115,16 @@
       },
       "cost": 16,
       "cooldown": 34.8,
-      "range": 460,
+      "range": 330,
       "radius": 140,
-      "target": "single",
+      "target": "self",
       "effectType": "recipe-183",
-      "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
+      "description": "합주 전부 소비 · 4회 이동 연주 공격과 범위 회복 · 총 공격력 600~900% 회복, 합주에 따라 대상 체력 총 18~30% 한도 · 합주 0에도 긴급 사용 가능",
       "actions": [
         {
-          "op": "bard-kit",
-          "kind": "concerto",
-          "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
-          "target": "single"
+          "op": "role-support",
+          "kind": "life-concerto",
+          "kit": "minstrel"
         }
       ],
       "fx": {
@@ -9135,15 +9135,15 @@
         "recipe": 183,
         "choreography": [
           {
-            "op": "bard-kit",
-            "kind": "concerto",
-            "description": "합주 게이지를 전부 소모해 대상에게 8회 집중 협주. 게이지에 따라 타격당 65~165%",
-            "target": "single"
+            "op": "role-support",
+            "kind": "life-concerto",
+            "kit": "minstrel"
           }
         ],
         "rays": 12,
         "rotation": 111,
-        "shape": "bard-kit"
+        "shape": "life-concerto",
+        "support": true
       }
     },
     {
@@ -9654,15 +9654,16 @@
       },
       "cost": 5,
       "cooldown": 5.8,
-      "range": 440,
+      "range": 330,
       "radius": 0,
       "target": "single",
       "effectType": "recipe-192",
-      "description": "실제 음파 3발 · 발당 95% · 명중당 인기 5 획득, 기술당 최대 15",
+      "description": "실제 음파 3발·발당 95% · 같은 적에게 3발 명중 시 6초 받는 피해 4% 증가 · 명중당 인기 5, 기술당 최대 15",
       "actions": [
         {
-          "op": "idol-kit",
-          "kind": "beat-shot"
+          "op": "role-support",
+          "kind": "beat-shot",
+          "kit": "idol"
         }
       ],
       "fx": {
@@ -9673,13 +9674,15 @@
         "recipe": 192,
         "choreography": [
           {
-            "op": "idol-kit",
-            "kind": "beat-shot"
+            "op": "role-support",
+            "kind": "beat-shot",
+            "kit": "idol"
           }
         ],
         "rays": 5,
         "rotation": 84,
-        "shape": "idol-kit"
+        "shape": "beat-shot",
+        "support": true
       }
     },
     {
@@ -9700,15 +9703,16 @@
       },
       "cost": 7,
       "cooldown": 13.8,
-      "range": 280,
+      "range": 180,
       "radius": 100,
       "target": "self",
       "effectType": "recipe-193",
-      "description": "8초간 따라오는 스포트라이트 · 기본공격 피해 20%, 공격 속도 15%, 사거리 30 증가 · 이동 가능",
+      "description": "8초 따라오는 무대 · 반경 180 아군 공격력 10%, 공속 10% 증가 · 자신 포함 · 같은 계열 최댓값만 적용",
       "actions": [
         {
-          "op": "idol-kit",
-          "kind": "center-stage"
+          "op": "role-support",
+          "kind": "center-stage",
+          "kit": "idol"
         }
       ],
       "fx": {
@@ -9719,13 +9723,15 @@
         "recipe": 193,
         "choreography": [
           {
-            "op": "idol-kit",
-            "kind": "center-stage"
+            "op": "role-support",
+            "kind": "center-stage",
+            "kit": "idol"
           }
         ],
         "rays": 6,
         "rotation": 121,
-        "shape": "idol-kit"
+        "shape": "center-stage",
+        "support": true
       }
     },
     {
@@ -9748,13 +9754,14 @@
       "cooldown": 8.6,
       "range": 230,
       "radius": 230,
-      "target": "area",
+      "target": "self",
       "effectType": "recipe-194",
-      "description": "벽을 피하는 측면 스텝 후 전방 80도·거리 230에 280% 음파 타격 · 인기 최대 10 획득 · 자동 사용은 적 210 이내",
+      "description": "안전한 측면 이동 후 전방 280% 음파 · 반경 180 아군 4초 이동속도 15% 증가·공격력 100% 보호막, 대상 체력 5% 한도",
       "actions": [
         {
-          "op": "idol-kit",
-          "kind": "point-step"
+          "op": "role-support",
+          "kind": "point-step",
+          "kit": "idol"
         }
       ],
       "fx": {
@@ -9765,13 +9772,15 @@
         "recipe": 194,
         "choreography": [
           {
-            "op": "idol-kit",
-            "kind": "point-step"
+            "op": "role-support",
+            "kind": "point-step",
+            "kit": "idol"
           }
         ],
         "rays": 7,
         "rotation": 158,
-        "shape": "idol-kit"
+        "shape": "point-step",
+        "support": true
       }
     },
     {
@@ -9794,13 +9803,14 @@
       "cooldown": 34.8,
       "range": 480,
       "radius": 180,
-      "target": "area",
+      "target": "self",
       "effectType": "recipe-195",
-      "description": "인기 전부 소비 · 4회 광역 타격, 회당 150% + 소비 인기당 1% · 반경 180 · 이동·기본공격 가능 · 수동 인기 20, 자동 60 이상 필요",
+      "description": "인기 전부 소비 · 4회 광역 음파와 반경 180 아군 보조 회복 · 총 공격력 240~400%, 인기별 대상 체력 총 8~16% 회복 한도 · 인기 0에도 긴급 사용 가능",
       "actions": [
         {
-          "op": "idol-kit",
-          "kind": "encore"
+          "op": "role-support",
+          "kind": "encore",
+          "kit": "idol"
         }
       ],
       "fx": {
@@ -9811,13 +9821,15 @@
         "recipe": 195,
         "choreography": [
           {
-            "op": "idol-kit",
-            "kind": "encore"
+            "op": "role-support",
+            "kind": "encore",
+            "kit": "idol"
           }
         ],
         "rays": 8,
         "rotation": 15,
-        "shape": "idol-kit"
+        "shape": "encore",
+        "support": true
       }
     },
     {

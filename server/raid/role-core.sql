@@ -1,6 +1,6 @@
 -- Private, deterministic role-rule primitives. No table writes and no public RPC.
 -- Skill adapters will pass server-owned profiles and cast IDs in a later integration.
-create or replace function rpg_raid.role_cap(f text) returns numeric language sql immutable set search_path=pg_catalog as $$select case f when 'attack' then .15 when 'haste' then .20 when 'guard' then .90 when 'weaken' then .15 when 'vulnerable' then .10 when 'slow' then .45 else 0 end$$;
+create or replace function rpg_raid.role_cap(f text) returns numeric language sql immutable set search_path=pg_catalog as $$select case f when 'attack' then .15 when 'haste' then .20 when 'speed' then .20 when 'guard' then .90 when 'weaken' then .15 when 'vulnerable' then .10 when 'slow' then .45 else 0 end$$;
 create or replace function rpg_raid.role_value(u jsonb,f text,t numeric) returns numeric language sql immutable set search_path=pg_catalog as $$select least(rpg_raid.role_cap(f),coalesce(max((b->>'value')::numeric),0)) from jsonb_array_elements(coalesce(u->'buffs','[]')) b where b->>'family'=f and (b->>'until')::numeric>t$$;
 create or replace function rpg_raid.role_credit(u jsonb,k text,n numeric) returns jsonb language sql immutable set search_path=pg_catalog as $$select u||jsonb_build_object('metrics',coalesce(u->'metrics','{}')||jsonb_build_object(k,coalesce((u->'metrics'->>k)::numeric,0)+n))$$;
 create or replace function rpg_raid.role_pool(u jsonb,k text,c text,t numeric,lim numeric,spend numeric) returns jsonb language plpgsql immutable set search_path=pg_catalog as $$
@@ -43,7 +43,7 @@ for i in 0..jsonb_array_length(s->'units')-1 loop
  if (scope='self' and u->>'id'<>p->>'id') or (scope='target' and u->>'id'<>e->>'target') or (scope='lowest' and u->>'id' is distinct from lowest) or scope not in ('self','target','lowest','area') then continue;end if;
  if not beneficial and (not coalesce((e->>'validHit')::boolean,false) or coalesce((u->>'invulnerableUntil')::numeric,0)>t) then continue;end if;
  if op in ('buff','debuff') then
-  if rpg_raid.role_cap(family)=0 or beneficial is distinct from (family in ('attack','haste','guard')) then continue;end if;
+  if rpg_raid.role_cap(family)=0 or beneficial is distinct from (family in ('attack','haste','speed','guard')) then continue;end if;
   select coalesce(jsonb_agg(value order by ordinality),'[]') into arr from jsonb_array_elements(coalesce(u->'buffs','[]')) with ordinality where (value->>'until')::numeric>t and not(value->>'family'=family and value->>'source'=p->>'id' and coalesce(value->'skill','null'::jsonb)=coalesce(e->'skill','null'::jsonb));
   u:=u||jsonb_build_object('buffs',arr||jsonb_build_array(jsonb_build_object('family',family,'value',greatest(0,least(rpg_raid.role_cap(family),coalesce((e->>'value')::numeric,0))),'source',p->'id','skill',e->'skill','until',t+greatest(0,least(30,coalesce((e->>'duration')::numeric,0))))));n:=rpg_raid.role_value(u,family,t);
  elsif op='heal' then

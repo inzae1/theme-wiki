@@ -16,3 +16,10 @@ command=command.replace("'cooldowns',jsonb_build_array(0,0,0,0));s:=", "'cooldow
 base=Path('server/raid/raid.sql').read_text();hurt=base[base.index('create or replace function rpg_raid.hurt('):base.index('create or replace function rpg_raid.advance(')]
 Path('server/raid/balance.sql').write_text('begin;\n'+Path('server/raid/profiles.sql').read_text()+Path('server/raid/abilities.sql').read_text()+hurt+advance+command+'\ncommit;\n')
 print('Generated server raid balance patch')
+
+# Apply explicit role adapters after legacy functions are assembled.
+import subprocess
+subprocess.run(['node','scripts/build-rpg-support-sql.mjs'],check=True)
+patch=Path('server/raid/support-integration.sql').read_text()
+p=Path('server/raid/balance.sql')
+p.write_text(p.read_text()+ '\n'+patch)

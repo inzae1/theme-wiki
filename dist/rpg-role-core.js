@@ -1,7 +1,7 @@
 'use strict';
 (function(root){
 // Shared role rules. Inputs come from authoritative skill adapters, never client-submitted stats.
-const CAPS={attack:.15,haste:.20,guard:.90,weaken:.15,vulnerable:.10,slow:.45};
+const CAPS={attack:.15,haste:.20,speed:.20,guard:.90,weaken:.15,vulnerable:.10,slow:.45};
 const num=v=>Number.isFinite(Number(v))?Number(v):0,clamp=(v,a,b)=>Math.max(a,Math.min(b,num(v))),copy=v=>JSON.parse(JSON.stringify(v));
 function strongest(u,family,t){return(u.buffs||[]).filter(b=>b.family===family&&b.until>t).sort((a,b)=>b.value-a.value||String(a.source).localeCompare(String(b.source)))[0];}
 function value(u,family,t){return Math.min(CAPS[family]||0,strongest(u,family,t)?.value||0);}
@@ -12,7 +12,7 @@ function step(input,event){const s=copy(input),e=event,t=num(s.t);s.t=t;s.units=
 const beneficial=['heal','shield','buff','mana'].includes(e.operation),range=e.range===undefined?Infinity:Math.max(0,num(e.range));let targets=s.units.filter(u=>u.hp>0&&(beneficial?u.team===source.team:u.team!==source.team)&&Math.hypot(num(u.x)-num(source.x),num(u.y)-num(source.y))<=range);
 if(e.scope==='self')targets=targets.filter(u=>u.id===source.id);else if(e.scope==='target')targets=targets.filter(u=>u.id===e.target);else if(e.scope==='lowest')targets=targets.sort((a,b)=>a.hp/a.maxHP-b.hp/b.maxHP||String(a.id).localeCompare(String(b.id))).slice(0,1);else if(e.scope!=='area')targets=[];
 for(const u of targets){let n=0;if(!beneficial&&(e.validHit!==true||u.invulnerableUntil>t))continue;
-if(e.operation==='buff'||e.operation==='debuff'){if(!Object.prototype.hasOwnProperty.call(CAPS,e.family)||beneficial!==['attack','haste','guard'].includes(e.family))continue;u.buffs=(u.buffs||[]).filter(b=>b.until>t&&!(b.family===e.family&&b.source===source.id&&b.skill===e.skill));u.buffs.push({family:e.family,value:clamp(e.value,0,CAPS[e.family]),source:source.id,skill:e.skill??null,until:t+clamp(e.duration,0,30)});n=value(u,e.family,t);}
+if(e.operation==='buff'||e.operation==='debuff'){if(!Object.prototype.hasOwnProperty.call(CAPS,e.family)||beneficial!==['attack','haste','speed','guard'].includes(e.family))continue;u.buffs=(u.buffs||[]).filter(b=>b.until>t&&!(b.family===e.family&&b.source===source.id&&b.skill===e.skill));u.buffs.push({family:e.family,value:clamp(e.value,0,CAPS[e.family]),source:source.id,skill:e.skill??null,until:t+clamp(e.duration,0,30)});n=value(u,e.family,t);}
 else if(e.operation==='heal'){const parts=clamp(e.parts||1,1,16),limit=Math.min(source.attack*Math.max(0,num(e.coefficient)),u.maxHP*clamp(e.hpCap,0,1)),b=pool(u,'heal',e.cast,t,limit),requested=Math.min(limit/parts,Math.max(0,b.limit-b.used));b.used+=requested;n=Math.min(Math.max(0,u.maxHP-u.hp),requested);u.hp+=n;credit(source,'healing',n);if(u.id!==source.id)credit(source,'allyHealing',n);}
 else if(e.operation==='shield'){const amount=Math.min(source.attack*Math.max(0,num(e.coefficient)),u.maxHP*clamp(e.hpCap,0,1)),previous=u.shield?.until>t?u.shield.amount:0,b=pool(u,'shield',e.cast,t,1);if(b.used>0)continue;b.used=1;if(amount>previous){u.shield={amount,until:t+clamp(e.duration,0,30),source:source.id};n=amount;}}
 else if(e.operation==='mana'){if(u.id===source.id||u.resourceKind!=='mana'||num(u.manaSupportUntil)>t)continue;n=Math.min(Math.max(0,num(u.maxMP||100)-num(u.mp)),num(u.maxMP||100)*clamp(e.value,0,.06));u.mp=num(u.mp)+n;u.manaSupportUntil=t+8;}

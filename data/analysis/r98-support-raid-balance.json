@@ -1,0 +1,35 @@
+{
+  "conditions": "90 second stationary single-boss probe, no core exposure, no incoming damage, no crit, constant base attack100 times existing profile multiplier. Excludes ally contribution/healing utility and movement mechanics. Not a clear test.",
+  "rows": [
+    {
+      "hero": 6,
+      "cell": 3,
+      "job": "민스트럴",
+      "dps": 379.0914499999997,
+      "healing": 0,
+      "parent": 324.1952000000005,
+      "starter": 223.1512888888889,
+      "ratio": 1.1693308537572398
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "job": "아이돌",
+      "dps": 413.5405821555556,
+      "healing": 0,
+      "parent": 359.17155555555547,
+      "starter": 223.1512888888889,
+      "ratio": 1.1513734196348144
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "job": "워록",
+      "dps": 407.9994000000001,
+      "healing": 0,
+      "parent": 281.6999111111115,
+      "starter": 245.12888888888895,
+      "ratio": 1.4483476348669206
+    }
+  ]
+}
