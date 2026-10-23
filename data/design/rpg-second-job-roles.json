@@ -1,0 +1,445 @@
+{
+  "status": "proposal",
+  "roles": [
+    "탱커",
+    "힐러",
+    "딜러",
+    "서포터",
+    "브레이커",
+    "제어형"
+  ],
+  "jobs": [
+    {
+      "hero": 0,
+      "cell": 3,
+      "character": "박종찬",
+      "job": "검귀",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "짧은 시간에 단일 연격을 집중하고 마지막 일격으로 무력화"
+    },
+    {
+      "hero": 0,
+      "cell": 4,
+      "character": "박종찬",
+      "job": "수라",
+      "primary": "탱커",
+      "secondary": "브레이커",
+      "identity": "공격을 받아 막은 힘을 반격과 무력화로 전환"
+    },
+    {
+      "hero": 0,
+      "cell": 5,
+      "character": "박종찬",
+      "job": "룬나이트",
+      "primary": "서포터",
+      "secondary": "제어형",
+      "identity": "룬 보호막과 적 진입을 막는 룬 지대"
+    },
+    {
+      "hero": 0,
+      "cell": 6,
+      "character": "박종찬",
+      "job": "소울브링어",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "귀신 부착과 영혼 피해로 적 공격·방어 약화"
+    },
+    {
+      "hero": 1,
+      "cell": 3,
+      "character": "최현석",
+      "job": "블러드로드",
+      "primary": "딜러",
+      "secondary": "탱커",
+      "identity": "흡혈로 전선을 버티며 다수의 적을 지속 타격"
+    },
+    {
+      "hero": 1,
+      "cell": 4,
+      "character": "최현석",
+      "job": "슬레이어",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "약점 공격과 처형으로 단일 보스 압박"
+    },
+    {
+      "hero": 1,
+      "cell": 5,
+      "character": "최현석",
+      "job": "타이탄",
+      "primary": "브레이커",
+      "secondary": "딜러",
+      "identity": "지면 강타와 균열로 대형 무력화"
+    },
+    {
+      "hero": 1,
+      "cell": 6,
+      "character": "최현석",
+      "job": "저거너트",
+      "primary": "탱커",
+      "secondary": "제어형",
+      "identity": "전방에서 적을 밀어내고 아군 진형 보호"
+    },
+    {
+      "hero": 2,
+      "cell": 3,
+      "character": "이근호",
+      "job": "아크메이지",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "삼원소 폭발을 약점 노출 구간에 집중"
+    },
+    {
+      "hero": 2,
+      "cell": 4,
+      "character": "이근호",
+      "job": "빙결술사",
+      "primary": "제어형",
+      "secondary": "딜러",
+      "identity": "냉기 지대와 동결로 적을 묶고 파쇄"
+    },
+    {
+      "hero": 2,
+      "cell": 5,
+      "character": "이근호",
+      "job": "워록",
+      "primary": "서포터",
+      "secondary": "딜러",
+      "identity": "저주로 보스 취약을 쌓고 수확으로 마무리"
+    },
+    {
+      "hero": 2,
+      "cell": 6,
+      "character": "이근호",
+      "job": "혈마법사",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "혈석을 모아 관통·집중 폭발로 무력화"
+    },
+    {
+      "hero": 3,
+      "cell": 3,
+      "character": "양영준",
+      "job": "크루세이더",
+      "primary": "브레이커",
+      "secondary": "서포터",
+      "identity": "성전 돌격으로 무력화하고 깃발로 파티 강화"
+    },
+    {
+      "hero": 3,
+      "cell": 4,
+      "character": "양영준",
+      "job": "템플러",
+      "primary": "탱커",
+      "secondary": "서포터",
+      "identity": "보스 공격을 받아내고 파티 방벽 제공"
+    },
+    {
+      "hero": 3,
+      "cell": 5,
+      "character": "양영준",
+      "job": "드래곤랜서",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "도약·낙하 창격으로 단일 약점 관통"
+    },
+    {
+      "hero": 3,
+      "cell": 6,
+      "character": "양영준",
+      "job": "용혈기사",
+      "primary": "탱커",
+      "secondary": "딜러",
+      "identity": "용린으로 버티며 변신 중 근접 전선 유지"
+    },
+    {
+      "hero": 4,
+      "cell": 3,
+      "character": "윤인재",
+      "job": "섀도우댄서",
+      "primary": "딜러",
+      "secondary": "제어형",
+      "identity": "그림자 연격과 추격으로 위험한 적 제압"
+    },
+    {
+      "hero": 4,
+      "cell": 4,
+      "character": "윤인재",
+      "job": "독살자",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "맹독을 쌓고 적 회복·방어를 약화"
+    },
+    {
+      "hero": 4,
+      "cell": 5,
+      "character": "윤인재",
+      "job": "팬텀",
+      "primary": "제어형",
+      "secondary": "딜러",
+      "identity": "인형으로 적의 시선을 돌리고 환영으로 협공"
+    },
+    {
+      "hero": 4,
+      "cell": 6,
+      "character": "윤인재",
+      "job": "사보추어",
+      "primary": "브레이커",
+      "secondary": "제어형",
+      "identity": "폭탄으로 패턴을 끊고 적 진입 경로 봉쇄"
+    },
+    {
+      "hero": 5,
+      "cell": 3,
+      "character": "임창기",
+      "job": "마이스터",
+      "primary": "브레이커",
+      "secondary": "딜러",
+      "identity": "기관 망치와 증기 폭발로 장갑 파괴"
+    },
+    {
+      "hero": 5,
+      "cell": 4,
+      "character": "임창기",
+      "job": "메카닉",
+      "primary": "서포터",
+      "secondary": "탱커",
+      "identity": "포탑·보호 코어로 아군 진지 구축"
+    },
+    {
+      "hero": 5,
+      "cell": 5,
+      "character": "임창기",
+      "job": "독 연금술사",
+      "primary": "제어형",
+      "secondary": "딜러",
+      "identity": "독성 늪으로 적 이동을 제한하고 지속 피해"
+    },
+    {
+      "hero": 5,
+      "cell": 6,
+      "character": "임창기",
+      "job": "호문쿨루스 마스터",
+      "primary": "딜러",
+      "secondary": "탱커",
+      "identity": "완전체와 협공하고 생체 소환수가 전선 보조"
+    },
+    {
+      "hero": 6,
+      "cell": 3,
+      "character": "남지훈",
+      "job": "민스트럴",
+      "primary": "서포터",
+      "secondary": "힐러",
+      "identity": "지속 선율로 공격·자원 순환과 꾸준한 회복 지원"
+    },
+    {
+      "hero": 6,
+      "cell": 4,
+      "character": "남지훈",
+      "job": "진혼악사",
+      "primary": "딜러",
+      "secondary": "제어형",
+      "identity": "망자 군단을 지휘해 적을 둘러싸고 압박"
+    },
+    {
+      "hero": 6,
+      "cell": 5,
+      "character": "남지훈",
+      "job": "메탈리스트",
+      "primary": "브레이커",
+      "secondary": "서포터",
+      "identity": "강한 리프로 무력화하고 전투 템포 강화"
+    },
+    {
+      "hero": 6,
+      "cell": 6,
+      "character": "남지훈",
+      "job": "아이돌",
+      "primary": "서포터",
+      "secondary": "힐러",
+      "identity": "무대 버프로 폭딜을 지원하고 앙코르로 위기 회복"
+    },
+    {
+      "hero": 7,
+      "cell": 3,
+      "character": "박천빈",
+      "job": "기공장",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "축적한 기공포로 보스 약점 관통"
+    },
+    {
+      "hero": 7,
+      "cell": 4,
+      "character": "박천빈",
+      "job": "해병",
+      "primary": "탱커",
+      "secondary": "브레이커",
+      "identity": "돌격과 받아치기로 전선을 유지하며 강공 저지"
+    },
+    {
+      "hero": 7,
+      "cell": 5,
+      "character": "박천빈",
+      "job": "야성 드루이드",
+      "primary": "딜러",
+      "secondary": "탱커",
+      "identity": "늑대는 공격·곰은 방어를 맡는 변신 전투"
+    },
+    {
+      "hero": 7,
+      "cell": 6,
+      "character": "박천빈",
+      "job": "자연 드루이드",
+      "primary": "힐러",
+      "secondary": "제어형",
+      "identity": "재생 지대와 수림으로 회복하며 덩굴로 적 제어"
+    },
+    {
+      "hero": 8,
+      "cell": 3,
+      "character": "최승영",
+      "job": "신궁",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "정밀 관통으로 장갑과 보스 약점 공략"
+    },
+    {
+      "hero": 8,
+      "cell": 4,
+      "character": "최승영",
+      "job": "마탄사수",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "룬 표식으로 대상 취약을 공유하고 마탄 집중"
+    },
+    {
+      "hero": 8,
+      "cell": 5,
+      "character": "최승영",
+      "job": "윈드러너",
+      "primary": "딜러",
+      "secondary": "제어형",
+      "identity": "기동 사격과 돌풍으로 적 추격 차단"
+    },
+    {
+      "hero": 8,
+      "cell": 6,
+      "character": "최승영",
+      "job": "비스트마스터",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "야수 협공과 사냥 표식으로 파티 집중 공격 지원"
+    },
+    {
+      "hero": 9,
+      "cell": 3,
+      "character": "김규태",
+      "job": "데스페라도",
+      "primary": "딜러",
+      "secondary": "제어형",
+      "identity": "근거리 연사와 제압 사격으로 잡몹 행동 제한"
+    },
+    {
+      "hero": 9,
+      "cell": 4,
+      "character": "김규태",
+      "job": "마탄총사",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "각인·원소 탄환으로 적 속성 취약 지원"
+    },
+    {
+      "hero": 9,
+      "cell": 5,
+      "character": "김규태",
+      "job": "포병장",
+      "primary": "브레이커",
+      "secondary": "딜러",
+      "identity": "집속·곡사 포격으로 대형 보스 무력화"
+    },
+    {
+      "hero": 9,
+      "cell": 6,
+      "character": "김규태",
+      "job": "중장포병",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "공성 주포로 강력한 지속 관통과 장갑 파괴"
+    },
+    {
+      "hero": 10,
+      "cell": 3,
+      "character": "유상민",
+      "job": "챔피언",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "연환권으로 무력화를 축적하고 필살권으로 마무리"
+    },
+    {
+      "hero": 10,
+      "cell": 4,
+      "character": "유상민",
+      "job": "인퀴지터",
+      "primary": "브레이커",
+      "secondary": "딜러",
+      "identity": "심판 낙인으로 약점을 만들고 판결 폭발"
+    },
+    {
+      "hero": 10,
+      "cell": 5,
+      "character": "유상민",
+      "job": "하이프리스트",
+      "primary": "힐러",
+      "secondary": "서포터",
+      "identity": "파티 회복·보호막·성소를 맡는 회복 중심"
+    },
+    {
+      "hero": 10,
+      "cell": 6,
+      "character": "유상민",
+      "job": "엑소시스트",
+      "primary": "제어형",
+      "secondary": "서포터",
+      "identity": "결계·부적·주문 차단으로 패턴 대응 지원"
+    },
+    {
+      "hero": 11,
+      "cell": 3,
+      "character": "정승욱",
+      "job": "엘리멘탈로드",
+      "primary": "서포터",
+      "secondary": "딜러",
+      "identity": "정령왕 속성을 바꿔 파티 보호·속성 공격 지원"
+    },
+    {
+      "hero": 11,
+      "cell": 4,
+      "character": "정승욱",
+      "job": "하모니스트",
+      "primary": "딜러",
+      "secondary": "서포터",
+      "identity": "사원소 협공과 융합 폭발에 원소 공명 보조"
+    },
+    {
+      "hero": 11,
+      "cell": 5,
+      "character": "정승욱",
+      "job": "리치",
+      "primary": "제어형",
+      "secondary": "딜러",
+      "identity": "성물함과 영혼 표식으로 적을 묶고 사멸 의식"
+    },
+    {
+      "hero": 11,
+      "cell": 6,
+      "character": "정승욱",
+      "job": "데스마스터",
+      "primary": "딜러",
+      "secondary": "브레이커",
+      "identity": "사신의 죽음 표식과 영혼 소비로 보스 마무리"
+    }
+  ]
+}
