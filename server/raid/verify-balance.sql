@@ -11,7 +11,7 @@ assert (result->'players'->0->'cooldowns'->>slot)::numeric=(rec.info->'kit'->slo
 assert (result->'players'->0->>'damage')::numeric>0,'attack contribution missing';
 if (rec.info->'kit'->slot->>'heal')::numeric>0 then assert (result->'players'->0->>'healing')::numeric>0,'healing missing';end if;
 if (rec.info->'kit'->slot->>'shield')::numeric>0 then assert (result->'players'->0->>'shield')::numeric>0,'shield missing';end if;
-if (rec.info->'kit'->slot->>'guard')::numeric>0 then assert (result->'players'->0->>'guardUntil')::numeric>0,'guard missing';end if;
+if (rec.info->'kit'->slot->>'guard')::numeric>0 then assert greatest(coalesce((result->'players'->0->>'guardUntil')::numeric,0),coalesce((result->'players'->0->>'spinGuardUntil')::numeric,0))>0,'guard missing';end if;
 if (rec.info->'kit'->slot->>'tickPower')::numeric>0 then s:=jsonb_set(result,'{t}','2');s:=rpg_raid.abilities_tick(s,.25);assert (s->'boss'->>'hp')::numeric<(result->'boss'->>'hp')::numeric,'summon/dot tick missing';end if;
 n:=n+1;
 end loop;end loop;assert n=336,'336 skills required';

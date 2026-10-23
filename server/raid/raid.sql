@@ -23,8 +23,8 @@ create or replace function rpg_raid.hurt(s jsonb,idx integer,amount numeric) ret
 declare p jsonb;other jsonb;prevented numeric;absorb numeric;actual numeric;owner text;j integer;
 begin
 p:=s->'players'->idx;if (p->>'hp')::numeric<=0 then return s;end if;
-prevented:=case when (p->>'guardUntil')::numeric>(s->>'t')::numeric then amount*.4 else 0 end;
-owner:=p->>'guardOwner';
+prevented:=amount*greatest(case when (p->>'guardUntil')::numeric>(s->>'t')::numeric then .4 else 0 end,case when coalesce((p->>'spinGuardUntil')::numeric,0)>(s->>'t')::numeric then .3 else 0 end);
+owner:=case when (p->>'guardUntil')::numeric>(s->>'t')::numeric then p->>'guardOwner' else p->>'id' end;
 if prevented>0 then for j in 0..jsonb_array_length(s->'players')-1 loop other:=s->'players'->j;if other->>'id'=owner then other:=jsonb_set(other,'{defense}',to_jsonb((other->>'defense')::numeric+prevented));if j<>idx then other:=jsonb_set(other,'{allyDefense}',to_jsonb((other->>'allyDefense')::numeric+prevented));end if;s:=jsonb_set(s,array['players',j::text],other);end if;end loop;p:=s->'players'->idx;end if;
 absorb:=least((p->>'shield')::numeric,greatest(0,amount-prevented));owner:=p->>'shieldOwner';
 if absorb>0 then for j in 0..jsonb_array_length(s->'players')-1 loop other:=s->'players'->j;if other->>'id'=owner then other:=jsonb_set(other,'{defense}',to_jsonb((other->>'defense')::numeric+absorb));if j<>idx then other:=jsonb_set(other,'{allyDefense}',to_jsonb((other->>'allyDefense')::numeric+absorb));end if;s:=jsonb_set(s,array['players',j::text],other);end if;end loop;p:=s->'players'->idx;end if;

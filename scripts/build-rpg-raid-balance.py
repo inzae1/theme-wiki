@@ -13,5 +13,6 @@ a=command.index(find);end=command.index(';',a)+1
 command=command[:end]+"\np:=p||jsonb_build_object('attack',(p->>'attack')::numeric*coalesce((job->>'attackMultiplier')::numeric,1),'kit',job->'kit','crit',coalesce((job->>'crit')::numeric,.1),'abilities','[]'::jsonb,'powerUntil',0,'powerBonus',0);"+command[end:]
 # Refresh identity/kit for old lobby members at start/retry, but never retroactively multiply their attack.
 command=command.replace("'cooldowns',jsonb_build_array(0,0,0,0));s:=", "'cooldowns',jsonb_build_array(0,0,0,0),'abilities','[]'::jsonb,'powerUntil',0,'powerBonus',0);s:=")
-Path('server/raid/balance.sql').write_text('begin;\n'+Path('server/raid/profiles.sql').read_text()+Path('server/raid/abilities.sql').read_text()+advance+command+'\ncommit;\n')
+base=Path('server/raid/raid.sql').read_text();hurt=base[base.index('create or replace function rpg_raid.hurt('):base.index('create or replace function rpg_raid.advance(')]
+Path('server/raid/balance.sql').write_text('begin;\n'+Path('server/raid/profiles.sql').read_text()+Path('server/raid/abilities.sql').read_text()+hurt+advance+command+'\ncommit;\n')
 print('Generated server raid balance patch')

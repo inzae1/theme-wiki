@@ -17,10 +17,10 @@ for j in 0..jsonb_array_length(s->'players')-1 loop
  q:=s->'players'->j;if (q->>'hp')::numeric<=0 then continue;end if;
  if (spec->>'heal')::numeric>0 then actual:=least((q->>'maxHP')::numeric-(q->>'hp')::numeric,(q->>'maxHP')::numeric*(spec->>'heal')::numeric);q:=jsonb_set(q,'{hp}',to_jsonb((q->>'hp')::numeric+actual));p:=jsonb_set(p,'{healing}',to_jsonb((p->>'healing')::numeric+actual));if j<>idx then p:=jsonb_set(p,'{allyHealing}',to_jsonb((p->>'allyHealing')::numeric+actual));end if;end if;
  if (spec->>'shield')::numeric>0 then n:=(q->>'maxHP')::numeric*(spec->>'shield')::numeric;if n>=(q->>'shield')::numeric then q:=q||jsonb_build_object('shield',n,'shieldUntil',t+7,'shieldOwner',p->>'id');end if;end if;
- if (spec->>'guard')::numeric>0 then q:=q||jsonb_build_object('guardUntil',t+5,'guardOwner',p->>'id');end if;
+ if (spec->>'guard')::numeric>0 then if coalesce((spec->>'guardSelf')::boolean,false) then if j=idx then q:=q||jsonb_build_object('spinGuardUntil',t+2);end if;else q:=q||jsonb_build_object('guardUntil',t+5,'guardOwner',p->>'id');end if;end if;
  s:=jsonb_set(s,array['players',j::text],q);
 end loop;
-q:=s->'players'->idx;p:=p||jsonb_build_object('hp',q->'hp','shield',q->'shield','shieldUntil',q->'shieldUntil','shieldOwner',q->'shieldOwner','guardUntil',q->'guardUntil','guardOwner',q->'guardOwner');
+q:=s->'players'->idx;p:=p||jsonb_build_object('hp',q->'hp','shield',q->'shield','shieldUntil',q->'shieldUntil','shieldOwner',q->'shieldOwner','guardUntil',q->'guardUntil','guardOwner',q->'guardOwner','spinGuardUntil',coalesce(q->'spinGuardUntil','0'::jsonb));
 if (spec->>'buff')::numeric>0 then p:=p||jsonb_build_object('powerUntil',t+(spec->>'duration')::numeric,'powerBonus',(spec->>'buff')::numeric);end if;
 if (spec->>'tickPower')::numeric>0 then
  select coalesce(jsonb_agg(value),'[]') into effects from jsonb_array_elements(coalesce(p->'abilities','[]')) where (value->>'slot')::integer<>slot and (value->>'until')::numeric>t;

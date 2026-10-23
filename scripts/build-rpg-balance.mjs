@@ -3,4 +3,4 @@ const table={};for(const kind of ['boss','pack']){const values={};for(let h=0;h<
 // Lich gets a functional area/rotation repair before the remaining calibration.
 table['11:5'].boss/=1.25;table['11:5'].pack/=1.6;
 if(fs.existsSync('data/balance/r93-greatsword.json'))Object.assign(table,JSON.parse(fs.readFileSync('data/balance/r93-greatsword.json')).factors);
-fs.writeFileSync('dist/rpg-balance-data.js',`'use strict';\n(function(r){const d=${JSON.stringify({version:'r93',classes:table})};if(typeof module!=='undefined')module.exports=d;r.RPG_BALANCE_DATA=d;})(typeof window!=='undefined'?window:globalThis);\n`);console.log('Wrote 84 class progression profiles');
+fs.writeFileSync('dist/rpg-balance-data.js',`'use strict';\n(function(r){const d=${JSON.stringify({version:'r94',classes:table})};if(typeof module!=='undefined')module.exports=d;r.RPG_BALANCE_DATA=d;})(typeof window!=='undefined'?window:globalThis);\n`);console.log('Wrote 84 class progression profiles');
