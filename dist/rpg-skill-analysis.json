@@ -7271,8 +7271,8 @@
       "parent": "injae-2",
       "style": "phantom",
       "resource": "기력",
-      "review": "유령 카드 — 관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가 / 대역 인형 — 10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편 / 환영 교대 — 활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25% / 유령극 — 대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
-      "intendedIdentity": "연막 후 급습·잠행 약점 암살·카드와 미끼·본체 명중에 호응하는 잔영·명중 중독과 회수·대역 교대·설치 후 순차 기폭 계열 · 최종 특화 · 실제 실행되는 기술 구성",
+      "review": "망령 카드 → 거울 회랑 → 환영 감옥 → 백귀야행",
+      "intendedIdentity": "원거리 환영 제어 · 거울 광역 공격 · 속박과 망령 표식 마무리",
       "skills": [
         {
           "id": "injae-5-skill-0",
@@ -7280,7 +7280,7 @@
           "heroId": 4,
           "cell": 5,
           "slot": 0,
-          "name": "유령 카드",
+          "name": "망령 카드",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7293,10 +7293,10 @@
           "cost": 12,
           "cooldown": 6,
           "range": 440,
-          "radius": 0,
-          "target": "single",
+          "radius": 90,
+          "target": "area",
           "effectType": "recipe-132",
-          "description": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
+          "description": "관통 환영 카드 3장, 각 125% · 적중 대상에게 망령 표식 6초",
           "actions": [
             {
               "op": "rogue-kit",
@@ -7321,8 +7321,8 @@
             "rotation": 24,
             "shape": "phantom-card"
           },
-          "actualText": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
-          "visual": "전용 연출 injae-5:0 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "관통 환영 카드 3장, 각 125% · 적중 대상에게 망령 표식 6초",
+          "visual": "청록 거울 회랑·망령 카드·환영 속박·백귀야행 전용 연출"
         },
         {
           "id": "injae-5-skill-1",
@@ -7330,7 +7330,7 @@
           "heroId": 4,
           "cell": 5,
           "slot": 1,
-          "name": "대역 인형",
+          "name": "거울 회랑",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7342,11 +7342,11 @@
           },
           "cost": 17,
           "cooldown": 8.3,
-          "range": 0,
-          "radius": 0,
-          "target": "self",
+          "range": 460,
+          "radius": 130,
+          "target": "area",
           "effectType": "recipe-133",
-          "description": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
+          "description": "적 주변 거울 3개 · 6초간 1.5초마다 각 45% 광역 공격과 냉기 둔화 · 위치 교대 없음",
           "actions": [
             {
               "op": "rogue-kit",
@@ -7371,8 +7371,8 @@
             "rotation": 61,
             "shape": "double"
           },
-          "actualText": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
-          "visual": "전용 연출 injae-5:1 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "적 주변 거울 3개 · 6초간 1.5초마다 각 45% 광역 공격과 냉기 둔화 · 위치 교대 없음",
+          "visual": "청록 거울 회랑·망령 카드·환영 속박·백귀야행 전용 연출"
         },
         {
           "id": "injae-5-skill-2",
@@ -7380,7 +7380,7 @@
           "heroId": 4,
           "cell": 5,
           "slot": 2,
-          "name": "환영 교대",
+          "name": "환영 감옥",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7392,11 +7392,11 @@
           },
           "cost": 19,
           "cooldown": 13.8,
-          "range": 0,
-          "radius": 0,
-          "target": "self",
+          "range": 460,
+          "radius": 135,
+          "target": "area",
           "effectType": "recipe-134",
-          "description": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
+          "description": "반경 135에 260% · 일반 적 1.8초 속박, 보스 0.35초 · 망령 표식 6초 · 본체 0.5초 무적",
           "actions": [
             {
               "op": "rogue-kit",
@@ -7421,8 +7421,8 @@
             "rotation": 98,
             "shape": "exchange"
           },
-          "actualText": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
-          "visual": "전용 연출 injae-5:2 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "반경 135에 260% · 일반 적 1.8초 속박, 보스 0.35초 · 망령 표식 6초 · 본체 0.5초 무적",
+          "visual": "청록 거울 회랑·망령 카드·환영 속박·백귀야행 전용 연출"
         },
         {
           "id": "injae-5-skill-3",
@@ -7430,7 +7430,7 @@
           "heroId": 4,
           "cell": 5,
           "slot": 3,
-          "name": "유령극",
+          "name": "백귀야행",
           "unlock": 60,
           "mechanicsVersion": 3,
           "resource": {
@@ -7442,11 +7442,11 @@
           },
           "cost": 38,
           "cooldown": 34.8,
-          "range": 360,
-          "radius": 0,
-          "target": "single",
+          "range": 460,
+          "radius": 165,
+          "target": "area",
           "effectType": "recipe-135",
-          "description": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
+          "description": "선택 위치 반경 165에 망령 5파, 각 160% · 마지막 320%, 표식 대상 마무리 25% 증가 · 이동 없이 시전",
           "actions": [
             {
               "op": "rogue-kit",
@@ -7471,8 +7471,8 @@
             "rotation": 135,
             "shape": "phantom-finale"
           },
-          "actualText": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
-          "visual": "전용 연출 injae-5:3 · rogue-kit · 실제 판정의 순서·투사체·설치물에 맞춘 구성"
+          "actualText": "선택 위치 반경 165에 망령 5파, 각 160% · 마지막 320%, 표식 대상 마무리 25% 증가 · 이동 없이 시전",
+          "visual": "청록 거울 회랑·망령 카드·환영 속박·백귀야행 전용 연출"
         }
       ]
     },
