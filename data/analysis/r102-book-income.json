@@ -1,0 +1,125 @@
+{
+  "conditions": "Lv30 first advancement, stage19, basic gear +5, automatic combat/potions, no XP, no floor, 1200 simulation seconds = 10 real minutes at2x. Drops retained; auto-equip disabled.",
+  "rows": [
+    {
+      "hero": 0,
+      "seed": 1729,
+      "gold": 8525,
+      "kills": 1705,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 0,
+      "seed": 8731,
+      "gold": 8575,
+      "kills": 1715,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 0,
+      "seed": 31415,
+      "gold": 8675,
+      "kills": 1735,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 2,
+      "seed": 1729,
+      "gold": 9905,
+      "kills": 1981,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 2,
+      "seed": 8731,
+      "gold": 9760,
+      "kills": 1952,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 2,
+      "seed": 31415,
+      "gold": 9765,
+      "kills": 1953,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 4,
+      "seed": 1729,
+      "gold": 8275,
+      "kills": 1655,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 4,
+      "seed": 8731,
+      "gold": 8325,
+      "kills": 1665,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 4,
+      "seed": 31415,
+      "gold": 8330,
+      "kills": 1666,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 10,
+      "seed": 1729,
+      "gold": 6890,
+      "kills": 1378,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 10,
+      "seed": 8731,
+      "gold": 6840,
+      "kills": 1368,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 10,
+      "seed": 31415,
+      "gold": 6895,
+      "kills": 1379,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 11,
+      "seed": 1729,
+      "gold": 13320,
+      "kills": 2220,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 11,
+      "seed": 8731,
+      "gold": 13320,
+      "kills": 2220,
+      "deaths": 0,
+      "stage": 19
+    },
+    {
+      "hero": 11,
+      "seed": 31415,
+      "gold": 13320,
+      "kills": 2220,
+      "deaths": 0,
+      "stage": 19
+    }
+  ]
+}

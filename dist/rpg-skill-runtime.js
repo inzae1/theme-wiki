@@ -129,6 +129,7 @@ if(typeof module!=='undefined')require('./rpg-mage-runtime.js')(E);else root.RPG
 if(typeof module!=='undefined')require('./rpg-greatsword-runtime.js')(E);else root.RPG_GREATSWORD_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-support-runtime.js')(E);else root.RPG_SUPPORT_RUNTIME?.install(E);
 if(typeof module!=='undefined')require('./rpg-balance-runtime.js')(E);else root.RPG_BALANCE_RUNTIME?.install(E);
+if(typeof module!=='undefined')require('./rpg-books-runtime.js')(E);else root.RPG_BOOKS_RUNTIME?.install(E);
 }
 if(typeof module!=='undefined')module.exports=install;root.RPG_SKILL_RUNTIME={install};if(root.RPG_ENGINE)install(root.RPG_ENGINE);
 })(typeof window!=='undefined'?window:globalThis);
