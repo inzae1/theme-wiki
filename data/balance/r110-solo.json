@@ -1,0 +1,22 @@
+{
+  "version": "r110-solo-refinement",
+  "reason": "Boss-only correction for four high-stage fragile jobs. Ordinary damage unchanged.",
+  "factors": {
+    "1:5": {
+      "boss": 1.2,
+      "pack": 0.9338
+    },
+    "5:3": {
+      "boss": 1.517107,
+      "pack": 1
+    },
+    "5:5": {
+      "boss": 1.2,
+      "pack": 0.5931
+    },
+    "10:6": {
+      "boss": 1.57728,
+      "pack": 1.4031
+    }
+  }
+}

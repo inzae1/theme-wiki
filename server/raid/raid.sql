@@ -120,7 +120,7 @@ if r.status<>'lobby' then return jsonb_build_object('error','이미 시작한 �
 end if;
 s:=r.state;n:=jsonb_array_length(s->'players');if n>=4 then return jsonb_build_object('error','최대 4명까지 참가할 수 있어요.');end if;
 -- Server-owned raid balance uses saved level, advancement and slot upgrades. Client damage/stats are never accepted.
-val:=least(99,greatest(1,(h->>'level')::integer));
+val:=least(200,greatest(1,(h->>'level')::integer));
 p:=jsonb_build_object('id',uid,'name',nm,'hero',hero,'cell',(h->>'cell')::integer,'level',val,'job',job->>'name','role',job->>'role','skills',job->'skills','ready',false,'seen',now_s,'x',250+n*100,'y',360,'tx',250+n*100,'ty',360,'hp',800+val*22,'maxHP',800+val*22,'attack',35+val*2.5+least(50,greatest(0,coalesce((h->'slotUpgrades'->>'weapon')::integer,0)))*5,'damage',0,'defense',0,'allyDefense',0,'healing',0,'allyHealing',0,'rescues',0,'mechanics',0,'active',0,'shield',0,'shieldUntil',0,'guardUntil',0,'guardOwner',uid,'shieldOwner',uid,'prison',0,'prisonUntil',0,'attackAt',0,'manualAt',-99,'lastAttack',-99,'lastCast',-99,'cooldowns',jsonb_build_array(0,0,0,0));
 s:=jsonb_set(s,'{players}',(s->'players')||jsonb_build_array(p));update rpg_raid.rooms set state=s where id=r.id;
 insert into rpg_raid.members(user_id,room_id) values(uid,r.id);cur:=r.id;room:=cur;cmd:='poll';end if;end if;

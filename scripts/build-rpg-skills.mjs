@@ -43,6 +43,10 @@ const customReload=p.id===9&&['cylinder-reload','speed-loader','combat-loader'].
 skills.push({id:job.id+'-skill-'+slot,classId:job.id,heroId:p.id,cell:job.cell,slot,name,unlock:E.skillUnlocks[tier][slot],mechanicsVersion:3,resource,cost:customReload?4:resource.kind==='rage'?(slot===3?100:0):(resource.kind==='mana'?[5,7,8,16][slot]:[12,17,19,38][slot]),cooldown:k.actions[0].cooldown|| (customReload?1:resource.kind==='rage'&&slot===3?0:Number(([5.2,7.5,13,34][slot]+tier*.4).toFixed(1))),range,radius:Math.max(140,...k.actions.map(a=>a.radius||0)),target,effectType:'recipe-'+uid,description:k.actions.map(text).join(' / ').replace(/(\d+(?:\.\d+)?)%/g,(_,n)=>Math.ceil(Number(n))+'%'),actions:k.actions,fx});
 }}}
 if(skills.length!==336||used.size!==336)throw Error('Incomplete skills');
+for(const d of skills){if(d.heroId===3&&[5,6].includes(d.cell))d.description=kits[d.heroId][d.cell][d.slot].actions[0].description;if(['1:3','2:6'].includes(d.heroId+':'+d.cell))d.description+=' · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)';if(d.heroId===10&&d.cell===5)d.description+=' · 자가 기술 회복은 최대 체력 초당 3.5%, 최대 35%까지 회복 여력 저장 (포션·자연회복 제외)';if(d.heroId===4&&d.cell===3&&d.slot!==2)d.description+=' · 보스 대상 직접 기술·잔영 협공 피해 25% 증가';}
+
+// Keep the curated balance descriptions consistent with the live mechanics.
+if(fs.existsSync('data/balance/r108-skill-text.json')){const texts=JSON.parse(fs.readFileSync('data/balance/r108-skill-text.json'));for(const d of skills)if(texts[d.id])d.description=texts[d.id];}
 const concept={count:336,design:'84 authored four-skill kits; mechanicsVersion 3, operation-driven effect choreography.',skills};
 fs.writeFileSync(new URL('../data/rpg-skill-concepts.json',import.meta.url),JSON.stringify(concept,null,2));
 D.skills=skills;fs.writeFileSync(new URL('../dist/rpg-data.js',import.meta.url),"'use strict';\nconst RPG_DATA="+JSON.stringify(D)+";\nif(typeof module!==\"undefined\")module.exports=RPG_DATA;\n");

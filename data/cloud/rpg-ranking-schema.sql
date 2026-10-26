@@ -25,7 +25,7 @@ create table public.rpg_ranking_entries (
  user_id uuid not null references public.rpg_expeditions(user_id) on delete cascade,
  hero_id integer not null check(hero_id between 0 and 11),
  cell integer not null check(cell between 0 and 6),
- level integer not null check(level between 1 and 99),
+ level integer not null check(level between 1 and 200),
  progress integer not null check(progress between 0 and 160000),
  power bigint not null check(power between 0 and 1000000000000),
  revision bigint not null check(revision>0),

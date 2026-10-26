@@ -1968,7 +1968,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-40",
-      "description": "체력 6% 지불 후 주변 반경 110을 4회 베어 타격당 70%·출혈 1중첩 · 자동 연계는 회전 종료를 기다림",
+      "description": "체력 6% 지불 후 주변 반경 110을 4회 베어 타격당 70%·출혈 1중첩 · 자동 연계는 회전 종료를 기다림 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "warrior-kit",
@@ -2018,7 +2018,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-41",
-      "description": "출혈을 소모해 180%+중첩당 90% 피해·중첩당 체력 1% 회복 · 자동 사용은 3중첩 이상, 만료 직전 또는 체력이 낮을 때 · 궁극기 준비 시 출혈 보존",
+      "description": "출혈을 소모해 180%+중첩당 90% 피해·중첩당 체력 1% 회복 · 자동 사용은 3중첩 이상, 만료 직전 또는 체력이 낮을 때 · 궁극기 준비 시 출혈 보존 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "warrior-kit",
@@ -2068,7 +2068,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-42",
-      "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복",
+      "description": "체력 8% 지불. 10초 동안 출혈 대상에게 피해 30% 증가·가한 직접 피해의 15% 회복 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "warrior-kit",
@@ -2118,7 +2118,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-43",
-      "description": "반경 240의 출혈을 소모해 중첩당 150% 피해·피 회수 · 0.65초 뒤 반경 210에 450% 파동 · 소모 중첩당 체력 1% 회복, 최대 20%",
+      "description": "반경 240의 출혈을 소모해 중첩당 150% 피해·피 회수 · 0.65초 뒤 반경 210에 450% 파동 · 소모 중첩당 체력 1% 회복, 최대 20% · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "warrior-kit",
@@ -3584,7 +3584,7 @@
       "radius": 220,
       "target": "area",
       "effectType": "recipe-73",
-      "description": "반경 160에 9초 냉기 지대 · 0.8초마다 40% 피해와 냉기 1중첩 · 자동 시전은 지대 종료 후 갱신",
+      "description": "반경 175에 9초 냉기 지대 · 0.8초마다 40% 피해와 냉기 1중첩 · 자동 시전은 지대 종료 후 갱신",
       "actions": [
         {
           "op": "mage-kit",
@@ -3632,7 +3632,7 @@
       "radius": 220,
       "target": "area",
       "effectType": "recipe-74",
-      "description": "냉기 표적 주변 반경 130의 냉기를 소비 · 중첩당 250% · 냉기가 없으면 자원 소모 없음",
+      "description": "냉기 표적 주변 반경 155의 냉기를 소비 · 중첩당 250%, 속박·동결 중인 적에는 15% 추가 · 자동 사용은 냉기 3중첩, 만료 직전 또는 체력 20% 미만",
       "actions": [
         {
           "op": "mage-kit",
@@ -3924,7 +3924,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-80",
-      "description": "최대 체력 6% 소비 · 혈탄 220% 실제 명중 시 혈석 2개 생성, 최대 8개 · 기본공격 3회 적중마다 혈석 1개 추가",
+      "description": "최대 체력 6% 소비 · 혈탄 220% 실제 명중 시 혈석 2개 생성, 최대 8개 · 기본공격 3회 적중마다 혈석 1개 추가 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "mage-kit",
@@ -3972,7 +3972,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-81",
-      "description": "0.3초 후 길이 460·폭 60에 기본 350% + 혈석당 100% 관통 · 실제 명중하면 혈석 전부 소비 · 빗나가면 혈석 유지",
+      "description": "0.3초 후 길이 460·폭 60에 기본 350% + 혈석당 100% 관통 · 실제 명중하면 혈석 전부 소비 · 빗나가면 혈석 유지 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "mage-kit",
@@ -4020,7 +4020,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-82",
-      "description": "혈석 전부 소비 · 혈석당 최대 체력 4% 회복 · 혈석이 2개 미만이거나 체력이 가득 차면 자원 소모 없음",
+      "description": "혈석 전부 소비 · 혈석당 최대 체력 4% 회복 · 혈석이 2개 미만이거나 체력이 가득 차면 자원 소모 없음 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "mage-kit",
@@ -4068,7 +4068,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-83",
-      "description": "최대 체력 10% 소비 후 0.4초부터 0.22초 간격으로 4회 · 각 150% + 혈석 비례 피해, 4회 합계 혈석당 350% · 첫 적중 시 혈석 소비",
+      "description": "최대 체력 10% 소비 후 0.4초부터 0.22초 간격으로 4회 · 각 150% + 혈석 비례 피해, 4회 합계 혈석당 350% · 첫 적중 시 혈석 소비 · 자가 회복은 최대 체력 초당 8%, 최대 16%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "mage-kit",
@@ -5156,14 +5156,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-104",
-      "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식",
+      "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 100에 280% · 12초 약점 표식",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "lancer-ascent",
           "target": "area",
           "range": 340,
-          "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 75에 280% · 12초 약점 표식"
+          "description": "0.5초 도약 · 최대 270 이동, 실제 착지 반경 100에 280% · 12초 약점 표식"
         }
       ],
       "fx": {
@@ -5208,14 +5208,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-105",
-      "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가",
+      "description": "0.3초 준비 · 길이 420, 폭 52에 460% 관통 · 표식 대상 피해 35% 증가",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "weakpoint-lance",
           "target": "area",
           "range": 420,
-          "description": "0.3초 준비 · 길이 420, 폭 36에 460% 관통 · 표식 대상 피해 35% 증가"
+          "description": "0.3초 준비 · 길이 420, 폭 52에 460% 관통 · 표식 대상 피해 35% 증가"
         }
       ],
       "fx": {
@@ -5312,14 +5312,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-107",
-      "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가",
+      "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 110 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "heaven-fall",
           "target": "area",
           "range": 420,
-          "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 85 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가"
+          "description": "0.8초 실제 도약, 최대 340 이동 · 착지 반경 110 · 주대상 900%, 주변 350% · 표식 소비 시 35% 증가"
         }
       ],
       "fx": {
@@ -5416,14 +5416,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-109",
-      "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소",
+      "description": "용린 최대 6 소모 · 체력 6% + 중첩당 1.5% 보호막 · 보호막 상한 25% · 4초 피해 40% 감소",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "scale-ward",
           "target": "self",
           "range": 125,
-          "description": "용린 최대 6 소모 · 체력 8% + 중첩당 3% 보호막 · 4초 피해 40% 감소"
+          "description": "용린 최대 6 소모 · 체력 6% + 중첩당 1.5% 보호막 · 보호막 상한 25% · 4초 피해 40% 감소"
         }
       ],
       "fx": {
@@ -5468,14 +5468,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-110",
-      "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복",
+      "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.8% 회복",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "blood-awakening",
           "target": "self",
           "range": 125,
-          "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 1% 회복"
+          "description": "10초 기본공격마다 분노 6 추가 획득 및 체력 0.8% 회복"
         }
       ],
       "fx": {
@@ -5520,14 +5520,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-111",
-      "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복",
+      "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 최대 체력 0.6% 자가 회복",
       "actions": [
         {
           "op": "knight-kit",
           "kind": "half-dragon",
           "target": "area",
           "range": 180,
-          "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 자가 회복"
+          "description": "12초 반룡화 · 공격력 50%, 방어력 40%, 공격속도 25% 증가 · 용린 소모로 공격력 추가 증가 · 기본공격 주변 피해와 최대 체력 0.6% 자가 회복"
         }
       ],
       "fx": {
@@ -6148,7 +6148,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-124",
-      "description": "최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응",
+      "description": "최대 220 접근 후 3회, 각 85% · 활성 잔영이 적중 대상에 호응 · 보스 대상 직접 기술·잔영 협공 피해 25% 증가",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6196,7 +6196,7 @@
       "radius": 0,
       "target": "self",
       "effectType": "recipe-125",
-      "description": "8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초",
+      "description": "8초 잔영 2개 · 본체의 기본공격·직접 기술 명중 시 각 35% 협공, 잔영별 간격 0.4초 · 보스 대상 직접 기술·잔영 협공 피해 25% 증가",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6292,7 +6292,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-127",
-      "description": "10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능",
+      "description": "10초 잔영 3개 전개 후 최대 180 접근 · 0.13초 간격 6회, 각 95% · 잔영 협공 가능 · 보스 대상 직접 기술·잔영 협공 피해 25% 증가",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6340,7 +6340,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-128",
-      "description": "실제 비수 명중 시 160%와 독 2중첩 · 독은 10초·중첩당 매초 40%, 최대 5",
+      "description": "실제 비수 명중 시 160%와 독 3중첩 · 독은 10초·중첩당 매초 40%, 최대 5",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6388,7 +6388,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-129",
-      "description": "중독 대상의 독을 반경 175에 전염 · 독이 없는 적에게는 사용하지 않음",
+      "description": "중독 대상의 독을 반경 175에 전염 · 자동 사용은 독 중첩과 전염 가능한 적 수를 우선 고려",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6436,7 +6436,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-130",
-      "description": "독을 전부 소모해 중첩당 200% · 주변 100에 소모 피해의 35%",
+      "description": "현재 독 중첩당 200%, 보스에는 10% 추가 · 주변 135에 중첩당 85%, 보스가 중심이면 70% · 생존한 주대상은 기존 남은 지속시간의 독 1중첩 유지 · 자동 사용은 3중첩 이상에서 높은 중첩 우선",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6484,7 +6484,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-131",
-      "description": "0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가",
+      "description": "0.45초 후 맹독침 명중 시 독 3중첩 추가 후 전부 폭발 · 중첩당 280%, 체력 30% 이하에는 30% 추가 · 보스 대상 폭발 10% 추가",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6532,7 +6532,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-132",
-      "description": "관통 카드 260% · 대상 대역 표식 6초 · 표식 대상에게 유령극 마지막 타격 20% 증가",
+      "description": "관통 환영 카드 3장, 각 125% · 적중 대상에게 망령 표식 6초",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6580,7 +6580,7 @@
       "radius": 0,
       "target": "self",
       "effectType": "recipe-133",
-      "description": "10초·10회 미끼 · 본체가 대역과 교대하면 대역 주변 110에 220% 파편",
+      "description": "적 주변 거울 3개 · 6초간 1.5초마다 각 45% 광역 공격과 냉기 둔화 · 위치 교대 없음",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6628,7 +6628,7 @@
       "radius": 0,
       "target": "self",
       "effectType": "recipe-134",
-      "description": "활성 대역과 안전한 위치 교환 · 0.8초 무적·5초 치명타 확률 +25%",
+      "description": "반경 135에 260% · 일반 적 1.8초 속박, 보스 0.35초 · 망령 표식 6초 · 본체 0.5초 무적",
       "actions": [
         {
           "op": "rogue-kit",
@@ -6676,7 +6676,7 @@
       "radius": 0,
       "target": "single",
       "effectType": "recipe-135",
-      "description": "대상을 향한 전용 대역 생성·교대 후 6회, 각 110% · 마지막 카드 찌르기 220% · 기존 미끼 없이 사용 가능",
+      "description": "선택 위치 반경 165에 망령 5파, 각 160% · 마지막 320%, 표식 대상 마무리 25% 증가 · 이동 없이 시전",
       "actions": [
         {
           "op": "rogue-kit",
@@ -10894,14 +10894,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-216",
-      "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능",
+      "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능 · 늑대 사거리 52 및 공격력 10% 추가",
       "actions": [
         {
           "op": "cheonbin-kit",
           "kind": "wolf-form",
           "target": "single",
           "range": 240,
-          "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능"
+          "description": "대상에게 접근해 8초 늑대 변신 · 변신 중 기본공격만 가능 · 늑대 사거리 52 및 공격력 10% 추가"
         }
       ],
       "fx": {
@@ -13486,14 +13486,14 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-268",
-      "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음",
+      "description": "실제 명중 시 240%, 보스에는 270% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음",
       "actions": [
         {
           "op": "gunner-kit",
           "kind": "inscribed-round",
           "target": "single",
           "range": 460,
-          "description": "실제 명중 시 240% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음"
+          "description": "실제 명중 시 240%, 보스에는 270% 및 룬 표식 1중첩 · 표식 자체 지속 피해 없음"
         }
       ],
       "fx": {
@@ -13590,14 +13590,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-270",
-      "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비",
+      "description": "적중 반경 100에 240% + 표식 중첩당 80%, 보스에는 중첩당 100% · 표식 소비",
       "actions": [
         {
           "op": "gunner-kit",
           "kind": "rune-resonance",
           "target": "area",
           "range": 460,
-          "description": "적중 반경 100에 240% + 표식 중첩당 80% · 표식 소비"
+          "description": "적중 반경 100에 240% + 표식 중첩당 80%, 보스에는 중첩당 100% · 표식 소비"
         }
       ],
       "fx": {
@@ -13902,14 +13902,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-276",
-      "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제",
+      "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 기본 포탄은 일반 적 첫 충돌 주변 55에 40% 파편 피해 · 이동 입력 시 해제",
       "actions": [
         {
           "op": "gunner-kit",
           "kind": "deploy-cannon",
           "target": "self",
           "range": 125,
-          "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 이동 입력 시 해제"
+          "description": "14초 실제 공성포 전개 · 이동 불가, 공격력 35% 증가 · 기본 포탄은 일반 적 첫 충돌 주변 55에 40% 파편 피해 · 이동 입력 시 해제"
         }
       ],
       "fx": {
@@ -13954,14 +13954,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-277",
-      "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가",
+      "description": "공성 상태 필요 · 0.4초 준비 후 폭 52의 실제 관통 포탄 580% · 열기 24 증가",
       "actions": [
         {
           "op": "gunner-kit",
           "kind": "piercing-cannon",
           "target": "area",
           "range": 560,
-          "description": "공성 상태 필요 · 0.55초 준비 후 실제 관통 포탄 580% · 열기 28 증가"
+          "description": "공성 상태 필요 · 0.4초 준비 후 폭 52의 실제 관통 포탄 580% · 열기 24 증가"
         }
       ],
       "fx": {
@@ -14058,14 +14058,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-279",
-      "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단",
+      "description": "공성 상태에서 0.9초 충전 후 폭 80의 실제 관통 포탄 1200% · 열기 45 증가 · 열기 100에 3초 사격 중단",
       "actions": [
         {
           "op": "gunner-kit",
           "kind": "superheavy-shot",
           "target": "area",
           "range": 650,
-          "description": "공성 상태에서 1.2초 충전 후 실제 관통 포탄 1200% · 열기 50 증가 · 열기 100에 3초 사격 중단"
+          "description": "공성 상태에서 0.9초 충전 후 폭 80의 실제 관통 포탄 1200% · 열기 45 증가 · 열기 100에 3초 사격 중단"
         }
       ],
       "fx": {
@@ -14996,14 +14996,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-297",
-      "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화",
+      "description": "반경 125에 240% · 낙인이 있으면 낙인 1중첩 추가 후 6초간 매초 55% 성화",
       "actions": [
         {
           "op": "priest-kit",
           "kind": "holy-ignition",
           "target": "area",
           "range": 440,
-          "description": "반경 125에 240% · 낙인이 있으면 6초간 매초 55% 성화"
+          "description": "반경 125에 240% · 낙인이 있으면 낙인 1중첩 추가 후 6초간 매초 55% 성화"
         }
       ],
       "fx": {
@@ -15048,14 +15048,14 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-298",
-      "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발",
+      "description": "10초 낙인 대상 처치 시 주변 175에 낙인 1과 120% 신성 폭발",
       "actions": [
         {
           "op": "priest-kit",
           "kind": "verdict-propagation",
           "target": "self",
           "range": 125,
-          "description": "10초 낙인 대상 처치 시 주변 150에 낙인 1과 120% 신성 폭발"
+          "description": "10초 낙인 대상 처치 시 주변 175에 낙인 1과 120% 신성 폭발"
         }
       ],
       "fx": {
@@ -15152,7 +15152,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-300",
-      "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사",
+      "description": "최대 체력 24% 회복 · 초과 치유를 은총으로 축적, 최대 6 · 은총 1 이상이면 적에게 200% 성광 발사 · 자가 기술 회복은 최대 체력 초당 3.5%, 최대 35%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "priest-kit",
@@ -15204,7 +15204,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-301",
-      "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가",
+      "description": "9초 최대 체력 23% 보호막 · 은총 1 소비 시 7% 추가 · 누적 불가 · 자가 기술 회복은 최대 체력 초당 3.5%, 최대 35%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "priest-kit",
@@ -15256,7 +15256,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-302",
-      "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95%",
+      "description": "추종 반경 180 성소 · 8초 · 매초 50% 피해·최대 체력 1% 회복 · 은총 1 소비 시 그 회차 피해 95% · 자가 기술 회복은 최대 체력 초당 3.5%, 최대 35%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "priest-kit",
@@ -15310,7 +15310,7 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-303",
-      "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복",
+      "description": "은총 전부 소비 · 0.65초 후 반경 190에 550% + 은총당 65%, 자신 최대 체력 32% 회복 · 자가 기술 회복은 최대 체력 초당 3.5%, 최대 35%까지 회복 여력 저장 (포션·자연회복 제외)",
       "actions": [
         {
           "op": "priest-kit",
@@ -15414,14 +15414,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-305",
-      "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1",
+      "description": "적 위치 반경 170에 부적 4장 설치 · 7초 · 매초 30% 피해와 봉인 1",
       "actions": [
         {
           "op": "priest-kit",
           "kind": "fourfold-barrier",
           "target": "area",
           "range": 460,
-          "description": "적 위치 반경 145에 부적 4장 설치 · 7초 · 1.2초마다 30% 피해와 봉인 1"
+          "description": "적 위치 반경 170에 부적 4장 설치 · 7초 · 매초 30% 피해와 봉인 1"
         }
       ],
       "fx": {
@@ -15518,14 +15518,14 @@
       "radius": 140,
       "target": "area",
       "effectType": "recipe-307",
-      "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
+      "description": "0.75초 결계 완성 후 반경 210에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단",
       "actions": [
         {
           "op": "priest-kit",
           "kind": "exorcist-rite",
           "target": "area",
           "range": 480,
-          "description": "0.75초 결계 완성 후 반경 190에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단"
+          "description": "0.75초 결계 완성 후 반경 210에 500% + 기존 봉인당 120% · 봉인 소비·제한된 차단"
         }
       ],
       "fx": {
@@ -15768,7 +15768,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-312",
-      "description": "정령 2마리 실제 소환 · 15초 · 공격력 65%",
+      "description": "정령 2마리 실제 소환 · 15초 · 공격력 65% · 반복 소환 시 같은 종류는 최초 소환 수의 2배까지 유지, 정령왕·사신은 1회 소환 수만 유지",
       "actions": [
         {
           "op": "pet",
@@ -15820,7 +15820,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-313",
-      "description": "소환체 표적 통일·즉시 협공",
+      "description": "소환체 표적 통일·즉시 협공 · 보스 대상 명령의 즉시 협공 피해 80% 적용",
       "actions": [
         {
           "op": "command",
@@ -15922,7 +15922,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-315",
-      "description": "정령왕 1마리 실제 소환 · 16초 · 공격력 140%",
+      "description": "정령왕 1마리 실제 소환 · 16초 · 공격력 140% · 반복 소환 시 같은 종류는 최초 소환 수의 2배까지 유지, 정령왕·사신은 1회 소환 수만 유지",
       "actions": [
         {
           "op": "pet",
@@ -15976,7 +15976,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-316",
-      "description": "해골 병사 2마리 실제 소환 · 18초 · 공격력 35% / 해골 궁수 2마리 실제 소환 · 18초 · 공격력 45%",
+      "description": "해골 병사 2마리 실제 소환 · 18초 · 공격력 35% / 해골 궁수 2마리 실제 소환 · 18초 · 공격력 45% · 반복 소환 시 같은 종류는 최초 소환 수의 2배까지 유지, 정령왕·사신은 1회 소환 수만 유지",
       "actions": [
         {
           "op": "pet",
@@ -16042,7 +16042,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-317",
-      "description": "좀비 2마리 실제 소환 · 20초 · 공격력 70%",
+      "description": "좀비 2마리 실제 소환 · 20초 · 공격력 70% · 반복 소환 시 같은 종류는 최초 소환 수의 2배까지 유지, 정령왕·사신은 1회 소환 수만 유지",
       "actions": [
         {
           "op": "pet",
@@ -16142,7 +16142,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-319",
-      "description": "사신 1마리 실제 소환 · 15초 · 공격력 120%",
+      "description": "사신 1마리 실제 소환 · 15초 · 공격력 120% · 반복 소환 시 같은 종류는 최초 소환 수의 2배까지 유지, 정령왕·사신은 1회 소환 수만 유지",
       "actions": [
         {
           "op": "pet",
@@ -16194,7 +16194,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-320",
-      "description": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체",
+      "description": "정령왕 1마리 실제 소환 · 22초 · 공격력 180% · 동일 소환체 교체 · 더 강한 궁극기 소환체가 3초 이상 남으면 교체하지 않고 자원 보존",
       "actions": [
         {
           "op": "pet",
@@ -16358,13 +16358,13 @@
       "radius": 190,
       "target": "area",
       "effectType": "recipe-323",
-      "description": "정령왕 1마리 실제 소환 · 24초 · 공격력 280% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
+      "description": "정령왕 1마리 실제 소환 · 24초 · 공격력 240% · 동일 소환체 교체 / 0.8초 뒤 반경 190에 600% 착탄 피해",
       "actions": [
         {
           "op": "pet",
           "appearance": "king",
           "count": 1,
-          "power": 2.8,
+          "power": 2.4,
           "duration": 24,
           "large": true,
           "exclusive": true
@@ -16472,7 +16472,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-325",
-      "description": "네 정령이 각자 고유 속성으로 140% 위력 협공 · 융합 중에는 사원소 연속 공격",
+      "description": "4초 원소 지대 · 불+바람: 초당 100% 피해와 몰이 / 물+대지: 초당 80% 피해·둔화·받는 스킬 피해 8% 증가 · 번갈아 발동, 융합 중 두 조합 동시 발동",
       "actions": [
         {
           "op": "fusion-kit",
@@ -16794,7 +16794,7 @@
       "radius": 140,
       "target": "self",
       "effectType": "recipe-332",
-      "description": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체",
+      "description": "사신 1마리 실제 소환 · 22초 · 공격력 170% · 동일 소환체 교체 · 더 강한 궁극기 소환체가 3초 이상 남으면 교체하지 않고 자원 보존 · 사신 기본공격은 주변 반경 65에 35% 추가 피해",
       "actions": [
         {
           "op": "pet",
@@ -16966,7 +16966,7 @@
       "radius": 140,
       "target": "single",
       "effectType": "recipe-335",
-      "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체",
+      "description": "soul를 전부 소비해 단일 피해 / 체력 40% 미만 추가 피해 · 보스 즉사 없음 / 사신 1마리 실제 소환 · 20초 · 공격력 250% · 동일 소환체 교체 · 사신 기본공격은 주변 반경 65에 35% 추가 피해",
       "actions": [
         {
           "op": "spend",

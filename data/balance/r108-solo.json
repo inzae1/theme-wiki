@@ -1,0 +1,14 @@
+{
+  "version": "r108-solo-followup",
+  "reason": "Meister solo-boss correction and Elemental Lord boss normalization after preserving stronger ultimate summons. Pack and raid-server scaling unchanged.",
+  "factors": {
+    "5:3": {
+      "boss": 1.264256,
+      "pack": 1
+    },
+    "11:3": {
+      "boss": 1.459237,
+      "pack": 1.7512
+    }
+  }
+}

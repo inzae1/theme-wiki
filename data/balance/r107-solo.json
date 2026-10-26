@@ -1,0 +1,30 @@
+{
+  "version": "r107-solo-first-pass",
+  "reason": "Same-investment natural-combat audit: boss-only 10% reduction for selected high-output kits. Absolute factors preserve previously curated scales; pack is unchanged.",
+  "factors": {
+    "5:6": {
+      "boss": 0.9,
+      "pack": 0.423
+    },
+    "6:4": {
+      "boss": 0.40725,
+      "pack": 0.5184
+    },
+    "11:1": {
+      "boss": 0.9,
+      "pack": 1
+    },
+    "11:3": {
+      "boss": 1.71675,
+      "pack": 1.7512
+    },
+    "11:4": {
+      "boss": 1.09773,
+      "pack": 0.4545
+    },
+    "11:5": {
+      "boss": 2.07252,
+      "pack": 1.6883124999999999
+    }
+  }
+}
