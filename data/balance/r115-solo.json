@@ -1,0 +1,10 @@
+{
+  "version": "r115-low-tier-followup",
+  "reason": "Magic gunner boss-only followup after energy cost repair. All ordinary damage and other class profiles preserved.",
+  "factors": {
+    "9:4": {
+      "boss": 1.34662,
+      "pack": 1.3015
+    }
+  }
+}

@@ -47,6 +47,7 @@ for(const d of skills){if(d.heroId===3&&[5,6].includes(d.cell))d.description=kit
 
 // Keep the curated balance descriptions consistent with the live mechanics.
 if(fs.existsSync('data/balance/r108-skill-text.json')){const texts=JSON.parse(fs.readFileSync('data/balance/r108-skill-text.json'));for(const d of skills)if(texts[d.id])d.description=texts[d.id];}
+if(fs.existsSync('data/balance/r115-skill-updates.json')){const updates=JSON.parse(fs.readFileSync('data/balance/r115-skill-updates.json'));for(const d of skills)if(updates[d.id])Object.assign(d,updates[d.id]);}
 const concept={count:336,design:'84 authored four-skill kits; mechanicsVersion 3, operation-driven effect choreography.',skills};
 fs.writeFileSync(new URL('../data/rpg-skill-concepts.json',import.meta.url),JSON.stringify(concept,null,2));
 D.skills=skills;fs.writeFileSync(new URL('../dist/rpg-data.js',import.meta.url),"'use strict';\nconst RPG_DATA="+JSON.stringify(D)+";\nif(typeof module!==\"undefined\")module.exports=RPG_DATA;\n");

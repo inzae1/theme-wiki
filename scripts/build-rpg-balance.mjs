@@ -6,4 +6,5 @@ if(fs.existsSync('data/balance/r93-greatsword.json'))Object.assign(table,JSON.pa
 let version='r94';if(fs.existsSync('data/balance/r107-solo.json')){const curated=JSON.parse(fs.readFileSync('data/balance/r107-solo.json'));Object.assign(table,curated.factors);version=curated.version;}
 if(fs.existsSync('data/balance/r108-solo.json')){const curated=JSON.parse(fs.readFileSync('data/balance/r108-solo.json'));Object.assign(table,curated.factors);version=curated.version;}
 if(fs.existsSync('data/balance/r110-solo.json')){const curated=JSON.parse(fs.readFileSync('data/balance/r110-solo.json'));Object.assign(table,curated.factors);version=curated.version;}
+if(fs.existsSync('data/balance/r115-solo.json')){const curated=JSON.parse(fs.readFileSync('data/balance/r115-solo.json'));Object.assign(table,curated.factors);version=curated.version;}
 fs.writeFileSync('dist/rpg-balance-data.js',`'use strict';\n(function(r){const d=${JSON.stringify({version,classes:table})};if(typeof module!=='undefined')module.exports=d;r.RPG_BALANCE_DATA=d;})(typeof window!=='undefined'?window:globalThis);\n`);console.log('Wrote 84 class progression profiles');

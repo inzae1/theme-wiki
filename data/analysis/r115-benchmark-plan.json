@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-26",
+  "build": "r115 low-tier followup; same combat conditions, no floors",
+  "limit": 240,
+  "bands": [
+    {
+      "level": 20,
+      "tier": 0,
+      "hunt": 9,
+      "boss": 10
+    },
+    {
+      "level": 30,
+      "tier": 1,
+      "hunt": 29,
+      "boss": 30
+    },
+    {
+      "level": 45,
+      "tier": 1,
+      "hunt": 39,
+      "boss": 40
+    },
+    {
+      "level": 60,
+      "tier": 2,
+      "hunt": 59,
+      "boss": 60,
+      "parents": true
+    },
+    {
+      "level": 75,
+      "tier": 2,
+      "hunt": 79,
+      "boss": 80
+    },
+    {
+      "level": 90,
+      "tier": 2,
+      "hunt": 99,
+      "boss": 100,
+      "parents": true
+    }
+  ],
+  "conditions": "Cycle 0, real stage terrain/monsters/spawn cadence/boss warnings/navigation. Natural HP and damage, no HP floor. Identical gear quality (normal, no affix), branch-correct four equipment slots, upgrades 0/5/5/10/15/20 at the six levels. Same inherited skill ranks in all four slots:1/2/5/8/10/10 at levels20/30/45/60/75/90; these are reachable on the starting class before promotion and retained by the real game. This is equal skill investment, not recomputed from the newly advanced skill unlock, all auto skills, rare HP/MP potions. No books, XP or drops. Three fixed RNG seeds; RNG consumption diverges by kit. Full heal and resource at entry. First class and previous tiers also tested at Lv60/90 for promotion checks.",
+  "selection": "Pilot sampled six characters at two candidate stages per level. Chosen bands start with mostly successful early runs and retain pressure at later bands; they are diagnostic checkpoints, not a proven player progression curve. Failed natural runs remain failures, never converted into estimated clear times. Initial late checkpoints (75/89-90 and90/119-120) were too punishing for base gear and archived as challenge stages. Final75/79-80 and90/99-100 were piloted on all48 second advancements:48/48 and47/48 single-seed boss clears, then rechecked across3seeds.",
+  "timing": "1x simulation seconds. At 2x display nominal seconds halve. Natural hunt =108 enemies in batches up to15 every8sec; boss stage=24 adds then boss. Record total stage time, boss-only TTK from appearance, engaged and empty seconds separately.",
+  "survival": "All48 second advancements: Lv90 stage120 boss model, HP \u00d720 and attack \u00d71.5, no adds, no health or mana potions, 180sec ceiling, actual terrain and combat. No HP floor. This is a controlled pressure diagnostic, not a natural boss-clear test or proof of immortality. Actual HP gain/loss and shield consumption recorded; summon occupancy does not prove pet tanking damage.",
+  "survivalStage": 120
+}
