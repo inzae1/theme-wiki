@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const D=RPG_DATA,E=RPG_ENGINE,$=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),fmt=n=>Math.floor(n).toLocaleString('ko-KR'),KEY='tw-idle-rpg-v1',PREF='tw-idle-rpg-options-v1';
-let accessBlocked=false;document.addEventListener('rpg:session-state',e=>{accessBlocked=!!e.detail.blocked;});
+let accessBlocked=false;document.addEventListener('rpg:session-state',e=>{const changed=accessBlocked!==!!e.detail.blocked;accessBlocked=!!e.detail.blocked;if(accessBlocked){$('#save-status').textContent='접속 확인 필요 · 진행 중지';if(changed)toast('접속 확인이 필요해요. 계정 관리에서 이어 할 수 있어요.');}});
 let stored=null,recovery='',prefs={speed:1,autoSkill:true};try{const raw=localStorage.getItem(KEY);if(raw){try{stored=E.validate(JSON.parse(raw),D);}catch(e){recovery='이전 저장을 읽지 못해 복구용 사본을 보관했어요.';localStorage.setItem(KEY+'-recovery',raw);}}const p=JSON.parse(localStorage.getItem(PREF)||'{}');prefs.speed=p.speed===2?2:1;prefs.autoSkill=p.autoSkill!==false;}catch(e){recovery='브라우저 저장소를 사용할 수 없어요. 설정에서 저장 파일을 내려받아 주세요.';}
 const game=new E.Game(D,stored);game.autoSkill=prefs.autoSkill;let accountOpen=false;let paused=false,loading=false,last=performance.now(),hudElapsed=0,saveElapsed=0,hiddenAt=0,toastUntil=0,modalKind='',fx=[],speechUntil=0,lastSpeech=-20,portraitKey='',logKey='',headerKey='',lastAttack=0;
 const imageCache=new Map(),spriteCache=new Map(),spritePending=new Map(),assetErrors=new Set();
