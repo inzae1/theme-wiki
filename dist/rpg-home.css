@@ -1,0 +1,51 @@
+/* Starlight Expedition · lobby, sign in and loading */
+:root{--camp-gold:#f2d58c;--camp-ink:#131b22;--camp-border:#d9b87355;--camp-muted:#b8c2c1}
+#title-screen{overflow:auto;align-items:safe center;min-height:0;background:linear-gradient(180deg,#11192885,#121c2a25 37%,#10131dec 78%,#0e141f),url('rpg-pixels-v2/dungeons/meadow.png') center 38%/cover}
+#title-screen::before{backdrop-filter:none;background:radial-gradient(ellipse at 50% 30%,#eac57230,transparent 55%);pointer-events:none}
+#title-screen .title-center{width:min(100%,500px);padding:calc(22px + env(safe-area-inset-top)) 22px calc(52px + env(safe-area-inset-bottom));box-sizing:border-box}
+#title-screen .title-emblem{display:grid;place-items:center;position:static;transform:none;width:56px;height:56px;margin:0 auto 14px;border:1px solid var(--camp-border);border-radius:17px;color:#ffe0a1;background:#151c2bdc;font-size:30px;box-shadow:0 0 38px #ffdd7a33,inset 0 0 13px #ffdf8c24}
+#title-screen .title-kicker{color:#ffe2a4;letter-spacing:.23em;font-size:10px}
+#title-screen .game-logo{margin:7px 0 0;font-size:clamp(44px,12vw,86px);line-height:1.04;color:#fff5d8;text-shadow:0 2px #593e31,0 5px #171424,0 9px 25px #000d}
+#title-screen .game-logo em{color:#f2d58c}
+#title-screen .title-subtitle{font-size:10px;letter-spacing:.24em;color:#e6d4b4;margin:14px auto 20px}
+#title-screen .title-continue{width:min(100%,310px);min-height:54px;margin:16px auto 0;padding:12px;border:1px solid #ffe6a8;background:linear-gradient(180deg,#ffe3a0,#cb993e);color:#251b14;box-shadow:0 4px #79552a,0 10px 26px #0007;border-radius:13px;font-size:16px;font-weight:900;letter-spacing:.02em;animation:none}
+#title-screen .title-continue span{margin-left:10px;font-size:20px}
+#title-screen .start-choices{width:100%;margin:20px auto 0;padding:18px;gap:10px;box-sizing:border-box;border:1px solid var(--camp-border);border-radius:20px;background:linear-gradient(145deg,#252e40f7,#131c2bf7);box-shadow:0 20px 50px #090b1480}
+#title-screen.title-screen[hidden],#game-loading[hidden]{display:none}
+body.title-awaiting #title-screen .start-choices{display:none}
+.sign-in-heading{align-self:stretch;text-align:left;display:grid;gap:5px;margin-bottom:5px}.sign-in-heading b{font-size:17px;color:#fff2d6}.sign-in-heading span{font-size:12px;color:#c9d0da;line-height:1.45}
+button.google-login,#title-screen .start-google{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#1f1f1f;border:1px solid #747775;border-radius:12px;min-height:50px;padding:0 14px;font:600 14px/20px system-ui,sans-serif;box-shadow:none}
+.google-mark{width:18px;height:18px;flex:0 0 18px;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23EA4335' d='M24 9.5c3.54 0 6.71 1.22 9.2 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z'/%3E%3Cpath fill='%234285F4' d='M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6C44.4 38.04 46.98 31.87 46.98 24.55z'/%3E%3Cpath fill='%23FBBC05' d='M10.54 28.59a14.5 14.5 0 0 1 0-9.18l-7.98-6.19a24 24 0 0 0 0 21.56z'/%3E%3Cpath fill='%2334A853' d='M24 48c6.48 0 11.93-2.13 15.89-5.8l-7.73-6a14.4 14.4 0 0 1-8.16 2.3c-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z'/%3E%3C/svg%3E")}
+#title-screen .start-guest{background:#242e40;border:1px solid #77869a;color:#f2f5f9;margin:0}#title-screen .start-guest span{margin-left:7px}
+#title-screen .start-choices p{margin:1px 0 0;color:#c0cbda;font-size:11px}#title-screen .start-choices a{color:#e2d2a7;font-size:11px;padding:9px;min-height:32px;display:grid;place-items:center}
+#title-screen .title-bottom{pointer-events:none;font-size:9px}
+#roster.roster{max-width:900px;padding:calc(16px + env(safe-area-inset-top)) clamp(14px,4vw,30px) calc(100px + env(safe-area-inset-bottom));margin:auto}
+body.lobby:not(.title-active){background:radial-gradient(ellipse at top,#25354a,#101823 66%)}
+body.lobby:not(.playing)>.hub-entry{display:none}
+#roster .lobby-top{margin-bottom:13px}#roster .iconbtn{min-width:44px;min-height:44px}
+#roster .roster-intro{margin:12px 0 14px;text-align:left}#roster .roster-intro h1{margin:3px 0 2px;font-size:clamp(24px,5vw,36px);overflow-wrap:anywhere}#roster-count{margin:0;color:#b6c7cb;font-size:12px}
+.camp-feature{--camp-map:url('rpg-pixels-v2/dungeons/meadow.png');position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;min-height:230px;border:1px solid var(--camp-border);border-radius:20px;overflow:hidden;background:linear-gradient(90deg,#151b2aeb,#151b2a46 68%),linear-gradient(0deg,#121923c9,transparent 75%),var(--camp-map) center/cover;box-shadow:0 11px 25px #0004;padding:18px;box-sizing:border-box}
+.camp-location{position:absolute;left:18px;top:17px;display:grid;gap:5px;color:#f6dfaa}.camp-location span,.camp-summary small{font-size:11px;font-weight:800;letter-spacing:.03em}.camp-location b{font-size:13px}
+.camp-feature canvas,.camp-new-star{position:absolute;z-index:-1;right:3%;bottom:10px;width:46%;max-width:225px;height:auto;image-rendering:pixelated;filter:drop-shadow(0 10px 14px #000a)}
+.camp-new-star{text-align:center;font-size:92px;line-height:1.5;color:#ffdf95;text-shadow:0 0 40px #ffe1a077}
+.camp-summary{grid-column:1/-1;width:min(62%,315px);min-width:132px;color:#fff0d9}.camp-summary h2{font-size:clamp(21px,5vw,35px);margin:4px 0 10px;line-height:1.16}.camp-summary button{width:100%;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:5px;padding:0 11px;color:#2f2116;background:linear-gradient(180deg,#ffe6a9,#d9a74f);border:1px solid #f8dd9f;border-radius:10px;box-shadow:0 3px #76542b;font-size:13px;font-weight:900}.camp-summary button span{font-size:21px}
+.roster-section-title{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:21px 0 9px}.roster-section-title h2{font-size:16px;margin:0}.roster-section-title span{font-size:11px;color:#b2c0c9}
+#roster .roster-card,#roster .add-adventurer,body.lobby #selection .character-card{background:linear-gradient(155deg,#2a3949,#192635);border-color:#61788a70;border-radius:14px}#roster .roster-play{color:#f6dda5}
+#roster .roster-delete{min-width:44px;min-height:44px}#roster .roster-empty{padding:18px}
+.camp-dock{position:fixed;z-index:34;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,560px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:7px 10px calc(7px + env(safe-area-inset-bottom));box-sizing:border-box;background:#151e2cf5;border:1px solid #7e8c9d70;border-bottom:0;border-radius:16px 16px 0 0;box-shadow:0 -8px 35px #070b1380}
+.camp-dock :is(button,a){min-height:48px;display:grid;align-content:center;justify-items:center;gap:2px;text-decoration:none;border:0;border-radius:10px;background:none;color:#c9d5e0;font-size:11px;font-weight:750}
+.camp-dock span{font-size:22px;line-height:1}.camp-dock [aria-current]{background:#304054;color:#ffe0a0}
+#hub-dialog{background:#172434;border-color:#677989}#hub-dialog .hub-header{background:#1d2a3b}#hub-dialog .hub-intro{background:linear-gradient(110deg,#293547,#20384c);border-color:#859bad70}#hub-dialog .hub-card{background:#24364a;border-color:#748b9b60}#hub-dialog .hub-header button{min-width:44px;min-height:44px}
+#account-dialog{background:#182536;border-color:#75859d}#account-dialog .google-login{width:100%;max-width:340px}
+.game-loading{position:fixed;inset:0;z-index:1500;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at center,#253951,#101722 68%);text-align:center;color:#fff1d1}
+.loading-panel{display:grid;justify-items:center;gap:12px;width:min(100%,360px)}.loading-panel h2{font-size:clamp(17px,5vw,26px);margin:0}.loading-emblem{font-size:42px;color:var(--camp-gold);text-shadow:0 0 24px #f2d58c80}.loading-panel p{min-height:2em;color:#d1dbe5;font-size:13px;margin:0}.loading-panel progress{width:100%;height:12px;accent-color:var(--camp-gold)}
+:is(#title-screen,#roster,#hub-dialog,#account-dialog) :is(button,a):focus-visible{outline:2px solid #ffdf9b;outline-offset:3px}
+:is(#title-screen,#roster,#hub-dialog,#account-dialog) button:active{filter:brightness(.91)}
+@media(max-width:600px){#hub-dialog{position:fixed;inset:auto 0 0;margin:0;width:100%;max-width:none;max-height:calc(92dvh - env(safe-area-inset-top));border-radius:21px 21px 0 0;padding-bottom:env(safe-area-inset-bottom)}#hub-dialog .hub-section-title span{display:none}#hub-dialog .hub-card{min-height:95px}body.lobby #selection{padding:18px 14px calc(22px + env(safe-area-inset-bottom))}#selection-back{min-height:44px}}
+@media(max-height:590px){#title-screen .title-emblem{width:42px;height:42px;margin-bottom:8px}#title-screen .title-subtitle{margin:10px 0}#title-screen .start-choices{margin-top:12px;padding:12px}}
+#title-screen .game-logo :is(span,em){background:none;-webkit-text-fill-color:currentColor}
+#title-screen .game-logo span{color:#fff6df}
+#title-screen .game-logo em{color:#ffe09b;text-shadow:0 2px #67492e,0 5px #171424,0 9px 25px #000e}
+#roster:has(.camp-new) :is(.roster-section-title,#roster-grid,#add-adventurer){display:none}
+#roster:has(.camp-new) .camp-feature{min-height:290px}
+@media(max-width:600px){#roster .roster-section-title{margin-top:17px}#roster .roster-card canvas{width:112px;height:112px}}
