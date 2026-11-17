@@ -102,20 +102,20 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 ### r78 K-pop idol
 `rpg-pixels-v2/characters/seunguk-idol.png` was created using the built-in OpenAI image generation tool from the existing bard avatar, with user-approved K-pop styling. Transparent alpha preserved. Prompt: `rpg-pixels-v2/characters/seunguk-idol-prompt.txt`. Four original animated SVG effect strips in `rpg-fx/idol/` are authored by `scripts/build-rpg-idol-fx.py`.
 
-## r79 — 최승영 궁수 계열 전용 애니메이션
+## r79 — 시엘 궁수 계열 전용 애니메이션
 
 - `archer/archer-atlas.png`: 25행·200프레임. 목제 화살, 정밀 강철 화살, 숲 화살, 거궁·파쇄·천리일섬, 룬·쌍성·분열·폭우 마탄, 바람·돌풍·폭풍 화살, 사냥 화살·깃털, 조준·명중·덫·바람·치유 연출은 프로젝트 전용으로 직접 제작.
 - 늑대·매·곰 원화와 네 가지 자세는 내장 image_gen으로 생성. 원본 `archer/beasts-source.png`, 정확한 프롬프트 `archer/beasts-prompt.txt`. 생성된 투명도를 유지한 채 프레임을 잘라 게임용 아틀라스에 배치.
 - 재생성: `scripts/build-rpg-archer-fx.py`. 직업별 GIF 7종도 동일 프레임을 사용하며, GIF의 초록색 배경은 미리보기 전용. 게임은 투명 PNG 아틀라스를 사용해 실제 충돌·접근·속박 시점에 맞춰 재생.
 
-## r80 — 최현석 판정 및 전용 타격 연출
+## r80 — 브란 판정 및 전용 타격 연출
 
 - `warrior/warrior-impact-source.png`: 내장 image_gen으로 제작한 혈액 회수·참수·지면 파괴·철갑 충격 원화. 정확한 프롬프트는 `warrior/warrior-impact-prompt.txt`.
 - `warrior/warrior-impact-atlas.png`: 원화 투명도를 유지해 4단계 애니메이션으로 배치. 재생성은 `scripts/build-rpg-warrior-impact.py`.
 - 직업별 전용 타격 GIF 4종은 게임과 같은 프레임을 사용한다. GIF 배경은 미리보기용이며 게임에는 투명 PNG가 사용된다.
 - 준비 연출·강화 상태는 기존 직업별 SVG를 사용하고, 실제 타격·회수·균열·충격은 명중 이벤트를 기준으로 재생해 중복된 가짜 타격 연출을 줄였다.
 
-## r81 — 박종찬 검사 계열
+## r81 — 카엘 검사 계열
 
 - `sword/sword-source.png`: 내장 image_gen으로 제작한 검사·검성·마검사·검귀·수라·룬나이트·소울브링어 전용 원화. 정확한 생성 프롬프트: `sword/sword-prompt.txt`.
 - `sword/sword-atlas.png`, `sword/rune-glyph.png`: 생성 원화의 투명도를 유지해 분리한 게임용 프레임. 재생성: `scripts/build-rpg-sword-fx.py`.
@@ -125,13 +125,13 @@ Five original eight-frame transparent image atlases: `element-fire-attack-atlas.
 
 Warrior / Vanguard / Dark Knight avatars were created specifically for this project with the built-in ImageGen tool. Original transparent PNGs and prompts: `greatsword-design/`. Gameplay sprite atlas: `../rpg-pixels-v2/characters/jongchan-greatsword-avatars.png`. Physical sword trails, segmented barricade and dark shockwaves are original Canvas animations in `rpg-greatsword-fx.js`; no third-party effect asset was added.
 
-## r95 — 박종찬 전체 28개 스킬 원화 애니메이션
+## r95 — 카엘 전체 28개 스킬 원화 애니메이션
 
 - 검사·검성·워리어·검귀·수라·뱅가드·다크나이트의 28개 기술에 프로젝트 전용 원화를 내장 ImageGen으로 생성했다. 외부 게임 리소스를 가져오지 않았다.
 - 투명 원본 9장: `jongchan-painted/sources/`. 전체 생성 프롬프트와 원본 해시: `jongchan-painted/manifest.json`, `data/design/r95-jongchan-painted-sources.json`.
 - `scripts/build-rpg-jongchan-painted.py`로 28개 투명 GIF와 같은 프레임의 PNG 아틀라스를 만든다. 게임은 실제 시전·명중·회전·방어 시점에 맞춰 PNG 프레임을 재생한다. GIF는 같은 그림의 반복 감상용 내보내기다.
 - 전체 감상 페이지: `../rpg-jongchan-gif-gallery.html`. 피해 계수·스킬 판정은 이 연출 변경으로 수정하지 않았다.
 
-## r96 — 박종찬 대검 3직업 SD 아바타
+## r96 — 카엘 대검 3직업 SD 아바타
 
 워리어·뱅가드·다크나이트는 기존 `characters/jongchan.png`를 얼굴·체형·도트 스타일 참조로 삼아 내장 ImageGen으로 재제작했다. 원본 3장·프롬프트·프레임 메타데이터는 `greatsword-design/sd-r96/`. 게임용 아틀라스는 `../rpg-pixels-v2/characters/jongchan-greatsword-sd.png`, 재생성은 `scripts/build-rpg-jongchan-sd-avatars.py`. 몸 높이·발 기준으로 렌더 크기와 앵커를 맞췄고 기존 검사·검성·검귀·수라는 유지했다.

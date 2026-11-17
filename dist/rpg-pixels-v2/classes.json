@@ -16,9 +16,8 @@
   "characters": [
     {
       "id": 0,
-      "name": "박종찬",
+      "name": "카엘",
       "slug": "jongchan",
-      "identity": "TOP LEFT: black buzz cut, thick angled eyebrows, square face",
       "sheet": "characters/jongchan.png",
       "classes": [
         {
@@ -27,7 +26,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "한손검",
-          "visual": "red tunic leather armor, steel arming sword",
           "cell": 0
         },
         {
@@ -36,7 +34,6 @@
           "tier": 1,
           "parent": "jongchan-0",
           "weapon": "카타나",
-          "visual": "ivory navy robe, sheathed katana",
           "cell": 1
         },
         {
@@ -45,7 +42,6 @@
           "tier": 1,
           "parent": "jongchan-0",
           "weapon": "양손 대검",
-          "visual": "steel leather armor, rust red cloth, two hands holding a broad steel greatsword",
           "cell": 2
         },
         {
@@ -54,7 +50,6 @@
           "tier": 2,
           "parent": "jongchan-1",
           "weapon": "쌍도",
-          "visual": "black red samurai armor, two black katanas",
           "cell": 3
         },
         {
@@ -63,7 +58,6 @@
           "tier": 2,
           "parent": "jongchan-1",
           "weapon": "장도",
-          "visual": "bronze crimson robes, huge nodachi",
           "cell": 4
         },
         {
@@ -72,7 +66,6 @@
           "tier": 2,
           "parent": "jongchan-2",
           "weapon": "양손 대검",
-          "visual": "broad blue black heavy plate, two hands bracing a vertical slab greatsword, no shield",
           "cell": 5
         },
         {
@@ -81,7 +74,6 @@
           "tier": 2,
           "parent": "jongchan-2",
           "weapon": "양손 대검",
-          "visual": "angular black armor, burgundy cloth, violet seams, two hands wielding a dark greatsword in forward stance",
           "cell": 6
         }
       ],
@@ -90,9 +82,8 @@
     },
     {
       "id": 1,
-      "name": "최현석",
+      "name": "브란",
       "slug": "hyunseok",
-      "identity": "TOP ROW SECOND: curly dark brown hair, round cheerful broad face",
       "sheet": "characters/hyunseok.png",
       "classes": [
         {
@@ -101,7 +92,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "양손 도끼",
-          "visual": "orange leather armor, iron two-handed axe",
           "cell": 0
         },
         {
@@ -110,7 +100,6 @@
           "tier": 1,
           "parent": "hyunseok-0",
           "weapon": "쌍도끼",
-          "visual": "fur and red wraps, two chipped axes",
           "cell": 1
         },
         {
@@ -119,7 +108,6 @@
           "tier": 1,
           "parent": "hyunseok-0",
           "weapon": "전투망치",
-          "visual": "heavy charcoal armor, square steel warhammer",
           "cell": 2
         },
         {
@@ -128,7 +116,6 @@
           "tier": 2,
           "parent": "hyunseok-1",
           "weapon": "흡혈 대도끼",
-          "visual": "crimson black armor, crescent blood-red greataxe",
           "cell": 3
         },
         {
@@ -137,7 +124,6 @@
           "tier": 2,
           "parent": "hyunseok-1",
           "weapon": "쌍대검",
-          "visual": "light dark armor, twin broad cleavers",
           "cell": 4
         },
         {
@@ -146,7 +132,6 @@
           "tier": 2,
           "parent": "hyunseok-2",
           "weapon": "거대 돌망치",
-          "visual": "stone pauldrons, enormous stone maul",
           "cell": 5
         },
         {
@@ -155,16 +140,14 @@
           "tier": 2,
           "parent": "hyunseok-2",
           "weapon": "공성망치·철갑",
-          "visual": "enclosed bulky iron plate with open face, piston siege hammer",
           "cell": 6
         }
       ]
     },
     {
       "id": 2,
-      "name": "이근호",
+      "name": "세라",
       "slug": "jihoon",
-      "identity": "TOP ROW THIRD: receding black hair, thin rectangular glasses, thin moustache and pointed goatee, slim face",
       "sheet": "characters/jihoon.png",
       "classes": [
         {
@@ -173,7 +156,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "마법 지팡이",
-          "visual": "green novice mage robe, wooden crystal staff",
           "cell": 0
         },
         {
@@ -182,7 +164,6 @@
           "tier": 1,
           "parent": "jihoon-0",
           "weapon": "삼원소 지팡이",
-          "visual": "blue red gold robe, staff with three tiny elemental gems",
           "cell": 1
         },
         {
@@ -191,7 +172,6 @@
           "tier": 1,
           "parent": "jihoon-0",
           "weapon": "저주 성서·완드",
-          "visual": "black violet hood down, dark grimoire and wand",
           "cell": 2
         },
         {
@@ -200,7 +180,6 @@
           "tier": 2,
           "parent": "jihoon-1",
           "weapon": "대마법 지팡이",
-          "visual": "ornate navy gold robe, large prism staff",
           "cell": 3
         },
         {
@@ -209,7 +188,6 @@
           "tier": 2,
           "parent": "jihoon-1",
           "weapon": "얼음 수정봉",
-          "visual": "white cyan fur-lined robes, icicle crystal staff",
           "cell": 4
         },
         {
@@ -218,7 +196,6 @@
           "tier": 2,
           "parent": "jihoon-2",
           "weapon": "해골 마법봉·마도서",
-          "visual": "dark emerald robe, skull wand and chained grimoire",
           "cell": 5
         },
         {
@@ -227,16 +204,14 @@
           "tier": 2,
           "parent": "jihoon-2",
           "weapon": "의식 단검·혈석",
-          "visual": "burgundy robes, ritual dagger and floating ruby orb",
           "cell": 6
         }
       ]
     },
     {
       "id": 3,
-      "name": "양영준",
+      "name": "알든",
       "slug": "youngjun",
-      "identity": "TOP ROW FOURTH: swept wavy blond/light brown hair, shaved sides, confident narrow face and wink",
       "sheet": "characters/youngjun.png",
       "classes": [
         {
@@ -245,7 +220,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "장검·방패",
-          "visual": "yellow tabard steel armor, longsword and kite shield",
           "cell": 0
         },
         {
@@ -254,7 +228,6 @@
           "tier": 1,
           "parent": "youngjun-0",
           "weapon": "성검·방패",
-          "visual": "white gold plate, radiant sword and golden shield",
           "cell": 1
         },
         {
@@ -263,7 +236,6 @@
           "tier": 1,
           "parent": "youngjun-0",
           "weapon": "용창",
-          "visual": "teal dragon-scale armor, long dragon lance",
           "cell": 2
         },
         {
@@ -272,7 +244,6 @@
           "tier": 2,
           "parent": "youngjun-1",
           "weapon": "성전 망치·방패",
-          "visual": "ivory crimson crusader plate, luminous mace and shield",
           "cell": 3
         },
         {
@@ -281,7 +252,6 @@
           "tier": 2,
           "parent": "youngjun-1",
           "weapon": "단창·대방패",
-          "visual": "navy silver heavy armor, short spear and huge tower shield",
           "cell": 4
         },
         {
@@ -290,7 +260,6 @@
           "tier": 2,
           "parent": "youngjun-2",
           "weapon": "쌍날 용창",
-          "visual": "light red dragon armor, double tipped winged lance",
           "cell": 5
         },
         {
@@ -299,16 +268,14 @@
           "tier": 2,
           "parent": "youngjun-2",
           "weapon": "용발톱·용창",
-          "visual": "half transformed jade scaled warrior with human face visible, claw gauntlet and short dragon spear",
           "cell": 6
         }
       ]
     },
     {
       "id": 4,
-      "name": "윤인재",
+      "name": "렌",
       "slug": "injae",
-      "identity": "SECOND ROW FIRST: neat side-parted black hair, large black rectangular glasses, rounded face",
       "sheet": "characters/injae.png",
       "classes": [
         {
@@ -317,7 +284,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "쌍단검",
-          "visual": "navy leather hood down, two steel daggers",
           "cell": 0
         },
         {
@@ -326,7 +292,6 @@
           "tier": 1,
           "parent": "injae-0",
           "weapon": "곡단검",
-          "visual": "black red fitted leather, paired curved daggers",
           "cell": 1
         },
         {
@@ -335,7 +300,6 @@
           "tier": 1,
           "parent": "injae-0",
           "weapon": "단검·폭발 카드",
-          "visual": "purple motley cape, dagger and fan of playing cards",
           "cell": 2
         },
         {
@@ -344,7 +308,6 @@
           "tier": 2,
           "parent": "injae-1",
           "weapon": "그림자 쌍검",
-          "visual": "black violet flowing scarf, twin shadow blades",
           "cell": 3
         },
         {
@@ -353,7 +316,6 @@
           "tier": 2,
           "parent": "injae-1",
           "weapon": "독침·독단검",
-          "visual": "dark green mask below face, poisoned stiletto and vial",
           "cell": 4
         },
         {
@@ -362,7 +324,6 @@
           "tier": 2,
           "parent": "injae-2",
           "weapon": "레이피어·환영 카드",
-          "visual": "white violet phantom cloak, elegant rapier and floating card",
           "cell": 5
         },
         {
@@ -371,16 +332,14 @@
           "tier": 2,
           "parent": "injae-2",
           "weapon": "쇠뇌·폭발 덫",
-          "visual": "brown black utility vest, compact crossbow and mechanical bomb trap",
           "cell": 6
         }
       ]
     },
     {
       "id": 5,
-      "name": "임창기",
+      "name": "마로",
       "slug": "changki",
-      "identity": "SECOND ROW SECOND: short flat black buzz cut, strong angular brows, tan angular face",
       "sheet": "characters/changki.png",
       "classes": [
         {
@@ -389,7 +348,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "몽둥이·물품 가방",
-          "visual": "olive apron traveling merchant, wooden club and packed backpack",
           "cell": 0
         },
         {
@@ -398,7 +356,6 @@
           "tier": 1,
           "parent": "changki-0",
           "weapon": "대장장이 망치",
-          "visual": "leather apron rolled sleeves, iron forging hammer",
           "cell": 1
         },
         {
@@ -407,7 +364,6 @@
           "tier": 1,
           "parent": "changki-0",
           "weapon": "투척 플라스크",
-          "visual": "sage coat goggles on head, colored flask and satchel",
           "cell": 2
         },
         {
@@ -416,7 +372,6 @@
           "tier": 2,
           "parent": "changki-1",
           "weapon": "변형 전투망치",
-          "visual": "bronze workshop armor, gearhead transforming hammer",
           "cell": 3
         },
         {
@@ -425,7 +380,6 @@
           "tier": 2,
           "parent": "changki-1",
           "weapon": "기계 건틀릿·기관포",
-          "visual": "compact brass powered armor with face exposed, giant mechanical fist and shoulder cannon",
           "cell": 4
         },
         {
@@ -434,7 +388,6 @@
           "tier": 2,
           "parent": "changki-2",
           "weapon": "분사기·독병",
-          "visual": "dark green protective coat, handheld poison sprayer and toxic bottles",
           "cell": 5
         },
         {
@@ -443,16 +396,14 @@
           "tier": 2,
           "parent": "changki-2",
           "weapon": "생체 건틀릿·배양병",
-          "visual": "ivory teal alchemist armor, organic armored gauntlet and glowing culture flask; no extra separate character",
           "cell": 6
         }
       ]
     },
     {
       "id": 6,
-      "name": "남지훈",
+      "name": "리라",
       "slug": "seunguk",
-      "identity": "SECOND ROW THIRD: soft brown bowl haircut, very round smiling face and small eyes",
       "sheet": "characters/seunguk.png",
       "classes": [
         {
@@ -461,7 +412,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "류트",
-          "visual": "teal travel tunic, small wooden lute",
           "cell": 0
         },
         {
@@ -470,7 +420,6 @@
           "tier": 1,
           "parent": "seunguk-0",
           "weapon": "하프",
-          "visual": "teal burgundy feather cape, handheld golden harp",
           "cell": 1
         },
         {
@@ -479,7 +428,6 @@
           "tier": 1,
           "parent": "seunguk-0",
           "weapon": "전투 부채",
-          "visual": "turquoise flowing dancer vest and sash, two steel-edged fans",
           "cell": 2
         },
         {
@@ -488,7 +436,6 @@
           "tier": 2,
           "parent": "seunguk-1",
           "weapon": "대형 류트",
-          "visual": "royal teal gold long coat, ornate large lute",
           "cell": 3
         },
         {
@@ -497,7 +444,6 @@
           "tier": 2,
           "parent": "seunguk-1",
           "weapon": "해골 리라",
-          "visual": "black violet mourning cape, bone-framed lyre and ghost notes",
           "cell": 4
         },
         {
@@ -506,7 +452,6 @@
           "tier": 2,
           "parent": "seunguk-2",
           "weapon": "V자 일렉기타",
-          "visual": "brown tousled bowl haircut, black leather studded vest, ripped charcoal jeans, chain belt and red black Flying-V electric guitar",
           "cell": 5
         },
         {
@@ -515,16 +460,14 @@
           "tier": 2,
           "parent": "seunguk-2",
           "weapon": "무선 마이크",
-          "visual": "K-pop boy group stage outfit, black silver cropped jacket, charcoal shirt and black trousers, brown side-part hair, wireless microphone and in-ear monitor",
           "cell": 6
         }
       ]
     },
     {
       "id": 7,
-      "name": "박천빈",
+      "name": "라온",
       "slug": "cheonbin",
-      "identity": "SECOND ROW FOURTH: backwards black cap, short dark hair, moustache and stubble, sturdy face",
       "sheet": "characters/cheonbin.png",
       "classes": [
         {
@@ -533,7 +476,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "권투 장갑",
-          "visual": "dark gray training vest, red boxing gloves",
           "cell": 0
         },
         {
@@ -542,7 +484,6 @@
           "tier": 1,
           "parent": "cheonbin-0",
           "weapon": "기공 건틀릿",
-          "visual": "ivory blue martial robes, glowing cyan hand wraps and small qi orb",
           "cell": 1
         },
         {
@@ -551,7 +492,6 @@
           "tier": 1,
           "parent": "cheonbin-0",
           "weapon": "참나무 지팡이",
-          "visual": "moss green cloak with fur trim, wooden antler charm and oak staff",
           "cell": 2
         },
         {
@@ -560,7 +500,6 @@
           "tier": 2,
           "parent": "cheonbin-1",
           "weapon": "기공 구슬·너클",
-          "visual": "white gold martial robes, golden knuckles and floating qi pearls",
           "cell": 3
         },
         {
@@ -569,7 +508,6 @@
           "tier": 2,
           "parent": "cheonbin-1",
           "weapon": "전투 장갑·대검",
-          "visual": "olive camouflage fatigues, red beret, combat gloves and military boots",
           "cell": 4
         },
         {
@@ -578,7 +516,6 @@
           "tier": 2,
           "parent": "cheonbin-2",
           "weapon": "변신 발톱·토템",
-          "visual": "brown wolf pelt green armor, human face retained with wolf ears and clawed hands, bear totem at belt",
           "cell": 5
         },
         {
@@ -587,16 +524,14 @@
           "tier": 2,
           "parent": "cheonbin-2",
           "weapon": "꽃 지팡이·덩굴",
-          "visual": "leafy emerald robes, flowering branch staff and curling wrist vines",
           "cell": 6
         }
       ]
     },
     {
       "id": 8,
-      "name": "최승영",
+      "name": "시엘",
       "slug": "seungyoung",
-      "identity": "BOTTOM ROW FIRST: short straight black hair, thin metal glasses, narrow serious face",
       "sheet": "characters/seungyoung.png",
       "classes": [
         {
@@ -605,7 +540,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "단궁",
-          "visual": "blue green leather archery tunic, short wooden bow",
           "cell": 0
         },
         {
@@ -614,7 +548,6 @@
           "tier": 1,
           "parent": "seungyoung-0",
           "weapon": "장궁",
-          "visual": "dark blue long cloak, tall reinforced longbow",
           "cell": 1
         },
         {
@@ -623,7 +556,6 @@
           "tier": 1,
           "parent": "seungyoung-0",
           "weapon": "복합궁·올가미 덫",
-          "visual": "green hood down leather, compact composite bow and trap pouch",
           "cell": 2
         },
         {
@@ -632,7 +564,6 @@
           "tier": 2,
           "parent": "seungyoung-1",
           "weapon": "거대 관통궁",
-          "visual": "ivory gold fitted armor, huge ivory greatbow",
           "cell": 3
         },
         {
@@ -641,7 +572,6 @@
           "tier": 2,
           "parent": "seungyoung-1",
           "weapon": "룬 마법궁",
-          "visual": "indigo coat, floating blue rune bow with magic arrow",
           "cell": 4
         },
         {
@@ -650,7 +580,6 @@
           "tier": 2,
           "parent": "seungyoung-2",
           "weapon": "쌍날 단궁",
-          "visual": "light turquoise scarf and boots, recurved shortbow with blade tips",
           "cell": 5
         },
         {
@@ -659,7 +588,6 @@
           "tier": 2,
           "parent": "seungyoung-2",
           "weapon": "야수 지휘궁",
-          "visual": "brown green fur cloak, horn-tipped bow, wolf hawk and bear companions summoned separately",
           "cell": 6
         }
       ],
@@ -668,9 +596,8 @@
     },
     {
       "id": 9,
-      "name": "김규태",
+      "name": "라크",
       "slug": "gyutae",
-      "identity": "BOTTOM ROW SECOND: medium length center-part black hair, purple headphones, slim relaxed face",
       "sheet": "characters/gyutae.png",
       "classes": [
         {
@@ -679,7 +606,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "리볼버",
-          "visual": "purple leather vest, single iron revolver, headphones",
           "cell": 0
         },
         {
@@ -688,7 +614,6 @@
           "tier": 1,
           "parent": "gyutae-0",
           "weapon": "쌍권총",
-          "visual": "purple black short coat, two silver revolvers",
           "cell": 1
         },
         {
@@ -697,7 +622,6 @@
           "tier": 1,
           "parent": "gyutae-0",
           "weapon": "유탄발사기",
-          "visual": "gray violet heavy vest, handheld grenade launcher",
           "cell": 2
         },
         {
@@ -706,7 +630,6 @@
           "tier": 2,
           "parent": "gyutae-1",
           "weapon": "장총열 쌍권총",
-          "visual": "dark western duster, two long-barrel revolvers",
           "cell": 3
         },
         {
@@ -715,7 +638,6 @@
           "tier": 2,
           "parent": "gyutae-1",
           "weapon": "룬 권총·탄환 부적",
-          "visual": "navy violet musketeer cape, blue glowing rune pistol and ammunition talismans",
           "cell": 4
         },
         {
@@ -724,7 +646,6 @@
           "tier": 2,
           "parent": "gyutae-2",
           "weapon": "휴대 박격포",
-          "visual": "olive violet officer jacket, compact mortar tube and shell belt",
           "cell": 5
         },
         {
@@ -733,16 +654,14 @@
           "tier": 2,
           "parent": "gyutae-2",
           "weapon": "다목적 중화기",
-          "visual": "heavy gray powered vest, large rotary laser flamethrower weapon",
           "cell": 6
         }
       ]
     },
     {
       "id": 10,
-      "name": "유상민",
+      "name": "루멘",
       "slug": "sangmin",
-      "identity": "BOTTOM ROW THIRD: thick wavy black hair, thick moustache and heavy brows, broad tan face",
       "sheet": "characters/sangmin.png",
       "classes": [
         {
@@ -751,7 +670,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "메이스·성서",
-          "visual": "coral cream novice cleric robe, small mace and holy book",
           "cell": 0
         },
         {
@@ -760,7 +678,6 @@
           "tier": 1,
           "parent": "sangmin-0",
           "weapon": "너클·염주",
-          "visual": "cream rust martial monk robes, metal knuckles and prayer beads",
           "cell": 1
         },
         {
@@ -769,7 +686,6 @@
           "tier": 1,
           "parent": "sangmin-0",
           "weapon": "십자 지팡이·성서",
-          "visual": "white coral cleric vestments, cross-topped staff and open book",
           "cell": 2
         },
         {
@@ -778,7 +694,6 @@
           "tier": 2,
           "parent": "sangmin-1",
           "weapon": "대형 권갑",
-          "visual": "red gold martial robes, oversized engraved golden fist gauntlets",
           "cell": 3
         },
         {
@@ -787,7 +702,6 @@
           "tier": 2,
           "parent": "sangmin-1",
           "weapon": "성화 권갑·낙인",
-          "visual": "black crimson inquisitor coat, flaming iron gauntlets and holy brand",
           "cell": 4
         },
         {
@@ -796,7 +710,6 @@
           "tier": 2,
           "parent": "sangmin-2",
           "weapon": "대성장·성서",
-          "visual": "white gold high cleric robe and tall ornate staff with floating holy book",
           "cell": 5
         },
         {
@@ -805,16 +718,14 @@
           "tier": 2,
           "parent": "sangmin-2",
           "weapon": "퇴마검·부적",
-          "visual": "ivory purple exorcist robe, straight ritual sword and paper talismans",
           "cell": 6
         }
       ]
     },
     {
       "id": 11,
-      "name": "정승욱",
+      "name": "아린",
       "slug": "keunho",
-      "identity": "BOTTOM ROW FOURTH: tousled curly light brown hair, freckles, wide toothy grin, youthful face",
       "sheet": "characters/keunho.png",
       "classes": [
         {
@@ -823,7 +734,6 @@
           "tier": 0,
           "parent": null,
           "weapon": "소환 마도서",
-          "visual": "green ivory novice robe, open summoning book and tiny green wisp",
           "cell": 0
         },
         {
@@ -832,7 +742,6 @@
           "tier": 1,
           "parent": "keunho-0",
           "weapon": "정령 수정봉",
-          "visual": "green blue layered robe, elemental crystal wand and tiny elemental orb",
           "cell": 1
         },
         {
@@ -841,7 +750,6 @@
           "tier": 1,
           "parent": "keunho-0",
           "weapon": "해골 지팡이",
-          "visual": "black emerald robe, skull staff and bone charm",
           "cell": 2
         },
         {
@@ -850,7 +758,6 @@
           "tier": 2,
           "parent": "keunho-1",
           "weapon": "정령왕 홀",
-          "visual": "white gold multicolor robe, large elemental scepter with fire water wind glyphs",
           "cell": 3
         },
         {
@@ -859,7 +766,6 @@
           "tier": 2,
           "parent": "keunho-1",
           "weapon": "쌍원소 오브",
-          "visual": "teal navy mage coat, two hand-held elemental orbs: fire and earth in one, water and wind in the other",
           "cell": 4
         },
         {
@@ -868,7 +774,6 @@
           "tier": 2,
           "parent": "keunho-2",
           "weapon": "성물함·영혼 지팡이",
-          "visual": "ragged purple black robes, partly skeletal hands but recognizable freckled human face, soul staff and phylactery",
           "cell": 5
         },
         {
@@ -877,7 +782,6 @@
           "tier": 2,
           "parent": "keunho-2",
           "weapon": "사신 낫",
-          "visual": "black green bone armor, long crescent scythe with tiny ghost motif",
           "cell": 6
         }
       ]
