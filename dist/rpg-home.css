@@ -49,3 +49,17 @@ body.lobby:not(.playing)>.hub-entry{display:none}
 #roster:has(.camp-new) :is(.roster-section-title,#roster-grid,#add-adventurer){display:none}
 #roster:has(.camp-new) .camp-feature{min-height:290px}
 @media(max-width:600px){#roster .roster-section-title{margin-top:17px}#roster .roster-card canvas{width:112px;height:112px}}
+/* Hub card art is the destination cue; names and actions stay outside the image. */
+#hub-dialog .hub-card-art{height:auto;aspect-ratio:320/140;overflow:hidden;background:#242939}
+#hub-dialog .hub-card-art img{display:block;width:100%;height:100%;object-fit:cover}
+#hub-dialog .hub-card-copy strong{margin:4px 0 5px}
+@media(max-width:600px){
+ #hub-dialog .hub-features{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #hub-dialog .hub-card{display:flex;min-height:0}
+ #hub-dialog .hub-card-art{width:100%;aspect-ratio:16/8}
+ #hub-dialog .hub-card-copy{width:100%;padding:9px 9px 7px;box-sizing:border-box}
+ #hub-dialog .hub-card-copy small{letter-spacing:0;font-size:10px}
+ #hub-dialog .hub-card-copy strong{font-size:14px;line-height:1.28;overflow-wrap:anywhere}
+ #hub-dialog .hub-card-copy>span{display:none}
+ #hub-dialog .hub-card-action{position:static;width:100%;padding:4px 9px;box-sizing:border-box;min-height:27px;font-size:10px}
+}
