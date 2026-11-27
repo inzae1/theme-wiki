@@ -63,3 +63,8 @@ body.lobby:not(.playing)>.hub-entry{display:none}
  #hub-dialog .hub-card-copy>span{display:none}
  #hub-dialog .hub-card-action{position:static;width:100%;padding:4px 9px;box-sizing:border-box;min-height:27px;font-size:10px}
 }
+
+/* Display preferences stay independent of account and progression. */
+.display-settings{display:grid;gap:12px}.display-settings h3{margin:0 0 5px}.display-settings label{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #526147}.display-settings select{min-height:44px;padding:8px;max-width:55%;background:#20342b;color:#fff;border:1px solid #819675;border-radius:8px}.display-settings input{width:24px;height:24px;accent-color:#d7cf8a}body[data-font-size="large"] :is(#modal-body,#account-body,.hub-scroll){font-size:18px}body[data-font-size="large"] :is(#modal-body,#account-body,.hub-scroll) :is(p,label,button,small){font-size:inherit;line-height:1.6}body[data-font-size="small"] :is(#modal-body,#account-body,.hub-scroll){font-size:13px}.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.display-settings~details summary{min-height:44px;cursor:pointer}#account-body>[data-backup-open]{min-height:44px;margin:12px 0}
+
+button.brand{border:0;background:none;cursor:pointer;font:inherit;text-align:left}
